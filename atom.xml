@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-22T10:00:29.605Z</updated>
+  <updated>2023-08-22T14:33:27.270Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CTF解密常用平台</title>
+    <link href="http://example.com/2023/08/22/CTF%E8%A7%A3%E5%AF%86%E5%B8%B8%E7%94%A8%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://example.com/2023/08/22/CTF%E8%A7%A3%E5%AF%86%E5%B8%B8%E7%94%A8%E5%B9%B3%E5%8F%B0/</id>
+    <published>2023-08-22T14:30:49.455Z</published>
+    <updated>2023-08-22T14:33:27.270Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.<a href="https://ctf.mzy0.com/CyberChef3/">CyberChef (mzy0.com)</a></p><p>首推，解密功能很强大，功能齐全</p><p>2.<a href="http://www.atoolbox.net/">一个工具箱 - 好用的在线工具都在这里！ (atoolbox.net)</a></p><p>工具很多</p><p>持续更新中……</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1.&lt;a href=&quot;https://ctf.mzy0.com/CyberChef3/&quot;&gt;CyberChef (mzy0.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;首推，解密功能很强大，功能齐全&lt;/p&gt;
+&lt;p&gt;2.&lt;a href=&quot;http://www.atoolbox.net/&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>曲阜师范大学相关链接</title>
@@ -41,9 +63,9 @@
     <link href="http://example.com/2023/08/22/%E8%87%AA%E8%BF%B0/"/>
     <id>http://example.com/2023/08/22/%E8%87%AA%E8%BF%B0/</id>
     <published>2023-08-22T09:47:27.204Z</published>
-    <updated>2023-08-22T12:53:11.430Z</updated>
+    <updated>2023-08-22T14:30:46.506Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h1><p>2023年8月22日是建站的第一天</p><p>仅仅完成了网站的搭建</p><p>草草的套了一个主题</p><p>还没有认真地美化</p><p>持续更新……</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h1><p>2023年8月22日是建站的第一天</p><p>仅仅完成了网站的搭建</p><p>草草的套了一个主题</p><p>还没有认真地美化</p><p>持续更新……</p><p>2023年8月22日22:29:35</p><p>更新了鼠标点击爱心特效</p><p>更新了底部文字加跳转</p><p>添加了lukzia大佬的友链</p>]]></content>
     
     
       
