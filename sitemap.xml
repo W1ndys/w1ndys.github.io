@@ -92,7 +92,7 @@
 
   
   <url>
-    <loc>http://example.com/tags/QFNU/</loc>
+    <loc>http://example.com/tags/maekdown/</loc>
     <lastmod>2023-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -106,7 +106,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/maekdown/</loc>
+    <loc>http://example.com/tags/QFNU/</loc>
     <lastmod>2023-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -115,7 +115,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/QFNU/</loc>
+    <loc>http://example.com/categories/maekdown/</loc>
     <lastmod>2023-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -129,7 +129,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/maekdown/</loc>
+    <loc>http://example.com/categories/QFNU/</loc>
     <lastmod>2023-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
