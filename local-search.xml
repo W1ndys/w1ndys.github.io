@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>测试博文</title>
+    <link href="/2023/08/23/%E6%B5%8B%E8%AF%95%E5%8D%9A%E6%96%87/"/>
+    <url>/2023/08/23/%E6%B5%8B%E8%AF%95%E5%8D%9A%E6%96%87/</url>
+    
+    <content type="html"><![CDATA[<p>text1</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>测试</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>latex和markdown支持的公式写法整理</title>
     <link href="/2023/08/23/latex%E5%92%8Cmarkdown%E6%94%AF%E6%8C%81%E7%9A%84%E5%85%AC%E5%BC%8F%E5%86%99%E6%B3%95%E6%95%B4%E7%90%86/"/>
     <url>/2023/08/23/latex%E5%92%8Cmarkdown%E6%94%AF%E6%8C%81%E7%9A%84%E5%85%AC%E5%BC%8F%E5%86%99%E6%B3%95%E6%95%B4%E7%90%86/</url>
