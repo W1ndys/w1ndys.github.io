@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-23T03:03:31.122Z</updated>
+  <updated>2023-08-23T02:47:50.324Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试博文</title>
-    <link href="http://example.com/2023/08/23/%E6%B5%8B%E8%AF%95%E5%8D%9A%E6%96%87/"/>
-    <id>http://example.com/2023/08/23/%E6%B5%8B%E8%AF%95%E5%8D%9A%E6%96%87/</id>
-    <published>2023-08-23T02:49:10.035Z</published>
-    <updated>2023-08-23T03:03:31.122Z</updated>
-    
-    <content type="html"><![CDATA[<p>text1</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;text1&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="测试" scheme="http://example.com/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="测试" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>latex和markdown支持的公式写法整理</title>
