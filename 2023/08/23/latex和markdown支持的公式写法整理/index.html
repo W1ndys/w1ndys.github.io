@@ -16,15 +16,15 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="">
   
-    <meta name="description" content="目录 希腊字母大小写  标记符号  分式  根式  运算符  二元运算符 关系符号 集合 逻辑   微积分  空格  标注符号  箭头  括号和定界符  多行公式  分段函数  矩阵  转置 无括号 方括号 圆形括号 行列式写法  由于markdown可以支持latex【非常强大】的数学公式的渲染因此下文整理内容两种均支持。markdown借鉴latex的公式输入主要是在jupyter-noteb">
+    <meta name="description" content="目录  希腊字母大小写 标记符号 分式 根式 运算符  二元运算符 关系符号 集合 逻辑  微积分 空格 标注符号 箭头 括号和定界符 多行公式 分段函数 矩阵  转置 无括号 方括号 圆形括号 行列式写法  由于markdown可以支持latex【非常强大】的数学公式的渲染因此下文整理内容两种均支持。 markdown借鉴latex的公式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="latex和markdown支持的公式写法整理">
 <meta property="og:url" content="http://example.com/2023/08/23/latex%E5%92%8Cmarkdown%E6%94%AF%E6%8C%81%E7%9A%84%E5%85%AC%E5%BC%8F%E5%86%99%E6%B3%95%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="hi！这里是W1ndys的小站">
-<meta property="og:description" content="目录 希腊字母大小写  标记符号  分式  根式  运算符  二元运算符 关系符号 集合 逻辑   微积分  空格  标注符号  箭头  括号和定界符  多行公式  分段函数  矩阵  转置 无括号 方括号 圆形括号 行列式写法  由于markdown可以支持latex【非常强大】的数学公式的渲染因此下文整理内容两种均支持。markdown借鉴latex的公式输入主要是在jupyter-noteb">
+<meta property="og:description" content="目录  希腊字母大小写 标记符号 分式 根式 运算符  二元运算符 关系符号 集合 逻辑  微积分 空格 标注符号 箭头 括号和定界符 多行公式 分段函数 矩阵  转置 无括号 方括号 圆形括号 行列式写法  由于markdown可以支持latex【非常强大】的数学公式的渲染因此下文整理内容两种均支持。 markdown借鉴latex的公式">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-23T02:43:16.268Z">
-<meta property="article:modified_time" content="2023-08-23T02:47:50.324Z">
+<meta property="article:modified_time" content="2023-08-23T04:01:44.350Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="maekdown">
 <meta name="twitter:card" content="summary_large_image">
@@ -44,6 +44,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -236,7 +238,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共10k字
+          共8.1k字
         
       </span>
     
@@ -248,7 +250,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计85分钟
+          阅读本文预计68分钟
         
       </span>
     
@@ -298,7 +300,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年 八月 23日 , 10:47
+                    本文最后更新于： 2023年 八月 23日 , 12:01
                   
                 
               </p>
@@ -306,1576 +308,1186 @@
             
               <div class="markdown-body">
                 
-                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><p><a href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E5%A4%A7%E5%B0%8F%E5%86%99">希腊字母大小写</a></p>
-</li>
-<li><p><a href="#%E6%A0%87%E8%AE%B0%E7%AC%A6%E5%8F%B7">标记符号</a></p>
-</li>
-<li><p><a href="#%E5%88%86%E5%BC%8F">分式</a></p>
-</li>
-<li><p><a href="#%E6%A0%B9%E5%BC%8F">根式</a></p>
-</li>
-<li><p><a href="#%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</a></p>
+                <h1 id="目录">目录</h1>
+<ol type="1">
+<li><p><a href="#希腊字母大小写">希腊字母大小写</a></p></li>
+<li><p><a href="#标记符号">标记符号</a></p></li>
+<li><p><a href="#分式">分式</a></p></li>
+<li><p><a href="#根式">根式</a></p></li>
+<li><p><a href="#运算符">运算符</a></p>
 <ul>
-<li><a href="#%E4%BA%8C%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6">二元运算符</a></li>
-<li><a href="#%E5%85%B3%E7%B3%BB%E7%AC%A6%E5%8F%B7">关系符号</a></li>
-<li><a href="#%E9%9B%86%E5%90%88">集合</a></li>
-<li><a href="#%E9%80%BB%E8%BE%91">逻辑</a></li>
-</ul>
-</li>
-<li><p><a href="#%E5%BE%AE%E7%A7%AF%E5%88%86">微积分</a></p>
-</li>
-<li><p><a href="#%E7%A9%BA%E6%A0%BC">空格</a></p>
-</li>
-<li><p><a href="#%E6%A0%87%E6%B3%A8%E7%AC%A6%E5%8F%B7">标注符号</a></p>
-</li>
-<li><p><a href="#%E7%AE%AD%E5%A4%B4">箭头</a></p>
-</li>
-<li><p><a href="#%E6%8B%AC%E5%8F%B7%E5%92%8C%E5%AE%9A%E7%95%8C%E7%AC%A6">括号和定界符</a></p>
-</li>
-<li><p><a href="#%E5%A4%9A%E8%A1%8C%E5%85%AC%E5%BC%8F">多行公式</a></p>
-</li>
-<li><p><a href="#%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0">分段函数</a></p>
-</li>
-<li><p><a href="#%E7%9F%A9%E9%98%B5">矩阵</a></p>
+<li><a href="#二元运算符">二元运算符</a></li>
+<li><a href="#关系符号">关系符号</a></li>
+<li><a href="#集合">集合</a></li>
+<li><a href="#逻辑">逻辑</a></li>
+</ul></li>
+<li><p><a href="#微积分">微积分</a></p></li>
+<li><p><a href="#空格">空格</a></p></li>
+<li><p><a href="#标注符号">标注符号</a></p></li>
+<li><p><a href="#箭头">箭头</a></p></li>
+<li><p><a href="#括号和定界符">括号和定界符</a></p></li>
+<li><p><a href="#多行公式">多行公式</a></p></li>
+<li><p><a href="#分段函数">分段函数</a></p></li>
+<li><p><a href="#矩阵">矩阵</a></p>
 <ul>
-<li><a href="#%E8%BD%AC%E7%BD%AE">转置</a></li>
-<li><a href="#%E6%97%A0%E6%8B%AC%E5%8F%B7">无括号</a></li>
-<li><a href="#%E6%96%B9%E6%8B%AC%E5%8F%B7">方括号</a></li>
-<li><a href="#%E5%9C%86%E5%BD%A2%E6%8B%AC%E5%8F%B7">圆形括号</a></li>
-<li><a href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E5%86%99%E6%B3%95">行列式写法</a></li>
+<li><a href="#转置">转置</a></li>
+<li><a href="#无括号">无括号</a></li>
+<li><a href="#方括号">方括号</a></li>
+<li><a href="#圆形括号">圆形括号</a></li>
+<li><a href="#行列式写法">行列式写法</a></li>
 </ul>
-<p>由于markdown可以支持latex【非常强大】的数学公式的渲染因此下文整理内容两种均支持。<br>markdown借鉴latex的公式输入<br>主要是在jupyter-notebook和CSDN等基本多支持markdown，因此做这个公式输入的整理还是方便日后自己查找使用。</p>
-<p>需要记住的是，以下公式均写在$$内来被识别为latex公式。</p>
-</li>
+<p>由于markdown可以支持latex【非常强大】的数学公式的渲染因此下文整理内容两种均支持。
+markdown借鉴latex的公式输入
+主要是在jupyter-notebook和CSDN等基本多支持markdown，因此做这个公式输入的整理还是方便日后自己查找使用。</p>
+<p>需要记住的是，以下公式均写在$$内来被识别为latex公式。</p></li>
 </ol>
-<h1 id="希腊字母大小写"><a href="#希腊字母大小写" class="headerlink" title="希腊字母大小写"></a>希腊字母大小写</h1><p>大写的首字母将全拼首字母大写即可。<br>$\全拼$</p>
+<h1 id="希腊字母大小写">希腊字母大小写</h1>
+<p>大写的首字母将全拼首字母大写即可。<br />
+$$</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>小写字母</th>
 <th>表达式</th>
 <th>大写字母</th>
 <th>表达式</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>α</td>
-<td>\alpha</td>
+<td></td>
 <td>Α</td>
-<td>\Alpha</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>β</td>
-<td>\beta</td>
+<td></td>
 <td>Β</td>
-<td>\Beta</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>γ</td>
-<td>\gamma</td>
+<td></td>
 <td>Γ</td>
-<td>\Gamma</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>δ</td>
-<td>\delta</td>
+<td></td>
 <td>Δ</td>
-<td>\Delta</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ε</td>
-<td>\epsilon</td>
+<td></td>
 <td>Ε</td>
-<td>\Epsilon</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>ζ</td>
-<td>\zeta</td>
+<td></td>
 <td>Ζ</td>
-<td>\Zeta</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>η</td>
-<td>\eta</td>
+<td></td>
 <td>Η</td>
-<td>\Eta</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>θ</td>
-<td>\theta</td>
+<td></td>
 <td>Θ</td>
-<td>\Theta</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ι</td>
-<td>\iota</td>
+<td></td>
 <td>Ι</td>
-<td>\Iota</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>κ</td>
-<td>\kappa</td>
+<td></td>
 <td>Κ</td>
-<td>\Kappa</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>λ</td>
-<td>\lambda</td>
+<td></td>
 <td>Λ</td>
-<td>\Lambda</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>μ</td>
-<td>\mu</td>
+<td></td>
 <td>Μ</td>
-<td>\Mu</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ν</td>
-<td>\nu</td>
+<td></td>
 <td>Ν</td>
-<td>\Nu</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>ξ</td>
-<td>\xi</td>
+<td></td>
 <td>Ξ</td>
-<td>\Xi</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ο</td>
-<td>\omicron</td>
+<td></td>
 <td>Ο</td>
-<td>\Omicron</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>π</td>
-<td>\pi</td>
+<td></td>
 <td>Π</td>
-<td>\Pi</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ρ</td>
-<td>\rho</td>
+<td></td>
 <td>Ρ</td>
-<td>\Rho</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>σ</td>
-<td>\sigma</td>
+<td></td>
 <td>Σ</td>
-<td>\Sigma</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>τ</td>
-<td>\tau</td>
+<td></td>
 <td>Τ</td>
-<td>\Tau</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>υ</td>
-<td>\upsilon</td>
+<td></td>
 <td>Υ</td>
-<td>\Upsilon</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>φ</td>
-<td>\phi</td>
+<td></td>
 <td>Φ</td>
-<td>\Phi</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>χ</td>
-<td>\chi</td>
+<td></td>
 <td>Χ</td>
-<td>\Chi</td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ψ</td>
-<td>\psi</td>
+<td></td>
 <td>Ψ</td>
-<td>\Psi</td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>ω</td>
-<td>\omega</td>
+<td></td>
 <td>Ω</td>
-<td>\Omega</td>
+<td></td>
 </tr>
-</tbody></table>
-<h1 id="标记符号"><a href="#标记符号" class="headerlink" title="标记符号"></a>标记符号</h1><p>上标 ^<br>下标 _  </p>
-<p>下标的斜体和直立体意义不同</p>
+</tbody>
+</table>
+<h1 id="标记符号">标记符号</h1>
+<p>上标 ^<br />
+下标 _</p>
+<p>下标的斜体和直立体意义不同 |示例|表达式| |----|------| |<span
+class="math inline">\(x^{2}\)</span>|x^{2}| |<span
+class="math inline">\(a_{2}\)</span>|a_{2}| |<span
+class="math inline">\(x^{i+j}\)</span>|x^{i+j}| |<span
+class="math inline">\(x_{i}\)</span>|x_{i}| |<span
+class="math inline">\(x_{\text i}\)</span>|x_{i}| |<span
+class="math inline">\(\bar{a}\)</span>|| |<span
+class="math inline">\(\acute{a}\)</span>|| |<span
+class="math inline">\(\breve{a}\)</span>|| |<span
+class="math inline">\(\grave{a}\)</span>|| |<span
+class="math inline">\(\dot{a}\)</span>|| |<span
+class="math inline">\(\ddot{a}\)</span>|| |<span
+class="math inline">\(\hat{a}\)</span>|| |<span
+class="math inline">\(\check{a}\)</span>|| |<span
+class="math inline">\(\breve{a}\)</span>|| |<span
+class="math inline">\(\tilde{a}\)</span>|| |<span
+class="math inline">\(\vec{a}\)</span>|| |<span
+class="math inline">\(\overline{a+b+c}\)</span>|| |<span
+class="math inline">\(\underline{a+b+c}\)</span>| |<span
+class="math inline">\(\overbrace{a+b+c}\)</span>|| |<span
+class="math inline">\(\underbrace{a+b+c}\)</span>|| |<span
+class="math inline">\(\overbrace{a + \underbrace{b + c}_{1.0} +
+d}^a\)</span>|^a|</p>
+<h1 id="分式">分式</h1>
+<p>单个字符还可以这么写： 分子 分母</p>
+<p>(display)，可以显示的更大一点，作用一样</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>示例</th>
 <th>表达式</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>$x^{2}$</td>
-<td>x^{2}</td>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$a_{2}$</td>
-<td>a_{2}</td>
+<tr class="even">
+<td><span class="math inline">\(\dfrac{1}{2}\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$x^{i+j}$</td>
-<td>x^{i+j}</td>
+<tr class="odd">
+<td><span class="math inline">\(\frac{x+y}{1+z}\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$x_{i}$</td>
-<td>x_{i}</td>
-</tr>
-<tr>
-<td>$x_{\text i}$</td>
-<td>x_{\text i}</td>
-</tr>
-<tr>
-<td>$\bar{a}$</td>
-<td>\bar</td>
-</tr>
-<tr>
-<td>$\acute{a}$</td>
-<td>\acute</td>
-</tr>
-<tr>
-<td>$\breve{a}$</td>
-<td>\breve</td>
-</tr>
-<tr>
-<td>$\grave{a}$</td>
-<td>\grave</td>
-</tr>
-<tr>
-<td>$\dot{a}$</td>
-<td>\dot</td>
-</tr>
-<tr>
-<td>$\ddot{a}$</td>
-<td>\ddot</td>
-</tr>
-<tr>
-<td>$\hat{a}$</td>
-<td>\hat</td>
-</tr>
-<tr>
-<td>$\check{a}$</td>
-<td>\check</td>
-</tr>
-<tr>
-<td>$\breve{a}$</td>
-<td>\breve</td>
-</tr>
-<tr>
-<td>$\tilde{a}$</td>
-<td>\tilde</td>
-</tr>
-<tr>
-<td>$\vec{a}$</td>
-<td>\vec</td>
-</tr>
-<tr>
-<td>$\overline{a+b+c}$</td>
-<td>\overline</td>
-</tr>
-<tr>
-<td>$\underline{a+b+c}$</td>
-<td>\underline</td>
-</tr>
-<tr>
-<td>$\overbrace{a+b+c}$</td>
-<td>\overbrace</td>
-</tr>
-<tr>
-<td>$\underbrace{a+b+c}$</td>
-<td>\underbrace</td>
-</tr>
-<tr>
-<td>$\overbrace{a + \underbrace{b + c}_{1.0} + d}^a$</td>
-<td>\overbrace{a + \underbrace{b + c}_{1.0} + d}^a</td>
-</tr>
-</tbody></table>
-<h1 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h1><p>\frac{分子}{分母}<br>单个字符还可以这么写：<br>\frac 分子 分母</p>
-<p>\dfrac是显示类型(display)，可以显示的更大一点，作用一样</p>
+</tbody>
+</table>
+<h1 id="根式">根式</h1>
+<p>默认是平方根</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>示例</th>
 <th>表达式</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>$\frac{1}{2}$</td>
-<td>\frac{1}{2}</td>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sqrt 2\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\dfrac{1}{2}$</td>
-<td>\dfrac{1}{2}</td>
+<tr class="even">
+<td><span class="math inline">\(\sqrt{x+y}\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\frac{x+y}{1+z}$</td>
-<td>\frac{x+y}{1+z}</td>
+<tr class="odd">
+<td><span class="math inline">\(\sqrt[3]{x+y}\)</span></td>
+<td></td>
 </tr>
-</tbody></table>
-<h1 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h1><p>\sqrt[根的次数]{数值}<br>默认是平方根</p>
+</tbody>
+</table>
+<h1 id="运算符">运算符</h1>
+<h2 id="二元运算符">二元运算符</h2>
 <table>
 <thead>
-<tr>
-<th>示例</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$\sqrt 2$</td>
-<td>\sqrt 2</td>
-</tr>
-<tr>
-<td>$\sqrt{x+y}$</td>
-<td>\sqrt{x+y}</td>
-</tr>
-<tr>
-<td>$\sqrt[3]{x+y}$</td>
-<td>\squrt[3]</td>
-</tr>
-</tbody></table>
-<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a>二元运算符</h2><table>
-<thead>
-<tr>
+<tr class="header">
 <th>名称</th>
 <th>运算符</th>
 <th>表达式</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>加</td>
 <td>+</td>
 <td>+</td>
 </tr>
-<tr>
+<tr class="even">
 <td>减</td>
 <td>-</td>
 <td>-</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>乘</td>
-<td>$\times$</td>
-<td>\times</td>
+<td><span class="math inline">\(\times\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>点乘</td>
-<td>$\cdot$</td>
-<td>\cdot</td>
+<td><span class="math inline">\(\cdot\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>除</td>
-<td>$\div$</td>
-<td>\div</td>
+<td><span class="math inline">\(\div\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>正负</td>
-<td>$\pm$</td>
-<td>\pm</td>
+<td><span class="math inline">\(\pm\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>负正</td>
-<td>$\mp$</td>
-<td>\mp</td>
+<td><span class="math inline">\(\mp\)</span></td>
+<td></td>
 </tr>
-</tbody></table>
-<h2 id="关系符号"><a href="#关系符号" class="headerlink" title="关系符号"></a>关系符号</h2><table>
+</tbody>
+</table>
+<h2 id="关系符号">关系符号</h2>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>名称</th>
 <th>运算符</th>
 <th>markdown</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>大于</td>
-<td>$\gt$</td>
-<td>\gt</td>
+<td><span class="math inline">\(\gt\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>小于</td>
-<td>$\lt$</td>
-<td>\le</td>
+<td><span class="math inline">\(\lt\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>大于等于</td>
-<td>$\ge$</td>
-<td>\ge</td>
+<td><span class="math inline">\(\ge\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>小于等于</td>
-<td>$\le$</td>
-<td>\le</td>
+<td><span class="math inline">\(\le\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>远大于</td>
-<td>$\gg$</td>
-<td>\gg</td>
+<td><span class="math inline">\(\gg\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>远小于</td>
-<td>$\ll$</td>
-<td>\ll</td>
+<td><span class="math inline">\(\ll\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>不等于</td>
-<td>$\ne$</td>
-<td>\ne</td>
+<td><span class="math inline">\(\ne\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>约等于</td>
-<td>$\approx$</td>
-<td>\approx</td>
+<td><span class="math inline">\(\approx\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>恒等于</td>
-<td>$\equiv$</td>
-<td>\eqdiv</td>
+<td><span class="math inline">\(\equiv\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>几何全等</td>
-<td>$\cong$</td>
-<td>\cong</td>
+<td><span class="math inline">\(\cong\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>几何相似</td>
-<td>$\sim$</td>
-<td>\sim</td>
+<td><span class="math inline">\(\sim\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>同余</td>
-<td>$\equiv$</td>
-<td>\eqiv</td>
+<td><span class="math inline">\(\equiv\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>同余n</td>
-<td>$\pmod n$</td>
-<td>\pmod n</td>
+<td><span class="math inline">\(\pmod n\)</span></td>
+<td>n</td>
 </tr>
-<tr>
+<tr class="even">
 <td>取模</td>
-<td>$\bmod$</td>
-<td>\bmod</td>
+<td><span class="math inline">\(\bmod\)</span></td>
+<td></td>
 </tr>
-</tbody></table>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><table>
+</tbody>
+</table>
+<h2 id="集合">集合</h2>
+<table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>名称</th>
 <th>运算符</th>
 <th>表达式</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>真子集</td>
-<td>$\subsetneqq$</td>
-<td>\subsetqq</td>
+<td><span class="math inline">\(\subsetneqq\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>空集</td>
-<td>$\varnothing$</td>
-<td>\varthing</td>
+<td><span class="math inline">\(\varnothing\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>空集</td>
-<td>$\emptyset $</td>
-<td>\emptyset</td>
+<td>$<span class="math inline">\(|\emptyset |属于|\)</span><span
+class="math inline">\(|\in ||\)</span><span class="math inline">\(|\ni
+|不属于|\)</span><span class="math inline">\(|\notin
+|子集|\)</span><span class="math inline">\(|\subset ||\)</span><span
+class="math inline">\(|\supset |非子集|\)</span><span
+class="math inline">\(|\not\subset |真子集|\)</span><span
+class="math inline">\(|\subseteq ||\)</span><span
+class="math inline">\(|\supseteq |并集|\)</span><span
+class="math inline">\(|\cup |并集|\)</span><span
+class="math inline">\(|\bigcup |交集|\)</span><span
+class="math inline">\(|\cap |交集|\)</span><span
+class="math inline">\(|\bigcap |补集|\)</span>_{b}A<span
+class="math inline">\(|\complement_{b}A| |多重集|\)</span><span
+class="math inline">\(|\uplus |多重集|\)</span><span
+class="math inline">\(|\biguplus ||\)</span><span
+class="math inline">\(|\sqsubset ||\)</span><span
+class="math inline">\(|\sqsupset ||\)</span><span
+class="math inline">\(|\sqcap ||\)</span><span
+class="math inline">\(|\sqsubseteq ||\)</span><span
+class="math inline">\(|\sqsupseteq ||\)</span><span
+class="math inline">\(|\vee ||\)</span><span
+class="math inline">\(|\wedge |集合中的减法|\)</span><span
+class="math inline">\(|\setminus |实数集|\)</span><span
+class="math inline">\(|\R| |有理数集|\)</span><span
+class="math inline">\(|\mathbb{Q}| |自然数|\)</span><span
+class="math inline">\(|\N| |整数集|\)</span><span
+class="math inline">\(|\Z| |正整数集|\)</span>^{+}$</td>
+<td>^{+}</td>
 </tr>
-<tr>
-<td>属于</td>
-<td>$\in $</td>
-<td>\in</td>
-</tr>
-<tr>
-<td></td>
-<td>$\ni $</td>
-<td>\ni</td>
-</tr>
-<tr>
-<td>不属于</td>
-<td>$\notin $</td>
-<td>\notin</td>
-</tr>
-<tr>
-<td>子集</td>
-<td>$\subset $</td>
-<td>\subset</td>
-</tr>
-<tr>
-<td></td>
-<td>$\supset $</td>
-<td>\supset</td>
-</tr>
-<tr>
-<td>非子集</td>
-<td>$\not\subset $</td>
-<td>\not\subset</td>
-</tr>
-<tr>
-<td>真子集</td>
-<td>$\subseteq $</td>
-<td>\subseteq</td>
-</tr>
-<tr>
-<td></td>
-<td>$\supseteq $</td>
-<td>\supseteq</td>
-</tr>
-<tr>
-<td>并集</td>
-<td>$\cup $</td>
-<td>\cup</td>
-</tr>
-<tr>
-<td>并集</td>
-<td>$\bigcup $</td>
-<td>\bigcup</td>
-</tr>
-<tr>
-<td>交集</td>
-<td>$\cap $</td>
-<td>\cap</td>
-</tr>
-<tr>
-<td>交集</td>
-<td>$\bigcap $</td>
-<td>\bigcap</td>
-</tr>
-<tr>
-<td>补集</td>
-<td>$\complement_{b}A$</td>
-<td>\complement_{b}A</td>
-</tr>
-<tr>
-<td>多重集</td>
-<td>$\uplus $</td>
-<td>\uplus</td>
-</tr>
-<tr>
-<td>多重集</td>
-<td>$\biguplus $</td>
-<td>\biguplus</td>
-</tr>
-<tr>
-<td></td>
-<td>$\sqsubset $</td>
-<td>\sqsubset</td>
-</tr>
-<tr>
-<td></td>
-<td>$\sqsupset $</td>
-<td>\sqsupset</td>
-</tr>
-<tr>
-<td></td>
-<td>$\sqcap $</td>
-<td>\sqcap</td>
-</tr>
-<tr>
-<td></td>
-<td>$\sqsubseteq $</td>
-<td>\sqsubseteq</td>
-</tr>
-<tr>
-<td></td>
-<td>$\sqsupseteq $</td>
-<td>\sqsupseteq</td>
-</tr>
-<tr>
-<td></td>
-<td>$\vee $</td>
-<td>\vee</td>
-</tr>
-<tr>
-<td></td>
-<td>$\wedge $</td>
-<td>\wedge</td>
-</tr>
-<tr>
-<td>集合中的减法</td>
-<td>$\setminus $</td>
-<td>\setminus</td>
-</tr>
-<tr>
-<td>实数集</td>
-<td>$\R$</td>
-<td>\R</td>
-</tr>
-<tr>
-<td>有理数集</td>
-<td>$\mathbb{Q}$</td>
-<td>\mathbb{Q}</td>
-</tr>
-<tr>
-<td>自然数</td>
-<td>$\N$</td>
-<td>\N</td>
-</tr>
-<tr>
-<td>整数集</td>
-<td>$\Z$</td>
-<td>\Z</td>
-</tr>
-<tr>
-<td>正整数集</td>
-<td>$\N^{+}$</td>
-<td>\N^{+}</td>
-</tr>
-</tbody></table>
-<h2 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h2><table>
+</tbody>
+</table>
+<h2 id="逻辑">逻辑</h2>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>含义</th>
 <th>示例</th>
 <th>markdown</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>因为</td>
-<td>$\because$</td>
-<td>\because</td>
+<td><span class="math inline">\(\because\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>所以</td>
-<td>$\therefore$</td>
-<td>\therefore</td>
+<td><span class="math inline">\(\therefore\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>任意</td>
-<td>$\forall$</td>
-<td>\forall</td>
+<td><span class="math inline">\(\forall\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>存在</td>
-<td>$\exist$</td>
-<td>\exist</td>
+<td><span class="math inline">\(\exist\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>不存在</td>
-<td>$\nexists$</td>
-<td>\exist</td>
+<td><span class="math inline">\(\nexists\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>逻辑与</td>
-<td>$\wedge$</td>
-<td>\wedge</td>
+<td><span class="math inline">\(\wedge\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>逻辑或</td>
-<td>$\vee$</td>
-<td>\vee</td>
+<td><span class="math inline">\(\vee\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>逻辑与</td>
-<td>$\bigwedge$</td>
-<td>\bigwedge</td>
+<td><span class="math inline">\(\bigwedge\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>逻辑或</td>
-<td>$\bigvee$</td>
-<td>\bigvee</td>
+<td><span class="math inline">\(\bigvee\)</span></td>
+<td></td>
 </tr>
-</tbody></table>
-<h1 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h1><table>
+</tbody>
+</table>
+<h1 id="微积分">微积分</h1>
+<table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>算符</th>
 <th>实例</th>
 <th>markdown</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>求和</td>
-<td>$\sum\limits_{i&#x3D;1}^{n}i$</td>
-<td>\sum\limits_{j&#x3D;1}^{n}i</td>
+<td><span class="math inline">\(\sum\limits_{i=1}^{n}i\)</span></td>
+<td>_{j=1}^{n}i</td>
 </tr>
-<tr>
+<tr class="even">
 <td>求和</td>
-<td>$\sum_{i&#x3D;1}^{n}i$</td>
-<td>\sum\limits_{j&#x3D;1}^{n}i</td>
+<td><span class="math inline">\(\sum_{i=1}^{n}i\)</span></td>
+<td>_{j=1}^{n}i</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>求积</td>
-<td>$\prod\limits_{i&#x3D;1}^{n}i$</td>
-<td>\prod\limits_{j&#x3D;1}^{n}i</td>
+<td><span class="math inline">\(\prod\limits_{i=1}^{n}i\)</span></td>
+<td>_{j=1}^{n}i</td>
 </tr>
-<tr>
+<tr class="even">
 <td>求积</td>
-<td>$\prod_{i&#x3D;1}^{n}i$</td>
-<td>\prod\limits_{j&#x3D;1}^{n}i</td>
+<td><span class="math inline">\(\prod_{i=1}^{n}i\)</span></td>
+<td>_{j=1}^{n}i</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>极限</td>
-<td>$\lim\limits_{x\rightarrow\infty}\frac{1}{x}$</td>
-<td>\lim\limits_{x\rightarrow\infty}\frac{1}{x}</td>
+<td><span
+class="math inline">\(\lim\limits_{x\rightarrow\infty}\frac{1}{x}\)</span></td>
+<td>_{x}</td>
 </tr>
-<tr>
+<tr class="even">
 <td>多元函数极限</td>
-<td>$\lim\limits_{\substack{x\to\infty \y\to\infty }} \dfrac{1}{x+y}$</td>
-<td>\lim\limits_{ \substack{ x\to\infty \y\to\infty } }</td>
+<td><span class="math inline">\(\lim\limits_{\substack{x\to\infty
+\\y\to\infty }} \dfrac{1}{x+y}\)</span></td>
+<td>_{ }</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>积分</td>
-<td>$\int_{0}^{2} f(x) \mathrm{d} x$</td>
-<td>\int_{0}^{2} f(x) \mathrm{d} x</td>
+<td><span class="math inline">\(\int_{0}^{2} f(x) \mathrm{d}
+x\)</span></td>
+<td>_{0}^{2} f(x) x</td>
 </tr>
-<tr>
+<tr class="even">
 <td>微分</td>
-<td>$\mathrm{d}f(x)$</td>
-<td>\mathrm{d}f(x)</td>
+<td><span class="math inline">\(\mathrm{d}f(x)\)</span></td>
+<td>f(x)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>多重积分</td>
-<td>$\iint\limits_{D} g(x,y) \mathrm{d} x$</td>
-<td>\iint\limits_{D} g(x,y) \mathrm{d} x</td>
+<td><span class="math inline">\(\iint\limits_{D} g(x,y) \mathrm{d}
+x\)</span></td>
+<td>_{D} g(x,y) x</td>
 </tr>
-<tr>
+<tr class="even">
 <td>导数</td>
-<td>$y\prime$</td>
-<td>y\prime</td>
+<td><span class="math inline">\(y\prime\)</span></td>
+<td>y</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>导数</td>
-<td>$\dfrac{\mathrm{d}y}{\mathrm{d}x}$</td>
-<td>\dfrac{\mathrm{d}y}{\mathrm{d}x}</td>
+<td><span
+class="math inline">\(\dfrac{\mathrm{d}y}{\mathrm{d}x}\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>偏微分</td>
-<td>$\partial{a}$</td>
-<td>\partial{a}</td>
+<td><span class="math inline">\(\partial{a}\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>偏导数</td>
-<td>$\dfrac{\partial{a}}{\partial{b}}$</td>
-<td>\frac{\partial{a}}{\partial{b}}</td>
+<td><span
+class="math inline">\(\dfrac{\partial{a}}{\partial{b}}\)</span></td>
+<td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>回路积分</td>
-<td>$\oint\limits_{D} x^2 \mathrm{d} x$</td>
-<td>\oint\limits_{D} x^2 \mathrm{d} x</td>
+<td><span class="math inline">\(\oint\limits_{D} x^2 \mathrm{d}
+x\)</span></td>
+<td>_{D} x^2 x</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>双重回路积分</td>
-<td>$\oiint\limits_{D} (x+y)^{\frac{2}{x}} \mathrm{d} x$</td>
-<td>\oiint\limits_{D} (x+y)^{\frac{2}{x}} \mathrm{d} x</td>
+<td><span class="math inline">\(\oiint\limits_{D} (x+y)^{\frac{2}{x}}
+\mathrm{d} x\)</span></td>
+<td>_{D} (x+y)^{} x</td>
 </tr>
-</tbody></table>
-<h1 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h1><table>
+</tbody>
+</table>
+<h1 id="空格">空格</h1>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>说明</th>
 <th>示例</th>
 <th>markdown</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>空格距离：-3&#x2F;18 em</td>
+<tbody>
+<tr class="odd">
+<td>空格距离：-3/18 em</td>
 <td>$123!123 $</td>
 <td>123\!123</td>
 </tr>
-<tr>
-<td>空格距离：3&#x2F;18 em</td>
-<td>$123,123$</td>
+<tr class="even">
+<td>空格距离：3/18 em</td>
+<td><span class="math inline">\(123\,123\)</span></td>
 <td>123\,123</td>
 </tr>
-<tr>
-<td>空格距离：4&#x2F;18 em</td>
+<tr class="odd">
+<td>空格距离：4/18 em</td>
 <td>$123:123 $</td>
 <td>123\:123</td>
 </tr>
-<tr>
-<td>空格距离：5&#x2F;18 em</td>
+<tr class="even">
+<td>空格距离：5/18 em</td>
 <td>$123;123 $</td>
 <td>123\;123</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>空格距离：1 em</td>
-<td>$123\quad123 $</td>
-<td>123\quad123</td>
+<td>$123 $</td>
+<td>123</td>
 </tr>
-<tr>
+<tr class="even">
 <td>空格距离：2 em</td>
-<td>$123\qquad123 $</td>
-<td>123\qquad123</td>
+<td>$123 $</td>
+<td>123</td>
 </tr>
-</tbody></table>
-<h1 id="标注符号"><a href="#标注符号" class="headerlink" title="标注符号"></a>标注符号</h1><h1 id="箭头"><a href="#箭头" class="headerlink" title="箭头"></a>箭头</h1><table>
+</tbody>
+</table>
+<h1 id="标注符号">标注符号</h1>
+<h1 id="箭头">箭头</h1>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>箭头</th>
 <th>markdown</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>$\uparrow$</td>
-<td>\uparrow</td>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\downarrow$</td>
-<td>\downarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\downarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\updownarrow$</td>
-<td>\updownarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\updownarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Uparrow$</td>
-<td>\Uparrow</td>
+<tr class="even">
+<td><span class="math inline">\(\Uparrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Downarrow$</td>
-<td>\Downarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\Downarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Updownarrow$</td>
-<td>\Updownarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\Updownarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\rightarrow$</td>
-<td>\rightarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\rightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\leftarrow$</td>
-<td>\leftarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\leftarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\leftrightarrow$</td>
-<td>\leftrightarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\leftrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Rightarrow$</td>
-<td>\Rightarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\Rightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Leftarrow$</td>
-<td>\Leftarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\Leftarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Leftrightarrow$</td>
-<td>\Leftrightarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\Leftrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\longrightarrow$</td>
-<td>\longrightarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\longrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\longleftarrow$</td>
-<td>\longleftarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\longleftarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\longleftrightarrow$</td>
-<td>\longleftrightarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\longleftrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Longrightarrow$</td>
-<td>\Longrightarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\Longrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Longleftarrow$</td>
-<td>\Longleftarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\Longleftarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\Longleftrightarrow$</td>
-<td>\Longleftrightarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\Longleftrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\mapsto$</td>
-<td>\mapsto</td>
+<tr class="odd">
+<td><span class="math inline">\(\mapsto\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\longmapsto$</td>
-<td>\longmapsto</td>
+<tr class="even">
+<td><span class="math inline">\(\longmapsto\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\hookleftarrow$</td>
-<td>\hookleftarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\hookleftarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\hookrightarrow$</td>
-<td>\hookrightarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\hookrightarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\rightharpoonup$</td>
-<td>\rightharpoonup</td>
+<tr class="odd">
+<td><span class="math inline">\(\rightharpoonup\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\leftharpoondown$</td>
-<td>\leftharpoondown</td>
+<tr class="even">
+<td><span class="math inline">\(\leftharpoondown\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\rightleftharpoons$</td>
-<td>\rightleftharpoons</td>
+<tr class="odd">
+<td><span class="math inline">\(\rightleftharpoons\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\leftharpoonup$</td>
-<td>\leftharpoonup</td>
+<tr class="even">
+<td><span class="math inline">\(\leftharpoonup\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\rightharpoondown$</td>
-<td>\rightharpoondown</td>
+<tr class="odd">
+<td><span class="math inline">\(\rightharpoondown\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\leadsto$</td>
-<td>\leadsto</td>
+<tr class="even">
+<td><span class="math inline">\(\leadsto\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\nearrow$</td>
-<td>\nearrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\nearrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\searrow$</td>
-<td>\searrow</td>
+<tr class="even">
+<td><span class="math inline">\(\searrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\swarrow$</td>
-<td>\swarrow</td>
+<tr class="odd">
+<td><span class="math inline">\(\swarrow\)</span></td>
+<td></td>
 </tr>
-<tr>
-<td>$\nwarrow$</td>
-<td>\nwarrow</td>
+<tr class="even">
+<td><span class="math inline">\(\nwarrow\)</span></td>
+<td></td>
 </tr>
-</tbody></table>
-<h1 id="括号和定界符"><a href="#括号和定界符" class="headerlink" title="括号和定界符"></a>括号和定界符</h1><table>
+</tbody>
+</table>
+<h1 id="括号和定界符">括号和定界符</h1>
+<table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>算式</th>
 <th>markdown</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>$(, )$</td>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((, )\)</span></td>
 <td>(, )</td>
 </tr>
-<tr>
-<td>$[, ]$</td>
+<tr class="even">
+<td><span class="math inline">\([, ]\)</span></td>
 <td>[, ]</td>
 </tr>
-<tr>
-<td>$\lang, \rang $或$\langle, \rangle$</td>
-<td>\lang, \rang 或 \langle, \rangle</td>
+<tr class="odd">
+<td>$, <span class="math inline">\(或\)</span>, <span
+class="math inline">\(|\lang, \rang 或 \langle, \rangle| |\)</span>,
+<span class="math inline">\(|\lvert, \rvert| |\)</span>, <span
+class="math inline">\(|\lVert, \rVert| |\)</span>, <span
+class="math inline">\(或\)</span> "{, }"<span
+class="math inline">\(|\lbrace, \rbrace 或 &quot;\\{, \\}&quot;|
+|\)</span>, <span class="math inline">\(|\lfloor, \rfloor| |\)</span>,
+<span class="math inline">\(|\lceil, \rceil| |\)</span>(x)<span
+class="math inline">\(|(x)| |\)</span>( x )<span
+class="math inline">\(|\big( x \big)| |\)</span>( x )<span
+class="math inline">\(|\Big( x \Big)| |\)</span>( x )<span
+class="math inline">\(|\bigg( x \bigg)| |\)</span>( x )<span
+class="math inline">\(|\Bigg( x \Bigg)| |\)</span>(((((x)))))<span
+class="math inline">\(|\Bigg(\bigg(\Big(\big((x)\big)\Big)\bigg)\Bigg)|
+|\)</span>]]]]<span
+class="math inline">\(|\Bigg[\bigg[\Big[\big[[x]\big]\Big]\bigg]\Bigg]|
+|\)</span>x <span class="math inline">\(|\Bigg \langle \bigg \langle
+\Big \langle\big\langle\langle x
+\rangle\big\rangle\Big\rangle\bigg\rangle\Bigg\rangle| |\)</span>x <span
+class="math inline">\(|\Bigg\lvert\bigg\lvert\Big\lvert\big\lvert\lvert
+x \rvert\big\rvert\Big\rvert\bigg\rvert\Bigg\rvert| |\)</span>x $</td>
+<td>x </td>
 </tr>
-<tr>
-<td>$\lvert, \rvert$</td>
-<td>\lvert, \rvert</td>
-</tr>
-<tr>
-<td>$\lVert, \rVert$</td>
-<td>\lVert, \rVert</td>
-</tr>
-<tr>
-<td>$\lbrace, \rbrace $或$ “{, }“$</td>
-<td>\lbrace, \rbrace 或 “\{, \}”</td>
-</tr>
-<tr>
-<td>$\lfloor, \rfloor$</td>
-<td>\lfloor, \rfloor</td>
-</tr>
-<tr>
-<td>$\lceil, \rceil$</td>
-<td>\lceil, \rceil</td>
-</tr>
-<tr>
-<td>$(x)$</td>
-<td>(x)</td>
-</tr>
-<tr>
-<td>$\big( x \big)$</td>
-<td>\big( x \big)</td>
-</tr>
-<tr>
-<td>$\Big( x \Big)$</td>
-<td>\Big( x \Big)</td>
-</tr>
-<tr>
-<td>$\bigg( x \bigg)$</td>
-<td>\bigg( x \bigg)</td>
-</tr>
-<tr>
-<td>$\Bigg( x \Bigg)$</td>
-<td>\Bigg( x \Bigg)</td>
-</tr>
-<tr>
-<td>$\Bigg(\bigg(\Big(\big((x)\big)\Big)\bigg)\Bigg)$</td>
-<td>\Bigg(\bigg(\Big(\big((x)\big)\Big)\bigg)\Bigg)</td>
-</tr>
-<tr>
-<td>$\Bigg[\bigg[\Big[\big[[x]\big]\Big]\bigg]\Bigg]$</td>
-<td>\Bigg[\bigg[\Big[\big[[x]\big]\Big]\bigg]\Bigg]</td>
-</tr>
-<tr>
-<td>$\Bigg \langle \bigg \langle \Big \langle\big\langle\langle x \rangle\big\rangle\Big\rangle\bigg\rangle\Bigg\rangle$</td>
-<td>\Bigg \langle \bigg \langle \Big \langle\big\langle\langle x \rangle\big\rangle\Big\rangle\bigg\rangle\Bigg\rangle</td>
-</tr>
-<tr>
-<td>$\Bigg\lvert\bigg\lvert\Big\lvert\big\lvert\lvert x \rvert\big\rvert\Big\rvert\bigg\rvert\Bigg\rvert$</td>
-<td>\Bigg\lvert\bigg\lvert\Big\lvert\big\lvert\lvert x \rvert\big\rvert\Big\rvert\bigg\rvert\Bigg\rvert</td>
-</tr>
-<tr>
-<td>$\Bigg\lVert\bigg\lVert\Big\lVert\big\lVert\lVert x \rVert\big\rVert\Big\rVert\bigg\rVert\Bigg\rVert$</td>
-<td>\Bigg\lVert\bigg\lVert\Big\lVert\big\lVert\lVert x \rVert\big\rVert\Big\rVert\bigg\rVert\Bigg\rVert</td>
-</tr>
-</tbody></table>
-<h1 id="多行公式"><a href="#多行公式" class="headerlink" title="多行公式"></a>多行公式</h1><p>多行环境:\代表换行，默认右对其，可以在等号前加&amp;实现等号对齐，具体是&amp;后一对齐</p>
-<p>$$\begin{align}<br>a\f\c<br>\end{align}$$</p>
+</tbody>
+</table>
+<h1 id="多行公式">多行公式</h1>
+<p>多行环境:，默认右对其，可以在等号前加&amp;实现等号对齐，具体是&amp;后一对齐</p>
+<p><span class="math display">\[\begin{align}
+a\\f\\c
+\end{align}\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>a<span class="hljs-keyword">\\</span>f<span class="hljs-keyword">\\</span>c<br><span class="hljs-keyword">\end</span>&#123;align&#125;<span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h1><p>$$f(x)&#x3D;<br>\begin{cases}<br>\sin x, -1\le x\le2\<br>\cos x, else<br>\end{cases}<br>$$</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span>f(x)=<br><span class="hljs-keyword">\begin</span>&#123;cases&#125;<br><span class="hljs-keyword">\sin</span> x, -1<span class="hljs-keyword">\le</span> x<span class="hljs-keyword">\le</span>2<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\cos</span> x, else<br><span class="hljs-keyword">\end</span>&#123;cases&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h2><p>$$ \bf B^T $$</p>
-<p>​&#96;&#96;&#96;latex<br>$$ \bf B^T $$</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs latex"><br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;bmatrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;bmatrix&#125;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\bf</span> T&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><br>```latex<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;bmatrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;bmatrix&#125;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\bf</span> T&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="无括号"><a href="#无括号" class="headerlink" title="无括号"></a>无括号</h2><p>没有括号的矩阵</p>
-<p>$$<br>\begin{matrix}<br>a &amp; b&amp;c&amp;\cdots&amp;d\<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \<br>e &amp; k &amp; f &amp; \cdots &amp; 0<br>\end{matrix}<br>$$</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;matrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;matrix&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="方括号"><a href="#方括号" class="headerlink" title="方括号"></a>方括号</h2><p>方括号的矩阵</p>
-<p>$$<br>\begin{bmatrix}<br>a &amp; b&amp;c&amp;\cdots&amp;d\<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \<br>e &amp; k &amp; f &amp; \cdots &amp; 0<br>\end{bmatrix}^{\bf T}<br>$$</p>
+<h1 id="分段函数">分段函数</h1>
+<p><span class="math display">\[f(x)=
+\begin{cases}
+\sin x, -1\le x\le2\\
+\cos x, else
+\end{cases}
+\]</span> <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span>f(x)=<br><span class="hljs-keyword">\begin</span>&#123;cases&#125;<br><span class="hljs-keyword">\sin</span> x, -1<span class="hljs-keyword">\le</span> x<span class="hljs-keyword">\le</span>2<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\cos</span> x, else<br><span class="hljs-keyword">\end</span>&#123;cases&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure></p>
+<h1 id="矩阵">矩阵</h1>
+<h2 id="转置">转置</h2>
+<p><span class="math display">\[ \bf B^T \]</span></p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span> <span class="hljs-keyword">\bf</span> B<span class="hljs-built_in">^</span>T <span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\begin{bmatrix}
+a &amp; b&amp;c&amp;\cdots&amp;d\\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+e &amp; k &amp; f &amp; \cdots &amp; 0
+\end{bmatrix}^{\bf T}
+\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;bmatrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;bmatrix&#125;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\bf</span> T&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="圆形括号"><a href="#圆形括号" class="headerlink" title="圆形括号"></a>圆形括号</h2><p>圆括号的矩阵</p>
-<p>$$<br>\begin{pmatrix}<br>a &amp; b&amp;c&amp;\cdots&amp;d\<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \<br>e &amp; k &amp; f &amp; \cdots &amp; 0<br>\end{pmatrix}<br>$$</p>
+<h2 id="无括号">无括号</h2>
+<p>没有括号的矩阵</p>
+<p><span class="math display">\[
+\begin{matrix}
+a &amp; b&amp;c&amp;\cdots&amp;d\\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+e &amp; k &amp; f &amp; \cdots &amp; 0
+\end{matrix}
+\]</span></p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;matrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;matrix&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
+<h2 id="方括号">方括号</h2>
+<p>方括号的矩阵</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+a &amp; b&amp;c&amp;\cdots&amp;d\\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+e &amp; k &amp; f &amp; \cdots &amp; 0
+\end{bmatrix}^{\bf T}
+\]</span></p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;bmatrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;bmatrix&#125;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\bf</span> T&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
+<h2 id="圆形括号">圆形括号</h2>
+<p>圆括号的矩阵</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+a &amp; b&amp;c&amp;\cdots&amp;d\\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+e &amp; k &amp; f &amp; \cdots &amp; 0
+\end{pmatrix}
+\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;pmatrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;pmatrix&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="行列式写法"><a href="#行列式写法" class="headerlink" title="行列式写法"></a>行列式写法</h2><p>$$<br>\begin{vmatrix}<br>a &amp; b&amp;c&amp;\cdots&amp;d\<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \<br>e &amp; k &amp; f &amp; \cdots &amp; 0<br>\end{vmatrix}<br>$$</p>
+<h2 id="行列式写法">行列式写法</h2>
+<p><span class="math display">\[
+\begin{vmatrix}
+a &amp; b&amp;c&amp;\cdots&amp;d\\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+e &amp; k &amp; f &amp; \cdots &amp; 0
+\end{vmatrix}
+\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\begin</span>&#123;vmatrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b<span class="hljs-built_in">&amp;</span>c<span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\cdots</span><span class="hljs-built_in">&amp;</span>d<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\vdots</span> <span class="hljs-keyword">\\</span><br>e <span class="hljs-built_in">&amp;</span> k <span class="hljs-built_in">&amp;</span> f <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> 0<br><span class="hljs-keyword">\end</span>&#123;vmatrix&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="带省略号"><a href="#带省略号" class="headerlink" title="带省略号"></a>带省略号</h2><p>$$<br>\left[<br>\begin{matrix}<br>a &amp; b &amp; \cdots &amp; a\<br>b &amp; b &amp; \cdots &amp; b\<br>\vdots &amp; \vdots &amp; \ddots &amp; \vdots\<br>c &amp; c &amp; \cdots &amp; c<br>\end{matrix}<br>\right]<br>\tag{5}<br>$$</p>
+<h2 id="带省略号">带省略号</h2>
+<p><span class="math display">\[
+\left[
+\begin{matrix}
+a &amp; b &amp; \cdots &amp; a\\
+b &amp; b &amp; \cdots &amp; b\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+c &amp; c &amp; \cdots &amp; c
+\end{matrix}
+\right]
+\tag{5}
+\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\left</span>[<br><span class="hljs-keyword">\begin</span>&#123;matrix&#125;<br>a <span class="hljs-built_in">&amp;</span> b <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> a<span class="hljs-keyword">\\</span><br>b <span class="hljs-built_in">&amp;</span> b <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> b<span class="hljs-keyword">\\</span><br><span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\ddots</span> <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\vdots</span><span class="hljs-keyword">\\</span><br>c <span class="hljs-built_in">&amp;</span> c <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\cdots</span> <span class="hljs-built_in">&amp;</span> c<br><span class="hljs-keyword">\end</span>&#123;matrix&#125;<br><span class="hljs-keyword">\right</span>]<br><span class="hljs-keyword">\tag</span>&#123;5&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="带横线-竖线分割"><a href="#带横线-竖线分割" class="headerlink" title="带横线&#x2F;竖线分割"></a>带横线&#x2F;竖线分割</h2><p>$$<br>\left[<br>\begin{array}{c|cc}<br>1 &amp; 2 &amp; 3 \<br>4 &amp; 5 &amp; 6 \<br>7 &amp; 8 &amp; 9<br>\end{array}<br>\right]<br>\tag{6}<br>$$</p>
+<h2 id="带横线竖线分割">带横线/竖线分割</h2>
+<p><span class="math display">\[
+\left[
+\begin{array}{c|cc}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{array}
+\right]
+\tag{6}
+\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\left</span>[<br><span class="hljs-keyword">\begin</span>&#123;array&#125;&#123;c|cc&#125;<br>1 <span class="hljs-built_in">&amp;</span> 2 <span class="hljs-built_in">&amp;</span> 3 <span class="hljs-keyword">\\</span><br>4 <span class="hljs-built_in">&amp;</span> 5 <span class="hljs-built_in">&amp;</span> 6 <span class="hljs-keyword">\\</span><br>7 <span class="hljs-built_in">&amp;</span> 8 <span class="hljs-built_in">&amp;</span> 9<br><span class="hljs-keyword">\end</span>&#123;array&#125;<br><span class="hljs-keyword">\right</span>]<br><span class="hljs-keyword">\tag</span>&#123;6&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
-<p>横线用 \hline 分割</p>
-<p>$$<br>\left[<br>    \begin{array}{c|cc}<br>    1 &amp; 2 &amp; 3 \ \hline<br>    4 &amp; 5 &amp; 6 \<br>    7 &amp; 8 &amp; 9<br>    \end{array}<br>\right]<br>\tag{7}<br>$$</p>
+<p>横线用 分割</p>
+<p><span class="math display">\[
+\left[
+    \begin{array}{c|cc}
+    1 &amp; 2 &amp; 3 \\ \hline
+    4 &amp; 5 &amp; 6 \\
+    7 &amp; 8 &amp; 9
+    \end{array}
+\right]
+\tag{7}
+\]</span></p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br><span class="hljs-keyword">\left</span>[<br>    <span class="hljs-keyword">\begin</span>&#123;array&#125;&#123;c|cc&#125;<br>    1 <span class="hljs-built_in">&amp;</span> 2 <span class="hljs-built_in">&amp;</span> 3 <span class="hljs-keyword">\\</span> <span class="hljs-keyword">\hline</span><br>    4 <span class="hljs-built_in">&amp;</span> 5 <span class="hljs-built_in">&amp;</span> 6 <span class="hljs-keyword">\\</span><br>    7 <span class="hljs-built_in">&amp;</span> 8 <span class="hljs-built_in">&amp;</span> 9<br>    <span class="hljs-keyword">\end</span>&#123;array&#125;<br><span class="hljs-keyword">\right</span>]<br><span class="hljs-keyword">\tag</span>&#123;7&#125;<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-
 <table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>算式</th>
 <th>markdown</th>
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>$\sin$</td>
-<td>\sin</td>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sin\)</span></td>
+<td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\cos$</td>
-<td>\cos</td>
+<tr class="even">
+<td><span class="math inline">\(\cos\)</span></td>
+<td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\tan$</td>
-<td>\tan</td>
+<tr class="odd">
+<td><span class="math inline">\(\tan\)</span></td>
+<td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\cot$</td>
-<td>\cot</td>
+<tr class="even">
+<td><span class="math inline">\(\cot\)</span></td>
+<td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\sec$</td>
-<td>\sec</td>
+<tr class="odd">
+<td><span class="math inline">\(\sec\)</span></td>
+<td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\csc$</td>
-<td>\csc</td>
+<tr class="even">
+<td><span class="math inline">\(\csc\)</span></td>
+<td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\bot$</td>
-<td>\bot</td>
+<tr class="odd">
+<td><span class="math inline">\(\bot\)</span></td>
+<td></td>
 <td>垂直</td>
 </tr>
-<tr>
-<td>$\angle$</td>
-<td>\angle</td>
+<tr class="even">
+<td><span class="math inline">\(\angle\)</span></td>
+<td></td>
 <td>角</td>
 </tr>
-<tr>
-<td>$40^\circ$</td>
-<td>40^\circ</td>
+<tr class="odd">
+<td><span class="math inline">\(40^\circ\)</span></td>
+<td>40^</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>$<span class="math inline">\(|\ast |星号 |\)</span><span
+class="math inline">\(|\star | |\)</span><span
+class="math inline">\(|\mid |竖线 |\)</span><span
+class="math inline">\(|\nmid | |\)</span><span
+class="math inline">\(|\circ |圈 |\)</span><span
+class="math inline">\(|\bullet | |\)</span><span
+class="math inline">\(|\cdot |点 |\)</span><span
+class="math inline">\(|\wr | |\)</span><span
+class="math inline">\(|\diamond | |\)</span><span
+class="math inline">\(|\Diamond | |\)</span><span
+class="math inline">\(|\triangle | |\)</span><span
+class="math inline">\(|\bigtriangleup | |\)</span><span
+class="math inline">\(|\bigtriangledown | |\)</span><span
+class="math inline">\(|\triangleleft | |\)</span><span
+class="math inline">\(|\triangleright | |\)</span><span
+class="math inline">\(|\lhd | |\)</span><span
+class="math inline">\(|\rhd | |\)</span><span
+class="math inline">\(|\unlhd | |\)</span><span
+class="math inline">\(|\unrhd | |\)</span><span
+class="math inline">\(|\circ | |\)</span><span
+class="math inline">\(|\bigcirc | |\)</span><span
+class="math inline">\(|\odot | |\)</span><span
+class="math inline">\(|\bigodot |点积 |\)</span><span
+class="math inline">\(|\oslash | |\)</span><span
+class="math inline">\(|\ominus | |\)</span><span
+class="math inline">\(|\otimes | |\)</span><span
+class="math inline">\(|\bigotimes |克罗内克积 |\)</span><span
+class="math inline">\(|\oplus | |\)</span><span
+class="math inline">\(|\bigoplus |异或 |\)</span><span
+class="math inline">\(|\dagger | |\)</span><span
+class="math inline">\(|\ddagger | |\)</span><span
+class="math inline">\(|\amalg | |\)</span><span
+class="math inline">\(|\models | |\)</span><span
+class="math inline">\(|\prec | |\)</span><span
+class="math inline">\(|\succ | |\)</span><span
+class="math inline">\(|\sim | |\)</span><span
+class="math inline">\(|\perp | |\)</span><span
+class="math inline">\(|\preceq | |\)</span><span
+class="math inline">\(|\succeq | |\)</span><span
+class="math inline">\(|\simeq | |\)</span><span
+class="math inline">\(|\mid | |\)</span><span
+class="math inline">\(|\asymp | |\)</span><span
+class="math inline">\(|\parallel | |\)</span><span
+class="math inline">\(|\approx | |\)</span><span
+class="math inline">\(|\cong | |\)</span><span
+class="math inline">\(|\doteq | |\)</span><span
+class="math inline">\(|\propto | |\)</span><span
+class="math inline">\(|\bowtie | |\)</span><span
+class="math inline">\(|\Join | |\)</span><span
+class="math inline">\(|\smile | |\)</span><span
+class="math inline">\(|\frown | |\)</span><span
+class="math inline">\(|\vdash | |\)</span><span
+class="math inline">\(|\dashv | |\)</span><span
+class="math inline">\(|\lim| |\)</span><span
+class="math inline">\(|\rightarrow| |\)</span><span
+class="math inline">\(|\infty| |\)</span>_{n+}n<span
+class="math inline">\(|\lim_{n\rightarrow+\infty}n| |\)</span><span
+class="math inline">\(|\prime |求导 |\)</span><span
+class="math inline">\(|\int |积分 |\)</span><span
+class="math inline">\(|\iint |双重积分 |\)</span><span
+class="math inline">\(|\iiint |三重积分 |\)</span><span
+class="math inline">\(|\oint |曲线积分 |\)</span><span
+class="math inline">\(|\nabla |梯度 |\)</span><span
+class="math inline">\(|\dots |一般用于有下标的序列 |\)</span><span
+class="math inline">\(|\ldots | |\)</span><span
+class="math inline">\(|\cdots |纵向位置比\dots稍高 |\)</span><span
+class="math inline">\(|\vdots |竖向 |\)</span><span
+class="math inline">\(|\ddots | |\)</span>$</td>
 <td></td>
-</tr>
-<tr>
-<td>$\ast $</td>
-<td>\ast</td>
-<td>星号</td>
-</tr>
-<tr>
-<td>$\star $</td>
-<td>\star</td>
-<td></td>
-</tr>
-<tr>
-<td>$\mid $</td>
-<td>\mid</td>
-<td>竖线</td>
-</tr>
-<tr>
-<td>$\nmid $</td>
-<td>\nmid</td>
-<td></td>
-</tr>
-<tr>
-<td>$\circ $</td>
-<td>\circ</td>
-<td>圈</td>
-</tr>
-<tr>
-<td>$\bullet $</td>
-<td>\bullet</td>
-<td></td>
-</tr>
-<tr>
-<td>$\cdot $</td>
-<td>\cdot</td>
-<td>点</td>
-</tr>
-<tr>
-<td>$\wr $</td>
-<td>\wr</td>
-<td></td>
-</tr>
-<tr>
-<td>$\diamond $</td>
-<td>\diamond</td>
-<td></td>
-</tr>
-<tr>
-<td>$\Diamond $</td>
-<td>\Diamond</td>
-<td></td>
-</tr>
-<tr>
-<td>$\triangle $</td>
-<td>\triangle</td>
-<td></td>
-</tr>
-<tr>
-<td>$\bigtriangleup $</td>
-<td>\bigtriangleup</td>
-<td></td>
-</tr>
-<tr>
-<td>$\bigtriangledown $</td>
-<td>\bigtriangledown</td>
-<td></td>
-</tr>
-<tr>
-<td>$\triangleleft $</td>
-<td>\triangleleft</td>
-<td></td>
-</tr>
-<tr>
-<td>$\triangleright $</td>
-<td>\triangleright</td>
-<td></td>
-</tr>
-<tr>
-<td>$\lhd $</td>
-<td>\lhd</td>
-<td></td>
-</tr>
-<tr>
-<td>$\rhd $</td>
-<td>\rhd</td>
-<td></td>
-</tr>
-<tr>
-<td>$\unlhd $</td>
-<td>\unlhd</td>
-<td></td>
-</tr>
-<tr>
-<td>$\unrhd $</td>
-<td>\unrhd</td>
-<td></td>
-</tr>
-<tr>
-<td>$\circ $</td>
-<td>\circ</td>
-<td></td>
-</tr>
-<tr>
-<td>$\bigcirc $</td>
-<td>\bigcirc</td>
-<td></td>
-</tr>
-<tr>
-<td>$\odot $</td>
-<td>\odot</td>
-<td></td>
-</tr>
-<tr>
-<td>$\bigodot $</td>
-<td>\bigodot</td>
-<td>点积</td>
-</tr>
-<tr>
-<td>$\oslash $</td>
-<td>\oslash</td>
-<td></td>
-</tr>
-<tr>
-<td>$\ominus $</td>
-<td>\ominus</td>
-<td></td>
-</tr>
-<tr>
-<td>$\otimes $</td>
-<td>\otimes</td>
-<td></td>
-</tr>
-<tr>
-<td>$\bigotimes $</td>
-<td>\bigotimes</td>
-<td>克罗内克积</td>
-</tr>
-<tr>
-<td>$\oplus $</td>
-<td>\oplus</td>
 <td></td>
 </tr>
-<tr>
-<td>$\bigoplus $</td>
-<td>\bigoplus</td>
-<td>异或</td>
-</tr>
-<tr>
-<td>$\dagger $</td>
-<td>\dagger</td>
-<td></td>
-</tr>
-<tr>
-<td>$\ddagger $</td>
-<td>\ddagger</td>
-<td></td>
-</tr>
-<tr>
-<td>$\amalg $</td>
-<td>\amalg</td>
-<td></td>
-</tr>
-<tr>
-<td>$\models $</td>
-<td>\models</td>
-<td></td>
-</tr>
-<tr>
-<td>$\prec $</td>
-<td>\prec</td>
-<td></td>
-</tr>
-<tr>
-<td>$\succ $</td>
-<td>\succ</td>
-<td></td>
-</tr>
-<tr>
-<td>$\sim $</td>
-<td>\sim</td>
-<td></td>
-</tr>
-<tr>
-<td>$\perp $</td>
-<td>\perp</td>
+<tr class="odd">
+<td><span class="math inline">\(\aleph\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\preceq $</td>
-<td>\preceq</td>
-<td></td>
-</tr>
-<tr>
-<td>$\succeq $</td>
-<td>\succeq</td>
 <td></td>
 </tr>
-<tr>
-<td>$\simeq $</td>
-<td>\simeq</td>
+<tr class="even">
+<td><span class="math inline">\(\hbar\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\mid $</td>
-<td>\mid</td>
 <td></td>
 </tr>
-<tr>
-<td>$\asymp $</td>
-<td>\asymp</td>
+<tr class="odd">
+<td><span class="math inline">\(\imath\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\parallel $</td>
-<td>\parallel</td>
 <td></td>
 </tr>
-<tr>
-<td>$\approx $</td>
-<td>\approx</td>
+<tr class="even">
+<td><span class="math inline">\(\jmath\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\cong $</td>
-<td>\cong</td>
 <td></td>
 </tr>
-<tr>
-<td>$\doteq $</td>
-<td>\doteq</td>
+<tr class="odd">
+<td><span class="math inline">\(\ell\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\propto $</td>
-<td>\propto</td>
 <td></td>
 </tr>
-<tr>
-<td>$\bowtie $</td>
-<td>\bowtie</td>
+<tr class="even">
+<td><span class="math inline">\(\wp\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\Join $</td>
-<td>\Join</td>
 <td></td>
 </tr>
-<tr>
-<td>$\smile $</td>
-<td>\smile</td>
+<tr class="odd">
+<td><span class="math inline">\(\Re\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\frown $</td>
-<td>\frown</td>
 <td></td>
 </tr>
-<tr>
-<td>$\vdash $</td>
-<td>\vdash</td>
+<tr class="even">
+<td><span class="math inline">\(\Im\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\dashv $</td>
-<td>\dashv</td>
 <td></td>
 </tr>
-<tr>
-<td>$\lim$</td>
-<td>\lim</td>
+<tr class="odd">
+<td><span class="math inline">\(\mho\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\rightarrow$</td>
-<td>\rightarrow</td>
 <td></td>
 </tr>
-<tr>
-<td>$\infty$</td>
-<td>\infty</td>
+<tr class="even">
+<td><span class="math inline">\(\nabla\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\lim_{n\rightarrow+\infty}n$</td>
-<td>\lim_{n\rightarrow+\infty}n</td>
 <td></td>
-</tr>
-<tr>
-<td>$\prime $</td>
-<td>\prime</td>
-<td>求导</td>
-</tr>
-<tr>
-<td>$\int $</td>
-<td>\int</td>
-<td>积分</td>
-</tr>
-<tr>
-<td>$\iint $</td>
-<td>\iint</td>
-<td>双重积分</td>
 </tr>
-<tr>
-<td>$\iiint $</td>
-<td>\iiint</td>
-<td>三重积分</td>
-</tr>
-<tr>
-<td>$\oint $</td>
-<td>\oint</td>
-<td>曲线积分</td>
-</tr>
-<tr>
-<td>$\nabla $</td>
-<td>\nabla</td>
-<td>梯度</td>
-</tr>
-<tr>
-<td>$\dots $</td>
-<td>\dots</td>
-<td>一般用于有下标的序列</td>
-</tr>
-<tr>
-<td>$\ldots $</td>
-<td>\ldots</td>
+<tr class="odd">
+<td><span class="math inline">\(\surd\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\cdots $</td>
-<td>\cdots</td>
-<td>纵向位置比\dots稍高</td>
-</tr>
-<tr>
-<td>$\vdots $</td>
-<td>\vdots</td>
-<td>竖向</td>
-</tr>
-<tr>
-<td>$\ddots $</td>
-<td>\ddots</td>
 <td></td>
 </tr>
-<tr>
-<td>$\dots$</td>
+<tr class="even">
+<td><span class="math inline">\(\top\)</span></td>
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td>$\aleph$</td>
-<td>\aleph</td>
+<tr class="odd">
+<td><span class="math inline">\(\bot\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\hbar$</td>
-<td>\hbar</td>
 <td></td>
 </tr>
-<tr>
-<td>$\imath$</td>
-<td>\imath</td>
+<tr class="even">
+<td><span class="math inline">\(\neg\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\jmath$</td>
-<td>\jmath</td>
 <td></td>
 </tr>
-<tr>
-<td>$\ell$</td>
-<td>\ell</td>
+<tr class="odd">
+<td><span class="math inline">\(\flat\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\wp$</td>
-<td>\wp</td>
 <td></td>
 </tr>
-<tr>
-<td>$\Re$</td>
-<td>\Re</td>
+<tr class="even">
+<td><span class="math inline">\(\natural\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\Im$</td>
-<td>\Im</td>
 <td></td>
 </tr>
-<tr>
-<td>$\mho$</td>
-<td>\mho</td>
+<tr class="odd">
+<td><span class="math inline">\(\sharp\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\nabla$</td>
-<td>\nabla</td>
 <td></td>
 </tr>
-<tr>
-<td>$\surd$</td>
-<td>\surd</td>
+<tr class="even">
+<td><span class="math inline">\(\backslash\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\top$</td>
-<td>\top</td>
 <td></td>
 </tr>
-<tr>
-<td>$\bot$</td>
-<td>\bot</td>
+<tr class="odd">
+<td><span class="math inline">\(\partial\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\neg$</td>
-<td>\neg</td>
 <td></td>
 </tr>
-<tr>
-<td>$\flat$</td>
-<td>\flat</td>
+<tr class="even">
+<td><span class="math inline">\(\Box\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\natural$</td>
-<td>\natural</td>
 <td></td>
 </tr>
-<tr>
-<td>$\sharp$</td>
-<td>\sharp</td>
+<tr class="odd">
+<td><span class="math inline">\(\clubsuit\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\backslash$</td>
-<td>\backslash</td>
 <td></td>
 </tr>
-<tr>
-<td>$\partial$</td>
-<td>\partial</td>
+<tr class="even">
+<td><span class="math inline">\(\diamondsuit\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\Box$</td>
-<td>\Box</td>
 <td></td>
 </tr>
-<tr>
-<td>$\clubsuit$</td>
-<td>\clubsuit</td>
+<tr class="odd">
+<td><span class="math inline">\(\heartsuit\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\diamondsuit$</td>
-<td>\diamondsuit</td>
 <td></td>
 </tr>
-<tr>
-<td>$\heartsuit$</td>
-<td>\heartsuit</td>
+<tr class="even">
+<td><span class="math inline">\(\spadesuit\)</span></td>
 <td></td>
-</tr>
-<tr>
-<td>$\spadesuit$</td>
-<td>\spadesuit</td>
 <td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
                 
               </div>
@@ -2049,7 +1661,6 @@
 
   
   
-
 
 
 
@@ -2268,49 +1879,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
