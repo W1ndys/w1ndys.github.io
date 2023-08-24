@@ -1,0 +1,4 @@
+html { 
+	cursor: url(/img/mouse.png),auto;/* url地址可以是链接，相对位置，绝对位置 */
+	background-color: @theme_background;  /* 写成透明就行 */
+}
