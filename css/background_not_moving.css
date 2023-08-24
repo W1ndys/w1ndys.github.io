@@ -1,0 +1,7 @@
+/* 设置背景图片 */
+body {
+    background: url(	
+        https://img.xjh.me/random_img.php?return=302);
+    background-attachment: fixed;
+    background-size: cover;  
+    }
