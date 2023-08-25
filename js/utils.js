@@ -40,7 +40,20 @@ Fluid.utils = {
     var rect = element.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
     return (
-      (rect.top >= 0 && rect.top <= viewportheight * (1 + offsetfactor) rect.height 2) || (rect.bottom>= 0 && rect.bottom <= viewportheight * (1 + offsetfactor) rect.height 2) ); }, waitelementvisible: function(selectororelement, callback, { var runningonbrowser="typeof" window !="=" 'undefined'; isbot="(runningOnBrowser" && !('onscroll' in window)) || (typeof navigator 'undefined' (gle|ing|ro|msn)bot|crawl|spider|yand|duckgo i.test(navigator.useragent)); if (!runningonbrowser isbot) return; } offsetfactor="offsetFactor">= 0 ? offsetFactor : 0;
+      (rect.top >= 0 && rect.top <= viewportHeight * (1 + offsetFactor) + rect.height / 2) ||
+      (rect.bottom >= 0 && rect.bottom <= viewportHeight * (1 + offsetFactor) + rect.height / 2)
+    );
+  },
+
+  waitElementVisible: function(selectorOrElement, callback, offsetFactor) {
+    var runningOnBrowser = typeof window !== 'undefined';
+    var isBot = (runningOnBrowser && !('onscroll' in window))
+      || (typeof navigator !== 'undefined' && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
+    if (!runningOnBrowser || isBot) {
+      return;
+    }
+
+    offsetFactor = offsetFactor && offsetFactor >= 0 ? offsetFactor : 0;
 
     function waitInViewport(element) {
       Fluid.utils.listenDOMLoaded(function() {
@@ -177,7 +190,11 @@ Fluid.utils = {
   },
 
   retry(handler, interval, times) {
-    if (times <= 0) { return; } var next="function()" if (--times>= 0 && !handler()) {
+    if (times <= 0) {
+      return;
+    }
+    var next = function() {
+      if (--times >= 0 && !handler()) {
         setTimeout(next, interval);
       }
     };
@@ -226,4 +243,3 @@ Debouncer.prototype = {
     this.requestTick();
   }
 };
-</=></=></=>

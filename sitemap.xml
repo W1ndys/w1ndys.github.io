@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/08/25/%E6%9B%B2%E9%98%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%AD%98%E6%8C%87%E5%8C%97/</loc>
+    <loc>http://example.com/2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/</loc>
     
     <lastmod>2023-08-25</lastmod>
     
@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/08/22/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/</loc>
+    <loc>http://example.com/2023/08/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Reverse-666writeup/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/08/25/%E6%9B%B2%E9%98%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%AD%98%E6%8C%87%E5%8C%97/</loc>
     
     <lastmod>2023-08-25</lastmod>
     
@@ -105,6 +114,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://example.com/tags/CTF-re/</loc>
+    <lastmod>2023-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -116,6 +132,13 @@
   
   <url>
     <loc>http://example.com/categories/QFNU/</loc>
+    <lastmod>2023-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/CTF-re/</loc>
     <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
