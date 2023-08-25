@@ -845,8 +845,8 @@ i.iconfont {
   --link-hover-bg-color: #f8f9fa;
   --line-color: #eaecef;
   --navbar-bg-color: #2f4154;
-  --navbar-text-color: #000000;
-  --subtitle-color: #000000;
+  --navbar-text-color: #fff;
+  --subtitle-color: #fff;
   --scrollbar-color: #c4c6c9;
   --scrollbar-hover-color: #a6a6a6;
   --button-bg-color: transparent;
