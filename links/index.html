@@ -315,9 +315,40 @@
 
   <!-- Custom -->
   <div class="custom mx-auto">
-    <hr><p>请按如下格式提供信息，发送到我的邮箱w2769731875@qq.com：</p><ul><li>博客名：XXXX</li><li>简介：XXXXXX</li><li>链接：XXXXX</li><li>图片：https://xxxxxx.png</li></ul>
+    <hr><p>请按如下格式提供信息，在下面评论：</p><ul><li>博客名：XXXX</li><li>简介：XXXXXX</li><li>链接：XXXXX</li><li>头像：https://xxxxxx.png</li></ul>
   </div>
 
+
+
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"O0anWV51qSTQordSFKXKNxDS-gzGzoHsz","appKey":"Q6YzZfrspSwnVVQjcJSx0kLz","path":"window.location.pathname","placeholder":"吐槽一哈！！（评论支持markdown）","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
 
 
 
