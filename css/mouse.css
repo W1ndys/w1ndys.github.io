@@ -1,3 +1,7 @@
+body {
+	cursor: url(/img/Arrow.cur),auto;
+	background-color: @theme_background;
+}
 /* 封面大图 */
 .banner {
 	cursor: url(/img/Arrow.cur),auto;
