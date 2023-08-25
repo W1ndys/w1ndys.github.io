@@ -83,23 +83,7 @@
     var flag = localStorage.getItem(key);
     if (flag) {
       // 距离标记小于 24 小时则不计为 UV
-      if (new Date().getTime() - parseInt(flag, 10) <= 86400000) {
-        return false;
-      }
-    }
-    localStorage.setItem(key, new Date().getTime().toString());
-    return true;
-  }
-
-  function addCount(Counter) {
-    var enableIncr = CONFIG.web_analytics.enable && !Fluid.ctx.dnt && validHost();
-    var getterArr = [];
-    var incrArr = [];
-
-    // 请求 PV 并自增
-    var pvCtn = document.querySelector('#leancloud-site-pv-container');
-    if (pvCtn) {
-      var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+      if (new Date().getTime() - parseInt(flag, 10) <= 86400000) { return false; } localstorage.setitem(key, new date().gettime().tostring()); true; function addcount(counter) var enableincr="CONFIG.web_analytics.enable" && !fluid.ctx.dnt validhost(); getterarr="[];" incrarr="[];" 请求 pv 并自增 pvctn="document.querySelector('#leancloud-site-pv-container');" if (pvctn) pvgetter="getRecord(Counter," 'site-pv').then((record)> {
         enableIncr && incrArr.push(buildIncrement(record.objectId));
         var ele = document.querySelector('#leancloud-site-pv');
         if (ele) {
@@ -190,3 +174,4 @@
       });
   }
 })(window, document);
+</=>

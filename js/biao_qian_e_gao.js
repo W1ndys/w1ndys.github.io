@@ -8,9 +8,4 @@ document.addEventListener('visibilitychange', function() {
 		clearTimeout(titleTime);
 	} else {
 		$('[rel="icon"]').attr('href', "/img/favicon.png");
-		document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
-		titleTime = setTimeout(function() {
-			document.title = OriginTitle;
-		}, 2000);
-	}
-});
+		document.title = '(ฅ>ω

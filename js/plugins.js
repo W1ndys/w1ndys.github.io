@@ -51,8 +51,7 @@ Fluid.plugins = {
         }
       }
       var $imageWrap = $image.wrap(`
-        <a class="fancybox fancybox.image" href="${imageUrl}"
-          itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>`
+        <a class="fancybox fancybox.image" href="${imageUrl}" itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>`
       ).parent('a');
       if ($imageWrap.length !== 0) {
         if ($image.is('.group-image-container img')) {
