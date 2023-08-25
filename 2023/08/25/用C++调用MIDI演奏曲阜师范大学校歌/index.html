@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/favicon.png">
+  <link rel="icon" href="../../../../img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="W1ndys">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="背景介绍有一天在B站上看到有大佬用c++演奏音乐，一开始还不知道是调用MIDI函数，后来百度，查CSDN才知道是用函数调用，我直接转手写一个自己学校的校歌 前期准备首先准备好校歌的键盘，想必大家通知书上都有吧 然后是c++编译器，我用Visual Studio 2022 然后是一些乐理知识，由于我是一个纯工科生，对乐理知识了解程度为0，只能大体看音调，不认识节拍，无奈只能去群里找懂行的人，很巧就有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用C++调用MIDI演奏曲阜师范大学校歌">
+<meta property="og:url" content="http://example.com/2023/08/25/%E7%94%A8C++%E8%B0%83%E7%94%A8MIDI%E6%BC%94%E5%A5%8F%E6%9B%B2%E9%98%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E6%A0%A1%E6%AD%8C/index.html">
+<meta property="og:site_name" content="hi！这里是W1ndys的小站">
+<meta property="og:description" content="背景介绍有一天在B站上看到有大佬用c++演奏音乐，一开始还不知道是调用MIDI函数，后来百度，查CSDN才知道是用函数调用，我直接转手写一个自己学校的校歌 前期准备首先准备好校歌的键盘，想必大家通知书上都有吧 然后是c++编译器，我用Visual Studio 2022 然后是一些乐理知识，由于我是一个纯工科生，对乐理知识了解程度为0，只能大体看音调，不认识节拍，无奈只能去群里找懂行的人，很巧就有">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-25T14:45:17.315Z">
+<meta property="article:modified_time" content="2023-08-23T23:45:39.382Z">
+<meta property="article:author" content="W1ndys">
+<meta property="article:tag" content="QFNU">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>用C++调用MIDI演奏曲阜师范大学校歌 - hi！这里是W1ndys的小站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="../../../../css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="../css/scrollbar.css">
+<link rel="stylesheet" href="../css/mouse.css">
+<link rel="stylesheet" href="../css/cloudedGlass.css">
+<link rel="stylesheet" href="../css/scrollAnimation.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="../../../../js/utils.js" ></script>
+  <script  src="../../../../js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="hi！这里是W1ndys的小站" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="../../../../index.html">
+      <strong>W1ndys&#39;blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../index.html">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://w.wallhaven.cc/full/kx/wallhaven-kxlp6d.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="用C++调用MIDI演奏曲阜师范大学校歌"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-08-25 22:45" pubdate>
+           2023年 八月 25日 , 10:45
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          共5.1k字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          阅读本文预计43分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          浏览<span id="busuanzi_value_page_pv"></span>次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">用C++调用MIDI演奏曲阜师范大学校歌</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于： 2023年 八月 24日 , 7:45
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>有一天在B站上看到有大佬用c++演奏音乐，一开始还不知道是调用MIDI函数，后来百度，查CSDN才知道是用函数调用，我直接转手写一个自己学校的校歌</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>首先准备好校歌的键盘，想必大家通知书上都有吧</p>
+<p>然后是c++编译器，我用Visual Studio 2022</p>
+<p>然后是一些乐理知识，由于我是一个纯工科生，对乐理知识了解程度为0，只能大体看音调，不认识节拍，无奈只能去群里找懂行的人，很巧就有一个19的师姐还一个22的同学解答了我的疑惑</p>
+<h1 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h1><p>Scale函数</p>
+<p>这个函数是一个简谱对照表，相当于base64编码的编码表</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">enum</span> <span class="hljs-title class_">Scale</span><br><br>&#123;<br><br>    Rest = <span class="hljs-number">0</span>, C8 = <span class="hljs-number">108</span>, B7 = <span class="hljs-number">107</span>, A7s = <span class="hljs-number">106</span>, A7 = <span class="hljs-number">105</span>, G7s = <span class="hljs-number">104</span>, G7 = <span class="hljs-number">103</span>, F7s = <span class="hljs-number">102</span>, F7 = <span class="hljs-number">101</span>, E7 = <span class="hljs-number">100</span>,<br><br>    D7s = <span class="hljs-number">99</span>, D7 = <span class="hljs-number">98</span>, C7s = <span class="hljs-number">97</span>, C7 = <span class="hljs-number">96</span>, B6 = <span class="hljs-number">95</span>, A6s = <span class="hljs-number">94</span>, A6 = <span class="hljs-number">93</span>, G6s = <span class="hljs-number">92</span>, G6 = <span class="hljs-number">91</span>, F6s = <span class="hljs-number">90</span>, F6 = <span class="hljs-number">89</span>,<br><br>    E6 = <span class="hljs-number">88</span>, D6s = <span class="hljs-number">87</span>, D6 = <span class="hljs-number">86</span>, C6s = <span class="hljs-number">85</span>, C6 = <span class="hljs-number">84</span>, B5 = <span class="hljs-number">83</span>, A5s = <span class="hljs-number">82</span>, A5 = <span class="hljs-number">81</span>, G5s = <span class="hljs-number">80</span>, G5 = <span class="hljs-number">79</span>, F5s = <span class="hljs-number">78</span>,<br><br>    F5 = <span class="hljs-number">77</span>, E5 = <span class="hljs-number">76</span>, D5s = <span class="hljs-number">75</span>, D5 = <span class="hljs-number">74</span>, C5s = <span class="hljs-number">73</span>, C5 = <span class="hljs-number">72</span>, B4 = <span class="hljs-number">71</span>, A4s = <span class="hljs-number">70</span>, A4 = <span class="hljs-number">69</span>, G4s = <span class="hljs-number">68</span>, G4 = <span class="hljs-number">67</span>,<br><br>    F4s = <span class="hljs-number">66</span>, F4 = <span class="hljs-number">65</span>, E4 = <span class="hljs-number">64</span>, D4s = <span class="hljs-number">63</span>, D4 = <span class="hljs-number">62</span>, C4s = <span class="hljs-number">61</span>, C4 = <span class="hljs-number">60</span>, B3 = <span class="hljs-number">59</span>, A3s = <span class="hljs-number">58</span>, A3 = <span class="hljs-number">57</span>, G3s = <span class="hljs-number">56</span>,<br><br>    G3 = <span class="hljs-number">55</span>, F3s = <span class="hljs-number">54</span>, F3 = <span class="hljs-number">53</span>, E3 = <span class="hljs-number">52</span>, D3s = <span class="hljs-number">51</span>, D3 = <span class="hljs-number">50</span>, C3s = <span class="hljs-number">49</span>, C3 = <span class="hljs-number">48</span>, B2 = <span class="hljs-number">47</span>, A2s = <span class="hljs-number">46</span>, A2 = <span class="hljs-number">45</span>,<br><br>    G2s = <span class="hljs-number">44</span>, G2 = <span class="hljs-number">43</span>, F2s = <span class="hljs-number">42</span>, F2 = <span class="hljs-number">41</span>, E2 = <span class="hljs-number">40</span>, D2s = <span class="hljs-number">39</span>, D2 = <span class="hljs-number">38</span>, C2s = <span class="hljs-number">37</span>, C2 = <span class="hljs-number">36</span>, B1 = <span class="hljs-number">35</span>, A1s = <span class="hljs-number">34</span>,<br><br>    A1 = <span class="hljs-number">33</span>, G1s = <span class="hljs-number">32</span>, G1 = <span class="hljs-number">31</span>, F1s = <span class="hljs-number">30</span>, F1 = <span class="hljs-number">29</span>, E1 = <span class="hljs-number">28</span>, D1s = <span class="hljs-number">27</span>, D1 = <span class="hljs-number">26</span>, C1s = <span class="hljs-number">25</span>, C1 = <span class="hljs-number">24</span>, B0 = <span class="hljs-number">23</span>,<br><br>    A0s = <span class="hljs-number">22</span>, A0 = <span class="hljs-number">21</span><br><br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>然后是Voice函数，这个是控制声音的</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">enum</span> <span class="hljs-title class_">Voice</span><br><br>&#123;<br><br>    X1 = C2, X2 = D2, X3 = E2, X4 = F2, X5 = G2, X6 = A2, X7 = B2,<br><br>    L1 = C3, L2 = D3, L3 = E3, L4 = F3, L5 = G3, L6 = A3, L7 = B3,<br><br>    M1 = C4, M2 = D4, M3 = E4, M4 = F4, M5 = G4, M6 = A4, M7 = B4,<br><br>    H1 = C5, H2 = D5, H3 = E5, H4 = F5, H5 = G5, H6 = A5, H7 = B5,<br><br>    LOW_SPEED = <span class="hljs-number">500</span>, MIDDLE_SPEED = <span class="hljs-number">400</span>, HIGH_SPEED = <span class="hljs-number">300</span>,<br><br>    _ = <span class="hljs-number">0XFF</span><br><br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>然后就到最核心的了，就是编谱，把简谱翻译成代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">void</span>   <span class="hljs-title">QFNU</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    HMIDIOUT handle;<br>    <span class="hljs-built_in">midiOutOpen</span>(&amp;handle, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, CALLBACK_NULL);<br>    <span class="hljs-type">int</span> volume = <span class="hljs-number">0x7f</span>;<br>    <span class="hljs-type">int</span> voice = <span class="hljs-number">0x0</span>;<br>    <span class="hljs-type">int</span> sleep = <span class="hljs-number">300</span>;<br>    <span class="hljs-type">int</span> QFNU[] =<br>    &#123;<br>         M1,_,M1,_,M1,_,M2,_,<br>        M3,_,M5,_,M5,_,_,_,<br>        M6,_,M6,_,M5,_,M3,_,<br>        M1,_,M2,M3,M2,_,_,_,<br>        M3,_,M3,_,M5,_,M5,_,<br>        M3,_,M2,_,M1,_,L6,_,<br>        L5,L6,M1,M2,M3,_,M5,_,<br>        M2,_,_,_,_,_,<br>        M1,_,M1,_,M1,_,M2,_,<br>        M3,_,M5,_,M5,_,_,<br>        M6,_,M6,_,M5,_,M3,_,<br>        M1,_,M2,M3,M2,_,_,<br>        M3,_,M3,_,M5,_,M5,_,<br>        M3,_,M2,_,M1,_,L6,_,<br>        L5,L6,M1,M2,M3,_,M2,_,<br>        M1,_,_,_,_,<br>        H1,_,H1,_,H1,_,_,_,<br>        M3,_,M5,M6,M5,_,_,_,<br>        M6,_,M5,_,M4,_,M1,_,<br>        M7,_,M6,M7,M5,_,_,_,<br>        M6,_,H1,_,H1,_,H1,_,<br>        M3,_,M5,M6,M6,_,M6,_,<br>        M6,M5,M4,M4,M4,_,_,_,<br>        M2,M2,M2,M3,_,M2,_,_,_,<br>        H1,_,H1,_,H1,_,_,_,<br>        M3,_,M5,M6,M5,_,_,_,<br>        M6,_,M5,_,M4,_,M1,_,<br>        M7,_,M6,M7,M5,_,_,_,<br>        M6,_,H1,_,H1,_,H1,_,<br>        M3,M3,M5,M6,M6,_,_,_,<br>        M2,M3,M5,M5,M5,M5,M5,M5,_,<br>        H2,_,H2,_,M6,_,M7,_,<br>        H1,H1,H1,H1,H1,H1,<br>    &#125;;<br>    	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> i : QFNU)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (i == LOW_SPEED || i == HIGH_SPEED || i == MIDDLE_SPEED)<br>        &#123;<br>            sleep = i;<br>            <span class="hljs-keyword">continue</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>) &#123; sleep = <span class="hljs-number">150</span>; <span class="hljs-keyword">continue</span>; &#125;<br>        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">700</span>) &#123; <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">150</span>); <span class="hljs-keyword">continue</span>; &#125;<br>        <span class="hljs-keyword">if</span> (i == _)<br>        &#123;<br>            <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">300</span>);<br>            <span class="hljs-keyword">continue</span>;<br>        &#125;<br>        voice = (volume &lt;&lt; <span class="hljs-number">16</span>) + ((i) &lt;&lt; <span class="hljs-number">8</span>) + <span class="hljs-number">0x90</span>;<br>        <span class="hljs-built_in">midiOutShortMsg</span>(handle, voice);<br>        cout &lt;&lt; voice &lt;&lt; endl;<br>        <span class="hljs-built_in">Sleep</span>(sleep);<br>    &#125;<br>    <span class="hljs-built_in">midiOutClose</span>(handle);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>最后用int main主函数调用就可以</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">QFNU</span>();<span class="hljs-comment">//犁牛之子</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;Windows.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> comment(lib,<span class="hljs-string">&quot;winmm.lib&quot;</span>)</span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">enum</span> <span class="hljs-title class_">Scale</span><br><br>&#123;<br><br>    Rest = <span class="hljs-number">0</span>, C8 = <span class="hljs-number">108</span>, B7 = <span class="hljs-number">107</span>, A7s = <span class="hljs-number">106</span>, A7 = <span class="hljs-number">105</span>, G7s = <span class="hljs-number">104</span>, G7 = <span class="hljs-number">103</span>, F7s = <span class="hljs-number">102</span>, F7 = <span class="hljs-number">101</span>, E7 = <span class="hljs-number">100</span>,<br><br>    D7s = <span class="hljs-number">99</span>, D7 = <span class="hljs-number">98</span>, C7s = <span class="hljs-number">97</span>, C7 = <span class="hljs-number">96</span>, B6 = <span class="hljs-number">95</span>, A6s = <span class="hljs-number">94</span>, A6 = <span class="hljs-number">93</span>, G6s = <span class="hljs-number">92</span>, G6 = <span class="hljs-number">91</span>, F6s = <span class="hljs-number">90</span>, F6 = <span class="hljs-number">89</span>,<br><br>    E6 = <span class="hljs-number">88</span>, D6s = <span class="hljs-number">87</span>, D6 = <span class="hljs-number">86</span>, C6s = <span class="hljs-number">85</span>, C6 = <span class="hljs-number">84</span>, B5 = <span class="hljs-number">83</span>, A5s = <span class="hljs-number">82</span>, A5 = <span class="hljs-number">81</span>, G5s = <span class="hljs-number">80</span>, G5 = <span class="hljs-number">79</span>, F5s = <span class="hljs-number">78</span>,<br><br>    F5 = <span class="hljs-number">77</span>, E5 = <span class="hljs-number">76</span>, D5s = <span class="hljs-number">75</span>, D5 = <span class="hljs-number">74</span>, C5s = <span class="hljs-number">73</span>, C5 = <span class="hljs-number">72</span>, B4 = <span class="hljs-number">71</span>, A4s = <span class="hljs-number">70</span>, A4 = <span class="hljs-number">69</span>, G4s = <span class="hljs-number">68</span>, G4 = <span class="hljs-number">67</span>,<br><br>    F4s = <span class="hljs-number">66</span>, F4 = <span class="hljs-number">65</span>, E4 = <span class="hljs-number">64</span>, D4s = <span class="hljs-number">63</span>, D4 = <span class="hljs-number">62</span>, C4s = <span class="hljs-number">61</span>, C4 = <span class="hljs-number">60</span>, B3 = <span class="hljs-number">59</span>, A3s = <span class="hljs-number">58</span>, A3 = <span class="hljs-number">57</span>, G3s = <span class="hljs-number">56</span>,<br><br>    G3 = <span class="hljs-number">55</span>, F3s = <span class="hljs-number">54</span>, F3 = <span class="hljs-number">53</span>, E3 = <span class="hljs-number">52</span>, D3s = <span class="hljs-number">51</span>, D3 = <span class="hljs-number">50</span>, C3s = <span class="hljs-number">49</span>, C3 = <span class="hljs-number">48</span>, B2 = <span class="hljs-number">47</span>, A2s = <span class="hljs-number">46</span>, A2 = <span class="hljs-number">45</span>,<br><br>    G2s = <span class="hljs-number">44</span>, G2 = <span class="hljs-number">43</span>, F2s = <span class="hljs-number">42</span>, F2 = <span class="hljs-number">41</span>, E2 = <span class="hljs-number">40</span>, D2s = <span class="hljs-number">39</span>, D2 = <span class="hljs-number">38</span>, C2s = <span class="hljs-number">37</span>, C2 = <span class="hljs-number">36</span>, B1 = <span class="hljs-number">35</span>, A1s = <span class="hljs-number">34</span>,<br><br>    A1 = <span class="hljs-number">33</span>, G1s = <span class="hljs-number">32</span>, G1 = <span class="hljs-number">31</span>, F1s = <span class="hljs-number">30</span>, F1 = <span class="hljs-number">29</span>, E1 = <span class="hljs-number">28</span>, D1s = <span class="hljs-number">27</span>, D1 = <span class="hljs-number">26</span>, C1s = <span class="hljs-number">25</span>, C1 = <span class="hljs-number">24</span>, B0 = <span class="hljs-number">23</span>,<br><br>    A0s = <span class="hljs-number">22</span>, A0 = <span class="hljs-number">21</span><br><br>&#125;;<br><br><span class="hljs-keyword">enum</span> <span class="hljs-title class_">Voice</span><br><br>&#123;<br><br>    X1 = C2, X2 = D2, X3 = E2, X4 = F2, X5 = G2, X6 = A2, X7 = B2,<br><br>    L1 = C3, L2 = D3, L3 = E3, L4 = F3, L5 = G3, L6 = A3, L7 = B3,<br><br>    M1 = C4, M2 = D4, M3 = E4, M4 = F4, M5 = G4, M6 = A4, M7 = B4,<br><br>    H1 = C5, H2 = D5, H3 = E5, H4 = F5, H5 = G5, H6 = A5, H7 = B5,<br><br>    LOW_SPEED = <span class="hljs-number">500</span>, MIDDLE_SPEED = <span class="hljs-number">400</span>, HIGH_SPEED = <span class="hljs-number">300</span>,<br><br>    _ = <span class="hljs-number">0XFF</span><br><br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">void</span>   <span class="hljs-title">QFNU</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    HMIDIOUT handle;<br>    <span class="hljs-built_in">midiOutOpen</span>(&amp;handle, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, CALLBACK_NULL);<br>    <span class="hljs-type">int</span> volume = <span class="hljs-number">0x7f</span>;<br>    <span class="hljs-type">int</span> voice = <span class="hljs-number">0x0</span>;<br>    <span class="hljs-type">int</span> sleep = <span class="hljs-number">300</span>;<br>    <span class="hljs-type">int</span> QFNU[] =<br>    &#123;<br>         M1,_,M1,_,M1,_,M2,_,<br>        M3,_,M5,_,M5,_,_,_,<br>        M6,_,M6,_,M5,_,M3,_,<br>        M1,_,M2,M3,M2,_,_,_,<br>        M3,_,M3,_,M5,_,M5,_,<br>        M3,_,M2,_,M1,_,L6,_,<br>        L5,L6,M1,M2,M3,_,M5,_,<br>        M2,_,_,_,_,_,<br>        M1,_,M1,_,M1,_,M2,_,<br>        M3,_,M5,_,M5,_,_,<br>        M6,_,M6,_,M5,_,M3,_,<br>        M1,_,M2,M3,M2,_,_,<br>        M3,_,M3,_,M5,_,M5,_,<br>        M3,_,M2,_,M1,_,L6,_,<br>        L5,L6,M1,M2,M3,_,M2,_,<br>        M1,_,_,_,_,<br>        H1,_,H1,_,H1,_,_,_,<br>        M3,_,M5,M6,M5,_,_,_,<br>        M6,_,M5,_,M4,_,M1,_,<br>        M7,_,M6,M7,M5,_,_,_,<br>        M6,_,H1,_,H1,_,H1,_,<br>        M3,_,M5,M6,M6,_,M6,_,<br>        M6,M5,M4,M4,M4,_,_,_,<br>        M2,M2,M2,M3,_,M2,_,_,_,<br>        H1,_,H1,_,H1,_,_,_,<br>        M3,_,M5,M6,M5,_,_,_,<br>        M6,_,M5,_,M4,_,M1,_,<br>        M7,_,M6,M7,M5,_,_,_,<br>        M6,_,H1,_,H1,_,H1,_,<br>        M3,M3,M5,M6,M6,_,_,_,<br>        M2,M3,M5,M5,M5,M5,M5,M5,_,<br>        H2,_,H2,_,M6,_,M7,_,<br>        H1,H1,H1,H1,H1,H1,<br>    &#125;;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> i : QFNU)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (i == LOW_SPEED || i == HIGH_SPEED || i == MIDDLE_SPEED)<br>        &#123;<br>            sleep = i;<br>            <span class="hljs-keyword">continue</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>) &#123; sleep = <span class="hljs-number">150</span>; <span class="hljs-keyword">continue</span>; &#125;<br>        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">700</span>) &#123; <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">150</span>); <span class="hljs-keyword">continue</span>; &#125;<br>        <span class="hljs-keyword">if</span> (i == _)<br>        &#123;<br>            <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">300</span>);<br>            <span class="hljs-keyword">continue</span>;<br>        &#125;<br>        voice = (volume &lt;&lt; <span class="hljs-number">16</span>) + ((i) &lt;&lt; <span class="hljs-number">8</span>) + <span class="hljs-number">0x90</span>;<br>        <span class="hljs-built_in">midiOutShortMsg</span>(handle, voice);<br>        cout &lt;&lt; voice &lt;&lt; endl;<br>        <span class="hljs-built_in">Sleep</span>(sleep);<br>    &#125;<br>    <span class="hljs-built_in">midiOutClose</span>(handle);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">QFNU</span>();<span class="hljs-comment">//犁牛之子</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="后期处理"><a href="#后期处理" class="headerlink" title="后期处理"></a>后期处理</h1><p>简单做个视频剪辑一下</p>
+<p>被曲阜师范大学官方抖音号发表咯！~</p>
+<p>复制口令戳下面代码块左上角↓</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs clean"><span class="hljs-number">7.94</span> SYm:/ 简单用代码做个音乐，一起看看美好的曲园！# 曲阜师范大学 # 代码 # 编程 # 我在大学等你  https:<span class="hljs-comment">//v.douyin.com/iJnnEGjb/ 复制此链接，打开Dou音搜索，直接观看视频！</span><br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="../../../../categories/QFNU/" class="category-chain-item">QFNU</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="../../../../tags/QFNU/" class="print-no-link">#QFNU</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>用C++调用MIDI演奏曲阜师范大学校歌</div>
+      <div>http://example.com/2023/08/25/用C++调用MIDI演奏曲阜师范大学校歌/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>W1ndys</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年8月25日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年8月24日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="../%E6%9B%B2%E9%98%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/" title="曲阜师范大学相关链接">
+                        <span class="hidden-mobile">曲阜师范大学相关链接</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"O0anWV51qSTQordSFKXKNxDS-gzGzoHsz","appKey":"Q6YzZfrspSwnVVQjcJSx0kLz","path":"window.location.pathname","placeholder":"吐槽一哈！！（评论支持markdown）","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":null},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> <a href="https://res.abeim.cn/api/qq/?qq=2769731875" target="_blank" rel="nofollow noopener"><span>W1ndys[点击联系我]</span></a> <i class="iconfont icon-love"></i> <a href="https://res.abeim.cn/api/qq/?qq=2769731875" target="_blank" rel="nofollow noopener"><span>shen shuo</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="../../../../js/events.js" ></script>
+<script  src="../../../../js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="../../../../js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="../../../../js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="../js/love.js"></script>
+<script src="../js/mouse_moving.js"></script>
+<script src="../js/biao_qian_e_gao.js"></script>
+<script src="../js/sakura.js"></script>
+<script src="../js/scrollAnimation.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="../../../../js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
