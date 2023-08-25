@@ -786,13 +786,13 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'https://v1.hitokoto.cn/',
+          url: 'https://api.aagtool.top/api/sjyy?type=json',
           headers: {},
           dataType: 'json',
           success: function(result) {
             var apiText;
             if (result) {
-              var keys = 'hitokoto'.split(',');
+              var keys = 'text'.split(',');
               if (result instanceof Array) {
                 result = result[0];
               }
@@ -810,7 +810,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://v1.hitokoto.cn/:', error);
+              console.error('Failed to request https://api.aagtool.top/api/sjyy?type=json:', error);
             }
             typing(text);
           }
