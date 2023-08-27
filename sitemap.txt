@@ -1,10 +1,10 @@
+http://example.com/2023/08/26/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%87%8D%E5%A4%A7bug%E7%9A%84%E4%BF%AE%E5%A4%8D%E8%BF%87%E7%A8%8B/
 http://example.com/live2d-widget/waifu-tips.json
 http://example.com/live2d-widget/package.json
 http://example.com/live2d-widget/demo/demo.html
 http://example.com/live2d-widget/demo/login.html
 http://example.com/live2d-widget/README.html
 http://example.com/live2d-widget/README.en.html
-http://example.com/2023/08/26/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%87%8D%E5%A4%A7bug%E7%9A%84%E4%BF%AE%E5%A4%8D%E8%BF%87%E7%A8%8B/
 http://example.com/2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/
 http://example.com/2023/08/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Reverse-666writeup/
 http://example.com/2023/08/25/%E6%9B%B2%E9%98%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%AD%98%E6%8C%87%E5%8C%97/
