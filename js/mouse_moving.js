@@ -36,7 +36,7 @@
     }
 
     function l() {
-        this.character = "*", this.lifeSpan = 120, this.initialStyles = {
+        this.character = "*", this.lifeSpan = 100, this.initialStyles = {
             position: "fixed",
             top: "0",
             display: "block",
