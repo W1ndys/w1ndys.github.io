@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://example.com/2023/08/30/%E5%A4%A7%E4%BA%8C%E8%AF%BE%E7%A8%8B%E5%B8%B8%E7%94%A8%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/08/30/%E5%A4%A7%E4%BA%8C%E8%AF%BE%E7%A8%8B%E5%B8%B8%E7%94%A8%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/live2d-widget/README.html</loc>
+    <loc>http://example.com/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/live2d-widget/README.en.html</loc>
+    <loc>http://example.com/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
