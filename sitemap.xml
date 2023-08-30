@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/</loc>
+    <loc>http://example.com/2023/08/30/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AD%A6%E9%99%A2%E8%BF%8E%E6%96%B0%E8%A7%A3%E5%AF%86md/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/08/30/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AD%A6%E9%99%A2%E8%BF%8E%E6%96%B0%E8%A7%A3%E5%AF%86md/</loc>
+    <loc>http://example.com/2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/live2d-widget/README.en.html</loc>
+    <loc>http://example.com/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/live2d-widget/README.html</loc>
+    <loc>http://example.com/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -189,14 +189,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/QFNU/</loc>
+    <loc>http://example.com/tags/CTF-re/</loc>
     <lastmod>2023-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/CTF-re/</loc>
+    <loc>http://example.com/tags/QFNU/</loc>
     <lastmod>2023-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/QFNU/</loc>
+    <loc>http://example.com/categories/CTF-re/</loc>
     <lastmod>2023-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-re/</loc>
+    <loc>http://example.com/categories/QFNU/</loc>
     <lastmod>2023-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
