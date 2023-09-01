@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/2023/09/01/QFNU_Course_Selection_Guide_North/</loc>
+    
+    <lastmod>2023-09-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/08/30/%E5%A4%A7%E4%BA%8C%E8%AF%BE%E7%A8%8B%E5%B8%B8%E7%94%A8%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2023-08-30</lastmod>
@@ -83,15 +92,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/live2d-widget/demo/demo.html</loc>
-    
-    <lastmod>2023-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/live2d-widget/demo/login.html</loc>
     
     <lastmod>2023-08-26</lastmod>
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/live2d-widget/README.en.html</loc>
+    <loc>http://example.com/live2d-widget/demo/demo.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -111,6 +111,15 @@
   
   <url>
     <loc>http://example.com/live2d-widget/README.html</loc>
+    
+    <lastmod>2023-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -191,14 +200,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/CTF/</loc>
+    <loc>http://example.com/tags/QFNU/</loc>
     <lastmod>2023-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/QFNU/</loc>
+    <loc>http://example.com/tags/CTF/</loc>
     <lastmod>2023-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -221,14 +230,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/CTF/</loc>
+    <loc>http://example.com/categories/QFNU/</loc>
     <lastmod>2023-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/QFNU/</loc>
+    <loc>http://example.com/categories/CTF/</loc>
     <lastmod>2023-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
