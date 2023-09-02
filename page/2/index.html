@@ -18,8 +18,8 @@
   
     <meta name="description" content="你的付出都棋逢对手">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签 - CTF">
-<meta property="og:url" content="http://w1ndys.top/tags/CTF/index.html">
+<meta property="og:title" content="hi！这里是W1ndys的小站">
+<meta property="og:url" content="http://w1ndys.top/page/2/index.html">
 <meta property="og:site_name" content="hi！这里是W1ndys的小站">
 <meta property="og:description" content="你的付出都棋逢对手">
 <meta property="og:locale" content="zh_CN">
@@ -30,7 +30,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>标签 - CTF - hi！这里是W1ndys的小站</title>
+  <title>hi！这里是W1ndys的小站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -92,7 +92,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 80vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="../../index.html">
@@ -210,17 +210,13 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="标签 - CTF"></span>
+            <span id="subtitle" data-typed-text="你的付出都棋逢对手……"></span>
           
         </div>
 
         
       </div>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
       
     </div>
   </div>
@@ -241,29 +237,75 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
-  <hr>
-  
-  
+
+  <div class="row mx-auto index-card">
     
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="../../2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/" target="_self">
+          曲阜师范大学选课指北项目（试运行）
+        </a>
+      </h2>
+
       
-      <p class="h5">2023</p>
-    
-    <a href="../../2023/08/25/CTF%E5%B8%B8%E7%94%A8%E8%A7%A3%E5%AF%86%E5%B9%B3%E5%8F%B0/" class="list-group-item list-group-item-action">
-      <time>08-25</time>
-      <div class="list-group-item-title">CTF常用解密平台</div>
-    </a>
+      <a class="index-excerpt index-excerpt__noimg" href="../../2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/" target="_self">
+        <div>
+          [公告]本项目地址已迁移到（点击下方链接） 曲阜师范大学选课指北项目 - hi！这里是W1ndys的小站 本地址不再更新 本页面计划于2023年12月31日删除，请及时保存新地址  . . . . . . . . . . . . . . . . . . . . . 为使曲阜师范大学同学都能了解每位老师的教学风格，W1ndys联合本人blog运行项目，收集全校同学意见，统计整合信息刊登，无偿分享给
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-23 11:03" pubdate>
+              2023-08-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
   
     
-    <a href="../../2023/08/25/CTF%E5%B8%B8%E7%94%A8%E5%88%B7%E9%A2%98%E5%B9%B3%E5%8F%B0/" class="list-group-item list-group-item-action">
-      <time>08-25</time>
-      <div class="list-group-item-title">CTF常用刷题平台</div>
-    </a>
+      <span class="category-chain">
+        
+  <a href="../../categories/QFNU/" class="category-chain-item">QFNU</a>
   
-</div>
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="../../tags/QFNU/">#QFNU</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="../../"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="../../">1</a><span class="page-number current">2</span>
+    </span>
+  </nav>
 
 
 
@@ -375,7 +417,37 @@
       }
       var text = subtitle.getAttribute('data-typed-text');
       
-        typing(text);
+        jQuery.ajax({
+          type: 'GET',
+          url: 'https://v1.hitokoto.cn/?c=k',
+          headers: {},
+          dataType: 'json',
+          success: function(result) {
+            var apiText;
+            if (result) {
+              var keys = 'hitokoto'.split(',');
+              if (result instanceof Array) {
+                result = result[0];
+              }
+              for (const k of keys) {
+                var value = result[k];
+                if (typeof value === 'string') {
+                  apiText = value;
+                  break;
+                } else if (value instanceof Object) {
+                  result = value;
+                }
+              }
+            }
+            apiText ? typing(apiText) : typing(text);
+          },
+          error: function(xhr, status, error) {
+            if (error) {
+              console.error('Failed to request https://v1.hitokoto.cn/?c=k:', error);
+            }
+            typing(text);
+          }
+        })
       
     })(window, document);
   </script>
