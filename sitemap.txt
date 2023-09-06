@@ -12,8 +12,8 @@ http://w1ndys.top/about/index.html
 http://w1ndys.top/2023/08/23/Qufu_Normal_University_Course_Selection_Guide_North_Project_(Trial_Operation)/
 http://w1ndys.top/live2d-widget/waifu-tips.json
 http://w1ndys.top/live2d-widget/package.json
-http://w1ndys.top/live2d-widget/demo/demo.html
 http://w1ndys.top/live2d-widget/demo/login.html
+http://w1ndys.top/live2d-widget/demo/demo.html
 http://w1ndys.top/live2d-widget/README.en.html
 http://w1ndys.top/live2d-widget/README.html
 http://w1ndys.top/categories/index.html
