@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://w1ndys.top/2023/09/08/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
+    <loc>http://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/</loc>
     
     <lastmod>2023-09-08</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/</loc>
+    <loc>http://w1ndys.top/2023/09/08/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2023-09-08</lastmod>
     
@@ -146,15 +146,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
-    
-    <lastmod>2023-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
     
     <lastmod>2023-08-26</lastmod>
@@ -164,7 +155,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -174,6 +165,15 @@
   
   <url>
     <loc>http://w1ndys.top/live2d-widget/README.en.html</loc>
+    
+    <lastmod>2023-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
