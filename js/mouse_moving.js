@@ -42,7 +42,7 @@
             display: "block",
             pointerEvents: "none",
             "z-index": "10000000",
-            fontSize: "40px",
+            fontSize: "35px",
             "will-change": "transform"
         }, this.init = function (t, i, n) {
             this.velocity = {
