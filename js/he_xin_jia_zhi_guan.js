@@ -9,10 +9,6 @@ jQuery(document).ready(function ($) {
         let scrolly = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
         y = y - scrolly;
         $i.css({
-            "-webkit-user-select": "none",
-            "-moz-user-select": "none",
-            "-o-user-select": "none",
-            "user-select": "none",
             "z-index": 999,
             "top": y - 20,
             "left": x,
