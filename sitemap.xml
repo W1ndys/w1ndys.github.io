@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://w1ndys.top/about/index.html</loc>
+    
+    <lastmod>2023-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/</loc>
     
     <lastmod>2023-09-12</lastmod>
@@ -57,15 +66,6 @@
   
   <url>
     <loc>http://w1ndys.top/2023/09/06/%E5%85%B3%E4%BA%8E%E6%84%8F%E5%91%B3%E6%B7%B1%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90/</loc>
-    
-    <lastmod>2023-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/about/index.html</loc>
     
     <lastmod>2023-09-06</lastmod>
     
