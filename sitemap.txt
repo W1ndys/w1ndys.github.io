@@ -17,8 +17,8 @@ http://w1ndys.top/live2d-widget/waifu-tips.json
 http://w1ndys.top/live2d-widget/package.json
 http://w1ndys.top/live2d-widget/demo/login.html
 http://w1ndys.top/live2d-widget/demo/demo.html
-http://w1ndys.top/live2d-widget/README.html
 http://w1ndys.top/live2d-widget/README.en.html
+http://w1ndys.top/live2d-widget/README.html
 http://w1ndys.top/categories/index.html
 http://w1ndys.top/tags/index.html
 http://w1ndys.top/
