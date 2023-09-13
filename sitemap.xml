@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://w1ndys.top/2023/08/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Reverse-666writeup/</loc>
+    
+    <lastmod>2023-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/2023/09/06/%E5%85%B3%E4%BA%8E%E6%84%8F%E5%91%B3%E6%B7%B1%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90/</loc>
     
     <lastmod>2023-09-13</lastmod>
@@ -119,15 +128,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/2023/08/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Reverse-666writeup/</loc>
-    
-    <lastmod>2023-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/2023/08/30/%E5%A4%A7%E4%BA%8C%E8%AF%BE%E7%A8%8B%E5%B8%B8%E7%94%A8%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2023-09-06</lastmod>
@@ -234,14 +234,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/QFNU/</loc>
+    <loc>http://w1ndys.top/tags/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
+    <loc>http://w1ndys.top/tags/QFNU/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -255,7 +255,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/CTF-re/</loc>
+    <loc>http://w1ndys.top/tags/CTFwp-re/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -278,14 +278,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/QFNU/</loc>
+    <loc>http://w1ndys.top/categories/CTF%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF%E6%8C%87%E5%8C%97/</loc>
+    <loc>http://w1ndys.top/categories/QFNU/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF-re/</loc>
+    <loc>http://w1ndys.top/categories/CTFwp-re/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
