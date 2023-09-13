@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/README.en.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -236,6 +236,13 @@
 
   
   <url>
+    <loc>http://w1ndys.top/tags/CTF/</loc>
+    <lastmod>2023-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/tags/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -244,13 +251,6 @@
   
   <url>
     <loc>http://w1ndys.top/tags/QFNU/</loc>
-    <lastmod>2023-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/tags/CTF/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -287,6 +287,13 @@
 
   
   <url>
+    <loc>http://w1ndys.top/categories/CTF/</loc>
+    <lastmod>2023-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/categories/CTF%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -301,13 +308,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/</loc>
-    <lastmod>2023-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/categories/%E6%96%87%E6%A1%88/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -315,14 +315,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTFwp/</loc>
+    <loc>http://w1ndys.top/categories/hexo/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/hexo/</loc>
+    <loc>http://w1ndys.top/categories/CTFwp/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
