@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://w1ndys.top/2023/09/06/%E5%85%B3%E4%BA%8E%E6%84%8F%E5%91%B3%E6%B7%B1%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90/</loc>
+    
+    <lastmod>2023-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/2023/09/13/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97%E2%80%94%E2%80%94reserve/</loc>
     
     <lastmod>2023-09-13</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>http://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/</loc>
-    
-    <lastmod>2023-09-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/2023/09/06/%E5%85%B3%E4%BA%8E%E6%84%8F%E5%91%B3%E6%B7%B1%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90/</loc>
     
     <lastmod>2023-09-13</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -248,14 +248,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/CTF-re/</loc>
+    <loc>http://w1ndys.top/tags/%E6%96%87%E6%A1%88/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/%E5%A5%BD%E8%AF%97%E5%A5%BD%E5%8F%A5/</loc>
+    <loc>http://w1ndys.top/tags/CTF-re/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -292,14 +292,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF-re/</loc>
+    <loc>http://w1ndys.top/categories/%E6%96%87%E6%A1%88/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%A5%BD%E8%AF%97%E5%A5%BD%E5%8F%A5/</loc>
+    <loc>http://w1ndys.top/categories/CTF-re/</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
