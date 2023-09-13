@@ -20,8 +20,8 @@ http://w1ndys.top/live2d-widget/waifu-tips.json
 http://w1ndys.top/live2d-widget/package.json
 http://w1ndys.top/live2d-widget/demo/demo.html
 http://w1ndys.top/live2d-widget/demo/login.html
-http://w1ndys.top/live2d-widget/README.html
 http://w1ndys.top/live2d-widget/README.en.html
+http://w1ndys.top/live2d-widget/README.html
 http://w1ndys.top/categories/index.html
 http://w1ndys.top/tags/index.html
 http://w1ndys.top/
@@ -38,5 +38,5 @@ http://w1ndys.top/categories/CTF/%E5%B9%B3%E5%8F%B0/
 http://w1ndys.top/categories/hexo/
 http://w1ndys.top/categories/%E6%96%87%E6%A1%88/
 http://w1ndys.top/categories/CTF/WP/
-http://w1ndys.top/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/
 http://w1ndys.top/categories/CTF/WP/RE/
+http://w1ndys.top/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/
