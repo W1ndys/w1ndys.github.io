@@ -16,24 +16,27 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="">
   
-    <meta name="description" content="凯撒密码 来自千千秀字  凯撒密码最早由古罗马军事统帅盖乌斯·尤利乌斯·凯撒在军队中用来传递加密信息，故称凯撒密码。这是一种位移加密方式，只对26个字母进行位移替换加密，规则简单，容易破解。下面是位移1次的对比：    明文字母表 Z A B C D E F G H I J K L M N O P Q R S T U V W X Y    密文字母表 A B C D E F G H I J K L">
+    <meta name="description" content="查壳无壳 反编译拉进漂亮姐姐中（IDA） shift+F12看一下字串  首先看到一个关键信息，点进去，Ctrl+x交叉引用  F5看一下伪代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748int __cdecl main(int argc, const char **">
 <meta property="og:type" content="article">
-<meta property="og:title" content="密码学——凯撒密码原理">
-<meta property="og:url" content="http://w1ndys.top/2023/09/16/%E5%AF%86%E7%A0%81%E5%AD%A6%E2%80%94%E2%80%94%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:title" content="攻防世界-Reverse-easyxorwriteup">
+<meta property="og:url" content="http://w1ndys.top/2023/09/16/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Reverse-easyxorwriteup/index.html">
 <meta property="og:site_name" content="hi！这里是W1ndys的小站">
-<meta property="og:description" content="凯撒密码 来自千千秀字  凯撒密码最早由古罗马军事统帅盖乌斯·尤利乌斯·凯撒在军队中用来传递加密信息，故称凯撒密码。这是一种位移加密方式，只对26个字母进行位移替换加密，规则简单，容易破解。下面是位移1次的对比：    明文字母表 Z A B C D E F G H I J K L M N O P Q R S T U V W X Y    密文字母表 A B C D E F G H I J K L">
+<meta property="og:description" content="查壳无壳 反编译拉进漂亮姐姐中（IDA） shift+F12看一下字串  首先看到一个关键信息，点进去，Ctrl+x交叉引用  F5看一下伪代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748int __cdecl main(int argc, const char **">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-16T07:58:45.051Z">
-<meta property="article:modified_time" content="2023-09-16T08:01:27.110Z">
+<meta property="og:image" content="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg">
+<meta property="og:image" content="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg">
+<meta property="article:published_time" content="2023-09-16T10:22:06.620Z">
+<meta property="article:modified_time" content="2023-09-16T10:30:17.151Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>密码学——凯撒密码原理 - hi！这里是W1ndys的小站</title>
+  <title>攻防世界-Reverse-easyxorwriteup - hi！这里是W1ndys的小站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -219,7 +222,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="密码学——凯撒密码原理"></span>
+            <span id="subtitle" data-typed-text="攻防世界-Reverse-easyxorwriteup"></span>
           
         </div>
 
@@ -230,8 +233,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-16 15:58" pubdate>
-           2023年09月16日15:58
+        <time datetime="2023-09-16 18:22" pubdate>
+           2023年09月16日18:22
         </time>
       </span>
     
@@ -243,7 +246,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共730字
+          共1.3k字
         
       </span>
     
@@ -255,7 +258,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计7分钟
+          阅读本文预计11分钟
         
       </span>
     
@@ -300,12 +303,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">密码学——凯撒密码原理</h1>
+            <h1 id="seo-header">攻防世界-Reverse-easyxorwriteup</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年09月16日16:01
+                    本文最后更新于： 2023年09月16日18:30
                   
                 
               </p>
@@ -313,336 +316,24 @@
             
               <div class="markdown-body">
                 
-                <h1 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h1><blockquote>
-<p>来自千千秀字</p>
-</blockquote>
-<p>凯撒密码最早由古罗马军事统帅盖乌斯·尤利乌斯·凯撒在军队中用来传递加密信息，故称凯撒密码。这是一种位移加密方式，只对26个字母进行位移替换加密，规则简单，容易破解。下面是位移1次的对比：</p>
-<table>
-<thead>
-<tr>
-<th>明文字母表</th>
-<th>Z</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-<th>F</th>
-<th>G</th>
-<th>H</th>
-<th>I</th>
-<th>J</th>
-<th>K</th>
-<th>L</th>
-<th>M</th>
-<th>N</th>
-<th>O</th>
-<th>P</th>
-<th>Q</th>
-<th>R</th>
-<th>S</th>
-<th>T</th>
-<th>U</th>
-<th>V</th>
-<th>W</th>
-<th>X</th>
-<th>Y</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>密文字母表</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>I</td>
-<td>J</td>
-<td>K</td>
-<td>L</td>
-<td>M</td>
-<td>N</td>
-<td>O</td>
-<td>P</td>
-<td>Q</td>
-<td>R</td>
-<td>S</td>
-<td>T</td>
-<td>U</td>
-<td>V</td>
-<td>W</td>
-<td>X</td>
-<td>Y</td>
-<td>Z</td>
-</tr>
-</tbody></table>
-<p>将明文字母表向后移动1位，A变成了B，B变成了C……，Z变成了A。同理，若将明文字母表向后移动3位：</p>
-<table>
-<thead>
-<tr>
-<th>明文字母表</th>
-<th>X</th>
-<th>Y</th>
-<th>Z</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-<th>F</th>
-<th>G</th>
-<th>H</th>
-<th>I</th>
-<th>J</th>
-<th>K</th>
-<th>L</th>
-<th>M</th>
-<th>N</th>
-<th>O</th>
-<th>P</th>
-<th>Q</th>
-<th>R</th>
-<th>S</th>
-<th>T</th>
-<th>U</th>
-<th>V</th>
-<th>W</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>密文字母表</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>I</td>
-<td>J</td>
-<td>K</td>
-<td>L</td>
-<td>M</td>
-<td>N</td>
-<td>O</td>
-<td>P</td>
-<td>Q</td>
-<td>R</td>
-<td>S</td>
-<td>T</td>
-<td>U</td>
-<td>V</td>
-<td>W</td>
-<td>X</td>
-<td>Y</td>
-<td>Z</td>
-</tr>
-</tbody></table>
-<p>则A变成了D，B变成了E……，Z变成了C。</p>
-<p>字母表最多可以移动25位。凯撒密码的明文字母表向后或向前移动都是可以的，通常表述为向后移动，如果要向前移动1位，则等同于向后移动25位，位移选择为25即可。</p>
-<h1 id="尝试一下"><a href="#尝试一下" class="headerlink" title="尝试一下"></a>尝试一下</h1><p>现在你已经知道原理了，解密一下下面这个吧</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs perl">oknqdbqmo<span class="hljs-string">q&#123;kag_tmhq_xqmdzqp_omqemd_qzodkbfuaz&#125;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="查壳"><a href="#查壳" class="headerlink" title="查壳"></a>查壳</h1><p>无壳</p>
+<h1 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h1><p>拉进漂亮姐姐中（IDA）</p>
+<p>shift+F12看一下字串</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>F5看一下伪代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> __cdecl <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">const</span> <span class="hljs-type">char</span> **argv, <span class="hljs-type">const</span> <span class="hljs-type">char</span> **envp)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-type">int</span> v3; <span class="hljs-comment">// eax</span><br>  <span class="hljs-type">char</span> v4; <span class="hljs-comment">// al</span><br>  <span class="hljs-type">int</span> v5; <span class="hljs-comment">// eax</span><br>  <span class="hljs-type">char</span> v7; <span class="hljs-comment">// [rsp+33h] [rbp-Dh]</span><br>  <span class="hljs-type">char</span> v8; <span class="hljs-comment">// [rsp+33h] [rbp-Dh]</span><br>  <span class="hljs-type">int</span> v9; <span class="hljs-comment">// [rsp+34h] [rbp-Ch]</span><br>  <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+38h] [rbp-8h]</span><br>  <span class="hljs-type">int</span> v11; <span class="hljs-comment">// [rsp+3Ch] [rbp-4h]</span><br><br>  _main();<br>  v11 = <span class="hljs-number">0</span>;<br>  v9 = <span class="hljs-number">0</span>;<br>  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Please input your flag:&quot;</span>);<br>  <span class="hljs-keyword">while</span> ( <span class="hljs-number">1</span> )<br>  &#123;<br>    v8 = <span class="hljs-built_in">getchar</span>();<br>    <span class="hljs-keyword">if</span> ( v8 == <span class="hljs-number">10</span> )<br>      <span class="hljs-keyword">break</span>;<br>	v7 = key[v9 % <span class="hljs-number">4</span>] ^ v8;			<span class="hljs-comment">//输入的字符，进行异或操作，得到v7</span><br>    <span class="hljs-keyword">while</span> ( <span class="hljs-number">1</span> )						<br>    &#123;<br>      v4 = v7--;					<span class="hljs-comment">//循环v7次</span><br>      <span class="hljs-keyword">if</span> ( v4 &lt;= <span class="hljs-number">0</span> )				<span class="hljs-comment">//此while循环是向s[]中输入v7个1</span><br>        <span class="hljs-keyword">break</span>;<br>      v3 = v11++;<br>      s[v3] = <span class="hljs-number">1</span>;<br>    &#125;<br>    v5 = v11++;						<span class="hljs-comment">//输出v7个1后，使用0与下一串1隔开	</span><br>    s[v5] = <span class="hljs-number">0</span>;						<br>    ++v9;<br>  &#125;<br>  <span class="hljs-keyword">while</span> ( v11 &lt;= <span class="hljs-number">2559</span> )				<span class="hljs-comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span><br>    s[v11++] = <span class="hljs-number">-1</span>;<br>  <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">2559</span>; ++i )<br>  &#123;<br>    <span class="hljs-keyword">if</span> ( r[i] != s[i] )				<span class="hljs-comment">//进行比较</span><br>    &#123;<br>      <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lose lose lose!&quot;</span>);<br>      <span class="hljs-keyword">break</span>;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">if</span> ( i == <span class="hljs-number">2560</span> )<br>    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Win win win!&quot;</span>);<br>  <span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>.</p>
-<p>.</p>
-<h1 id="在线解密地址"><a href="#在线解密地址" class="headerlink" title="在线解密地址"></a>在线解密地址</h1><p><a target="_blank" rel="noopener" href="https://www.qqxiuzi.cn/bianma/kaisamima.php">凯撒密码在线加密解密 - 千千秀字 (qqxiuzi.cn)</a></p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>cyberpeace{you_have_learned_caesar_encryption}</p>
+<p>其中r是</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs x86asm">r = [<span class="hljs-number">0x35</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x32</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x14</span>, <span class="hljs-number">0x27</span>, <span class="hljs-number">0x3B</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x70</span>,<br>     <span class="hljs-number">0x3C</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x66</span>,<br>     <span class="hljs-number">0x21</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x6D</span>, <span class="hljs-number">0x28</span>]<br></code></pre></td></tr></table></figure>
+
+<p>key是SCNU</p>
+<h1 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h1><p>写一下解密python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">r = [<span class="hljs-number">0x35</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x32</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x14</span>, <span class="hljs-number">0x27</span>, <span class="hljs-number">0x3B</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x70</span>,<br>     <span class="hljs-number">0x3C</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x66</span>,<br>     <span class="hljs-number">0x21</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x6D</span>, <span class="hljs-number">0x28</span>]<br>key = <span class="hljs-string">&quot;SCNU&quot;</span><br>flag=<span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(r)):<br>    flag+=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(key[i % <span class="hljs-number">4</span>]) ^ r[i])<br><span class="hljs-built_in">print</span>(flag)<br></code></pre></td></tr></table></figure>
+
+<h1 id="FLAG"><a href="#FLAG" class="headerlink" title="FLAG"></a>FLAG</h1><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">flag&#123;Wi<span class="hljs-symbol">nn3</span>r_<span class="hljs-symbol">n0</span>t_L<span class="hljs-number">0</span>s<span class="hljs-number">3</span>r_<span class="hljs-attr">#&#125;</span><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -666,8 +357,15 @@
   
     <span>></span>
     
-  <a href="../../../../categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="category-chain-item">密码学</a>
+  <a href="../../../../categories/CTF/WP/" class="category-chain-item">WP</a>
   
+  
+    <span>></span>
+    
+  <a href="../../../../categories/CTF/WP/RE/" class="category-chain-item">RE</a>
+  
+  
+
   
 
   
@@ -695,8 +393,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>密码学——凯撒密码原理</div>
-      <div>http://w1ndys.top/2023/09/16/密码学——凯撒密码原理/</div>
+      <div>攻防世界-Reverse-easyxorwriteup</div>
+      <div>http://w1ndys.top/2023/09/16/攻防世界-Reverse-easyxorwriteup/</div>
     </div>
     <div class="license-meta">
       
@@ -757,18 +455,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Reverse-easyxorwriteup/" title="攻防世界-Reverse-easyxorwriteup">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">攻防世界-Reverse-easyxorwriteup</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="../%E4%B8%AD%E7%A7%8B%E8%8A%82%E3%80%81%E5%9B%BD%E5%BA%86%E8%8A%82%E6%94%BE%E5%81%87%E5%AE%89%E6%8E%92%E6%9D%A5%E5%95%A6%EF%BC%81/" title="曲阜师范大学中秋节、国庆节放假安排来啦！">
-                        <span class="hidden-mobile">曲阜师范大学中秋节、国庆节放假安排来啦！</span>
+                      <a href="../%E5%AF%86%E7%A0%81%E5%AD%A6%E2%80%94%E2%80%94%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%8E%9F%E7%90%86/" title="密码学——凯撒密码原理">
+                        <span class="hidden-mobile">密码学——凯撒密码原理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
