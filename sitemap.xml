@@ -227,15 +227,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
-    
-    <lastmod>2023-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
     
     <lastmod>2023-08-26</lastmod>
@@ -245,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -255,6 +246,15 @@
   
   <url>
     <loc>http://w1ndys.top/live2d-widget/README.en.html</loc>
+    
+    <lastmod>2023-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -376,7 +376,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
+    <loc>http://w1ndys.top/categories/CTF/WP/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -390,7 +390,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/WP/</loc>
+    <loc>http://w1ndys.top/categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
