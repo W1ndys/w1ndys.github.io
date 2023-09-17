@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/README.en.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/README.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -313,14 +313,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/hexo/</loc>
+    <loc>http://w1ndys.top/tags/%E6%96%87%E6%A1%88/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/%E6%96%87%E6%A1%88/</loc>
+    <loc>http://w1ndys.top/tags/hexo/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -378,13 +378,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/hexo/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/categories/%E6%96%87%E6%A1%88/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -399,7 +392,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
+    <loc>http://w1ndys.top/categories/hexo/</loc>
+    <lastmod>2023-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/%E5%81%87%E6%9C%9F%E5%AE%89%E6%8E%92/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -420,6 +420,13 @@
   </url>
   
   <url>
+    <loc>http://w1ndys.top/categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
+    <lastmod>2023-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -427,7 +434,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/%E5%81%87%E6%9C%9F%E5%AE%89%E6%8E%92/</loc>
+    <loc>http://w1ndys.top/categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/%E8%AF%81%E4%B9%A6%E8%80%83%E8%AF%95/CET/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -435,13 +442,6 @@
   
   <url>
     <loc>http://w1ndys.top/categories/hexo/%E7%94%A8%E6%B3%95/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/%E8%AF%81%E4%B9%A6%E8%80%83%E8%AF%95/CET/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
