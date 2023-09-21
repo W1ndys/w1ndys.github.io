@@ -1,63 +1,63 @@
 body {
-	cursor: url(/img/Arrow.cur),auto;
+	cursor: url(/img/mouse/default.png),auto;
 	background-color: @theme_background;
 }
 /* 封面大图 */
 .banner {
-	cursor: url(/img/Arrow.cur),auto;
+	cursor: url(/img/mouse/default.png),auto;
 	background-color: @theme_background;
 }
 
 /* 封面向下 */
 .scroll-down-bar {
-	cursor: url(/img/Hand2.cur),auto; /* 一个小手 */
+	cursor: url(/img/mouse/link.png),auto; /* 一个小手 */
 	background-color: @theme_background;
 }
 
 /* 所有可跳转链接 */
 a[href] {
-	cursor: url(/img/Hand2.cur),auto !important;
+	cursor: url(/img/mouse/link.png),auto !important;
 	background-color: @theme_background;
 }
 
 /* 搜索框关闭按钮  */
 #local-search-close.close {
-	cursor: url(/img/Hand2.cur),auto;
+	cursor: url(/img/mouse/link.png),auto;
 	background-color: @theme_background;
 }
 
 /* 搜索框、输入框 */
 input,textarea {
-	cursor: url(/img/IBeam.cur),auto;    /* 这里应该是竖条光标 */
+	cursor: url(/img/mouse/text.png),auto;    /* 这里应该是竖条光标 */
 	background-color: @theme_background;
 }
 
 /* 代码复制键 按钮键增加!important属性后可删 */
 .copy-btn.copy-btn-light {
-	cursor: url(/img/Hand2.cur),auto;
+	cursor: url(/img/mouse/link.png),auto;
 	background-color: @theme_background;
 }
 
 /* 按钮 */
 button[class] {
-	cursor: url(/img/Hand2.cur),auto !important;
+	cursor: url(/img/mouse/link.png),auto !important;
 	background-color: @theme_background;
 }
 
 /* 补充按钮 */
 svg {
-	cursor: url(/img/Hand2.cur),auto !important;
+	cursor: url(/img/mouse/link.png),auto !important;
 	background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* 图片放大 */
 .fancybox-image {
-	cursor: url(/img/SizeAll.cur),auto;
+	cursor: url(/img/mouse/bigimg.png),auto;
 	background-color: @theme_background;
 }
 
 /* 回到顶部   a标签添加!important属性后此处可删*/
 #scroll-top-button {
-	cursor: url(/img/Hand2.cur),auto;
+	cursor: url(/img/mouse/link.png),auto;
 	background-color: @theme_background;
 }
