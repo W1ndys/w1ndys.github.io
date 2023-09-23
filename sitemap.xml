@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://w1ndys.top/2023/09/20/qfnusgb/</loc>
+    
+    <lastmod>2023-09-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/2023/09/23/%E5%B0%86Windows11%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E4%BF%AE%E6%94%B9%E4%B8%BAWindows10%E9%A3%8E%E6%A0%BC/</loc>
     
     <lastmod>2023-09-23</lastmod>
@@ -41,15 +50,6 @@
     <loc>http://w1ndys.top/about/index.html</loc>
     
     <lastmod>2023-09-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/2023/09/20/qfnusgb/</loc>
-    
-    <lastmod>2023-09-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -369,14 +369,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/%E7%90%86/</loc>
+    <loc>http://w1ndys.top/tags/CTF/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/tags/CTF/</loc>
+    <loc>http://w1ndys.top/tags/%E7%90%86/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -434,14 +434,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/C/</loc>
+    <loc>http://w1ndys.top/categories/CTF/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/</loc>
+    <loc>http://w1ndys.top/categories/C/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -455,7 +455,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/C/%E7%B1%BB/</loc>
+    <loc>http://w1ndys.top/categories/CTF/%E5%B9%B3%E5%8F%B0/</loc>
+    <lastmod>2023-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/categories/CTF/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -469,7 +476,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
+    <loc>http://w1ndys.top/categories/C/%E7%B1%BB/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -497,21 +504,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/</loc>
-    <lastmod>2023-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/categories/CTF/%E5%B9%B3%E5%8F%B0/</loc>
-    <lastmod>2023-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/%E5%81%87%E6%9C%9F%E5%AE%89%E6%8E%92/</loc>
+    <lastmod>2023-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/categories/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -540,6 +540,13 @@
   
   <url>
     <loc>http://w1ndys.top/categories/CTF/WP/</loc>
+    <lastmod>2023-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -589,13 +596,6 @@
   
   <url>
     <loc>http://w1ndys.top/categories/CTF/WP/RE/</loc>
-    <lastmod>2023-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2023-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
