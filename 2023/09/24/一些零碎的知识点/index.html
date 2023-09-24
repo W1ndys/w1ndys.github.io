@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://t.mwm.moe/pc/?323">
 <meta property="article:published_time" content="2023-09-24T08:02:59.559Z">
-<meta property="article:modified_time" content="2023-09-24T08:07:44.717Z">
+<meta property="article:modified_time" content="2023-09-24T08:15:09.215Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="计算机">
 <meta name="twitter:card" content="summary_large_image">
@@ -307,7 +307,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年09月24日16:07
+                    本文最后更新于： 2023年09月24日16:15
                   
                 
               </p>
@@ -323,11 +323,14 @@
 <p>——来自芃哥</p>
 <h1 id="修改文件创建时间等"><a href="#修改文件创建时间等" class="headerlink" title="修改文件创建时间等"></a>修改文件创建时间等</h1><p>使用windows自带的powershell即可，win+r键，输入powershell,在弹出的命令窗口输入命令，以abc.txt举例</p>
 <p>1.修改文件创建时间</p>
-<p>$(Get-Item abc.txt).creationtime&#x3D;$(Get-Date “11&#x2F;04&#x2F;2019 20:42:23”)</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-variable">$</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">Get</span><span class="hljs-operator">-</span><span class="hljs-built_in">Item</span> <span class="hljs-variable">abc</span><span class="hljs-operator">.</span><span class="hljs-variable">txt</span><span class="hljs-punctuation">)</span><span class="hljs-operator">.</span><span class="hljs-variable">creationtime</span><span class="hljs-operator">=</span><span class="hljs-variable">$</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">Get</span><span class="hljs-operator">-</span><span class="hljs-built_in">Date</span> <span class="hljs-string">&quot;11/04/2019 20:42:23&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
 <p>2.修改文件最后访问时间</p>
-<p>$(Get-Item abc.txt).lastaccesstime&#x3D;$(Get-Date “11&#x2F;04&#x2F;2019 20:42:23”)</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-variable">$</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">Get</span><span class="hljs-operator">-</span><span class="hljs-built_in">Item</span> <span class="hljs-variable">abc</span><span class="hljs-operator">.</span><span class="hljs-variable">txt</span><span class="hljs-punctuation">)</span><span class="hljs-operator">.</span><span class="hljs-variable">lastaccesstime</span><span class="hljs-operator">=</span><span class="hljs-variable">$</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">Get</span><span class="hljs-operator">-</span><span class="hljs-built_in">Date</span> <span class="hljs-string">&quot;11/04/2019 20:42:23&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
 <p>3.修改文件最后修改时间</p>
-<p>$(Get-Item abc.txt).lastwritetime&#x3D;$(Get-Date “11&#x2F;04&#x2F;2019 20:42:23”)</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-variable">$</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">Get</span><span class="hljs-operator">-</span><span class="hljs-built_in">Item</span> <span class="hljs-variable">abc</span><span class="hljs-operator">.</span><span class="hljs-variable">txt</span><span class="hljs-punctuation">)</span><span class="hljs-operator">.</span><span class="hljs-variable">lastwritetime</span><span class="hljs-operator">=</span><span class="hljs-variable">$</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">Get</span><span class="hljs-operator">-</span><span class="hljs-built_in">Date</span> <span class="hljs-string">&quot;11/04/2019 20:42:23&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
 <h1 id="关于Python—base64编码"><a href="#关于Python—base64编码" class="headerlink" title="关于Python—base64编码"></a>关于Python—base64编码</h1><p>crypt &#x3D; base64.b64encode(enc.encode(‘utf-8’)).decode(‘utf-8’)</p>
 <p>cipher &#x3D; base64.b64decode(crypt).decode(‘utf-8’)</p>
 <p>关于这两段为什么要写两个utf-8</p>
