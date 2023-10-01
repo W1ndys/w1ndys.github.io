@@ -16,24 +16,24 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="">
   
-    <meta name="description" content="https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;front-matter Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： 1234---title: Hello Worlddate: 2013&#x2F;7&#x2F;13 20:46:25---  以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。    参数 描述 默认值">
+    <meta name="description" content="转载   https:&#x2F;&#x2F;blog.csdn.net&#x2F;fingue&#x2F;article&#x2F;details&#x2F;127096363 1、进入vim模式sudo su进入root 模式vim &#x2F;etc&#x2F;apt&#x2F;sources.list编辑软件源配置文件 随后进入vim模式 2、国内源12345678910111213141516171819202122官方源deb http:&#x2F;&#x2F;h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博文中front-matter的用法">
-<meta property="og:url" content="http://w1ndys.top/2023/09/30/hexo-front-matter/index.html">
+<meta property="og:title" content="kali如何切换源">
+<meta property="og:url" content="http://w1ndys.top/2023/10/01/kali-yuan/index.html">
 <meta property="og:site_name" content="hi！这里是W1ndys的小站">
-<meta property="og:description" content="https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;front-matter Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： 1234---title: Hello Worlddate: 2013&#x2F;7&#x2F;13 20:46:25---  以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。    参数 描述 默认值">
+<meta property="og:description" content="转载   https:&#x2F;&#x2F;blog.csdn.net&#x2F;fingue&#x2F;article&#x2F;details&#x2F;127096363 1、进入vim模式sudo su进入root 模式vim &#x2F;etc&#x2F;apt&#x2F;sources.list编辑软件源配置文件 随后进入vim模式 2、国内源12345678910111213141516171819202122官方源deb http:&#x2F;&#x2F;h">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-30T12:52:30.249Z">
-<meta property="article:modified_time" content="2023-09-30T14:32:49.697Z">
+<meta property="article:published_time" content="2023-10-01T07:03:11.137Z">
+<meta property="article:modified_time" content="2023-10-01T07:05:18.333Z">
 <meta property="article:author" content="W1ndys">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>hexo博文中front-matter的用法 - hi！这里是W1ndys的小站</title>
+  <title>kali如何切换源 - hi！这里是W1ndys的小站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hexo博文中front-matter的用法"></span>
+            <span id="subtitle" data-typed-text="kali如何切换源"></span>
           
         </div>
 
@@ -223,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-30 20:52" pubdate>
-           2023年09月30日20:52
+        <time datetime="2023-10-01 15:03" pubdate>
+           2023年10月01日15:03
         </time>
       </span>
     
@@ -236,7 +236,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共1.4k字
+          共1.5k字
         
       </span>
     
@@ -248,7 +248,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计12分钟
+          阅读本文预计13分钟
         
       </span>
     
@@ -293,12 +293,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">hexo博文中front-matter的用法</h1>
+            <h1 id="seo-header">kali如何切换源</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年09月30日22:32
+                    本文最后更新于： 2023年10月01日15:05
                   
                 
               </p>
@@ -306,98 +306,22 @@
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
-<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2013</span><span class="hljs-string">/7/13</span> <span class="hljs-number">20</span><span class="hljs-string">:46:25</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+                <p>转载  </p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/fingue/article/details/127096363">https://blog.csdn.net/fingue/article/details/127096363</a></p>
+<h1 id="1、进入vim模式"><a href="#1、进入vim模式" class="headerlink" title="1、进入vim模式"></a>1、进入vim模式</h1><p>sudo su进入root 模式<br>vim &#x2F;etc&#x2F;apt&#x2F;sources.list编辑软件源配置文件</p>
+<p>随后进入vim模式</p>
+<h1 id="2、国内源"><a href="#2、国内源" class="headerlink" title="2、国内源"></a>2、国内源</h1><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs 1c">官方源<br>deb http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span><br>deb-src http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="hljs-meta">#根据需要自己选一个，中科大的还可以</span><br><span class="hljs-meta">#中科大</span><br>deb http:<span class="hljs-comment">//mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br>deb-src http:<span class="hljs-comment">//mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="hljs-meta">#阿里云</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.aliyun.com/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//mirrors.aliyun.com/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#清华大学</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#deb-src https:<span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#浙大</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#东软大学</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span></span><br><span class="hljs-meta">#重庆大学</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span></span><br></code></pre></td></tr></table></figure>
 
-<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>layout</code></td>
-<td align="left">布局</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>config.default_layout</code></a></td>
-</tr>
-<tr>
-<td align="left"><code>title</code></td>
-<td align="left">标题</td>
-<td align="left">文章的文件名</td>
-</tr>
-<tr>
-<td align="left"><code>date</code></td>
-<td align="left">建立日期</td>
-<td align="left">文件建立日期</td>
-</tr>
-<tr>
-<td align="left"><code>updated</code></td>
-<td align="left">更新日期</td>
-<td align="left">文件更新日期</td>
-</tr>
-<tr>
-<td align="left"><code>comments</code></td>
-<td align="left">开启文章的评论功能</td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>tags</code></td>
-<td align="left">标签（不适用于分页）</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>categories</code></td>
-<td align="left">分类（不适用于分页）</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>permalink</code></td>
-<td align="left">覆盖文章的永久链接，永久链接应该以 <code>/</code> 或 <code>.html</code> 结尾</td>
-<td align="left"><code>null</code></td>
-</tr>
-<tr>
-<td align="left"><code>excerpt</code></td>
-<td align="left">纯文本的页面摘要。使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81%E5%92%8C%E6%88%AA%E6%96%AD">该插件</a> 来格式化文本</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>disableNunjucks</code></td>
-<td align="left">启用时禁用 Nunjucks 标签 <code>&#123;&#123; &#125;&#125;</code>&#x2F;<code>&#123;% %&#125;</code> 和 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins">标签插件</a> 的渲染功能</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>lang</code></td>
-<td align="left">设置语言以覆盖 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/internationalization#%E8%B7%AF%E5%BE%84">自动检测</a></td>
-<td align="left">继承自 <code>_config.yml</code></td>
-</tr>
-<tr>
-<td align="left"><code>published</code></td>
-<td align="left">文章是否发布</td>
-<td align="left">对于 <code>_posts</code> 下的文章为 <code>true</code>，对于 <code>_draft</code> 下的文章为 <code>false</code></td>
-</tr>
-</tbody></table>
-<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>根据 <code>_config.yml</code> 中 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>default_layout</code></a> 的设置，默认布局是 <code>post</code> 。当文章中的布局被禁用(<code>layout: false</code>)，它将不会使用主题处理。然而，它仍然会被任何可用的渲染引擎渲染：如果一篇文章是用 Markdown 写的，并且安装了 Markdown 渲染引擎（比如默认的 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>)，它将被渲染成HTML。</p>
-<p>除非通过 <code>disableNunjucks</code> 设置或 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/api/renderer#%E7%A6%81%E7%94%A8-Nunjucks-%E6%A0%87%E7%AD%BE">渲染引擎</a> 禁用，否则无论布局如何，<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins">标签插件</a> 总是被处理。</p>
-<h2 id="分类和标签"><a href="#分类和标签" class="headerlink" title="分类和标签"></a>分类和标签</h2><p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit">categories:<br>- Diary<br><span class="hljs-keyword">tags:</span><br>- PS3<br>- Games<br></code></pre></td></tr></table></figure>
+<h1 id="3、换源"><a href="#3、换源" class="headerlink" title="3、换源"></a>3、换源</h1><p>按“i”进行编辑</p>
+<p>将源插入后，点击“Esc”退出编辑，输入“：wq”回车保存退出，此处插入的是清华大学的源。</p>
+<p>注：“#”有注释本行的用途，可以先将原来的源进行注释，再插入新源</p>
+<h1 id="4、随后输入下列命令行进行更新"><a href="#4、随后输入下列命令行进行更新" class="headerlink" title="4、随后输入下列命令行进行更新"></a>4、随后输入下列命令行进行更新</h1><p>更新软件列表(非root权限在命令行前加“sudo”)</p>
+<p>apt-get update 更新索引</p>
+<p>apt-get upgrade 更新软件</p>
+<p>apt-get dist-upgrade 升级</p>
+<p>apt-get clean 删除缓存包</p>
+<p>apt-get autoclean 删除未安装的deb包<br>————————————————<br>版权声明：本文为CSDN博主「不过教资不改名111」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/fingue/article/details/127096363">https://blog.csdn.net/fingue/article/details/127096363</a></p>
 
-<blockquote>
-<p>分类方法的分歧</p>
-<p>如果您有过使用 WordPress 的经验，就很容易误解 Hexo 的分类方式。WordPress 支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是 Hexo 不支持指定多个同级分类。下面的指定方法：</p>
-<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">categories</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Diary</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Life</span><br></code></pre></td></tr></table></figure>
-
-<p>会使分类 <code>Life</code> 成为 <code>Diary</code> 的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
-<p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
-<figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-attribute">categories</span>:<br><span class="hljs-literal">-</span> [Diary, PlayStation]<br><span class="hljs-literal">-</span> [Diary, Games]<br><span class="hljs-literal">-</span> [Life]<br></code></pre></td></tr></table></figure>
-
-<p>此时这篇文章同时包括三个分类： <code>PlayStation</code> 和 <code>Games</code> 分别都是父分类 <code>Diary</code> 的子分类，同时 <code>Life</code> 是一个没有子分类的分类。</p>
-</blockquote>
-<h2 id="JSON-Front-matter"><a href="#JSON-Front-matter" class="headerlink" title="JSON Front-matter"></a>JSON Front-matter</h2><p>除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 <code>---</code> 代换成 <code>;;;</code> 即可。</p>
-<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs llvm"><span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Hello World&quot;</span><span class="hljs-punctuation">,</span><br><span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2013/7/13 20:46:25&quot;</span><br><span class="hljs-comment">;;;</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -415,12 +339,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/hexo/" class="category-chain-item">hexo</a>
+  <a href="../../../../categories/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/hexo/%E7%94%A8%E6%B3%95/" class="category-chain-item">用法</a>
+  <a href="../../../../categories/Linux/kali/" class="category-chain-item">kali</a>
   
   
 
@@ -437,7 +361,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/hexo/" class="print-no-link">#hexo</a>
+        <a href="../../../../tags/Linux/" class="print-no-link">#Linux</a>
       
     </div>
   
@@ -449,8 +373,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>hexo博文中front-matter的用法</div>
-      <div>http://w1ndys.top/2023/09/30/hexo-front-matter/</div>
+      <div>kali如何切换源</div>
+      <div>http://w1ndys.top/2023/10/01/kali-yuan/</div>
     </div>
     <div class="license-meta">
       
@@ -462,13 +386,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月30日</div>
+          <div>2023年10月1日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年9月30日</div>
+          <div>2023年10月1日</div>
         </div>
       
       
@@ -511,18 +435,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../10/01/kali-yuan/" title="kali如何切换源">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">kali如何切换源</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="../ou-li-juan/" title="跟随欧丽娟老师学习哲学">
-                        <span class="hidden-mobile">跟随欧丽娟老师学习哲学</span>
+                      <a href="../../../09/30/hexo-front-matter/" title="hexo博文中front-matter的用法">
+                        <span class="hidden-mobile">hexo博文中front-matter的用法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
