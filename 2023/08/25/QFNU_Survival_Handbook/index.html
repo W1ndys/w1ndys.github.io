@@ -585,6 +585,40 @@
             </div>
 
             
+  
+  
+    <article id="comments">
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"st6Osruu2aLIdKpmTqQE96yZ-gzGzoHsz","appKey":"3uJdopCJIjDCH6cQM2JnuhdI","path":"window.location.pathname","placeholder":"吐槽一哈！！（评论支持markdown）","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":null,"master":"35d8b83bb6ad9bce76c0b476a582c5cd","friends":"a9126a74dxxxx638def0b16025,0173939xxxxx32a8cffc288b046dc"},
+          {
+            el: "#valine",
+            master: "35d8b83bb6ad9bce76c0b476a582c5cd",
+            friends: "a9126a74dxxxx638def0b16025,0173939xxxxx32a8cffc288b046dc",
+            tagMeta: ["博主W1ndys,VIP,网站管理员,网站运维","VIP","访客"],
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>
