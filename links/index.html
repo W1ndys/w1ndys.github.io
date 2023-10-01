@@ -386,38 +386,6 @@
 
 
 
-  
-  
-    <article id="comments">
-      
-  <div id="waline"></div>
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
-      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
-        var options = Object.assign(
-          {"serverURL":"https://pinglun.w1ndys.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
-          {
-            el: '#waline',
-            path: window.location.pathname
-          }
-        )
-        Waline.init(options);
-        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
-          var imgSelector = '#waline .vcontent img:not(.vemoji)';
-          Fluid.plugins.imageCaption(imgSelector);
-          Fluid.plugins.fancyBox(imgSelector);
-        })
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
-
-
-    </article>
-  
-
-
 
               </div>
             </div>
