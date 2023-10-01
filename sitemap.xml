@@ -440,6 +440,13 @@
   </url>
   
   <url>
+    <loc>http://w1ndys.top/tags/Windows%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/tags/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -448,13 +455,6 @@
   
   <url>
     <loc>http://w1ndys.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2023-10-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/tags/Windows%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -533,13 +533,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/%E5%B9%B3%E5%8F%B0/</loc>
-    <lastmod>2023-10-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/categories/hexo/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -554,6 +547,13 @@
   </url>
   
   <url>
+    <loc>http://w1ndys.top/categories/CTF/%E5%B9%B3%E5%8F%B0/</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://w1ndys.top/categories/Linux/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -561,14 +561,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/</loc>
+    <loc>http://w1ndys.top/categories/Windows/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/Windows/</loc>
+    <loc>http://w1ndys.top/categories/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -645,7 +645,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%B2%E5%AD%A6/</loc>
+    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -659,7 +659,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</loc>
+    <loc>http://w1ndys.top/categories/Windows/office/</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -667,13 +674,6 @@
   
   <url>
     <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2023-10-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://w1ndys.top/categories/Windows/office/</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
