@@ -455,21 +455,23 @@
   
     <article id="comments">
       
-  <div id="waline"></div>
+  <div id="valine"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
-      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js', function() {
         var options = Object.assign(
-          {"serverURL":"https://pinglun.w1ndys.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {"appId":"O0anWV51qSTQordSFKXKNxDS-gzGzoHsz","appKey":"Q6YzZfrspSwnVVQjcJSx0kLz","path":"window.location.pathname","placeholder":"吐槽一哈！！（评论支持markdown）","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":null,"master":"35d8b83bb6ad9bce76c0b476a582c5cd","friends":"a9126a74dxxxx638def0b16025,0173939xxxxx32a8cffc288b046dc"},
           {
-            el: '#waline',
+            el: "#valine",
+            master: "35d8b83bb6ad9bce76c0b476a582c5cd",
+            friends: "a9126a74dxxxx638def0b16025,0173939xxxxx32a8cffc288b046dc",
+            tagMeta: ["博主W1ndys,VIP,网站管理员,网站运维","VIP","访客"],
             path: window.location.pathname
           }
         )
-        Waline.init(options);
-        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
-          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
           Fluid.plugins.imageCaption(imgSelector);
           Fluid.plugins.fancyBox(imgSelector);
         })
