@@ -16,26 +16,24 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="">
   
-    <meta name="description" content="根据《国务院办公厅关于2023年部分节假日安排的通知》精神，结合我校实际，现对2023年中秋节、国庆节放假安排通知如下： 9月29日至10月6日放假调休，共8天。10月7日（星期六）执行第6周周四的教学安排、10月8日（星期日）执行第6周周五的教学安排。 如实验或课程性质有特殊需要，不宜按上述时间放假的，学院可根据需要自行安排，并向教务处备案。 10月7日起执行秋（冬）季作息时间，上午作息时间">
+    <meta name="description" content="Ch3-1. 总结栈空、栈满、队空、队满的判定条件。栈和队列是两种常见的数据结构，它们的空和满的判断条件如下： 栈：  栈空：当栈顶指针top等于-1时，表示栈为空。 栈满：当栈顶指针top等于栈的最大容量减1（假设栈的最大容量为maxSize）时，表示栈已满，即top &#x3D;&#x3D; maxSize - 1。  队列：  队空：当队头指针front等于队尾指针rear时，表示队列为空。 队满：这个判断条件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="曲阜师范大学中秋节、国庆节放假安排来啦！">
-<meta property="og:url" content="http://w1ndys.top/2023/09/16/%E4%B8%AD%E7%A7%8B%E8%8A%82%E3%80%81%E5%9B%BD%E5%BA%86%E8%8A%82%E6%94%BE%E5%81%87%E5%AE%89%E6%8E%92%E6%9D%A5%E5%95%A6%EF%BC%81/index.html">
+<meta property="og:title" content="DS作业-3-22网安物联网-20230927">
+<meta property="og:url" content="http://w1ndys.top/2023/10/04/DS-homework-4-22wanganwulian-20230927/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="根据《国务院办公厅关于2023年部分节假日安排的通知》精神，结合我校实际，现对2023年中秋节、国庆节放假安排通知如下： 9月29日至10月6日放假调休，共8天。10月7日（星期六）执行第6周周四的教学安排、10月8日（星期日）执行第6周周五的教学安排。 如实验或课程性质有特殊需要，不宜按上述时间放假的，学院可根据需要自行安排，并向教务处备案。 10月7日起执行秋（冬）季作息时间，上午作息时间">
+<meta property="og:description" content="Ch3-1. 总结栈空、栈满、队空、队满的判定条件。栈和队列是两种常见的数据结构，它们的空和满的判断条件如下： 栈：  栈空：当栈顶指针top等于-1时，表示栈为空。 栈满：当栈顶指针top等于栈的最大容量减1（假设栈的最大容量为maxSize）时，表示栈已满，即top &#x3D;&#x3D; maxSize - 1。  队列：  队空：当队头指针front等于队尾指针rear时，表示队列为空。 队满：这个判断条件">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://w1ndys.top/img/qfnu.gif">
-<meta property="article:published_time" content="2023-09-16T04:27:59.859Z">
-<meta property="article:modified_time" content="2023-09-17T04:33:42.387Z">
+<meta property="article:published_time" content="2023-10-04T09:58:53.070Z">
+<meta property="article:modified_time" content="2023-10-04T10:03:41.438Z">
 <meta property="article:author" content="W1ndys">
-<meta property="article:tag" content="QFNU">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://w1ndys.top/img/qfnu.gif">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>曲阜师范大学中秋节、国庆节放假安排来啦！ - W1ndysの小屋</title>
+  <title>DS作业-3-22网安物联网-20230927 - W1ndysの小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -214,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="曲阜师范大学中秋节、国庆节放假安排来啦！"></span>
+            <span id="subtitle" data-typed-text="DS作业-3-22网安物联网-20230927"></span>
           
         </div>
 
@@ -225,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-16 12:27" pubdate>
-           2023年09月16日12:27
+        <time datetime="2023-10-04 17:58" pubdate>
+           2023年10月04日17:58
         </time>
       </span>
     
@@ -238,7 +236,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共318字
+          共1k字
         
       </span>
     
@@ -250,7 +248,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计3分钟
+          阅读本文预计9分钟
         
       </span>
     
@@ -295,12 +293,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">曲阜师范大学中秋节、国庆节放假安排来啦！</h1>
+            <h1 id="seo-header">DS作业-3-22网安物联网-20230927</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年09月17日12:33
+                    本文最后更新于： 2023年10月04日18:03
                   
                 
               </p>
@@ -308,18 +306,29 @@
             
               <div class="markdown-body">
                 
-                <p><img src="/img/qfnu.gif" srcset="/img/loading.gif" lazyload></p>
-<hr>
-<p>根据《国务院办公厅关于2023年部分节假日安排的通知》精神，结合我校实际，现对2023年中秋节、国庆节放假安排通知如下：</p>
-<p><font color='red'>9月29日</font>至<font color='red'>10月6日</font>放假调休，<font color='red'>共8天</font>。<u>10月7日（星期六）</u>执行第6周周四的教学安排、<u>10月8日（星期日）</u>执行第6周周五的教学安排。</p>
-<p>如实验或课程性质有特殊需要，不宜按上述时间放假的，学院可根据需要自行安排，并向教务处备案。</p>
-<p><u><strong>10月7日起执行秋（冬）季作息时间，上午作息时间不变，下午调整为14:00上课上班。</strong></u></p>
-<p>各部门、各单位要严格落实学校安全工作各项部署要求，加强值班值守，如遇突发情况需按学校相关规定及时报告并妥善处置。</p>
-<hr>
-<p>​																																																								 党委办公室（学校办公室）</p>
-<p>​																																																												2023年9月15日</p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/5WuKt2Pk2qoBSm6c2hJzXQ">来自：中秋节、国庆节放假安排来啦！ (qq.com)</a></p>
-
+                <h1 id="Ch3-1-总结栈空、栈满、队空、队满的判定条件。"><a href="#Ch3-1-总结栈空、栈满、队空、队满的判定条件。" class="headerlink" title="Ch3-1. 总结栈空、栈满、队空、队满的判定条件。"></a>Ch3-1. 总结栈空、栈满、队空、队满的判定条件。</h1><p>栈和队列是两种常见的数据结构，它们的空和满的判断条件如下：</p>
+<p><strong>栈</strong>：</p>
+<ul>
+<li><strong>栈空</strong>：当栈顶指针<code>top</code>等于-1时，表示栈为空。</li>
+<li><strong>栈满</strong>：当栈顶指针<code>top</code>等于栈的最大容量减1（假设栈的最大容量为<code>maxSize</code>）时，表示栈已满，即<code>top == maxSize - 1</code>。</li>
+</ul>
+<p><strong>队列</strong>：</p>
+<ul>
+<li><strong>队空</strong>：当队头指针<code>front</code>等于队尾指针<code>rear</code>时，表示队列为空。</li>
+<li><strong>队满</strong>：这个判断条件取决于你如何实现队列。如果你使用数组实现循环队列，那么当<code>(rear + 1) % maxSize == front</code>时，表示队列已满（假设队列的最大容量为<code>maxSize</code>）。这里的 <code>%</code> 是取余运算，用于实现循环。</li>
+</ul>
+<h1 id="Ch3-2-循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？"><a href="#Ch3-2-循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？" class="headerlink" title="Ch3-2. 循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？"></a>Ch3-2. 循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？</h1><p><strong>循环队列</strong>的优点主要有以下几点：</p>
+<ol>
+<li><strong>有效利用空间</strong>：在普通队列中，当队尾指针到达数组的末端时，即使数组的前端还有空闲空间，也无法再添加新的元素。而循环队列通过将队列的首尾相连，形成一个循环，使得在队尾指针到达数组末端时，可以从数组前端继续添加新的元素，从而更有效地利用了空间。</li>
+<li><strong>避免数据迁移</strong>：在普通队列中，每次出队操作后，为了维持队列的连续性，需要将所有元素向前移动一位，这会消耗大量的时间和计算资源。而在循环队列中，通过移动队头和队尾指针来实现入队和出队操作，无需移动元素本身，因此效率更高。</li>
+</ol>
+<p>对于使用数组实现的循环队列，常见的判断队满和队空的方案有以下几种：</p>
+<ol>
+<li><strong>牺牲一个存储空间</strong>：这是最常见的方法。当<code>(rear + 1) % maxSize == front</code>时，判断队列已满；当<code>rear == front</code>时，判断队列为空。这种方法的缺点是会浪费一个数组的存储空间。</li>
+<li><strong>使用一个标志位</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以额外使用一个标志位来判断队列的状态。当入队操作后<code>rear == front</code>时，将标志位设为满；当出队操作后<code>rear == front</code>时，将标志位设为空。这种方法可以充分利用所有存储空间，但需要额外的标志位。</li>
+<li><strong>记录元素个数</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以使用一个计数器来记录队列中元素的个数。当计数器为0时，判断队列为空；当计数器等于数组大小时，判断队列已满。这种方法同样可以充分利用所有存储空间，但需要额外的计数器。</li>
+</ol>
+<h1 id="Ch3-3-假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node-Rear-指向队尾结点（没有队头指针Node-front），试编写入队和出队算法。"><a href="#Ch3-3-假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node-Rear-指向队尾结点（没有队头指针Node-front），试编写入队和出队算法。" class="headerlink" title="Ch3-3. 假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node *front），试编写入队和出队算法。"></a>Ch3-3. 假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node *front），试编写入队和出队算法。</h1>
                 
               </div>
             
@@ -337,20 +346,13 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/QFNU/" class="category-chain-item">QFNU</a>
+  <a href="../../../../categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/" class="category-chain-item">官方文档</a>
+  <a href="../../../../categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/" class="category-chain-item">数据结构作业</a>
   
-  
-    <span>></span>
-    
-  <a href="../../../../categories/QFNU/%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/%E5%81%87%E6%9C%9F%E5%AE%89%E6%8E%92/" class="category-chain-item">假期安排</a>
-  
-  
-
   
 
   
@@ -366,7 +368,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/QFNU/" class="print-no-link">#QFNU</a>
+        <a href="../../../../tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="print-no-link">#数据结构</a>
       
     </div>
   
@@ -378,8 +380,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>曲阜师范大学中秋节、国庆节放假安排来啦！</div>
-      <div>http://w1ndys.top/2023/09/16/中秋节、国庆节放假安排来啦！/</div>
+      <div>DS作业-3-22网安物联网-20230927</div>
+      <div>http://w1ndys.top/2023/10/04/DS-homework-4-22wanganwulian-20230927/</div>
     </div>
     <div class="license-meta">
       
@@ -391,13 +393,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月16日</div>
+          <div>2023年10月4日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年9月17日</div>
+          <div>2023年10月4日</div>
         </div>
       
       
@@ -440,18 +442,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../%E5%AF%86%E7%A0%81%E5%AD%A6%E2%80%94%E2%80%94%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%8E%9F%E7%90%86/" title="密码学——凯撒密码原理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">密码学——凯撒密码原理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../15/DS-homework-2-22wanganwulian-20230913/" title="DS作业-2-22网安物联网-20230913">
-                        <span class="hidden-mobile">DS作业-2-22网安物联网-20230913</span>
+                      <a href="../DS-homework-3-22wanganwulian-20230927/" title="DS作业-3-22网安物联网-20230927">
+                        <span class="hidden-mobile">DS作业-3-22网安物联网-20230927</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
