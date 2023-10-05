@@ -24,7 +24,7 @@
 <meta property="og:description" content="Ch3-1. 总结栈空、栈满、队空、队满的判定条件。栈和队列是两种常见的数据结构，它们的空和满的判断条件如下： 栈：  栈空：当栈顶指针top等于-1时，表示栈为空。 栈满：当栈顶指针top等于栈的最大容量减1（假设栈的最大容量为maxSize）时，表示栈已满，即top &#x3D;&#x3D; maxSize - 1。  队列：  队空：当队头指针front等于队尾指针rear时，表示队列为空。 队满：这个判断条件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-04T09:58:53.070Z">
-<meta property="article:modified_time" content="2023-10-04T10:11:24.900Z">
+<meta property="article:modified_time" content="2023-10-05T08:59:54.104Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共1k字
+          共2.4k字
         
       </span>
     
@@ -248,7 +248,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计9分钟
+          阅读本文预计21分钟
         
       </span>
     
@@ -298,7 +298,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年10月04日18:11
+                    本文最后更新于： 2023年10月05日16:59
                   
                 
               </p>
@@ -329,8 +329,10 @@
 <li><strong>记录元素个数</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以使用一个计数器来记录队列中元素的个数。当计数器为0时，判断队列为空；当计数器等于数组大小时，判断队列已满。这种方法同样可以充分利用所有存储空间，但需要额外的计数器。</li>
 </ol>
 <h1 id="Ch3-3-假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node-Rear-指向队尾结点（没有队头指针Node-front），试编写入队和出队算法。"><a href="#Ch3-3-假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node-Rear-指向队尾结点（没有队头指针Node-front），试编写入队和出队算法。" class="headerlink" title="Ch3-3. 假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node *front），试编写入队和出队算法。"></a>Ch3-3. 假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node *front），试编写入队和出队算法。</h1><blockquote>
-<p>还没写</p>
+<p>AI生成的，不想做了，谨慎查阅</p>
 </blockquote>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs xl">#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br><br><span class="hljs-comment">// 定义结点</span><br>typedef struct Node &#123;<br>    int <span class="hljs-keyword">data</span>;<br>    struct Node* next;<br>&#125; Node;<br><br><span class="hljs-comment">// 定义队列</span><br>typedef struct Queue &#123;<br>    Node* rear;<br>&#125; Queue;<br><br><span class="hljs-comment">// 初始化队列</span><br>Queue* initQueue() &#123;<br>    Node* head = (Node*)malloc(sizeof(Node));  <span class="hljs-comment">// 创建头结点</span><br>    <span class="hljs-function"><span class="hljs-title">head</span>-&gt;</span>next = head;  <span class="hljs-comment">// 循环链表</span><br>    Queue* queue = (Queue*)malloc(sizeof(Queue));<br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = head;  <span class="hljs-comment">// 尾指针指向头结点</span><br>    return queue;<br>&#125;<br><br><span class="hljs-comment">// 入队操作</span><br>void enQueue(Queue* queue, int <span class="hljs-keyword">data</span>) &#123;<br>    Node* newNode = (Node*)malloc(sizeof(Node));<br>    <span class="hljs-function"><span class="hljs-title">newNode</span>-&gt;</span><span class="hljs-keyword">data</span> = <span class="hljs-keyword">data</span>;<br>    <span class="hljs-function"><span class="hljs-title">newNode</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next;  <span class="hljs-comment">// 新结点指向头结点</span><br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next = newNode;  <span class="hljs-comment">// 尾结点指向新结点</span><br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = newNode;  <span class="hljs-comment">// 更新尾指针</span><br>&#125;<br><br><span class="hljs-comment">// 出队操作</span><br>int deQueue(Queue* queue) &#123;<br>    <span class="hljs-function"><span class="hljs-title">if</span> (queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span> == queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next) &#123;<br>        printf(<span class="hljs-string">&quot;队列为空，无法出队。\n&quot;</span>);<br>        return -<span class="hljs-number">1</span>;<br>    &#125;<br>    N<span class="hljs-function"><span class="hljs-title">ode</span>* head = queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next;  <span class="hljs-comment">// 头结点</span><br>    N<span class="hljs-function"><span class="hljs-title">ode</span>* firstNode = head-&gt;</span>next;  <span class="hljs-comment">// 第一个结点（即要出队的结点）</span><br>    <span class="hljs-function"><span class="hljs-title">int</span> <span class="hljs-keyword">data</span> = firstNode-&gt;</span><span class="hljs-keyword">data</span>;<br>    <span class="hljs-function"><span class="hljs-title">head</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = firstNode-&gt;</span>next;  <span class="hljs-comment">// 头结点指向第二个结点</span><br>    <span class="hljs-function"><span class="hljs-title">if</span> (firstNode == queue-&gt;</span>rear) &#123;  <span class="hljs-comment">// 如果只有一个元素，出队后更新尾指针</span><br>        <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = head;<br>    &#125;<br>    free(firstNode);  <span class="hljs-comment">// 释放出队的结点内存</span><br>    return <span class="hljs-keyword">data</span>;<br>&#125;<br><br>int main() &#123;<br>    Queue* queue = initQueue();<br>    <br><br>    printf(<span class="hljs-string">&quot;入队：\n&quot;</span>);<br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;<br>        printf(<span class="hljs-string">&quot;%d &quot;</span>, i);<br>        enQueue(queue, i);<br>    &#125;<br>    <br>    printf(<span class="hljs-string">&quot;\n出队：\n&quot;</span>);<br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;<br>        printf(<span class="hljs-string">&quot;%d &quot;</span>, deQueue(queue));<br>    &#125;<br>    <br>    return <span class="hljs-number">0</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -402,7 +404,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年10月4日</div>
+          <div>2023年10月5日</div>
         </div>
       
       
