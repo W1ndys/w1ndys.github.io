@@ -16,20 +16,18 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="来自西安电子科技大学Moectf  逆向工程（re) 来自维基   逆向工程（英语：Reverse Engineering），又称反向工程，是一种技术仿造过程。 即对一项目标产品进行逆向分析及研究，从而演绎并得出该产品的处理流程、组织结构、功能性能规 其主要目的是，在无法轻易获得必要的生产信息下，直接从成品的分析，推导产品的设计原理  那么，我们要做的是对于软件的逆向工程 一般，CTF中的逆向工">
+    <meta name="description" content="这篇文章被加密了喵~W1ndys不想让你看见里面的内容。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CTF入门指北——reserve">
 <meta property="og:url" content="http://w1ndys.top/2023/09/13/CTF-easy-reserve/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="来自西安电子科技大学Moectf  逆向工程（re) 来自维基   逆向工程（英语：Reverse Engineering），又称反向工程，是一种技术仿造过程。 即对一项目标产品进行逆向分析及研究，从而演绎并得出该产品的处理流程、组织结构、功能性能规 其主要目的是，在无法轻易获得必要的生产信息下，直接从成品的分析，推导产品的设计原理  那么，我们要做的是对于软件的逆向工程 一般，CTF中的逆向工">
+<meta property="og:description" content="这篇文章被加密了喵~W1ndys不想让你看见里面的内容。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://z1.ax1x.com/2023/09/13/pPRF6uF.png">
 <meta property="article:published_time" content="2023-09-13T12:20:46.375Z">
 <meta property="article:modified_time" content="2023-09-30T12:05:26.349Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://z1.ax1x.com/2023/09/13/pPRF6uF.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -238,7 +236,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共1.4k字
+          共11k字
         
       </span>
     
@@ -250,7 +248,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计12分钟
+          阅读本文预计88分钟
         
       </span>
     
@@ -306,39 +304,22 @@
               </p>
             
             
-              <div class="markdown-body">
-                
-                <blockquote>
-<p>来自西安电子科技大学Moectf</p>
-</blockquote>
-<h1 id="逆向工程（re"><a href="#逆向工程（re" class="headerlink" title="逆向工程（re)"></a>逆向工程（re)</h1><blockquote>
-<p>来自维基</p>
-</blockquote>
-<blockquote>
-<p>逆向工程（英语：Reverse Engineering），又称反向工程，是一种技术仿造过程。 即对一项目标产品进行逆向分析及研究，从而演绎并得出该产品的处理流程、组织结构、功能性能规 其主要目的是，在无法轻易获得必要的生产信息下，直接从成品的分析，推导产品的设计原理</p>
-</blockquote>
-<p>那么，我们要做的是对于软件的逆向工程</p>
-<p>一般，CTF中的逆向工程题目形式为：程序接收用户的一个输入，并在程序中进行一系 列校验算法，如通过校验则提示成功，此时的输入即flag。这些校验算法可以是已经成 熟的加解密方案，也可以是作者自创的某种算法。比如，一个小游戏将用户的输入作为 游戏的操作步骤进行判断等。这类题目要求参赛者具备一定的算法能力、思维能力，甚 至联想能力。</p>
-<p>我们知道，我们可以阅读源代码，了解一个程序的功能 但是一个程序不一定需要源代码才能运行。 事实上，我们在运行可执行文件，那么他 们打开来实际上是一些二进制数据。</p>
-<p> 例如下面这一段程序源码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello world&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+              
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这个密码看着不太对, 再试试吧~或者线下solo博主试试。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="ebbd96b5af289bde2304c7bf40a512565c81e4c434d44cf0e6e81cb0137dd7c4">1a122d849dea0253b8c2e18440c0e53b5b21c517d9fe84f3a2097ea5935460de7ff49362a8a1c1ba15d8295c30d6f0f272208298449c525dc7ea53eecfbb88044dc5f89700aa3e8fafec5ef88064c2c1196e34f8ccb1ab9b143b584a79c0504b7e2c71baba1cdfc22d1950a71b49c3ba9faac1cba6e0357276cf2af7dfd58c816e5697052b7f5d71ee322a185394bda50623a53adc15c270b6569e8828c8985d3d1705b74708144089db8ab780981382308433648c587a205ff3648a7efe73b1884910ae5962ef020fb312939e4bc02a70e8877157d5ee8569582c0cfb6ee2be83aa1b166483fe7ab9ce885df1018351f6edae30121299629a1e9ce738515ba75a282eac5cd264f60e8d06e9513133fb3bb8598773cc648f9f9ba5ebbaeac9ee7a2def507ea7a64836e4ea3feefea3022b3c79948b310f916e0194c94f89d2839bfd7a70415750eb429e9ac136365934e462e528dabb8318eb0266200103fc5bf04cefcae6ee4058e456fdfe00f864c31f090680a7abaf8267b0508456de1df8825565d201906a3fba00511076975471cc6526c3384616a2dc592378f2504dc822899f85ba339e7f32e93c838ad85cae0abc05ad9c519f074f8bc689794d8d0c50cd6cbd8fa6e2e58ead5e507cc239b63f82d94101663732864366e38b4574f974e9887d7fe9fa81144e9f9604af1a8e046cd794cedeaf46f9cfe40ea7a2ac50f45b5332243a626cf92dbd8c46b7743cdc14399198ce9f617034595994035213f007963eefe4141fd231277055cd955e9dd2bc86332b9e86dbc5b262dc6fa2d7db16b2fb44be5e429fd1abc2f34f7a0d1ae4feaa4fdaa14c3ca61521d407944eb12f07209a34cfade136843e8a8a39f28dd24daf80c57238133f7291004c6897315c0ac70aa9878d3383edfd673142b8b190c7dfa145d379e424ad8539d9e38a1e2501795e759b4acb192a2a6ddbe0b2c1b9ee60cb37327c0e124fdfaac13d47637dd440dbd32966ac5987481a75709d4112ae0ef7c8a7350bfc8f817a23906b18b63888b0b2bc3ae622552a9215f29dc2b459bf3a9c612dc1dbf7bf364552e880cd3a737f4d7623884ca1452a854f004decb6cc2446bd20ae2409129fed2bc9b41ef78708ac947aa74b4331e549bcdafdac58608728861bb997607fbcf3f9f7b9bee91ac57d9a3e58dc969f3cf66a32a306b855eff80f25a11d3cf0f6ec42205e2880b03412aaa794899fe3075100e9c9e3a5feeb1029492844a63804c33401fa2518814cf17421a4a420fec60545ca8bc6a7b1cabfdbdb5d21d6fb18c1f44daab51b2f433daf9aa8d355c3ef845e473c6be2d73db32de024ab3b233f6d3ff420f8a5300ddc8b9110726768dee789f80c7c9fb2d701f004320feab8a2c227779395a903acb02e893c2ad029f2f6444bca3b467411a6941c47a72ce024261e963e7fc56bdcd470c310f119d75a66903cbce2609f895a2ce42d6cff5ee701bd8c0bca4a84455e3d32b12f49d380c825a380357020df200ff30b315c539cd74bba932caa37fab69f5ae7c4fda6dafb09942fea421f6b0480322a96f669b5e65fa70d573277b374b9798f865a348ba9ddbaf6383b7bea336e4d07866ba99d17bbe31cd17189daa4c00d05e8bfa0ed923e2c3cc6f3bf122aa8ec331fc2790873f309bf4906c6b4f574667a973d65d9c51ed875adf1884e4b91d50ba70596722e88f68a52f9af8b42cc7e1131c3411a490abf7842d48dd0bf4b1617b4d6da403ed92175ed345e56fabb7029e1838a12809785c0fd78cb171010eee7136a9ff2c7f48b30514a433c306757fba15cadab78405b688b26c40bbff3124cc3942c98f6507812f4d0c4d95e6463ce5f89dd331a6684d2df099611cbf4f408cb103dae0bc54119baecdcc489b5ab92e50db90a49165e9c358e6fc8572a5ec865d0c0bf41252d54958d9673038f6b41033a8fd89325c73fcbb1e7a70486fe4a5ca794b2534ace69b1ddd2c8ca1aec42bf4bd95725b121f2ffa4351e399d259a9bafcb1959dd6bdf9926f4ecf1153f3859f1a886af7537151e0ba672fe426f3f96094f7f892faeff94ba7cb9fa8e59abf562c4dd06651b62a8db6d1ce270a1808925a329856e7495123c3f2b5ac7ccbae47a1d97e5d0ae5fa88431b33cba7cc826bf691720f30069273f38ed525ab5316c6b97db982610c250d892e90eceafc5f836f393345d1e84204d5fcc2c027cd1b1821642d3c8d00c82db279a44b1223edf84ecec53ff678f51ed3f5847e42290c77a2159b56722f26d22003140d753a9702fb6f2fd0b53a8eed0fa85d00914c4e3af04713988c02d54875ba84619578fabbea6dee3f43fee95be3b25f9ccafb1c4967aafbb9398f893c76d27f741397636660a74a8a17f1ea9a6f94fd9800e39b14d7407e20a619922cf2ddae3ada32c4fc34c4ca668fd25dca2bd8ea0385f56ca64606e433ed079c23a34d932bf84177357f43f286ceb7db23c904318425ce85ab6a0b803387ceb2b1e59a428aa0341f76dc39972329cba81b2b0dac33215efb9473bc96c9395432f80af3b9d8605a6843e75fca5292f6cffedb1e15f9854b0c1b8250ce92109ea235fff5299ab52ce28863362f195374c80a9a3c5e8ea509b55992e6a9142f819deab922be701a366ea0a6aa4c57a7d59a7d12e028a90004baed028bbc61a27dbced1a3740046e2d2f1f2d6ab12d38559a25c81676938505f5c51e967fae881ca8eb2037fc9444af360febacf2203da8d3549e94c6a5a2466612e90466cc70d94728464c2bb2f7f1f3f75c93f195c80a73b6277961c069d693407fa014bf319c2bf520903b9327ee8e7cb7a9ef816b2745bfc04eaec967debce2753c254d0795351f8c8c4460f29188318f5e080eaaffb13c2608fc773f2537832d80b97e925f315930d012262d1207f3687dcdf1de3629a9adb6d2ac10d3b384547650f231f2f0606a0858d67f8dbc711a513269c5f49b5aa52658731fe2ae40281106f28280711fca3b9d756e69b732310cccfa4cb0ae3d87defe3bfddf44a86fbd7f6ce1e27dd62edaa959f9102a261bd0fa14a290981d7ce0fbfbbf335f007184fb47b0698d58bd7a11dc6a9e87d8ce21629c1c3e4071a30cdff108cc5fadb9700b86486226b407cec34ca47c0e87f4168f8de4610fb94c7f75dbc16be445da42df675cc4f55644afd4ee7ecd01a55216307f44917bb3075050f6a2fc9dff041120d0e544d029c62de34b57d1e40c06cabbde3ead673328ad4c00b22d3461bbabe3c958df08598c13bb4de5d1e38ae8620b855a2078f4984281df04d5a3269c135c628c2a299a92fe45ad7ffaeef3e6c1fe9cbd0e5aaba6ae73b936eb79f7d9c44a7bab4c2eaf0f7cba8b28db294f61a3f0559c6dd902e2bedcd9b00d3ae8e6fc0b14d9592dc8def4b562612ca2c2188b736344598bb1e9a8fbf52b0f540a44187bc8445efdc3b463572a4a15b9cc85288566a83c6d411bf8e60c35f7a0125064a6d42ddd88140e4c0385c021a37ce1addbd88392ea103cc37d764fd00205527856c6fb82748af4e652ed3456f0db6230e0aecdeef04a5a9a025fb4f07429bb700bde1c0aa57ed088b3ec18aaaa9cbb95d913d1ada3ad635219c2aa40bb63943471a9ab2c6ed5eb7f38c514c683f9fb797ac53f89ff471cd201d639ae99c47b0c10d9fa7a1196ce08cc81f881374dd3ba52764dbf678c35ffac938d090fff44ebe28462d7fe1c36068896dbf5335c4ec0501dc4153b47fed012f90f5b2d639d3b30577254ce50b62171ab54b287a514ed1dfee0fe876453eba704b7bd875a0b493fd7046a2b6f3153b5cbccb5485cfecb0f91aa411fc4367a384cfd4ba44d5bb9f8ab09690a460c87a6f96039ff308daf0b0f7cbc4e973e14f53c775104eddc3eaa25640403d5490a5a7ce1b8508ebaeaf4f8f6a5234df83bbd7b06e00997c57f35c7f1554e769ebd1a2ae22f91bcb810cec9e6c6a38a29e2f79e1981015d192a1ad288ca4d74daad850557717cd591f07bf88ca3b7347722d4612687991910b5827a903599f7a76dc23b16808cff7d558b1bf5dadfad317ae78a47ea25c30a49e76aa055143bb2c86ad23d4f1ba4833cf228a8b026b808a1659934a183affe3a6858dbb3a6bab65bdd011fe5de9328f7a618b4bc13bfad495c912d92427c8bd0f558abce080ef292db2a1f15cb7dbee7887eedd46c6e0db7eac9eb2c94a2cebe4c50d616a523a1107a6086258aadb58d95b52748a8adb0fea9be29ced8b6368523aa1f9b85e259e01c620b6d9e85db7264369c2f851605528b7fa75727fb2b9757b214afa9b7e5da8d296cf6cdf7c4601c8903b47af097198861168294f50a5968c73afeab96431f7233b6f56e42c260c239be09b87fb5a530a7dacfaf68ba3605cf73ae492835a2f5e4c0bf3ff153b3c5d154dea371f9712c64fa04dff25d15d9004c185373d9223aa14f4fb6a85fd19246473af65c6f7f06f711db93c794a517dd53f4f21dd2701e5a84640d9723bf5708ae89472280f97e8002b9c055766faf6ed911c98917ef3351e151ff105f914a439fa43ed7185ff43d916cfe825b66918dbf3f5b36a1353733650532a430e99343ca87511eacd985e56f460804286f8fc5122f648dc311794992367adcc1d43ca0963da2ad7c5caf0ef1e505bc285629d249deffa754e85936aaf2ee39d4891fc2e30dc1bfc5c1da929a91667f60e9cac30354738215bc03ef4c71c6fd09609d693ea1faa5e84254d04b8d08fafe5d9c36630262647d0742b19d67fabef54e42e3dae658dd83236f51d021ed3aadb772576b8b9d6880c61a71476399f54df575208158143836a36bd0ec336cb34010818246f98a483b26830e2db3fd06b0f665d15ebce6fdb7050279606eeaddc1f6ea65c8098bf379ce807be85853d93f5e20da995570769fd5bf734ea77a69225f49aba2ae6c469a78cdc12406569158af3589312a31f71e89b9aa0f6a4fdc425b259aa5b95679b1e4d982ff7c45635c7726d1ba8cd7b91881d0bc940f0b8b1053da335ae5ef493d72364a021c4c8d150b91085bf1924dc365aee37640dadfabc42c185f5beeb8a0f99fbe8b36c9df01973f5d593ee825153e8fada33a57db181ac1f0e84d5690c91f69e7fef239bbc9412446a03fb4efed9b6a86790e2a6fced30a79412a556b7cca9265ad0f6f454960a6927205d34d305b3524f17ef9aa13dfe1354e629d788d032a5bca9e6630998ca0780f53d66144f261e38dd88c84b501dbe2ee40335e01ced1538208e82784ad66d751050304c575b446d9891c3f5676801851aca0863f0dc033e8ea04b22843d00afb36ce80ba9a3257030413d870eb840b8a33531c9cd63a1e88c61619acb4158ad8d1a9a9f0c6b465efd8bd4d4096867ef6a9821e3858ea41b2b0e006306dea34eec9e5828ead0e39f5f0b996e46b778e9ea8d5a89fcb1c992023cbbcb5dcb164537e2b6f5e28ba007810be9c1354739d8421ccb44c28babb107d75a73bd20850c204ba477a6d19803864719041d673e27c2952fb7c5d114cd2d096a6c921359021f709d10c625e18ba9540ceb3067f933a02e61a37c13ed0dd6399de0de2ea5af3edd7d36ac6653fcdd82b34e2bea83ff2d7fc0f4d6404eeabe96aba06df3cb8b989652fa46bc6a21fce2b0e9ecbb685c99fb5a1c524b0b9c6560d568a7f093beb79d5d6e3b31436ef5d500a03104576ac379d3b22603a86c80c7f182d512131587939e39a063ff82da7bbd81ce058cc6d782d8e2f72727ecdb8418fdd0d41884a1b976610a08935b18a9308a780fd2d8a3f160a3cd6b6aab999ac887989e27f5d8a722b08c13fcdd874e169f4e86e6fa5937d0d4e70559b9a24f856cdacfddc8b7505bca40964e0a0cc18cbb31f8bfbf17503c3b9e4578011e6b1492508381d3af6d47910987046a36ac93205eaeb571184f051834f8fa312eb18a3e634caab7b63902010af4a935b64f5b8282be59ef09ee352a171a8ab51cf3e6db750a04e7b4133edbbe1fdc7ae2ab7147b8616e7ac430c6c32b14d77260a6c7ac09092e81224821a72a69a53d1fecdfdf543cd87f4234e2cec562c6d53ce6d4e35351e1c32a4db6419e1fd5c0d8e18268823de4bbd6655ae8fd25cdc2d800ace1bf8e3ce3f57785df82d478091e0fa1551ce08683888720f1a88779a9c1912d239ed8f6ea433ed0400667d55b78e5f38d2dbb6f8f5f348fb6aff653fa932698cad7566113077a5b4518b070e1990701b849719c6e5dc40beebfc8af276db990c21633778a98a77b7a4d824262354d5980565751f5f0324802b83bdf3d3b4076952b7fe886da1010a0b5117dee830dd30151d0d9823eb0ece4f29d337e95c1b599d517a893b879591986ec9e1d729186773ece1d516021cb32709296bb18fc8ac9967fa6aa1134d453f8f2dc9cdda8225a5a14caa9ddc6cfea96ceb39288ea4f8ef0287e69329d5291bf37fb6b748df821e74e111729035b7aca1ee8b3116f7629ace677973707409d2040dff18f24f5cce93d230db80b2f6ce897f2ecd66d9c9d8548b6a3a8840ca9ebb45ee783c0111890016ef65ba68363a927a75e75dbc2953cd2c5e02d952f0ffa96e6f9ccae1baa9431eccf469f46a388d0e197b189af338d90793422d7c67a879700ee1e62b0ab0e48f70e6d9ed6ea97a182258160c733e5e278cddb9a9cbe6e3ea7862314e63da94166f60aa15723cf6364577729ce0a0563c38741dc29470a61dcbbc7fc92b68feb3591a0233e7399cf053792a39ff553f42a354c3451ca3e424a43b41139ad3544a3d4679a12e3d4bb55d06d581ad53080543906615239a6e5d1a43e5c5c3a490204775d2ddba56a67d70d69a87f00ed4c6ba72e8b8bb25d5737aa7a49fa03d0a88631ef2197ee95fa1dd0a7218ed28564d903b5e00962b3381dbc5fefc16ec810f9bfb04af76d314d4698a8f0a9e9aec4fa4a4484b64ff586dd055aff49eb8e5b95fcf0a905322172222104939ae9d932eccb60f51ce00a4ea5f3016d771e6ed4c478354b51567b8901a52f95429eb94b6f8f27c23b2eb6f9b103832fd0c02d8ab8d97e6b3bc65fcdbf6628204cdad72b4f4a68804fdd28f6f403307e3fbf52b5bb29d1202ae279819b5adb173bdb453da95f67566c58db1dc40b938a08f84771f79ffd2ee4fa18aadd003e1b8a4449e5a69ac691cfe1adc92519175311056c6a84081770441666f8b2e216f79c3aeb9a9963536a16aea3bc7223a36bf08a3a9bf0a3d47f1b2813e01a89cc8148d428996a2960ecf759d910dbd21940f021ec4e302897bdd0c9eb2fe854d9121b5804e944c772c245604358d066b6cd25bd86b1ddcde657a7484681404e6e0ab8587dff2e5a1aea8c78533b74aa4f648ec89b7b723e8812f6b73cda67637a8ab48e1ae4c1d7516438df32d2a1fdcb43303f3b20eb7990</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">你好，请输入这篇文章的密码！锵锵！可莉登场！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+              
 
-<p>我们使用记事本打开就能看到逻辑。但是真正编译出来的，我们用来运行的程序，使用 记事本打开是这样的</p>
-<p><img src="https://z1.ax1x.com/2023/09/13/pPRF6uF.png" srcset="/img/loading.gif" lazyload></p>
-<p>这些二进制数据直接无法识读，但是包含了程序执行所需要的东西，而我们的工作就 是，识读他们，找到flag！</p>
-<h1 id="如何开始逆向呢"><a href="#如何开始逆向呢" class="headerlink" title="如何开始逆向呢"></a>如何开始逆向呢</h1><p>ctf中的逆向（ reverse ）涉及很多编程语言，最常见的是C、C++ 、python、java、C#，或者一 常见的编程语言golang、rust、lisp等等。 除了windows与linux系统下可执行文件的逆向，还经常遇到安卓的（ apk ）逆向、系统驱动、固 件逆向等等。 但是作为一个 beginner ，你不需要在刚入门的时候就去掌握这么多的编程语言 从C语言以及C语言逆向开始，是一个比较好的选择 因为C语言十分接近高级语言，又有充分的系统底层的支持 同时入门的逆向题很多是用C语言写的 并且当你学会了C语言，尽管你无法使用java、python等语言进行编程，但是你会发现，看懂这些高 语言写的代码还是比较容易的。</p>
-<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><blockquote>
-<p>来自含树</p>
-</blockquote>
-<h2 id="常用工具介绍"><a href="#常用工具介绍" class="headerlink" title="常用工具介绍"></a>常用工具介绍</h2><h3 id="1．IDA-Pro"><a href="#1．IDA-Pro" class="headerlink" title="1．IDA Pro"></a>1．IDA Pro</h3><p>IDA（Interactive DisAssembler）Pro（以下简称IDA）是一款强大的可执行文件分析工 具，可以对包括但不限于x86&#x2F;x64、ARM、MIPS等架构，PE、ELF等格式的可执行文件进行静态分析和动态调试。IDA集成了Hex-Rays Decompiler，提供了从汇编语言到C 语言伪代码的反编译功能，可以极大地减少分析程序时的工作量</p>
-<h3 id="2．OllyDbg和x64dbg"><a href="#2．OllyDbg和x64dbg" class="headerlink" title="2．OllyDbg和x64dbg"></a>2．OllyDbg和x64dbg</h3><p>OllyDbg是Windows 32位环境下一款优秀的调试器，最强大的功能是可扩展性，许多开 发者为其开发了具备各种功能的插件，能够绕过许多软件保护措施。但OllyDbg在64位 环境下已经不能使用，许多人因此转而使用了x64dbg。</p>
-<h1 id="这些怎么下载？"><a href="#这些怎么下载？" class="headerlink" title="这些怎么下载？"></a>这些怎么下载？</h1><p><a target="_blank" rel="noopener" href="https://down.52pojie.cn/">爱盘 - 最新的在线破解工具包 (52pojie.cn)</a></p>
-<h1 id="下好了怎么用呢"><a href="#下好了怎么用呢" class="headerlink" title="下好了怎么用呢"></a>下好了怎么用呢</h1><p>推荐查阅一些书籍，如 《从0到1：CTFer成长之路》 re篇 </p>
-<p>或者直接b站搜ctf re入门</p>
-<p> 以及第一题的bin在压缩包里，试试ida吧，你会需要它的。</p>
-
-                
-              </div>
+              
             
             <hr/>
             <div>
@@ -643,6 +624,23 @@
   
 
 
+
+
+  
+  <script defer>
+    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
+      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
+        var hbePrefix = document.querySelector('hbe-prefix');
+        hbePrefix.parentElement.classList.add('markdown-body');
+        Fluid.utils.retry(function() {
+          if (Fluid.boot && Fluid.boot.refresh) {
+            Fluid.boot.refresh();
+            return true;
+          }
+        }, 100, 10);
+      })
+    }
+  </script>
 
 
   
