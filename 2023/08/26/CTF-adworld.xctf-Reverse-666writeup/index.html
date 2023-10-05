@@ -16,18 +16,24 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="这篇文章被加密了喵~W1ndys不想让你看见里面的内容。">
+    <meta name="description" content="查壳丢进去查壳  无壳 进入IDA直接拉进ida  首先看到一个比较醒目的flag  但是这怎么可能就是答案呢 主函数看一下主函数  双击enflag看一下  发现enflag是izwhroz””w”v.K”.Ni 转化为十进制ASCII文本，十六进制，二进制，十进制，Base64转换器 (rapidtables.org) 1[105,122,119,104,114,111,122,34,34,1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="攻防世界-Reverse-666writeup">
 <meta property="og:url" content="http://w1ndys.top/2023/08/26/CTF-adworld.xctf-Reverse-666writeup/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="这篇文章被加密了喵~W1ndys不想让你看见里面的内容。">
+<meta property="og:description" content="查壳丢进去查壳  无壳 进入IDA直接拉进ida  首先看到一个比较醒目的flag  但是这怎么可能就是答案呢 主函数看一下主函数  双击enflag看一下  发现enflag是izwhroz””w”v.K”.Ni 转化为十进制ASCII文本，十六进制，二进制，十进制，Base64转换器 (rapidtables.org) 1[105,122,119,104,114,111,122,34,34,1">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img1.imgtp.com/2023/08/26/gAGTtvBK.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/08/26/GF6BzP2T.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/08/26/HaTlGnfa.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/08/26/7RilNm8M.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/08/26/axSEUavG.png">
 <meta property="article:published_time" content="2023-08-25T23:26:50.283Z">
 <meta property="article:modified_time" content="2023-09-30T12:04:46.254Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img1.imgtp.com/2023/08/26/gAGTtvBK.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -236,7 +242,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共12k字
+          共805字
         
       </span>
     
@@ -248,7 +254,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计102分钟
+          阅读本文预计7分钟
         
       </span>
     
@@ -304,22 +310,32 @@
               </p>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这个密码看着不太对, 再试试吧~或者线下solo博主试试。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="145d3a1c4b07f93dffc7b27eb02a7934b6887a35dddbeea3145dca469ffcd9e9">1a122d849dea0253b8c2e18440c0e53b93e7c2dc25016e4b4aa4af6362977a046af571322b722e98899455d47e58e28964654df52d20f9e35c9cc39c8cd38556758ee783c7d376032b5ac765588cc0c2d19c3a4252bdf538641a0b0b7f82b285e6023b99de9605fe3d15cb7f6b4421ac9ccf3e02c9cf923145010606c90fbd83267357ab977eb1c3776f3618dbd4d7b703c306b5172daf2993bfec07cd84e9d95eb895966d10f98bee126869dc4172a8a2567c3de4eb2818fd09efab4b0390414ec3f9fcd1055fc12659cfb04faad9f515aaa43f2877435ab8f3aab0d714f1a9cdeeb8349162c06efc81e2cda8a008136fee023ceb4a59cbd237c0c6dbc666a9832b61480639486977185eef2ba076cb93136ccec9744d95025321cefd290e4f7ae692a72f747d0c5084c0bc7928665412512b2c43c3461cc7fdb7a87692bb24b72e6bc176f8c3c1072c6c098614d7088f78e6eaba7e4d2a18225f07fff647273e7aae902a5c84817071025648eda2ae746a421697b0f31e58cb7674ba903849b747579a40880cdff1ce3e9bdb3ec51c7037b741f692c684bb391114020bdce7c7555d634af4be6807da7adc46d2c640365dacd04c0e1e74cbb6d9d2039f3975ff9796bfc04ee2474182f28f1608e75b4a4a69c919bea039e58f3dfdd8e19aa289caf4c2166e0d824dccdf2834560a6ec78b72c3b24e68d032c182c867b5d89c34917010559537c050b76cb4cb420fce22a8762779384d3c834c4eca5008fb1c93544ff4157a7ff38bacfbc5e054b5aeed42ffb86d27f919fd05a62189a3ceb92ca1f60d886cf86b41b4a630906d38392cb1ae60b1794e1bcce287c5a89c0758c3bed658e02be77b743714a0ff5cea068eb7f973bf2ec8a417b0f135ea1edb51c0acfa3c3ea982f5f96bb09117cecffac93e4322e05312f6ae14eb983f3f37e7137683eff5d30b156830442698dca5f7088e413023a95e952fd16d92ea913a0abb033aeb90d02ea452701cefeb0ea9dd96c21634cd8df5764eb226a25b6b1d6d5e9b7c7bce5daf1da4884253bd04065d5f805e29c61af4c582b6a84c1ba854148be43143f8411a2df2d3b2b695b132a2f930df6297d8deab6b49f3069a29e7887af4b52dcb399054235cf579ec51263c54318ad220ad667ff16fc54f8e48ac920254657fa08a481e3fbc4d31ab23afb88783d02fe17d7d91247951522dbc700abce725dd71e07d7171a9e7d6eb834a7e247240c8fa76cbd6f5911f3bd69600f2ba5200a3b9bd5bf8646bb3a84492266e6ff3720ebc8efee92e2af0a74ca41a90b9495df22e2eb641dd0985162d76ec02cbe7e392e7fd360bddd7d6c0c1e2e2cd483e4c5b4ea4120dee420f4948961042a1c754787068db95a07933e2156291b143df4775ac3bf79ec2e9e34d5a7aaa6d81593fa7dcca543d65362b15ce5eedd31dc0b9c1cb276065907345a599a5ea746323ba55e953f7fd8acc4200a8663a5c3f6e735a0d1f1b542de9ca62424196f5aa8030fbb9315c238ec995b65f065d518ad1372d2b68c6e9f498e11beb580e83ebe0cbab423a1c64e378e06545286972683ee23fdde20a35986c67047a830db24f661d89ddf03ab6b8a055018c8fd3984b2cd931082f2f781ca00442b6cf5b511f16c3e062c364efac3a068f4ae3a1d608506b2c622fb54cfaa21ea362e3892d49abefb4a05ddb4e8c6fb772d1586f9d7b9cb046fc1b37049d857c6d4494d5bd28ed7671537ecce4d9e6d6c54f5a84509c840c56f9c68a68047d5a49647369f8ada51fc5175ec6ceb5188970d6ad10d641095b06f36f162fde52db2b939fcf5905e3f73a7984002dd38fdfd3cdee55e2c8904171f2992a9010dbb98dd7a6801d005d2427cc6e1ba010b5c605491f9d1cdcf9578243a99f1012d269c0f14f652525fd07bb9656a25ce878dcf309fc0058b72dfcd30d710ef8d090276c54af2f11e8bc93cc95df9c8bec1fb6c41739df5bca43f1f96c58a78627f57eb240a502616d85c1c8389815c466311e7529e9d3025cd9e731e0bf42b31be91c52903d8a6711151c7ef83e127889a60a09760152233315cd9521b94a2bc21238e37a0fe670e68208d61917768627ad71b4ce52ef390b8d2de9229b0738c02c6c1f36f0cb6b1f89f4b4047c263348477fb15e94bdb930582c60e9183ea9976aa28c303a35926bf918492717d75be99f42d7b1ab997fc97a376bccd03fcaab73713e0ef44ccd0e407bc11cb86ee4e6bd52bf8cefaf90378db6ceb0c0d2a9aeb275a96fccc945f2ec1a12629f2d9a93a762896c1691b517b310233e69442100b07c3cea8a4d50c9e3c19d7f82fe799e5fe523cd2ad0fb1b7c93066b68bc6d17036bc3dca70e514eaa6c7aa875721de79f2c7d64e4c86029d63bb70d642d6109de9b81466ff796b709ab153089e5e0229ccb3b9d489f45117e5ee7e1bc1f668322447d68091a0184b85721647c1e4d77ea960dd659ead4eee0a30afa87443b09df1bc3efbef15bf1a25dc787bf6d3df64bf2af1e6ae591a1293e0018a9a9a489ee3e21966b805f8a6d5103783320a5b466cc3cfca6382bbea403e14e52f6cf4629a058b0ca075dc39c1f13216980adc5cd14760f155422247945b13cd2b8fcd912f20537969a9508cf624338c9ab4ed6857f61bf8adad3d9b9eeceb78be5bd6c75b788a8be02771504c737494214a667f7f51079d4d545dd785f01da79522af88750e0291e78bd6f969ba65a2fe3c245abd2d3307bdb826b270883bb590825d1fb699343319887274672c03c4a76ffb1ed8c9ecf1597516b4fb09d5f11f2b89c24ebfe9421bd1c3134e5dce456396934b1c7d465b88da7114920f67bda98b3e1f009116f80c791685a4f4e6f15402d037b9d30023c35274889c91f4c74d9078d3221adb717a70815b2ae107cc5760317ac1871931afdaf421587a6d3f44a0bd9f9db247134ce774826165c0f2c1030fac276a78c5a0016a1d69185e6146ab0304de39bcc5c98f258eb18af175b6283694ba64c84732b50dab586482d246719412dbbc104d6070ca2f21185a25749fb60a57220b76d67d55d4499e3527391c35abc3f8e84d72a3ea547a51603d5f9dc2d6fe2128db3a01da158cc2879be325f896fb1febbc10a1c792af409132737d3b1f7980582fa40ce49b973643fcd1ec60753ae27da770495424214d5ce839a7fec841a4208778896c5779269e2604823e3cd4562017d97ea0d5a91c199979b6bf1d0c47137187882444eef22bc5351920afe9aa6ebbb9f9cdf2c60b75731aa29901fa185311a27db4a83a13e9afd661ecb9833217eeae4bf7c8fb0734dbce96a6344c467dae9aaa5820b2f295446736a55e5d921f19e76a4b5fa05f174172c7e5cbe07e824c1151b3e086edebbb0d4abaa59b831527b55bc6a90edc2e2005a28ef3a833b6647f6d614954888f204bf9a2aff420b2f513125f6a19a48819ffc251cb600c315d9f51434f94374c48a9682fba6238bc5170b983f84e14b672dcf42aa3280ab47d48427f8e573dd123d697b6b1a24a55225c950406e54c32e11f8dca1ef7dd490b7375bb6bdce6afea057cccd40c4830813e74f3f0e916dfade406a4a1994cb9a0a0fd66e55f159f8c6968c2ea69ea72dff3df187e7fc84caaa7ba23ef41a0f23c122e0cfe6f6fb77594904e1ee0ea340dc61083afe3c92ba75da1b9df852d801f6cb55faa67baf2880f4ade4400b0278eb74698290a573bd00e0345f743a6d4dfe4bc0847d75e842a13d7868e71678bc2685c60203e279297d1b64458919b85889bf787084f575e71276285020d5ee1b8a7b19398dde2855e73f9908ef32869e13d23180593347c1552f48a6792da59e7cc9fdfbc25d4bdd1f036914ec9f144271be46f921c5bc3771a023f16de05ae247687d9c7266ee10f55e766da668b8e8c5634abe854d62a9bed8ab7f5a421c22b9f8dedb58e3eddbc1bea62c314360ba1965107dd6ce09933c53caa5903b2fec09d2249aaca5f52e835b51f400f7584faf735696be27c7ad5ff7413f58c1306c95bbb6aeedc7d49697c9acecf6c090e9bf49d6e11f1b90048fa815978a0dbf92226aa8e995e6bea6f82edf48f31bd607ccdcc8f61d524fc9d85eac11a4a47579b4feb46e7fd781914e41a2d0a690ffc42c638d8afdf2908d8037a346a700c1a112d96099c6ddb3315fca98cfad3bfad906d4475e0be336c7b35a24a93df2c57bc4105297f53ac3fb843e7ed756dcb2600912aac63f2ef87514b18f1f90f5ab7091dd3f24afbdff80b813411732126d51c1e9d7628b25d8e4b1d89a8bede372d78c742c00b2ce43f1918aea406f4997a11203ab2dc6fe78d70b767d9c16b5049e955965ed9b3c1907fccc6bd21540c847668da78d092ceb7bb46062a5064274c4530157e068445e77fef0d38a53fb66ba3ec39cb360c5146ad1936056aa48464d2f19e1d9316ef34eb455927f3e073de2bea73877d307a3dc92992e749bb4cad226942933556e961160180b7060b8f99b9fe95e96a006a7920126df2dca686c73ab2cfcfa9ee92721c89c73ea8eca48310428cad47621d4298b088cbc1f7553c85b8b14792ea8b2c4f3f27a0b4126afce57fd19d332533e34f01106c395c583ab3ae07b2600c10510307bc7da08790181cec5090153f12b6574eee5954bfc8c3da8d15291c45d4f70e5d8a07ca0f551339fe268c47ecce6f5f25353fc13d5589365a3fc61edf90571473ca2cf465edd185b3a498a29cb70fd19678e0053350c295b2c8223f51504034f83b9441f707e506e194f92882c9338600045f2f398c0b64bd4b58373b054e3eb88b404b8c8183612e971625deff65350262eef2b0c124ae21ed7167b9cc9769e277d0fa01f65df43c6ad03fe3b52f38c4f0f08304d4065e4c8cb64c6f0eabe710a42d999e5d734eb6ce2b3965b60ed03a5984eaa9b5f1866fbdd54299ac4c4d4c550cd872adb81d9f4e3b55ee2bb12a83c403867cb2f3e7436a19aa60d5c043bbddf233bc0654189ec43ed7cd315fd515798c3c6bdac026cc7fbe0746cd4096caae4d7e5bf272f592cb3ca7dfca4b71289b9c8949dbd452ab6d583fd428e822419b54c2eb644b5b472926c6759e06e2f8d1d8ca4f90891cd160587198e371d695f3b5c0391963e38756afcec6ecc2596fc76159aa612108ba05a25b6bd6919b99779b426d7d8f531125bfe2f2a0bc17c053e44b3333b85f16f530192df41194d31ad256c2e39e5e25df31f1eec2020a4adc047e153a2c13d4b48d27a7a0fd520d71b0ad7303e12f9fc8672d37df52a8eff1bcc395d725d8a1543d6563d382c51a1907b88a250fbe72c320d42020430ce91b26c2752c58bca5ca31a86c688b188307b9cd525b8de75c131cbd759c44f4a2973e4467e50e2c2d48fcaaf0e7af03a03105abd92efb67049b94c7352b63ff3a66cffda999c69f1c4b63cf76455b596b37ec64b75c77ca4c94858415ad754025750ac9ded4e0a613607c54fad9465d63ec796b09a1e4d66a4e259da043bfd704be0e875e2f8919dc43c4548ef105322cf75fe4d195fec0d57bb2f721cd9e5cf0ff0322aebed84aaf0b163dddab106fac25aec0c3c5933f6551039d94f94809ef7815096c8a85bc70dd64ff7d657437361be2cbedb85145111f3f9e94a770f6cd3747426c42a99424bcc5cb989375f67ed3a9b1ec14a413db2e53b6a2d3e99fa922b72faaddcf3266022f0565a48e07ac24c82040ec610d2a71814520f0c6bece5f960f7b45d49dcf215a4e5634b423b025afcf219b7d0d63b19e7e8e28a710ce5e04b064178cbe921143e53f6f5edd128689b4dc9da3611d05e5c364126d30d0aaf3c9bfda406cb1a9972efef7b425ef9ce4781dc892a10d434a0c4cda623dc9278285f170e48f07c4965580c838bbc546578c168dd8788d7518efa5b2da184f9ad62c29f54140a8b899502c9fb533eae1d9a7ddf532cb5dfe3dc53c8119a58bcfd00fbd5b7e1bc891eb9e8b11a2acaf772d44a809ec7d33e3060beea99bdcbec25f2ce7d78e050ac6fe958a06da56fbde7b21536ca8968cfd6624d7527b7f972ba8418ee1c11cd66dd1a59459380adfd4efb24e72e48a7fe9c4a9d88d8ad25607464875d9e39f2599c0ef04adaf4aa8a1000036cdb1b518c5c18cbdef61414d77367d782d7a71fd68fee165362e7a06570f45634bee752fa7271852319c12dc8051481cfe5f30edc499b26eca3e6dc91698e5dbdcc2374f6ad64b92521933c5be7ec33cb248b4586b8cdbe440c177ee1c40c938518771014371862de8ab024504992c7c342fdc48ee5b966d11b72c887b87461b11bf0056e0592ad5305d6c9f2e4be7d293f084f67a4850722dcbb8c44b60a1ef9e8ff569391313a7dec05849bc4372f3f7f94ef978a95de43b470b11aa02407d70615ca0bc1abf32880d0926fe764488c094fe9ad0d796198d1d0b4862f4cca75736278fec08bbf587dd58bfa7957d4d85f4082d5df96129bc58ca257a79468362e1ccf0b9651aaf1fe53d9a9a65b269ceb744defa65c0e49e7906044d2c0380bfc75db378a8a4ef36e95438c1271fa1554dbcd6fcc8ef96af6b22ffcdb0a88ebb45a9c63bc952f65af043a7f7f8262f56723199b39f95add22a41a1f42daed93fdbddc19a15244e5de0b2076ad47ed71c69fa6aa88835b1a3a5ae64dc824044b04a99f99760cd23e7ffe352be173fed2ae5ff5570c10ea750f5125397c314ca9850fd06722e32faf83ff8d0a4f61f04444ed384cdec15d8dc2fa5ffdb062265de5ef7d173b4165d1e1cfad5840b6fb5afeb0a665cac9d2ece8322426f934d96c177e39f6c14159128b3b6d91dd99d57451658cd32d7c70eabcf87782aba1241da4eed0e4b4b3139cfc40c64fb9163bc3d231c726d28cfd1879242e38f2074d2c34b18d310c498b3d084415e0edf906d3d00eeb34ac86cd6d3c2c7e4d036e2f86612cb1e2392ce575fcbad9ccaf3f5d8856526d20914ee6ec89714dbd83f4a84ff69a63b4337d539ea6fbe4bf359eb821839c0cafcbf8daba280f4b6131da6ec7d6a4e71b443942872b2031606db2b503ace1472789910c0bd14332d21f6e4501c9f57487b02eba076d52ac46f4a9cd453a346408f2c35615fb993ae588fc27adbea77be6a46e4eafc50adddff90a51bacb434fffc0cb1c4079954973bba70aac45b969c21f560c678303269509bb9601a3f0a9d3c2a363037266503f695e1951a4ba7a03b45ec30b6ed26590577995a0ddbaeed00f7eab69ff19eb727597f36cf8c039400d82616fb16f459ff3f2c675c7c2211ed169569362b18514120843ddbddc04a1ec5f19197fc8deeb2cd3b22ee161b0ad334e2723c89e4cd2f23a6cf2cdbbe874deb95bf1fd3a0616bf139eb4bb7c9ea252b3bc7998e8caec7569d8f9560931abcb82e7a3b08fe2bd34ebfe7d03c70a9b0549fd0c80764266b1c61683e85110079c911a3009afc3c0ec77dbc21bcd9bcf95c74bb76df6c4614d95f36a7da61e6b87f8b02977072075b30a77951cbe924063df5d27578f4c0066e42907e7a47c2cd54e989312dafb11eb0a8026ff2679ed0f3fce552bf93d8644b10ea5be7bb3d9f08d972e7c54e1e9acae24886b04cd92840d67196dc2f0bdde092f5233e93e7bba8cd9d39b73fe55bec693c8fc9a62ea9ceca20b63f87721976a9d17d3e8cf4b4953410dab8d6a243324797569fc918f0134ad630388af647e8e3574fa085e22c60d2d17d1037f8a0d59dfe5a692b36790334d9454374a539c99abb0d784471b0096d9b53bcd59a9752233195d05bb18391bff6599667e9461e0ffc71ef65d44761e8617fbdb007360895e85ab4787929cfce1db5ba9f71ef4baff53556aae13b14019773e15c7646b64c5603561fc825859276d2e0db1caf1998627958349c59374534e374f4f9c415052a0e50b8cbe3574de45e472fd4035c03d20ed8faf15016c324050e2dffa1d1e6a91ea6951f9f3bf585fc8612fa073eeed4af0e4e75a9cf859100bb54d06a3e86a80040faa0214143b591b66cf14c80eb1fa8036ff7f1d4f97733b7a6837616e0d1f2d4bc3208eb5266dcb1310eb03da2e77dbb07edd61e8a8cafa78f5d7d7eaf6ecce282d256c857b0546da80b65edf9f78744ed518cab28139666fe0c809545be253ddc72003b1cb2969428156ca2733c8a29291a3a3aeb00344443da63ddb5fa322bee8611cdc2dc06e5324bd3bdb740fbae3369d3d932e77faef6c210fb15536b1e1ccdc4dc581aacf725347f9327ed78b6322e9cd7cd84a57dd9319bd7fcd3122677daef5fd346c447d8482dba616115e4815bae39698225ae0ab7c61bd19e096448b560531a71339fc38376fc1eb1d84580eec2b0e11f63075f2f339b58ac3ef5689c67b7d0de954d6143fe801398e8106e815bba06c4c0e0b69a5659805fa3ef29288b61c9a7b00aff3edcb02ff135252212ac7fa1acdf9bdf78c39f3d4a9d8613fe0457581a85fc45b76512c5cf18d29d22c57998d1902cfbed3f500f63f0055a4c31e026e3ea7534a59bcc40a8c39eedc425aa6ca02c334d1e3439767a8fd48e1d855</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">你好，请输入这篇文章的密码！锵锵！可莉登场！</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1 id="查壳"><a href="#查壳" class="headerlink" title="查壳"></a>查壳</h1><p>丢进去查壳</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/gAGTtvBK.png" srcset="/img/loading.gif" lazyload alt="1.png"></p>
+<p>无壳</p>
+<h1 id="进入IDA"><a href="#进入IDA" class="headerlink" title="进入IDA"></a>进入IDA</h1><p>直接拉进ida</p>
+<p> 首先看到一个比较醒目的flag</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/GF6BzP2T.png" srcset="/img/loading.gif" lazyload alt="2.png"></p>
+<p>但是这怎么可能就是答案呢</p>
+<h1 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h1><p>看一下主函数</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/HaTlGnfa.png" srcset="/img/loading.gif" lazyload alt="3.png"></p>
+<p>双击enflag看一下<img src="https://img1.imgtp.com/2023/08/26/7RilNm8M.png" srcset="/img/loading.gif" lazyload alt="4.png"></p>
+<p> 发现enflag是izwhroz””w”v.K”.Ni</p>
+<p>转化为十进制<a target="_blank" rel="noopener" href="https://www.rapidtables.org/zh-CN/convert/number/ascii-hex-bin-dec-converter.html">ASCII文本，十六进制，二进制，十进制，Base64转换器 (rapidtables.org)</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">[<span class="hljs-number">105</span>,<span class="hljs-number">122</span>,<span class="hljs-number">119</span>,<span class="hljs-number">104</span>,<span class="hljs-number">114</span>,<span class="hljs-number">111</span>,<span class="hljs-number">122</span>,<span class="hljs-number">34</span>,<span class="hljs-number">34</span>,<span class="hljs-number">119</span>,<span class="hljs-number">34</span>,<span class="hljs-number">118</span>,<span class="hljs-number">46</span>,<span class="hljs-number">75</span>,<span class="hljs-number">34</span>,<span class="hljs-number">46</span>,<span class="hljs-number">78</span>,<span class="hljs-number">105</span>]<br></code></pre></td></tr></table></figure>
 
-              
+<p>key的长度是12h（注意是16进制），转换成十进制应该是10</p>
+<h1 id="encode函数"><a href="#encode函数" class="headerlink" title="encode函数"></a>encode函数</h1><p>返回主函数看一下encode是干啥的</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/axSEUavG.png" srcset="/img/loading.gif" lazyload alt="5.png"></p>
+<p> 根据三行重点计算过程，写一下逆向代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;Windows.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br> <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    string v3=<span class="hljs-string">&quot;&quot;</span>; <span class="hljs-comment">// [rsp+10h] [rbp-70h]</span><br>    <span class="hljs-type">int</span> v4; <span class="hljs-comment">// [rsp+78h] [rbp-8h]</span><br>    <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+7Ch] [rbp-4h]</span><br>    i = <span class="hljs-number">0</span>;<br>    v4 = <span class="hljs-number">0</span>;<br>    vector&lt;<span class="hljs-type">int</span>&gt; enflag = &#123; <span class="hljs-number">105</span>,<span class="hljs-number">122</span>,<span class="hljs-number">119</span>,<span class="hljs-number">104</span>,<span class="hljs-number">114</span>,<span class="hljs-number">111</span>,<span class="hljs-number">122</span>,<span class="hljs-number">34</span>,<span class="hljs-number">34</span>,<span class="hljs-number">119</span>,<span class="hljs-number">34</span>,<span class="hljs-number">118</span>,<span class="hljs-number">46</span>,<span class="hljs-number">75</span>,<span class="hljs-number">34</span>,<span class="hljs-number">46</span>,<span class="hljs-number">78</span>,<span class="hljs-number">105</span>,<span class="hljs-number">0</span> &#125;;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">18</span>; i += <span class="hljs-number">3</span>)<br>    &#123;<br>        v3 += <span class="hljs-built_in">char</span>((<span class="hljs-number">18</span> ^ enflag[i]) - <span class="hljs-number">6</span>);<br>        v3 += <span class="hljs-built_in">char</span>((<span class="hljs-number">18</span> ^ enflag[i + <span class="hljs-number">1</span>]) + <span class="hljs-number">6</span>);<br>        v3 += <span class="hljs-built_in">char</span>(<span class="hljs-number">18</span> ^ enflag[i + <span class="hljs-number">2</span>] ^ <span class="hljs-number">6</span>);<br>    &#125;<br>    cout &lt;&lt; v3 &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125; <br></code></pre></td></tr></table></figure>
+
+<p>unctf{b66_6b6_66b}</p>
+
+                
+              </div>
             
             <hr/>
             <div>
@@ -631,23 +647,6 @@
   
 
 
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   
