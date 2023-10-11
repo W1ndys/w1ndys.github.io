@@ -1,0 +1,1060 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/about/qqtouxiang.jpg">
+  <link rel="icon" href="../../../../img/about/qqtouxiang.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="W1ndys">
+  <meta name="keywords" content="W1ndys">
+  
+    <meta name="description" content="翻译  🇩🇪 DE    🇬🇧 EN    🇫🇷 FR    🇭🇺 HU    🇮🇩 ID    🇮🇹 IT    🇳🇱 NL    🇧🇷 PT-BR    🇷🇺 RU    🇨🇳 ZH      ➡️ 文献资料 | Discord 链接 |  安装指南  ⬅️                         使用自然语言处理和人工智能以及一些全自动解密&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全自动解密脚本Ciphey官方安装文档">
+<meta property="og:url" content="http://w1ndys.top/2023/10/11/CTF-Ciphey-README/index.html">
+<meta property="og:site_name" content="W1ndysの小屋">
+<meta property="og:description" content="翻译  🇩🇪 DE    🇬🇧 EN    🇫🇷 FR    🇭🇺 HU    🇮🇩 ID    🇮🇹 IT    🇳🇱 NL    🇧🇷 PT-BR    🇷🇺 RU    🇨🇳 ZH      ➡️ 文献资料 | Discord 链接 |  安装指南  ⬅️                         使用自然语言处理和人工智能以及一些全自动解密&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://w1ndys.top/2023/10/Pictures_for_README/binoculars.png">
+<meta property="og:image" content="https://img.shields.io/github/commit-activity/m/ciphey/ciphey">
+<meta property="og:image" content="https://pepy.tech/badge/ciphey">
+<meta property="og:image" content="https://pepy.tech/badge/ciphey/month">
+<meta property="og:image" content="https://img.shields.io/discord/728245678895136898">
+<meta property="og:image" content="https://img.shields.io/pypi/v/ciphey.svg">
+<meta property="og:image" content="https://img.shields.io/badge/License-MIT-yellow.svg">
+<meta property="og:image" content="https://github.com/brandonskerritt/Ciphey/workflows/Python%20application/badge.svg?branch=master">
+<meta property="og:image" content="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/python.png">
+<meta property="og:image" content="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/docker.png">
+<meta property="og:image" content="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/macports.png">
+<meta property="og:image" content="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/homebrew.png">
+<meta property="og:image" content="https://img.shields.io/github/workflow/status/ciphey/ciphey/Python%20application?label=Linux">
+<meta property="og:image" content="https://img.shields.io/github/workflow/status/ciphey/ciphey/Python%20application?label=Mac%20OS">
+<meta property="og:image" content="https://img.shields.io/github/workflow/status/ciphey/ciphey/Python%20application?label=Windows">
+<meta property="og:image" content="http://w1ndys.top/2023/10/Pictures_for_README/index.gif">
+<meta property="og:image" content="http://w1ndys.top/2023/10/Pictures_for_README/ciphey_gooder_cyberchef.gif">
+<meta property="og:image" content="http://w1ndys.top/2023/10/Pictures_for_README/not_dying.gif">
+<meta property="og:image" content="http://w1ndys.top/2023/10/Pictures_for_README/3ways.gif">
+<meta property="og:image" content="https://starchart.cc/Ciphey/Ciphey.svg">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/15613874?v=4">
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/10378052?v=4">
+<meta property="og:image" content="https://avatars0.githubusercontent.com/u/27767884?v=4">
+<meta property="og:image" content="https://avatars2.githubusercontent.com/u/24845568?v=4">
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/22127191?v=4">
+<meta property="og:image" content="https://avatars0.githubusercontent.com/u/57810197?v=4">
+<meta property="og:image" content="https://avatars0.githubusercontent.com/u/52338810?v=4">
+<meta property="og:image" content="https://avatars2.githubusercontent.com/u/70128281?v=4">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/29117662?v=4">
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/3709715?v=4">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/60662297?v=4">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/18184503?v=4">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/40268197?v=4">
+<meta property="og:image" content="https://avatars2.githubusercontent.com/u/59034423?v=4">
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/50526795?v=4">
+<meta property="og:image" content="https://avatars2.githubusercontent.com/u/30216976?v=4">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/37508897?v=4">
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/53093696?v=4">
+<meta property="og:image" content="https://avatars2.githubusercontent.com/u/26333901?v=4">
+<meta property="og:image" content="https://avatars0.githubusercontent.com/u/2684148?v=4">
+<meta property="og:image" content="https://avatars1.githubusercontent.com/u/8947820?v=4">
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/41365655?v=4">
+<meta property="article:published_time" content="2023-10-11T12:24:38.853Z">
+<meta property="article:modified_time" content="2023-10-11T12:26:03.666Z">
+<meta property="article:author" content="W1ndys">
+<meta property="article:tag" content="CTF">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://w1ndys.top/2023/10/Pictures_for_README/binoculars.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>全自动解密脚本Ciphey官方安装文档 - W1ndysの小屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="../../../../css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"w1ndys.top","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="../../../../js/utils.js" ></script>
+  <script  src="../../../../js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start --><link rel="stylesheet" href="/css/mouse.css" /><link rel="stylesheet" href="/css/scrollAnimation.css" /><link rel="stylesheet" href="/css/scrollbar.css" /><link rel="stylesheet" href="/css/cloudedGlass.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="W1ndysの小屋" type="application/atom+xml">
+</head>
+
+<meta name="msvalidate.01" content="1650992395EE4CBACD0F94BDD2D62F77" />
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+  
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="../../../../index.html">
+      <strong>清风愿渡我，我亦喜随风。</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../index.html">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://t.mwm.moe/ycy') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="全自动解密脚本Ciphey官方安装文档"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-10-11 20:24" pubdate>
+           2023年10月11日20:24
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          共2.9k字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          阅读本文预计24分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          浏览<span id="busuanzi_value_page_pv"></span>次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">全自动解密脚本Ciphey官方安装文档</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于： 2023年10月11日20:26
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p align="center">
+翻译 <br>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/de/README.md>🇩🇪 DE   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/README.md>🇬🇧 EN   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/fr/README.md>🇫🇷 FR   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/hu/README.md>🇭🇺 HU   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/id/README.md>🇮🇩 ID   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/it/README.md>🇮🇹 IT   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/nl/README.md>🇳🇱 NL   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/pt-br/README.md>🇧🇷 PT-BR   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/ru/README.md>🇷🇺 RU   </a>
+<a href=https://github.com/Ciphey/Ciphey/tree/master/translations/zh/README.md>🇨🇳 ZH   </a>
+ <br><br>
+➡️
+<a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki">文献资料</a> |
+<a target="_blank" rel="noopener" href="https://discord.ciphey.online">Discord 链接</a> |
+ <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation">安装指南</a>
+ ⬅️
+<br>
+  <img src="../../Pictures_for_README/binoculars.png" srcset="/img/loading.gif" lazyload alt="Ciphey">
+</p>
+
+<p align="center">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/ciphey/ciphey" srcset="/img/loading.gif" lazyload>
+<img src="https://pepy.tech/badge/ciphey" srcset="/img/loading.gif" lazyload>
+ <img src="https://pepy.tech/badge/ciphey/month" srcset="/img/loading.gif" lazyload>
+  <a target="_blank" rel="noopener" href="https://discord.gg/wM3scnc"><img alt="Discord" src="https://img.shields.io/discord/728245678895136898" srcset="/img/loading.gif" lazyload></a>
+<a target="_blank" rel="noopener" href="https://pypi.org/project/ciphey/"><img src="https://img.shields.io/pypi/v/ciphey.svg" srcset="/img/loading.gif" lazyload></a>
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" srcset="/img/loading.gif" lazyload alt="Ciphey">
+  <img src="https://github.com/brandonskerritt/Ciphey/workflows/Python%20application/badge.svg?branch=master" srcset="/img/loading.gif" lazyload alt="Ciphey">
+<br>
+使用自然语言处理和人工智能以及一些全自动解密/解码/破解工具。
+</p>
+
+<hr>
+
+<h2 id="安装指南"><a href="#安装指南" class="headerlink" title="安装指南"></a><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation">安装指南</a></h2><table>
+<thead>
+<tr>
+<th><p align="center"><a target="_blank" rel="noopener" href="https://pypi.org/project/ciphey">🐍 Python</th>
+<th><p align="center"><a target="_blank" rel="noopener" href="https://hub.docker.com/r/remnux/ciphey">🐋 Docker (普遍)</th>
+<th><p align="center"><a target="_blank" rel="noopener" href="https://ports.macports.org/port/ciphey/summary">🍎 MacPorts (macOS)</th>
+<th><p align="center"><a target="_blank" rel="noopener" href="https://formulae.brew.sh/formula/ciphey">🍺 Homebrew (macOS&#x2F;Linux)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><p align="center"><img src="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/python.png" srcset="/img/loading.gif" lazyload /></p></td>
+<td><p align="center"><img src="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/docker.png" srcset="/img/loading.gif" lazyload /></p></td>
+<td><p align="center"><img src="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/macports.png" srcset="/img/loading.gif" lazyload /></p></td>
+<td><p align="center"><img src="https://github.com/Ciphey/Ciphey/raw/master/Pictures_for_README/homebrew.png" srcset="/img/loading.gif" lazyload /></p></td>
+</tr>
+<tr>
+<td><code>python3 -m pip install ciphey --upgrade</code></td>
+<td><code>docker run -it --rm remnux/ciphey</code></td>
+<td><code>sudo port install ciphey</code></td>
+<td><code>brew install ciphey</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Linux</th>
+<th>Mac OS</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://img.shields.io/github/workflow/status/ciphey/ciphey/Python%20application?label=Linux" srcset="/img/loading.gif" lazyload alt="GitHub Workflow Status"></td>
+<td><img src="https://img.shields.io/github/workflow/status/ciphey/ciphey/Python%20application?label=Mac%20OS" srcset="/img/loading.gif" lazyload alt="GitHub Workflow Status"></td>
+<td><img src="https://img.shields.io/github/workflow/status/ciphey/ciphey/Python%20application?label=Windows" srcset="/img/loading.gif" lazyload alt="GitHub Workflow Status"></td>
+</tr>
+</tbody></table>
+<hr>
+
+<h1 id="🤔-这是什么"><a href="#🤔-这是什么" class="headerlink" title="🤔 这是什么?"></a>🤔 这是什么?</h1><p>输入加密的文本，取回解密的文本。</p>
+<blockquote>
+<p>“什么类型的加密?”</p>
+</blockquote>
+<p>这才是重点。您不知道，只是知道它可能已加密。 Ciphey 将为您解决。</p>
+<p>Ciphey 可以在 3 秒或更短的时间内解密大多数加密的文本。</p>
+<p align="center" href="https://asciinema.org/a/336257">
+  <img src="../../Pictures_for_README/index.gif" srcset="/img/loading.gif" lazyload alt="Ciphey demo">
+</p>
+
+<p>Ciphey 旨在成为一种工具，用于自动执行许多解密和解码，例如多种基本编码，经典密码，哈希或更高级的加密技术。</p>
+<p>如果您对密码学不太了解，或者想在自己进行密文处理之前快速检查密文，那么 Ciphey 就是您的理想之选。</p>
+<p><strong>技术部分.</strong> Ciphey 使用一个带有密文检测接口(<em>Cipher Detection Interface</em>)的定制 AI 模型(<em>AuSearch</em>)来估测一个东西是用什么方式加密的。以及一个定制过的自然语言处理接口(<em>Language Checker Interface</em>)来检测给定文本何时变为纯文本。</p>
+<p>这里没有神经网络或缓慢的 AI。我们只使用快速和最小的东西。</p>
+<p>那只是冰山一角. 如果您要完整的技术部分的解释, 看看我们的<a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki">文档</a>.</p>
+<h1 id="✨-特性"><a href="#✨-特性" class="headerlink" title="✨ 特性"></a>✨ 特性</h1><ul>
+<li><strong>支持 30+的加密方法</strong> 例如编码（二进制，base64）和常规加密（例如 Caesar 密码，重复密钥 XOR 等）。 <strong><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Supported-Ciphers">有关完整列表，请单击此处</a></strong></li>
+<li><strong>具有增强搜索功能的定制人工智能（AuSearch）可以回答“使用了哪种加密技术?”</strong> 解密时间不到 3 秒。</li>
+<li><strong>定制的自然语言处理系统</strong> Ciphey 可以确定某些东西是否是纯文本。无论该纯文本是 JSON，CTF 标志还是英语 Ciphey，都可以在几毫秒内获得它。</li>
+<li><strong>多国语言支持</strong> 目前，仅有德语和英语（带有 AU，UK，CAN，USA 变体）。</li>
+<li><strong>支持加密和哈希</strong> 诸如 CyberChef Magic 之类的替代品则没有。</li>
+<li><strong><a target="_blank" rel="noopener" href="https://github.com/Ciphey/CipheyCore">C++ 核心</a></strong> 这会使整个过程变得非常快。</li>
+</ul>
+<h1 id="🔭-Ciphey-与-CyberChef-的对比"><a href="#🔭-Ciphey-与-CyberChef-的对比" class="headerlink" title="🔭 Ciphey 与 CyberChef 的对比"></a>🔭 Ciphey 与 CyberChef 的对比</h1><h2 id="🔁-Base64-加密-42-次"><a href="#🔁-Base64-加密-42-次" class="headerlink" title="🔁 Base64 加密 42 次"></a>🔁 Base64 加密 42 次</h2><table>
+  <tr>
+  <th>名字</th>
+    <th>⚡ Ciphey ⚡ </th>
+    <th>🐢 CyberChef 🐢</th>
+  </tr>
+  <tr>
+  <th>Gif</th>
+    <td><img src="../../Pictures_for_README/ciphey_gooder_cyberchef.gif" srcset="/img/loading.gif" lazyload alt="The guy she tells you not to worry about"></td>
+    <td><img src="../../Pictures_for_README/not_dying.gif" srcset="/img/loading.gif" lazyload alt="You"></td>
+  </tr>
+  <tr>
+  <th>时间</th>
+    <td>2 秒</td>
+    <td>6 秒</td>
+  </tr>
+    <tr>
+  <th>建立</th>
+    <td><ul><li>在文件上运行ciphey</li></ul></td>
+    <td><ul><li>将正则表达式参数设置为 "{"</li><li>您需要知道要重复多少次</li><li>您需要一直知道它是使用Base64加密法</li><li>您需要运行 CyberChef (它是一个超级超级慢的JS 应用程序)</li><li>对CyberChef有足够了解以创建此管道</li><li>反转匹配</li></ul></td>
+  </tr>
+</table>
+
+<p><sub><b>Note</b> 这些 gif 可能在不同的时间加载，因此一个 gif 的显示速度可能明显快于另一个.</sub><br><br><sub><b>A note on magic</b> CyberChef 与 Ciphey 最相似的功能是 Magic。Magic 在此输入上立即失败并崩溃。我们迫使 CyberChef 竞争的唯一方法是手动定义它。</sub></p>
+<p>我们还使用<strong>6gb 文件</strong>测试了 CyberChef 和 Ciphey。Ciphey 在 5 分钟 54 秒内破解了它。CyberChef 在开始之前就系统崩溃了。</p>
+<h2 id="📊-Ciphey-和-Katana-和-CyberChef-Magic-的对比"><a href="#📊-Ciphey-和-Katana-和-CyberChef-Magic-的对比" class="headerlink" title="📊 Ciphey 和 Katana 和 CyberChef Magic 的对比"></a>📊 Ciphey 和 Katana 和 CyberChef Magic 的对比</h2><table>
+<thead>
+<tr>
+<th><strong>名字</strong></th>
+<th>⚡ Ciphey ⚡</th>
+<th>🗡️ Katana 🗡️</th>
+<th>🐢 CyberChef Magic 🐢</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高级语言检查器</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>支持加密法</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>以反乌托邦主题命名的发行 🌃</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>支持哈希算法</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>易于设置</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>可以猜测使用什么加密</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>由黑客为黑客创建</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody></table>
+<h1 id="🎬-入门"><a href="#🎬-入门" class="headerlink" title="🎬 入门"></a>🎬 入门</h1><p>如果您在安装 Ciphey 时遇到问题，请 <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Common-Issues-&-Their-Solutions">阅读此内容</a></p>
+<h2 id="‼️-重要链接（文档，安装指南，Discord-链接）"><a href="#‼️-重要链接（文档，安装指南，Discord-链接）" class="headerlink" title="‼️ 重要链接（文档，安装指南，Discord 链接）"></a>‼️ 重要链接（文档，安装指南，Discord 链接）</h2><table>
+<thead>
+<tr>
+<th>安装指南</th>
+<th>文献资料</th>
+<th>Discord</th>
+<th>Docker 图像（来自 REMnux）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>📖 <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation">安装指南</a></td>
+<td>📚 <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki">文献资料</a></td>
+<td>🦜 <a target="_blank" rel="noopener" href="https://discord.ciphey.online/">Discord</a></td>
+<td>🐋 <a target="_blank" rel="noopener" href="https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey">Docker 文献资料</a></td>
+</tr>
+</tbody></table>
+<h2 id="🏃‍♀️-运行-Ciphey"><a href="#🏃‍♀️-运行-Ciphey" class="headerlink" title="🏃‍♀️ 运行 Ciphey"></a>🏃‍♀️ 运行 Ciphey</h2><p>有 3 种方式可以运行 Ciphey。</p>
+<ol>
+<li>文件输入 <code>ciphey -f encrypted.txt</code></li>
+<li>不合格输入 <code>ciphey -- &quot;Encrypted input&quot;</code></li>
+<li>正常方式 <code>ciphey -t &quot;Encrypted input&quot;</code></li>
+</ol>
+<p><img src="../../Pictures_for_README/3ways.gif" srcset="/img/loading.gif" lazyload alt="Gif显示3种运行Ciphey的方法"></p>
+<p>要消除进度条，概率表和所有杂音，请使用安静模式。</p>
+<p><code>ciphey -t &quot;encrypted text here&quot; -q</code></p>
+<p>有关命令的完整列表，请运行 <code>ciphey --help</code>.</p>
+<h3 id="⚗️-导入-Ciphey"><a href="#⚗️-导入-Ciphey" class="headerlink" title="⚗️ 导入 Ciphey"></a>⚗️ 导入 Ciphey</h3><p>您可以导入 Ciphey&#39;s main，并在您自己的程序和代码中使用它。 <code>from Ciphey.__main__ import main</code></p>
+<h1 id="🎪-贡献者"><a href="#🎪-贡献者" class="headerlink" title="🎪 贡献者"></a>🎪 贡献者</h1><p>Ciphey 是由<a target="_blank" rel="noopener" href="https://github.com/bee-san">Brandon</a>在 2008 年发明的，并在 2019 年重写。如果没有<a target="_blank" rel="noopener" href="https://github.com/Cyclic3">Cyclic3</a> - UoL 网络安全协会主席，Ciphey 将不会是今天的样子</p>
+<p>Ciphey 由<a target="_blank" rel="noopener" href="https://www.cybersoc.cf/">网络安全协会</a>进行了复兴和重建以用于 CTF。如果您曾经在利物浦，请考虑发表演讲或赞助我们的活动。给我们发电子邮件 <code>cybersecurity@society.liverpoolguild.org</code> 以了解更多 🤠</p>
+<p><strong>主要信用</strong> 感谢 George H 找出如何使用适当的算法来加快搜索过程。<br><strong>特别感谢</strong> 至 <a target="_blank" rel="noopener" href="https://www.facebook.com/varghalladesign">varghalladesign</a> 用于设计徽标。查看他们的其他设计工作！</p>
+<h2 id="🐕‍🦺-参与贡献"><a href="#🐕‍🦺-参与贡献" class="headerlink" title="🐕‍🦺 参与贡献"></a>🐕‍🦺 <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Contributing">参与贡献</a></h2><p>不要害怕参与！您可以做很多事情来帮助我们。它们每个都带有标签，并通过示例轻松解释。如果您想贡献但被停止，请在 GitHub 问题中标记 @bee-san 或 @cyclic3✨</p>
+<p>或者，加入 Discord 群组并在那里发送消息（链接在 <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Contributing">贡献文件</a>）或在本自述文件的顶部的徽章。</p>
+<p>请阅读 <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Contributing">参与贡献文件</a> 有关如何参与制作的细节 ✨</p>
+<p>By doing so, you’ll get your name added to the README below and get to be apart of an ever-growing project!<br><a target="_blank" rel="noopener" href="https://starchart.cc/Ciphey/Ciphey"><img src="https://starchart.cc/Ciphey/Ciphey.svg" srcset="/img/loading.gif" lazyload alt="Stargazers over time"></a></p>
+<h2 id="💰-财务贡献者"><a href="#💰-财务贡献者" class="headerlink" title="💰 财务贡献者"></a>💰 财务贡献者</h2><p>这些捐款将不仅用于资助 Ciphey 及其作者的未来，而且还将用于利物浦大学的网络安全协会。</p>
+<p>GitHub 不支持“赞助此项目，我们将平均分配资金”，因此选择一个链接，我们将对其进行最终整理 🥰</p>
+<h2 id="✨-Contributors"><a href="#✨-Contributors" class="headerlink" title="✨ Contributors"></a>✨ Contributors</h2><p>感谢这些很棒的人(<a target="_blank" rel="noopener" href="https://allcontributors.org/docs/en/emoji-key">表情符号</a>):</p>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/Cyclic3"><img src="https://avatars1.githubusercontent.com/u/15613874?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>cyclic3</b></sub></a><br /><a href="#design-cyclic3" title="Design">🎨</a> <a href="#maintenance-cyclic3" title="Maintenance">🚧</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=cyclic3" title="Code">💻</a> <a href="#ideas-cyclic3" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://skerritt.blog"><img src="https://avatars3.githubusercontent.com/u/10378052?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Brandon</b></sub></a><br /><a href="#design-brandonskerritt" title="Design">🎨</a> <a href="#maintenance-brandonskerritt" title="Maintenance">🚧</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=brandonskerritt" title="Code">💻</a> <a href="#ideas-brandonskerritt" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/michalani"><img src="https://avatars0.githubusercontent.com/u/27767884?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>michalani</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=michalani" title="Code">💻</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/ashb07"><img src="https://avatars2.githubusercontent.com/u/24845568?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>ashb07</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=ashb07" title="Code">💻</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/TheAlcanian"><img src="https://avatars3.githubusercontent.com/u/22127191?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Shardion</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3ATheAlcanian" title="Bug reports">🐛</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/Bryzizzle"><img src="https://avatars0.githubusercontent.com/u/57810197?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Bryan</b></sub></a><br /><a href="#translation-Bryzizzle" title="Translation">🌍</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=Bryzizzle" title="Documentation">📖</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://lukasgabriel.net"><img src="https://avatars0.githubusercontent.com/u/52338810?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Lukas Gabriel</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=lukasgabriel" title="Code">💻</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3Alukasgabriel" title="Bug reports">🐛</a> <a href="#translation-lukasgabriel" title="Translation">🌍</a> <a href="#ideas-lukasgabriel" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/DarshanBhoi"><img src="https://avatars2.githubusercontent.com/u/70128281?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Darshan</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3ADarshanBhoi" title="Bug reports">🐛</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/SkeletalDemise"><img src="https://avatars1.githubusercontent.com/u/29117662?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>SkeletalDemise</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=SkeletalDemise" title="Code">💻</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://www.patreon.com/cclauss"><img src="https://avatars3.githubusercontent.com/u/3709715?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Christian Clauss</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=cclauss" title="Code">💻</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3Acclauss" title="Bug reports">🐛</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="http://machinexa.xss.ht"><img src="https://avatars1.githubusercontent.com/u/60662297?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Machinexa2</b></sub></a><br /><a href="#content-machinexa2" title="Content">🖋</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/anantverma275"><img src="https://avatars1.githubusercontent.com/u/18184503?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Anant Verma</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=anantverma275" title="Code">💻</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3Aanantverma275" title="Bug reports">🐛</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/XVXTOR"><img src="https://avatars1.githubusercontent.com/u/40268197?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>XVXTOR</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=XVXTOR" title="Documentation">📖</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/Itamikame"><img src="https://avatars2.githubusercontent.com/u/59034423?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Itamikame</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=Itamikame" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/MikeMerz"><img src="https://avatars3.githubusercontent.com/u/50526795?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>MikeMerz</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=MikeMerz" title="Code">💻</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/jacobggman"><img src="https://avatars2.githubusercontent.com/u/30216976?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Jacob Galam</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=jacobggman" title="Code">💻</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3Ajacobggman" title="Bug reports">🐛</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://tuxthexplorer.github.io/"><img src="https://avatars1.githubusercontent.com/u/37508897?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>TuxTheXplorer</b></sub></a><br /><a href="#translation-TuxTheXplorer" title="Translation">🌍</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/Itamai"><img src="https://avatars3.githubusercontent.com/u/53093696?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Itamai</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=Itamai" title="Code">💻</a> <a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/issues?q=author%3AItamai" title="Bug reports">🐛</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/Termack"><img src="https://avatars2.githubusercontent.com/u/26333901?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Filipe</b></sub></a><br /><a href="#translation-Termack" title="Translation">🌍</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/malathit"><img src="https://avatars0.githubusercontent.com/u/2684148?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Malathi</b></sub></a><br /><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/commits?author=malathit" title="Code">💻</a></td>
+    <td align="center"><a target="_blank" rel="noopener" href="https://hexchaos.xyz/"><img src="https://avatars1.githubusercontent.com/u/8947820?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Jack</b></sub></a><br /><a href="#translation-HexChaos" title="Translation">🌍</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a target="_blank" rel="noopener" href="https://github.com/yafkari"><img src="https://avatars3.githubusercontent.com/u/41365655?v=4" srcset="/img/loading.gif" lazyload width="100px;" alt=""/><br /><sub><b>Younes</b></sub></a><br /><a href="#translation-yafkari" title="Translation">🌍</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<p>该项目遵循 <a target="_blank" rel="noopener" href="https://github.com/all-contributors/all-contributors">all-contributors</a> 的规范。 欢迎任何形式的捐助和帮助!</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="../../../../categories/CTF/" class="category-chain-item">CTF</a>
+  
+  
+    <span>></span>
+    
+  <a href="../../../../categories/CTF/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="../../../../tags/CTF/" class="print-no-link">#CTF</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>全自动解密脚本Ciphey官方安装文档</div>
+      <div>http://w1ndys.top/2023/10/11/CTF-Ciphey-README/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>W1ndys</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年10月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年10月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="../English-essay/" title="大二iwrite英语作文">
+                        <span class="hidden-mobile">大二iwrite英语作文</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://pinglun.w1ndys.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://res.abeim.cn/api/qq/?qq=2769731875" target="_blank" rel="nofollow noopener"><span>W1ndys</span></a> <i class="iconfont icon-love"></i> <a href="https://res.abeim.cn/api/qq/?qq=2769731875" target="_blank" rel="nofollow noopener"><span>hexo-fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> Copyright© 2023 All Rights Reserved. W1ndys 版权所有 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+    <!-- Scripts -->
+    
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="../../../../js/events.js" ></script>
+<script  src="../../../../js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="../../../../js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="../../../../js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="../../../../js/boot.js" ></script>
+
+  
+      <noscript>
+        <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+      </noscript>
+      <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8c7326176e483fbc8a95647447c4fcea";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><script src="/js/love.js"></script><script src="/js/biao_qian_e_gao.js"></script><script src="/js/mouse_moving.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script src="/live2d-widget/autoload.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" /><script src="/js/scrollAnimation.js"></script><!-- hexo injector body_end end --></body>
+</html>
