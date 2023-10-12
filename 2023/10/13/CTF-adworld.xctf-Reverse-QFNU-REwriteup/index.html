@@ -16,19 +16,19 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而去掉LQ">
+    <meta name="description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;    解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QFNUCTF（日照）-Reverse-writeup">
 <meta property="og:url" content="http://w1ndys.top/2023/10/13/CTF-adworld.xctf-Reverse-QFNU-REwriteup/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而去掉LQ">
+<meta property="og:description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;    解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSzYQ0.png">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSzGzq.png">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSz3Js.png">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSz8Wn.png">
 <meta property="article:published_time" content="2023-10-12T16:25:16.933Z">
-<meta property="article:modified_time" content="2023-10-12T16:38:43.460Z">
+<meta property="article:modified_time" content="2023-10-12T16:44:17.097Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary_large_image">
@@ -303,7 +303,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年10月13日24:38
+                    本文最后更新于： 2023年10月13日24:44
                   
                 
               </p>
@@ -317,7 +317,7 @@
 <p>查看字串，有两个比较特殊的字符串</p>
 <p>联想到题目是换表base64</p>
 <p><img src="https://z1.ax1x.com/2023/10/13/piSz3Js.png" srcset="/img/loading.gif" lazyload alt="换表"></p>
-<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><p>滚去<a target="_blank" rel="noopener" href="https://ctf.mzy0.com/CyberChef3/%E8%A7%A3%E5%AF%86%E4%B8%80%E4%B8%8B">https://ctf.mzy0.com/CyberChef3/解密一下</a></p>
+<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><p>滚去<a target="_blank" rel="noopener" href="https://ctf.mzy0.com/CyberChef3/">https://ctf.mzy0.com/CyberChef3/</a>    解密一下</p>
 <p><img src="https://z1.ax1x.com/2023/10/13/piSz8Wn.png" srcset="/img/loading.gif" lazyload alt="解密"></p>
 <h2 id="题后工作"><a href="#题后工作" class="headerlink" title="题后工作"></a>题后工作</h2><p>解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下</p>
 <p>发现这个字符串<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;LQB</code>是无法通过正常验证的</p>
