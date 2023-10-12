@@ -16,24 +16,29 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="Python 3.7 and aboveOn Linux run this command: 1python3 -m pip install ciphey --upgrade    This will tell your default Python3 version to install Ciphey and upgrade it if it already exists. Ciphey onl">
+    <meta name="description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而去掉LQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="全自动解密脚本Ciphey官方安装文档">
-<meta property="og:url" content="http://w1ndys.top/2023/10/11/CTF-Ciphey-README/index.html">
+<meta property="og:title" content="QFNUCTF（日照）-Reverse-writeup">
+<meta property="og:url" content="http://w1ndys.top/2023/10/13/CTF-adworld.xctf-Reverse-QFNU-REwriteup/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="Python 3.7 and aboveOn Linux run this command: 1python3 -m pip install ciphey --upgrade    This will tell your default Python3 version to install Ciphey and upgrade it if it already exists. Ciphey onl">
+<meta property="og:description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而去掉LQ">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-11T12:24:38.853Z">
-<meta property="article:modified_time" content="2023-10-11T12:29:10.555Z">
+<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSzYQ0.png">
+<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSzGzq.png">
+<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSz3Js.png">
+<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSz8Wn.png">
+<meta property="article:published_time" content="2023-10-12T16:25:16.933Z">
+<meta property="article:modified_time" content="2023-10-12T16:38:43.460Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://z1.ax1x.com/2023/10/13/piSzYQ0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>全自动解密脚本Ciphey官方安装文档 - W1ndysの小屋</title>
+  <title>QFNUCTF（日照）-Reverse-writeup - W1ndysの小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="全自动解密脚本Ciphey官方安装文档"></span>
+            <span id="subtitle" data-typed-text="QFNUCTF（日照）-Reverse-writeup"></span>
           
         </div>
 
@@ -223,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-11 20:24" pubdate>
-           2023年10月11日20:24
+        <time datetime="2023-10-13 00:25" pubdate>
+           2023年10月13日24:25
         </time>
       </span>
     
@@ -236,7 +241,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共2.8k字
+          共395字
         
       </span>
     
@@ -248,7 +253,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计24分钟
+          阅读本文预计4分钟
         
       </span>
     
@@ -293,12 +298,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">全自动解密脚本Ciphey官方安装文档</h1>
+            <h1 id="seo-header">QFNUCTF（日照）-Reverse-writeup</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年10月11日20:29
+                    本文最后更新于： 2023年10月13日24:38
                   
                 
               </p>
@@ -306,70 +311,26 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Python-3-7-and-above"><a href="#Python-3-7-and-above" class="headerlink" title="Python 3.7 and above"></a><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation#python-37-and-above">Python 3.7 and above</a></h1><p>On Linux run this command:</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">python3 -m pip install ciphey <span class="hljs-comment">--upgrade</span><br></code></pre></td></tr></table></figure>
+                <h1 id="base64"><a href="#base64" class="headerlink" title="base64++"></a>base64++</h1><h2 id="查壳"><a href="#查壳" class="headerlink" title="查壳"></a>查壳</h2><p><img src="https://z1.ax1x.com/2023/10/13/piSzYQ0.png" srcset="/img/loading.gif" lazyload alt="查壳"></p>
+<p>无壳</p>
+<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><p><img src="https://z1.ax1x.com/2023/10/13/piSzGzq.png" srcset="/img/loading.gif" lazyload alt="反编译查看字串"></p>
+<p>查看字串，有两个比较特殊的字符串</p>
+<p>联想到题目是换表base64</p>
+<p><img src="https://z1.ax1x.com/2023/10/13/piSz3Js.png" srcset="/img/loading.gif" lazyload alt="换表"></p>
+<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><p>滚去<a target="_blank" rel="noopener" href="https://ctf.mzy0.com/CyberChef3/%E8%A7%A3%E5%AF%86%E4%B8%80%E4%B8%8B">https://ctf.mzy0.com/CyberChef3/解密一下</a></p>
+<p><img src="https://z1.ax1x.com/2023/10/13/piSz8Wn.png" srcset="/img/loading.gif" lazyload alt="解密"></p>
+<h2 id="题后工作"><a href="#题后工作" class="headerlink" title="题后工作"></a>题后工作</h2><p>解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下</p>
+<p>发现这个字符串<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;LQB</code>是无法通过正常验证的</p>
+<p>而去掉LQB之后<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;</code>是正常验证的</p>
+<p>所以我去掉之后提交，但还是没有通过</p>
+<p></br></br></br></p>
+<p>无奈之下我放弃这个题了</p>
+</br>
 
-
-
-<p>This will tell your default Python3 version to install Ciphey and upgrade it if it already exists.</p>
-<p><strong>Ciphey only supports Python3.7 and above. Please upgrade Python or use the Docker image if you have a version below 3.7.</strong></p>
-<p><strong>⚠️ Ciphey doesn’t work on Windows with Python 3.9+, use Python 3.7 or Python 3.8. Other platforms are fine with Python 3.9, Python 3.10 doesn’t work.</strong></p>
-<p><strong>⚠️ Windows Python defaults to install 32-bit. Ciphey only supports 64-bit. Make sure you’re using 64-bit Python.</strong></p>
-<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation#docker">Docker</a></h1><p><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/">See here for how to install Docker</a></p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker <span class="hljs-built_in">run</span> -<span class="hljs-keyword">it</span> <span class="hljs-comment">--rm remnux/ciphey</span><br></code></pre></td></tr></table></figure>
-
-
-
-<p>Our Docker image is maintained by <a target="_blank" rel="noopener" href="https://remnux.org/">REMnux</a>. They have provided a guide on how to use it here. <a target="_blank" rel="noopener" href="https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey">https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey</a></p>
-<h1 id="Detailed-Explanation-for-Python-Installation"><a href="#Detailed-Explanation-for-Python-Installation" class="headerlink" title="Detailed Explanation for Python Installation"></a><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation#detailed-explanation-for-python-installation">Detailed Explanation for Python Installation</a></h1><p>To install Ciphey, you need 2 core things:</p>
-<ol>
-<li>Python3.7 or above</li>
-<li>Pip (on Python 3)</li>
-</ol>
-<p>Check to see if Python is already installed. Run both of these commands:</p>
-<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs llvm">python -<span class="hljs-keyword">c</span> <span class="hljs-string">&quot;import sys; print(sys.version)&quot;</span><br></code></pre></td></tr></table></figure>
-
-
-
-<p>And&#x2F;or</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">pytho<span class="hljs-symbol">n3</span> -c <span class="hljs-string">&quot;import sys; print(sys.version)&quot;</span><br></code></pre></td></tr></table></figure>
-
-
-
-<p>If Python is installed, one of these commands will run and will output the version number. Ciphey only supports numbers higher than 3.7. If you see “2” or anything below “3.7”, we’ll need to install a more up to date version.</p>
-<p>Make sure to note what command words. On your computer, if <code>python -c &quot;import sys; print(sys.version)&quot;</code> returns something higher or equal to “3.7”, then whenever you see <code>python3</code> instead write <code>python</code>.</p>
-<p><strong>⚠️ Windows Warning ⚠️</strong> On Windows? Python defaults to install 32-bit. Ciphey only supports 64-bit. When you download Python from the website on Windows it defaults to 32-bit. Make sure to download 64 bit!</p>
-<p>Go to this website <a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org/</a> and install Python3. Make sure the version is more than 3.7. By default, unless you explicitly choose a lower version, the version you install will &gt; 3.7.</p>
-<p>Next, we need to install <strong>pip</strong>.</p>
-<p>Pip is already installed by default in Python. We just need to upgrade it.</p>
-<p><strong>On Linux or Mac OS</strong> run the command:</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pip3 <span class="hljs-keyword">install</span> -U pip<br></code></pre></td></tr></table></figure>
-
-
-
-<p>Making sure to replace <code>pip3</code> with <code>pip</code> if you had to replace <code>python3</code> with <code>python</code>.</p>
-<p><strong>On Windows</strong></p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">python -m pip <span class="hljs-keyword">install</span> -U pip<br></code></pre></td></tr></table></figure>
-
-
-
-<p>If these commands didn’t work, explore the official Pip guide for upgrading <a target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/installing/#upgrading-pip">here</a>.</p>
-<p>If you faced any errors with Pip, there’s a nice troubleshooting guide on installing Pip <a target="_blank" rel="noopener" href="https://packaging.python.org/tutorials/installing-packages/">here</a>.</p>
-<h2 id="Installing-Ciphey"><a href="#Installing-Ciphey" class="headerlink" title="Installing Ciphey"></a><a target="_blank" rel="noopener" href="https://github.com/Ciphey/Ciphey/wiki/Installation#installing-ciphey">Installing Ciphey</a></h2><p>Run this command:</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">python3 -m pip <span class="hljs-keyword">install</span> -U ciphey<br></code></pre></td></tr></table></figure>
-
-
-
-<p>Replace <code>python3</code> with <code>python</code> if you need to. If you’re not sure, read the previous section <code>Detailed Explanation</code>.</p>
-<p>This command does many things:</p>
-<ul>
-<li>Uses Python3 (Ciphey only supports Python3.7 and above)</li>
-<li>The -m flag tells Python to run the module</li>
-<li>We are telling the version of pip inside Python3 to install something. The reason why we use Python3 to call Pip instead of calling Pip is that the version of Pip may differ from Python, or you may have multiple versions of Python installed or you may be in a virtual environment.</li>
-<li>The -U flag says “upgrade”. Sometimes Python gets stuck on an older version of Ciphey, so if it does – it says to upgrade it.</li>
-<li>“ciphey” is the name of the package we want to install.</li>
-</ul>
-<p><strong>Make sure you run this command in Terminal&#x2F;CMD&#x2F;PowerShell or whatever you use. Do not run this in Python’s IDLE.</strong></p>
+<p>就在前几天我找到了出题人，问了问情况，发现程序里是有一段添加字符串<code>LQB</code>的代码的，所以输出结果带着LQB没错，我的做题思路也没错</p>
+<p>提交失败的原因是，后台正确的flag中的1和正确答案的l混了，我联系出题人修改了bug</p>
+<p>解题结束！</p>
+<h1 id="XOR（修改）"><a href="#XOR（修改）" class="headerlink" title="XOR（修改）"></a>XOR（修改）</h1><h2 id="查壳-1"><a href="#查壳-1" class="headerlink" title="查壳"></a>查壳</h2><p>等会吧，明天再写，累了</p>
 
                 
               </div>
@@ -393,8 +354,15 @@
   
     <span>></span>
     
-  <a href="../../../../categories/CTF/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  <a href="../../../../categories/CTF/WP/" class="category-chain-item">WP</a>
   
+  
+    <span>></span>
+    
+  <a href="../../../../categories/CTF/WP/RE/" class="category-chain-item">RE</a>
+  
+  
+
   
 
   
@@ -422,8 +390,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>全自动解密脚本Ciphey官方安装文档</div>
-      <div>http://w1ndys.top/2023/10/11/CTF-Ciphey-README/</div>
+      <div>QFNUCTF（日照）-Reverse-writeup</div>
+      <div>http://w1ndys.top/2023/10/13/CTF-adworld.xctf-Reverse-QFNU-REwriteup/</div>
     </div>
     <div class="license-meta">
       
@@ -435,13 +403,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月11日</div>
+          <div>2023年10月13日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年10月11日</div>
+          <div>2023年10月13日</div>
         </div>
       
       
@@ -484,18 +452,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../13/CTF-adworld.xctf-Reverse-QFNU-REwriteup/" title="QFNUCTF（日照）-Reverse-writeup">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">QFNUCTF（日照）-Reverse-writeup</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="../English-essay/" title="大二iwrite英语作文">
-                        <span class="hidden-mobile">大二iwrite英语作文</span>
+                      <a href="../../11/CTF-Ciphey-README/" title="全自动解密脚本Ciphey官方安装文档">
+                        <span class="hidden-mobile">全自动解密脚本Ciphey官方安装文档</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
