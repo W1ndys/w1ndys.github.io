@@ -16,29 +16,24 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;    解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而">
+    <meta name="description" content="这篇文章被加密了喵~W1ndys不想让你看见里面的内容。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QFNUCTF（日照）-Reverse-writeup">
-<meta property="og:url" content="http://w1ndys.top/2023/10/13/CTF-adworld.xctf-Reverse-QFNU-REwriteup/index.html">
+<meta property="og:title" content="DS作业-5-22网安物联网-20231016">
+<meta property="og:url" content="http://w1ndys.top/2023/10/18/DS-homework-5-22wanganwulian-20231016/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="base64++查壳 无壳 反编译 查看字串，有两个比较特殊的字符串 联想到题目是换表base64  解密滚去https:&#x2F;&#x2F;ctf.mzy0.com&#x2F;CyberChef3&#x2F;    解密一下  题后工作解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下 发现这个字符串flag&amp;#123;6JOd5qGl5p2v5Yqg5rK5&amp;#125;LQB是无法通过正常验证的 而">
+<meta property="og:description" content="这篇文章被加密了喵~W1ndys不想让你看见里面的内容。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSzYQ0.png">
-<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSzGzq.png">
-<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSz3Js.png">
-<meta property="og:image" content="https://z1.ax1x.com/2023/10/13/piSz8Wn.png">
-<meta property="article:published_time" content="2023-10-12T16:25:16.933Z">
-<meta property="article:modified_time" content="2023-10-12T16:44:17.097Z">
+<meta property="article:published_time" content="2023-10-18T11:36:19.199Z">
+<meta property="article:modified_time" content="2023-10-18T11:37:14.863Z">
 <meta property="article:author" content="W1ndys">
-<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://z1.ax1x.com/2023/10/13/piSzYQ0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>QFNUCTF（日照）-Reverse-writeup - W1ndysの小屋</title>
+  <title>DS作业-5-22网安物联网-20231016 - W1ndysの小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -217,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="QFNUCTF（日照）-Reverse-writeup"></span>
+            <span id="subtitle" data-typed-text="DS作业-5-22网安物联网-20231016"></span>
           
         </div>
 
@@ -228,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-13 00:25" pubdate>
-           2023年10月13日24:25
+        <time datetime="2023-10-18 19:36" pubdate>
+           2023年10月18日19:36
         </time>
       </span>
     
@@ -241,7 +236,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共395字
+          共3k字
         
       </span>
     
@@ -253,7 +248,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计4分钟
+          阅读本文预计26分钟
         
       </span>
     
@@ -298,42 +293,33 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">QFNUCTF（日照）-Reverse-writeup</h1>
+            <h1 id="seo-header">DS作业-5-22网安物联网-20231016</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年10月13日24:44
+                    本文最后更新于： 2023年10月18日19:37
                   
                 
               </p>
             
             
-              <div class="markdown-body">
-                
-                <h1 id="base64"><a href="#base64" class="headerlink" title="base64++"></a>base64++</h1><h2 id="查壳"><a href="#查壳" class="headerlink" title="查壳"></a>查壳</h2><p><img src="https://z1.ax1x.com/2023/10/13/piSzYQ0.png" srcset="/img/loading.gif" lazyload alt="查壳"></p>
-<p>无壳</p>
-<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><p><img src="https://z1.ax1x.com/2023/10/13/piSzGzq.png" srcset="/img/loading.gif" lazyload alt="反编译查看字串"></p>
-<p>查看字串，有两个比较特殊的字符串</p>
-<p>联想到题目是换表base64</p>
-<p><img src="https://z1.ax1x.com/2023/10/13/piSz3Js.png" srcset="/img/loading.gif" lazyload alt="换表"></p>
-<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><p>滚去<a target="_blank" rel="noopener" href="https://ctf.mzy0.com/CyberChef3/">https://ctf.mzy0.com/CyberChef3/</a>    解密一下</p>
-<p><img src="https://z1.ax1x.com/2023/10/13/piSz8Wn.png" srcset="/img/loading.gif" lazyload alt="解密"></p>
-<h2 id="题后工作"><a href="#题后工作" class="headerlink" title="题后工作"></a>题后工作</h2><p>解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下</p>
-<p>发现这个字符串<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;LQB</code>是无法通过正常验证的</p>
-<p>而去掉LQB之后<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;</code>是正常验证的</p>
-<p>所以我去掉之后提交，但还是没有通过</p>
-<p></br></br></br></p>
-<p>无奈之下我放弃这个题了</p>
-</br>
+              
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这个密码看着不太对, 再试试吧~或者线下solo博主试试。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="589b3ecf45ca0b038eeac144174019f104701d741ead8f9aa77ced9ff8fecbcd">7dd2149be1139aea2ced26ac20e053cec5d1264ebbdbf4540d967d5a46fb41e17c7b9c5f3deac92b75b7a273af942b2f735a1ea0178e61caa883d412997109751f3061091cef8cf6c02fd1e644d94d8624a832cfc9008a44673b051899b8f7910ab2ac3a8a5a2cb9f256770772c9ed6e27e1b881d9923f9569f6a1840b04773397a3d051f3082dcca42cfbd1210721a13fc9a84bf0d4d0a96f5b81b213ad9faa6ded378eac760a139e882cb8d9d88020c2336a3f7b4adbbc2a582ee6dd635f2add789bfc36f75166f04f8fd0e26aa3843d54188379131b9886a2a4da088a3cb9f25b856c71cb09e865e67e542b1e136be990974213c1951c234815635ecc042c360e7ea84f46ba096b2e2e07903ffcc1a55cafcfc5554916091e11b40a1f7de2e005e7bda71cc58619bbede9236add0ec82647e56450e8a17f1084e180681c2523850ad4146d8611685d5e8583b8a60b2d8ff138151a8975ee6c432491020d132a18c2c15750225681d6f91574220f3c4b82d08c6d8c461c7fad9247fd8969599a0c73c82cf82af80adcb99b839db185296f28d59127560a2d8f1de5ab642abe30d352ccd37695216383150a82cd700ec91dc8900b2ea6554a48073954075d5c7f55af411aa303eda79b2705d099835758081972a3ca31944fa7c8174ff47ca442e18582962190e6c4f9feb6fa685c647f45cd92d648e07f53235176c00c9e1e7fa8002f913c58f00d20db3ce8df4447f0ef2eb2d1259617b6ce30ce86fb45c5dfa38cd4383c45ebc1781f6721b5ba201238e5e4f25717b5ba9845c39c2851c9d53a7e2499ea8594c79cce7c1467d15f6d4874b320c3073e65ee6b639e168a3a1a42c7a7b67b8d51b3e8c4f703cb943c67409efcc21649902e2a337e6b4dd069bcb79231bf3331fa8fc7daa87b8b4770b878be6e8f9966880759a7815aaee0a774a7b7ab87a25e8c42ebd410a447edda79af50fbff1c0209f0a796edd632acefdda2403da85617b2d1ce8acae33d6242b8df2a3e2725d98bb607e3317e1252372748e295eaf8615900a90f3a89cbf9837df7b428e000fe7dc15a872a552749aa5a6bcea637296e3ae789bfca2af5f3183b576e3d8993e12beb67494e21ac9f17b40e24e8884f783b8118f17a3e743ec07d8ce74014edce907e0376c4c7d68ec3f59061aa7744d3c2115e53c1f9f6f19b84082a8026a6b7b092be8702c777d9f798854ac3d3c28d2539e762839e965b47b344d6d1f52592e23a14b9d21f989f633975b7dadd46201dfdde82735e180ec9b546c750c7b0da7348c263fb1de53bbf76026aec97a3155b341269bcfd20021a742da005c6b1b269dff6918caedc430a788e9dfc1ee60518e0423e80f602eab1e1f1eb337b26e6b1a2bf142df325b5fb7beaf0a48d3ce1401020c0e8a606963cebbe70090fd7c6cb4965e265e8a9abc2001541b4090aec9ab6e1d0a2ba621a271a032113a0e8477661e3fdce83f8f64a1000570761790a525131bb3f040cd0b0b9cc52f154c0c61d280487feb1063e1aa4bb4211a49307b754229516954863c4dce232c9acbb6204827cd927308905ab69bd62ca8651303ecc05ef2cd04c4feb96f41d34ca1b9fe3b7f57206ae487c719655b9e72fb9d554e668bf0838c218c1131d0868ea7c44bead56feb0df54ae1e6473e960779ed4ecc8447540e55e220799f214656859860a17f19ad59bab6732cce2a82409d3e5669c309d2b60e480d2188dc8a2731f1ef01d945058ecaa478d5f3a415f02abad89c7cc0dd03b2cf158d6cf911f48d735bb0ef23fd9cd2cb6926957adf65b4eccd60f572c23cfb211382c246bcabfd7a62390026a85be3a5b6770d09159649c9c1dac322faf67abaabc38cf2c4ad5ae725953d2f98e6cbba71604f4f908793528a3773a39b278c649a70d693ba277a007f8408d58d95591b703d21a7bde6ff9a824211ada24c19486a2672e11e4e92f7ba55be9477fdd76e218c6ac72669aafaabda02e9007c4db1b8bbc6be1d2e12d6c7e7943d4fd6e0851b2fbab569b9b725e1e73e8578d6c713d958628cf5e13aad7c53b1ffbee927a47305bbc4678be8e337dace60d03aab4f480</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">作业答案被加密了，快暴揍W1ndys让他说出密码(输完按回车解开)</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+              
 
-<p>就在前几天我找到了出题人，问了问情况，发现程序里是有一段添加字符串<code>LQB</code>的代码的，所以输出结果带着LQB没错，我的做题思路也没错</p>
-<p>提交失败的原因是，后台正确的flag中的1和正确答案的l混了，我联系出题人修改了bug</p>
-<p>解题结束！</p>
-<h1 id="XOR（修改）"><a href="#XOR（修改）" class="headerlink" title="XOR（修改）"></a>XOR（修改）</h1><h2 id="查壳-1"><a href="#查壳-1" class="headerlink" title="查壳"></a>查壳</h2><p>等会吧，明天再写，累了</p>
-
-                
-              </div>
+              
             
             <hr/>
             <div>
@@ -349,17 +335,17 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/CTF/" class="category-chain-item">CTF</a>
+  <a href="../../../../categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/CTF/WP/" class="category-chain-item">WP</a>
+  <a href="../../../../categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/" class="category-chain-item">数据结构作业</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/CTF/WP/RE/" class="category-chain-item">RE</a>
+  <a href="../../../../categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/" class="category-chain-item">课后作业</a>
   
   
 
@@ -378,7 +364,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/CTF/" class="print-no-link">#CTF</a>
+        <a href="../../../../tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="print-no-link">#数据结构</a>
       
     </div>
   
@@ -390,8 +376,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>QFNUCTF（日照）-Reverse-writeup</div>
-      <div>http://w1ndys.top/2023/10/13/CTF-adworld.xctf-Reverse-QFNU-REwriteup/</div>
+      <div>DS作业-5-22网安物联网-20231016</div>
+      <div>http://w1ndys.top/2023/10/18/DS-homework-5-22wanganwulian-20231016/</div>
     </div>
     <div class="license-meta">
       
@@ -403,13 +389,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月13日</div>
+          <div>2023年10月18日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年10月13日</div>
+          <div>2023年10月18日</div>
         </div>
       
       
@@ -452,18 +438,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../18/Google-account/" title="谷歌账号注册教程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">谷歌账号注册教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../11/CTF-Ciphey-README/" title="全自动解密脚本Ciphey官方安装文档">
-                        <span class="hidden-mobile">全自动解密脚本Ciphey官方安装文档</span>
+                      <a href="../Google-account/" title="谷歌账号注册教程">
+                        <span class="hidden-mobile">谷歌账号注册教程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -677,6 +657,23 @@
   
 
 
+
+
+  
+  <script defer>
+    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
+      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
+        var hbePrefix = document.querySelector('hbe-prefix');
+        hbePrefix.parentElement.classList.add('markdown-body');
+        Fluid.utils.retry(function() {
+          if (Fluid.boot && Fluid.boot.refresh) {
+            Fluid.boot.refresh();
+            return true;
+          }
+        }, 100, 10);
+      })
+    }
+  </script>
 
 
   
