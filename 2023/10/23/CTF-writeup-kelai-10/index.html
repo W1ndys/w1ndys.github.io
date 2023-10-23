@@ -16,12 +16,12 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="原文始发于微信公众号（山警网络空间安全实验室）：科来杯第十届山东省大学生网络安全技能大赛wp  前言赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。 @挽歌@sp4c1ous@&amp;#67;&amp;#x68;&amp;#97;&amp;#x72;&amp;#115;&amp;#x68;&amp;#97;&amp;#x72;&amp;#x6b;&amp;#64;&amp;#x4d;&amp;#x75;&amp;#46;&amp;#67;&amp;#x6">
+    <meta name="description" content="原文始发于微信公众号（山警网络空间安全实验室）：科来杯第十届山东省大学生网络安全技能大赛wp  前言赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。 @挽歌@sp4c1ous@&amp;#67;&amp;#104;&amp;#97;&amp;#114;&amp;#x73;&amp;#x68;&amp;#97;&amp;#114;&amp;#x6b;&amp;#x40;&amp;#77;&amp;#x75;&amp;#46;&amp;#x43;&amp;#1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="科来杯第十届山东省大学生网络安全技能大赛wp">
 <meta property="og:url" content="http://w1ndys.top/2023/10/23/CTF-writeup-kelai-10/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="原文始发于微信公众号（山警网络空间安全实验室）：科来杯第十届山东省大学生网络安全技能大赛wp  前言赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。 @挽歌@sp4c1ous@&amp;#67;&amp;#x68;&amp;#97;&amp;#x72;&amp;#115;&amp;#x68;&amp;#97;&amp;#x72;&amp;#x6b;&amp;#64;&amp;#x4d;&amp;#x75;&amp;#46;&amp;#67;&amp;#x6">
+<meta property="og:description" content="原文始发于微信公众号（山警网络空间安全实验室）：科来杯第十届山东省大学生网络安全技能大赛wp  前言赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。 @挽歌@sp4c1ous@&amp;#67;&amp;#104;&amp;#97;&amp;#114;&amp;#x73;&amp;#x68;&amp;#97;&amp;#114;&amp;#x6b;&amp;#x40;&amp;#77;&amp;#x75;&amp;#46;&amp;#x43;&amp;#1">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://cn-sec.com/wp-content/uploads/2023/10/10-1698030045.png">
 <meta property="og:image" content="http://cn-sec.com/wp-content/uploads/2023/10/5-1698030046.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://cn-sec.com/wp-content/uploads/2023/10/4-1698030057.png">
 <meta property="og:image" content="http://cn-sec.com/wp-content/uploads/2023/10/6-1698030058.png">
 <meta property="article:published_time" content="2023-10-23T13:24:23.210Z">
-<meta property="article:modified_time" content="2023-10-23T13:35:14.929Z">
+<meta property="article:modified_time" content="2023-10-23T13:36:32.145Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="-CTF省赛科来杯 -CTF">
 <meta name="twitter:card" content="summary_large_image">
@@ -311,7 +311,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年10月23日21:35
+                    本文最后更新于： 2023年10月23日21:36
                   
                 
               </p>
@@ -323,52 +323,49 @@
 <p>原文始发于微信公众号（山警网络空间安全实验室）：<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MjM5Njc1OTYyNA==&mid=2450786565&idx=1&sn=ecd301d5f308bc7e4f5901f6187beb8e&chksm=b104f8228673713458801f4e84e0726a382df97bb09be1ae1750073b40483d9c79812ae35a38&scene=126&sessionid=1698029627&key=47ecebb9f9a1a9ab37c23e2ab716e98f757cd43b66b9ad462906ba0d95aa0c311338df2b6a7be5217c18b6f8e0ecc3fe0b3593d1d83e569f93e61662305bc67a41fa74f80d8ba959eb1beacdb48156642618c50bfeecdf568ee4e32fd7bf89f0aeafe201cfc09580e84c5ed97ece0d93b923605a9b90ec6157a83efc7ab9b32a&ascene=15&uin=NTY2NTA4NjQ=&devicetype=Windows+10+x64&version=63060012&lang=zh_CN&session_us=gh_544c8c38eeaf&countrycode=AL&exportkey=n_ChQIAhIQTgqEnpI5i9/UgoicLHi+DBLuAQIE97dBBAEAAAAAAAn6Da/hwEkAAAAOpnltbLcz9gKNyK89dVj0n9PVNOKQBdN8rFDq8A9WHKDE7wDDJw1sWdUYSzYiQ48kYwjfuTQa3OR8YYoUe0NrX35xA+mChNNxZFcZC51KYRhk/SiovCpzuXNc0DbIZCC3PaiSPNEY1FpsLPksd9Q/AAPZATi0k7TjwBb5HTVpyn4qJxyoNe2ehnJ+U/n/kLQVFEklAE8UOxh1EVUNMUECRQItPitOSLpXdVq6fq+l5ucDwa0M9Sfvx2MDNscY6GTwoY+0HK6Lbc5UobrfYhWM0HjKfGP9Eec=&acctmode=0&pass_ticket=tg1T215QyFg8xQQl+CQeEL+QWFNoq2hjb6qpAGBy38ocTI5ZUM9OXfIibItwtoRN&wx_header=0&fontgear=2">科来杯第十届山东省大学生网络安全技能大赛wp</a></p>
 </blockquote>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。</p>
-<p>@挽歌@sp4c1ous@<a href="mailto:&#67;&#x68;&#97;&#x72;&#115;&#x68;&#97;&#x72;&#x6b;&#64;&#x4d;&#x75;&#46;&#67;&#x68;&#101;&#x6e;">&#67;&#x68;&#97;&#x72;&#115;&#x68;&#97;&#x72;&#x6b;&#64;&#x4d;&#x75;&#46;&#67;&#x68;&#101;&#x6e;</a></p>
+<p>@挽歌@sp4c1ous@<a href="mailto:&#67;&#104;&#97;&#114;&#x73;&#x68;&#97;&#114;&#x6b;&#x40;&#77;&#x75;&#46;&#x43;&#104;&#x65;&#110;">&#67;&#104;&#97;&#114;&#x73;&#x68;&#97;&#114;&#x6b;&#x40;&#77;&#x75;&#46;&#x43;&#104;&#x65;&#110;</a></p>
 <p>Mu.Chen内心os：</p>
 <p>(理论题真的真的真的真的好重要啊呜呜呜呜</p>
 <ul>
 <li><p>前言</p>
 </li>
 <li><p>Misc</p>
+<ul>
+<li><p>简单编码</p>
 </li>
-<li><ul>
-<li>简单编码</li>
-<li>神秘的base</li>
-<li>签到</li>
+<li><p>神秘的base</p>
+</li>
+<li><p>签到</p>
+</li>
 </ul>
 </li>
 <li><p>Stego</p>
-</li>
-<li><ul>
+<ul>
 <li>我应该去爱你</li>
 <li>数独</li>
 <li>莫生气</li>
 </ul>
 </li>
 <li><p>取证</p>
-</li>
-<li><ul>
+<ul>
 <li>金刚大战哥斯拉</li>
 <li>啊吧啊吧的数据包</li>
 <li>小刘的硬盘</li>
 </ul>
 </li>
 <li><p>Web</p>
-</li>
-<li><ul>
+<ul>
 <li>uns</li>
 </ul>
 </li>
 <li><p>Crypto</p>
-</li>
-<li><ul>
+<ul>
 <li>小试牛刀</li>
 <li>easyrsa</li>
 </ul>
 </li>
 <li><p>re</p>
-</li>
-<li><ul>
+<ul>
 <li>人生模拟</li>
 </ul>
 </li>
