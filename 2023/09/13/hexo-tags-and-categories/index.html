@@ -23,11 +23,13 @@
 <meta property="og:site_name" content="W1ndysの小屋">
 <meta property="og:description" content="hexo博客中tags与categories用法 - 知乎 (zhihu.com) tags与categories在hexo中使用tags与categories往往需要使用多标签和多分类,这里记录一下它们的用法。 tag用法： 1234tags:  - 123  - 456tags: [123, 456]  多标签写法，这2种都是一样的效果，用哪个都可以，建议使用列表[]式，直观清晰。 categ">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo.fluid-dev.com/docs/assets/img/group_image.c1b58381.png">
 <meta property="article:published_time" content="2023-09-13T15:31:37.933Z">
-<meta property="article:modified_time" content="2023-09-30T12:05:36.591Z">
+<meta property="article:modified_time" content="2023-10-29T02:35:34.652Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo.fluid-dev.com/docs/assets/img/group_image.c1b58381.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -236,7 +238,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          共400字
+          共1.7k字
         
       </span>
     
@@ -248,7 +250,7 @@
         
         
           <!-- compatible with older versions-->
-          阅读本文预计4分钟
+          阅读本文预计14分钟
         
       </span>
     
@@ -298,7 +300,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于： 2023年09月30日20:05
+                    本文最后更新于： 2023年10月29日10:35
                   
                 
               </p>
@@ -313,6 +315,71 @@
 
 <p>多标签写法，这2种都是一样的效果，用哪个都可以，建议使用列表[]式，直观清晰。</p>
 <h3 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs text"># 这是默认的写法，给文章添加一个分类。<br>categories: 123<br># 这会将文章分类123/456子分类目录下。<br>categories: [123, 456]<br>这会将文章分类到123/456子分类目录下。<br>categories:<br>   - 123<br>   - 456<br>多标签写法，文章被分类到123、456以及123的自分类789这3个分类下面，官方指定写法。<br>categories:<br>   - [123]<br>   - [456]<br>   - [123, 789]<br></code></pre></td></tr></table></figure>
+
+<h3 id="Tag-插件"><a href="#Tag-插件" class="headerlink" title="Tag 插件"></a>Tag 插件</h3><h4 id="便签"><a href="#便签" class="headerlink" title="便签"></a>便签</h4><p>在 markdown 中加入如下的代码来使用便签：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% note success %&#125;<br>文字 或者 <span class="hljs-code">`markdown`</span> 均可<br>&#123;% endnote %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>或者使用 HTML 形式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-primary&quot;</span>&gt;</span>标签<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>可选便签：</p>
+<p>primary</p>
+<p>secondary</p>
+<p>success</p>
+<p>danger</p>
+<p>warning</p>
+<p>info</p>
+<p>light</p>
+<p>WARNING</p>
+<p>使用时 <code>&#123;% note primary %&#125;` 和 `&#123;% endnote %&#125;</code> 需单独一行，否则会出现问题</p>
+<h4 id="行内标签"><a href="#行内标签" class="headerlink" title="#行内标签"></a><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E8%A1%8C%E5%86%85%E6%A0%87%E7%AD%BE">#</a>行内标签</h4><p>在 markdown 中加入如下的代码来使用 Label：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% label primary @text %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>或者使用 HTML 形式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label label-primary&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>可选 Label：</p>
+<p>primary default info success warning danger</p>
+<h4 id="折叠块"><a href="#折叠块" class="headerlink" title="#折叠块"></a><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E6%8A%98%E5%8F%A0%E5%9D%97">#</a>折叠块</h4><p>使用折叠块，可以折叠代码、图片、文字等任何内容，你可以在 markdown 中按如下格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% fold info @title %&#125;<br>需要折叠的一段内容，支持 markdown<br>&#123;% endfold %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>info: 和行内标签类似的可选参数 title: 折叠块上的标题</p>
+<h4 id="勾选框"><a href="#勾选框" class="headerlink" title="#勾选框"></a><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%8B%BE%E9%80%89%E6%A1%86">#</a>勾选框</h4><p>在 markdown 中加入如下的代码来使用 Checkbox：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% cb text, checked?, incline? %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>text：显示的文字<br>checked：默认是否已勾选，默认 false<br>incline: 是否内联（可以理解为后面的文字是否换行），默认 false</p>
+<p>示例：</p>
+<div>
+            <input type="checkbox" disabled >普通示例
+          </div>
+
+<div>
+            <input type="checkbox" disabled checked="checked">默认选中
+          </div>
+
+
+            <input type="checkbox" disabled >内联示例
+           后面文字不换行
+
+<input type="checkbox" disabled > 也可以只传入一个参数，文字写在后边（这样不支持外联）
+
+
+
+<h4 id="按钮"><a href="#按钮" class="headerlink" title="#按钮"></a><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E6%8C%89%E9%92%AE">#</a>按钮</h4><p>你可以在 markdown 中加入如下的代码来使用 Button：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% btn url, text, title %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>或者使用 HTML 形式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>url：跳转链接<br>text：显示的文字<br>title：鼠标悬停时显示的文字（可选）</p>
+<p><a href="javascript:;">text</a></p>
+<h4 id="组图"><a href="#组图" class="headerlink" title="#组图"></a><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E7%BB%84%E5%9B%BE">#</a>组图</h4><p>如果想把多张图片按一定布局组合显示，你可以在 markdown 中按如下格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% gi total n1-n2-... %&#125;<br>  ![](<span class="hljs-link">url</span>)<br>  ![](<span class="hljs-link">url</span>)<br>  ![](<span class="hljs-link">url</span>)<br>  ![](<span class="hljs-link">url</span>)<br>  ![](<span class="hljs-link">url</span>)<br>&#123;% endgi %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>total：图片总数量，对应中间包含的图片 url 数量<br>n1-n2-…：每行的图片数量，可以省略，默认单行最多 3 张图，求和必须相等于 total，否则按默认样式</p>
+<p>如下图为 <code>&#123;% gi 5 3-2 %&#125;</code> 示例，代表共 5 张图，第一行 3 张图，第二行 2 张图。</p>
+<p><img src="https://hexo.fluid-dev.com/docs/assets/img/group_image.c1b58381.png" srcset="/img/loading.gif" lazyload alt="Group Images"></p>
+
                 
               </div>
             
@@ -383,7 +450,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年9月30日</div>
+          <div>2023年10月29日</div>
         </div>
       
       
