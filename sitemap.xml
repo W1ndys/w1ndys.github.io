@@ -515,7 +515,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -524,7 +524,7 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/live2d-widget/demo/login.html</loc>
+    <loc>http://w1ndys.top/live2d-widget/demo/demo.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -832,14 +832,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/CTF/WP/%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%A7%91%E6%9D%A5%E6%9D%AF/</loc>
+    <loc>http://w1ndys.top/categories/%E6%B8%B8%E6%88%8F%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E6%B8%B8%E6%88%8F%E5%BF%83%E5%BE%97/</loc>
+    <loc>http://w1ndys.top/categories/CTF/WP/%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%A7%91%E6%9D%A5%E6%9D%AF/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -902,14 +902,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/Linux/kali/</loc>
+    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</loc>
+    <loc>http://w1ndys.top/categories/Linux/kali/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -930,13 +930,6 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F/</loc>
-    <lastmod>2023-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -944,14 +937,14 @@
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E5%AE%9E%E9%AA%8C/</loc>
+    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%80%83%E8%AF%95/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%80%83%E8%AF%95/</loc>
+    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E5%AE%9E%E9%AA%8C/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1001,6 +994,13 @@
   
   <url>
     <loc>http://w1ndys.top/categories/Linux/kali/%E5%88%87%E6%8D%A2%E6%BA%90/</loc>
+    <lastmod>2023-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://w1ndys.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F/</loc>
     <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
