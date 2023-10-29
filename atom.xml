@@ -6,7 +6,7 @@
   <link href="http://w1ndys.top/atom.xml" rel="self"/>
   
   <link href="http://w1ndys.top/"/>
-  <updated>2023-10-26T13:44:45.435Z</updated>
+  <updated>2023-10-29T08:38:08.684Z</updated>
   <id>http://w1ndys.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
+    <link href="http://w1ndys.top/2023/10/29/CTF-think-kelai-10/"/>
+    <id>http://w1ndys.top/2023/10/29/CTF-think-kelai-10/</id>
+    <published>2023-10-29T06:55:18.091Z</published>
+    <updated>2023-10-29T08:38:08.684Z</updated>
+    
+    <content type="html"><![CDATA[<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p><p>太忙了啊啊啊啊啊~！！！</p><hr><p>虽然成绩不是很好，但是收获还是很多的</p><p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会&lt;/p&gt;
+&lt;p&gt;太忙了啊啊啊啊啊~！！！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;虽然成绩不是很好，但是收获还是很多的&lt;/p&gt;
+&lt;p&gt;10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过</summary>
+      
+    
+    
+    
+    <category term="CTF" scheme="http://w1ndys.top/categories/CTF/"/>
+    
+    
+    <category term="CTF" scheme="http://w1ndys.top/tags/CTF/"/>
+    
+  </entry>
   
   <entry>
     <title>科来杯第十届山东省大学生网络安全技能大赛wp</title>
@@ -212,31 +240,6 @@
     
     
     <category term="数据结构作业" scheme="http://w1ndys.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谷歌账号注册教程</title>
-    <link href="http://w1ndys.top/2023/10/18/Google-account/"/>
-    <id>http://w1ndys.top/2023/10/18/Google-account/</id>
-    <published>2023-10-18T09:46:26.697Z</published>
-    <updated>2023-10-24T15:06:18.426Z</updated>
-    
-    <content type="html"><![CDATA[<p>还没写……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;还没写……&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Google" scheme="http://w1ndys.top/categories/Google/"/>
-    
-    
-    <category term="Google" scheme="http://w1ndys.top/tags/Google/"/>
     
   </entry>
   
