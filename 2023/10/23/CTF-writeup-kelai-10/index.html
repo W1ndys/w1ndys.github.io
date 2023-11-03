@@ -19,28 +19,28 @@
     <meta name="description" content="原文始发于微信公众号（山警网络空间安全实验室）：科来杯第十届山东省大学生网络安全技能大赛wp  前言赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。 @挽歌 @sp4c1ous @Charshark @Mu.Chen Mu.Chen内心os： (理论题真的真的真的真的好重要啊呜呜呜呜  前言  Misc  简单编码  神秘的base  签">
 <meta property="og:type" content="article">
 <meta property="og:title" content="科来杯第十届山东省大学生网络安全技能大赛wp">
-<meta property="og:url" content="http://w1ndys.top/2023/10/23/CTF-writeup-kelai-10/index.html">
+<meta property="og:url" content="https://w1ndys.github.io/2023/10/23/CTF-writeup-kelai-10/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
 <meta property="og:description" content="原文始发于微信公众号（山警网络空间安全实验室）：科来杯第十届山东省大学生网络安全技能大赛wp  前言赛制还是一如既往的奇葩，由于每人的方向不同，在赛后结合团队赛道和爱好者赛道社团成员的wp，共同完成了本文。 @挽歌 @sp4c1ous @Charshark @Mu.Chen Mu.Chen内心os： (理论题真的真的真的真的好重要啊呜呜呜呜  前言  Misc  简单编码  神秘的base  签">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E6%88%91%E5%BA%94%E8%AF%A5%E5%8E%BB%E7%88%B1%E4%BD%A0.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E6%95%B0%E7%8B%AC.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E8%8E%AB%E7%94%9F%E6%B0%94.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E8%8E%AB%E7%94%9F%E6%B0%942.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%93%A5%E6%96%AF%E6%8B%89.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%93%A5%E6%96%AF%E6%8B%892.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E9%98%BF%E5%B7%B4%E5%B7%B4.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E9%98%BF%E5%B7%B4%E5%B7%B42.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E9%98%BF%E5%B7%B4%E5%B7%B43.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B0%8F%E5%88%98.png">
-<meta property="og:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E4%BA%BA%E7%94%9F%E6%A8%A1%E6%8B%9F.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E6%88%91%E5%BA%94%E8%AF%A5%E5%8E%BB%E7%88%B1%E4%BD%A0.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E6%95%B0%E7%8B%AC.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E8%8E%AB%E7%94%9F%E6%B0%94.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E8%8E%AB%E7%94%9F%E6%B0%942.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%93%A5%E6%96%AF%E6%8B%89.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%93%A5%E6%96%AF%E6%8B%892.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E9%98%BF%E5%B7%B4%E5%B7%B4.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E9%98%BF%E5%B7%B4%E5%B7%B42.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E9%98%BF%E5%B7%B4%E5%B7%B43.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B0%8F%E5%88%98.png">
+<meta property="og:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E4%BA%BA%E7%94%9F%E6%A8%A1%E6%8B%9F.png">
 <meta property="article:published_time" content="2023-10-23T13:24:23.210Z">
 <meta property="article:modified_time" content="2023-10-29T10:38:34.327Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta property="article:tag" content="科来杯">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E6%88%91%E5%BA%94%E8%AF%A5%E5%8E%BB%E7%88%B1%E4%BD%A0.png">
+<meta name="twitter:image" content="https://w1ndys.github.io/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E6%88%91%E5%BA%94%E8%AF%A5%E5%8E%BB%E7%88%B1%E4%BD%A0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -84,7 +84,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"w1ndys.top","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"w1ndys.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -495,7 +495,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>科来杯第十届山东省大学生网络安全技能大赛wp</div>
-      <div>http://w1ndys.top/2023/10/23/CTF-writeup-kelai-10/</div>
+      <div>https://w1ndys.github.io/2023/10/23/CTF-writeup-kelai-10/</div>
     </div>
     <div class="license-meta">
       
