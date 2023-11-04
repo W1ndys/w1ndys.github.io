@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/2023/10/13/CTF-writeup-adworld.xctf-Reverse-QFNU-REwriteup/</loc>
+    <loc>https://w1ndys.github.io/2023/10/13/CTF-writeup-adworld.xctf-Reverse-QFNU-RE/</loc>
     
     <lastmod>2023-10-12</lastmod>
     
@@ -569,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/live2d-widget/README.en.html</loc>
+    <loc>https://w1ndys.github.io/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -578,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/live2d-widget/README.html</loc>
+    <loc>https://w1ndys.github.io/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -805,7 +805,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/%E6%AF%94%E8%B5%9B%E5%BF%83%E5%BE%97/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -826,7 +826,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/%E6%AF%94%E8%B5%9B%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -868,13 +868,6 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/%E6%AF%94%E8%B5%9B%E5%BF%83%E5%BE%97/%E7%9C%81%E8%B5%9B/</loc>
-    <lastmod>2023-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://w1ndys.github.io/categories/%E6%96%87/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -890,6 +883,13 @@
   
   <url>
     <loc>https://w1ndys.github.io/categories/hexo/</loc>
+    <lastmod>2023-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://w1ndys.github.io/categories/CTF/%E6%AF%94%E8%B5%9B%E5%BF%83%E5%BE%97/%E7%9C%81%E8%B5%9B/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1050,7 +1050,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/%E8%A7%86%E5%90%AC%E8%AF%B4%E7%AD%94%E6%A1%88/</loc>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%80%83%E8%AF%95/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1064,7 +1064,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%80%83%E8%AF%95/</loc>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/%E8%A7%86%E5%90%AC%E8%AF%B4%E7%AD%94%E6%A1%88/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
