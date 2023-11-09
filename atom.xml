@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2023-11-07T13:02:12.182Z</updated>
+  <updated>2023-11-09T03:28:26.123Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>传统书信里的绝美结束语</title>
+    <link href="https://w1ndys.github.io/2023/11/09/good-words-write/"/>
+    <id>https://w1ndys.github.io/2023/11/09/good-words-write/</id>
+    <published>2023-11-09T02:37:33.318Z</published>
+    <updated>2023-11-09T03:28:26.123Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>楮墨有限，不尽欲言。</p><p>我的文化水平有限，想说的话没能全部表达出来。</p></li><li><p>情长纸短，不尽依依。</p><p>简短的信纸无法写完深长的情意，就不在尽述了。</p></li><li><p>多劳费心，至纫公谊。</p><p>往后辛苦您多费心了，深深感激你的情谊。</p></li><li><p>投笔伤情，临书惘惘。</p><p>暂且搁笔，看着写完的书信，心中十分怅惘。</p></li><li><p>春寒料峭，善自珍重。</p><p>天气虽暖还寒，尚望您自己多加保重。</p></li><li><p>兹际炎暑，希自珍卫。</p><p>现在正值炎夏酷热之际，希望您保重身体。</p></li><li><p>秋风萧萧，至祈摄卫。</p><p>秋天天气变凉，真挚的提醒您要保重身体。</p></li><li><p>渐入寒冬，伏惟珍重。</p><p>渐渐进入寒冷的冬天，希望您多多保重身体。</p></li><li><p>驰函寓意，伫望示复。</p><p>书信带走我的情意，时时盼望你的回信。</p></li><li><p>谨付寸心，希垂尺素。</p><p>我的真心尽在信中，期盼能得到您的回信。</p></li><li><p>拜书以闻，企盼还云。</p><p>我恭敬地写下这封信寄给您，翘首盼望您的回音。</p></li><li><p>谨遣数行，希还一字</p><p>我在信里给您写了这么多，还望您一定回信。</p></li><li><p>言不尽思，再祈珍重。</p><p>在信里写不完我的思念，再次希望您能珍重身体。</p></li><li><p>书未尽情，余候面叙。</p><p>用书信难以充分表达情意，等以后我们见面再说。</p></li><li><p>故特缕陈，诸希鉴宥。</p><p>我特意细细陈述，希望您察鉴原谅。</p></li><li><p>聊布往怀，君其详之。</p><p>这封信饱含我们往日情谊，请您仔细考虑这件事。</p></li></ol>]]></content>
+    
+    
+    <summary type="html">谁说工科生不能学文学？</summary>
+    
+    
+    
+    <category term="文" scheme="https://w1ndys.github.io/categories/%E6%96%87/"/>
+    
+    
+    <category term="学习笔记" scheme="https://w1ndys.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="文案" scheme="https://w1ndys.github.io/tags/%E6%96%87%E6%A1%88/"/>
+    
+  </entry>
   
   <entry>
     <title>硕神！！————一则关于“硕神”的博文/硕神的起源发展</title>
@@ -100,9 +123,9 @@
     
     <category term="线上课答案库" scheme="https://w1ndys.github.io/tags/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%AD%94%E6%A1%88%E5%BA%93/"/>
     
-    <category term="智慧树知到" scheme="https://w1ndys.github.io/tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/"/>
-    
     <category term="刷课脚本" scheme="https://w1ndys.github.io/tags/%E5%88%B7%E8%AF%BE%E8%84%9A%E6%9C%AC/"/>
+    
+    <category term="智慧树知到" scheme="https://w1ndys.github.io/tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/"/>
     
   </entry>
   
@@ -554,38 +577,6 @@
     
     
     <category term="英语" scheme="https://w1ndys.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kali_Linux如何修改语言为中文</title>
-    <link href="https://w1ndys.github.io/2023/10/10/kali-Linux-language/"/>
-    <id>https://w1ndys.github.io/2023/10/10/kali-Linux-language/</id>
-    <published>2023-10-10T14:35:14.793Z</published>
-    <updated>2023-10-10T15:17:15.729Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="友情提示"><a href="#友情提示" class="headerlink" title="友情提示"></a>友情提示</h3><p>修改前快照一下，避免修改操作错误带来的问题！</p><ol><li><p>打开终端</p></li><li><p>打开设置</p><p>输入</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">dpkg-reconfigure locales</span><br></code></pre></td></tr></table></figure></li><li><p>修改设置</p><p><code>en_US.UTF-8 UTF-8</code>改为不勾选</p><ul><li>下面这种有个<code>*</code>属于已经勾选了</li><li>通过上下箭头按键我们把红点（表示当前选中的选项）移动到<code>en_US.UTF-8 UTF-8</code>，按下空格表示不勾选&#x2F;勾选</li><li>使用空格勾选<code>[ ]zh_CN.GBK_GBK</code> 和<code>[ ] zh-CN.UTF-8.UTF-8</code>两个选项，这里有部分虚拟机会找不到<code>[ ]zh_CN.GBK_GBK</code>，这两个选项是紧跟着的，找不到就算了，问题不大。</li><li>按下<code>enter</code> 表示<code>ok</code>，选择语言<code>zh_CN.UTF-8</code></li></ul></li><li><p>重启生效设置</p><p>重启后会有个提示，建议你选择<code>保留旧名称</code>，以后路径敲代码敲英文肯定比敲中文方便很多！</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">reboot</span><br></code></pre></td></tr></table></figure></li></ol><hr><p>原文：<a href="https://blog.csdn.net/u011027547/article/details/123344249">https://blog.csdn.net/u011027547/article/details/123344249</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;友情提示&quot;&gt;&lt;a href=&quot;#友情提示&quot; class=&quot;headerlink&quot; title=&quot;友情提示&quot;&gt;&lt;/a&gt;友情提示&lt;/h3&gt;&lt;p&gt;修改前快照一下，避免修改操作错误带来的问题！&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;打开终端&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;打</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="https://w1ndys.github.io/categories/Linux/"/>
-    
-    <category term="kali" scheme="https://w1ndys.github.io/categories/Linux/kali/"/>
-    
-    <category term="语言设置" scheme="https://w1ndys.github.io/categories/Linux/kali/%E8%AF%AD%E8%A8%80%E8%AE%BE%E7%BD%AE/"/>
-    
-    
-    <category term="Linux" scheme="https://w1ndys.github.io/tags/Linux/"/>
     
   </entry>
   
