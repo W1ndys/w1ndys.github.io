@@ -16,26 +16,35 @@
   <meta name="author" content="W1ndys">
   <meta name="keywords" content="W1ndys">
   
-    <meta name="description" content="清风愿渡我，我亦喜随风。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://w1ndys.github.io/archives/2023/page/3/index.html">
+    <meta name="description" content="RE2023年11月11日Python逆序输出 1print(flag[::-1])  实际上这是切片的一些操作 Python切片操作_小魔王降临的博客-CSDN博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CTF学习日记（每天学点新东西，就是成功）">
+<meta property="og:url" content="https://w1ndys.github.io/2023/11/11/CTF-study-diary/index.html">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="清风愿渡我，我亦喜随风。">
+<meta property="og:description" content="RE2023年11月11日Python逆序输出 1print(flag[::-1])  实际上这是切片的一些操作 Python切片操作_小魔王降临的博客-CSDN博客">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-11T13:50:10.315Z">
+<meta property="article:modified_time" content="2023-11-11T13:53:22.054Z">
 <meta property="article:author" content="W1ndys">
-<meta property="article:tag" content="W1ndys">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="CTF学习日记">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>归档 - W1ndysの小屋</title>
+  <title>CTF学习日记（每天学点新东西，就是成功） - W1ndysの小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -86,7 +95,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="../../../../index.html">
@@ -204,9 +213,59 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle" data-typed-text="CTF学习日记（每天学点新东西，就是成功）"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-11 21:50" pubdate>
+           2023年11月11日21:50
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          共79字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          阅读本文预计1分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          浏览<span id="busuanzi_value_page_pv"></span>次
+        </span>
+        
+      
+    
+  </div>
+
 
         
       </div>
@@ -222,100 +281,254 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 60 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2023</p>
-    
-    <a href="../../../../2023/10/11/English-essay/" class="list-group-item list-group-item-action">
-      <time>10-11</time>
-      <div class="list-group-item-title">大二iwrite英语作文</div>
-    </a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CTF学习日记（每天学点新东西，就是成功）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于： 2023年11月11日21:53
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h1><h2 id="2023年11月11日"><a href="#2023年11月11日" class="headerlink" title="2023年11月11日"></a>2023年11月11日</h2><p>Python逆序输出</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(flag[::-<span class="hljs-number">1</span>])</span></span><br></code></pre></td></tr></table></figure>
+
+<p>实际上这是切片的一些操作</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_30460949/article/details/118888961">Python切片操作_小魔王降临的博客-CSDN博客</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
   
     
-    <a href="../../../../2023/10/10/kali-Linux-language/" class="list-group-item list-group-item-action">
-      <time>10-10</time>
-      <div class="list-group-item-title">kali_Linux如何修改语言为中文</div>
-    </a>
+      <span class="category-chain">
+        
+  <a href="../../../../categories/CTF/" class="category-chain-item">CTF</a>
   
-    
-    <a href="../../../../2023/10/05/DS-test3/" class="list-group-item list-group-item-action">
-      <time>10-05</time>
-      <div class="list-group-item-title">实验三、栈和队列的应用</div>
-    </a>
   
+    <span>></span>
     
-    <a href="../../../../2023/10/05/C++_template_usually/" class="list-group-item list-group-item-action">
-      <time>10-05</time>
-      <div class="list-group-item-title">C++常用的代码模板</div>
-    </a>
+  <a href="../../../../categories/CTF/CTF%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/" class="category-chain-item">CTF学习日记</a>
   
-    
-    <a href="../../../../2023/10/04/CTF-tools-crypto/" class="list-group-item list-group-item-action">
-      <time>10-04</time>
-      <div class="list-group-item-title">CTF-crypto&amp;misc常用解密工具</div>
-    </a>
   
-    
-    <a href="../../../../2023/10/04/CTF-crypto/" class="list-group-item list-group-item-action">
-      <time>10-04</time>
-      <div class="list-group-item-title">CTF密码学常见密码形式</div>
-    </a>
+
   
+
+      </span>
     
-    <a href="../../../../2023/10/04/DS-homework-4-Ch3-22wanganwulian-20230927/" class="list-group-item list-group-item-action">
-      <time>10-04</time>
-      <div class="list-group-item-title">DS作业-4-Ch3-22网安物联网-20230927</div>
-    </a>
   
-    
-    <a href="../../../../2023/10/04/DS-homework-3-Ch2-22wanganwulian-20230927/" class="list-group-item list-group-item-action">
-      <time>10-04</time>
-      <div class="list-group-item-title">DS作业-3-Ch2-22网安物联网-20230927</div>
-    </a>
+</span>
+
+    </div>
   
-    
-    <a href="../../../../2023/10/03/kali-john/" class="list-group-item list-group-item-action">
-      <time>10-03</time>
-      <div class="list-group-item-title">利用Kali中的工具John破解压缩包密码（弱密码</div>
-    </a>
   
-    
-    <a href="../../../../2023/10/01/love-choice/" class="list-group-item list-group-item-action">
-      <time>10-01</time>
-      <div class="list-group-item-title">《拣爱》游戏心得</div>
-    </a>
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="../../../../tags/CTF/" class="print-no-link">#CTF</a>
+      
+        <a href="../../../../tags/CTF%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/" class="print-no-link">#CTF学习日记</a>
+      
+    </div>
   
 </div>
 
 
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="../2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="../4/#board">4</a><a class="page-number" href="../5/#board">5</a><a class="page-number" href="../6/#board">6</a><a class="extend next" rel="next" href="../4/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
+              
+  
 
-
-
-
-              </div>
-            </div>
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CTF学习日记（每天学点新东西，就是成功）</div>
+      <div>https://w1ndys.github.io/2023/11/11/CTF-study-diary/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>W1ndys</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年11月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
           </div>
         </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="../../09/good-words-write/" title="传统书信里的绝美结束语">
+                        <span class="hidden-mobile">传统书信里的绝美结束语</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://pl.w1ndys.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
       </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -429,10 +642,105 @@
 
   
     
+      <script  src="../../../../js/img-lazyload.js" ></script>
+    
   
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="../../../../js/local-search.js" ></script>
 
