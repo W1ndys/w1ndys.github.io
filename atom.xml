@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2023-11-18T02:30:43.476Z</updated>
+  <updated>2023-11-18T02:33:47.158Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://w1ndys.github.io/2023/11/18/bot-W1ndys-bot/"/>
     <id>https://w1ndys.github.io/2023/11/18/bot-W1ndys-bot/</id>
     <published>2023-11-18T02:04:26.275Z</published>
-    <updated>2023-11-18T02:30:43.476Z</updated>
+    <updated>2023-11-18T02:33:47.158Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h1><p>卷卷目前的功能主要有：<br><a href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D">关键词回复</a>   <a href="#%E5%BF%AB%E6%8D%B7%E7%BE%A4%E7%AE%A1%E7%90%86">快捷群管理</a>  [违禁词监控](# 违禁词监控) <a href="#%E5%AE%9A%E6%97%B6%E5%99%A8">定时器</a>  <a href="#AI%E5%AF%B9%E8%AF%9D">AI对话</a>  <a href="#%E5%A5%87%E6%80%AA%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90">奇怪图片生成</a>  <a href="#%E7%82%B9%E6%AD%8C">点歌</a></p><h1 id="关键词回复"><a href="#关键词回复" class="headerlink" title="关键词回复"></a>关键词回复</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%9E%E5%A4%8D">请看这里</a></p><h1 id="快捷群管理"><a href="#快捷群管理" class="headerlink" title="快捷群管理"></a>快捷群管理</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E7%BE%A4%E7%AE%A1%E7%90%86">请看这里</a></p><h1 id="违禁词监控"><a href="#违禁词监控" class="headerlink" title="违禁词监控"></a>违禁词监控</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E8%BF%9D%E7%A6%81%E8%AF%8D">请看这里</a></p><h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E5%AE%9A%E6%97%B6%E5%99%A8">请看这里</a></p><h1 id="AI对话"><a href="#AI对话" class="headerlink" title="AI对话"></a>AI对话</h1><p>群内艾特一下bot</p><p>然后接下来群内连续五句话都会被bot触发，无需艾特。超过五条需要重新艾特</p><h1 id="奇怪图片生成"><a href="#奇怪图片生成" class="headerlink" title="奇怪图片生成"></a>奇怪图片生成</h1><p>发送<code>pet</code>可以查看具体指令</p><p>根据提示操作即可</p><h1 id="点歌"><a href="#点歌" class="headerlink" title="点歌"></a>点歌</h1><h2 id="“-音乐-关键词”"><a href="#“-音乐-关键词”" class="headerlink" title="“#音乐 关键词”"></a>“#音乐 关键词”</h2><p>自动搜索所有源以找出来找最佳音频来源</p><h2 id="“-语音-关键词”"><a href="#“-语音-关键词”" class="headerlink" title="“#语音 关键词”"></a>“#语音 关键词”</h2><p>自动搜索所有源，以语音信息的形式发出</p><h2 id="“-外链-关键词”"><a href="#“-外链-关键词”" class="headerlink" title="“#外链 关键词”"></a>“#外链 关键词”</h2><p>自动搜索所有源，以外链信息的形式发出</p><h2 id="“-QQ-关键词”"><a href="#“-QQ-关键词”" class="headerlink" title="“#QQ 关键词”"></a>“#QQ 关键词”</h2><p>搜索QQ音乐</p><h2 id="“-网易-关键词”"><a href="#“-网易-关键词”" class="headerlink" title="“#网易 关键词”"></a>“#网易 关键词”</h2><p>搜索网易云音乐</p><h2 id="“-网易电台-关键词”"><a href="#“-网易电台-关键词”" class="headerlink" title="“#网易电台 关键词”"></a>“#网易电台 关键词”</h2><p>搜索网易云电台，一般来说是直接选择找到的第一个节目，但是关键词可以以 “电台名称|节目名称”的格式指定电台节目</p><h2 id="“-酷狗-关键词”"><a href="#“-酷狗-关键词”" class="headerlink" title="“#酷狗 关键词”"></a>“#酷狗 关键词”</h2><p>搜索酷狗音乐</p><h2 id="“-千千-关键词”"><a href="#“-千千-关键词”" class="headerlink" title="“#千千 关键词”"></a>“#千千 关键词”</h2><p>搜索千千音乐（百度音乐）</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h1><p>卷卷目前的功能主要有：<br><a href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D">关键词回复</a>      <a href="#%E5%BF%AB%E6%8D%B7%E7%BE%A4%E7%AE%A1%E7%90%86">快捷群管理</a>     <a href="#%E8%BF%9D%E7%A6%81%E8%AF%8D%E7%9B%91%E6%8E%A7">违禁词监控</a>    <a href="#%E5%AE%9A%E6%97%B6%E5%99%A8">定时器</a>     <a href="#AI%E5%AF%B9%E8%AF%9D">AI对话</a>     <a href="#%E5%A5%87%E6%80%AA%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90">奇怪图片生成</a>     <a href="#%E7%82%B9%E6%AD%8C">点歌</a></p><h1 id="关键词回复"><a href="#关键词回复" class="headerlink" title="关键词回复"></a>关键词回复</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%9E%E5%A4%8D">请看这里</a></p><h1 id="快捷群管理"><a href="#快捷群管理" class="headerlink" title="快捷群管理"></a>快捷群管理</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E7%BE%A4%E7%AE%A1%E7%90%86">请看这里</a></p><h1 id="违禁词监控"><a href="#违禁词监控" class="headerlink" title="违禁词监控"></a>违禁词监控</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E8%BF%9D%E7%A6%81%E8%AF%8D">请看这里</a></p><h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><p>相关指令<a href="https://w1ndys.top/2023/11/17/bot-HuYanSession2/#%E5%AE%9A%E6%97%B6%E5%99%A8">请看这里</a></p><h1 id="AI对话"><a href="#AI对话" class="headerlink" title="AI对话"></a>AI对话</h1><p>群内艾特一下bot</p><p>然后接下来群内连续五句话都会被bot触发，无需艾特。超过五条需要重新艾特</p><h1 id="奇怪图片生成"><a href="#奇怪图片生成" class="headerlink" title="奇怪图片生成"></a>奇怪图片生成</h1><p>发送<code>pet</code>可以查看具体指令</p><p>根据提示操作即可</p><h1 id="点歌"><a href="#点歌" class="headerlink" title="点歌"></a>点歌</h1><h2 id="“-音乐-关键词”"><a href="#“-音乐-关键词”" class="headerlink" title="“#音乐 关键词”"></a>“#音乐 关键词”</h2><p>自动搜索所有源以找出来找最佳音频来源</p><h2 id="“-语音-关键词”"><a href="#“-语音-关键词”" class="headerlink" title="“#语音 关键词”"></a>“#语音 关键词”</h2><p>自动搜索所有源，以语音信息的形式发出</p><h2 id="“-外链-关键词”"><a href="#“-外链-关键词”" class="headerlink" title="“#外链 关键词”"></a>“#外链 关键词”</h2><p>自动搜索所有源，以外链信息的形式发出</p><h2 id="“-QQ-关键词”"><a href="#“-QQ-关键词”" class="headerlink" title="“#QQ 关键词”"></a>“#QQ 关键词”</h2><p>搜索QQ音乐</p><h2 id="“-网易-关键词”"><a href="#“-网易-关键词”" class="headerlink" title="“#网易 关键词”"></a>“#网易 关键词”</h2><p>搜索网易云音乐</p><h2 id="“-网易电台-关键词”"><a href="#“-网易电台-关键词”" class="headerlink" title="“#网易电台 关键词”"></a>“#网易电台 关键词”</h2><p>搜索网易云电台，一般来说是直接选择找到的第一个节目，但是关键词可以以 “电台名称|节目名称”的格式指定电台节目</p><h2 id="“-酷狗-关键词”"><a href="#“-酷狗-关键词”" class="headerlink" title="“#酷狗 关键词”"></a>“#酷狗 关键词”</h2><p>搜索酷狗音乐</p><h2 id="“-千千-关键词”"><a href="#“-千千-关键词”" class="headerlink" title="“#千千 关键词”"></a>“#千千 关键词”</h2><p>搜索千千音乐（百度音乐）</p>]]></content>
     
     
       
@@ -232,9 +232,9 @@
     
     <category term="线上课答案库" scheme="https://w1ndys.github.io/tags/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%AD%94%E6%A1%88%E5%BA%93/"/>
     
-    <category term="智慧树知到" scheme="https://w1ndys.github.io/tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/"/>
-    
     <category term="刷课脚本" scheme="https://w1ndys.github.io/tags/%E5%88%B7%E8%AF%BE%E8%84%9A%E6%9C%AC/"/>
+    
+    <category term="智慧树知到" scheme="https://w1ndys.github.io/tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/"/>
     
   </entry>
   
