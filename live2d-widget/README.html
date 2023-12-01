@@ -51,6 +51,12 @@
 
 
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -218,7 +224,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="page.title"></span>
+            <span id="subtitle" data-typed-text="page.subtitle"></span>
           
         </div>
 
@@ -245,8 +251,19 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<article class="page-content">
-  <h1 id="Live2D-Widget"><a href="#Live2D-Widget" class="headerlink" title="Live2D Widget"></a>Live2D Widget</h1><p><img src="https://forthebadge.com/images/badges/built-with-love.svg"><br><img src="https://forthebadge.com/images/badges/uses-html.svg"><br><img src="https://forthebadge.com/images/badges/made-with-javascript.svg"><br><img src="https://forthebadge.com/images/badges/contains-cat-gifs.svg"><br><img src="https://forthebadge.com/images/badges/powered-by-electricity.svg"><br><img src="https://forthebadge.com/images/badges/makes-people-smile.svg"></p>
+<div class="text-center">
+  <div class="page-info">
+    <div class="page-name"></div>
+    <div class="page-intro"></div>
+    <div class="page-icons">
+      
+    </div>
+  </div>
+</div>
+
+<article class="page-content page-content mt-5">
+  <div class="markdown-body">
+    <h1 id="Live2D-Widget"><a href="#Live2D-Widget" class="headerlink" title="Live2D Widget"></a>Live2D Widget</h1><p><img src="https://forthebadge.com/images/badges/built-with-love.svg"><br><img src="https://forthebadge.com/images/badges/uses-html.svg"><br><img src="https://forthebadge.com/images/badges/made-with-javascript.svg"><br><img src="https://forthebadge.com/images/badges/contains-cat-gifs.svg"><br><img src="https://forthebadge.com/images/badges/powered-by-electricity.svg"><br><img src="https://forthebadge.com/images/badges/makes-people-smile.svg"></p>
 <p><a href="README.en.md">English</a></p>
 <h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>在网页中添加 Live2D 看板娘。兼容 PJAX，支持无刷新加载。</p>
 <p><img src="assets/screenshot-2.png" width="280"><img src="assets/screenshot-3.png" width="280"><img src="assets/screenshot-1.png" width="270"></p>
@@ -371,10 +388,34 @@
 <p>2020年1月1日起，本项目不再依赖于 jQuery。</p>
 <p>2022年11月1日起，本项目不再需要用户单独加载 Font Awesome。</p>
 
+  </div>
+
+  
+</article>
+
+
+
+
 
   
 
-</article>
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
 
 
 
@@ -478,6 +519,59 @@
 
 
 
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="../js/local-search.js" ></script>
 
