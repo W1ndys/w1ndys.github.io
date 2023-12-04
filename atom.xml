@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2023-11-30T15:19:06.589Z</updated>
+  <updated>2023-12-04T14:08:02.426Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python实现九宫格切割图片</title>
+    <link href="https://w1ndys.github.io/2023/12/04/python-1-to-9/"/>
+    <id>https://w1ndys.github.io/2023/12/04/python-1-to-9/</id>
+    <published>2023-12-04T14:02:29.041Z</published>
+    <updated>2023-12-04T14:08:02.426Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="克隆本项目"><a href="#克隆本项目" class="headerlink" title="克隆本项目"></a>克隆本项目</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/W1ndys/</span><span class="hljs-number">1</span>to9-image.git<br></code></pre></td></tr></table></figure><p>然后可以看到项目文件夹</p><p><img src="../img/Python/1-to-9/image-20231204220532722.png" srcset="/img/loading.gif" lazyload alt="image-20231204220532722"></p><h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><ol><li>把需要分割的图片复制进文件夹并且命名为 <code>input_image.jpg</code></li><li>在当前目录进命令行执行 <code>python 1.py</code></li><li>看到输出回显之后找 <code>output</code>文件夹就行</li></ol><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>本项目适用于长宽一致的正方形图片，分割最佳效果</p><p>其余比例不适合使用本项目</p><p>非常适合朋友圈九宫格切图</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;克隆本项目&quot;&gt;&lt;a href=&quot;#克隆本项目&quot; class=&quot;headerlink&quot; title=&quot;克隆本项目&quot;&gt;&lt;/a&gt;克隆本项目&lt;/h4&gt;&lt;figure class=&quot;highlight awk&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Python" scheme="https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Python/"/>
+    
+    
+    <category term="Python小工具" scheme="https://w1ndys.github.io/tags/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Python脚本" scheme="https://w1ndys.github.io/tags/Python%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
@@ -543,23 +571,6 @@
     
     
     <category term="数据结构作业" scheme="https://w1ndys.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用电脑浏览获得更佳体验</title>
-    <link href="https://w1ndys.github.io/2023/10/29/upupup/"/>
-    <id>https://w1ndys.github.io/2023/10/29/upupup/</id>
-    <published>2023-10-29T08:39:48.736Z</published>
-    <updated>2023-11-03T11:20:52.350Z</updated>
-    
-    
-    
-    
-    <category term="随笔" scheme="https://w1ndys.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随笔" scheme="https://w1ndys.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
