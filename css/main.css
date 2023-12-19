@@ -36,7 +36,7 @@ h6:hover > .anchorjs-link {
     margin-top: -1rem !important;
   }
 }
-@media (max-width: 49.99vh) {
+@media (max-width: 59.99vh) {
   .scroll-down-bar {
     display: none;
   }
