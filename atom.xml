@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>W1ndysの小屋</title>
-  <icon>https://www.gravatar.com/avatar/35d8b83bb6ad9bce76c0b476a582c5cd</icon>
+  <icon>https://www.gravatar.com/avatar/e816d21ed3bf42ec40aacb363b0f1e86</icon>
   <subtitle>W1ndys’s blog</subtitle>
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>W1ndys</name>
-    <email>w2769731875@qq.com</email>
+    <email>w1ndys@163.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
