@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2023-12-21T11:53:01.777Z</updated>
+  <updated>2023-12-21T12:56:16.932Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://w1ndys.github.io/2023/12/21/ZYH_Graph/"/>
     <id>https://w1ndys.github.io/2023/12/21/ZYH_Graph/</id>
     <published>2023-12-21T11:49:56.938Z</published>
-    <updated>2023-12-21T11:53:01.777Z</updated>
+    <updated>2023-12-21T12:56:16.932Z</updated>
     
-    <content type="html"><![CDATA[<p>测试文件</p><p> <a href="%5Cfiles%5Cinst_2.exe">inst_2.exe</a> </p>]]></content>
+    <content type="html"><![CDATA[<p>测试文件</p><p> <a href="/files/inst_2.exe">inst_2.exe</a> </p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;测试文件&lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;%5Cfiles%5Cinst_2.exe&quot;&gt;inst_2.exe&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;/files/inst_2.exe&quot;&gt;inst_2.exe&lt;/a&gt; &lt;/p&gt;
 </summary>
       
     
