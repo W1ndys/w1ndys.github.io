@@ -1,0 +1,791 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/about/icon.jpg">
+  <link rel="icon" href="../../../../img/about/icon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="W1ndys">
+  <meta name="keywords" content="W1ndys">
+  
+    <meta name="description" content="Hexo 注入器Hexo 注入器是 Hexo 5 版本自身加入的一项新功能，所以在所有 Hexo 主题都是支持这个功能的。 该注入器可以将 HTML 片段注入生成页面的 &lt;head&gt; 和 &lt;body&gt; 节点中。 编写注入代码，需要在博客的根目录下创建 scripts 文件夹，然后在里面任意命名创建一个 js 文件即可。 例如创建一个 &#x2F;blog&#x2F;scripts&#x2F;exampl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过 Hexo 5 注入器为主题添加新功能">
+<meta property="og:url" content="https://w1ndys.github.io/2023/09/13/hexoV5_injector/index.html">
+<meta property="og:site_name" content="W1ndysの小屋">
+<meta property="og:description" content="Hexo 注入器Hexo 注入器是 Hexo 5 版本自身加入的一项新功能，所以在所有 Hexo 主题都是支持这个功能的。 该注入器可以将 HTML 片段注入生成页面的 &lt;head&gt; 和 &lt;body&gt; 节点中。 编写注入代码，需要在博客的根目录下创建 scripts 文件夹，然后在里面任意命名创建一个 js 文件即可。 例如创建一个 &#x2F;blog&#x2F;scripts&#x2F;exampl">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-13T15:35:18.607Z">
+<meta property="article:modified_time" content="2023-09-30T12:05:02.947Z">
+<meta property="article:author" content="W1ndys">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>通过 Hexo 5 注入器为主题添加新功能 - W1ndysの小屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="../../../../css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"w1ndys.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="../../../../js/utils.js" ></script>
+  <script  src="../../../../js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start --><link rel="stylesheet" href="/css/mouse.css" /><link rel="stylesheet" href="/css/scrollAnimation.css" /><link rel="stylesheet" href="/css/scrollbar.css" /><link rel="stylesheet" href="/css/cloudedGlass.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="W1ndysの小屋" type="application/atom+xml">
+</head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="../../../../index.html">
+      <strong>欲戴皇冠，必承其重</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../index.html" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('../../../../img/bg/bg2.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="通过 Hexo 5 注入器为主题添加新功能"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-13 23:35" pubdate>
+           2023年09月13日23:35
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          共1.1k字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          阅读本文预计10分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          浏览<span id="busuanzi_value_page_pv"></span>次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">通过 Hexo 5 注入器为主题添加新功能</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于： 2023年09月30日20:05
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Hexo-注入器"><a href="#Hexo-注入器" class="headerlink" title="Hexo 注入器"></a>Hexo 注入器</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/api/injector.html">Hexo 注入器</a>是 Hexo 5 版本自身加入的一项新功能，所以在所有 Hexo 主题都是支持这个功能的。</p>
+<p>该注入器可以将 HTML 片段注入生成页面的 <code>&lt;head&gt;</code> 和 <code>&lt;body&gt;</code> 节点中。</p>
+<p>编写注入代码，需要在博客的根目录下创建 <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</p>
+<p>例如创建一个 <code>/blog/scripts/example.js</code>，内容为：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml">hexo.extend.injector.register(&#x27;body_end&#x27;, &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/jquery.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>&#x27;, &#x27;default&#x27;);<br><br>JAVASCRIPT<br></code></pre></td></tr></table></figure>
+
+<p>上述代码会在生成的页面 <code>&lt;/body&gt;</code> 注入加载 <code>jquery.js</code> 的代码。</p>
+<p><code>register</code> 函数可接受三个参数，第一个参数是代码片段注入的位置，接受以下值：<br>- <code>head_begin</code>: 注入在 <code>&lt;head&gt;</code> 之后（默认）<br>- <code>head_end</code>: 注入在 <code>&lt;/head&gt;</code> 之前<br>- <code>body_begin</code>: 注入在 <code>&lt;body&gt;</code> 之后<br>- <code>body_end</code>: 注入在 <code>&lt;/body&gt;</code> 之前</p>
+<p>第二个参数是注入的片段，可以是字符串，也可以是一个返回值为字符串的函数。</p>
+<p>第三个参数是注入的页面类型，接受以下值：<br>- <code>default</code>: 注入到每个页面（默认值）<br>- <code>home</code>: 只注入到主页（<code>is_home()</code> 为 <code>true</code> 的页面）<br>- <code>post</code>: 只注入到文章页面（<code>is_post()</code> 为 <code>true</code> 的页面）<br>- <code>page</code>: 只注入到独立页面（<code>is_page()</code> 为 <code>true</code> 的页面）<br>- <code>archive</code>: 只注入到归档页面（<code>is_archive()</code> 为 <code>true</code> 的页面）<br>- <code>category</code>: 只注入到分类页面（<code>is_category()</code> 为 <code>true</code> 的页面）<br>- <code>tag</code>: 只注入到标签页面（<code>is_tag()</code> 为 <code>true</code> 的页面）<br>- 或是其他自定义 layout 名称，例如在Fluid 主题中 <code>about</code> 对应关于页、<code>links</code> 对应友联页</p>
+<h2 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h2><p>在实际使用中，建议将 js 代码独立成为 js 文件，存放在博客的 <code>source</code> 目录下，然后在 <code>scripts</code> 里通过一个包含 injector 的 js 文件统一引入。</p>
+<p>例如创建一个 <code>/source/js/custom.js</code>，里面包含初始化的代码，然后在 <code>/scripts/injector.js</code> 里写入：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">hexo<span class="hljs-selector-class">.extend</span><span class="hljs-selector-class">.injector</span><span class="hljs-selector-class">.register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>, `<br>  &lt;script <span class="hljs-attribute">src</span>=<span class="hljs-string">&quot;/js/custom.js&quot;</span>&gt;&lt;/script&gt;<br>`)<br><br>JAVASCRIPT<br></code></pre></td></tr></table></figure>
+
+<p>以下案例都采用类似的形式，不再赘述。</p>
+<h3 id="APlayer-音乐播放器"><a href="#APlayer-音乐播放器" class="headerlink" title="APlayer 音乐播放器"></a>APlayer 音乐播放器</h3><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs xquery">hexo.extend.injector.register(<span class="hljs-string">&#x27;body_end&#x27;</span>, `<br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aplayer&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  &lt;link defer rel=<span class="hljs-string">&quot;stylesheet&quot;</span> href=<span class="hljs-string">&quot;https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css&quot;</span> /&gt;<br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br>  &lt;script defer src=<span class="hljs-string">&quot;/js/aplayer.js&quot;</span>&gt;&lt;/script&gt;<br>`);<br><br>JAVASCRIPT<br>!(<span class="hljs-keyword">function</span>() &#123;<br>  var oldLoadAp = <span class="hljs-keyword">window</span>.onload;<br>  <span class="hljs-keyword">window</span>.onload = <span class="hljs-keyword">function</span> () &#123;<br>    oldLoadAp &amp;&amp; oldLoadAp();<br><br>    new APlayer(&#123;<br>      container:<span class="hljs-built_in"> document</span>.getElementById(<span class="hljs-string">&#x27;aplayer&#x27;</span>),<br>      fixed:<span class="hljs-built_in"> true</span>,<br>      autoplay:<span class="hljs-built_in"> false</span>,<br>      loop: <span class="hljs-string">&#x27;all&#x27;</span>,<br>      order: <span class="hljs-string">&#x27;random&#x27;</span>,<br>      theme: <span class="hljs-string">&#x27;#b7daff&#x27;</span>,<br>      preload: <span class="hljs-string">&#x27;none&#x27;</span>,<br>      audio: [<br>        &#123;<br>         <span class="hljs-built_in"> name</span>: <span class="hljs-string">&#x27;song1&#x27;</span>,<br>          artist: <span class="hljs-string">&#x27;artist1&#x27;</span>,<br>          url: <span class="hljs-string">&#x27;/songs/song1.mp3&#x27;</span>,<br>          cover: <span class="hljs-string">&#x27;/img/cover.jpg&#x27;</span><br>        &#125;<br>      ]<br>    &#125;);<br>  &#125;<br>&#125;)();<br><br>JAVASCRIPT<br></code></pre></td></tr></table></figure>
+
+<p>更多参数详见 <a target="_blank" rel="noopener" href="https://aplayer.js.org/#/zh-Hans/?id=%E5%8F%82%E6%95%B0">Aplayer 文档</a>。</p>
+<h3 id="DaoVoice-聊天插件"><a href="#DaoVoice-聊天插件" class="headerlink" title="DaoVoice 聊天插件"></a>DaoVoice 聊天插件</h3><p>先在 <a target="_blank" rel="noopener" href="https://daovoice.io/">https://daovoice.io</a> 注册一个账号，按其中的引导获得 appId，然后添加如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs javascript">hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>, <span class="hljs-string">`</span><br><span class="hljs-string">  &lt;script defer src=&quot;/js/daovoice.js&quot;&gt;&lt;/script&gt;</span><br><span class="hljs-string">`</span>);<br><br><span class="hljs-variable constant_">XML</span><br>!(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">var</span> appId = <span class="hljs-string">&#x27;这里填上注册后账号的 appId&#x27;</span>;<br><br>  (<span class="hljs-keyword">function</span> (<span class="hljs-params">i, s, o, g, r, a, m</span>) &#123;  <br>    i[<span class="hljs-string">&#x27;DaoVoiceObject&#x27;</span>] = r;<br>    i[r] = i[r] ||<br>      <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>        (i[r].<span class="hljs-property">q</span> = i[r].<span class="hljs-property">q</span> || []).<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">arguments</span>);<br>      &#125;;<br>    i[r].<span class="hljs-property">l</span> = <span class="hljs-number">1</span> * <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>    a = s.<span class="hljs-title function_">createElement</span>(o);<br>    m = s.<span class="hljs-title function_">getElementsByTagName</span>(o)[<span class="hljs-number">0</span>];<br>    a.<span class="hljs-property">async</span> = <span class="hljs-number">1</span>;<br>    a.<span class="hljs-property">src</span> = g;<br>    a.<span class="hljs-property">charset</span> = <span class="hljs-string">&#x27;utf-8&#x27;</span>;<br>    m.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">insertBefore</span>(a, m);<br>  &#125;)(<span class="hljs-variable language_">window</span>, <span class="hljs-variable language_">document</span>, <span class="hljs-string">&#x27;script&#x27;</span>, (<span class="hljs-string">&#x27;https:&#x27;</span> === <span class="hljs-variable language_">document</span>.<span class="hljs-property">location</span>.<span class="hljs-property">protocol</span> ? <span class="hljs-string">&#x27;https:&#x27;</span> : <span class="hljs-string">&#x27;http:&#x27;</span>) + <span class="hljs-string">&#x27;//widget.daovoice.io/widget/&#x27;</span> + appId + <span class="hljs-string">&#x27;.js&#x27;</span>, <span class="hljs-string">&#x27;daovoice&#x27;</span>);<br>  <span class="hljs-title function_">daovoice</span>(<span class="hljs-string">&#x27;init&#x27;</span>, &#123;<br>    <span class="hljs-attr">app_id</span>: appId,<br>  &#125;);<br>  <span class="hljs-title function_">daovoice</span>(<span class="hljs-string">&#x27;update&#x27;</span>);<br>&#125;)();<br><br><span class="hljs-variable constant_">JAVASCRIPT</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="文章时效性提示"><a href="#文章时效性提示" class="headerlink" title="文章时效性提示"></a>文章时效性提示</h3><p>技术性文章往往存在时效性的问题，比如某些文章会介绍一些临时解决方案，但随着时间推移可能已经失效了。我们可以通过判断发布时间（即文章设置的 <code>date</code>）与当前时间的间隔，来为文章开头插入一条提示。</p>
+<p>代码效果如下所示：</p>
+<p>文章时效性提示</p>
+<p>这是一篇发布于 263 天前的文章，部分信息可能已发生改变，请注意甄别。</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs scheme">(<span class="hljs-name">function</span>() &#123;<br>  var times = document.getElementsByTagName(<span class="hljs-symbol">&#x27;time</span>&#x27;)<span class="hljs-comment">;</span><br>  if (<span class="hljs-name">times.length</span> === <span class="hljs-number">0</span>) &#123; return<span class="hljs-comment">; &#125;</span><br>  var posts = document.getElementsByClassName(<span class="hljs-symbol">&#x27;post-content</span>&#x27;)<span class="hljs-comment">;</span><br>  if (<span class="hljs-name">posts.length</span> === <span class="hljs-number">0</span>) &#123; return<span class="hljs-comment">; &#125;</span><br><br>  var pubTime = new Date(<span class="hljs-name">times</span>[<span class="hljs-name">0</span>].dateTime)<span class="hljs-comment">;  /* 文章发布时间戳 */</span><br>  var now = Date.now()  /* 当前时间戳 */<br>  var interval = parseInt(<span class="hljs-name">now</span> - pubTime)<br>  /* 发布时间超过指定时间（毫秒） */<br>  if (<span class="hljs-name">interval</span> &gt; <span class="hljs-number">3600</span>*24*30*1000)&#123;<br>    var days = parseInt(<span class="hljs-name">interval</span> / <span class="hljs-number">86400000</span>)<br>    posts[<span class="hljs-name">0</span>].innerHTML = <span class="hljs-symbol">&#x27;&lt;div</span> class=<span class="hljs-string">&quot;note note-warning&quot;</span> style=<span class="hljs-string">&quot;font-size:0.9rem&quot;</span>&gt;&lt;p&gt;&#x27; +<br>      <span class="hljs-symbol">&#x27;&lt;div</span> class=<span class="hljs-string">&quot;h6&quot;</span>&gt;文章时效性提示&lt;/div&gt;&lt;p&gt;这是一篇发布于 &#x27; + days + &#x27; 天前的文章，部分信息可能已发生改变，请注意甄别。&#x27; +<br>      <span class="hljs-symbol">&#x27;&lt;/p&gt;&lt;/p&gt;&lt;/div&gt;</span>&#x27; + posts[<span class="hljs-name">0</span>].innerHTML<span class="hljs-comment">;</span><br>  &#125;<br>&#125;)()<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="../../../../categories/hexo/" class="category-chain-item">hexo</a>
+  
+  
+    <span>></span>
+    
+  <a href="../../../../categories/hexo/%E7%94%A8%E6%B3%95/" class="category-chain-item">用法</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="../../../../tags/hexo/" class="print-no-link">#hexo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>通过 Hexo 5 注入器为主题添加新功能</div>
+      <div>https://w1ndys.github.io/2023/09/13/hexoV5_injector/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>W1ndys</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年9月13日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年9月30日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="../../15/CTF_easy_web/" title="CTF入门指北——web">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CTF入门指北——web</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="../hexo_tags_and_categories/" title="hexo博客中tags与categories用法">
+                        <span class="hidden-mobile">hexo博客中tags与categories用法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://pl.w1ndys.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://qm.qq.com/q/ADHohOYwRa" target="_blank" rel="nofollow noopener"><span>W1ndys</span></a> <i class="iconfont icon-love"></i> <a href="https://qm.qq.com/q/ADHohOYwRa" target="_blank" rel="nofollow noopener"><span>hexo-fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> Copyright© 2023 All Rights Reserved. W1ndys 版权所有 <br/> <img style="width:32px;height:32px;margin-bottom:-8px" src="https://icp.gov.moe/images/ico64.png"> <a href="https://icp.gov.moe/?keyword=20238661" target="_blank">萌ICP备20238661号</a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="../../../../js/events.js" ></script>
+<script  src="../../../../js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="../../../../js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="../../../../js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="../../../../js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><script src="/js/love.js"></script><script src="/js/biao_qian_e_gao.js"></script><script src="/js/mouse_moving.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script src="/live2d-widget/autoload.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" /><script src="/js/scrollAnimation.js"></script><!-- hexo injector body_end end --></body>
+</html>
