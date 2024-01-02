@@ -22,9 +22,8 @@
 
     #container {
       width: 90%;
-      /* 调整容器宽度为90% */
       max-width: 800px;
-      /* 调整最大宽度 */
+      margin: 0 auto;
     }
 
     #menu {
@@ -33,22 +32,18 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 40px;
-      /* 调整内边距 */
       text-align: center;
       margin: 0 auto 40px auto;
       font-size: 18px;
-      /* 增大字体大小 */
     }
 
     h2 {
       font-size: 28px;
-      /* 增大标题字体大小 */
       color: #333;
     }
 
     button {
       font-size: 20px;
-      /* 增大按钮字体大小 */
       padding: 10px 20px;
       background-color: #4caf50;
       color: #fff;
@@ -64,7 +59,6 @@
 
     p {
       font-size: 20px;
-      /* 增大段落字体大小 */
       margin-top: 20px;
       color: #333;
     }
@@ -105,6 +99,23 @@
 
     .btn:hover {
       background-color: #0056b3;
+    }
+
+    /* 媒体查询 */
+    @media only screen and (max-width: 600px) {
+      #menu {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      button {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+      p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
