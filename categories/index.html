@@ -63,7 +63,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"w1ndys.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"w1ndys.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"8c7326176e483fbc8a95647447c4fcea","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -73,6 +73,46 @@
   <script  src="../js/utils.js" ></script>
   <script  src="../js/color-schema.js" ></script>
   
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8c7326176e483fbc8a95647447c4fcea";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -765,48 +805,6 @@
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="在线计算工具"
-        id="heading-c0895a651d9200c5dabf12a7529c2092" role="tab" data-toggle="collapse" href="#collapse-c0895a651d9200c5dabf12a7529c2092"
-        aria-expanded="false"
-      >
-        在线计算工具
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-c0895a651d9200c5dabf12a7529c2092"
-           role="tabpanel" aria-labelledby="heading-c0895a651d9200c5dabf12a7529c2092">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="../2023/08/30/%E5%A4%A7%E4%BA%8C%E8%AF%BE%E7%A8%8B%E5%B8%B8%E7%94%A8%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/" title="常用在线计算工具"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">常用在线计算工具</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="英语作业"
         id="heading-8c59a2b4c266c6debbebc2009d74074e" role="tab" data-toggle="collapse" href="#collapse-8c59a2b4c266c6debbebc2009d74074e"
         aria-expanded="false"
@@ -1033,6 +1031,48 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">提问的智慧</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="在线计算工具"
+        id="heading-c0895a651d9200c5dabf12a7529c2092" role="tab" data-toggle="collapse" href="#collapse-c0895a651d9200c5dabf12a7529c2092"
+        aria-expanded="false"
+      >
+        在线计算工具
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-c0895a651d9200c5dabf12a7529c2092"
+           role="tabpanel" aria-labelledby="heading-c0895a651d9200c5dabf12a7529c2092">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="../2023/08/30/%E5%A4%A7%E4%BA%8C%E8%AF%BE%E7%A8%8B%E5%B8%B8%E7%94%A8%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/" title="常用在线计算工具"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常用在线计算工具</span>
         </a>
       
     
@@ -2645,48 +2685,6 @@
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="国家安全教育"
-        id="heading-6e3210921201038360dda2c79a426b43" role="tab" data-toggle="collapse" href="#collapse-6e3210921201038360dda2c79a426b43"
-        aria-expanded="false"
-      >
-        国家安全教育
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%AD%94%E6%A1%88/%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A/%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E6%95%99%E8%82%B2/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-6e3210921201038360dda2c79a426b43"
-           role="tabpanel" aria-labelledby="heading-6e3210921201038360dda2c79a426b43">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="../2023/11/03/xxt_answer_gjaqjy/" title="当代大学生国家安全教育___2023章节测试答案超星尔雅"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">当代大学生国家安全教育___2023章节测试答案超星尔雅</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="刷课脚本"
         id="heading-8be9ce6c517390c90ebb902c7614e209" role="tab" data-toggle="collapse" href="#collapse-8be9ce6c517390c90ebb902c7614e209"
         aria-expanded="false"
@@ -2715,6 +2713,48 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">超星学习通/刷课脚本安装教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="国家安全教育"
+        id="heading-6e3210921201038360dda2c79a426b43" role="tab" data-toggle="collapse" href="#collapse-6e3210921201038360dda2c79a426b43"
+        aria-expanded="false"
+      >
+        国家安全教育
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%AD%94%E6%A1%88/%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A/%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E6%95%99%E8%82%B2/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-6e3210921201038360dda2c79a426b43"
+           role="tabpanel" aria-labelledby="heading-6e3210921201038360dda2c79a426b43">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="../2023/11/03/xxt_answer_gjaqjy/" title="当代大学生国家安全教育___2023章节测试答案超星尔雅"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">当代大学生国家安全教育___2023章节测试答案超星尔雅</span>
         </a>
       
     
