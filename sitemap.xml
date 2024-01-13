@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://w1ndys.github.io/2024/01/09/QFNU_JiaTiao/</loc>
+    
+    <lastmod>2024-01-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://w1ndys.github.io/2023/09/01/QFNU_Course_Selection_Guide_North/</loc>
     
     <lastmod>2024-01-13</lastmod>
@@ -767,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/live2d-widget/README.en.html</loc>
+    <loc>https://w1ndys.github.io/live2d-widget/README.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -776,7 +785,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/live2d-widget/README.html</loc>
+    <loc>https://w1ndys.github.io/live2d-widget/README.en.html</loc>
     
     <lastmod>2023-08-26</lastmod>
     
@@ -812,14 +821,14 @@
 
   
   <url>
-    <loc>https://w1ndys.github.io/tags/QFNU/</loc>
+    <loc>https://w1ndys.github.io/tags/C/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/C/</loc>
+    <loc>https://w1ndys.github.io/tags/QFNU/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -861,14 +870,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/</loc>
+    <loc>https://w1ndys.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/</loc>
+    <loc>https://w1ndys.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -904,6 +913,13 @@
   
   <url>
     <loc>https://w1ndys.github.io/tags/%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1%E6%89%AB%E6%8F%8F%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://w1ndys.github.io/tags/%E9%80%86%E5%90%91%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -952,14 +968,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/%E5%86%85%E5%BF%83%E6%B7%B1%E5%A4%84%E7%9A%84%E5%91%90%E5%96%8A-%E3%80%8A%E6%8B%A3%E7%88%B1%E3%80%8B/</loc>
+    <loc>https://w1ndys.github.io/tags/W1ndys%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/W1ndys%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://w1ndys.github.io/tags/%E5%86%85%E5%BF%83%E6%B7%B1%E5%A4%84%E7%9A%84%E5%91%90%E5%96%8A-%E3%80%8A%E6%8B%A3%E7%88%B1%E3%80%8B/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1015,13 +1031,6 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/</loc>
-    <lastmod>2024-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://w1ndys.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1029,7 +1038,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <loc>https://w1ndys.github.io/tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1042,17 +1051,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://w1ndys.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://w1ndys.github.io/categories/QFNU/</loc>
+    <loc>https://w1ndys.github.io/categories/C/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/C/</loc>
+    <loc>https://w1ndys.github.io/categories/QFNU/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1080,7 +1096,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1088,13 +1104,6 @@
   
   <url>
     <loc>https://w1ndys.github.io/categories/CTF/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://w1ndys.github.io/categories/CTF/MISC/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1122,7 +1131,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1150,6 +1159,13 @@
   </url>
   
   <url>
+    <loc>https://w1ndys.github.io/categories/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1157,7 +1173,7 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/MISC/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1185,14 +1201,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/WP/RE/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/WP/RE/</loc>
+    <loc>https://w1ndys.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1220,14 +1236,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/CTF/WP/%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%A7%91%E6%9D%A5%E6%9D%AF/</loc>
+    <loc>https://w1ndys.github.io/categories/%E6%96%87/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E6%96%87/</loc>
+    <loc>https://w1ndys.github.io/categories/CTF/WP/%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%A7%91%E6%9D%A5%E6%9D%AF/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1248,6 +1264,13 @@
   </url>
   
   <url>
+    <loc>https://w1ndys.github.io/categories/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B/ChatGPT/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://w1ndys.github.io/categories/Linux/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1256,27 +1279,6 @@
   
   <url>
     <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2024-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</loc>
-    <lastmod>2024-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F/</loc>
-    <lastmod>2024-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://w1ndys.github.io/categories/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B/ChatGPT/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1311,6 +1313,13 @@
   </url>
   
   <url>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1339,14 +1348,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1%E6%89%AB%E6%8F%8F%E5%AE%9E%E9%AA%8C/</loc>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%93%B2%E5%AD%A6/</loc>
+    <loc>https://w1ndys.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1%E6%89%AB%E6%8F%8F%E5%AE%9E%E9%AA%8C/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1375,6 +1384,20 @@
   
   <url>
     <loc>https://w1ndys.github.io/categories/hexo/%E7%94%A8%E6%B3%95/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1430,14 +1453,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/%E8%A7%86%E5%90%AC%E8%AF%B4%E7%AD%94%E6%A1%88/</loc>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/u%E6%A0%A1%E5%9B%AD%E7%AD%94%E6%A1%88/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/u%E6%A0%A1%E5%9B%AD%E7%AD%94%E6%A1%88/</loc>
+    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E7%AD%94%E6%A1%88/%E8%A7%86%E5%90%AC%E8%AF%B4%E7%AD%94%E6%A1%88/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1465,14 +1488,14 @@
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/Linux/kali/%E5%88%87%E6%8D%A2%E6%BA%90/</loc>
+    <loc>https://w1ndys.github.io/categories/Linux/kali/john/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://w1ndys.github.io/categories/Linux/kali/john/</loc>
+    <loc>https://w1ndys.github.io/categories/Linux/kali/%E5%88%87%E6%8D%A2%E6%BA%90/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1508,13 +1531,6 @@
   
   <url>
     <loc>https://w1ndys.github.io/categories/Windows/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/</loc>
-    <lastmod>2024-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
