@@ -1,452 +1,259 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=dark>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/about/icon.jpg">
-  <link rel="icon" href="../../../img/about/icon.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="W1ndys">
-  <meta name="keywords" content="W1ndys">
-  
-    <meta name="description" content="欲戴皇冠，必承其重">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>分类: 逆向工程 | W1ndysの小屋</title><meta name="author" content="W1ndys,w1ndys@outlook.com"><meta name="copyright" content="W1ndys"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欲戴皇冠，必承其重">
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类 - 逆向工程">
+<meta property="og:title" content="W1ndysの小屋">
 <meta property="og:url" content="https://w1ndys.github.io/categories/CTF/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">
 <meta property="og:site_name" content="W1ndysの小屋">
 <meta property="og:description" content="欲戴皇冠，必承其重">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://q1.qlogo.cn/g?b=qq&nk=2769731875&s=640">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="W1ndys">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>分类 - 逆向工程 - W1ndysの小屋</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="../../../css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"w1ndys.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"8c7326176e483fbc8a95647447c4fcea","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="../../../js/utils.js" ></script>
-  <script  src="../../../js/color-schema.js" ></script>
-  
-
-  
-    <!-- Baidu Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?8c7326176e483fbc8a95647447c4fcea";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-        })();
-      }
-    </script>
-  
-
-  
-    <!-- Google tag (gtag.js) -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://q1.qlogo.cn/g?b=qq&nk=2769731875&s=640"><link rel="shortcut icon" href="../../../img/favicon.png"><link rel="canonical" href="https://w1ndys.github.io/categories/CTF/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="G2rPpjA8qhdAQYUqgC3WTFeaOfenZ71SWXKcg_WnOSk"/><meta name="baidu-site-verification" content="codeva-aOqC7Xsihf"/><link rel="stylesheet" href="../../../css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8c7326176e483fbc8a95647447c4fcea";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-P9PRP64Q47"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-P9PRP64Q47');
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "kmd11rvmc3");</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":90,"position":"top","messagePrev":"这篇文章已经有","messageNext":"天没有更新了，请注意甄别时效性，可能有部分已失效"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: W1ndys","link":"链接: ","source":"来源: W1ndysの小屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '分类: 逆向工程',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-01-16 03:20:24'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
           }
-          gtag('js', new Date());
-          gtag('config', '');
-        });
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
       }
-    </script>
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-<!-- hexo injector head_end start --><link rel="stylesheet" href="/css/mouse.css" /><link rel="stylesheet" href="/css/cloudedGlass.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="W1ndysの小屋" type="application/atom+xml">
-</head>
-
-
-<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
-  
-
-  <header>
     
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-<div class="header-inner" style="height: 60vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="../../../index.html">
-      <strong>欲戴皇冠，必承其重</strong>
-    </a>
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="https://w1ndys.top/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../html/eat_what.html" target="_self">
-                <i class="iconfont/SVG/餐饮.svg"></i>
-                <span>吃啥</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('../../../img/bg/China2.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="分类 - 逆向工程"></span>
-          
-        </div>
-
-        
-      </div>
-
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
       
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-  
-    
-      
-      <p class="h5">2023</p>
-    
-    <a href="../../../posts/c1e61dd7.html" class="list-group-item list-group-item-action">
-      <time>10-19</time>
-      <div class="list-group-item-title">CTF逆向零碎知识点合集</div>
-    </a>
-  
-</div>
-
-
-
-
-
-              </div>
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/mouse.css" /><link rel="stylesheet" href="/css/cloudedGlass.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="atom.xml" title="W1ndysの小屋" type="application/atom+xml">
+</head><body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end --><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=2769731875&amp;s=640" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">78</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">68</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="../index.html" title="W1ndysの小屋"><img class="site-icon" src="../img/about/icon.jpg"/><span class="site-name">W1ndysの小屋</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="category"><div class="article-sort-title">分类 - 逆向工程</div><div class="article-sort"><div class="article-sort-item year">2023</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-10-19T14:41:00.000Z" title="发表于 2023-10-19 22:41:00">2023-10-19</time></div><a class="article-sort-item-title" href="../../../posts/c1e61dd7.html" title="CTF逆向零碎知识点合集">CTF逆向零碎知识点合集</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=2769731875&amp;s=640" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">W1ndys</div><div class="author-info__description">欲戴皇冠，必承其重</div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">78</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">68</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/W1ndys"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="../img/about/qq.png" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="../mailto:w1ndys@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/6cb5ad08.html" title="从应用内存上来研究智慧曲园模拟请假条">从应用内存上来研究智慧曲园模拟请假条</a><time datetime="2024-01-09T06:32:00.000Z" title="发表于 2024-01-09 14:32:00">2024-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/32e2a4f7.html" title="记录我的2023年">记录我的2023年</a><time datetime="2023-12-31T13:58:00.000Z" title="发表于 2023-12-31 21:58:00">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/2495f19d.html" title="怎样理解离散数学中的自反 反自反 对称 反对称与传递？">怎样理解离散数学中的自反 反自反 对称 反对称与传递？</a><time datetime="2023-12-30T08:12:00.000Z" title="发表于 2023-12-30 16:12:00">2023-12-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/72e47f4f.html" title="本博客免责声明">本博客免责声明</a><time datetime="2023-12-23T04:56:00.000Z" title="发表于 2023-12-23 12:56:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/f286f4f8.html" title="手把手教你注册Google账号">手把手教你注册Google账号</a><time datetime="2023-12-22T16:58:00.000Z" title="发表于 2023-12-23 00:58:00">2023-12-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="../categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
             </div>
-          </div>
-        </div>
-      </div>
-    
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="../categories/C/"><span class="card-category-list-name">C++</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/C/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"><span class="card-category-list-name">常用代码</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/C/%E7%B1%BB/"><span class="card-category-list-name">类</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/CTF/"><span class="card-category-list-name">CTF</span><span class="card-category-list-count">18</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/CTF/CTF%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/"><span class="card-category-list-name">CTF入门指北</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/CTF/CTF%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">CTF学习日记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/CTF/MISC/"><span class="card-category-list-name">MISC</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/CTF/WP/"><span class="card-category-list-name">WP</span><span class="card-category-list-count">5</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="../tags/C/" style="font-size: 1.2em; color: rgb(92, 132, 70)">C++</a><a href="../tags/CTF/" style="font-size: 1.45em; color: rgb(55, 31, 19)">CTF</a><a href="../tags/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81/" style="font-size: 1.2em; color: rgb(84, 180, 103)">技能兴鲁</a><a href="../tags/CTF%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/" style="font-size: 1.15em; color: rgb(43, 68, 129)">CTF学习日记</a><a href="../tags/QQbot/" style="font-size: 1.35em; color: rgb(123, 160, 22)">QQbot</a><a href="../tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/" style="font-size: 1.4em; color: rgb(98, 166, 111)">数据结构作业</a><a href="../tags/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.15em; color: rgb(65, 21, 156)">Python小工具</a><a href="../tags/Python%E8%84%9A%E6%9C%AC/" style="font-size: 1.15em; color: rgb(132, 188, 88)">Python脚本</a><a href="../tags/Linux/" style="font-size: 1.25em; color: rgb(157, 135, 101)">Linux</a><a href="../tags/hexo/" style="font-size: 1.2em; color: rgb(72, 62, 7)">hexo</a><a href="../tags/%E7%A7%91%E6%9D%A5%E6%9D%AF/" style="font-size: 1.2em; color: rgb(154, 154, 114)">科来杯</a><a href="../tags/%E5%86%85%E5%BF%83%E6%B7%B1%E5%A4%84%E7%9A%84%E5%91%90%E5%96%8A-%E3%80%8A%E6%8B%A3%E7%88%B1%E3%80%8B/" style="font-size: 1.15em; color: rgb(179, 70, 51)">内心深处的呐喊-《拣爱》</a><a href="../tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 1.2em; color: rgb(9, 129, 66)">学习笔记</a><a href="../tags/%E6%96%87%E6%A1%88/" style="font-size: 1.2em; color: rgb(182, 191, 113)">文案</a><a href="../tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 1.15em; color: rgb(31, 97, 163)">计算机</a><a href="../tags/%E6%96%87/" style="font-size: 1.3em; color: rgb(13, 13, 151)">文</a><a href="../tags/%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/" style="font-size: 1.15em; color: rgb(128, 145, 161)">网站收录</a><a href="../tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.3em; color: rgb(83, 173, 29)">随笔</a><a href="../tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 1.3em; color: rgb(44, 99, 198)">英语</a><a href="../tags/QFNU/" style="font-size: 1.3em; color: rgb(152, 45, 108)">QFNU</a><a href="../tags/%E9%80%86%E5%90%91%E6%8A%80%E6%9C%AF/" style="font-size: 1.15em; color: rgb(46, 122, 162)">逆向技术</a><a href="../tags/Windows%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 1.25em; color: rgb(66, 66, 44)">Windows技术分享</a><a href="../tags/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%AD%94%E6%A1%88%E5%BA%93/" style="font-size: 1.25em; color: rgb(103, 158, 153)">线上课答案库</a><a href="../tags/%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A/" style="font-size: 1.2em; color: rgb(199, 154, 193)">超星学习通</a><a href="../tags/%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E6%95%99%E8%82%B2/" style="font-size: 1.15em; color: rgb(194, 66, 24)">国家安全教育</a><a href="../tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 1.15em; color: rgb(176, 94, 22)">离散数学</a><a href="../tags/%E7%90%86/" style="font-size: 1.15em; color: rgb(147, 68, 84)">理</a><a href="../tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/" style="font-size: 1.25em; color: rgb(148, 194, 154)">手把手教程系列</a><a href="../tags/%E6%99%BA%E6%85%A7%E6%A0%91%E7%9F%A5%E5%88%B0/" style="font-size: 1.15em; color: rgb(50, 6, 76)">智慧树知到</a><a href="../tags/%E5%88%B7%E8%AF%BE%E8%84%9A%E6%9C%AC/" style="font-size: 1.2em; color: rgb(88, 10, 160)">刷课脚本</a><a href="../tags/%E7%A1%95%E7%A5%9E/" style="font-size: 1.15em; color: rgb(144, 115, 72)">硕神</a><a href="../tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.15em; color: rgb(24, 129, 169)">网络安全</a><a href="../tags/%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1%E6%89%AB%E6%8F%8F%E5%AE%9E%E9%AA%8C/" style="font-size: 1.15em; color: rgb(39, 143, 18)">网络服务扫描实验</a><a href="../tags/W1ndys%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 1.15em; color: rgb(111, 200, 50)">W1ndys年度总结</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="../archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="../archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="../archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">18</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="../archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">23</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="../archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="../archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">5</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">78</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-08-21T21:20:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">147.6k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-15T19:20:23.998Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By W1ndys</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><img style="width:32px;height:32px;margin-bottom:-8px" src="https://icp.gov.moe/images/ico64.png"><a href="https://icp.gov.moe/?keyword=20238661" target="_blank">萌ICP备20238661号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="../../../js/utils.js?v=4.12.0"></script><script src="../../../js/main.js?v=4.12.0"></script><script src="../../../js/tw_cn.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
 
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
 
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://qm.qq.com/q/ADHohOYwRa" target="_blank" rel="nofollow noopener"><span>W1ndys</span></a> <i class="iconfont icon-love"></i> <a href="https://qm.qq.com/q/ADHohOYwRa" target="_blank" rel="nofollow noopener"><span>hexo-fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> Copyright© 2024 All Rights Reserved. W1ndys 版权所有 <br/> <img style="width:32px;height:32px;margin-bottom:-8px" src="https://icp.gov.moe/images/ico64.png"> <a href="https://icp.gov.moe/?keyword=20238661" target="_blank">萌ICP备20238661号</a> 
-    </div>
-  
-  
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        总访问量 
-        <span id="busuanzi_value_site_pv"></span>
-         次
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        总访客数 
-        <span id="busuanzi_value_site_uv"></span>
-         人
-      </span>
-    
-    
-  
-</div>
-
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../js/events.js" ></script>
-<script  src="../../../js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
       }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
 
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
 
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
 
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js').then(runMermaid)
+  }
 
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = true
+
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
+    }
+
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
   
-    
-  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
+      }
+    }
+  }
 
+  (function(d, w, c) {
+    w.ChatraID = 'DouTZhBqhf3Qha8Xj'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
+    }
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
 
-
-
-  <script  src="../../../js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><script src="/js/scrollAnimation.js"></script><!-- hexo injector body_end end --></body>
-</html>
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="../js/search/local-search.js?v=4.12.0"></script></div></div><!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><script src="/js/scrollAnimation.js"></script><!-- hexo injector body_end end --></body></html>

@@ -1,382 +1,190 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=dark>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../img/about/icon.jpg">
-  <link rel="icon" href="../img/about/icon.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="W1ndys">
-  <meta name="keywords" content="W1ndys">
-  
-    <meta name="description" content="REBabyRe和TEA两道题不多说了，扔进IDA直接出flag WEB日志里的FLAG 膜拜nakai!佬  双写绕过  购买FLAG更改api中的value值，之后金钱足够直接购买即可。  MISC时间不多了第一步，解压文件之后发现有一张日历和很多二维码 批量解码一下 得到这些有用信息 其他的二维码都是无用的 base64解密一下得到数字 这题的关键点在于根据数字对应日历表画画    qrco">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分） | W1ndysの小屋</title><meta name="author" content="W1ndys,w1ndys@outlook.com"><meta name="copyright" content="W1ndys"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="RE BabyRe和TEA两道题不多说了，扔进IDA直接出flag WEB 日志里的FLAG  膜拜nakai!佬  双写绕过  购买FLAG 更改api中的value值，之后金钱足够直接购买即可。  MISC 时间不多了 第一步，解压文件之后发现有一张日历和很多二维码 批量解码一下 得到这些有用信息 其他的二维码都是无用的 base64解密一下得到数字 这题的关键点在于根据数字对应日历表画画">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）">
 <meta property="og:url" content="https://w1ndys.github.io/posts/25815978">
 <meta property="og:site_name" content="W1ndysの小屋">
-<meta property="og:description" content="REBabyRe和TEA两道题不多说了，扔进IDA直接出flag WEB日志里的FLAG 膜拜nakai!佬  双写绕过  购买FLAG更改api中的value值，之后金钱足够直接购买即可。  MISC时间不多了第一步，解压文件之后发现有一张日历和很多二维码 批量解码一下 得到这些有用信息 其他的二维码都是无用的 base64解密一下得到数字 这题的关键点在于根据数字对应日历表画画    qrco">
+<meta property="og:description" content="RE BabyRe和TEA两道题不多说了，扔进IDA直接出flag WEB 日志里的FLAG  膜拜nakai!佬  双写绕过  购买FLAG 更改api中的value值，之后金钱足够直接购买即可。  MISC 时间不多了 第一步，解压文件之后发现有一张日历和很多二维码 批量解码一下 得到这些有用信息 其他的二维码都是无用的 base64解密一下得到数字 这题的关键点在于根据数字对应日历表画画">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://w1ndys.github.io/img/jnxl2023/1.png">
-<meta property="og:image" content="https://w1ndys.github.io/img/jnxl2023/2.png">
-<meta property="og:image" content="https://w1ndys.github.io/img/jnxl2023/%E6%97%B6%E9%97%B4%E4%B8%8D%E5%A4%9A%E4%BA%86wp.jpg">
-<meta property="og:image" content="https://w1ndys.github.io/img/jnxl2023/3.png">
+<meta property="og:image" content="https://q1.qlogo.cn/g?b=qq&nk=2769731875&s=640">
 <meta property="article:published_time" content="2023-11-14T11:35:00.000Z">
 <meta property="article:modified_time" content="2024-01-14T14:04:11.088Z">
 <meta property="article:author" content="W1ndys">
 <meta property="article:tag" content="CTF">
 <meta property="article:tag" content="技能兴鲁">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://w1ndys.github.io/img/jnxl2023/1.png">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分） - W1ndysの小屋</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="../css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="../css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="../css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"w1ndys.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":80,"cursorChar":"❤️","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2,"isSPA":true},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"8c7326176e483fbc8a95647447c4fcea","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="../js/utils.js" ></script>
-  <script  src="../js/color-schema.js" ></script>
-  
-
-  
-    <!-- Baidu Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?8c7326176e483fbc8a95647447c4fcea";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-        })();
-      }
-    </script>
-  
-
-  
-    <!-- Google tag (gtag.js) -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://q1.qlogo.cn/g?b=qq&nk=2769731875&s=640"><link rel="shortcut icon" href="../img/favicon.png"><link rel="canonical" href="https://w1ndys.github.io/posts/25815978"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="G2rPpjA8qhdAQYUqgC3WTFeaOfenZ71SWXKcg_WnOSk"/><meta name="baidu-site-verification" content="codeva-aOqC7Xsihf"/><link rel="stylesheet" href="../css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8c7326176e483fbc8a95647447c4fcea";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-P9PRP64Q47"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-P9PRP64Q47');
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "kmd11rvmc3");</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":90,"position":"top","messagePrev":"这篇文章已经有","messageNext":"天没有更新了，请注意甄别时效性，可能有部分已失效"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: W1ndys","link":"链接: ","source":"来源: W1ndysの小屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-14 22:04:11'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
           }
-          gtag('js', new Date());
-          gtag('config', '');
-        });
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
       }
-    </script>
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-<!-- hexo injector head_end start --><link rel="stylesheet" href="/css/mouse.css" /><link rel="stylesheet" href="/css/cloudedGlass.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="W1ndysの小屋" type="application/atom+xml">
-</head>
-
-
-<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
-  
-
-  <header>
     
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="../index.html">
-      <strong>欲戴皇冠，必承其重</strong>
-    </a>
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="https://w1ndys.top/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../html/eat_what.html" target="_self">
-                <i class="iconfont/SVG/餐饮.svg"></i>
-                <span>吃啥</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('../img/bg/China2.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
+        document.head.appendChild(script)
+      })
     
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
     
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-14 19:35" pubdate>
-           2023年11月14日19:35
-        </time>
-      </span>
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          <!-- compatible with older versions-->
-          共440字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          <!-- compatible with older versions-->
-          阅读本文预计4分钟
-        
-      </span>
-    
-
-    
-    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
       
-        <span id="busuanzi_container_page_pv" style="display: none">
-          <i class="iconfont icon-eye" aria-hidden="true"></i>
-          浏览<span id="busuanzi_value_page_pv"></span>次
-        </span>
-        
-      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-
-
-        
-      </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）</h1>
-            
-              <p id="updated-time" class="note note-info" style="">
-                
-                  
-                    本文最后更新于： 2024年01月14日22:04
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h1><p>BabyRe和TEA两道题不多说了，扔进IDA直接出flag</p>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="日志里的FLAG"><a href="#日志里的FLAG" class="headerlink" title="日志里的FLAG"></a>日志里的FLAG</h2><blockquote>
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/mouse.css" /><link rel="stylesheet" href="/css/cloudedGlass.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="atom.xml" title="W1ndysの小屋" type="application/atom+xml">
+</head><body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end --><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=2769731875&amp;s=640" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">78</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">68</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="../index.html" title="W1ndysの小屋"><img class="site-icon" src="../img/about/icon.jpg"/><span class="site-name">W1ndysの小屋</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-14T11:35:00.000Z" title="发表于 2023-11-14 19:35:00">2023-11-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-14T14:04:11.088Z" title="更新于 2024-01-14 22:04:11">2024-01-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../categories/CTF/">CTF</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../categories/CTF/WP/">WP</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../categories/CTF/WP/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81/">技能兴鲁</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">575</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h1>RE</h1>
+<p>BabyRe和TEA两道题不多说了，扔进IDA直接出flag</p>
+<h1>WEB</h1>
+<h2 id="日志里的FLAG">日志里的FLAG</h2>
+<blockquote>
 <p>膜拜nakai!佬</p>
 </blockquote>
 <p>双写绕过</p>
-<p><img src="/img/jnxl2023/1.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="购买FLAG"><a href="#购买FLAG" class="headerlink" title="购买FLAG"></a>购买FLAG</h2><p>更改api中的value值，之后金钱足够直接购买即可。</p>
-<p><img src="/img/jnxl2023/2.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><h2 id="时间不多了"><a href="#时间不多了" class="headerlink" title="时间不多了"></a>时间不多了</h2><p>第一步，解压文件之后发现有一张日历和很多二维码</p>
+<p><img src="/img/jnxl2023/1.png" alt=""></p>
+<h2 id="购买FLAG">购买FLAG</h2>
+<p>更改api中的value值，之后金钱足够直接购买即可。</p>
+<p><img src="/img/jnxl2023/2.png" alt=""></p>
+<h1>MISC</h1>
+<h2 id="时间不多了">时间不多了</h2>
+<p>第一步，解压文件之后发现有一张日历和很多二维码</p>
 <p>批量解码一下</p>
 <p>得到这些有用信息</p>
 <p>其他的二维码都是无用的</p>
@@ -386,563 +194,198 @@
 <thead>
 <tr>
 <th>qrcode_10.png</th>
-<th>MiAzIDQgOSAxNSAxNyAxOCAyMyAzMA&#x3D;&#x3D;</th>
+<th>MiAzIDQgOSAxNSAxNyAxOCAyMyAzMA==</th>
 <th>QRCode</th>
 <th>2 3 4 9 15 17 18 23 30</th>
 <th>F</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>qrcode_12.png</td>
-<td>NiAxMyAyMCAyNyAyOA&#x3D;&#x3D;</td>
+<td>NiAxMyAyMCAyNyAyOA==</td>
 <td>QRCode</td>
 <td>6 13 20 27 28</td>
 <td>L</td>
 </tr>
 <tr>
 <td>qrcode_14.png</td>
-<td>MiAxNSAyMiAxNyAyNCAxNg&#x3D;&#x3D;</td>
+<td>MiAxNSAyMiAxNyAyNCAxNg==</td>
 <td>QRCode</td>
 <td>2 15 22 17 24 16</td>
 <td>A</td>
 </tr>
 <tr>
 <td>qrcode_15.png</td>
-<td>NiA1IDQgMTEgMTggMjUgMjYgMjcgMjggMjAgMjE&#x3D;</td>
+<td>NiA1IDQgMTEgMTggMjUgMjYgMjcgMjggMjAgMjE=</td>
 <td>QRCode</td>
 <td>6 5 4 11 18 25 26 27 28 20 21</td>
 <td>G</td>
 </tr>
 <tr>
 <td>qrcode_16.png</td>
-<td>MiAzIDkgMTUgMjMgMzAgMzE&#x3D;</td>
+<td>MiAzIDkgMTUgMjMgMzAgMzE=</td>
 <td>QRCode</td>
 <td>2 3 9 15 23 30 31</td>
 <td>{</td>
 </tr>
 <tr>
 <td>qrcode_25.png</td>
-<td>NSAxMyAyMCAyNyAxNCAyMQ&#x3D;&#x3D;</td>
+<td>NSAxMyAyMCAyNyAxNCAyMQ==</td>
 <td>QRCode</td>
 <td>5 13 20 27 14 21</td>
 <td>D</td>
 </tr>
 <tr>
 <td>qrcode_26.png</td>
-<td>NiAxOSAyNiAyMSAyOCAyMA&#x3D;&#x3D;</td>
+<td>NiAxOSAyNiAyMSAyOCAyMA==</td>
 <td>QRCode</td>
 <td>6 19 26 21 28 20</td>
 <td>A</td>
 </tr>
 <tr>
 <td>qrcode_27.png</td>
-<td>OSAxMCAxMSAxNyAyNCAzMQ&#x3D;&#x3D;</td>
+<td>OSAxMCAxMSAxNyAyNCAzMQ==</td>
 <td>QRCode</td>
 <td>9 10 11 17 24 31</td>
 <td>T</td>
 </tr>
 <tr>
 <td>qrcode_35.png</td>
-<td>MSAyIDMgOCAxNSAxNiAxNyAyMiAyOSAzMA&#x3D;&#x3D;</td>
+<td>MSAyIDMgOCAxNSAxNiAxNyAyMiAyOSAzMA==</td>
 <td>QRCode</td>
 <td>1 2 3 8 15 16 17 22 29 30</td>
 <td>E</td>
 </tr>
 <tr>
 <td>qrcode_36.png</td>
-<td>MiAzIDkgMTYgMTcgMjQgMzAgMzE&#x3D;</td>
+<td>MiAzIDkgMTYgMTcgMjQgMzAgMzE=</td>
 <td>QRCode</td>
 <td>2 3 9 16 17 24 30 31</td>
 <td>S</td>
 </tr>
 <tr>
 <td>qrcode_37.png</td>
-<td>MiA4IDE1IDIzIDI0IDE4IDExIDM&#x3D;</td>
+<td>MiA4IDE1IDIzIDI0IDE4IDExIDM=</td>
 <td>QRCode</td>
 <td>2 8 15 23 24 18 11 3</td>
 <td>O</td>
 </tr>
 <tr>
 <td>qrcode_38.png</td>
-<td>MSAyIDkgMTcgMjMgMzAgMjk&#x3D;</td>
+<td>MSAyIDkgMTcgMjMgMzAgMjk=</td>
 <td>QRCode</td>
 <td>1 2 9 17 23 30 29</td>
 <td>}</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>前两个字母没画出来，枚举得到flag</p>
-<p><img src="/img/jnxl2023/%E6%97%B6%E9%97%B4%E4%B8%8D%E5%A4%9A%E4%BA%86wp.jpg" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dust"><span class="language-xml">flag</span><span class="hljs-template-variable">&#123;DATESO&#125;</span><br></code></pre></td></tr></table></figure>
+<p><img src="/img/jnxl2023/%E6%97%B6%E9%97%B4%E4%B8%8D%E5%A4%9A%E4%BA%86wp.jpg" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;DATESO&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Datas-secret">Datas_secret</h2>
+<p>扔进winhex直接搜就行</p>
+<p><img src="/img/jnxl2023/3.png" alt=""></p>
+<h1>CRYPTO</h1>
+<h2 id="BabyRSA">BabyRSA</h2>
+<p>共模攻击</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line">c1= <span class="number">295658788074157816670393593671184451782123605135184996662528766686642109492132533952160456440919197939935742027629210419312032730004032666912404179229952394343569590488768472800784830058534578639706805456277578757250365834591813481786084959844340418320620440636997732915872346619679993987903742079972676425404864295283955565746004124045155664762158516005326368384488346997494926539295740248007606864906884407198601326915643000764477435205579583836917598642053869541648731754384026407310786288997756775232852732033054591953078116290088267188296560877481534143707414153749140670404213262630122369941889862912426176115220410931992046973925991075473656781794097329513119548617920256625579072719981729556158392454956362838720993254919638177786730004086883044525967823454986241038123671907279715773848673713008902432841449556980494600938989397567019338970200872333713986608537678650318511128703055185979834233315117153115613952940778789222515375743186066883492596068186378372611075958909412662251913621375996518671118244409393829141365207153662416265238312206577474940661548038715230313608405518108581922154335405303862701783678336161505643508831482409054761542959278392940037561736468155509922530420964726953308604138731805543997557197893</span></span><br><span class="line">c2= <span class="number">219454357017359138238563345020257296433275019950745269658921329153689267055871241202626317639487122341365759606018366576305678949982408366815977617307888894995289951707241009621444691307275542686770303994110416384086739599181934011812163156338859395115724413628620575935425221522079154607411877822646179457455118804970038865452163833416447505142114976758532806787419762250921421272492466133659234602794242531776209324085944417173098820895755851386042954303555790085402616519592065446023510096773546730662074307900123349548340507067971393642039476326402523930789953483843698593104578179169624886357604650615249286150367204109726460230037005175927865466199600272190112483494387929732049738312695796015009178606906549093365261114132002222704510637261038978031857378729856467918978246977163353146981239215886053379980533235786905270211605457443266127512667882149285155542735532327780898540341696557860555884277608448996773250847560675650046440569736010800155992053362696097992699863059686881689842065077997427372972290872427656847223849769329713841670853267584161386494525686204330028142217737052411422895042170169703550774908415280261731967511925122636118468176645781785352430657090024109246103061415446942211482659025722233229083093876</span></span><br><span class="line">n= <span class="number">549785700554963543393222974982211136067042846536450239199968863551137077564447156832697813202963334596948298760762991663065504535035143397250208506445202607659676332816610122258862787906629525548439909792727593939957178783466989816894454522630301104349317697612174888605090061231211194974337772507249418567229560145454791075929946332668360553910328900103264562348881791004831033587660163923517440406942993348972589262051083908075790422096042338651001937740085414301019827335549437397656318095919875053213333008551761167437683250592542156348138055482054331330609375930693247365749085041596578748797801601289693449629548744535914348450016287545136436964138806081283470239420969311905998245715160353982174880912315601876305613349276824998688275587308133069178764001924866079232824850209407236694426779262951463035278887804883917516580169051530590466082511045503107508117656821592538792566264160105940730326929474477787053681516844548383814388361089499629312831727731267796167205124844987064389097138747938870221504684958713047985374714612321540288239995935347905120710583169131356970267386562665138437631517802641426575996558648777831102462652517305151412695166331935115971277205305816897886952646432233312318756155702046584205507027737</span></span><br><span class="line">e1 = <span class="number">3247473589</span></span><br><span class="line">e2 = <span class="number">3698409173</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#共模攻击</span></span><br><span class="line"><span class="comment">#共模攻击函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rsa_gong_N_def</span>(<span class="params">e1,e2,c1,c2,n</span>):</span><br><span class="line">    e1, e2, c1, c2, n=<span class="built_in">int</span>(e1),<span class="built_in">int</span>(e2),<span class="built_in">int</span>(c1),<span class="built_in">int</span>(c2),<span class="built_in">int</span>(n)</span><br><span class="line">    s = gmpy2.gcdext(e1, e2)</span><br><span class="line">    s1 = s[<span class="number">1</span>]</span><br><span class="line">    s2 = s[<span class="number">2</span>]</span><br><span class="line">    <span class="keyword">if</span> s1 &lt; <span class="number">0</span>:</span><br><span class="line">        s1 = - s1</span><br><span class="line">        c1 = gmpy2.invert(c1, n)</span><br><span class="line">    <span class="keyword">elif</span> s2 &lt; <span class="number">0</span>:</span><br><span class="line">        s2 = - s2</span><br><span class="line">        c2 = gmpy2.invert(c2, n)</span><br><span class="line">    m = (<span class="built_in">pow</span>(c1,s1,n) * <span class="built_in">pow</span>(c2 ,s2 ,n)) % n</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>(m)</span><br><span class="line">m = rsa_gong_N_def(e1,e2,c1,c2,n)</span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line"><span class="built_in">print</span>(libnum.n2s(<span class="built_in">int</span>(m)))</span><br></pre></td></tr></table></figure>
+<h2 id="简单的Python">简单的Python</h2>
+<p>看这位佬的博客吧，这题被出题人坑了，明白加密原理，但是死活解不出来，看了佬的wp才知道是base100有空格</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_64422989/article/details/134405587?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22134405587%22%2C%22source%22%3A%22weixin_64422989%22%7D&amp;fromshare=blogdetail#/">“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛 WP</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import time</span><br><span class="line">from tqdm import tqdm</span><br><span class="line">from qsnctf import *</span><br><span class="line"></span><br><span class="line">flag = &quot;👍👤🐧👮👛🐩👈👰👌👏👣👍👎🐾👯👎👍🐧👛🐫👍🐨👐👮👑🐻👉👎👄👍👣🐪👎👢👉👊👍🐧🐨👎👙🐻👅👏👘🐨👁👋👍👡🐸👯👍🐩👁🐼👋👣👟👟👄👌👧👌👍👤👧🐹👜🐽👐👰👊👢👍👌👙🐾👟👦👋👍👍👮👍👍👑👫👚🐼👁👣👉👣👣🐬👌🐩👫👎👍👎👁🐿👘🐾🐰👌👍👣👑🐪👍👣👑👘👚👍🐽👫👉👣👉👅👙🐼👧👁👍👤🐨🐧👘🐨👛🐿👊👢👛👡👉👋👣👘👍👡👅👊👉🐨👧👍👎👤🐽👢👉🐧🐬🐾👌🐩🐨🐫👌🐩👁🐿👛👱🐽👎👍🐼👦👮👍👡🐽👘👎🐽👅👩👘🐾👟👊👜👤👯👎👍👤👧👆👋🐧🐧👯👚🐽👑👏👙👌👑👩👌👡🐸🐨👉🐨👧🐽👎👣👅👌👙🐽👧👍👍👤👫👮👍🐩👁👌👉👏👛👎👘👢👑👏👑🐼👑👆👚🐨👛👪👘🐾👣👊👄👤👟👑👍🐨👛🐫👙🐩👀👰👍👥👅👍👙🐽👑👋👐👣👍👘👚👍👑👫👛🐾🐽👅👉👣👑🐧👑👌👑👆👍👎👁👍👚🐼👛👑👄🐽👑🐪👍👡👁👂👍👍👁👐👑🐽👧👎👉👍👧👰👍👋🐹👘👋🐩👅👪👚🐼👟👡👉👣👁👋👍👣👟🐺👎👣👐👯👎👣👅👊👄👣🐽🐬👌👤👫👢👘👣👁👫👌👣👣👑👙🐽👑👟👐🐩👯👎👚🐨👍👩👑🐽👛👠👉👥🐹👑👎👣👍👘👋🐨👑👏👊👣👑👏👍🐼👧👎👐👢👑👂👊🐽👑👨👊👢👑👣👍👣👑👑👎👢👑👮👙🐾🐼👱👈👢👣👏👎🐿🐹🐿👍🐻👁👊👍🐨👑👬👌👤👟👊👘👱👍👱👎👎👯👦👙🐨👛🐾👎👥👉👅👊🐾👉👪👌👡🐹👪👅🐽👌👰👛🐾👫👏👉🐧👧👀👍👎👯👪👎👤👁🐾👎👤👟👑👄👍👧👟👑🐼👛👊👊🐽👁👩👅👍👅👠👉👤🐰🐪👍🐩👯👎👐👍👈👯👎👣👟👋👙🐽👧👐👍👢👍👮👍🐨👣👩👎👢👫👋👉👣👧👯👌👤🐨🐾👌🐩👁👍👙🐻👑👏👘🐨👧👩👐👌👛🐽👜🐾👅🐿👆👍👛👟👘🐧👧👦👍👢👉👂👋🐩👉🐾👊👥👁👟👉🐩👟👋👐👏👧👎👜👣👛👏👜🐾🐰👠👄👎👉🐿👍🐩🐬👊👋👣👛🐿👌👣👑👌👍👣👧🐿👋👋🐽👊👍👤🐽🐿👆👎👟👠👉👏🐹🐭👎👋🐹👘👚🐨👛👫👊👢👛👏👙👎👟👘👋👎🐬👦👎🐽👢👯👎👢👛👎👍👢👧👱👍🐾👪🐨👍🐧🐨👍👙👱🐽👎👙👏🐹👃👋👢👑👉👜🐽👛👪👘🐽👉👠👉👥🐹👯👍👎👯👢👌🐨👣👎👌👣👑👏👙👌👑👆👋👍👑👮👜🐽👌👰👛🐻🐹👎👄👍👧👰👐🐧👑👮👎🐾🐼👯👚🐿👁👑👍👎👉🐾👑👌👛👆👉🐩👁🐾👘🐾👟👅👍👥🐹👭👍👤👫👊👊🐨👉👫👍👢👛👡👉👎👯👍👐👣👛👦👍🐽👉👏👅👎🐰👎👍👤👉👏👍👎👪🐬👌👢🐨👏👌👥👧👎👄👎👟👭👍🐧👛👂👎👍👍👩👆👍👑👟👘🐨👧👀👍🐾👯👘👐👍👛🐽👅👍👑👇👍🐩👟👧👌👣👟🐹👛🐨👑👪👑🐻👉👡👄👎👉🐧👌🐩👫👢👎🐾👁👏👘🐾🐽👌👍👱👍👭👍🐧👑👩👜🐽👛👩👛🐾👫👊👘🐪🐹🐭👍👣👛🐫👋🐩🐽👎👊👏👧👑👄🐩👟👏👐👋🐽👮👘🐽👑👌👉👣👑👣👉👤👉🐨👌🐩👪🐨👎🐽👁👐👈👥👟👎👍🐪👟👩👋👢👛🐾👉🐨👑👐👑🐾👟👊👍👋👍👌👍👎🐨🐫👛🐩👍🐾👍👏👣👢👉🐪👉👦👐👣👍👮👍🐨👑👫👚🐾🐽👏👙🐽👧👏👐🐧👛👦👎👣👑👏👌👢👛👘👍👎👉👇👌🐧👌🐬👍🐨👧🐿👘🐾👟👅👊🐼👁🐩👍👤🐨🐧👌🐨👄👯👌👏👣👍👘🐩👉👌👐👤👫👮👙🐨👍👨👊👤🐰👎👉👤👯👑👐🐧👑👢👙🐾👁🐿👌👣👣👘👍👎👄🐨👐👍👌👯👎🐽👍👩👘🐽👛👅👘👣👑👌👍👢👛🐫👋🐨👅🐿👉👢👛👉👙🐽👧👧👍👢👍👍👛🐨👑👫👚🐼👛👍👄👍👧🐧👌👤👫👦👌🐽👑👫👘🐽👉👌👍👎👟🐻👋👣👑👘👊🐾👍🐿👉👤👧👅👍🐨👀👮👍👋👁🐧👘🐨👛🐿👊👣👟👟👉🐧👑👍👍👥👧👎👛👣👐👮👎👥👁👣👉👤👉👰👎👢👑👢👍🐩🐼👱👈👡👑👎👘🐩👉🐭👋👍👑👢👉🐨👅👪👎👤👧👊👍🐪👟👐👎👎👯👦👈🐨👉🐾👌👥👁👏👙🐼👧👪👌👤🐨👊👜👣👣👍👎👣👅👟👉👋🐽👱👌🐩🐬👦👍🐨👑🐭👉👋🐹👘👉🐼👑👩👌👡👁👂👊👍👉👫👘🐽👅👟👜👣👑👈👍👢👑👘👐👎👈👰👍👢👛👎👎🐾👯👩👌👢👍👂👎🐽👉👎👎👥👛👣👍👤👫🐪👍🐩🐬👢👎🐽👀👮👍👡👉👑👄🐽👁👇👍🐩🐨🐽👜👍👍👩👑🐾🐽👎👄🐩👟👀👎👋👀👯👊🐨👀👯👚🐼👟👠👉👤👟👋👍👣👟🐺👊🐨👑👫👄👋🐹👍👄👌🐨🐫👍👣👟👦👎🐽👛🐿👘🐽👣👑👙👏👟👟👍👡🐽👪👚🐨👧🐿👆👍👛👊👙👏👟👘👎👋🐹👘👘🐩👁🐿👊👢👟👍👙🐾👯👟👍👣👛👅👄👍👣👎👍👏👟👏👉👣👑👰👐👌👑👢👋👤🐽👪👎👣👍👎👘🐩👈🐧👍🐻🐽👆👊🐽👁👩👑🐽👁👠👉👥🐹👮👍👤👫👎👍👤👈👯👎👥👉👡👉👎👉👎👋👍👑👮👄🐽👍👫👛🐾🐰👍👉👣👧🐧👐👌👑👊👍👍👑👏👘🐼👉👌👙🐽👧👟👌🐧👛👎👊🐽👁👫👚🐼🐬👎👄👌👣🐪👍👣👉👂👄🐾🐼👯👑🐼👟👋👙🐾👟👦👌👡🐹👘👍👣👑👬👚🐽👛👢👙🐽👣🐪👍🐩🐬👂👙🐽👁👫👌👥👣👏👘🐨👧👩👍👡👁🐽👜👣🐽👨👎👣👛👟👄👣👀🐩👍🐽👑👘👎👤👈👮👄👍👛👏👙👎👯👪👐👋🐽👮👎👍👛👏👜🐾🐰👉👄👍👁🐿👍👎🐬👂👎🐾👁🐽👚🐿👅👍👙👋🐽👋👑👎👯👪👍👣👛👪👋👤👟👎👘🐪🐸👯👍👍👛🐫👛🐨👐👰👊👣👣👍👙🐾👟👟👌👢👍👘👐👍👧👍👑🐼👫👋👍👢🐬👱👐👌👛👦👋👢🐨👍👚🐽👛👎👙🐾👅🐫👋👢👛👉👜👍👑👩👑🐽👛👠👙🐼👧👇👍👤👯👢👌🐨👐👯👌👣👟👢👊🐾👉👏👋👍👛🐫👜👍👑👏👄👌👛👏👉👢👣🐪👍👤👧👊👎👢🐨🐿👘🐼👯👎👄👥👟👟👍🐧👑👎👚👣👧🐿👉👣👛👎👄👌👧👉👍👣👉🐺👍👢🐬👎👎👏👟👡👉👎👟👦👌👡👁👦👋🐨👌👮👍👢👫👅👙🐽👧🐧👋👍👉🐺👍👢🐨👍👄👋👉👎👍👤👟👱👍👤🐨🐽👜👍👍👪👍👣👧👠👎🐽👀👱👎👎👧🐾👍🐩👅👎👋👥👉👇👍👤👉👋👐👣👟👦👐👍👛👌👈👤🐽👟👄👢👧👀👌🐩👫👦👍👤👁🐿👜🐾👟👎👙🐾👉👆👋👍👑👪👍🐨👑👐👘🐽👟👊👙🐽👧🐬👎👍👍👘👘🐨👉👫👉👥👅👏👙🐽👑👏👐👋👁👉👄🐽👣👌👉👢🐰👊👄👍👧🐨👍🐾👯👦👘👍👁👪👚🐽👣👏👍🐪👉👭👌👋🐽👆👍🐨👛👩👑🐽👑👟👄👣👁👏👍🐽👑👘👛🐧🐨🐾👍👥👉👢👉👱👣👎👌👤👯👪👅👍👣👍👘🐼👅👎👙👌👧👀👐👌👍👊👍👎👁👐👘🐿👁👎👙🐽👧🐿👑🐼👑👂👛🐾👅🐽👅👍👛👅👍👎👮👱👍👤👯👊👊🐧🐨🐿👉👏👟👘👉👎👟👌👐👢👛👦👙🐨👍👨👈👤🐽👎👙🐽👧🐨👐🐧👑👢👘🐩👁🐾👙🐻👅👎👄👡👍👇👍🐻👁👂👉👤👅👀👚🐽👟👟👄👣👀👱👎👍👑👘👋🐨👁👪👋👥👁👠👉👤👉👆👐👤👯👂👜👍👛👐👚🐼👛👎👙👍👑👏👍🐾🐬👎👍🐾👁🐾👊👥🐹👎👙🐽👧🐪👍🐨👑👘👉🐨👣🐭👉👤👣👅👍🐨👁👀👍🐩👫👘👘🐨👛🐿👊👢👑👡👊🐼🐬👎👐👣👉🐾👍🐽👧👏👜🐿👅👎👙🐾👉👱👍🐾🐨👦👍🐩🐼👱👈👏👟👎👍👤👈🐧👑🐻🐽👑👜👍👅👪👙🐽👑👠👉🐩👟👦👍👎👫👎👐👍👣👎👚🐽👑👘👉👏👉👌👍👤👪🐨👜👣👣👍👑🐾🐰👌👘👱🐽👎👐🐧👑👘👍🐩👁🐿👋👡👉👌👘🐩👉👊👑👍👑👘👚👣👧🐾👑🐾👣👊👄👌👧🐩👍👣👚🐨👛🐩👄👰👊👏👟👍👙🐾👉👐👐👤🐨👊👚🐨👣👩👎👥👅👆👍👤👫🐪👍👤🐨🐧👍🐧🐨🐼👉👢👑👍👙👏🐹🐿👍🐩👯👘👎🐽👍👬👎👣👛👅👙👤👟👦👍👡🐹👘👍🐩👅👪👚🐼👟👊👙🐾👉👏👋👍👍👮👌👣👑👪👑🐿👛👋👄👌👣🐫👌🐨👟👪👌🐩🐼👰👘🐿🐹👍👙👏👄👯👐🐧👑👪👍👍🐽👬👑🐼🐬👠👉👥🐸👮👍🐽👑👊👈🐨👑👩👄👍👑👅👍🐽👁👏👍👤🐨👦👜👣👑👫👄👌👑👣👍👣👑👱👍🐩👯👮👘👍👛🐾👊👏👧👏👍👣👑👟👍👡👁👊👊🐽👑👩👎👤👫👊👄🐧👁👌👎👎👫👦👈🐧🐬🐾👎👣👍👋👎🐾👉👇👍👡🐹👮👊👍👌👰👛🐾🐰👎👙👌👧👀👑👌👛👦👍🐩👁🐿👌👢🐰👌👍👣👧👱👍👡🐽👘👎👎🐽🐾👘🐽👅👠👉👥🐸🐩👍🐨👑👎👐👎🐼👯👌👥👅👏👎🐾👯👦👌👢👍👮👎🐽👉👎👎👥👛👟👉👣👐🐩👌👤👫👮👙🐽👁👪👊👡🐽👎👙👏👟👃👐👍👑👂👚🐩👅🐾👙🐽👛👊👙🐼👧👀👍👏👧🐹👄👎👄👯👑🐿👁👘👉👣👧👦👋👎👯👂👎🐽👑🐾👎👤🐽👢👄🐻🐽🐿👍👤🐬👊👘🐨👁🐭👙🐽👛👍👙👏👟👱👋👣👑👪👍👤🐽🐽👋👣👛👠👍👏🐹👁👎👍👍👎👋🐨👣👎👊👢👑👏👙👎👟👘👑👎👫👘👄🐨👍👪👎👣👛👢👉🐧🐬🐾👋👣👑👢👋👣👑👏👛🐪👧👎👙👏👟👋👌👱🐸👯👊🐽👁👐👘🐾🐽👊👍🐩👟👍👎👎👫👢👙🐩👀👯👍👥🐽👉👙👌👑👏👐👢👑👮👄🐽👧👍👘🐾👫👌👘👱🐽👑👌👎👯👪👐👍👑👏👘🐼👯👑👘🐨👧👘👑👌👑👢👚👤👁🐿👉👣👅👎👄👌👐👱👍👤👯👊👊🐨👁👫👍👥👅👊👙🐾👯👟👌👤🐨👦👚🐽👍👫👜🐿👛👠👄👎👉👏👍👎👫🐧👌🐧🐨👎👙🐻👉👏👘🐩👟👏👍👢👛👂👎🐾👍👀👋👣👧👎👉👍👦👱👍👡🐽👘👘🐨👛🐿👍👢👟👇👍👢👧👆👍👣👉🐽👄🐽👑👪👑🐻👉👟👄👎👯👏👌🐩👯👢👘👣👅🐽👅👍👛👑👙🐽👁🐿👍👢👑👑👜👎👍🐿👛🐾👧👠👉👥🐹👎👍👎🐨🐫👘🐨👉👪👎👥👍👉👘👣👧👐👍👢👍👂👘🐽👑👨👉👤👫👊👄👎👉🐨👍🐾👯👊👘🐼🐨👫👘🐾🐰👎👍🐪👉👏👎👍👑👪👍🐩👅🐾👎👤🐽👊👎🐽👁👍👍👤🐨👱👄👎👍👪👙🐽👑👘👉👱👣👍👐👏👧🐾👍🐨👢👮👎👤🐽👎👄👢👧👀👍🐾👧👊👍👎🐼👰👌👣👅👘👍👣👧👟👐🐩👯👮👉🐨👧🐾👘🐽👅👅👄👤👞🐨👍👤👯👢👛🐨🐼👯👙🐽👟👌👘🐩👉👏👐👤👯👂👚🐨👌👮👑🐽👅👡👄👎👯👰👍🐩👯👢👋🐨👑👬👈👣👛👑👍👎👈👮👍🐧👑👁👛🐩👅🐽👘🐽👧👅👉👥🐹🐩👍👡👁👱👜🐽👅🐿👉👢👑👣👉👤👉👦👐👋🐽👮👙🐨👑👏👄👋👉👟👄👢🐬🐧👍👤👫👢👐👍👁👌👍👣👟👑👙👏👉👃👌🐩👯👑👜🐽👍👩👚🐾👯👊👘👱🐼🐧👍👋🐽👦👙🐩🐽👪👊👣👟👟👊🐼👁👎👐👣👉🐾👛👣👑👩👎👤🐽👡👄👢👑🐾👍🐾👯👊👋👣👑👬👈👏👛👎👉👣👧👋👌👋🐽👘👚👢🐨👎👎👢🐬👎👉👢👧👐👎👎👫👢👙🐩👉👪👎👏👛👏👙👏👉👌👌👡🐹👘👊👍👣👍👎👤🐽👌👙🐼👧🐨👌👎🐧🐬👍🐩👁👌👉👋🐹👑👜👢👧👇👐👱🐽👮👊👍👅👫👛🐽👅👅👄🐼👧👍👍🐨👛🐧👙🐨🐼👮👅👌👛👏👙🐽👑👌👍🐧👛👊👌🐽👑👨👈👥👛👋👍👣👍🐬👑🐼👚🐬👍🐩👁👍👚🐼👣👘👍👎👉👭👍👡👁👂👊🐽👍👩👆👍👍👎👙🐿🐹🐭👍👤👧🐾👐👍👛👏👉👢👛👟👉👢🐬👧👌👤🐬🐹👄👣👐👯👎👣👛👑👍🐧👍🐫👍👎🐬👆👎🐽👛🐿👜🐾🐰👍👘🐨👑🐪👍🐧👑👊👍🐨👛👬👑🐾👟👊👙🐽👢👰👍👎🐨🐧👛🐩👁🐾👊👥👅👋👘👢👑👏👌👥👧🐾👊🐽👑👌👊👢👫👊👄👢🐬🐿👐👢👑👦👍🐧🐧👯👊👡👁👎👍👣👁🐺👋👍👛👅👜🐽👧👀👊👤👟👊👄🐨👁👌👍🐽👍👘👛🐨👛👎👑🐽👟👣👉🐧👑👘👍👤🐨👊👎🐽👐👰👜🐾🐰👟👄👌👦🐩👐👢👚🐬👍👍👑👪👎👥👧👌👙🐽👧👱👍👤🐨🐾👉👣👉👪👑🐾👣👎👎🐼👁👂👍🐨👑👎👍🐨👈👯👙🐽👛👋👘🐨👧👐👐👣👛👦👐👍👧👏👛🐾🐽👅👄👍👑👱👍🐩👯👢👘🐨👀👮👅👌👛👌👙🐽👧👩👍🐾👯👘👎🐾👈👱👚🐽👛👠👎🐾👟👌👍👏👧🐹👜🐽👅🐾👋👣👣👠👉👢🐬👦👋👎👯👂👍👣👛👏👄👏👧👅👍👣👧👏👐👢👟👂👐👍👁🐭👙🐽👟👑👘🐨👧🐪👑👎👯👑👜👌🐬👏👛🐽👍👟👜👢👑👐👎👋🐹👦👚🐨👐👮👄👏🐽👊👘🐩👟👘👍👡👅👦👘🐽👢👰👄👌🐰👊👍👢👑🐧👌👤👯👆👍🐧🐨👍👎👏👧👎👙👏👟👋👌👱🐽👂👛🐽👑👬👋👣👅👠👉🐪👟👦👍👎🐧👯👙🐩👅🐾👍👥👉👣👊🐾👉👧👋👍👛👊👎🐽👑👏👛🐻🐹👍👄🐻🐽👏👐👢👉👊👍🐨👁🐭👍👣👟👎👙🐾👉👃👍🐧👛🐾👉👢🐰👎👍👣👛👣👘🐨👦👰👍👤👧🐾👐👎🐼👯👎👏👟👎👙👢👧👟👌👡👅👊👋🐨👣👌👉👥👛👋👍👣👧👯👌🐩👧👊👍🐧🐨👎👍👡👍👍👄👥👉👩👐👎👯👆👉👢🐬👎👑🐽👧👠👉👢👧👀👍👤👫👘👌🐨👐👯👑🐿👅👏👙👏👟👏👋👌👉👉👜👍👑👏👄👋👉👠👄👍👍🐬👌👣👟👮👌👤👁👍👎👣👟👎👙👋🐽👊👋👌👑👪👅👣👁👫👛🐽👅👅👍🐨👀👯👍👣👛🐫👐👍👐👯👊👣👑👡👉👱👣👏👍👡👅👊👎🐽👛👎👎👥👅👎👄👢🐬🐿👍🐩👯👦👘👍👛🐾👊👥👣👎👙👋🐼👮👑🐻👁👎👚🐨👛👬👌👢🐬👏👉👋👍👐👍🐽👑👎👚🐧🐬👪👙🐽👑👍👙👌👑👏👋👌👉🐾👎👍👑👎👘🐾👫👏👉👣👧🐧👍👎👯👆👐👍👑👪👚🐾👟👑👄👥👟🐪👌👡🐽👮👉🐩🐽🐾👋👢🐬👅👙👎👚👯👍👤🐨🐫👘🐩👈👯👌👏👟👎👎🐾👯👌👍🐧👛👦👚🐽👌👮👍👋🐽👏👉👤👯🐧👋👍👑👆👎🐽👁👪👊👣👟👎👄👡👍👩👍🐾👯👂👛🐾👉🐼👋👣👟👟👄👍👧👰👍👡🐹👘👊👤👈👰👋👢👑👟👉👥🐹👆👌👤🐬🐺👄👣👑👨👊👥👧👣👉👢🐬👀👌👤👫👘👙🐽👁👫👌👤🐰👑👍🐼👑🐪👐👡🐽👘👎🐼🐨👌👌👤👟👅👘👱👌👮👍👤🐨🐧👘🐨👣👎👊👏👣👟👉👱👣👍👍👢👍👂👋🐽👑👏👜🐾🐽👡👄👍👑👰👎👢👛👦👋👣👑👌👉👋🐹👎👍🐼👑👭👐👡👁🐾👚🐨👅👪👘🐽👑👠👍🐩👟👏👎👎👯👦👋👤👍🐾👎👏👛👏👙🐿🐹👩👋👍👑👮👜👍👧🐽👍👋🐽👟👍👢👧🐨👌👍👟👢👍🐨👁👪👚🐽👉👍👍🐼👑👟👐🐩👪👯👍🐨👛👩👅👍👛👊👘🐪🐹👑👍👤🐧👮👜🐾👀👰👍👥👅👏👙👣👁👆👍👣👑👮👚🐨👑👫👜🐾🐽👣👙🐽👧🐧👑👌👟👢👘🐽👑👫👌👢👟👍👄👎👟🐪👍🐧👑👑👜👣🐽👩👘🐽👛👟👘🐪🐹👈👍👤👧🐾👌🐩👉👎👍👥👅👉👙🐾👉👧👍👤👫👮👍👣👐👯👑🐻👉👠👄👢👣🐫👐👢👑👢👐👍👁👪👎👣👅👑👙🐽👑👟👐👡🐽👊👎🐾👉👀👑🐽👉👎👙🐽👐🐨👎👢👍👡👅👍👐👰👊👣👑👡👉👎👯👟👍👣👛👊👛👣👑👨👊👢👫👋👉👣👑👰👋🐨👑👎👍🐩👁👀👈👡👑👎👙👏🐹🐿👎👍👑👢👎🐽👁👩👑🐾👟👊👘👱👍👮👍👎🐧🐨👈👢🐨👎👎👏👟👏👙🐾👉👘👍👡🐹👎👅🐽👑👏👅👍👅👍👄👢👧👰👋👣👑👪👎👤🐼👯👚🐾👟👎👄🐽👧👱👍👣👑👆👚🐨👅👩👅👍👅👠👉👤👫🐬👍👣👚👯👄🐼🐨🐿👉👥👁👅👍👤👯👊👐👋👅🐺👎🐽👣👪👘🐾🐰👎👉👤👯👏👍🐩👫🐧👘👢🐨👩👅👌👟👑👘🐨👧👭👍👡🐸👮👜🐽👅👫👆👍👟👟👄👌👧🐻👍🐽👑👢👋👤👍🐾👚🐼👣👋👙👎👟👋👋👋👁👦👍👍👑🐾👍👤🐽👢👄👢👑🐿👍🐩🐬👊👋👣👅🐿👘🐽👛👌👍👣👑👱👋👢👑👘👎🐼🐬👍👆👍👟👊👄🐿🐹👏👍👡👁🐫👘🐨👑👫👊👣👣👟👉🐼🐬👍👍👣👑👮👘🐽👐👮👍👋🐽👎👙🐽👁👱👎👢👌🐨👘🐼🐧👮👊👢👫👎👄👍👧👏👍👡🐽👍👜🐽👛👪👘🐽👉👠👉🐪👟👭👍👎👧👂👙🐨👛🐾👙🐿👁👏👙👤👉👎👌👤👯👮👜👣👐👰👛🐻🐹👟👘👱🐽👏👐🐧👟👪👍👎👁🐾👚🐿👁👑👍👤👉🐾👑🐻🐽👢👎👎👅🐾👑🐾👣👏👉🐩👟🐫👍🐩👫👊👈👤👍🐾👎👏👟👍👙🐾👯👦👌👤👯👮👎👍👍👨👊👤🐰👏👙🐾👉👐👋👍👟👮👋👣👑👪👚🐽👟👑👘🐩👟👃👎👍👑👂👅👤👁🐾👘🐽👧👟👄👏🐸👱👎👣👛🐫👎👤👍👍👅👍👟👢👉👣👑👦👑👎👫👘👎👍👛👌👈👤🐰👡👄👍👣🐪👋👍👟🐾👌🐩🐼👰👘🐾🐽👎👘👢🐬👭👐👌👑👩👜👌🐨👍👆👍👅👎👘🐪🐹🐭👎👍👍👢👙🐨👉👪👑🐼👑👋👙🐼👧👏👐👣👟👊👚👣👉👩👎👥👅👏👉👣👁🐨👍👎👯👎👘🐼🐨👎👚🐽👣👏👍🐪👉👩👍👋🐽👘👉🐨👍👪👍👣👉👠👍🐾👯👮👍🐽👑👘👛🐩👍👎👎👣👟👢👉🐼👁👎👋👌👉🐾👎🐽👣👩👌👣👅👎👄👌👦🐩👍👤👯👦👍🐩👁👌👉👢👯👍👙👏👟👇👐👱👁🐾👉🐨👛👫👙🐽👅👟👄🐧👁👘👍👤🐨👮👉🐨👣👎👙🐽👛👋👎🐾👟👧👌👢👑👮👍🐽👣👪👑🐻👉👌👄👍👧👯👌👤👫🐧👍🐽👑👫👌👣👣👘👉👎👄🐨👍👋🐸👯👍🐩👅🐽👙🐽👑👠👉🐩👟🐩👎👍👛🐫👋🐨👁👩👅👍👛👘👉👥🐹👧👌👤👫👮👊👍👑👫👛🐾🐽👏👙👍👑👐👍👤👫👦👘🐨👀👱👈👥🐹👍👙👋👍🐻👍👡🐽👘👎🐼🐨👌👌👤👣👅👍👣👐🐨👍👎👯👦👛🐨👍👫👊👣👑👏👙🐾👟👏👐👣👉🐾👌🐨👉👍👎👥👛👊👍👢👧👱👐🐧👛🐫👍🐩🐽🐭👍👡👑👏👍🐪👉👟👎👍👛🐾👍🐨👅👐👙🐾👟👊👜👤👯👐👍👤👧👆👌🐨👛🐾👑🐽👛👘👉👋👣👨👋👍👑👮👄👍👍👫👜🐽👅👟👉👋🐹🐫👌🐩👯👘👍🐩👁👌👉👋🐹👍👜👢🐽🐫👌👡👁👂👉🐨👛👪👘🐾👟👣👙👏👟🐩👍👣👛👮👉🐨👣👏👍👥👅👏👎🐾👯👨👌👡🐹👘👎🐽👉👍👌👢👛👏👍👣👧👏👐👌👛🐧👎🐽👁👪👚🐻🐹👎👍🐪👟👇👎👍👑👘👚🐩👅🐿👘🐽👧👅👙👤👞👱👍👎👧🐾👛🐨👀👰👉👢👛👌👘👱👍👆👐👣👛👡👜🐽👑👫👄👋👉👟👄🐻🐽🐿👍🐨👟👦👍👍👛🐿👘🐾👟👍👙🐾👉👋👍👡🐽👪👚👣👧🐾👋👣👟👎👙👏👞👮👍🐽👑👘👋🐩🐽👩👄👍👛👡👉🐼👁👟👍👣👛👦👌🐽👑🐼👉👤🐽👢👍👢👑👱👎👢👑👮👍🐨👐👯👉👡👅👎👘👢👁👟👌🐩🐨👉👜👍👉👩👎👤👟👊👙👢👁👇👍👎🐧🐨👈🐧🐨👪👎👥🐽👋👙👥🐹👪👌👤👪🐨👊🐽👑👫👅👍👛👏👉🐧👧👀👍👎👪🐬👎👤👁👌👉👥👑👑👘👢👑👟👐🐨👑🐾👛🐽👁👪👑🐼🐬👟👜👣👐🐩👍🐨👉🐺👍🐩👀👯👍👏👣👋👘🐩👟👎👐👢👛👦👍👣👑👫👜🐾🐽👅👄👍👧👐👑👌👛🐾👘👢🐨👐👈👢👧👏👘🐨👧👋👍🐾👯👘👎🐾👉🐭👈👣👛👎👉👍👧🐩👎👏👧🐾👍👤👍👎👊👣👣👠👉🐩👟👌👌👣👍👮👎🐽👛👏👜🐾🐰👌👙👍👑🐿👐👋👅👢👎🐾👁👩👅👍👟👎👙👏👉👟👋👍👑👢👚👣👑👌👉👤👟👎👘🐪🐸👯👍👍👑👦👘🐨👐👯👊👥👅👡👉👣👁👎👍👢👍👘👘🐽👢👰👚🐪👟👎👄👎👉👰👋👣👑👢👌🐩🐼👱👈👣👧👎👙👋🐹🐪👑👌👛👁👜👍👑👬👋👣👟👠👙🐼👧👇👍👤👯👘👛🐩👄👯👎👥👉👣👉🐧👑👪👐👢👑👪👅👍👧👍👘🐾👫👟👉👣👧🐧👍👎👫👦👍👢🐨👏👘🐻👅👎👄🐽👧👟👐👱🐽👢👛🐾🐽🐾👑🐾👟👟👄🐧👁👍👍👣👉🐺👐👍👣👏👋👥👅👘👊🐽👁👩👌👤👪🐨👋🐨👉👍👍👥👛👎👙🐽👣🐫👎👢👉🐺👘👌🐨👍👍👡👅👌👙🐽👑👩👍🐧👛👂👉🐨👛👪👍👣👛👅👉🐨👁👌👍👣👍👘👐👎👅👎👉👥👍👘👉👣👁👏👐👢👑👑👄👍👛👩👍👤👧👆👍👣👣🐬👌🐩👯👘👘👣👁👏👜🐾👟👎👙🐾👉👋👑🐾👯👘👚👍👅👩👛🐽👉👊👙🐽👧🐬👍🐻🐽👘👍🐨👐👰👊👢👣👉👘👣👧👏👐👣👟🐺👊🐽👛👎👎👤👫👏👉👢👧👰👐👌👛👮👌🐧🐨👬👘🐽👣👎👘👢👁👏👌👱🐽👆👉🐨👛👬👌👤👯👊👄🐨👁👈👍👎👧🐺👍🐧🐬🐾👎👣👟👆👍👋👣👐👌👤🐨👊👊👍👧👍👐👱👍👎👙👌👍🐫👍🐩👧👆👍🐧🐨🐾👚🐽👉👎👘👢👑👩👑🐽👑👮👊🐾🐽🐾👋👤👣👊👙👏👈🐨👍👤👯👡👜🐼🐨🐿👌👏👣👋👘🐩👉👌👐👤👪🐨👍👍👣👏👛🐾🐽👏👉👤👯👱👐👌👚🐬👍👍👁👫👜🐽👟👎👄👥👈👮👐👎👪👯👚👢🐬👍👘🐽👧👟👄👏🐹🐩👍👤👧🐹👛🐩👍🐾👋👥🐽👋👙🐾👉👏👐👢👍👮👊👍👛👎👌👢👛👏👙👍👑🐿👐🐧👍👪👍🐾👁👏👘🐽👉👌👍🐼👑👃👍👣👑👘👉🐨👑👫👉👤👫👅👘🐨👧👀👍👡👀🐨👌🐨👉👪👋👢👟👟👉👤👉👍👍👤👯👍👜🐽👐👮👎👣👧👣👍🐨👑👀👋🐨👛👦👋👣👑👏👆🐿👣👏👍🐪👉👨👋👣👑👘👍🐨👛👬👋👣👟👟👘👱👍👎👍👤👯👘👛🐩👍👪👎👥👉👣👉🐪👉👨👋👍👑👂👜👣👛👩👎👤👫👟👍👢🐬🐾👌🐩🐨🐾👍🐧🐨👎👚🐽👟👎👘👢👑👎👑👌👑👢👛👍👅👩👅👍👛👠👍👢👧🐫👍👣👉🐺👍🐩👈👯👑🐼👛👠👊🐼👧👐👐👤🐨👊👍👍👍👫👅👌👅👊👄👍👣🐬👑🐼👉🐺👘🐼🐨👍👙🐻👅👌👙🐽👑👩👍👣👛👂👉🐩👅👀👊👣👛👊👄🐩👟👦👍👡🐹👢👌👤👍👫👋👢👛👘👉🐩👯👐👌👡👁👦👍👣👑👪👘🐿👛👉👙👍👑🐿👍🐾👫👢👍🐾👁🐿👜🐾🐰👍👘👢👁👟👍👢👑👘👚👍👅👫👆👍👛👠👉🐨👁👑👎👢👍👢👄🐾🐽👍👄👏👁👠👉🐽👁👏👐👣👉👎👍🐽👑🐿👜🐾🐽👆👙👌👧👀👌👤👯👢👘👍👛🐿👑🐪👧👏👙🐽👧👟👎👍👛👊👉👢🐨👎👎👤🐽👊👙🐽👧👭👎👣👛🐧👐👍👛👎👑🐽👍👉👙👋👣👨👋👍👑👪👄🐨👉👎👘🐼👛👍👄👢👍🐬👐👌👛🐾👍🐩🐽👩👅👏👑👑👍👍👧👰👑👍👌👯👍👢🐰👎👋👣👛👟👄👎🐰🐪👍👣👚👯👅🐽👈👯👎👏👛👅👍👣👧👐👍🐧👟🐺👎🐽👣👪👘🐾🐰👎👉👣👐🐩👌👤👫🐧👘🐨👁👪👚🐻🐽👎👉🐪👟👇👐👍👑👁👜👤🐽🐿👆👍👛👎👜👢👀🐧👎👎👧👂👋🐨👀👯👎👥👍👍👙👏👟👌👌👡🐽👂👛🐨👑🐾👎👤👫👍👄👎👉🐿👍🐩👯👦👘🐨👁🐽👊👣👛👌👍👍👁🐿👍🐨👑👘👎🐾👉🐿👆👍👛👟👜👢👐👯👎👍👍👦👛🐨👛🐾👎👥👅👡👉👏👉👟👍👡👅👦👊🐽👣🐭👉👣👛👡👄👏🐹👀👐👌👛👦👙🐾👁🐾👙🐻👍👎👙👋🐽🐪👌👡🐽👪👎🐽👁👐👘🐾🐽👊👍🐩👟👐👎👍👉👂👙🐨👍👎👎👥👉👢👊🐾👉👍👋👍👑👮👄🐽👧🐽👘🐾👫👎👉👣👧👱👐🐧👟👮👎🐽👛👀👈👢👟👎👘🐨👍🐫👍🐧👑👎👚👤👁🐾👎👢🐬👠👙🐼👧👭👍🐨👑👢👅🐽👈👯👊👥👁👆👍👤👉👟👌👤🐬🐺👚🐽👍👫👛🐿👛👋👍👣👧🐧👑🐼👛🐾👘🐧🐨👏👌👢👣👎👙👏👉👱👍👣👛👂👊🐽👍👬👈👣👑👟👘🐨👧👄👍🐾🐨🐫👐👎👅👪👘🐪👧👟👉🐩👯👆👍👤👯👑👄🐽👑👨👊👡🐹👑👍👤👉👀👌👤🐬👆👘👣👁👫👘🐽👟👑👍🐼👑👟👑👍👑👮👍👣👛👬👋👣👛👎👘🐪🐹🐭👎👋🐹👢👅🐽👌👰👊👣👛👋👙👌👑👐👍👢👍👂👘🐽👛👎👑🐼👛👎👄👎👉👑👐👢👛👦👌🐩👁👏👘🐽👧👏👍🐪👉👩👍👎🐨👉👜🐽👧🐾👑🐽👟👠👘👱👍👐👍🐽👛👱👄👍👅🐾👎👏👣👣👉👱👣👦👍👤👫👪👅🐽👌👰👅👎🐰👎👄👌👧🐧👍👍👟👢👎🐽👑👪👚🐼👫👘👍👍👧👏👍🐨👛🐾👉🐩🐽🐿👙🐽👟👊👘🐪🐸👱👍👤👯👢👛🐨🐼👰👌👏👟👘👊🐼🐬👧👌👤👯👮👍🐨👣👪👍👤🐽👏👉👣👁👎👍👎👫👢👎🐽👑👪👚🐽👟👑👍👎👈👮👍🐧👑👂👚🐩👅🐼👈👣👛👎👄🐩👟👈👍🐨👑👘👐👎👄👰👋👢👟👟👉👥🐹👆👐👤🐨👥👜👣👑👏👚🐼👛👢👄👌🐬👀👌🐩👫👦👘👍👁👩👅👍👣👍👙🐽👑🐪👍👋🐽👘👛🐼🐨👀👑🐾👯👊👍🐽👑👁👍👎👯👦👙🐨👐👯👑🐼👟👟👉👤👯👘👐👣👟👅👜🐽👑👨👉👥👅👡👙🐿🐹👀👋🐨👛👮👘👍👁👪👎👏👧👎👄👥👉👟👍🐻🐽👑👜🐽👅👬👋👣👉👠👉🐩👟👐👍🐽👛👮👍🐨👍🐾👎👢👍👊👙👌👑👩👍👤👫👘👜👣👛👩👎👥👛👎👄👍👣🐫👌👤👧👆👍🐩🐽👩👊👤👟👍👄👡🐽👊👑👍👑👊👚👣👛👫👘🐽👅👠👘🐧👧👈👍👣👚👮👄👍🐼👮👄👏👅👏👙👢👑👌👐👤🐬🐺👚🐨👍👫👚👱🐽👋👍👣👑🐧👑🐼👛🐾👘👍👁👩👚🐻🐹👎👍🐪👄🐨👍🐩🐨👂👍👍👁👬👎👣👧👟👘🐨👧👦👎👋🐽👘👉🐩👉🐾👊👥👅👘👉👋👍👦👑👎👯👑👄👣👐👯👌👢👅👎👄👢👣🐫👍👣👟👪👍🐾🐼👰👘🐽👛👑👘🐩👉👭👍👤👯👘👛🐾👍🐿👉👢🐬👅👍👥🐹👑👎👣👍👢👉🐩🐽👩👄👍👛👏👙👤👯👐👐👋👁👊👛👣👑🐿👜🐾🐽👎👍👢👧👍👌👎👯👢👍🐨👁👎👚🐻👁👏👍🐪🐹👃👌👡👁👅👜🐽👉👬👋👤👟👊👙🐿🐹👮👍👤👧👂👙🐨👛🐾👑🐽👟👣👉👱👣👍👐👣👑👘👊🐽👐👯👘🐾👫👏👉🐧👧👁👌👎🐬👂👍👍👑👪👚🐻👅👘👍👣👧🐪👌👤👯👘👍👍👁👫👘🐽👛👟👄🐧🐽🐫👍👣👑👘👙🐩🐼👯👑🐼👟👋👘🐩👉👐👐👤👫👘👍👣👣👩👑🐽👅👊👄👏🐹🐽👌👍👟👦👍🐧🐨👏👌👥👣👌👙🐽👧👩👍👋👁🐽👜👣🐽👪👚🐽👛👠👍🐼👀👱👎👣👍👢👊👤👍👎👍👥👍👌👙🐾👟👐👌👡🐽👂👎👣👛👏👜🐾🐰👍👄👍👧👏👍👤🐬🐾👌👤👁👍👎👣👍👑👘🐨👧👟👋👌👑👮👍👣👧🐽👑🐾👟👊👙🐿🐹🐬👎👎👫👊👌🐨👑👫👊👢👟👟👊🐼👧👏👐👎👫👮👋🐽👑👪👎👢👫👎👍👢👑👱👐🐧👛🐫👘🐼🐧👮👊👣🐽👎👄👥👟👏👎👍👛🐽👜👍👍👪👑🐽👛👠👘👱👍👎👎👎👯👢👅🐽👑🐾👌👣👛👎👙👤👉👏👐👢👑👪👅🐽👛👩👌👢👅👎👄🐻🐽👱👌👤👧👊👎🐾🐼👰👘🐽🐹👎👄🐾👉🐾👑👍👛🐾👊👍👉👪👎👤👟👟👜👣👑🐽👍👤👯👎👐👍👣👏👌👢👟👎👘🐩👯👍👐👏👧👪👍🐽👣👩👑🐻👅👅👍👣👧👀👑👌👑👘👋🐨👐👮👎👢👣👍👄👥👉👟👐👎👯👂👛🐾👍🐿👉👣👛👠👉👥🐸👱👎👢👛🐫👐👎👅👎👋👥👁👘👉🐪🐹👦👑👎👯👘👎👍👑👩👐🐪👟👊👄👍👍🐫👌🐩👯👢👘👣👁🐾👚🐽👟👑👙🐾👟🐻👌🐧👑👢👍🐨👛👫👛🐽👟👊👘🐪🐹🐬👍🐩👫👢👙🐨👌👰👉👡👑👎👙👤👉👏👍👥👧🐹👜🐽👍👏👚🐪👟👡👄👎👉👑👐👌👑👦👘👍👀👯👊👤👟👎👙👏🐹🐻👍👡🐸🐨👉🐨👛👪👘🐼🐰👎👍🐾👯👑👍👎🐧👯👌🐨👅👎👚🐽👑👑👜👣👑👏👐👣👍👎👅🐽👐👰👚🐼🐰👎👄🐻🐽🐿👐🐧👑👊👍🐩🐽👩👎👥👁👘👉👣👧🐪👌🐧👛🐾👉🐨👉👫👙🐽👅👠👎🐽🐼👯👍👤🐨🐫👘👤👍🐽👄👌👑👅👍👎👟👋👐👤👫👮👋🐨👑👫👄👍👅👎👍👤👯👐👑🐼👛🐾👎🐽👁👪👚🐿👟👎👉👱🐸🐨👍👤👯👂👛🐾👍🐾👘🐽👛👅👙👣👀👱👎👎👫👘👊🐩👅👩👅👍👍👊👙🐾👟👦👋👍👟🐺👜👍👛👎👎👤🐽👟👄👌👣🐫👍🐾🐬👆👘👍👁👫👌👥🐹👎👘🐨👑👂👋👌👑👘👚🐨👢👱👘🐽👛👅👍👎👮🐧👎👋🐹👎👚🐨👐👰👊👢👑👆👎🐼👁👎👐👢👛👦👉🐽👧🐼👉👤🐽👢👉🐨👑👀👌👤🐨🐧👋👤👁🐽👚🐻👑👎👘👢👦👮👐👋🐽👪👍🐨👉👩👙🐽👁👟👜👤👯👐👎👍👛🐧👐👎🐽🐾👚🐽👟👣👉👥🐹👪👌👡🐹👘👊👣👑🐿👜🐽👛👌👙🐽👧🐨👌👎👧👎👍🐨👀👱👘🐿🐽👌👙🐽👧👟👍👡🐽👢👛👍👉👪👘🐾👟👟👜👣👑👏👍👤🐨🐫👐👎👈👰👉👢👛👏👎🐾👉👏👍👢👍👘👎🐽👣👩👎👢👫👣👙🐾👉👰👍👣👉🐾👘🐽👁👌👈👡👅👍👄👥👈👮👍👡🐸👯👍🐩👅🐾👘🐽👛👟👘🐨👧👏👎👣👍👘👘🐩👄👰👉👢👛👍👙👎👟👆👐👢👍👮👅🐽👑👪👑🐿👛👋👄👢👣🐫👍🐨👟👦👍👤👁🐾👚🐾👟👍👙👏👄👯👍🐨👑👎👛🐾👍🐾👑🐼🐬👅👍👤👮🐨👎👢👍👊👈🐩🐽🐽👄👍👑👠👉🐼🐬👍👐👢👑👘👚👣👑👪👑🐼👫👊👄👢🐬👁👌🐩👯👢👌🐧🐧👰👘🐾🐰👎👘👢👁👩👍👎🐨👎👛🐽👉👩👑🐾🐽👊👄👥👟👑👍👎👧👂👙🐨👑👪👎👥👅👟👊🐾👉👊👐👣👑👘👊🐽👑🐿👛🐾👫👎👉🐧👧👀👑👌👚🐬👍👤🐽👩👊👤👟👎👘🐨👧👟👐🐨👑👆👛🐼🐰👎👑🐾👣👊👄👌👧👘👍🐩👫👎👘🐧🐨🐿👉👣👑👅👎🐼👧👧👌👢👑👂👎🐽👣👪👌👣👛👎👉👣👧👀👑👌👛🐾👋🐩👁👍👚🐼👣👍👙👏👟👩👐👍👑👘👉👣👑👐👑🐽👛👠👍🐼👌👮👍👤👧👂👌🐨👁👩👅👍👛👟👉🐪👉👋👐👢👑👮👛👣👛👪👑🐻🐹👑👍👤👉👏👎👢👑👦👘🐨👁👩👅👍👑👌👍👣👧👱👋👋🐽👊👍🐩🐽🐽👑🐽👛👅👘🐨👐🐩👎👍👍👢👉🐨👛👪👎👢👑👏👘👢🐬👏👌👣👑👮👄🐨👍👫👜🐾👫👡👄👏🐹👀👑🐼👑👢👋👣👅🐽👊👢👫👎👙🐾👅🐫👋👢👑👉👜🐽👛👐👑🐼🐬👎👙🐿🐹👑👍👡🐹👦👈🐨👛🐾👙🐿👅👟👉👱👣👏👌👤👯👑👄👣👍👫👛🐻🐹👟👄👌👧👱👐🐧👉🐾👍🐨👀👱👘🐽🐹👑👍👤👉🐾👑👌👛👆👉🐩👅🐾👘🐽👛👅👄👌👧🐬👍👤👯👊👊🐨👈👯👊👏👟👏👙👣👑👋👐👢👌🐨👙🐨👉👎👘🐼👅👣👍👣👧🐿👍🐩🐨🐧👍👢🐨👏👌👢👟👎👄👥👟👭👐👋🐽👂👉👣👅👪👑🐽👍👎👍👢👧👀👍👡🐹👘👚🐩👅👪👍👥👅👌👙🐾👉👆👍👣👚🐫👜👍👑👫👄👋👉👉👄👎👉🐿👍🐩🐬👆👘👣👁👐👌👤👟👎👙👋🐽👋👌🐧👑👎👛🐾👅🐭👍👣👛👅👍👥🐹🐭👍🐩👫👍👄👍👉👫👊👣👟👟👉👋👣👏👐👣👉🐾👄🐨👍👨👉👥👅👏👉👢👧👑👐👌👛🐾👌🐨👐👰👘🐽👣👏👍👣👁👃👐👡🐽👎👍🐨👛👬👌👤👫👋👉🐨👁👎👍🐽👑👘👛🐧🐨🐾👚🐼👑👟👉🐪👉👏👌👤👯👮👜👣👢👮👘🐿👛👏👉👤👉👁👌👎👫👦👍🐩🐼👯👍👡👉👎👄🐽👧👏👐🐩🐨👂👉🐨👛👩👅👎👣👠👉👏🐹🐩👍👡🐽👘👘🐧🐬🐾👌👏👟👋👙👢👧👇👍👤🐨👊👙🐨👍👫👅👌👅👡👉👣👑👯👌🐩🐧🐬👍🐨👑👪👚🐼👟👎👍🐪👉👩👐👋🐸👯👍🐩👁🐼👌👣👟👟👄👤👟👌👎👍👉🐾👊👤👍👪👉👥👍👉👙🐽👧👦👐👋🐽👮👋👍👑🐿👄👋👉👑👍🐧🐬👱👐🐧👍👎👍👤👁👏👜🐼🐰👎👙👏👟👘👋👍👑👘👎🐾👍🐿👆👎👧👅👘🐨👐🐨👍👤🐧🐨👊🐨👛🐿👊👢👟👣👉👤👟👘👐👢👛👦👛👣👣👍👎👥👅👎👙🐾👉🐨👎👢👑👆👍🐩🐼👱👈👏👛👏👘🐨👑👟👍🐻🐽👊👚🐨👛👐👘🐽👉👟👙🐼👧👐👎👍👛🐧👛👢🐨🐾👍👡👑👊👙👏👉👋👋👍👌🐨👎👣👣👩👑🐾🐰👍👄👢👧👐👐👌👑👪👎🐽👐👱👘🐿👑👎👍🐼👑👩👌👡🐽👮👉🐨👧🐿👉👣👅👎👉🐪👟🐫👍👢👑👘👐👎👈👮👄👍👛👎👙👣👁👪👌👣👉👪👙🐨👑👫👛🐿👅👆👉👣👍🐬👋👣👚🐬👍🐧🐨👍👚🐻🐹👎👍👤👟👩👍🐧👑👘👚🐩👅🐽👛🐾🐽👎👍👥🐹👐👍👡🐽👢👉🐨👀👰👉👢👟👠👉👤👟👋👐👋👅🐹👜👍👑👫👜🐾👫👢👄👌👣🐫👐👢👑👦👍🐩👁👩👅👍👣👎👄🐾👈🐧👐👱🐽👎👚🐨👧🐾👋👣👟👊👙🐼👧👑👎👢👍👘👘🐨👈👯👊👥👉👢👉🐼🐬👐👐👋👁👅👄👍👐👮👎👢👫👡👄👢🐬🐽👌👎👯👢👍🐧🐧👰👘🐽🐽👎👄👍👧👟👎👍👛👅👜👍👉👩👘🐾👟👊👙👢👁👇👎👎🐧👯👙👤👍👪👎👣👟👡👉👎👉👩👋👍👍👪👅👍👍👫👛🐾👫👎👍🐧👐🐩👍👤👪🐬👎👤👁🐿👌👥🐽👘👍👍👧👟👑🐼👌👯👍👍👍👫👘🐼🐬👠👉👍👢👮👍👣👛🐫👙🐩👀👰👉👣👛👋👙👣👁👦👌👤👯👮👐👍👑👩👍👥👛👎👉👣👣🐪👍🐩🐬👆👘🐨👀👯👎👢👛👘👉👎👉🐪👍🐾👯👘👚🐨👛👐👚🐽👛👅👙👣👁👦👍👢👉👂👉🐩👅👩👄👍👛👟👉🐪👟👌👌👡👅👦👎👍👑🐾👐👱🐽👠👄👢🐬👱👍🐩👫👎👌🐩👁👍👎👥👁👎👙👏👉👟👑👎👯👢👚👣👛👬👑🐽👛👅👍👤👮🐧👍👎🐨👮👋🐨👐👰👉👥👁👋👙👎👟👎👋👎👧🐾👌🐨👧👎👎👣👅👡👙🐾👉🐧👐👌👑👆👘👎🐼👮👚🐽🐽👎👙🐾👅🐪👋👍👑🐽👛🐧🐨👐👋👣👟👠👘🐨👧👍👎👎🐧🐨👈🐩👄👯👍👥👉👡👜👢👑👌👍👤👯👘👄🐽👧🐽👑🐼👛👟👍👢👧👰👐🐧👉🐺👍🐨👑🐭👈👋🐽👎👄👥👟👟👌👤👪🐨👍👣👍👪👎👢🐬👎👙👢👁🐬👍👤🐨🐫👐👍👈👰👋👣👛👎👙👣👁👦👌👣👉👎👙🐨👧👏👜🐽👛👅👄👍👧🐧👋👌👟👦👋👣👀👮👍👡👉👑👘🐨👧👩👍👢👑👢👊🐾👍🐿👆👍👑👠👙👢👁🐭👍👤🐨🐫👐👎👅👪👎👥👁👢👉👣👑👋👐👢👟🐺👎👣👛👪👍👤👫👊👄👢👑👰👋👍👑👪👌👤🐼👱👈👣👣👑👍🐼👑🐪👍👌👑👘👊🐾👍🐿👉👤👫👊👄👌👢👰👍👎🐨🐫👘🐩🐽🐽👄👍👣👉👘👢👧👐👍🐧👟🐺👊🐽👑👫👄👍👛👎👄👌🐬👱👐👢👛👪👌🐧🐨👫👘🐽👑👎👍🐪👟👏👑🐻🐽👢👉🐨👧🐾👘🐾👯👊👜👤👯👎👎👎👯👘👐👍👅🐾👙🐽👍👌👙👏👉👐👌👡🐹👮👊🐽👢👮👘🐼👫👎👍👣👧👱👐🐧👉👆👐👍👑👪👚🐻👅👍👙👏👟👟👍👣👑👂👛🐾🐽🐾👑🐾👟👅👄🐼👐🐧👍👤👯👘👘🐩👈👯👍👏👟👏👎🐾👟👐👐👋🐽👮👚👍👍👩👍👋🐽👎👄👍👧👰👍👤🐨🐾👘🐽👁👫👛🐻👍👑👜👢🐬👭👍👡🐸👯👎🐽👍👨👈👣👧👟👄👏🐹👈👍👣👉👂👉👤👍👪👉👥👅👡👉👤👉👧👌👡🐸🐧👜👣👛👪👍👤👫👋👙👍👑👏👍🐩🐬👎👍👎👁🐿👘🐿🐹👑👎🐿🐹👏👍🐩👯👢👎🐾👍🐿👆👍👑👅👍👥🐹👐👍👤🐧🐨👉🐨👌👰👊👣👑👏👙🐽👑👎👐👣👟👦👜👣👉👪👎👥👛👎👙👌👑👀👑🐼👑👢👋👣👁🐽👎👣👟👏👍🐼👁👟👐👡🐽👢👛🐽👁👬👊👢🐰👎👉👋👍👐👍🐽👍👘👛🐨👣👎👚🐽👟👣👉👎👉👨👐👣👍👘👊🐽👛👩👑🐾🐰👟👉👋🐹🐪👌🐩👯👂👍🐩👁👌👉👡👅👍👘👢👑👘👑👍👑👎👚🐨👧🐾👍👤👣👟👜👣👑👑👍🐨👛🐫👘🐧🐬🐾👎👢👛👍👙🐾👉👏👐👤🐨👊👎🐽👣👩👎👥👅👆👉👤👉👰👍👎👯👆👘🐽👑👌👉👥👣👑👘🐨👁👇👍👣👛👂👉🐩👅👀👊👣👛👅👉🐨👁👄👎👏👧🐾👋🐩👅👩👆👍👛👏👙👎👟👆👍👤🐬🐺👛👣👐👯👑🐿👛👊👄👍👍🐫👍🐨👟👦👐👍👅🐾👎👣👑👑👎🐿🐹👱👍👢👑👪👚👣👧🐼👋👢🐬👎👙🐿🐹👁👎👣👍👘👐👍👈👯👎👏👛👏👘🐩👯👎👋👎🐬👊👘🐽👣👏👜🐼👫👏👉👣👑👱👎👢👑👎👍🐧🐧👮👊👢👣👏👘🐩👈🐧👎👍👛👊👉👢🐨👎👎👤👫👊👙🐼👧👌👎👎👫👘👛🐧🐬👪👎👥👅👘👉🐽👁👘👍👤👯👂👜👣👌👰👅👍👛👍👙👌👧👐👐👌👑👪👎👤🐼👯👚🐻👅👑👄👥👟👟👐🐨👑👂👚👢🐰👎👋👢🐬👎👍🐽👍🐫👍👤👯👡👜🐼🐨🐾👍👏👣👊👘👣👧👏👐👤🐨👊👎🐽👑👬👚🐼👁👣👉👣👑👐👐👱👅👦👍🐧🐨👏👌👣👧👑👍👍👧👭👐👍👑👁👜🐽👅👫👘🐽👛👠👎🐼👁🐼👍👤👧🐹👄👍👀👯👑🐿👅👟👉👋👣👏👐👏👧👎👎🐽👑🐾👑🐻🐹👢👄👣👑👏👍👎🐬👆👎🐾👁👩👅👍👣👑👙🐽👑👏👋👢👑👩👛🐨👧🐿👆👍👛👅👉🐼👑👀👎👋🐹👦👛🐨👐👰👊👢👛👡👉👢👁👘👑👎👫👘👌🐽👢👰👚👱🐽👎👄👍👁🐧👐👢👑👆👘👍👛🐾👉👏👟👎👙👋🐼🐧👐👎🐨👎👉👢🐨👍👎👢🐬👎👍🐩👟👌👎👎🐨🐧👛🐨👈👯👎👥👉👅👍🐽👁👎👋👍👛🐫👍👣👑🐿👛🐼🐰👏👉👢👧🐧👑👌👟👮👎👣👑👏👋👋🐽👎👘👢👑👃👑🐼👛👎👉🐩🐽🐾👑🐼🐬👠👙🐼👐👱👍🐨👑👢👜👤👍🐿👋👥👁👆👍👣👧👦👌👤🐬🐺👙🐨👉👎👘🐼👅👅👙🐽👧🐧👐🐧👍👂👘🐧🐨👪👎👢👟👎👉👱👍🐿👍👢👛👂👊🐽👍👪👘🐽👧👟👄👍👦👱👍👎👫👘👐👍👀👯👑🐿👉👢👉👣👑👧👍👤👯👮👊👍👛👌👈👣👛👡👄👍👧👀👌🐩👯👦👘🐽👁👪👊👣👑👎👘🐨👑🐪👑🐾👯👘👚🐨👛👫👉👣👅👅👍👥🐸👮👍👎🐧👯👄🐽👉👫👉👏👟👡👉👎👯👏👐👎👫👩👜🐽👑👌👉👣👅👡👄👍👁👰👐👌👛👦👌🐩👁👎👊👣👛👎👙👋🐼🐧👎👍👛👎👚🐨👍👬👊👣👟👠👍👍👧👑👍👎👯👊👍🐨👐👯👌👏👟👏👙👋👣👎👋👌👉🐾👊👣👍👏👜🐾🐰👎👄👢👑👰👐👥👧🐺👎👣👑🐽👎👤👟👘👉👍👧👇👐👱👁👂👊🐾🐽🐾👋👣👅👎👉👣👧👐👍👤🐧👯👅🐽👣👏👌👏👣👊👘🐩👉👐👍🐧👛👊👎🐽👑👩👍👤🐽👏👉👤👯👰👍🐩👫🐧👙🐾👁🐿👌👥👣👎👙🐽👁🐿👐👌👑👂👍👍🐽👨👋👣👑👅👙👣🐽🐪👍👤👧🐹👜🐽👐👰👋👢👛👟👉👤👉👦👐👋🐽👮👎🐽👛👪👍👤🐽👟👄👢🐨🐬👌👤👫👢👍👤👁👏👘🐼🐰👑👘🐨👑🐪👋👢👑👘👚🐨👧👀👑🐽👉👅👘🐩👮🐧👍👡🐽👦👙🐨👑👫👊👢👛👡👉🐩👟👎👐👣👟👅👜🐽👐👯👎👣👛👢👉🐨👑🐿👎👢👌🐨👋👣👑👫👛👱🐽👏👘🐨👑👋👌👋👁🐾👉👢🐨👎👎👤👣👊👉👋👍👎👎👎👫👘👐👎👅👪👎👥👅👘👉👏👉👋👋👎👪🐨👊👣👌👰👜🐾👫👍👄🐻🐹🐬👐👌👚🐬👍🐩🐽👩👊👥👁👎👍👱🐽👏👑🐼👑👊👚👣👧🐿👉👣👅👅👙👤👟👘👍👣👛👮👊🐩👀👯👎👥👅👏👙👢🐬👦👌🐧👛👊👌🐨👣👪👎👤🐽👋👉👣👧👀👑🐼👛🐧👍🐨👐👮👚🐼👣👘👍👎👟🐻👍👤🐨👂👎👍👉👐👘🐽👧👟👘🐨👧👌👍👡🐹👢👍🐨👁👫👌👢👛👘👉🐩👯👋👋👍👍👮👐👍👑👩👎👤🐽👠👄👣🐽🐫👍👎🐬👆👎🐾👁👩👅👏🐽👍👙👋🐽👭👎👍👑👪👍👍👅👫👆👍👑👊👙🐿🐹🐫👍👋👁🐧👄🐽👐👰👊👢👟👍👙👥🐹👘👍👣👑👮👄🐨👣👍👍👏👟👏👍👢👑👑👐🐧👑👢👌🐩👁🐾👚🐾🐰👏👘🐨👁🐿👎👍👛👊👉🐨👅👬👊👤👟👊👄🐨👁👌👎👎👫👘👛🐩👉👪👑🐿👅👘👉🐼👁👘👍👤🐨👊👜👣👛👩👘🐼🐰👎👄👢👧👎👍🐩🐧🐬👍👍👑👪👚🐿👧👌👍🐼👑👋👍👡👁🐾👉👣👧🐾👑🐼🐬👟👄🐧👀🐨👍🐨👉🐺👐👎👀👯👎👏👣👊👎🐾👟👐👐👎👪🐨👎🐽👍👪👎👥👛👎👄👏🐹👎👍🐩🐨🐧👘👤👁👀👈👢👣👑👄🐾👉👱👍👢👑👂👍👤👅🐽👚🐽👛👠👍🐼👀🐧👎👣👛👱👜🐽👐👯👑🐽👣👠👉👣👁👦👋👎👯👂👎👍👛👎👑🐻👉👋👄👎👉🐿👍👎👯👢👎🐾👁👫👌👤🐰👍👙👋🐽👋👍🐧👑👑👜👎👅🐭👉👤👣👊👘🐪🐸👯👍👍👛🐧👙🐨👛🐿👉👏👟👡👉👢👁👘👍👤🐨👊👉🐨👧👍👑🐼🐰👊👄👢🐬🐿👐👌👑👢👋👢🐨👍👚🐻👍👎👄👎👉🐪👌👡👁🐽👜🐽👅👐👙🐽👉👟👄👥👟👍👎👎👫👢👙🐩👅🐾👙🐿👅👏👘🐪👉👪👐👢👑👮👄🐽👉👍👘🐾🐰👎👘👱🐽👐👍👎🐬👮👎👣👑🐽👅👏👁👎👘👢👧👃👍🐨👑👎👚🐩🐽🐾👍👣👛👅👄👌👣🐭👍👤👧🐺👐👍👐👰👌👢👟👌👘🐨👧👈👍👤🐨👊👎🐽👣👩👘🐼👅👆👙🐾👉👍👌👎🐧🐬👍🐼🐨👎👙🐻👅👌👍👣👑👭👍👤🐨🐽👜👤🐽🐾👘🐽👍👎👍🐨👁👌👍👡🐹👘👍👤👍🐾👑🐿👅👌👙👏🐹👆👐👏👧👎👊👍👐👰👛🐾🐽👌👄👍👣🐬👌🐩👯👎👘🐾👍👩👚🐽👟👑👙🐽👁🐿👋👋🐽👎👚👍👁👬👋👣👟👊👘🐪🐹👘👎👍👍👢👉🐨👌👯👎👏👣👟👉👤👯👐👍👤👯👂👋🐽👣👨👉👣👛👎👄👎👉🐨👍👎🐨🐧👍🐽👀👯👊👣👛👎👉👣👧👟👑🐻🐸👯👉🐩👅🐽👎👤👟👊👄🐨👁👐👍👎🐨🐫👛🐩👍👪👘🐪👛👟👊🐾👉👐👌👡🐹👎👅🐽👌👰👜🐽👅👎👄🐻🐽🐨👐👌👛👦👐👍👁👏👌👣👟👍👘👢👧🐿👌👡🐽👢👚👢🐬👏👙🐾👣👎👄👤👚👯👍👤👧🐾👐👎🐼👮👅👌👛👍👎🐾👟👌👐👤👫👮👌🐽👑👫👄👍👅👟👉👣👑🐧👋👣👍👆👘👣👁👪👎👡🐹👘👉👎👟👩👍👢👑👘👚🐩👅🐼👈👤🐽👊👍🐨👁👀👍👡🐹👢👊🐨👐👯👑🐿👅👠👉👤👉👧👍🐧👑👂👅👣👑👫👜🐾👫👋👄👎👉👏👌👤🐬👎👌👤👁🐾👚🐾🐰👑👍🐼👑🐪👍🐽👑👘👊🐼🐨👌👌👣👧👎👄🐻👍🐭👎👍👉👆👛🐩🐽🐾👊👏👣👣👉👋👣👏👐👣👟👦👐👍👉👍👎👤🐽👡👍👢🐬👯👌👎👯👮👍🐩👁👎👊👢👧👎👍👱🐸👯👍🐻👁🐾👚🐨👅👬👌👤👟👊👙👎👟👟👍👤👫👎👐👎🐽🐾👚🐽👛👏👙👤👉👏👐👢👛👊👄👍👑🐿👄👏👛👎👄👢👍🐭👌👎👧👘👎🐽👑🐽👊👥👁👌👘🐨👧👎👑👍👑👆👚🐨👧🐾👌👤👣👎👍👥🐹👘👍👤🐨🐧👍🐨👄👰👋👥👅👠👊🐼👑👋👐👢👑👮👚👣👉👍👌👢👛👏👙🐽👧👐👋👍👚🐬👍👢🐨👪👎👡🐹👘👍👍👧👱👍👡👁👂👎👍🐽👪👈👣👛👎👉👍👧👰👍👎👧🐾👛🐨👀👯👚🐼👛👟👉🐩👯👦👑👎👯👘👎👣👑👩👎👤👫👣👘👱🐽👏👍🐾👫👢👎🐽👛🐿👜🐿👅👍👙👥🐹👱👐👡🐽👘👛🐼🐨👎👋👣👉👊👙🐽👐🐨👍🐾👯👦👋🐨👐👮👄👏👁👡👉👣👧👎👐👢👑👂👉🐽👐👮👎👤🐽👡👄👍👧👯👍👎👯👘👘🐾🐼👱👈👣🐽👎👍🐪🐹🐿👐👋👁👅👜👍👁👩👘🐾👟👊👄🐩👟👮👍👡🐹👢👙🐩🐽🐾👎👥👉👣👉🐪🐹👪👌👣👉🐾👊👍👑👎👘🐿👅👎👄👢👧👀👍👎🐧🐬👍👍👑🐽👚🐽👉👎👄👍👧👱👑🐼👌👯👍🐨👉👪👘🐽👅👠👉👏🐹👘👍🐩👫👎👐👎🐼👯👌👏👟👋👙👣👁👩👌👢👌🐨👎👍👣👌👊👢🐬👅👍👣👣🐪👍🐩👫🐧👘👢🐨👩👅👌👧👑👄🐽👧🐪👍🐾👯👁👜👍👦👱👚🐽👛👠👎🐼👁👄👍👎👧👂👋🐩👄👯👚🐼👣👌👙🐽👧👧👌🐧👍👂👌🐽👛👏👄🐿👟👠👙👍👑👱👍🐩👯👦👘👣👁👏👌👥👁👌👍👣👌👯👌🐨👑👍👜👎👉🐿👆👎👟👊👘🐩👮🐩👎👍👍👦👈🐨👑👫👊👣👍👎👘🐨👁👐👍👤👯👮👘🐽👧🐽👑🐼🐰👊👙🐿🐹👀👐👌👛👪👍🐩👁👀👈👢👫👎👙👋🐹🐪👋👍👑👅👜🐽👍👬👋👣👟👠👙🐼👧👏👎👎👫👢👅🐽👛🐾👌👣👑👘👉👢🐬👩👐👢👑👪👅🐽👐👰👅👌🐰👟👄👌👣🐫👍🐩👫👢👐👍👁👏👌👡👅👎👉🐪👟👟👐👱👁👆👉👍👍👪👑🐽👛👠👍👋👈👮👍👣👛👮👉🐩🐼👯👊👏👟👌👙👣👑👎👐👣👟👦👍👍👍👨👋👤🐰👏👍👣👧🐿👎👏👧🐾👍👤👁👎👉👡👉👎👄👡👍🐿👍👎👯👢👊🐾🐽🐾👘🐽👍👎👄🐧🐨🐫👍👋🐹👘👚🐩👅👪👑🐿👅👘👉🐩👟👏👐👋👅🐺👅👣👛👏👛🐽👅👌👄👍👣🐬👌🐩👯👎👌🐨👑🐽👊👣👣👎👙👋🐽👋👍🐻🐽👮👍👣👛👬👑🐽👉👎👙🐼👧🐭👎👍👍👢👚🐨👌👰👊👢👣👉👙🐿🐹👏👐👣👉🐺👅🐽👉👍👑🐽👁👢👄🐻👍👏👎👢👑👦👘👍👁👬👈👣👧👏👍👣👁🐿👑🐻🐽👎👍🐨👛👬👌👤👫👊👎🐽👁👏👍🐽👑👘👐👍👅🐾👎👣👛👟👉🐪👉👎👍👤👯👘👍👣👉👍👌👥👁👈👌👋🐧🐰&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 逆向Base100解码</span><br><span class="line">flag = base100_decode(flag)</span><br><span class="line"></span><br><span class="line"># 逆向20次Base64解码</span><br><span class="line">for i in tqdm(range(20)):</span><br><span class="line">    flag = base64_decode(flag)</span><br><span class="line"></span><br><span class="line"># 逆向阿特巴什密码解密</span><br><span class="line">flag = atbash_cipher(flag)</span><br><span class="line"></span><br><span class="line"># 逆向21次字符串反转</span><br><span class="line">for i in tqdm(range(21)):</span><br><span class="line">    flag = string_reverse(flag)</span><br><span class="line"></span><br><span class="line"># 逆向凯撒密码解密，偏移量为8</span><br><span class="line">flag = caesar_decrypt(flag, 8)</span><br><span class="line"></span><br><span class="line"># 打印最终的解码结果</span><br><span class="line">print(flag)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://w1ndys.github.io">W1ndys</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://w1ndys.github.io/posts/25815978">https://w1ndys.github.io/posts/25815978</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://w1ndys.github.io" target="_blank">W1ndysの小屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../tags/CTF/">CTF</a><a class="post-meta__tags" href="../tags/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81/">技能兴鲁</a></div><div class="post_share"><div class="social-share" data-image="https://q1.qlogo.cn/g?b=qq&amp;nk=2769731875&amp;s=640" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="../img/money/wechat.png" target="_blank"><img class="post-qr-code-img" src="../img/money/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="../img/money/alipay.png" target="_blank"><img class="post-qr-code-img" src="../img/money/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="7a43906e.html" title="HuYanSession2——壶言会话2使用手册"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HuYanSession2——壶言会话2使用手册</div></div></a></div><div class="next-post pull-right"><a href="cdf7e434.html" title="CTF学习日记（每天学点新东西，就是成功）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CTF学习日记（每天学点新东西，就是成功）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="7c7bd47d.html" title="技能兴鲁2023职业技能大赛网络安全赛项比赛心得"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-30</div><div class="title">技能兴鲁2023职业技能大赛网络安全赛项比赛心得</div></div></a></div><div><a href="85db357.html" title="CTF-crypto&amp;misc常用解密工具"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-04</div><div class="title">CTF-crypto&amp;misc常用解密工具</div></div></a></div><div><a href="7237d71d.html" title="CTF入门指北——reserve"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-13</div><div class="title">CTF入门指北——reserve</div></div></a></div><div><a href="cdf7e434.html" title="CTF学习日记（每天学点新东西，就是成功）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-11</div><div class="title">CTF学习日记（每天学点新东西，就是成功）</div></div></a></div><div><a href="4db76617.html" title="CTF文件头文件尾汇总"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-09</div><div class="title">CTF文件头文件尾汇总</div></div></a></div><div><a href="eed2fa14.html" title="CTF常用刷题平台"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-25</div><div class="title">CTF常用刷题平台</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=2769731875&amp;s=640" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">W1ndys</div><div class="author-info__description">欲戴皇冠，必承其重</div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">78</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">68</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/W1ndys"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="../img/about/qq.png" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="../mailto:w1ndys@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">RE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">WEB</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E9%87%8C%E7%9A%84FLAG"><span class="toc-number">2.1.</span> <span class="toc-text">日志里的FLAG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AD%E4%B9%B0FLAG"><span class="toc-number">2.2.</span> <span class="toc-text">购买FLAG</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">MISC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E4%B8%8D%E5%A4%9A%E4%BA%86"><span class="toc-number">3.1.</span> <span class="toc-text">时间不多了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Datas-secret"><span class="toc-number">3.2.</span> <span class="toc-text">Datas_secret</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">CRYPTO</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BabyRSA"><span class="toc-number">4.1.</span> <span class="toc-text">BabyRSA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84Python"><span class="toc-number">4.2.</span> <span class="toc-text">简单的Python</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/6cb5ad08.html" title="从应用内存上来研究智慧曲园模拟请假条">从应用内存上来研究智慧曲园模拟请假条</a><time datetime="2024-01-09T06:32:00.000Z" title="发表于 2024-01-09 14:32:00">2024-01-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/32e2a4f7.html" title="记录我的2023年">记录我的2023年</a><time datetime="2023-12-31T13:58:00.000Z" title="发表于 2023-12-31 21:58:00">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/2495f19d.html" title="怎样理解离散数学中的自反 反自反 对称 反对称与传递？">怎样理解离散数学中的自反 反自反 对称 反对称与传递？</a><time datetime="2023-12-30T08:12:00.000Z" title="发表于 2023-12-30 16:12:00">2023-12-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/72e47f4f.html" title="本博客免责声明">本博客免责声明</a><time datetime="2023-12-23T04:56:00.000Z" title="发表于 2023-12-23 12:56:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../posts/f286f4f8.html" title="手把手教你注册Google账号">手把手教你注册Google账号</a><time datetime="2023-12-22T16:58:00.000Z" title="发表于 2023-12-23 00:58:00">2023-12-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By W1ndys</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><img style="width:32px;height:32px;margin-bottom:-8px" src="https://icp.gov.moe/images/ico64.png"><a href="https://icp.gov.moe/?keyword=20238661" target="_blank">萌ICP备20238661号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="../js/utils.js?v=4.12.0"></script><script src="../js/main.js?v=4.12.0"></script><script src="../js/tw_cn.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-<h2 id="Datas-secret"><a href="#Datas-secret" class="headerlink" title="Datas_secret"></a>Datas_secret</h2><p>扔进winhex直接搜就行</p>
-<p><img src="/img/jnxl2023/3.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="CRYPTO"><a href="#CRYPTO" class="headerlink" title="CRYPTO"></a>CRYPTO</h1><h2 id="BabyRSA"><a href="#BabyRSA" class="headerlink" title="BabyRSA"></a>BabyRSA</h2><p>共模攻击</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-comment">#coding:utf-8</span><br><span class="hljs-keyword">import</span> gmpy2<br><span class="hljs-keyword">import</span> libnum<br>c1= <span class="hljs-number">295658788074157816670393593671184451782123605135184996662528766686642109492132533952160456440919197939935742027629210419312032730004032666912404179229952394343569590488768472800784830058534578639706805456277578757250365834591813481786084959844340418320620440636997732915872346619679993987903742079972676425404864295283955565746004124045155664762158516005326368384488346997494926539295740248007606864906884407198601326915643000764477435205579583836917598642053869541648731754384026407310786288997756775232852732033054591953078116290088267188296560877481534143707414153749140670404213262630122369941889862912426176115220410931992046973925991075473656781794097329513119548617920256625579072719981729556158392454956362838720993254919638177786730004086883044525967823454986241038123671907279715773848673713008902432841449556980494600938989397567019338970200872333713986608537678650318511128703055185979834233315117153115613952940778789222515375743186066883492596068186378372611075958909412662251913621375996518671118244409393829141365207153662416265238312206577474940661548038715230313608405518108581922154335405303862701783678336161505643508831482409054761542959278392940037561736468155509922530420964726953308604138731805543997557197893</span><br>c2= <span class="hljs-number">219454357017359138238563345020257296433275019950745269658921329153689267055871241202626317639487122341365759606018366576305678949982408366815977617307888894995289951707241009621444691307275542686770303994110416384086739599181934011812163156338859395115724413628620575935425221522079154607411877822646179457455118804970038865452163833416447505142114976758532806787419762250921421272492466133659234602794242531776209324085944417173098820895755851386042954303555790085402616519592065446023510096773546730662074307900123349548340507067971393642039476326402523930789953483843698593104578179169624886357604650615249286150367204109726460230037005175927865466199600272190112483494387929732049738312695796015009178606906549093365261114132002222704510637261038978031857378729856467918978246977163353146981239215886053379980533235786905270211605457443266127512667882149285155542735532327780898540341696557860555884277608448996773250847560675650046440569736010800155992053362696097992699863059686881689842065077997427372972290872427656847223849769329713841670853267584161386494525686204330028142217737052411422895042170169703550774908415280261731967511925122636118468176645781785352430657090024109246103061415446942211482659025722233229083093876</span><br>n= <span class="hljs-number">549785700554963543393222974982211136067042846536450239199968863551137077564447156832697813202963334596948298760762991663065504535035143397250208506445202607659676332816610122258862787906629525548439909792727593939957178783466989816894454522630301104349317697612174888605090061231211194974337772507249418567229560145454791075929946332668360553910328900103264562348881791004831033587660163923517440406942993348972589262051083908075790422096042338651001937740085414301019827335549437397656318095919875053213333008551761167437683250592542156348138055482054331330609375930693247365749085041596578748797801601289693449629548744535914348450016287545136436964138806081283470239420969311905998245715160353982174880912315601876305613349276824998688275587308133069178764001924866079232824850209407236694426779262951463035278887804883917516580169051530590466082511045503107508117656821592538792566264160105940730326929474477787053681516844548383814388361089499629312831727731267796167205124844987064389097138747938870221504684958713047985374714612321540288239995935347905120710583169131356970267386562665138437631517802641426575996558648777831102462652517305151412695166331935115971277205305816897886952646432233312318756155702046584205507027737</span><br>e1 = <span class="hljs-number">3247473589</span><br>e2 = <span class="hljs-number">3698409173</span><br><br><span class="hljs-comment">#共模攻击</span><br><span class="hljs-comment">#共模攻击函数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rsa_gong_N_def</span>(<span class="hljs-params">e1,e2,c1,c2,n</span>):<br>    e1, e2, c1, c2, n=<span class="hljs-built_in">int</span>(e1),<span class="hljs-built_in">int</span>(e2),<span class="hljs-built_in">int</span>(c1),<span class="hljs-built_in">int</span>(c2),<span class="hljs-built_in">int</span>(n)<br>    s = gmpy2.gcdext(e1, e2)<br>    s1 = s[<span class="hljs-number">1</span>]<br>    s2 = s[<span class="hljs-number">2</span>]<br>    <span class="hljs-keyword">if</span> s1 &lt; <span class="hljs-number">0</span>:<br>        s1 = - s1<br>        c1 = gmpy2.invert(c1, n)<br>    <span class="hljs-keyword">elif</span> s2 &lt; <span class="hljs-number">0</span>:<br>        s2 = - s2<br>        c2 = gmpy2.invert(c2, n)<br>    m = (<span class="hljs-built_in">pow</span>(c1,s1,n) * <span class="hljs-built_in">pow</span>(c2 ,s2 ,n)) % n<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">int</span>(m)<br>m = rsa_gong_N_def(e1,e2,c1,c2,n)<br><span class="hljs-built_in">print</span>(m)<br><span class="hljs-built_in">print</span>(libnum.n2s(<span class="hljs-built_in">int</span>(m)))<br></code></pre></td></tr></table></figure>
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
 
-<h2 id="简单的Python"><a href="#简单的Python" class="headerlink" title="简单的Python"></a>简单的Python</h2><p>看这位佬的博客吧，这题被出题人坑了，明白加密原理，但是死活解不出来，看了佬的wp才知道是base100有空格</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_64422989/article/details/134405587?csdn_share_tail=%7B%22type%22:%22blog%22,%22rType%22:%22article%22,%22rId%22:%22134405587%22,%22source%22:%22weixin_64422989%22%7D&fromshare=blogdetail#/">“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛 WP</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">from</span> tqdm <span class="hljs-keyword">import</span> tqdm<br><span class="hljs-keyword">from</span> qsnctf <span class="hljs-keyword">import</span> *<br><br>flag = <span class="hljs-string">&quot;👍👤🐧👮👛🐩👈👰👌👏👣👍👎🐾👯👎👍🐧👛🐫👍🐨👐👮👑🐻👉👎👄👍👣🐪👎👢👉👊👍🐧🐨👎👙🐻👅👏👘🐨👁👋👍👡🐸👯👍🐩👁🐼👋👣👟👟👄👌👧👌👍👤👧🐹👜🐽👐👰👊👢👍👌👙🐾👟👦👋👍👍👮👍👍👑👫👚🐼👁👣👉👣👣🐬👌🐩👫👎👍👎👁🐿👘🐾🐰👌👍👣👑🐪👍👣👑👘👚👍🐽👫👉👣👉👅👙🐼👧👁👍👤🐨🐧👘🐨👛🐿👊👢👛👡👉👋👣👘👍👡👅👊👉🐨👧👍👎👤🐽👢👉🐧🐬🐾👌🐩🐨🐫👌🐩👁🐿👛👱🐽👎👍🐼👦👮👍👡🐽👘👎🐽👅👩👘🐾👟👊👜👤👯👎👍👤👧👆👋🐧🐧👯👚🐽👑👏👙👌👑👩👌👡🐸🐨👉🐨👧🐽👎👣👅👌👙🐽👧👍👍👤👫👮👍🐩👁👌👉👏👛👎👘👢👑👏👑🐼👑👆👚🐨👛👪👘🐾👣👊👄👤👟👑👍🐨👛🐫👙🐩👀👰👍👥👅👍👙🐽👑👋👐👣👍👘👚👍👑👫👛🐾🐽👅👉👣👑🐧👑👌👑👆👍👎👁👍👚🐼👛👑👄🐽👑🐪👍👡👁👂👍👍👁👐👑🐽👧👎👉👍👧👰👍👋🐹👘👋🐩👅👪👚🐼👟👡👉👣👁👋👍👣👟🐺👎👣👐👯👎👣👅👊👄👣🐽🐬👌👤👫👢👘👣👁👫👌👣👣👑👙🐽👑👟👐🐩👯👎👚🐨👍👩👑🐽👛👠👉👥🐹👑👎👣👍👘👋🐨👑👏👊👣👑👏👍🐼👧👎👐👢👑👂👊🐽👑👨👊👢👑👣👍👣👑👑👎👢👑👮👙🐾🐼👱👈👢👣👏👎🐿🐹🐿👍🐻👁👊👍🐨👑👬👌👤👟👊👘👱👍👱👎👎👯👦👙🐨👛🐾👎👥👉👅👊🐾👉👪👌👡🐹👪👅🐽👌👰👛🐾👫👏👉🐧👧👀👍👎👯👪👎👤👁🐾👎👤👟👑👄👍👧👟👑🐼👛👊👊🐽👁👩👅👍👅👠👉👤🐰🐪👍🐩👯👎👐👍👈👯👎👣👟👋👙🐽👧👐👍👢👍👮👍🐨👣👩👎👢👫👋👉👣👧👯👌👤🐨🐾👌🐩👁👍👙🐻👑👏👘🐨👧👩👐👌👛🐽👜🐾👅🐿👆👍👛👟👘🐧👧👦👍👢👉👂👋🐩👉🐾👊👥👁👟👉🐩👟👋👐👏👧👎👜👣👛👏👜🐾🐰👠👄👎👉🐿👍🐩🐬👊👋👣👛🐿👌👣👑👌👍👣👧🐿👋👋🐽👊👍👤🐽🐿👆👎👟👠👉👏🐹🐭👎👋🐹👘👚🐨👛👫👊👢👛👏👙👎👟👘👋👎🐬👦👎🐽👢👯👎👢👛👎👍👢👧👱👍🐾👪🐨👍🐧🐨👍👙👱🐽👎👙👏🐹👃👋👢👑👉👜🐽👛👪👘🐽👉👠👉👥🐹👯👍👎👯👢👌🐨👣👎👌👣👑👏👙👌👑👆👋👍👑👮👜🐽👌👰👛🐻🐹👎👄👍👧👰👐🐧👑👮👎🐾🐼👯👚🐿👁👑👍👎👉🐾👑👌👛👆👉🐩👁🐾👘🐾👟👅👍👥🐹👭👍👤👫👊👊🐨👉👫👍👢👛👡👉👎👯👍👐👣👛👦👍🐽👉👏👅👎🐰👎👍👤👉👏👍👎👪🐬👌👢🐨👏👌👥👧👎👄👎👟👭👍🐧👛👂👎👍👍👩👆👍👑👟👘🐨👧👀👍🐾👯👘👐👍👛🐽👅👍👑👇👍🐩👟👧👌👣👟🐹👛🐨👑👪👑🐻👉👡👄👎👉🐧👌🐩👫👢👎🐾👁👏👘🐾🐽👌👍👱👍👭👍🐧👑👩👜🐽👛👩👛🐾👫👊👘🐪🐹🐭👍👣👛🐫👋🐩🐽👎👊👏👧👑👄🐩👟👏👐👋🐽👮👘🐽👑👌👉👣👑👣👉👤👉🐨👌🐩👪🐨👎🐽👁👐👈👥👟👎👍🐪👟👩👋👢👛🐾👉🐨👑👐👑🐾👟👊👍👋👍👌👍👎🐨🐫👛🐩👍🐾👍👏👣👢👉🐪👉👦👐👣👍👮👍🐨👑👫👚🐾🐽👏👙🐽👧👏👐🐧👛👦👎👣👑👏👌👢👛👘👍👎👉👇👌🐧👌🐬👍🐨👧🐿👘🐾👟👅👊🐼👁🐩👍👤🐨🐧👌🐨👄👯👌👏👣👍👘🐩👉👌👐👤👫👮👙🐨👍👨👊👤🐰👎👉👤👯👑👐🐧👑👢👙🐾👁🐿👌👣👣👘👍👎👄🐨👐👍👌👯👎🐽👍👩👘🐽👛👅👘👣👑👌👍👢👛🐫👋🐨👅🐿👉👢👛👉👙🐽👧👧👍👢👍👍👛🐨👑👫👚🐼👛👍👄👍👧🐧👌👤👫👦👌🐽👑👫👘🐽👉👌👍👎👟🐻👋👣👑👘👊🐾👍🐿👉👤👧👅👍🐨👀👮👍👋👁🐧👘🐨👛🐿👊👣👟👟👉🐧👑👍👍👥👧👎👛👣👐👮👎👥👁👣👉👤👉👰👎👢👑👢👍🐩🐼👱👈👡👑👎👘🐩👉🐭👋👍👑👢👉🐨👅👪👎👤👧👊👍🐪👟👐👎👎👯👦👈🐨👉🐾👌👥👁👏👙🐼👧👪👌👤🐨👊👜👣👣👍👎👣👅👟👉👋🐽👱👌🐩🐬👦👍🐨👑🐭👉👋🐹👘👉🐼👑👩👌👡👁👂👊👍👉👫👘🐽👅👟👜👣👑👈👍👢👑👘👐👎👈👰👍👢👛👎👎🐾👯👩👌👢👍👂👎🐽👉👎👎👥👛👣👍👤👫🐪👍🐩🐬👢👎🐽👀👮👍👡👉👑👄🐽👁👇👍🐩🐨🐽👜👍👍👩👑🐾🐽👎👄🐩👟👀👎👋👀👯👊🐨👀👯👚🐼👟👠👉👤👟👋👍👣👟🐺👊🐨👑👫👄👋🐹👍👄👌🐨🐫👍👣👟👦👎🐽👛🐿👘🐽👣👑👙👏👟👟👍👡🐽👪👚🐨👧🐿👆👍👛👊👙👏👟👘👎👋🐹👘👘🐩👁🐿👊👢👟👍👙🐾👯👟👍👣👛👅👄👍👣👎👍👏👟👏👉👣👑👰👐👌👑👢👋👤🐽👪👎👣👍👎👘🐩👈🐧👍🐻🐽👆👊🐽👁👩👑🐽👁👠👉👥🐹👮👍👤👫👎👍👤👈👯👎👥👉👡👉👎👉👎👋👍👑👮👄🐽👍👫👛🐾🐰👍👉👣👧🐧👐👌👑👊👍👍👑👏👘🐼👉👌👙🐽👧👟👌🐧👛👎👊🐽👁👫👚🐼🐬👎👄👌👣🐪👍👣👉👂👄🐾🐼👯👑🐼👟👋👙🐾👟👦👌👡🐹👘👍👣👑👬👚🐽👛👢👙🐽👣🐪👍🐩🐬👂👙🐽👁👫👌👥👣👏👘🐨👧👩👍👡👁🐽👜👣🐽👨👎👣👛👟👄👣👀🐩👍🐽👑👘👎👤👈👮👄👍👛👏👙👎👯👪👐👋🐽👮👎👍👛👏👜🐾🐰👉👄👍👁🐿👍👎🐬👂👎🐾👁🐽👚🐿👅👍👙👋🐽👋👑👎👯👪👍👣👛👪👋👤👟👎👘🐪🐸👯👍👍👛🐫👛🐨👐👰👊👣👣👍👙🐾👟👟👌👢👍👘👐👍👧👍👑🐼👫👋👍👢🐬👱👐👌👛👦👋👢🐨👍👚🐽👛👎👙🐾👅🐫👋👢👛👉👜👍👑👩👑🐽👛👠👙🐼👧👇👍👤👯👢👌🐨👐👯👌👣👟👢👊🐾👉👏👋👍👛🐫👜👍👑👏👄👌👛👏👉👢👣🐪👍👤👧👊👎👢🐨🐿👘🐼👯👎👄👥👟👟👍🐧👑👎👚👣👧🐿👉👣👛👎👄👌👧👉👍👣👉🐺👍👢🐬👎👎👏👟👡👉👎👟👦👌👡👁👦👋🐨👌👮👍👢👫👅👙🐽👧🐧👋👍👉🐺👍👢🐨👍👄👋👉👎👍👤👟👱👍👤🐨🐽👜👍👍👪👍👣👧👠👎🐽👀👱👎👎👧🐾👍🐩👅👎👋👥👉👇👍👤👉👋👐👣👟👦👐👍👛👌👈👤🐽👟👄👢👧👀👌🐩👫👦👍👤👁🐿👜🐾👟👎👙🐾👉👆👋👍👑👪👍🐨👑👐👘🐽👟👊👙🐽👧🐬👎👍👍👘👘🐨👉👫👉👥👅👏👙🐽👑👏👐👋👁👉👄🐽👣👌👉👢🐰👊👄👍👧🐨👍🐾👯👦👘👍👁👪👚🐽👣👏👍🐪👉👭👌👋🐽👆👍🐨👛👩👑🐽👑👟👄👣👁👏👍🐽👑👘👛🐧🐨🐾👍👥👉👢👉👱👣👎👌👤👯👪👅👍👣👍👘🐼👅👎👙👌👧👀👐👌👍👊👍👎👁👐👘🐿👁👎👙🐽👧🐿👑🐼👑👂👛🐾👅🐽👅👍👛👅👍👎👮👱👍👤👯👊👊🐧🐨🐿👉👏👟👘👉👎👟👌👐👢👛👦👙🐨👍👨👈👤🐽👎👙🐽👧🐨👐🐧👑👢👘🐩👁🐾👙🐻👅👎👄👡👍👇👍🐻👁👂👉👤👅👀👚🐽👟👟👄👣👀👱👎👍👑👘👋🐨👁👪👋👥👁👠👉👤👉👆👐👤👯👂👜👍👛👐👚🐼👛👎👙👍👑👏👍🐾🐬👎👍🐾👁🐾👊👥🐹👎👙🐽👧🐪👍🐨👑👘👉🐨👣🐭👉👤👣👅👍🐨👁👀👍🐩👫👘👘🐨👛🐿👊👢👑👡👊🐼🐬👎👐👣👉🐾👍🐽👧👏👜🐿👅👎👙🐾👉👱👍🐾🐨👦👍🐩🐼👱👈👏👟👎👍👤👈🐧👑🐻🐽👑👜👍👅👪👙🐽👑👠👉🐩👟👦👍👎👫👎👐👍👣👎👚🐽👑👘👉👏👉👌👍👤👪🐨👜👣👣👍👑🐾🐰👌👘👱🐽👎👐🐧👑👘👍🐩👁🐿👋👡👉👌👘🐩👉👊👑👍👑👘👚👣👧🐾👑🐾👣👊👄👌👧🐩👍👣👚🐨👛🐩👄👰👊👏👟👍👙🐾👉👐👐👤🐨👊👚🐨👣👩👎👥👅👆👍👤👫🐪👍👤🐨🐧👍🐧🐨🐼👉👢👑👍👙👏🐹🐿👍🐩👯👘👎🐽👍👬👎👣👛👅👙👤👟👦👍👡🐹👘👍🐩👅👪👚🐼👟👊👙🐾👉👏👋👍👍👮👌👣👑👪👑🐿👛👋👄👌👣🐫👌🐨👟👪👌🐩🐼👰👘🐿🐹👍👙👏👄👯👐🐧👑👪👍👍🐽👬👑🐼🐬👠👉👥🐸👮👍🐽👑👊👈🐨👑👩👄👍👑👅👍🐽👁👏👍👤🐨👦👜👣👑👫👄👌👑👣👍👣👑👱👍🐩👯👮👘👍👛🐾👊👏👧👏👍👣👑👟👍👡👁👊👊🐽👑👩👎👤👫👊👄🐧👁👌👎👎👫👦👈🐧🐬🐾👎👣👍👋👎🐾👉👇👍👡🐹👮👊👍👌👰👛🐾🐰👎👙👌👧👀👑👌👛👦👍🐩👁🐿👌👢🐰👌👍👣👧👱👍👡🐽👘👎👎🐽🐾👘🐽👅👠👉👥🐸🐩👍🐨👑👎👐👎🐼👯👌👥👅👏👎🐾👯👦👌👢👍👮👎🐽👉👎👎👥👛👟👉👣👐🐩👌👤👫👮👙🐽👁👪👊👡🐽👎👙👏👟👃👐👍👑👂👚🐩👅🐾👙🐽👛👊👙🐼👧👀👍👏👧🐹👄👎👄👯👑🐿👁👘👉👣👧👦👋👎👯👂👎🐽👑🐾👎👤🐽👢👄🐻🐽🐿👍👤🐬👊👘🐨👁🐭👙🐽👛👍👙👏👟👱👋👣👑👪👍👤🐽🐽👋👣👛👠👍👏🐹👁👎👍👍👎👋🐨👣👎👊👢👑👏👙👎👟👘👑👎👫👘👄🐨👍👪👎👣👛👢👉🐧🐬🐾👋👣👑👢👋👣👑👏👛🐪👧👎👙👏👟👋👌👱🐸👯👊🐽👁👐👘🐾🐽👊👍🐩👟👍👎👎👫👢👙🐩👀👯👍👥🐽👉👙👌👑👏👐👢👑👮👄🐽👧👍👘🐾👫👌👘👱🐽👑👌👎👯👪👐👍👑👏👘🐼👯👑👘🐨👧👘👑👌👑👢👚👤👁🐿👉👣👅👎👄👌👐👱👍👤👯👊👊🐨👁👫👍👥👅👊👙🐾👯👟👌👤🐨👦👚🐽👍👫👜🐿👛👠👄👎👉👏👍👎👫🐧👌🐧🐨👎👙🐻👉👏👘🐩👟👏👍👢👛👂👎🐾👍👀👋👣👧👎👉👍👦👱👍👡🐽👘👘🐨👛🐿👍👢👟👇👍👢👧👆👍👣👉🐽👄🐽👑👪👑🐻👉👟👄👎👯👏👌🐩👯👢👘👣👅🐽👅👍👛👑👙🐽👁🐿👍👢👑👑👜👎👍🐿👛🐾👧👠👉👥🐹👎👍👎🐨🐫👘🐨👉👪👎👥👍👉👘👣👧👐👍👢👍👂👘🐽👑👨👉👤👫👊👄👎👉🐨👍🐾👯👊👘🐼🐨👫👘🐾🐰👎👍🐪👉👏👎👍👑👪👍🐩👅🐾👎👤🐽👊👎🐽👁👍👍👤🐨👱👄👎👍👪👙🐽👑👘👉👱👣👍👐👏👧🐾👍🐨👢👮👎👤🐽👎👄👢👧👀👍🐾👧👊👍👎🐼👰👌👣👅👘👍👣👧👟👐🐩👯👮👉🐨👧🐾👘🐽👅👅👄👤👞🐨👍👤👯👢👛🐨🐼👯👙🐽👟👌👘🐩👉👏👐👤👯👂👚🐨👌👮👑🐽👅👡👄👎👯👰👍🐩👯👢👋🐨👑👬👈👣👛👑👍👎👈👮👍🐧👑👁👛🐩👅🐽👘🐽👧👅👉👥🐹🐩👍👡👁👱👜🐽👅🐿👉👢👑👣👉👤👉👦👐👋🐽👮👙🐨👑👏👄👋👉👟👄👢🐬🐧👍👤👫👢👐👍👁👌👍👣👟👑👙👏👉👃👌🐩👯👑👜🐽👍👩👚🐾👯👊👘👱🐼🐧👍👋🐽👦👙🐩🐽👪👊👣👟👟👊🐼👁👎👐👣👉🐾👛👣👑👩👎👤🐽👡👄👢👑🐾👍🐾👯👊👋👣👑👬👈👏👛👎👉👣👧👋👌👋🐽👘👚👢🐨👎👎👢🐬👎👉👢👧👐👎👎👫👢👙🐩👉👪👎👏👛👏👙👏👉👌👌👡🐹👘👊👍👣👍👎👤🐽👌👙🐼👧🐨👌👎🐧🐬👍🐩👁👌👉👋🐹👑👜👢👧👇👐👱🐽👮👊👍👅👫👛🐽👅👅👄🐼👧👍👍🐨👛🐧👙🐨🐼👮👅👌👛👏👙🐽👑👌👍🐧👛👊👌🐽👑👨👈👥👛👋👍👣👍🐬👑🐼👚🐬👍🐩👁👍👚🐼👣👘👍👎👉👭👍👡👁👂👊🐽👍👩👆👍👍👎👙🐿🐹🐭👍👤👧🐾👐👍👛👏👉👢👛👟👉👢🐬👧👌👤🐬🐹👄👣👐👯👎👣👛👑👍🐧👍🐫👍👎🐬👆👎🐽👛🐿👜🐾🐰👍👘🐨👑🐪👍🐧👑👊👍🐨👛👬👑🐾👟👊👙🐽👢👰👍👎🐨🐧👛🐩👁🐾👊👥👅👋👘👢👑👏👌👥👧🐾👊🐽👑👌👊👢👫👊👄👢🐬🐿👐👢👑👦👍🐧🐧👯👊👡👁👎👍👣👁🐺👋👍👛👅👜🐽👧👀👊👤👟👊👄🐨👁👌👍🐽👍👘👛🐨👛👎👑🐽👟👣👉🐧👑👘👍👤🐨👊👎🐽👐👰👜🐾🐰👟👄👌👦🐩👐👢👚🐬👍👍👑👪👎👥👧👌👙🐽👧👱👍👤🐨🐾👉👣👉👪👑🐾👣👎👎🐼👁👂👍🐨👑👎👍🐨👈👯👙🐽👛👋👘🐨👧👐👐👣👛👦👐👍👧👏👛🐾🐽👅👄👍👑👱👍🐩👯👢👘🐨👀👮👅👌👛👌👙🐽👧👩👍🐾👯👘👎🐾👈👱👚🐽👛👠👎🐾👟👌👍👏👧🐹👜🐽👅🐾👋👣👣👠👉👢🐬👦👋👎👯👂👍👣👛👏👄👏👧👅👍👣👧👏👐👢👟👂👐👍👁🐭👙🐽👟👑👘🐨👧🐪👑👎👯👑👜👌🐬👏👛🐽👍👟👜👢👑👐👎👋🐹👦👚🐨👐👮👄👏🐽👊👘🐩👟👘👍👡👅👦👘🐽👢👰👄👌🐰👊👍👢👑🐧👌👤👯👆👍🐧🐨👍👎👏👧👎👙👏👟👋👌👱🐽👂👛🐽👑👬👋👣👅👠👉🐪👟👦👍👎🐧👯👙🐩👅🐾👍👥👉👣👊🐾👉👧👋👍👛👊👎🐽👑👏👛🐻🐹👍👄🐻🐽👏👐👢👉👊👍🐨👁🐭👍👣👟👎👙🐾👉👃👍🐧👛🐾👉👢🐰👎👍👣👛👣👘🐨👦👰👍👤👧🐾👐👎🐼👯👎👏👟👎👙👢👧👟👌👡👅👊👋🐨👣👌👉👥👛👋👍👣👧👯👌🐩👧👊👍🐧🐨👎👍👡👍👍👄👥👉👩👐👎👯👆👉👢🐬👎👑🐽👧👠👉👢👧👀👍👤👫👘👌🐨👐👯👑🐿👅👏👙👏👟👏👋👌👉👉👜👍👑👏👄👋👉👠👄👍👍🐬👌👣👟👮👌👤👁👍👎👣👟👎👙👋🐽👊👋👌👑👪👅👣👁👫👛🐽👅👅👍🐨👀👯👍👣👛🐫👐👍👐👯👊👣👑👡👉👱👣👏👍👡👅👊👎🐽👛👎👎👥👅👎👄👢🐬🐿👍🐩👯👦👘👍👛🐾👊👥👣👎👙👋🐼👮👑🐻👁👎👚🐨👛👬👌👢🐬👏👉👋👍👐👍🐽👑👎👚🐧🐬👪👙🐽👑👍👙👌👑👏👋👌👉🐾👎👍👑👎👘🐾👫👏👉👣👧🐧👍👎👯👆👐👍👑👪👚🐾👟👑👄👥👟🐪👌👡🐽👮👉🐩🐽🐾👋👢🐬👅👙👎👚👯👍👤🐨🐫👘🐩👈👯👌👏👟👎👎🐾👯👌👍🐧👛👦👚🐽👌👮👍👋🐽👏👉👤👯🐧👋👍👑👆👎🐽👁👪👊👣👟👎👄👡👍👩👍🐾👯👂👛🐾👉🐼👋👣👟👟👄👍👧👰👍👡🐹👘👊👤👈👰👋👢👑👟👉👥🐹👆👌👤🐬🐺👄👣👑👨👊👥👧👣👉👢🐬👀👌👤👫👘👙🐽👁👫👌👤🐰👑👍🐼👑🐪👐👡🐽👘👎🐼🐨👌👌👤👟👅👘👱👌👮👍👤🐨🐧👘🐨👣👎👊👏👣👟👉👱👣👍👍👢👍👂👋🐽👑👏👜🐾🐽👡👄👍👑👰👎👢👛👦👋👣👑👌👉👋🐹👎👍🐼👑👭👐👡👁🐾👚🐨👅👪👘🐽👑👠👍🐩👟👏👎👎👯👦👋👤👍🐾👎👏👛👏👙🐿🐹👩👋👍👑👮👜👍👧🐽👍👋🐽👟👍👢👧🐨👌👍👟👢👍🐨👁👪👚🐽👉👍👍🐼👑👟👐🐩👪👯👍🐨👛👩👅👍👛👊👘🐪🐹👑👍👤🐧👮👜🐾👀👰👍👥👅👏👙👣👁👆👍👣👑👮👚🐨👑👫👜🐾🐽👣👙🐽👧🐧👑👌👟👢👘🐽👑👫👌👢👟👍👄👎👟🐪👍🐧👑👑👜👣🐽👩👘🐽👛👟👘🐪🐹👈👍👤👧🐾👌🐩👉👎👍👥👅👉👙🐾👉👧👍👤👫👮👍👣👐👯👑🐻👉👠👄👢👣🐫👐👢👑👢👐👍👁👪👎👣👅👑👙🐽👑👟👐👡🐽👊👎🐾👉👀👑🐽👉👎👙🐽👐🐨👎👢👍👡👅👍👐👰👊👣👑👡👉👎👯👟👍👣👛👊👛👣👑👨👊👢👫👋👉👣👑👰👋🐨👑👎👍🐩👁👀👈👡👑👎👙👏🐹🐿👎👍👑👢👎🐽👁👩👑🐾👟👊👘👱👍👮👍👎🐧🐨👈👢🐨👎👎👏👟👏👙🐾👉👘👍👡🐹👎👅🐽👑👏👅👍👅👍👄👢👧👰👋👣👑👪👎👤🐼👯👚🐾👟👎👄🐽👧👱👍👣👑👆👚🐨👅👩👅👍👅👠👉👤👫🐬👍👣👚👯👄🐼🐨🐿👉👥👁👅👍👤👯👊👐👋👅🐺👎🐽👣👪👘🐾🐰👎👉👤👯👏👍🐩👫🐧👘👢🐨👩👅👌👟👑👘🐨👧👭👍👡🐸👮👜🐽👅👫👆👍👟👟👄👌👧🐻👍🐽👑👢👋👤👍🐾👚🐼👣👋👙👎👟👋👋👋👁👦👍👍👑🐾👍👤🐽👢👄👢👑🐿👍🐩🐬👊👋👣👅🐿👘🐽👛👌👍👣👑👱👋👢👑👘👎🐼🐬👍👆👍👟👊👄🐿🐹👏👍👡👁🐫👘🐨👑👫👊👣👣👟👉🐼🐬👍👍👣👑👮👘🐽👐👮👍👋🐽👎👙🐽👁👱👎👢👌🐨👘🐼🐧👮👊👢👫👎👄👍👧👏👍👡🐽👍👜🐽👛👪👘🐽👉👠👉🐪👟👭👍👎👧👂👙🐨👛🐾👙🐿👁👏👙👤👉👎👌👤👯👮👜👣👐👰👛🐻🐹👟👘👱🐽👏👐🐧👟👪👍👎👁🐾👚🐿👁👑👍👤👉🐾👑🐻🐽👢👎👎👅🐾👑🐾👣👏👉🐩👟🐫👍🐩👫👊👈👤👍🐾👎👏👟👍👙🐾👯👦👌👤👯👮👎👍👍👨👊👤🐰👏👙🐾👉👐👋👍👟👮👋👣👑👪👚🐽👟👑👘🐩👟👃👎👍👑👂👅👤👁🐾👘🐽👧👟👄👏🐸👱👎👣👛🐫👎👤👍👍👅👍👟👢👉👣👑👦👑👎👫👘👎👍👛👌👈👤🐰👡👄👍👣🐪👋👍👟🐾👌🐩🐼👰👘🐾🐽👎👘👢🐬👭👐👌👑👩👜👌🐨👍👆👍👅👎👘🐪🐹🐭👎👍👍👢👙🐨👉👪👑🐼👑👋👙🐼👧👏👐👣👟👊👚👣👉👩👎👥👅👏👉👣👁🐨👍👎👯👎👘🐼🐨👎👚🐽👣👏👍🐪👉👩👍👋🐽👘👉🐨👍👪👍👣👉👠👍🐾👯👮👍🐽👑👘👛🐩👍👎👎👣👟👢👉🐼👁👎👋👌👉🐾👎🐽👣👩👌👣👅👎👄👌👦🐩👍👤👯👦👍🐩👁👌👉👢👯👍👙👏👟👇👐👱👁🐾👉🐨👛👫👙🐽👅👟👄🐧👁👘👍👤🐨👮👉🐨👣👎👙🐽👛👋👎🐾👟👧👌👢👑👮👍🐽👣👪👑🐻👉👌👄👍👧👯👌👤👫🐧👍🐽👑👫👌👣👣👘👉👎👄🐨👍👋🐸👯👍🐩👅🐽👙🐽👑👠👉🐩👟🐩👎👍👛🐫👋🐨👁👩👅👍👛👘👉👥🐹👧👌👤👫👮👊👍👑👫👛🐾🐽👏👙👍👑👐👍👤👫👦👘🐨👀👱👈👥🐹👍👙👋👍🐻👍👡🐽👘👎🐼🐨👌👌👤👣👅👍👣👐🐨👍👎👯👦👛🐨👍👫👊👣👑👏👙🐾👟👏👐👣👉🐾👌🐨👉👍👎👥👛👊👍👢👧👱👐🐧👛🐫👍🐩🐽🐭👍👡👑👏👍🐪👉👟👎👍👛🐾👍🐨👅👐👙🐾👟👊👜👤👯👐👍👤👧👆👌🐨👛🐾👑🐽👛👘👉👋👣👨👋👍👑👮👄👍👍👫👜🐽👅👟👉👋🐹🐫👌🐩👯👘👍🐩👁👌👉👋🐹👍👜👢🐽🐫👌👡👁👂👉🐨👛👪👘🐾👟👣👙👏👟🐩👍👣👛👮👉🐨👣👏👍👥👅👏👎🐾👯👨👌👡🐹👘👎🐽👉👍👌👢👛👏👍👣👧👏👐👌👛🐧👎🐽👁👪👚🐻🐹👎👍🐪👟👇👎👍👑👘👚🐩👅🐿👘🐽👧👅👙👤👞👱👍👎👧🐾👛🐨👀👰👉👢👛👌👘👱👍👆👐👣👛👡👜🐽👑👫👄👋👉👟👄🐻🐽🐿👍🐨👟👦👍👍👛🐿👘🐾👟👍👙🐾👉👋👍👡🐽👪👚👣👧🐾👋👣👟👎👙👏👞👮👍🐽👑👘👋🐩🐽👩👄👍👛👡👉🐼👁👟👍👣👛👦👌🐽👑🐼👉👤🐽👢👍👢👑👱👎👢👑👮👍🐨👐👯👉👡👅👎👘👢👁👟👌🐩🐨👉👜👍👉👩👎👤👟👊👙👢👁👇👍👎🐧🐨👈🐧🐨👪👎👥🐽👋👙👥🐹👪👌👤👪🐨👊🐽👑👫👅👍👛👏👉🐧👧👀👍👎👪🐬👎👤👁👌👉👥👑👑👘👢👑👟👐🐨👑🐾👛🐽👁👪👑🐼🐬👟👜👣👐🐩👍🐨👉🐺👍🐩👀👯👍👏👣👋👘🐩👟👎👐👢👛👦👍👣👑👫👜🐾🐽👅👄👍👧👐👑👌👛🐾👘👢🐨👐👈👢👧👏👘🐨👧👋👍🐾👯👘👎🐾👉🐭👈👣👛👎👉👍👧🐩👎👏👧🐾👍👤👍👎👊👣👣👠👉🐩👟👌👌👣👍👮👎🐽👛👏👜🐾🐰👌👙👍👑🐿👐👋👅👢👎🐾👁👩👅👍👟👎👙👏👉👟👋👍👑👢👚👣👑👌👉👤👟👎👘🐪🐸👯👍👍👑👦👘🐨👐👯👊👥👅👡👉👣👁👎👍👢👍👘👘🐽👢👰👚🐪👟👎👄👎👉👰👋👣👑👢👌🐩🐼👱👈👣👧👎👙👋🐹🐪👑👌👛👁👜👍👑👬👋👣👟👠👙🐼👧👇👍👤👯👘👛🐩👄👯👎👥👉👣👉🐧👑👪👐👢👑👪👅👍👧👍👘🐾👫👟👉👣👧🐧👍👎👫👦👍👢🐨👏👘🐻👅👎👄🐽👧👟👐👱🐽👢👛🐾🐽🐾👑🐾👟👟👄🐧👁👍👍👣👉🐺👐👍👣👏👋👥👅👘👊🐽👁👩👌👤👪🐨👋🐨👉👍👍👥👛👎👙🐽👣🐫👎👢👉🐺👘👌🐨👍👍👡👅👌👙🐽👑👩👍🐧👛👂👉🐨👛👪👍👣👛👅👉🐨👁👌👍👣👍👘👐👎👅👎👉👥👍👘👉👣👁👏👐👢👑👑👄👍👛👩👍👤👧👆👍👣👣🐬👌🐩👯👘👘👣👁👏👜🐾👟👎👙🐾👉👋👑🐾👯👘👚👍👅👩👛🐽👉👊👙🐽👧🐬👍🐻🐽👘👍🐨👐👰👊👢👣👉👘👣👧👏👐👣👟🐺👊🐽👛👎👎👤👫👏👉👢👧👰👐👌👛👮👌🐧🐨👬👘🐽👣👎👘👢👁👏👌👱🐽👆👉🐨👛👬👌👤👯👊👄🐨👁👈👍👎👧🐺👍🐧🐬🐾👎👣👟👆👍👋👣👐👌👤🐨👊👊👍👧👍👐👱👍👎👙👌👍🐫👍🐩👧👆👍🐧🐨🐾👚🐽👉👎👘👢👑👩👑🐽👑👮👊🐾🐽🐾👋👤👣👊👙👏👈🐨👍👤👯👡👜🐼🐨🐿👌👏👣👋👘🐩👉👌👐👤👪🐨👍👍👣👏👛🐾🐽👏👉👤👯👱👐👌👚🐬👍👍👁👫👜🐽👟👎👄👥👈👮👐👎👪👯👚👢🐬👍👘🐽👧👟👄👏🐹🐩👍👤👧🐹👛🐩👍🐾👋👥🐽👋👙🐾👉👏👐👢👍👮👊👍👛👎👌👢👛👏👙👍👑🐿👐🐧👍👪👍🐾👁👏👘🐽👉👌👍🐼👑👃👍👣👑👘👉🐨👑👫👉👤👫👅👘🐨👧👀👍👡👀🐨👌🐨👉👪👋👢👟👟👉👤👉👍👍👤👯👍👜🐽👐👮👎👣👧👣👍🐨👑👀👋🐨👛👦👋👣👑👏👆🐿👣👏👍🐪👉👨👋👣👑👘👍🐨👛👬👋👣👟👟👘👱👍👎👍👤👯👘👛🐩👍👪👎👥👉👣👉🐪👉👨👋👍👑👂👜👣👛👩👎👤👫👟👍👢🐬🐾👌🐩🐨🐾👍🐧🐨👎👚🐽👟👎👘👢👑👎👑👌👑👢👛👍👅👩👅👍👛👠👍👢👧🐫👍👣👉🐺👍🐩👈👯👑🐼👛👠👊🐼👧👐👐👤🐨👊👍👍👍👫👅👌👅👊👄👍👣🐬👑🐼👉🐺👘🐼🐨👍👙🐻👅👌👙🐽👑👩👍👣👛👂👉🐩👅👀👊👣👛👊👄🐩👟👦👍👡🐹👢👌👤👍👫👋👢👛👘👉🐩👯👐👌👡👁👦👍👣👑👪👘🐿👛👉👙👍👑🐿👍🐾👫👢👍🐾👁🐿👜🐾🐰👍👘👢👁👟👍👢👑👘👚👍👅👫👆👍👛👠👉🐨👁👑👎👢👍👢👄🐾🐽👍👄👏👁👠👉🐽👁👏👐👣👉👎👍🐽👑🐿👜🐾🐽👆👙👌👧👀👌👤👯👢👘👍👛🐿👑🐪👧👏👙🐽👧👟👎👍👛👊👉👢🐨👎👎👤🐽👊👙🐽👧👭👎👣👛🐧👐👍👛👎👑🐽👍👉👙👋👣👨👋👍👑👪👄🐨👉👎👘🐼👛👍👄👢👍🐬👐👌👛🐾👍🐩🐽👩👅👏👑👑👍👍👧👰👑👍👌👯👍👢🐰👎👋👣👛👟👄👎🐰🐪👍👣👚👯👅🐽👈👯👎👏👛👅👍👣👧👐👍🐧👟🐺👎🐽👣👪👘🐾🐰👎👉👣👐🐩👌👤👫🐧👘🐨👁👪👚🐻🐽👎👉🐪👟👇👐👍👑👁👜👤🐽🐿👆👍👛👎👜👢👀🐧👎👎👧👂👋🐨👀👯👎👥👍👍👙👏👟👌👌👡🐽👂👛🐨👑🐾👎👤👫👍👄👎👉🐿👍🐩👯👦👘🐨👁🐽👊👣👛👌👍👍👁🐿👍🐨👑👘👎🐾👉🐿👆👍👛👟👜👢👐👯👎👍👍👦👛🐨👛🐾👎👥👅👡👉👏👉👟👍👡👅👦👊🐽👣🐭👉👣👛👡👄👏🐹👀👐👌👛👦👙🐾👁🐾👙🐻👍👎👙👋🐽🐪👌👡🐽👪👎🐽👁👐👘🐾🐽👊👍🐩👟👐👎👍👉👂👙🐨👍👎👎👥👉👢👊🐾👉👍👋👍👑👮👄🐽👧🐽👘🐾👫👎👉👣👧👱👐🐧👟👮👎🐽👛👀👈👢👟👎👘🐨👍🐫👍🐧👑👎👚👤👁🐾👎👢🐬👠👙🐼👧👭👍🐨👑👢👅🐽👈👯👊👥👁👆👍👤👉👟👌👤🐬🐺👚🐽👍👫👛🐿👛👋👍👣👧🐧👑🐼👛🐾👘🐧🐨👏👌👢👣👎👙👏👉👱👍👣👛👂👊🐽👍👬👈👣👑👟👘🐨👧👄👍🐾🐨🐫👐👎👅👪👘🐪👧👟👉🐩👯👆👍👤👯👑👄🐽👑👨👊👡🐹👑👍👤👉👀👌👤🐬👆👘👣👁👫👘🐽👟👑👍🐼👑👟👑👍👑👮👍👣👛👬👋👣👛👎👘🐪🐹🐭👎👋🐹👢👅🐽👌👰👊👣👛👋👙👌👑👐👍👢👍👂👘🐽👛👎👑🐼👛👎👄👎👉👑👐👢👛👦👌🐩👁👏👘🐽👧👏👍🐪👉👩👍👎🐨👉👜🐽👧🐾👑🐽👟👠👘👱👍👐👍🐽👛👱👄👍👅🐾👎👏👣👣👉👱👣👦👍👤👫👪👅🐽👌👰👅👎🐰👎👄👌👧🐧👍👍👟👢👎🐽👑👪👚🐼👫👘👍👍👧👏👍🐨👛🐾👉🐩🐽🐿👙🐽👟👊👘🐪🐸👱👍👤👯👢👛🐨🐼👰👌👏👟👘👊🐼🐬👧👌👤👯👮👍🐨👣👪👍👤🐽👏👉👣👁👎👍👎👫👢👎🐽👑👪👚🐽👟👑👍👎👈👮👍🐧👑👂👚🐩👅🐼👈👣👛👎👄🐩👟👈👍🐨👑👘👐👎👄👰👋👢👟👟👉👥🐹👆👐👤🐨👥👜👣👑👏👚🐼👛👢👄👌🐬👀👌🐩👫👦👘👍👁👩👅👍👣👍👙🐽👑🐪👍👋🐽👘👛🐼🐨👀👑🐾👯👊👍🐽👑👁👍👎👯👦👙🐨👐👯👑🐼👟👟👉👤👯👘👐👣👟👅👜🐽👑👨👉👥👅👡👙🐿🐹👀👋🐨👛👮👘👍👁👪👎👏👧👎👄👥👉👟👍🐻🐽👑👜🐽👅👬👋👣👉👠👉🐩👟👐👍🐽👛👮👍🐨👍🐾👎👢👍👊👙👌👑👩👍👤👫👘👜👣👛👩👎👥👛👎👄👍👣🐫👌👤👧👆👍🐩🐽👩👊👤👟👍👄👡🐽👊👑👍👑👊👚👣👛👫👘🐽👅👠👘🐧👧👈👍👣👚👮👄👍🐼👮👄👏👅👏👙👢👑👌👐👤🐬🐺👚🐨👍👫👚👱🐽👋👍👣👑🐧👑🐼👛🐾👘👍👁👩👚🐻🐹👎👍🐪👄🐨👍🐩🐨👂👍👍👁👬👎👣👧👟👘🐨👧👦👎👋🐽👘👉🐩👉🐾👊👥👅👘👉👋👍👦👑👎👯👑👄👣👐👯👌👢👅👎👄👢👣🐫👍👣👟👪👍🐾🐼👰👘🐽👛👑👘🐩👉👭👍👤👯👘👛🐾👍🐿👉👢🐬👅👍👥🐹👑👎👣👍👢👉🐩🐽👩👄👍👛👏👙👤👯👐👐👋👁👊👛👣👑🐿👜🐾🐽👎👍👢👧👍👌👎👯👢👍🐨👁👎👚🐻👁👏👍🐪🐹👃👌👡👁👅👜🐽👉👬👋👤👟👊👙🐿🐹👮👍👤👧👂👙🐨👛🐾👑🐽👟👣👉👱👣👍👐👣👑👘👊🐽👐👯👘🐾👫👏👉🐧👧👁👌👎🐬👂👍👍👑👪👚🐻👅👘👍👣👧🐪👌👤👯👘👍👍👁👫👘🐽👛👟👄🐧🐽🐫👍👣👑👘👙🐩🐼👯👑🐼👟👋👘🐩👉👐👐👤👫👘👍👣👣👩👑🐽👅👊👄👏🐹🐽👌👍👟👦👍🐧🐨👏👌👥👣👌👙🐽👧👩👍👋👁🐽👜👣🐽👪👚🐽👛👠👍🐼👀👱👎👣👍👢👊👤👍👎👍👥👍👌👙🐾👟👐👌👡🐽👂👎👣👛👏👜🐾🐰👍👄👍👧👏👍👤🐬🐾👌👤👁👍👎👣👍👑👘🐨👧👟👋👌👑👮👍👣👧🐽👑🐾👟👊👙🐿🐹🐬👎👎👫👊👌🐨👑👫👊👢👟👟👊🐼👧👏👐👎👫👮👋🐽👑👪👎👢👫👎👍👢👑👱👐🐧👛🐫👘🐼🐧👮👊👣🐽👎👄👥👟👏👎👍👛🐽👜👍👍👪👑🐽👛👠👘👱👍👎👎👎👯👢👅🐽👑🐾👌👣👛👎👙👤👉👏👐👢👑👪👅🐽👛👩👌👢👅👎👄🐻🐽👱👌👤👧👊👎🐾🐼👰👘🐽🐹👎👄🐾👉🐾👑👍👛🐾👊👍👉👪👎👤👟👟👜👣👑🐽👍👤👯👎👐👍👣👏👌👢👟👎👘🐩👯👍👐👏👧👪👍🐽👣👩👑🐻👅👅👍👣👧👀👑👌👑👘👋🐨👐👮👎👢👣👍👄👥👉👟👐👎👯👂👛🐾👍🐿👉👣👛👠👉👥🐸👱👎👢👛🐫👐👎👅👎👋👥👁👘👉🐪🐹👦👑👎👯👘👎👍👑👩👐🐪👟👊👄👍👍🐫👌🐩👯👢👘👣👁🐾👚🐽👟👑👙🐾👟🐻👌🐧👑👢👍🐨👛👫👛🐽👟👊👘🐪🐹🐬👍🐩👫👢👙🐨👌👰👉👡👑👎👙👤👉👏👍👥👧🐹👜🐽👍👏👚🐪👟👡👄👎👉👑👐👌👑👦👘👍👀👯👊👤👟👎👙👏🐹🐻👍👡🐸🐨👉🐨👛👪👘🐼🐰👎👍🐾👯👑👍👎🐧👯👌🐨👅👎👚🐽👑👑👜👣👑👏👐👣👍👎👅🐽👐👰👚🐼🐰👎👄🐻🐽🐿👐🐧👑👊👍🐩🐽👩👎👥👁👘👉👣👧🐪👌🐧👛🐾👉🐨👉👫👙🐽👅👠👎🐽🐼👯👍👤🐨🐫👘👤👍🐽👄👌👑👅👍👎👟👋👐👤👫👮👋🐨👑👫👄👍👅👎👍👤👯👐👑🐼👛🐾👎🐽👁👪👚🐿👟👎👉👱🐸🐨👍👤👯👂👛🐾👍🐾👘🐽👛👅👙👣👀👱👎👎👫👘👊🐩👅👩👅👍👍👊👙🐾👟👦👋👍👟🐺👜👍👛👎👎👤🐽👟👄👌👣🐫👍🐾🐬👆👘👍👁👫👌👥🐹👎👘🐨👑👂👋👌👑👘👚🐨👢👱👘🐽👛👅👍👎👮🐧👎👋🐹👎👚🐨👐👰👊👢👑👆👎🐼👁👎👐👢👛👦👉🐽👧🐼👉👤🐽👢👉🐨👑👀👌👤🐨🐧👋👤👁🐽👚🐻👑👎👘👢👦👮👐👋🐽👪👍🐨👉👩👙🐽👁👟👜👤👯👐👎👍👛🐧👐👎🐽🐾👚🐽👟👣👉👥🐹👪👌👡🐹👘👊👣👑🐿👜🐽👛👌👙🐽👧🐨👌👎👧👎👍🐨👀👱👘🐿🐽👌👙🐽👧👟👍👡🐽👢👛👍👉👪👘🐾👟👟👜👣👑👏👍👤🐨🐫👐👎👈👰👉👢👛👏👎🐾👉👏👍👢👍👘👎🐽👣👩👎👢👫👣👙🐾👉👰👍👣👉🐾👘🐽👁👌👈👡👅👍👄👥👈👮👍👡🐸👯👍🐩👅🐾👘🐽👛👟👘🐨👧👏👎👣👍👘👘🐩👄👰👉👢👛👍👙👎👟👆👐👢👍👮👅🐽👑👪👑🐿👛👋👄👢👣🐫👍🐨👟👦👍👤👁🐾👚🐾👟👍👙👏👄👯👍🐨👑👎👛🐾👍🐾👑🐼🐬👅👍👤👮🐨👎👢👍👊👈🐩🐽🐽👄👍👑👠👉🐼🐬👍👐👢👑👘👚👣👑👪👑🐼👫👊👄👢🐬👁👌🐩👯👢👌🐧🐧👰👘🐾🐰👎👘👢👁👩👍👎🐨👎👛🐽👉👩👑🐾🐽👊👄👥👟👑👍👎👧👂👙🐨👑👪👎👥👅👟👊🐾👉👊👐👣👑👘👊🐽👑🐿👛🐾👫👎👉🐧👧👀👑👌👚🐬👍👤🐽👩👊👤👟👎👘🐨👧👟👐🐨👑👆👛🐼🐰👎👑🐾👣👊👄👌👧👘👍🐩👫👎👘🐧🐨🐿👉👣👑👅👎🐼👧👧👌👢👑👂👎🐽👣👪👌👣👛👎👉👣👧👀👑👌👛🐾👋🐩👁👍👚🐼👣👍👙👏👟👩👐👍👑👘👉👣👑👐👑🐽👛👠👍🐼👌👮👍👤👧👂👌🐨👁👩👅👍👛👟👉🐪👉👋👐👢👑👮👛👣👛👪👑🐻🐹👑👍👤👉👏👎👢👑👦👘🐨👁👩👅👍👑👌👍👣👧👱👋👋🐽👊👍🐩🐽🐽👑🐽👛👅👘🐨👐🐩👎👍👍👢👉🐨👛👪👎👢👑👏👘👢🐬👏👌👣👑👮👄🐨👍👫👜🐾👫👡👄👏🐹👀👑🐼👑👢👋👣👅🐽👊👢👫👎👙🐾👅🐫👋👢👑👉👜🐽👛👐👑🐼🐬👎👙🐿🐹👑👍👡🐹👦👈🐨👛🐾👙🐿👅👟👉👱👣👏👌👤👯👑👄👣👍👫👛🐻🐹👟👄👌👧👱👐🐧👉🐾👍🐨👀👱👘🐽🐹👑👍👤👉🐾👑👌👛👆👉🐩👅🐾👘🐽👛👅👄👌👧🐬👍👤👯👊👊🐨👈👯👊👏👟👏👙👣👑👋👐👢👌🐨👙🐨👉👎👘🐼👅👣👍👣👧🐿👍🐩🐨🐧👍👢🐨👏👌👢👟👎👄👥👟👭👐👋🐽👂👉👣👅👪👑🐽👍👎👍👢👧👀👍👡🐹👘👚🐩👅👪👍👥👅👌👙🐾👉👆👍👣👚🐫👜👍👑👫👄👋👉👉👄👎👉🐿👍🐩🐬👆👘👣👁👐👌👤👟👎👙👋🐽👋👌🐧👑👎👛🐾👅🐭👍👣👛👅👍👥🐹🐭👍🐩👫👍👄👍👉👫👊👣👟👟👉👋👣👏👐👣👉🐾👄🐨👍👨👉👥👅👏👉👢👧👑👐👌👛🐾👌🐨👐👰👘🐽👣👏👍👣👁👃👐👡🐽👎👍🐨👛👬👌👤👫👋👉🐨👁👎👍🐽👑👘👛🐧🐨🐾👚🐼👑👟👉🐪👉👏👌👤👯👮👜👣👢👮👘🐿👛👏👉👤👉👁👌👎👫👦👍🐩🐼👯👍👡👉👎👄🐽👧👏👐🐩🐨👂👉🐨👛👩👅👎👣👠👉👏🐹🐩👍👡🐽👘👘🐧🐬🐾👌👏👟👋👙👢👧👇👍👤🐨👊👙🐨👍👫👅👌👅👡👉👣👑👯👌🐩🐧🐬👍🐨👑👪👚🐼👟👎👍🐪👉👩👐👋🐸👯👍🐩👁🐼👌👣👟👟👄👤👟👌👎👍👉🐾👊👤👍👪👉👥👍👉👙🐽👧👦👐👋🐽👮👋👍👑🐿👄👋👉👑👍🐧🐬👱👐🐧👍👎👍👤👁👏👜🐼🐰👎👙👏👟👘👋👍👑👘👎🐾👍🐿👆👎👧👅👘🐨👐🐨👍👤🐧🐨👊🐨👛🐿👊👢👟👣👉👤👟👘👐👢👛👦👛👣👣👍👎👥👅👎👙🐾👉🐨👎👢👑👆👍🐩🐼👱👈👏👛👏👘🐨👑👟👍🐻🐽👊👚🐨👛👐👘🐽👉👟👙🐼👧👐👎👍👛🐧👛👢🐨🐾👍👡👑👊👙👏👉👋👋👍👌🐨👎👣👣👩👑🐾🐰👍👄👢👧👐👐👌👑👪👎🐽👐👱👘🐿👑👎👍🐼👑👩👌👡🐽👮👉🐨👧🐿👉👣👅👎👉🐪👟🐫👍👢👑👘👐👎👈👮👄👍👛👎👙👣👁👪👌👣👉👪👙🐨👑👫👛🐿👅👆👉👣👍🐬👋👣👚🐬👍🐧🐨👍👚🐻🐹👎👍👤👟👩👍🐧👑👘👚🐩👅🐽👛🐾🐽👎👍👥🐹👐👍👡🐽👢👉🐨👀👰👉👢👟👠👉👤👟👋👐👋👅🐹👜👍👑👫👜🐾👫👢👄👌👣🐫👐👢👑👦👍🐩👁👩👅👍👣👎👄🐾👈🐧👐👱🐽👎👚🐨👧🐾👋👣👟👊👙🐼👧👑👎👢👍👘👘🐨👈👯👊👥👉👢👉🐼🐬👐👐👋👁👅👄👍👐👮👎👢👫👡👄👢🐬🐽👌👎👯👢👍🐧🐧👰👘🐽🐽👎👄👍👧👟👎👍👛👅👜👍👉👩👘🐾👟👊👙👢👁👇👎👎🐧👯👙👤👍👪👎👣👟👡👉👎👉👩👋👍👍👪👅👍👍👫👛🐾👫👎👍🐧👐🐩👍👤👪🐬👎👤👁🐿👌👥🐽👘👍👍👧👟👑🐼👌👯👍👍👍👫👘🐼🐬👠👉👍👢👮👍👣👛🐫👙🐩👀👰👉👣👛👋👙👣👁👦👌👤👯👮👐👍👑👩👍👥👛👎👉👣👣🐪👍🐩🐬👆👘🐨👀👯👎👢👛👘👉👎👉🐪👍🐾👯👘👚🐨👛👐👚🐽👛👅👙👣👁👦👍👢👉👂👉🐩👅👩👄👍👛👟👉🐪👟👌👌👡👅👦👎👍👑🐾👐👱🐽👠👄👢🐬👱👍🐩👫👎👌🐩👁👍👎👥👁👎👙👏👉👟👑👎👯👢👚👣👛👬👑🐽👛👅👍👤👮🐧👍👎🐨👮👋🐨👐👰👉👥👁👋👙👎👟👎👋👎👧🐾👌🐨👧👎👎👣👅👡👙🐾👉🐧👐👌👑👆👘👎🐼👮👚🐽🐽👎👙🐾👅🐪👋👍👑🐽👛🐧🐨👐👋👣👟👠👘🐨👧👍👎👎🐧🐨👈🐩👄👯👍👥👉👡👜👢👑👌👍👤👯👘👄🐽👧🐽👑🐼👛👟👍👢👧👰👐🐧👉🐺👍🐨👑🐭👈👋🐽👎👄👥👟👟👌👤👪🐨👍👣👍👪👎👢🐬👎👙👢👁🐬👍👤🐨🐫👐👍👈👰👋👣👛👎👙👣👁👦👌👣👉👎👙🐨👧👏👜🐽👛👅👄👍👧🐧👋👌👟👦👋👣👀👮👍👡👉👑👘🐨👧👩👍👢👑👢👊🐾👍🐿👆👍👑👠👙👢👁🐭👍👤🐨🐫👐👎👅👪👎👥👁👢👉👣👑👋👐👢👟🐺👎👣👛👪👍👤👫👊👄👢👑👰👋👍👑👪👌👤🐼👱👈👣👣👑👍🐼👑🐪👍👌👑👘👊🐾👍🐿👉👤👫👊👄👌👢👰👍👎🐨🐫👘🐩🐽🐽👄👍👣👉👘👢👧👐👍🐧👟🐺👊🐽👑👫👄👍👛👎👄👌🐬👱👐👢👛👪👌🐧🐨👫👘🐽👑👎👍🐪👟👏👑🐻🐽👢👉🐨👧🐾👘🐾👯👊👜👤👯👎👎👎👯👘👐👍👅🐾👙🐽👍👌👙👏👉👐👌👡🐹👮👊🐽👢👮👘🐼👫👎👍👣👧👱👐🐧👉👆👐👍👑👪👚🐻👅👍👙👏👟👟👍👣👑👂👛🐾🐽🐾👑🐾👟👅👄🐼👐🐧👍👤👯👘👘🐩👈👯👍👏👟👏👎🐾👟👐👐👋🐽👮👚👍👍👩👍👋🐽👎👄👍👧👰👍👤🐨🐾👘🐽👁👫👛🐻👍👑👜👢🐬👭👍👡🐸👯👎🐽👍👨👈👣👧👟👄👏🐹👈👍👣👉👂👉👤👍👪👉👥👅👡👉👤👉👧👌👡🐸🐧👜👣👛👪👍👤👫👋👙👍👑👏👍🐩🐬👎👍👎👁🐿👘🐿🐹👑👎🐿🐹👏👍🐩👯👢👎🐾👍🐿👆👍👑👅👍👥🐹👐👍👤🐧🐨👉🐨👌👰👊👣👑👏👙🐽👑👎👐👣👟👦👜👣👉👪👎👥👛👎👙👌👑👀👑🐼👑👢👋👣👁🐽👎👣👟👏👍🐼👁👟👐👡🐽👢👛🐽👁👬👊👢🐰👎👉👋👍👐👍🐽👍👘👛🐨👣👎👚🐽👟👣👉👎👉👨👐👣👍👘👊🐽👛👩👑🐾🐰👟👉👋🐹🐪👌🐩👯👂👍🐩👁👌👉👡👅👍👘👢👑👘👑👍👑👎👚🐨👧🐾👍👤👣👟👜👣👑👑👍🐨👛🐫👘🐧🐬🐾👎👢👛👍👙🐾👉👏👐👤🐨👊👎🐽👣👩👎👥👅👆👉👤👉👰👍👎👯👆👘🐽👑👌👉👥👣👑👘🐨👁👇👍👣👛👂👉🐩👅👀👊👣👛👅👉🐨👁👄👎👏👧🐾👋🐩👅👩👆👍👛👏👙👎👟👆👍👤🐬🐺👛👣👐👯👑🐿👛👊👄👍👍🐫👍🐨👟👦👐👍👅🐾👎👣👑👑👎🐿🐹👱👍👢👑👪👚👣👧🐼👋👢🐬👎👙🐿🐹👁👎👣👍👘👐👍👈👯👎👏👛👏👘🐩👯👎👋👎🐬👊👘🐽👣👏👜🐼👫👏👉👣👑👱👎👢👑👎👍🐧🐧👮👊👢👣👏👘🐩👈🐧👎👍👛👊👉👢🐨👎👎👤👫👊👙🐼👧👌👎👎👫👘👛🐧🐬👪👎👥👅👘👉🐽👁👘👍👤👯👂👜👣👌👰👅👍👛👍👙👌👧👐👐👌👑👪👎👤🐼👯👚🐻👅👑👄👥👟👟👐🐨👑👂👚👢🐰👎👋👢🐬👎👍🐽👍🐫👍👤👯👡👜🐼🐨🐾👍👏👣👊👘👣👧👏👐👤🐨👊👎🐽👑👬👚🐼👁👣👉👣👑👐👐👱👅👦👍🐧🐨👏👌👣👧👑👍👍👧👭👐👍👑👁👜🐽👅👫👘🐽👛👠👎🐼👁🐼👍👤👧🐹👄👍👀👯👑🐿👅👟👉👋👣👏👐👏👧👎👎🐽👑🐾👑🐻🐹👢👄👣👑👏👍👎🐬👆👎🐾👁👩👅👍👣👑👙🐽👑👏👋👢👑👩👛🐨👧🐿👆👍👛👅👉🐼👑👀👎👋🐹👦👛🐨👐👰👊👢👛👡👉👢👁👘👑👎👫👘👌🐽👢👰👚👱🐽👎👄👍👁🐧👐👢👑👆👘👍👛🐾👉👏👟👎👙👋🐼🐧👐👎🐨👎👉👢🐨👍👎👢🐬👎👍🐩👟👌👎👎🐨🐧👛🐨👈👯👎👥👉👅👍🐽👁👎👋👍👛🐫👍👣👑🐿👛🐼🐰👏👉👢👧🐧👑👌👟👮👎👣👑👏👋👋🐽👎👘👢👑👃👑🐼👛👎👉🐩🐽🐾👑🐼🐬👠👙🐼👐👱👍🐨👑👢👜👤👍🐿👋👥👁👆👍👣👧👦👌👤🐬🐺👙🐨👉👎👘🐼👅👅👙🐽👧🐧👐🐧👍👂👘🐧🐨👪👎👢👟👎👉👱👍🐿👍👢👛👂👊🐽👍👪👘🐽👧👟👄👍👦👱👍👎👫👘👐👍👀👯👑🐿👉👢👉👣👑👧👍👤👯👮👊👍👛👌👈👣👛👡👄👍👧👀👌🐩👯👦👘🐽👁👪👊👣👑👎👘🐨👑🐪👑🐾👯👘👚🐨👛👫👉👣👅👅👍👥🐸👮👍👎🐧👯👄🐽👉👫👉👏👟👡👉👎👯👏👐👎👫👩👜🐽👑👌👉👣👅👡👄👍👁👰👐👌👛👦👌🐩👁👎👊👣👛👎👙👋🐼🐧👎👍👛👎👚🐨👍👬👊👣👟👠👍👍👧👑👍👎👯👊👍🐨👐👯👌👏👟👏👙👋👣👎👋👌👉🐾👊👣👍👏👜🐾🐰👎👄👢👑👰👐👥👧🐺👎👣👑🐽👎👤👟👘👉👍👧👇👐👱👁👂👊🐾🐽🐾👋👣👅👎👉👣👧👐👍👤🐧👯👅🐽👣👏👌👏👣👊👘🐩👉👐👍🐧👛👊👎🐽👑👩👍👤🐽👏👉👤👯👰👍🐩👫🐧👙🐾👁🐿👌👥👣👎👙🐽👁🐿👐👌👑👂👍👍🐽👨👋👣👑👅👙👣🐽🐪👍👤👧🐹👜🐽👐👰👋👢👛👟👉👤👉👦👐👋🐽👮👎🐽👛👪👍👤🐽👟👄👢🐨🐬👌👤👫👢👍👤👁👏👘🐼🐰👑👘🐨👑🐪👋👢👑👘👚🐨👧👀👑🐽👉👅👘🐩👮🐧👍👡🐽👦👙🐨👑👫👊👢👛👡👉🐩👟👎👐👣👟👅👜🐽👐👯👎👣👛👢👉🐨👑🐿👎👢👌🐨👋👣👑👫👛👱🐽👏👘🐨👑👋👌👋👁🐾👉👢🐨👎👎👤👣👊👉👋👍👎👎👎👫👘👐👎👅👪👎👥👅👘👉👏👉👋👋👎👪🐨👊👣👌👰👜🐾👫👍👄🐻🐹🐬👐👌👚🐬👍🐩🐽👩👊👥👁👎👍👱🐽👏👑🐼👑👊👚👣👧🐿👉👣👅👅👙👤👟👘👍👣👛👮👊🐩👀👯👎👥👅👏👙👢🐬👦👌🐧👛👊👌🐨👣👪👎👤🐽👋👉👣👧👀👑🐼👛🐧👍🐨👐👮👚🐼👣👘👍👎👟🐻👍👤🐨👂👎👍👉👐👘🐽👧👟👘🐨👧👌👍👡🐹👢👍🐨👁👫👌👢👛👘👉🐩👯👋👋👍👍👮👐👍👑👩👎👤🐽👠👄👣🐽🐫👍👎🐬👆👎🐾👁👩👅👏🐽👍👙👋🐽👭👎👍👑👪👍👍👅👫👆👍👑👊👙🐿🐹🐫👍👋👁🐧👄🐽👐👰👊👢👟👍👙👥🐹👘👍👣👑👮👄🐨👣👍👍👏👟👏👍👢👑👑👐🐧👑👢👌🐩👁🐾👚🐾🐰👏👘🐨👁🐿👎👍👛👊👉🐨👅👬👊👤👟👊👄🐨👁👌👎👎👫👘👛🐩👉👪👑🐿👅👘👉🐼👁👘👍👤🐨👊👜👣👛👩👘🐼🐰👎👄👢👧👎👍🐩🐧🐬👍👍👑👪👚🐿👧👌👍🐼👑👋👍👡👁🐾👉👣👧🐾👑🐼🐬👟👄🐧👀🐨👍🐨👉🐺👐👎👀👯👎👏👣👊👎🐾👟👐👐👎👪🐨👎🐽👍👪👎👥👛👎👄👏🐹👎👍🐩🐨🐧👘👤👁👀👈👢👣👑👄🐾👉👱👍👢👑👂👍👤👅🐽👚🐽👛👠👍🐼👀🐧👎👣👛👱👜🐽👐👯👑🐽👣👠👉👣👁👦👋👎👯👂👎👍👛👎👑🐻👉👋👄👎👉🐿👍👎👯👢👎🐾👁👫👌👤🐰👍👙👋🐽👋👍🐧👑👑👜👎👅🐭👉👤👣👊👘🐪🐸👯👍👍👛🐧👙🐨👛🐿👉👏👟👡👉👢👁👘👍👤🐨👊👉🐨👧👍👑🐼🐰👊👄👢🐬🐿👐👌👑👢👋👢🐨👍👚🐻👍👎👄👎👉🐪👌👡👁🐽👜🐽👅👐👙🐽👉👟👄👥👟👍👎👎👫👢👙🐩👅🐾👙🐿👅👏👘🐪👉👪👐👢👑👮👄🐽👉👍👘🐾🐰👎👘👱🐽👐👍👎🐬👮👎👣👑🐽👅👏👁👎👘👢👧👃👍🐨👑👎👚🐩🐽🐾👍👣👛👅👄👌👣🐭👍👤👧🐺👐👍👐👰👌👢👟👌👘🐨👧👈👍👤🐨👊👎🐽👣👩👘🐼👅👆👙🐾👉👍👌👎🐧🐬👍🐼🐨👎👙🐻👅👌👍👣👑👭👍👤🐨🐽👜👤🐽🐾👘🐽👍👎👍🐨👁👌👍👡🐹👘👍👤👍🐾👑🐿👅👌👙👏🐹👆👐👏👧👎👊👍👐👰👛🐾🐽👌👄👍👣🐬👌🐩👯👎👘🐾👍👩👚🐽👟👑👙🐽👁🐿👋👋🐽👎👚👍👁👬👋👣👟👊👘🐪🐹👘👎👍👍👢👉🐨👌👯👎👏👣👟👉👤👯👐👍👤👯👂👋🐽👣👨👉👣👛👎👄👎👉🐨👍👎🐨🐧👍🐽👀👯👊👣👛👎👉👣👧👟👑🐻🐸👯👉🐩👅🐽👎👤👟👊👄🐨👁👐👍👎🐨🐫👛🐩👍👪👘🐪👛👟👊🐾👉👐👌👡🐹👎👅🐽👌👰👜🐽👅👎👄🐻🐽🐨👐👌👛👦👐👍👁👏👌👣👟👍👘👢👧🐿👌👡🐽👢👚👢🐬👏👙🐾👣👎👄👤👚👯👍👤👧🐾👐👎🐼👮👅👌👛👍👎🐾👟👌👐👤👫👮👌🐽👑👫👄👍👅👟👉👣👑🐧👋👣👍👆👘👣👁👪👎👡🐹👘👉👎👟👩👍👢👑👘👚🐩👅🐼👈👤🐽👊👍🐨👁👀👍👡🐹👢👊🐨👐👯👑🐿👅👠👉👤👉👧👍🐧👑👂👅👣👑👫👜🐾👫👋👄👎👉👏👌👤🐬👎👌👤👁🐾👚🐾🐰👑👍🐼👑🐪👍🐽👑👘👊🐼🐨👌👌👣👧👎👄🐻👍🐭👎👍👉👆👛🐩🐽🐾👊👏👣👣👉👋👣👏👐👣👟👦👐👍👉👍👎👤🐽👡👍👢🐬👯👌👎👯👮👍🐩👁👎👊👢👧👎👍👱🐸👯👍🐻👁🐾👚🐨👅👬👌👤👟👊👙👎👟👟👍👤👫👎👐👎🐽🐾👚🐽👛👏👙👤👉👏👐👢👛👊👄👍👑🐿👄👏👛👎👄👢👍🐭👌👎👧👘👎🐽👑🐽👊👥👁👌👘🐨👧👎👑👍👑👆👚🐨👧🐾👌👤👣👎👍👥🐹👘👍👤🐨🐧👍🐨👄👰👋👥👅👠👊🐼👑👋👐👢👑👮👚👣👉👍👌👢👛👏👙🐽👧👐👋👍👚🐬👍👢🐨👪👎👡🐹👘👍👍👧👱👍👡👁👂👎👍🐽👪👈👣👛👎👉👍👧👰👍👎👧🐾👛🐨👀👯👚🐼👛👟👉🐩👯👦👑👎👯👘👎👣👑👩👎👤👫👣👘👱🐽👏👍🐾👫👢👎🐽👛🐿👜🐿👅👍👙👥🐹👱👐👡🐽👘👛🐼🐨👎👋👣👉👊👙🐽👐🐨👍🐾👯👦👋🐨👐👮👄👏👁👡👉👣👧👎👐👢👑👂👉🐽👐👮👎👤🐽👡👄👍👧👯👍👎👯👘👘🐾🐼👱👈👣🐽👎👍🐪🐹🐿👐👋👁👅👜👍👁👩👘🐾👟👊👄🐩👟👮👍👡🐹👢👙🐩🐽🐾👎👥👉👣👉🐪🐹👪👌👣👉🐾👊👍👑👎👘🐿👅👎👄👢👧👀👍👎🐧🐬👍👍👑🐽👚🐽👉👎👄👍👧👱👑🐼👌👯👍🐨👉👪👘🐽👅👠👉👏🐹👘👍🐩👫👎👐👎🐼👯👌👏👟👋👙👣👁👩👌👢👌🐨👎👍👣👌👊👢🐬👅👍👣👣🐪👍🐩👫🐧👘👢🐨👩👅👌👧👑👄🐽👧🐪👍🐾👯👁👜👍👦👱👚🐽👛👠👎🐼👁👄👍👎👧👂👋🐩👄👯👚🐼👣👌👙🐽👧👧👌🐧👍👂👌🐽👛👏👄🐿👟👠👙👍👑👱👍🐩👯👦👘👣👁👏👌👥👁👌👍👣👌👯👌🐨👑👍👜👎👉🐿👆👎👟👊👘🐩👮🐩👎👍👍👦👈🐨👑👫👊👣👍👎👘🐨👁👐👍👤👯👮👘🐽👧🐽👑🐼🐰👊👙🐿🐹👀👐👌👛👪👍🐩👁👀👈👢👫👎👙👋🐹🐪👋👍👑👅👜🐽👍👬👋👣👟👠👙🐼👧👏👎👎👫👢👅🐽👛🐾👌👣👑👘👉👢🐬👩👐👢👑👪👅🐽👐👰👅👌🐰👟👄👌👣🐫👍🐩👫👢👐👍👁👏👌👡👅👎👉🐪👟👟👐👱👁👆👉👍👍👪👑🐽👛👠👍👋👈👮👍👣👛👮👉🐩🐼👯👊👏👟👌👙👣👑👎👐👣👟👦👍👍👍👨👋👤🐰👏👍👣👧🐿👎👏👧🐾👍👤👁👎👉👡👉👎👄👡👍🐿👍👎👯👢👊🐾🐽🐾👘🐽👍👎👄🐧🐨🐫👍👋🐹👘👚🐩👅👪👑🐿👅👘👉🐩👟👏👐👋👅🐺👅👣👛👏👛🐽👅👌👄👍👣🐬👌🐩👯👎👌🐨👑🐽👊👣👣👎👙👋🐽👋👍🐻🐽👮👍👣👛👬👑🐽👉👎👙🐼👧🐭👎👍👍👢👚🐨👌👰👊👢👣👉👙🐿🐹👏👐👣👉🐺👅🐽👉👍👑🐽👁👢👄🐻👍👏👎👢👑👦👘👍👁👬👈👣👧👏👍👣👁🐿👑🐻🐽👎👍🐨👛👬👌👤👫👊👎🐽👁👏👍🐽👑👘👐👍👅🐾👎👣👛👟👉🐪👉👎👍👤👯👘👍👣👉👍👌👥👁👈👌👋🐧🐰&quot;</span><br><br><br><span class="hljs-comment"># 逆向Base100解码</span><br>flag = base100_decode(flag)<br><br><span class="hljs-comment"># 逆向20次Base64解码</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> tqdm(<span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>)):<br>    flag = base64_decode(flag)<br><br><span class="hljs-comment"># 逆向阿特巴什密码解密</span><br>flag = atbash_cipher(flag)<br><br><span class="hljs-comment"># 逆向21次字符串反转</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> tqdm(<span class="hljs-built_in">range</span>(<span class="hljs-number">21</span>)):<br>    flag = string_reverse(flag)<br><br><span class="hljs-comment"># 逆向凯撒密码解密，偏移量为8</span><br>flag = caesar_decrypt(flag, <span class="hljs-number">8</span>)<br><br><span class="hljs-comment"># 打印最终的解码结果</span><br><span class="hljs-built_in">print</span>(flag)<br><br><br></code></pre></td></tr></table></figure>
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
 
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="../categories/CTF/" class="category-chain-item">CTF</a>
-  
-  
-    <span>></span>
-    
-  <a href="../categories/CTF/WP/" class="category-chain-item">WP</a>
-  
-  
-    <span>></span>
-    
-  <a href="../categories/CTF/WP/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81/" class="category-chain-item">技能兴鲁</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="../tags/CTF/" class="print-no-link">#CTF</a>
-      
-        <a href="../tags/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81/" class="print-no-link">#技能兴鲁</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）</div>
-      <div>https://w1ndys.github.io/posts/25815978</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>W1ndys</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2023年11月14日</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>更新于</div>
-          <div>2024年1月14日</div>
-        </div>
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
-                    <i class="iconfont icon-nc"></i>
-                  </span>
-                </a>
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
-                    <i class="iconfont icon-nd"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="7a43906e.html" title="HuYanSession2——壶言会话2使用手册">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">HuYanSession2——壶言会话2使用手册</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="cdf7e434.html" title="CTF学习日记（每天学点新东西，就是成功）">
-                        <span class="hidden-mobile">CTF学习日记（每天学点新东西，就是成功）</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-  
-  
-    <article id="comments">
-      
-  <div id="waline"></div>
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
-      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
-        var options = Object.assign(
-          {"serverURL":"https://pl.w1ndys.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
-          {
-            el: '#waline',
-            path: window.location.pathname
-          }
-        )
-        Waline.init(options);
-        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
-          var imgSelector = '#waline .vcontent img:not(.vemoji)';
-          Fluid.plugins.imageCaption(imgSelector);
-          Fluid.plugins.fancyBox(imgSelector);
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
         })
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
+      }
 
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
 
-    </article>
-  
-
-
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://qm.qq.com/q/ADHohOYwRa" target="_blank" rel="nofollow noopener"><span>W1ndys</span></a> <i class="iconfont icon-love"></i> <a href="https://qm.qq.com/q/ADHohOYwRa" target="_blank" rel="nofollow noopener"><span>hexo-fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> Copyright© 2024 All Rights Reserved. W1ndys 版权所有 <br/> <img style="width:32px;height:32px;margin-bottom:-8px" src="https://icp.gov.moe/images/ico64.png"> <a href="https://icp.gov.moe/?keyword=20238661" target="_blank">萌ICP备20238661号</a> 
-    </div>
-  
-  
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        总访问量 
-        <span id="busuanzi_value_site_pv"></span>
-         次
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        总访客数 
-        <span id="busuanzi_value_site_uv"></span>
-         人
-      </span>
-    
-    
-  
-</div>
-
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
     })
-  </script>
+  }
 
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js').then(runMermaid)
+  }
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../js/events.js" ></script>
-<script  src="../js/plugins.js" ></script>
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
 
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const abcjsInit = () => {
+    const abcjsFn = () => {
+      document.querySelectorAll(".abc-music-sheet").forEach(ele => {
+        ABCJS.renderAbc(ele, ele.innerHTML, {responsive: 'resize'})
+      })
+    }
     
-      <script  src="../js/img-lazyload.js" ></script>
-    
-  
+    typeof ABCJS === 'object' ? abcjsFn()
+      : getScript('https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.min.js').then(abcjsFn)
+  }
 
+  window.pjax ? abcjsInit() : window.addEventListener('load', abcjsInit)
+})()</script></div><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = true
 
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
     }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
+  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
       }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
     }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
+  }
+
+  (function(d, w, c) {
+    w.ChatraID = 'DouTZhBqhf3Qha8Xj'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
     }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="../js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="../js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><script src="/js/scrollAnimation.js"></script><!-- hexo injector body_end end --></body>
-</html>
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="../js/search/local-search.js?v=4.12.0"></script></div></div><!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><script src="/js/scrollAnimation.js"></script><!-- hexo injector body_end end --></body></html>
