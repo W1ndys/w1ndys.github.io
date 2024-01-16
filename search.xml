@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++常用的代码模板</title>
-    <url>/posts/b138fb0c.html</url>
-    <content><![CDATA[<h1>生成随机数</h1>
-<h2 id="源代码">源代码</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line">    <span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个随机数生成器</span></span><br><span class="line">    <span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line">    <span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 生成并打印一个随机数</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Random number: &quot;</span> &lt;&lt; <span class="built_in">distribution</span>(generator) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="摘要">摘要</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line"><span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个随机数生成器</span></span><br><span class="line"><span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line"><span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">distribution(generator)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;chrono&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++</category>
-        <category>常用代码</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）</title>
     <url>/posts/25815978.html</url>
     <content><![CDATA[<h1>RE</h1>
@@ -158,6 +139,77 @@
       </tags>
   </entry>
   <entry>
+    <title>C++常用的代码模板</title>
+    <url>/posts/b138fb0c.html</url>
+    <content><![CDATA[<h1>生成随机数</h1>
+<h2 id="源代码">源代码</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line">    <span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个随机数生成器</span></span><br><span class="line">    <span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line">    <span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 生成并打印一个随机数</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Random number: &quot;</span> &lt;&lt; <span class="built_in">distribution</span>(generator) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="摘要">摘要</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line"><span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个随机数生成器</span></span><br><span class="line"><span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line"><span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">distribution(generator)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;chrono&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>常用代码</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++类的基本学习</title>
+    <url>/posts/a8f20fc2.html</url>
+    <content><![CDATA[<p>（因为上学期C++选修课没认真听，导致这学期数据结构啥也不会，好吧，出来混迟早是要还的，现在开始恶补C++）</p>
+<p>目前需要学习/复习的内容是</p>
+<ol>
+<li>C++类</li>
+<li>C++结构体</li>
+<li>template模板类</li>
+<li>双链表的插入和删除</li>
+<li>C++DataType的用法</li>
+<li>mod运算在C++的应用
+<ol>
+<li>保证小于最大长度</li>
+<li>数组指针绕回</li>
+<li>数组前移</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1>C++ 类 &amp; 对象</h1>
+<p>C++ 在 C 语言的基础上增加了面向对象编程，C++ 支持面向对象程序设计。类是 C++ 的核心特性，通常被称为用户定义的类型。</p>
+<p>类用于指定对象的形式，是一种用户自定义的数据类型，它是一种封装了数据和函数的组合。类中的数据称为成员变量，函数称为成员函数。类可以被看作是一种模板，可以用来创建具有相同属性和行为的多个对象。</p>
+<h2 id="C-类定义">C++ 类定义</h2>
+<p>定义一个类需要使用关键字 <strong>class</strong>，然后指定类的名称，并类的主体是包含在一对花括号中，主体包含类的成员变量和成员函数。</p>
+<p>定义一个类，本质上是定义一个数据类型的蓝图，它定义了类的对象包括了什么，以及可以在这个对象上执行哪些操作。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11.png" alt="img"></p>
+<p>以下实例我们使用关键字 <strong>class</strong> 定义 Box 数据类型，包含了三个成员变量 length、breadth 和 height：</p>
+<p>class Box {   public:      double length;   // 盒子的长度      double breadth;  // 盒子的宽度      double height;   // 盒子的高度 };</p>
+<p>关键字 <strong>public</strong> 确定了类成员的访问属性。在类对象作用域内，公共成员在类的外部是可访问的。您也可以指定类的成员为 <strong>private</strong> 或 <strong>protected</strong>，这个我们稍后会进行讲解。</p>
+<h2 id="定义-C-对象">定义 C++ 对象</h2>
+<p>类提供了对象的蓝图，所以基本上，对象是根据类来创建的。声明类的对象，就像声明基本类型的变量一样。下面的语句声明了类 Box 的两个对象：</p>
+<p>Box Box1;          // 声明 Box1，类型为 Box Box Box2;          // 声明 Box2，类型为 Box</p>
+<p>对象 Box1 和 Box2 都有它们各自的数据成员。</p>
+<h2 id="访问数据成员">访问数据成员</h2>
+<p>类的对象的公共数据成员可以使用直接成员访问运算符 <strong>.</strong> 来访问。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11-2.png" alt="img"></p>
+<p>为了更好地理解这些概念，让我们尝试一下下面的实例：</p>
+<h2 id="实例">实例</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="type">double</span> length;   <span class="comment">// 长度</span></span><br><span class="line">      <span class="type">double</span> breadth;  <span class="comment">// 宽度</span></span><br><span class="line">      <span class="type">double</span> height;   <span class="comment">// 高度</span></span><br><span class="line">      <span class="comment">// 成员函数声明</span></span><br><span class="line">      <span class="function"><span class="type">double</span> <span class="title">get</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line">      <span class="function"><span class="type">void</span> <span class="title">set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei )</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 成员函数定义</span></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Box::get</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> length * breadth * height;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Box::set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    length = len;</span><br><span class="line">    breadth = bre;</span><br><span class="line">    height = hei;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Box Box1;        <span class="comment">// 声明 Box1，类型为 Box</span></span><br><span class="line">   Box Box2;        <span class="comment">// 声明 Box2，类型为 Box</span></span><br><span class="line">   Box Box3;        <span class="comment">// 声明 Box3，类型为 Box</span></span><br><span class="line">   <span class="type">double</span> volume = <span class="number">0.0</span>;     <span class="comment">// 用于存储体积</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 详述</span></span><br><span class="line">   Box1.height = <span class="number">5.0</span>; </span><br><span class="line">   Box1.length = <span class="number">6.0</span>; </span><br><span class="line">   Box1.breadth = <span class="number">7.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 详述</span></span><br><span class="line">   Box2.height = <span class="number">10.0</span>;</span><br><span class="line">   Box2.length = <span class="number">12.0</span>;</span><br><span class="line">   Box2.breadth = <span class="number">13.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 的体积</span></span><br><span class="line">   volume = Box1.height * Box1.length * Box1.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box1 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 的体积</span></span><br><span class="line">   volume = Box2.height * Box2.length * Box2.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box2 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 3 详述</span></span><br><span class="line">   Box3.<span class="built_in">set</span>(<span class="number">16.0</span>, <span class="number">8.0</span>, <span class="number">12.0</span>); </span><br><span class="line">   volume = Box3.<span class="built_in">get</span>(); </span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box3 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Box1 的体积：210</span><br><span class="line">Box2 的体积：1560</span><br><span class="line">Box3 的体积：1536</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，私有的成员和受保护的成员不能使用直接成员访问运算符 (.) 来直接访问。我们将在后续的教程中学习如何访问私有成员和受保护的成员。</p>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>类</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CTF-crypto&amp;misc常用解密工具</title>
     <url>/posts/85db357.html</url>
     <content><![CDATA[<h1>编码解码</h1>
@@ -282,58 +334,6 @@
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++类的基本学习</title>
-    <url>/posts/a8f20fc2.html</url>
-    <content><![CDATA[<p>（因为上学期C++选修课没认真听，导致这学期数据结构啥也不会，好吧，出来混迟早是要还的，现在开始恶补C++）</p>
-<p>目前需要学习/复习的内容是</p>
-<ol>
-<li>C++类</li>
-<li>C++结构体</li>
-<li>template模板类</li>
-<li>双链表的插入和删除</li>
-<li>C++DataType的用法</li>
-<li>mod运算在C++的应用
-<ol>
-<li>保证小于最大长度</li>
-<li>数组指针绕回</li>
-<li>数组前移</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h1>C++ 类 &amp; 对象</h1>
-<p>C++ 在 C 语言的基础上增加了面向对象编程，C++ 支持面向对象程序设计。类是 C++ 的核心特性，通常被称为用户定义的类型。</p>
-<p>类用于指定对象的形式，是一种用户自定义的数据类型，它是一种封装了数据和函数的组合。类中的数据称为成员变量，函数称为成员函数。类可以被看作是一种模板，可以用来创建具有相同属性和行为的多个对象。</p>
-<h2 id="C-类定义">C++ 类定义</h2>
-<p>定义一个类需要使用关键字 <strong>class</strong>，然后指定类的名称，并类的主体是包含在一对花括号中，主体包含类的成员变量和成员函数。</p>
-<p>定义一个类，本质上是定义一个数据类型的蓝图，它定义了类的对象包括了什么，以及可以在这个对象上执行哪些操作。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11.png" alt="img"></p>
-<p>以下实例我们使用关键字 <strong>class</strong> 定义 Box 数据类型，包含了三个成员变量 length、breadth 和 height：</p>
-<p>class Box {   public:      double length;   // 盒子的长度      double breadth;  // 盒子的宽度      double height;   // 盒子的高度 };</p>
-<p>关键字 <strong>public</strong> 确定了类成员的访问属性。在类对象作用域内，公共成员在类的外部是可访问的。您也可以指定类的成员为 <strong>private</strong> 或 <strong>protected</strong>，这个我们稍后会进行讲解。</p>
-<h2 id="定义-C-对象">定义 C++ 对象</h2>
-<p>类提供了对象的蓝图，所以基本上，对象是根据类来创建的。声明类的对象，就像声明基本类型的变量一样。下面的语句声明了类 Box 的两个对象：</p>
-<p>Box Box1;          // 声明 Box1，类型为 Box Box Box2;          // 声明 Box2，类型为 Box</p>
-<p>对象 Box1 和 Box2 都有它们各自的数据成员。</p>
-<h2 id="访问数据成员">访问数据成员</h2>
-<p>类的对象的公共数据成员可以使用直接成员访问运算符 <strong>.</strong> 来访问。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11-2.png" alt="img"></p>
-<p>为了更好地理解这些概念，让我们尝试一下下面的实例：</p>
-<h2 id="实例">实例</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="type">double</span> length;   <span class="comment">// 长度</span></span><br><span class="line">      <span class="type">double</span> breadth;  <span class="comment">// 宽度</span></span><br><span class="line">      <span class="type">double</span> height;   <span class="comment">// 高度</span></span><br><span class="line">      <span class="comment">// 成员函数声明</span></span><br><span class="line">      <span class="function"><span class="type">double</span> <span class="title">get</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line">      <span class="function"><span class="type">void</span> <span class="title">set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei )</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 成员函数定义</span></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Box::get</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> length * breadth * height;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Box::set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    length = len;</span><br><span class="line">    breadth = bre;</span><br><span class="line">    height = hei;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Box Box1;        <span class="comment">// 声明 Box1，类型为 Box</span></span><br><span class="line">   Box Box2;        <span class="comment">// 声明 Box2，类型为 Box</span></span><br><span class="line">   Box Box3;        <span class="comment">// 声明 Box3，类型为 Box</span></span><br><span class="line">   <span class="type">double</span> volume = <span class="number">0.0</span>;     <span class="comment">// 用于存储体积</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 详述</span></span><br><span class="line">   Box1.height = <span class="number">5.0</span>; </span><br><span class="line">   Box1.length = <span class="number">6.0</span>; </span><br><span class="line">   Box1.breadth = <span class="number">7.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 详述</span></span><br><span class="line">   Box2.height = <span class="number">10.0</span>;</span><br><span class="line">   Box2.length = <span class="number">12.0</span>;</span><br><span class="line">   Box2.breadth = <span class="number">13.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 的体积</span></span><br><span class="line">   volume = Box1.height * Box1.length * Box1.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box1 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 的体积</span></span><br><span class="line">   volume = Box2.height * Box2.length * Box2.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box2 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 3 详述</span></span><br><span class="line">   Box3.<span class="built_in">set</span>(<span class="number">16.0</span>, <span class="number">8.0</span>, <span class="number">12.0</span>); </span><br><span class="line">   volume = Box3.<span class="built_in">get</span>(); </span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box3 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Box1 的体积：210</span><br><span class="line">Box2 的体积：1560</span><br><span class="line">Box3 的体积：1536</span><br></pre></td></tr></table></figure>
-<p>需要注意的是，私有的成员和受保护的成员不能使用直接成员访问运算符 (.) 来直接访问。我们将在后续的教程中学习如何访问私有成员和受保护的成员。</p>
-]]></content>
-      <categories>
-        <category>C++</category>
-        <category>类</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -535,6 +535,26 @@
       <tags>
         <tag>CTF</tag>
         <tag>CTF学习日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CTF常用刷题平台</title>
+    <url>/posts/eed2fa14.html</url>
+    <content><![CDATA[<p>1.NSSCTF，适合新手</p>
+<p><a href="https://www.nssctf.cn/index">主页 | NSSCTF</a></p>
+<p>2.攻防世界，适合新手</p>
+<p><a href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a></p>
+<p>3.CTFshow，可以进阶</p>
+<p><a href="https://ctf.show/">ctf.show</a></p>
+<p>4.buuctf，新手进阶都可以</p>
+<p><a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>平台</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -1599,307 +1619,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CTF逆向零碎知识点合集</title>
-    <url>/posts/c1e61dd7.html</url>
-    <content><![CDATA[<h1>1.Python字节码的学习</h1>
-<p>题目来源：<strong>2023年SWPU NSS 秋季招新赛 (校外赛道)</strong>——re——字节码</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>逆向工程</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF常用刷题平台</title>
-    <url>/posts/eed2fa14.html</url>
-    <content><![CDATA[<p>1.NSSCTF，适合新手</p>
-<p><a href="https://www.nssctf.cn/index">主页 | NSSCTF</a></p>
-<p>2.攻防世界，适合新手</p>
-<p><a href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a></p>
-<p>3.CTFshow，可以进阶</p>
-<p><a href="https://ctf.show/">ctf.show</a></p>
-<p>4.buuctf，新手进阶都可以</p>
-<p><a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>平台</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ChatLearning————学群友说话使用手册</title>
-    <url>/posts/edeaa258.html</url>
-    <content><![CDATA[<h2 id="开始使用">开始使用</h2>
-<ul>
-<li><a href="https://github.com/project-mirai/mirai-api-http">mirai-api-http</a> 配置 <code>http adapter</code> ， <code>singleMode</code> 为 <code>false</code> 为了保证稳定性，请尽量使用mirai-api-http v2.3.3版本</li>
-<li>配置 <code>data.json</code></li>
-</ul>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;Key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxxx&quot;</span><span class="punctuation">,</span> <span class="comment">// 在mirai-api-http中设置的密钥,若使用singleMode也不需要校验,设置为&quot;&quot;即可</span></span><br><span class="line"> <span class="attr">&quot;host&quot;</span><span class="punctuation">:</span> <span class="string">&quot;127.0.0.1&quot;</span><span class="punctuation">,</span> <span class="comment">// mirai-api-http中设置的地址（若设置成0.0.0.0，请填写127.0.0.1）</span></span><br><span class="line"> <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="string">&quot;8080&quot;</span><span class="punctuation">,</span> <span class="comment">// mirai-api-http中设置的端口</span></span><br><span class="line"> <span class="attr">&quot;qq&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span>  <span class="comment">// 在mirai登陆的QQ号</span></span><br><span class="line"> <span class="attr">&quot;session&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span> <span class="comment">// 无需修改</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Windows双击 <code>ChatLearning.exe</code> 直接运行</li>
-<li>Linux在<code>cd</code>到目录后使用<code>./ChatLearning</code>运行</li>
-<li>Win7或以下的32位系统(包括32位的Linux)则需下载<strong>Source包</strong>并确保Python版本≥3.6使用 <code>pip install -r requirements.txt</code> 安装依赖后运行 <code>Chatmain.py</code></li>
-</ul>
-<blockquote>
-<p>首次使用在控制台使用 <code>setadmin &lt;QQ号,多个请用空格隔开&gt;</code> 设置管理员； <code>blackfreq &lt;次数&gt;</code> 设置黑名单容错次数</p>
-</blockquote>
-<h2 id="指令">指令</h2>
-<p>控制台下可执行指令，发送 <code>help</code> 获取指令表；管理员在聊天环境下私聊bot执行指令时，加上指令前缀 <code>！</code> 或 <code>!</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">基本</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>help</code></td>
-<td style="text-align:left">指令表</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>check</code></td>
-<td style="text-align:left">查看词库的问答个数和属性设置</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>admin</code></td>
-<td style="text-align:left">进入管理模式</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>learning </code></td>
-<td style="text-align:left">开启/关闭记录</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>reply</code></td>
-<td style="text-align:left">开启/关闭回复</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>voicereply</code></td>
-<td style="text-align:left">开启/关闭文字转语音回复</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>setadmin  &lt;QQ&gt;</code></td>
-<td style="text-align:left">设置管理员QQ号，有多个用空格隔开</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>globe</code></td>
-<td style="text-align:left">开启/关闭总词库</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>cosmatch</code></td>
-<td style="text-align:left">开启/关闭问题余弦相似度计算</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>cosmatch &lt;匹配率&gt;</code></td>
-<td style="text-align:left">设定问题余弦相似度计算匹配率阈值</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>blackfreq &lt;次数&gt;</code></td>
-<td style="text-align:left">设置黑名单容错次数</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>merge &lt;单位/秒&gt;</code></td>
-<td style="text-align:left">间隔多长时间合成一次总词库</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>learning &lt;单位/秒&gt;</code></td>
-<td style="text-align:left">词库链间隔时间</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>typefreq &lt;消息类型&gt; &lt;次数&gt;</code></td>
-<td style="text-align:left">为消息类型设置回复阈值</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>voicereply</code></td>
-<td style="text-align:left">开启/关闭文字转语音回复</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>reply &lt;百分比&gt;</code></td>
-<td style="text-align:left">回复概率，若没有触发也不会触发文字转语音</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>replywait &lt;基准时间&gt; &lt;浮动时间&gt;</code></td>
-<td style="text-align:left">设置回复时的等待时间（基准时间±浮动时间）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>replycd &lt;秒&gt;</code></td>
-<td style="text-align:left">设置回复的冷却时间</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>voicereply  &lt;百分比&gt;</code></td>
-<td style="text-align:left">文字转语音概率，若没有触发将会继续发送文字</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>回复阈值：Bot获取到答案时，需要这个答案在词库中<strong>重复出现</strong>的次数<strong>大于或者等于这个阈值</strong>时，才会回复</li>
-<li>黑名单容错次数：根据你设置的敏感词，达到次数自动将对象拉入黑名单后，不记录此人所有的发言。</li>
-<li>全局模式：未启用全局模式时，每个群的词库独立且实时生效（分群词库），上一秒从群中收集到一个词，下一秒就可以在本群中回复这个词。开启全局模式后，bot将采用由所有分群词库定时合成的总词库回复</li>
-<li>词库链间隔时间：发消息后多长时间会进入空窗期，比如设置10s，一个人发完一条消息10s内没人继续说话，就会将10s后的第一条消息作为问，再下一条就是答，可能没什么卵用，毕竟群里经常上话不接下话，不在一个频道。</li>
-<li>问题余弦相似度计算：当词库中无该问题时，会启用相似度计算引擎，会将问题与词库中所有的问题进行相似度计算，选取匹配率最高的进行回答（该阈值可设定），较消耗计算机资源，斟酌开启</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">群部分</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>grouplist</code></td>
-<td style="text-align:left">查看开启记录/回复的群列表</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add/remove learning &lt;群号&gt;</code></td>
-<td style="text-align:left">添加/移除开启记录的群，有多个用空格隔开</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add/remove learnings &lt;群号&gt;</code></td>
-<td style="text-align:left">同时添加/移除开启记录和回复的群，有多个用空格隔开</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add/remove reply &lt;群号&gt;</code></td>
-<td style="text-align:left">添加/移除开启回复的群，有多个用空格隔开</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add/remove tag &lt;标签&gt; &lt;群号&gt;</code></td>
-<td style="text-align:left">添加/移除群标签(移除时不需要带上标签参数)</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add/remove subadmin &lt;群号&gt;</code></td>
-<td style="text-align:left">添加/移除可自行管理本群词库的群，有多个用空格隔开</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add/remove unmerge &lt;群号&gt;</code></td>
-<td style="text-align:left">添加/移除不录入总词库的群，有多个用空格隔开</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>群标签：群往往带有一些<strong>属性</strong>，例如xxx游戏群，xxx交流群，这时候可以为群添加相应的标签，在记录词库时，会<strong>记录在相应标签的词库</strong>内，这样在回复时，只会在<strong>相应标签词库内寻找答案</strong>，一个群可以拥有<strong>多个标签，支持中文</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">文字转语音</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>setvoicept  &lt;训练集&gt;</code></td>
-<td style="text-align:left">选择音源合成时的训练模型</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>uploadwav</code></td>
-<td style="text-align:left">上传音源文件</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">快速删除</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>fastdelete</code></td>
-<td style="text-align:left">更改快速删除功能的使用权限</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>settemp</code> &lt;条数&gt;</td>
-<td style="text-align:left">设置单个群中消息缓存最大数目</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>`快速删除：在开启回复的群中，向Bot所发送的消息回复<code>!d</code> 、<code>!delete</code> 、<code>！d</code> 、<code>！delete</code> 即可在词库中删除该回复</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">定时任务</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>add/remove autotask &lt;任务名称&gt;</code></td>
-<td style="text-align:left">添加/移除定时任务</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>autotaskinfo</code></td>
-<td style="text-align:left">查看定时任务详情</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>autotaskcommand</code></td>
-<td style="text-align:left">查看定时任务中的特殊指令</td>
-</tr>
-</tbody>
-</table>
-<h2 id="定时任务">定时任务</h2>
-<hr>
-<p><strong>ChatLearning</strong>在2.9.5版本中加入了定时任务功能，可以自定义地定时执行<strong>ChatLearning</strong>中的指令</p>
-<p><strong>注：若发现输入正确却无法解析内容，请检查txt文件编码是否为UTF-8</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;&#x27;&#x27;这是一个定时任务的模板，程序会自动解析带标记的行&#x27;&#x27;&#x27;</span><br><span class="line">&#x27;&#x27;&#x27;请创建一个新的txt文件放置AutoTask文件夹下来自定义你的任务，文件名即是任务名&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;#&quot;来标记任务的执行日期&#x27;&#x27;</span><br><span class="line">如&quot;每日&quot;：</span><br><span class="line">#everyday</span><br><span class="line">或是&quot;周一 周日&quot;：</span><br><span class="line">#w1 w7</span><br><span class="line">还可以是&quot;每2天&quot;:</span><br><span class="line">#x2</span><br><span class="line">亦或是&quot;具体日期&quot;(不足十位请补0，如5→05)：</span><br><span class="line">#2022-08-30</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;@&quot;来标记执行结果发送的QQ号&#x27;&#x27;</span><br><span class="line">如：</span><br><span class="line">@123456</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;*&quot;来标记任务的执行时间&#x27;&#x27;</span><br><span class="line">如(请使用英文冒号哦，不足十位请补0，如5→05)：</span><br><span class="line">*05:05</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;/&quot;来标记任务所需执行的指令&#x27;&#x27;</span><br><span class="line">如(一个指令对应一行)：</span><br><span class="line">/check</span><br><span class="line">/autodelete</span><br><span class="line"></span><br><span class="line">以下是示例（每天的12点和23点59分，按顺序执行check，grouplist指令，并将结果发送给123456）：</span><br><span class="line">#everyday</span><br><span class="line">@123456</span><br><span class="line">*12:00 23:59</span><br><span class="line">/check</span><br><span class="line">/grouplist</span><br><span class="line"></span><br><span class="line">-------------------</span><br><span class="line">在自动任务中有一些特殊指令：</span><br><span class="line">自动清理词库&quot;autodelete&quot;</span><br><span class="line">发送群消息&quot;sendgroupmessage &lt;群号&gt; &lt;消息&gt;&quot;</span><br><span class="line">发送群图片&quot;sendgroupmessageimage &lt;群号&gt; &lt;图片文件的绝对路径&gt;&quot;</span><br><span class="line">发送好友消息&quot;sendfriendmessage &lt;好友QQ&gt; &lt;消息&gt;&quot;</span><br><span class="line">发送好友图片&quot;sendfriendmessageimage &lt;好友QQ&gt; &lt;图片文件的绝对路径&gt;&quot;</span><br><span class="line">在&lt;消息&gt;这个参数中，可以附带一些指定的标记，程序会将这些标记替换成相应的结果：</span><br><span class="line">当前年：&#123;year&#125;</span><br><span class="line">当前月：&#123;month&#125;</span><br><span class="line">当前日：&#123;day&#125;</span><br><span class="line">换行：&#123;n&#125;</span><br><span class="line">如：</span><br><span class="line">/sendgroupmessage 123456 今天是&#123;year&#125;年&#123;month&#125;月&#123;day&#125;日！&#123;n&#125;大家好啊！</span><br><span class="line">-------------------</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="管理模式">管理模式</h2>
-<ul>
-<li>词库管理：模糊 <code>搜索/查看/删除</code> <code>所有群/指定群</code> 的词库</li>
-<li>过滤：自定义无用关键词，也可以通过在删除答案时前加<code>add</code>来直接添加进过滤列表</li>
-<li>黑名单：自定义敏感关键词，不记录且将对象拉入黑名单，用 <code>blackfreq &lt;次数&gt;</code> 自定义容错次数。</li>
-<li>自动清理词库：删除词库中仅出现过单次的条目和被过滤的条目</li>
-<li>添加定时任务：使用定时任务定义的语法添加定时任务</li>
-<li>添加自定义回复：为词库添加回复，问答皆可除视频、文件任意形式的消息(只要QQ能发出来)，同时为答案定义<strong>权重(词库中每个答案都有一个权重，意为答案出现过的次数)</strong></li>
-</ul>
-<h2 id="文字转语音"><strong>文字转语音</strong></h2>
-<p><a href="https://github.com/Nana-Miko/ChatLearning/blob/master/ToVoice/ToVoice.md">ChatLearning—ToVoice</a></p>
-<h2 id="Q-A">Q&amp;A</h2>
-<p><strong>Q：ChatLearning</strong>的功能是什么？</p>
-<p><strong>A：ChatLearning</strong>可以自动的从群聊中收集聊天记录，并且将这些聊天记录整理成一个<strong>问&amp;答</strong>的词库，当有人发送的消息与词库中的”<strong>问</strong>“匹配时，会从“<strong>答</strong>”中随机抽取其中一个回复在群聊中</p>
-<hr>
-<p><strong>Q</strong>：打开软件后，我应该如何使用？</p>
-<p><strong>A</strong>：首先应添加需要bot记录的群号，然后开启记录功能（输入<code>help</code>可查看到对应指令）</p>
-<hr>
-<p><strong>Q</strong>：要收集多久bot才会开始回复呢？</p>
-<p><strong>A</strong>：收集的时间完全由自己决定，理论上时间越久，效果会更好且更加有趣</p>
-<hr>
-<p><strong>Q</strong>：我要怎么才能让bot回复？</p>
-<p><strong>A</strong>：首先应添加需要bot回复的群号，然后开启回复功能（输入<code>help</code>可查看到对应指令）</p>
-<hr>
-<p><strong>Q</strong>：目录下的<code>.cl</code>和<code>.clc</code>文件是什么，我可以删除它吗？</p>
-<p><strong>A</strong>：<code>.cl</code>文件是<strong>ChatLearning</strong>所缓存在本地的词库，它的文件名就是所对应的QQ群号，如果你觉得不需要这个词库了，可以在<strong>ChatLearning</strong>退出后将它删除。<code>.clc</code>文件是<strong>ChatLearning</strong>的配置文件，删除后<strong>ChatLearning</strong>会随即崩溃</p>
-<hr>
-<p><strong>Q</strong>：目录下的<code>.cl</code>文件太大太占空间了怎么办？</p>
-<p><strong>A</strong>：一般来说不是每天都隔一会99+的群聊，是不会很占空间的， 目前只能选择进入管理模式手动清理一些不需要的回复，后续会更新根据记录的时间批量删除</p>
-]]></content>
-      <categories>
-        <category>QQbot</category>
-      </categories>
-      <tags>
-        <tag>QQbot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CTF文件头文件尾汇总</title>
     <url>/posts/4db76617.html</url>
     <content><![CDATA[<blockquote>
@@ -2176,6 +1895,287 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
       </tags>
   </entry>
   <entry>
+    <title>CTF逆向零碎知识点合集</title>
+    <url>/posts/c1e61dd7.html</url>
+    <content><![CDATA[<h1>1.Python字节码的学习</h1>
+<p>题目来源：<strong>2023年SWPU NSS 秋季招新赛 (校外赛道)</strong>——re——字节码</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>逆向工程</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ChatLearning————学群友说话使用手册</title>
+    <url>/posts/edeaa258.html</url>
+    <content><![CDATA[<h2 id="开始使用">开始使用</h2>
+<ul>
+<li><a href="https://github.com/project-mirai/mirai-api-http">mirai-api-http</a> 配置 <code>http adapter</code> ， <code>singleMode</code> 为 <code>false</code> 为了保证稳定性，请尽量使用mirai-api-http v2.3.3版本</li>
+<li>配置 <code>data.json</code></li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;Key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxxx&quot;</span><span class="punctuation">,</span> <span class="comment">// 在mirai-api-http中设置的密钥,若使用singleMode也不需要校验,设置为&quot;&quot;即可</span></span><br><span class="line"> <span class="attr">&quot;host&quot;</span><span class="punctuation">:</span> <span class="string">&quot;127.0.0.1&quot;</span><span class="punctuation">,</span> <span class="comment">// mirai-api-http中设置的地址（若设置成0.0.0.0，请填写127.0.0.1）</span></span><br><span class="line"> <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="string">&quot;8080&quot;</span><span class="punctuation">,</span> <span class="comment">// mirai-api-http中设置的端口</span></span><br><span class="line"> <span class="attr">&quot;qq&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span>  <span class="comment">// 在mirai登陆的QQ号</span></span><br><span class="line"> <span class="attr">&quot;session&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span> <span class="comment">// 无需修改</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Windows双击 <code>ChatLearning.exe</code> 直接运行</li>
+<li>Linux在<code>cd</code>到目录后使用<code>./ChatLearning</code>运行</li>
+<li>Win7或以下的32位系统(包括32位的Linux)则需下载<strong>Source包</strong>并确保Python版本≥3.6使用 <code>pip install -r requirements.txt</code> 安装依赖后运行 <code>Chatmain.py</code></li>
+</ul>
+<blockquote>
+<p>首次使用在控制台使用 <code>setadmin &lt;QQ号,多个请用空格隔开&gt;</code> 设置管理员； <code>blackfreq &lt;次数&gt;</code> 设置黑名单容错次数</p>
+</blockquote>
+<h2 id="指令">指令</h2>
+<p>控制台下可执行指令，发送 <code>help</code> 获取指令表；管理员在聊天环境下私聊bot执行指令时，加上指令前缀 <code>！</code> 或 <code>!</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">基本</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>help</code></td>
+<td style="text-align:left">指令表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>check</code></td>
+<td style="text-align:left">查看词库的问答个数和属性设置</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>admin</code></td>
+<td style="text-align:left">进入管理模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>learning </code></td>
+<td style="text-align:left">开启/关闭记录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>reply</code></td>
+<td style="text-align:left">开启/关闭回复</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>voicereply</code></td>
+<td style="text-align:left">开启/关闭文字转语音回复</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>setadmin  &lt;QQ&gt;</code></td>
+<td style="text-align:left">设置管理员QQ号，有多个用空格隔开</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>globe</code></td>
+<td style="text-align:left">开启/关闭总词库</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cosmatch</code></td>
+<td style="text-align:left">开启/关闭问题余弦相似度计算</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cosmatch &lt;匹配率&gt;</code></td>
+<td style="text-align:left">设定问题余弦相似度计算匹配率阈值</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>blackfreq &lt;次数&gt;</code></td>
+<td style="text-align:left">设置黑名单容错次数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>merge &lt;单位/秒&gt;</code></td>
+<td style="text-align:left">间隔多长时间合成一次总词库</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>learning &lt;单位/秒&gt;</code></td>
+<td style="text-align:left">词库链间隔时间</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>typefreq &lt;消息类型&gt; &lt;次数&gt;</code></td>
+<td style="text-align:left">为消息类型设置回复阈值</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>voicereply</code></td>
+<td style="text-align:left">开启/关闭文字转语音回复</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>reply &lt;百分比&gt;</code></td>
+<td style="text-align:left">回复概率，若没有触发也不会触发文字转语音</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>replywait &lt;基准时间&gt; &lt;浮动时间&gt;</code></td>
+<td style="text-align:left">设置回复时的等待时间（基准时间±浮动时间）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>replycd &lt;秒&gt;</code></td>
+<td style="text-align:left">设置回复的冷却时间</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>voicereply  &lt;百分比&gt;</code></td>
+<td style="text-align:left">文字转语音概率，若没有触发将会继续发送文字</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>回复阈值：Bot获取到答案时，需要这个答案在词库中<strong>重复出现</strong>的次数<strong>大于或者等于这个阈值</strong>时，才会回复</li>
+<li>黑名单容错次数：根据你设置的敏感词，达到次数自动将对象拉入黑名单后，不记录此人所有的发言。</li>
+<li>全局模式：未启用全局模式时，每个群的词库独立且实时生效（分群词库），上一秒从群中收集到一个词，下一秒就可以在本群中回复这个词。开启全局模式后，bot将采用由所有分群词库定时合成的总词库回复</li>
+<li>词库链间隔时间：发消息后多长时间会进入空窗期，比如设置10s，一个人发完一条消息10s内没人继续说话，就会将10s后的第一条消息作为问，再下一条就是答，可能没什么卵用，毕竟群里经常上话不接下话，不在一个频道。</li>
+<li>问题余弦相似度计算：当词库中无该问题时，会启用相似度计算引擎，会将问题与词库中所有的问题进行相似度计算，选取匹配率最高的进行回答（该阈值可设定），较消耗计算机资源，斟酌开启</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">群部分</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>grouplist</code></td>
+<td style="text-align:left">查看开启记录/回复的群列表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>add/remove learning &lt;群号&gt;</code></td>
+<td style="text-align:left">添加/移除开启记录的群，有多个用空格隔开</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>add/remove learnings &lt;群号&gt;</code></td>
+<td style="text-align:left">同时添加/移除开启记录和回复的群，有多个用空格隔开</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>add/remove reply &lt;群号&gt;</code></td>
+<td style="text-align:left">添加/移除开启回复的群，有多个用空格隔开</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>add/remove tag &lt;标签&gt; &lt;群号&gt;</code></td>
+<td style="text-align:left">添加/移除群标签(移除时不需要带上标签参数)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>add/remove subadmin &lt;群号&gt;</code></td>
+<td style="text-align:left">添加/移除可自行管理本群词库的群，有多个用空格隔开</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>add/remove unmerge &lt;群号&gt;</code></td>
+<td style="text-align:left">添加/移除不录入总词库的群，有多个用空格隔开</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>群标签：群往往带有一些<strong>属性</strong>，例如xxx游戏群，xxx交流群，这时候可以为群添加相应的标签，在记录词库时，会<strong>记录在相应标签的词库</strong>内，这样在回复时，只会在<strong>相应标签词库内寻找答案</strong>，一个群可以拥有<strong>多个标签，支持中文</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文字转语音</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>setvoicept  &lt;训练集&gt;</code></td>
+<td style="text-align:left">选择音源合成时的训练模型</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uploadwav</code></td>
+<td style="text-align:left">上传音源文件</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">快速删除</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>fastdelete</code></td>
+<td style="text-align:left">更改快速删除功能的使用权限</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>settemp</code> &lt;条数&gt;</td>
+<td style="text-align:left">设置单个群中消息缓存最大数目</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>`快速删除：在开启回复的群中，向Bot所发送的消息回复<code>!d</code> 、<code>!delete</code> 、<code>！d</code> 、<code>！delete</code> 即可在词库中删除该回复</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">定时任务</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>add/remove autotask &lt;任务名称&gt;</code></td>
+<td style="text-align:left">添加/移除定时任务</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>autotaskinfo</code></td>
+<td style="text-align:left">查看定时任务详情</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>autotaskcommand</code></td>
+<td style="text-align:left">查看定时任务中的特殊指令</td>
+</tr>
+</tbody>
+</table>
+<h2 id="定时任务">定时任务</h2>
+<hr>
+<p><strong>ChatLearning</strong>在2.9.5版本中加入了定时任务功能，可以自定义地定时执行<strong>ChatLearning</strong>中的指令</p>
+<p><strong>注：若发现输入正确却无法解析内容，请检查txt文件编码是否为UTF-8</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;&#x27;&#x27;这是一个定时任务的模板，程序会自动解析带标记的行&#x27;&#x27;&#x27;</span><br><span class="line">&#x27;&#x27;&#x27;请创建一个新的txt文件放置AutoTask文件夹下来自定义你的任务，文件名即是任务名&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;#&quot;来标记任务的执行日期&#x27;&#x27;</span><br><span class="line">如&quot;每日&quot;：</span><br><span class="line">#everyday</span><br><span class="line">或是&quot;周一 周日&quot;：</span><br><span class="line">#w1 w7</span><br><span class="line">还可以是&quot;每2天&quot;:</span><br><span class="line">#x2</span><br><span class="line">亦或是&quot;具体日期&quot;(不足十位请补0，如5→05)：</span><br><span class="line">#2022-08-30</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;@&quot;来标记执行结果发送的QQ号&#x27;&#x27;</span><br><span class="line">如：</span><br><span class="line">@123456</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;*&quot;来标记任务的执行时间&#x27;&#x27;</span><br><span class="line">如(请使用英文冒号哦，不足十位请补0，如5→05)：</span><br><span class="line">*05:05</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;开头使用&quot;/&quot;来标记任务所需执行的指令&#x27;&#x27;</span><br><span class="line">如(一个指令对应一行)：</span><br><span class="line">/check</span><br><span class="line">/autodelete</span><br><span class="line"></span><br><span class="line">以下是示例（每天的12点和23点59分，按顺序执行check，grouplist指令，并将结果发送给123456）：</span><br><span class="line">#everyday</span><br><span class="line">@123456</span><br><span class="line">*12:00 23:59</span><br><span class="line">/check</span><br><span class="line">/grouplist</span><br><span class="line"></span><br><span class="line">-------------------</span><br><span class="line">在自动任务中有一些特殊指令：</span><br><span class="line">自动清理词库&quot;autodelete&quot;</span><br><span class="line">发送群消息&quot;sendgroupmessage &lt;群号&gt; &lt;消息&gt;&quot;</span><br><span class="line">发送群图片&quot;sendgroupmessageimage &lt;群号&gt; &lt;图片文件的绝对路径&gt;&quot;</span><br><span class="line">发送好友消息&quot;sendfriendmessage &lt;好友QQ&gt; &lt;消息&gt;&quot;</span><br><span class="line">发送好友图片&quot;sendfriendmessageimage &lt;好友QQ&gt; &lt;图片文件的绝对路径&gt;&quot;</span><br><span class="line">在&lt;消息&gt;这个参数中，可以附带一些指定的标记，程序会将这些标记替换成相应的结果：</span><br><span class="line">当前年：&#123;year&#125;</span><br><span class="line">当前月：&#123;month&#125;</span><br><span class="line">当前日：&#123;day&#125;</span><br><span class="line">换行：&#123;n&#125;</span><br><span class="line">如：</span><br><span class="line">/sendgroupmessage 123456 今天是&#123;year&#125;年&#123;month&#125;月&#123;day&#125;日！&#123;n&#125;大家好啊！</span><br><span class="line">-------------------</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="管理模式">管理模式</h2>
+<ul>
+<li>词库管理：模糊 <code>搜索/查看/删除</code> <code>所有群/指定群</code> 的词库</li>
+<li>过滤：自定义无用关键词，也可以通过在删除答案时前加<code>add</code>来直接添加进过滤列表</li>
+<li>黑名单：自定义敏感关键词，不记录且将对象拉入黑名单，用 <code>blackfreq &lt;次数&gt;</code> 自定义容错次数。</li>
+<li>自动清理词库：删除词库中仅出现过单次的条目和被过滤的条目</li>
+<li>添加定时任务：使用定时任务定义的语法添加定时任务</li>
+<li>添加自定义回复：为词库添加回复，问答皆可除视频、文件任意形式的消息(只要QQ能发出来)，同时为答案定义<strong>权重(词库中每个答案都有一个权重，意为答案出现过的次数)</strong></li>
+</ul>
+<h2 id="文字转语音"><strong>文字转语音</strong></h2>
+<p><a href="https://github.com/Nana-Miko/ChatLearning/blob/master/ToVoice/ToVoice.md">ChatLearning—ToVoice</a></p>
+<h2 id="Q-A">Q&amp;A</h2>
+<p><strong>Q：ChatLearning</strong>的功能是什么？</p>
+<p><strong>A：ChatLearning</strong>可以自动的从群聊中收集聊天记录，并且将这些聊天记录整理成一个<strong>问&amp;答</strong>的词库，当有人发送的消息与词库中的”<strong>问</strong>“匹配时，会从“<strong>答</strong>”中随机抽取其中一个回复在群聊中</p>
+<hr>
+<p><strong>Q</strong>：打开软件后，我应该如何使用？</p>
+<p><strong>A</strong>：首先应添加需要bot记录的群号，然后开启记录功能（输入<code>help</code>可查看到对应指令）</p>
+<hr>
+<p><strong>Q</strong>：要收集多久bot才会开始回复呢？</p>
+<p><strong>A</strong>：收集的时间完全由自己决定，理论上时间越久，效果会更好且更加有趣</p>
+<hr>
+<p><strong>Q</strong>：我要怎么才能让bot回复？</p>
+<p><strong>A</strong>：首先应添加需要bot回复的群号，然后开启回复功能（输入<code>help</code>可查看到对应指令）</p>
+<hr>
+<p><strong>Q</strong>：目录下的<code>.cl</code>和<code>.clc</code>文件是什么，我可以删除它吗？</p>
+<p><strong>A</strong>：<code>.cl</code>文件是<strong>ChatLearning</strong>所缓存在本地的词库，它的文件名就是所对应的QQ群号，如果你觉得不需要这个词库了，可以在<strong>ChatLearning</strong>退出后将它删除。<code>.clc</code>文件是<strong>ChatLearning</strong>的配置文件，删除后<strong>ChatLearning</strong>会随即崩溃</p>
+<hr>
+<p><strong>Q</strong>：目录下的<code>.cl</code>文件太大太占空间了怎么办？</p>
+<p><strong>A</strong>：一般来说不是每天都隔一会99+的群聊，是不会很占空间的， 目前只能选择进入管理模式手动清理一些不需要的回复，后续会更新根据记录的时间批量删除</p>
+]]></content>
+      <categories>
+        <category>QQbot</category>
+      </categories>
+      <tags>
+        <tag>QQbot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DS 作业-6-Ch5-22 网安物联网-20231024</title>
     <url>/posts/7e0c0400.html</url>
     <content><![CDATA[<h1>题目</h1>
@@ -2323,6 +2323,59 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
       </tags>
   </entry>
   <entry>
+    <title>DS作业-4-Ch3-22网安物联网-20230927</title>
+    <url>/posts/4311d78.html</url>
+    <content><![CDATA[<blockquote>
+<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
+</blockquote>
+<h1>Ch3-1.</h1>
+<p><strong>总结栈空、栈满、队空、队满的判定条件。</strong></p>
+<p>栈和队列是两种常见的数据结构，它们的空和满的判断条件如下：</p>
+<p><strong>栈</strong>：</p>
+<ul>
+<li><strong>栈空</strong>：当栈顶指针<code>top</code>等于-1时，表示栈为空。</li>
+<li><strong>栈满</strong>：当栈顶指针<code>top</code>等于栈的最大容量减1（假设栈的最大容量为<code>maxSize</code>）时，表示栈已满，即<code>top == maxSize - 1</code>。</li>
+</ul>
+<p><strong>队列</strong>：</p>
+<ul>
+<li><strong>队空</strong>：当队头指针<code>front</code>等于队尾指针<code>rear</code>时，表示队列为空。</li>
+<li><strong>队满</strong>：这个判断条件取决于你如何实现队列。如果你使用数组实现循环队列，那么当<code>(rear + 1) % maxSize == front</code>时，表示队列已满（假设队列的最大容量为<code>maxSize</code>）。这里的 <code>%</code> 是取余运算，用于实现循环。</li>
+</ul>
+<h1>Ch3-2.</h1>
+<p><strong>循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？</strong></p>
+<p><strong>循环队列</strong>的优点主要有以下几点：</p>
+<ol>
+<li><strong>有效利用空间</strong>：在普通队列中，当队尾指针到达数组的末端时，即使数组的前端还有空闲空间，也无法再添加新的元素。而循环队列通过将队列的首尾相连，形成一个循环，使得在队尾指针到达数组末端时，可以从数组前端继续添加新的元素，从而更有效地利用了空间。</li>
+<li><strong>避免数据迁移</strong>：在普通队列中，每次出队操作后，为了维持队列的连续性，需要将所有元素向前移动一位，这会消耗大量的时间和计算资源。而在循环队列中，通过移动队头和队尾指针来实现入队和出队操作，无需移动元素本身，因此效率更高。</li>
+</ol>
+<p>对于使用数组实现的循环队列，常见的判断队满和队空的方案有以下几种：</p>
+<ol>
+<li><strong>牺牲一个存储空间</strong>：这是最常见的方法。当<code>(rear + 1) % maxSize == front</code>时，判断队列已满；当<code>rear == front</code>时，判断队列为空。这种方法的缺点是会浪费一个数组的存储空间。</li>
+<li><strong>使用一个标志位</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以额外使用一个标志位来判断队列的状态。当入队操作后<code>rear == front</code>时，将标志位设为满；当出队操作后<code>rear == front</code>时，将标志位设为空。这种方法可以充分利用所有存储空间，但需要额外的标志位。</li>
+<li><strong>记录元素个数</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以使用一个计数器来记录队列中元素的个数。当计数器为0时，判断队列为空；当计数器等于数组大小时，判断队列已满。这种方法同样可以充分利用所有存储空间，但需要额外的计数器。</li>
+</ol>
+<h1>Ch3-3.</h1>
+<p>*<em>假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node <em>front），试编写入队和出队算法。</em></em></p>
+<blockquote>
+<p>自己写的，<s>目前还在报错，修改中……</s></p>
+<p>已完工</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>                  <span class="comment">//引入输入输出流</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">    DataType data;               <span class="comment">//数据域</span></span><br><span class="line">    Node&lt;DataType&gt;* next;       <span class="comment">//指针域</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkList_Queue</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">LinkList_Queue</span>();                      <span class="comment">//无参构造函数，建立只有头结点的空链表</span></span><br><span class="line">    ~<span class="built_in">LinkList_Queue</span>();                     <span class="comment">//析构函数</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Empety</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">DataType <span class="title">Push</span><span class="params">(DataType x)</span></span>;       <span class="comment">//插入操作，第i个位置插入值为x的结点</span></span><br><span class="line">    <span class="function">DataType <span class="title">Pop</span><span class="params">()</span></span>;            </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node&lt;DataType&gt;* first, * rear;           <span class="comment">//单链表的头指针</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">LinkList_Queue&lt;DataType&gt; ::<span class="built_in">LinkList_Queue</span>()</span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;DataType&gt;* s = <span class="literal">nullptr</span>;</span><br><span class="line">    s = <span class="keyword">new</span> Node&lt;DataType&gt;;    </span><br><span class="line">    s-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    first = rear = s;                      <span class="comment">//头结点的指针域置空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line">LinkList_Queue&lt;DataType&gt; :: ~<span class="built_in">LinkList_Queue</span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="type">int</span> LinkList_Queue&lt;DataType&gt; ::<span class="built_in">Empety</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (first == rear)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//入队算法</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">DataType LinkList_Queue&lt;DataType&gt; ::<span class="built_in">Push</span>(DataType x)</span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;DataType&gt;* s = <span class="literal">nullptr</span>;           </span><br><span class="line">    s = <span class="keyword">new</span> Node&lt;DataType&gt;; </span><br><span class="line">    s-&gt;data = x;</span><br><span class="line">    s-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    rear-&gt;next = s;</span><br><span class="line">    rear = s;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//出队算法</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">DataType LinkList_Queue&lt;DataType&gt; ::<span class="built_in">Pop</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (first == rear )</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;队空&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        DataType x;</span><br><span class="line">        Node&lt;DataType&gt;* p = first-&gt;next;</span><br><span class="line">        x = p-&gt;data;</span><br><span class="line">        first-&gt;next = p-&gt;next;</span><br><span class="line">        <span class="keyword">if</span> (rear == p)  <span class="comment">// 如果队列中只有一个元素</span></span><br><span class="line">            rear = first;  <span class="comment">// 则需要更新尾指针</span></span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList_Queue&lt;<span class="type">int</span>&gt; s = &#123;&#125;;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>;</span><br><span class="line">    s.<span class="built_in">Push</span>(<span class="number">1</span>);</span><br><span class="line">    s.<span class="built_in">Push</span>(<span class="number">2</span>);</span><br><span class="line">    s.<span class="built_in">Push</span>(<span class="number">3</span>);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已入队1,2,3&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已入队：&quot;</span> &lt;&lt; s.<span class="built_in">Push</span>(a) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;出队一次&quot;</span>&lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>AI生成的，不想做了，谨慎查阅</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">// 定义结点</span><br><span class="line">typedef struct Node &#123;</span><br><span class="line">    int data;</span><br><span class="line">    struct Node* next;</span><br><span class="line">&#125; Node;</span><br><span class="line"></span><br><span class="line">// 定义队列</span><br><span class="line">typedef struct Queue &#123;</span><br><span class="line">    Node* rear;</span><br><span class="line">&#125; Queue;</span><br><span class="line"></span><br><span class="line">// 初始化队列</span><br><span class="line">Queue* initQueue() &#123;</span><br><span class="line">    Node* head = (Node*)malloc(sizeof(Node));  // 创建头结点</span><br><span class="line">    head-&gt;next = head;  // 循环链表</span><br><span class="line">    Queue* queue = (Queue*)malloc(sizeof(Queue));</span><br><span class="line">    queue-&gt;rear = head;  // 尾指针指向头结点</span><br><span class="line">    return queue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 入队操作</span><br><span class="line">void enQueue(Queue* queue, int data) &#123;</span><br><span class="line">    Node* newNode = (Node*)malloc(sizeof(Node));</span><br><span class="line">    newNode-&gt;data = data;</span><br><span class="line">    newNode-&gt;next = queue-&gt;rear-&gt;next;  // 新结点指向头结点</span><br><span class="line">    queue-&gt;rear-&gt;next = newNode;  // 尾结点指向新结点</span><br><span class="line">    queue-&gt;rear = newNode;  // 更新尾指针</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 出队操作</span><br><span class="line">int deQueue(Queue* queue) &#123;</span><br><span class="line">    if (queue-&gt;rear == queue-&gt;rear-&gt;next) &#123;</span><br><span class="line">        printf(&quot;队列为空，无法出队。\n&quot;);</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    Node* head = queue-&gt;rear-&gt;next;  // 头结点</span><br><span class="line">    Node* firstNode = head-&gt;next;  // 第一个结点（即要出队的结点）</span><br><span class="line">    int data = firstNode-&gt;data;</span><br><span class="line">    head-&gt;next = firstNode-&gt;next;  // 头结点指向第二个结点</span><br><span class="line">    if (firstNode == queue-&gt;rear) &#123;  // 如果只有一个元素，出队后更新尾指针</span><br><span class="line">        queue-&gt;rear = head;</span><br><span class="line">    &#125;</span><br><span class="line">    free(firstNode);  // 释放出队的结点内存</span><br><span class="line">    return data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    Queue* queue = initQueue();</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    printf(&quot;入队：\n&quot;);</span><br><span class="line">    for (int i = 1; i &lt;= 5; i++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;, i);</span><br><span class="line">        enQueue(queue, i);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    printf(&quot;\n出队：\n&quot;);</span><br><span class="line">    for (int i = 1; i &lt;= 5; i++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;, deQueue(queue));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>课后作业</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DS作业-5-22网安物联网-20231016</title>
     <url>/posts/9b8045c.html</url>
     <content><![CDATA[<p><strong>作业ch4-1：</strong></p>
@@ -2434,59 +2487,6 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
 <p>(4) GetTail(((a,b),(c,d))) 的结果是 ((c,d))。</p>
 <p>(5) GetHead(GetTail(((a,b),(c,d)))) 的结果是 (c,d)。</p>
 <p>(6) GetTail(GetHead(GetTail(((a,b),(c,d))))) 的结果是 ()，因为(c,d)没有尾部。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>课后作业</category>
-      </categories>
-      <tags>
-        <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DS作业-4-Ch3-22网安物联网-20230927</title>
-    <url>/posts/4311d78.html</url>
-    <content><![CDATA[<blockquote>
-<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
-</blockquote>
-<h1>Ch3-1.</h1>
-<p><strong>总结栈空、栈满、队空、队满的判定条件。</strong></p>
-<p>栈和队列是两种常见的数据结构，它们的空和满的判断条件如下：</p>
-<p><strong>栈</strong>：</p>
-<ul>
-<li><strong>栈空</strong>：当栈顶指针<code>top</code>等于-1时，表示栈为空。</li>
-<li><strong>栈满</strong>：当栈顶指针<code>top</code>等于栈的最大容量减1（假设栈的最大容量为<code>maxSize</code>）时，表示栈已满，即<code>top == maxSize - 1</code>。</li>
-</ul>
-<p><strong>队列</strong>：</p>
-<ul>
-<li><strong>队空</strong>：当队头指针<code>front</code>等于队尾指针<code>rear</code>时，表示队列为空。</li>
-<li><strong>队满</strong>：这个判断条件取决于你如何实现队列。如果你使用数组实现循环队列，那么当<code>(rear + 1) % maxSize == front</code>时，表示队列已满（假设队列的最大容量为<code>maxSize</code>）。这里的 <code>%</code> 是取余运算，用于实现循环。</li>
-</ul>
-<h1>Ch3-2.</h1>
-<p><strong>循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？</strong></p>
-<p><strong>循环队列</strong>的优点主要有以下几点：</p>
-<ol>
-<li><strong>有效利用空间</strong>：在普通队列中，当队尾指针到达数组的末端时，即使数组的前端还有空闲空间，也无法再添加新的元素。而循环队列通过将队列的首尾相连，形成一个循环，使得在队尾指针到达数组末端时，可以从数组前端继续添加新的元素，从而更有效地利用了空间。</li>
-<li><strong>避免数据迁移</strong>：在普通队列中，每次出队操作后，为了维持队列的连续性，需要将所有元素向前移动一位，这会消耗大量的时间和计算资源。而在循环队列中，通过移动队头和队尾指针来实现入队和出队操作，无需移动元素本身，因此效率更高。</li>
-</ol>
-<p>对于使用数组实现的循环队列，常见的判断队满和队空的方案有以下几种：</p>
-<ol>
-<li><strong>牺牲一个存储空间</strong>：这是最常见的方法。当<code>(rear + 1) % maxSize == front</code>时，判断队列已满；当<code>rear == front</code>时，判断队列为空。这种方法的缺点是会浪费一个数组的存储空间。</li>
-<li><strong>使用一个标志位</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以额外使用一个标志位来判断队列的状态。当入队操作后<code>rear == front</code>时，将标志位设为满；当出队操作后<code>rear == front</code>时，将标志位设为空。这种方法可以充分利用所有存储空间，但需要额外的标志位。</li>
-<li><strong>记录元素个数</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以使用一个计数器来记录队列中元素的个数。当计数器为0时，判断队列为空；当计数器等于数组大小时，判断队列已满。这种方法同样可以充分利用所有存储空间，但需要额外的计数器。</li>
-</ol>
-<h1>Ch3-3.</h1>
-<p>*<em>假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node <em>front），试编写入队和出队算法。</em></em></p>
-<blockquote>
-<p>自己写的，<s>目前还在报错，修改中……</s></p>
-<p>已完工</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>                  <span class="comment">//引入输入输出流</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">    DataType data;               <span class="comment">//数据域</span></span><br><span class="line">    Node&lt;DataType&gt;* next;       <span class="comment">//指针域</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkList_Queue</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">LinkList_Queue</span>();                      <span class="comment">//无参构造函数，建立只有头结点的空链表</span></span><br><span class="line">    ~<span class="built_in">LinkList_Queue</span>();                     <span class="comment">//析构函数</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Empety</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">DataType <span class="title">Push</span><span class="params">(DataType x)</span></span>;       <span class="comment">//插入操作，第i个位置插入值为x的结点</span></span><br><span class="line">    <span class="function">DataType <span class="title">Pop</span><span class="params">()</span></span>;            </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node&lt;DataType&gt;* first, * rear;           <span class="comment">//单链表的头指针</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">LinkList_Queue&lt;DataType&gt; ::<span class="built_in">LinkList_Queue</span>()</span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;DataType&gt;* s = <span class="literal">nullptr</span>;</span><br><span class="line">    s = <span class="keyword">new</span> Node&lt;DataType&gt;;    </span><br><span class="line">    s-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    first = rear = s;                      <span class="comment">//头结点的指针域置空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line">LinkList_Queue&lt;DataType&gt; :: ~<span class="built_in">LinkList_Queue</span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="type">int</span> LinkList_Queue&lt;DataType&gt; ::<span class="built_in">Empety</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (first == rear)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//入队算法</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">DataType LinkList_Queue&lt;DataType&gt; ::<span class="built_in">Push</span>(DataType x)</span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;DataType&gt;* s = <span class="literal">nullptr</span>;           </span><br><span class="line">    s = <span class="keyword">new</span> Node&lt;DataType&gt;; </span><br><span class="line">    s-&gt;data = x;</span><br><span class="line">    s-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    rear-&gt;next = s;</span><br><span class="line">    rear = s;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//出队算法</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">DataType LinkList_Queue&lt;DataType&gt; ::<span class="built_in">Pop</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (first == rear )</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;队空&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        DataType x;</span><br><span class="line">        Node&lt;DataType&gt;* p = first-&gt;next;</span><br><span class="line">        x = p-&gt;data;</span><br><span class="line">        first-&gt;next = p-&gt;next;</span><br><span class="line">        <span class="keyword">if</span> (rear == p)  <span class="comment">// 如果队列中只有一个元素</span></span><br><span class="line">            rear = first;  <span class="comment">// 则需要更新尾指针</span></span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList_Queue&lt;<span class="type">int</span>&gt; s = &#123;&#125;;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>;</span><br><span class="line">    s.<span class="built_in">Push</span>(<span class="number">1</span>);</span><br><span class="line">    s.<span class="built_in">Push</span>(<span class="number">2</span>);</span><br><span class="line">    s.<span class="built_in">Push</span>(<span class="number">3</span>);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已入队1,2,3&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已入队：&quot;</span> &lt;&lt; s.<span class="built_in">Push</span>(a) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;出队一次&quot;</span>&lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="built_in">Pop</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>AI生成的，不想做了，谨慎查阅</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">// 定义结点</span><br><span class="line">typedef struct Node &#123;</span><br><span class="line">    int data;</span><br><span class="line">    struct Node* next;</span><br><span class="line">&#125; Node;</span><br><span class="line"></span><br><span class="line">// 定义队列</span><br><span class="line">typedef struct Queue &#123;</span><br><span class="line">    Node* rear;</span><br><span class="line">&#125; Queue;</span><br><span class="line"></span><br><span class="line">// 初始化队列</span><br><span class="line">Queue* initQueue() &#123;</span><br><span class="line">    Node* head = (Node*)malloc(sizeof(Node));  // 创建头结点</span><br><span class="line">    head-&gt;next = head;  // 循环链表</span><br><span class="line">    Queue* queue = (Queue*)malloc(sizeof(Queue));</span><br><span class="line">    queue-&gt;rear = head;  // 尾指针指向头结点</span><br><span class="line">    return queue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 入队操作</span><br><span class="line">void enQueue(Queue* queue, int data) &#123;</span><br><span class="line">    Node* newNode = (Node*)malloc(sizeof(Node));</span><br><span class="line">    newNode-&gt;data = data;</span><br><span class="line">    newNode-&gt;next = queue-&gt;rear-&gt;next;  // 新结点指向头结点</span><br><span class="line">    queue-&gt;rear-&gt;next = newNode;  // 尾结点指向新结点</span><br><span class="line">    queue-&gt;rear = newNode;  // 更新尾指针</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 出队操作</span><br><span class="line">int deQueue(Queue* queue) &#123;</span><br><span class="line">    if (queue-&gt;rear == queue-&gt;rear-&gt;next) &#123;</span><br><span class="line">        printf(&quot;队列为空，无法出队。\n&quot;);</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    Node* head = queue-&gt;rear-&gt;next;  // 头结点</span><br><span class="line">    Node* firstNode = head-&gt;next;  // 第一个结点（即要出队的结点）</span><br><span class="line">    int data = firstNode-&gt;data;</span><br><span class="line">    head-&gt;next = firstNode-&gt;next;  // 头结点指向第二个结点</span><br><span class="line">    if (firstNode == queue-&gt;rear) &#123;  // 如果只有一个元素，出队后更新尾指针</span><br><span class="line">        queue-&gt;rear = head;</span><br><span class="line">    &#125;</span><br><span class="line">    free(firstNode);  // 释放出队的结点内存</span><br><span class="line">    return data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    Queue* queue = initQueue();</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    printf(&quot;入队：\n&quot;);</span><br><span class="line">    for (int i = 1; i &lt;= 5; i++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;, i);</span><br><span class="line">        enQueue(queue, i);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    printf(&quot;\n出队：\n&quot;);</span><br><span class="line">    for (int i = 1; i &lt;= 5; i++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;, deQueue(queue));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -3766,6 +3766,72 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python实现九宫格切割图片</title>
+    <url>/posts/3d80d4a2.html</url>
+    <content><![CDATA[<h4 id="克隆本项目">克隆本项目</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/W1ndys/1to9-image.git</span><br></pre></td></tr></table></figure>
+<p>然后可以看到项目文件夹</p>
+<p><img src="/img/Python/1-to-9/image-20231204220532722.png" alt="image-20231204220532722"></p>
+<h4 id="使用方法">使用方法</h4>
+<ol>
+<li>把需要分割的图片复制进文件夹并且命名为 <code>input_image.jpg</code></li>
+<li>在当前目录进命令行执行 <code>python 1.py</code></li>
+<li>看到输出回显之后找 <code>output</code>文件夹就行</li>
+</ol>
+<h4 id="注意">注意</h4>
+<p>本项目适用于长宽一致的正方形图片，分割最佳效果</p>
+<p>其余比例不适合使用本项目</p>
+<p>非常适合朋友圈九宫格切图</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python小工具</tag>
+        <tag>Python脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QFNUCTF（日照）-Reverse-writeup</title>
+    <url>/posts/44b69183.html</url>
+    <content><![CDATA[<h1>base64++</h1>
+<h2 id="查壳">查壳</h2>
+<p><img src="https://z1.ax1x.com/2023/10/13/piSzYQ0.png" alt="查壳"></p>
+<p>无壳</p>
+<h2 id="反编译">反编译</h2>
+<p><img src="https://z1.ax1x.com/2023/10/13/piSzGzq.png" alt="反编译查看字串"></p>
+<p>查看字串，有两个比较特殊的字符串</p>
+<p>联想到题目是换表base64</p>
+<p><img src="https://z1.ax1x.com/2023/10/13/piSz3Js.png" alt="换表"></p>
+<h2 id="解密">解密</h2>
+<p>滚去<a href="https://ctf.mzy0.com/CyberChef3/">https://ctf.mzy0.com/CyberChef3/</a>    解密一下</p>
+<p><img src="https://z1.ax1x.com/2023/10/13/piSz8Wn.png" alt="解密"></p>
+<h2 id="题后工作">题后工作</h2>
+<p>解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下</p>
+<p>发现这个字符串<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;LQB</code>是无法通过正常验证的</p>
+<p>而去掉LQB之后<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;</code>是正常验证的</p>
+<p>所以我去掉之后提交，但还是没有通过</p>
+<p></br></br></br></p>
+<p>无奈之下我放弃这个题了</p>
+</br>
+<p>就在前几天我找到了出题人，问了问情况，发现程序里是有一段添加字符串<code>LQB</code>的代码的，所以输出结果带着LQB没错，我的做题思路也没错</p>
+<p>提交失败的原因是，后台正确的flag中的1和正确答案的l混了，我联系出题人修改了bug</p>
+<p>解题结束！</p>
+<h1>XOR（修改）</h1>
+<h2 id="查壳-2">查壳</h2>
+<p>等会吧，明天再写，累了</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>WP</category>
+        <category>RE</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MuteGames使用手册</title>
     <url>/posts/7183a269.html</url>
     <content><![CDATA[<h1>MuteGames</h1>
@@ -3935,72 +4001,6 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python实现九宫格切割图片</title>
-    <url>/posts/3d80d4a2.html</url>
-    <content><![CDATA[<h4 id="克隆本项目">克隆本项目</h4>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/W1ndys/1to9-image.git</span><br></pre></td></tr></table></figure>
-<p>然后可以看到项目文件夹</p>
-<p><img src="/img/Python/1-to-9/image-20231204220532722.png" alt="image-20231204220532722"></p>
-<h4 id="使用方法">使用方法</h4>
-<ol>
-<li>把需要分割的图片复制进文件夹并且命名为 <code>input_image.jpg</code></li>
-<li>在当前目录进命令行执行 <code>python 1.py</code></li>
-<li>看到输出回显之后找 <code>output</code>文件夹就行</li>
-</ol>
-<h4 id="注意">注意</h4>
-<p>本项目适用于长宽一致的正方形图片，分割最佳效果</p>
-<p>其余比例不适合使用本项目</p>
-<p>非常适合朋友圈九宫格切图</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python小工具</tag>
-        <tag>Python脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QFNUCTF（日照）-Reverse-writeup</title>
-    <url>/posts/44b69183.html</url>
-    <content><![CDATA[<h1>base64++</h1>
-<h2 id="查壳">查壳</h2>
-<p><img src="https://z1.ax1x.com/2023/10/13/piSzYQ0.png" alt="查壳"></p>
-<p>无壳</p>
-<h2 id="反编译">反编译</h2>
-<p><img src="https://z1.ax1x.com/2023/10/13/piSzGzq.png" alt="反编译查看字串"></p>
-<p>查看字串，有两个比较特殊的字符串</p>
-<p>联想到题目是换表base64</p>
-<p><img src="https://z1.ax1x.com/2023/10/13/piSz3Js.png" alt="换表"></p>
-<h2 id="解密">解密</h2>
-<p>滚去<a href="https://ctf.mzy0.com/CyberChef3/">https://ctf.mzy0.com/CyberChef3/</a>    解密一下</p>
-<p><img src="https://z1.ax1x.com/2023/10/13/piSz8Wn.png" alt="解密"></p>
-<h2 id="题后工作">题后工作</h2>
-<p>解密出来后面带着LQB，一开始我以为我做错了，后来我把文件拉进kali运行了一下</p>
-<p>发现这个字符串<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;LQB</code>是无法通过正常验证的</p>
-<p>而去掉LQB之后<code>flag&#123;6JOd5qGl5p2v5Yqg5rK5&#125;</code>是正常验证的</p>
-<p>所以我去掉之后提交，但还是没有通过</p>
-<p></br></br></br></p>
-<p>无奈之下我放弃这个题了</p>
-</br>
-<p>就在前几天我找到了出题人，问了问情况，发现程序里是有一段添加字符串<code>LQB</code>的代码的，所以输出结果带着LQB没错，我的做题思路也没错</p>
-<p>提交失败的原因是，后台正确的flag中的1和正确答案的l混了，我联系出题人修改了bug</p>
-<p>解题结束！</p>
-<h1>XOR（修改）</h1>
-<h2 id="查壳-2">查壳</h2>
-<p>等会吧，明天再写，累了</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>WP</category>
-        <category>RE</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RSA的一些解密脚本</title>
     <url>/posts/10f5a405.html</url>
     <content><![CDATA[<h1>目录</h1>
@@ -4098,48 +4098,6 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>kali_Linux如何修改语言为中文</title>
-    <url>/posts/4c6d962f.html</url>
-    <content><![CDATA[<h3 id="友情提示">友情提示</h3>
-<p>修改前快照一下，避免修改操作错误带来的问题！</p>
-<ol>
-<li>
-<p>打开终端</p>
-</li>
-<li>
-<p>打开设置</p>
-<p>输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>修改设置</p>
-<p><code>en_US.UTF-8 UTF-8</code>改为不勾选</p>
-<ul>
-<li>下面这种有个<code>*</code>属于已经勾选了</li>
-<li>通过上下箭头按键我们把红点（表示当前选中的选项）移动到<code>en_US.UTF-8 UTF-8</code>，按下空格表示不勾选/勾选</li>
-<li>使用空格勾选<code>[ ]zh_CN.GBK_GBK</code> 和<code>[ ] zh-CN.UTF-8.UTF-8</code>两个选项，这里有部分虚拟机会找不到<code>[ ]zh_CN.GBK_GBK</code>，这两个选项是紧跟着的，找不到就算了，问题不大。</li>
-<li>按下<code>enter</code> 表示<code>ok</code>，选择语言<code>zh_CN.UTF-8</code></li>
-</ul>
-</li>
-<li>
-<p>重启生效设置</p>
-<p>重启后会有个提示，建议你选择<code>保留旧名称</code>，以后路径敲代码敲英文肯定比敲中文方便很多！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<hr>
-<p>原文：<a href="https://blog.csdn.net/u011027547/article/details/123344249">https://blog.csdn.net/u011027547/article/details/123344249</a></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>kali</category>
-        <category>语言设置</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -4248,6 +4206,83 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
+    <title>kali_Linux如何修改语言为中文</title>
+    <url>/posts/4c6d962f.html</url>
+    <content><![CDATA[<h3 id="友情提示">友情提示</h3>
+<p>修改前快照一下，避免修改操作错误带来的问题！</p>
+<ol>
+<li>
+<p>打开终端</p>
+</li>
+<li>
+<p>打开设置</p>
+<p>输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改设置</p>
+<p><code>en_US.UTF-8 UTF-8</code>改为不勾选</p>
+<ul>
+<li>下面这种有个<code>*</code>属于已经勾选了</li>
+<li>通过上下箭头按键我们把红点（表示当前选中的选项）移动到<code>en_US.UTF-8 UTF-8</code>，按下空格表示不勾选/勾选</li>
+<li>使用空格勾选<code>[ ]zh_CN.GBK_GBK</code> 和<code>[ ] zh-CN.UTF-8.UTF-8</code>两个选项，这里有部分虚拟机会找不到<code>[ ]zh_CN.GBK_GBK</code>，这两个选项是紧跟着的，找不到就算了，问题不大。</li>
+<li>按下<code>enter</code> 表示<code>ok</code>，选择语言<code>zh_CN.UTF-8</code></li>
+</ul>
+</li>
+<li>
+<p>重启生效设置</p>
+<p>重启后会有个提示，建议你选择<code>保留旧名称</code>，以后路径敲代码敲英文肯定比敲中文方便很多！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p>原文：<a href="https://blog.csdn.net/u011027547/article/details/123344249">https://blog.csdn.net/u011027547/article/details/123344249</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>kali</category>
+        <category>语言设置</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kali如何切换源</title>
+    <url>/posts/3073af94.html</url>
+    <content><![CDATA[<p>转载</p>
+<p><a href="https://blog.csdn.net/fingue/article/details/127096363">https://blog.csdn.net/fingue/article/details/127096363</a></p>
+<h1>1、进入vim模式</h1>
+<p>sudo su进入root 模式<br>
+vim /etc/apt/sources.list编辑软件源配置文件</p>
+<p>随后进入vim模式</p>
+<h1>2、国内源</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">官方源</span><br><span class="line">deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#根据需要自己选一个，中科大的还可以</span><br><span class="line">#中科大</span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">#阿里云</span><br><span class="line">#deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#清华大学</span><br><span class="line">#deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#浙大</span><br><span class="line">#deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#东软大学</span><br><span class="line">#deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#重庆大学</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure>
+<h1>3、换源</h1>
+<p>按“i”进行编辑</p>
+<p>将源插入后，点击“Esc”退出编辑，输入“：wq”回车保存退出，此处插入的是清华大学的源。</p>
+<p>注：“#”有注释本行的用途，可以先将原来的源进行注释，再插入新源</p>
+<h1>4、随后输入下列命令行进行更新</h1>
+<p>更新软件列表(非root权限在命令行前加“sudo”)</p>
+<p>apt-get update 更新索引</p>
+<p>apt-get upgrade 更新软件</p>
+<p>apt-get dist-upgrade 升级</p>
+<p>apt-get clean 删除缓存包</p>
+<p>apt-get autoclean 删除未安装的deb包<br>
+————————————————<br>
+版权声明：本文为CSDN博主「不过教资不改名111」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：<a href="https://blog.csdn.net/fingue/article/details/127096363">https://blog.csdn.net/fingue/article/details/127096363</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>kali</category>
+        <category>切换源</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>“卷卷”W1ndys_bot使用手册</title>
     <url>/posts/bc040c54.html</url>
     <content><![CDATA[<h1>主要功能</h1>
@@ -4305,38 +4340,58 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
-    <title>kali如何切换源</title>
-    <url>/posts/3073af94.html</url>
-    <content><![CDATA[<p>转载</p>
-<p><a href="https://blog.csdn.net/fingue/article/details/127096363">https://blog.csdn.net/fingue/article/details/127096363</a></p>
-<h1>1、进入vim模式</h1>
-<p>sudo su进入root 模式<br>
-vim /etc/apt/sources.list编辑软件源配置文件</p>
-<p>随后进入vim模式</p>
-<h1>2、国内源</h1>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">官方源</span><br><span class="line">deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#根据需要自己选一个，中科大的还可以</span><br><span class="line">#中科大</span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">#阿里云</span><br><span class="line">#deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#清华大学</span><br><span class="line">#deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#浙大</span><br><span class="line">#deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#东软大学</span><br><span class="line">#deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#重庆大学</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure>
-<h1>3、换源</h1>
-<p>按“i”进行编辑</p>
-<p>将源插入后，点击“Esc”退出编辑，输入“：wq”回车保存退出，此处插入的是清华大学的源。</p>
-<p>注：“#”有注释本行的用途，可以先将原来的源进行注释，再插入新源</p>
-<h1>4、随后输入下列命令行进行更新</h1>
-<p>更新软件列表(非root权限在命令行前加“sudo”)</p>
-<p>apt-get update 更新索引</p>
-<p>apt-get upgrade 更新软件</p>
-<p>apt-get dist-upgrade 升级</p>
-<p>apt-get clean 删除缓存包</p>
-<p>apt-get autoclean 删除未安装的deb包<br>
-————————————————<br>
-版权声明：本文为CSDN博主「不过教资不改名111」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
-原文链接：<a href="https://blog.csdn.net/fingue/article/details/127096363">https://blog.csdn.net/fingue/article/details/127096363</a></p>
+    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
+    <url>/posts/bacd5cfb.html</url>
+    <content><![CDATA[<h1>START</h1>
+<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p>
+<p>太忙了啊啊啊啊啊~！！！</p>
+<p>收获还是很多的</p>
+<p><font color='red'>嘿嘿嘿被两位师哥带飞，满满的安全感</font></p>
+<p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁，高铁来的声音很响我，轰隆隆的。</p>
+<p>高铁很快，不到三个小时我们就到章丘站了，下高铁之后有山东警察学院的志愿者带我们进学校，坐他们的志愿者大巴车去学校里面，大巴车嗡嗡的响</p>
+<p>做网络安全的，也有不少女生，但是也就几个，车上都在讨论学术知识，第一次到这种贤士云集的地方。</p>
+<p>到学校门口，我随手拍了几张照片</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" alt="山东警察学院大门"></p>
+<p>非常好看！</p>
+<p>到了里面，学校已经为大赛准备的很好，我们先去报到处报道，领了参赛的东西</p>
+<p><strong>一个参赛服，一个参赛选手证，一个鼠标垫，一个无线鼠标，还有一本参赛手册，两张餐券。</strong></p>
+<p>然后进赛场调试设备，工作人员让我看看IP就行，当时我脑子就乱了，IP？什么IP，怎么看来着？急中生智想到了上周计网实验课刚学的ipconfig，好险，要不然就丢人了，好尴尬，当时工作人员就看着我。</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/ipconfig.jpg" alt="ipconfig"></p>
+<p>然后等报道完我们三个坐大巴车去酒店准备吃饭了</p>
+<p>酒店的饭，其实也还行，给餐券随便吃，也不算多豪华也还行倒是，(毕竟组委会包吃住，乐)</p>
+<p>吃完饭我们就去卧室准备睡觉了</p>
+<p>那边酒店在山脚下，信号贼差，发个消息发半天，当晚我们下载了网络安全法，数据安全法，密码法，国家安全法，个人信息保护法，反间谍法等条文，我在车上听到了别的师傅说一个<strong>随波逐流工具</strong>，我下载了发现非常好用，一把嗦。点赞这个工具</p>
+<p>然后就准备睡觉了，第二天要早起</p>
+<p>等第二天起来之后吃完饭就坐车走了，去了先去签到处放下书包，手机不能进场。领取了标签我就进场了</p>
+<p>考试时间从上午九点到下午四点，中途不间断，午饭在现场吃</p>
+<br/>
+<p>再说一下赛题吧，web题全场0解，一开始我看到签到题就蒙圈了，不过幸好，好在做出来了，不至于一个题也不会给队伍拖后腿</p>
+<p>然后过了半天，才做出简单编码，二进制八进制</p>
+<p>还有一个题是变异凯撒，那个题也应该会做的，但是当时只顾着用工具了，脑子没反应过来那是变异凯撒，不然早就知道了其实，这题不该失分，然后我应该去爱你这个题也不该失分，吃了没做过频谱图的题的亏，如果我当时做过频谱图的题就不至于不会做了，这几个题都是大部分人都会做的</p>
+<p>到了比赛后期就没什么新解出的，一直是老题在上升趋势，（不会是py吧（雾</p>
+<hr>
+<p>最后四点比赛结束，三等奖，差点二等奖了唉，唉三等奖，唉CTF，唉科来杯。</p>
+<p>然后遇到了王老师和李老师，两位带队老师，臧老师有事不能带了</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/xiaohan.jpg" alt="个人三等"></p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/no3.jpg" alt="团体三等奖"></p>
+<p>最后颁奖典礼宣布</p>
+<p>第十一届科来杯在<strong>曲阜师范大学主办</strong>，下一届我们就是主力军了，加油！</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/QFNU.jpg" alt="交接仪式"></p>
+<h1>总结</h1>
+<p>还是得练！</p>
+<p>认识了日照校区的师傅（爷</p>
+<p>明年真是线下丹砂了</p>
+<p>练练练练，卷起来</p>
+<h1>END</h1>
 ]]></content>
       <categories>
-        <category>Linux</category>
-        <category>kali</category>
-        <category>切换源</category>
+        <category>CTF</category>
+        <category>比赛心得</category>
+        <category>省赛</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>CTF</tag>
+        <tag>科来杯</tag>
       </tags>
   </entry>
   <entry>
@@ -4400,61 +4455,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       <tags>
         <tag>学习笔记</tag>
         <tag>文案</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
-    <url>/posts/bacd5cfb.html</url>
-    <content><![CDATA[<h1>START</h1>
-<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p>
-<p>太忙了啊啊啊啊啊~！！！</p>
-<p>收获还是很多的</p>
-<p><font color='red'>嘿嘿嘿被两位师哥带飞，满满的安全感</font></p>
-<p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁，高铁来的声音很响我，轰隆隆的。</p>
-<p>高铁很快，不到三个小时我们就到章丘站了，下高铁之后有山东警察学院的志愿者带我们进学校，坐他们的志愿者大巴车去学校里面，大巴车嗡嗡的响</p>
-<p>做网络安全的，也有不少女生，但是也就几个，车上都在讨论学术知识，第一次到这种贤士云集的地方。</p>
-<p>到学校门口，我随手拍了几张照片</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" alt="山东警察学院大门"></p>
-<p>非常好看！</p>
-<p>到了里面，学校已经为大赛准备的很好，我们先去报到处报道，领了参赛的东西</p>
-<p><strong>一个参赛服，一个参赛选手证，一个鼠标垫，一个无线鼠标，还有一本参赛手册，两张餐券。</strong></p>
-<p>然后进赛场调试设备，工作人员让我看看IP就行，当时我脑子就乱了，IP？什么IP，怎么看来着？急中生智想到了上周计网实验课刚学的ipconfig，好险，要不然就丢人了，好尴尬，当时工作人员就看着我。</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/ipconfig.jpg" alt="ipconfig"></p>
-<p>然后等报道完我们三个坐大巴车去酒店准备吃饭了</p>
-<p>酒店的饭，其实也还行，给餐券随便吃，也不算多豪华也还行倒是，(毕竟组委会包吃住，乐)</p>
-<p>吃完饭我们就去卧室准备睡觉了</p>
-<p>那边酒店在山脚下，信号贼差，发个消息发半天，当晚我们下载了网络安全法，数据安全法，密码法，国家安全法，个人信息保护法，反间谍法等条文，我在车上听到了别的师傅说一个<strong>随波逐流工具</strong>，我下载了发现非常好用，一把嗦。点赞这个工具</p>
-<p>然后就准备睡觉了，第二天要早起</p>
-<p>等第二天起来之后吃完饭就坐车走了，去了先去签到处放下书包，手机不能进场。领取了标签我就进场了</p>
-<p>考试时间从上午九点到下午四点，中途不间断，午饭在现场吃</p>
-<br/>
-<p>再说一下赛题吧，web题全场0解，一开始我看到签到题就蒙圈了，不过幸好，好在做出来了，不至于一个题也不会给队伍拖后腿</p>
-<p>然后过了半天，才做出简单编码，二进制八进制</p>
-<p>还有一个题是变异凯撒，那个题也应该会做的，但是当时只顾着用工具了，脑子没反应过来那是变异凯撒，不然早就知道了其实，这题不该失分，然后我应该去爱你这个题也不该失分，吃了没做过频谱图的题的亏，如果我当时做过频谱图的题就不至于不会做了，这几个题都是大部分人都会做的</p>
-<p>到了比赛后期就没什么新解出的，一直是老题在上升趋势，（不会是py吧（雾</p>
-<hr>
-<p>最后四点比赛结束，三等奖，差点二等奖了唉，唉三等奖，唉CTF，唉科来杯。</p>
-<p>然后遇到了王老师和李老师，两位带队老师，臧老师有事不能带了</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/xiaohan.jpg" alt="个人三等"></p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/no3.jpg" alt="团体三等奖"></p>
-<p>最后颁奖典礼宣布</p>
-<p>第十一届科来杯在<strong>曲阜师范大学主办</strong>，下一届我们就是主力军了，加油！</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/QFNU.jpg" alt="交接仪式"></p>
-<h1>总结</h1>
-<p>还是得练！</p>
-<p>认识了日照校区的师傅（爷</p>
-<p>明年真是线下丹砂了</p>
-<p>练练练练，卷起来</p>
-<h1>END</h1>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>比赛心得</category>
-        <category>省赛</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>科来杯</tag>
       </tags>
   </entry>
   <entry>
@@ -4815,6 +4815,39 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </tags>
   </entry>
   <entry>
+    <title>从应用内存上来研究智慧曲园模拟请假条</title>
+    <url>/posts/6cb5ad08.html</url>
+    <content><![CDATA[<h1>研究背景</h1>
+<p>首先，我知道你曾经用过 P 图软件对假条截图进行修改，但是你好像发现，始终找不到与修改后的与原来的假条字体完全匹配的方法，本教程旨在通过程序内存进行修改，实现无损替换文字。</p>
+<p><span style="border:1px solid #00FF00; color:#00FF00;"> 首先，请认真阅读本文文末的免责声明 </span></p>
+<h1>必备工具</h1>
+<ol>
+<li>雷电模拟器</li>
+<li>智慧曲园</li>
+<li>GameGuardian 修改器</li>
+</ol>
+<p>雷电模拟器下载地址 <a href="https://www.ldmnq.com/">https://www.ldmnq.com/</a></p>
+<p>GameGuardian 修改器下载地址 <a href="https://dmod.3dmgame.com/mod/Download/196410">https://dmod.3dmgame.com/mod/Download/196410</a></p>
+<h1>具体操作</h1>
+<p>未完待续……………………</p>
+<h2 id="看看成品">看看成品</h2>
+<p><img src="/img/jiatiao/end.png" alt="end"></p>
+<h1>免责声明</h1>
+<p>本教程旨在提供技术交流目的。使用本教程中的信息和示例所造成的任何行为或后果由使用者自行承担责任。</p>
+<p>本教程提供的是模拟学校请假条的示例，仅供参考和学习之用。任何使用本教程生成的虚拟请假条与真实情况无关，不得用于实际学校或其他机构。请在实际情况下遵循相应机构的规章制度和规定。</p>
+<p>作者和相关团队力求确保本教程提供的信息准确可靠，但不保证信息的绝对准确性和完整性。使用者应审慎对待并自行承担使用本教程信息可能带来的风险。</p>
+<p>本教程作者不对因使用本教程而引发的任何直接或间接损失或损害承担责任，包括但不限于任何利润损失、数据丢失或业务中断。</p>
+<p>使用本教程即表示您同意遵守此免责声明。如果您不同意此免责声明，请不要使用本教程提供的信息和示例。</p>
+]]></content>
+      <categories>
+        <category>QFNU</category>
+      </categories>
+      <tags>
+        <tag>QFNU</tag>
+        <tag>逆向技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中华人民共和国网络安全法</title>
     <url>/posts/b81fa239.html</url>
     <content><![CDATA[<h1>中华人民共和国网络安全法</h1>
@@ -4978,39 +5011,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </categories>
       <tags>
         <tag>文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从应用内存上来研究智慧曲园模拟请假条</title>
-    <url>/posts/6cb5ad08.html</url>
-    <content><![CDATA[<h1>研究背景</h1>
-<p>首先，我知道你曾经用过 P 图软件对假条截图进行修改，但是你好像发现，始终找不到与修改后的与原来的假条字体完全匹配的方法，本教程旨在通过程序内存进行修改，实现无损替换文字。</p>
-<p><span style="border:1px solid #00FF00; color:#00FF00;"> 首先，请认真阅读本文文末的免责声明 </span></p>
-<h1>必备工具</h1>
-<ol>
-<li>雷电模拟器</li>
-<li>智慧曲园</li>
-<li>GameGuardian 修改器</li>
-</ol>
-<p>雷电模拟器下载地址 <a href="https://www.ldmnq.com/">https://www.ldmnq.com/</a></p>
-<p>GameGuardian 修改器下载地址 <a href="https://dmod.3dmgame.com/mod/Download/196410">https://dmod.3dmgame.com/mod/Download/196410</a></p>
-<h1>具体操作</h1>
-<p>未完待续……………………</p>
-<h2 id="看看成品">看看成品</h2>
-<p><img src="/img/jiatiao/end.png" alt="end"></p>
-<h1>免责声明</h1>
-<p>本教程旨在提供技术交流目的。使用本教程中的信息和示例所造成的任何行为或后果由使用者自行承担责任。</p>
-<p>本教程提供的是模拟学校请假条的示例，仅供参考和学习之用。任何使用本教程生成的虚拟请假条与真实情况无关，不得用于实际学校或其他机构。请在实际情况下遵循相应机构的规章制度和规定。</p>
-<p>作者和相关团队力求确保本教程提供的信息准确可靠，但不保证信息的绝对准确性和完整性。使用者应审慎对待并自行承担使用本教程信息可能带来的风险。</p>
-<p>本教程作者不对因使用本教程而引发的任何直接或间接损失或损害承担责任，包括但不限于任何利润损失、数据丢失或业务中断。</p>
-<p>使用本教程即表示您同意遵守此免责声明。如果您不同意此免责声明，请不要使用本教程提供的信息和示例。</p>
-]]></content>
-      <categories>
-        <category>QFNU</category>
-      </categories>
-      <tags>
-        <tag>QFNU</tag>
-        <tag>逆向技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5417,67 +5417,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </categories>
       <tags>
         <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>全自动解密脚本Ciphey官方安装文档</title>
-    <url>/posts/bc236d8e.html</url>
-    <content><![CDATA[<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#python-37-and-above">Python 3.7 and above</a></h1>
-<p>On Linux run this command:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m pip install ciphey --upgrade</span><br></pre></td></tr></table></figure>
-<p>This will tell your default Python3 version to install Ciphey and upgrade it if it already exists.</p>
-<p><strong>Ciphey only supports Python3.7 and above. Please upgrade Python or use the Docker image if you have a version below 3.7.</strong></p>
-<p><strong>⚠️ Ciphey doesn’t work on Windows with Python 3.9+, use Python 3.7 or Python 3.8. Other platforms are fine with Python 3.9, Python 3.10 doesn’t work.</strong></p>
-<p><strong>⚠️ Windows Python defaults to install 32-bit. Ciphey only supports 64-bit. Make sure you’re using 64-bit Python.</strong></p>
-<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#docker">Docker</a></h1>
-<p><a href="https://docs.docker.com/engine/install/">See here for how to install Docker</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --rm remnux/ciphey</span><br></pre></td></tr></table></figure>
-<p>Our Docker image is maintained by <a href="https://remnux.org/">REMnux</a>. They have provided a guide on how to use it here. <a href="https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey">https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey</a></p>
-<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#detailed-explanation-for-python-installation">Detailed Explanation for Python Installation</a></h1>
-<p>To install Ciphey, you need 2 core things:</p>
-<ol>
-<li>Python3.7 or above</li>
-<li>Pip (on Python 3)</li>
-</ol>
-<p>Check to see if Python is already installed. Run both of these commands:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -c &quot;import sys; print(sys.version)&quot;</span><br></pre></td></tr></table></figure>
-<p>And/or</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -c &quot;import sys; print(sys.version)&quot;</span><br></pre></td></tr></table></figure>
-<p>If Python is installed, one of these commands will run and will output the version number. Ciphey only supports numbers higher than 3.7. If you see “2” or anything below “3.7”, we’ll need to install a more up to date version.</p>
-<p>Make sure to note what command words. On your computer, if <code>python -c &quot;import sys; print(sys.version)&quot;</code> returns something higher or equal to “3.7”, then whenever you see <code>python3</code> instead write <code>python</code>.</p>
-<p><strong>⚠️ Windows Warning ⚠️</strong> On Windows? Python defaults to install 32-bit. Ciphey only supports 64-bit. When you download Python from the website on Windows it defaults to 32-bit. Make sure to download 64 bit!</p>
-<p>Go to this website <a href="https://www.python.org/">https://www.python.org/</a> and install Python3. Make sure the version is more than 3.7. By default, unless you explicitly choose a lower version, the version you install will &gt; 3.7.</p>
-<p>Next, we need to install <strong>pip</strong>.</p>
-<p>Pip is already installed by default in Python. We just need to upgrade it.</p>
-<p><strong>On Linux or Mac OS</strong> run the command:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip3 install -U pip</span><br></pre></td></tr></table></figure>
-<p>Making sure to replace <code>pip3</code> with <code>pip</code> if you had to replace <code>python3</code> with <code>python</code>.</p>
-<p><strong>On Windows</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m pip install -U pip</span><br></pre></td></tr></table></figure>
-<p>If these commands didn’t work, explore the official Pip guide for upgrading <a href="https://pip.pypa.io/en/stable/installing/#upgrading-pip">here</a>.</p>
-<p>If you faced any errors with Pip, there’s a nice troubleshooting guide on installing Pip <a href="https://packaging.python.org/tutorials/installing-packages/">here</a>.</p>
-<h2 id="Installing-Ciphey"><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#installing-ciphey">Installing Ciphey</a></h2>
-<p>Run this command:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m pip install -U ciphey</span><br></pre></td></tr></table></figure>
-<p>Replace <code>python3</code> with <code>python</code> if you need to. If you’re not sure, read the previous section <code>Detailed Explanation</code>.</p>
-<p>This command does many things:</p>
-<ul>
-<li>Uses Python3 (Ciphey only supports Python3.7 and above)</li>
-<li>The -m flag tells Python to run the module</li>
-<li>We are telling the version of pip inside Python3 to install something. The reason why we use Python3 to call Pip instead of calling Pip is that the version of Pip may differ from Python, or you may have multiple versions of Python installed or you may be in a virtual environment.</li>
-<li>The -U flag says “upgrade”. Sometimes Python gets stuck on an older version of Ciphey, so if it does – it says to upgrade it.</li>
-<li>“ciphey” is the name of the package we want to install.</li>
-</ul>
-<p><strong>Make sure you run this command in Terminal/CMD/PowerShell or whatever you use. Do not run this in Python’s IDLE.</strong></p>
-<p>使用方法</p>
-<p>ciphey -t “”</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -5961,22 +5900,64 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
-    <title>实验一、顺序存储结构线性表的建立及操作</title>
-    <url>/posts/767f4a40.html</url>
-    <content><![CDATA[<blockquote>
-<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
-</blockquote>
-<p><img src="https://cyberdownload.anrunlu.net/Fis_1Y1PQhtSsV6Vv8uzbswmKvrW" alt=""></p>
-<h1>代码主体</h1>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct Student &#123;</span><br><span class="line">    long num;</span><br><span class="line">    char name[10];</span><br><span class="line">    float score;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class ScoreList &#123;</span><br><span class="line">private:</span><br><span class="line">    Student data[100];</span><br><span class="line">    int length;</span><br><span class="line"></span><br><span class="line">public:</span><br><span class="line">    ScoreList() &#123;</span><br><span class="line">        length = 5;</span><br><span class="line">        data[0] = &#123; 1001, &quot;张三&quot;, 85 &#125;;</span><br><span class="line">        data[1] = &#123; 1002, &quot;李四&quot;, 90 &#125;;</span><br><span class="line">        data[2] = &#123; 1003, &quot;王五&quot;, 80 &#125;;</span><br><span class="line">        data[3] = &#123; 1004, &quot;赵六&quot;, 95 &#125;;</span><br><span class="line">        data[4] = &#123; 1005, &quot;孙七&quot;, 88 &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void del(long num) &#123;</span><br><span class="line">        for (int i = 0; i &lt; length; i++) &#123;</span><br><span class="line">            if (data[i].num == num) &#123;</span><br><span class="line">                for (int j = i; j &lt; length - 1; j++) &#123;</span><br><span class="line">                    data[j] = data[j + 1];</span><br><span class="line">                &#125;</span><br><span class="line">                length--;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    void insert(Student stu) &#123;</span><br><span class="line">        int pos = 0;</span><br><span class="line">        while (pos &lt; length &amp;&amp; data[pos].score &gt; stu.score) pos++;</span><br><span class="line">        for (int i = length; i &gt; pos; i--) &#123;</span><br><span class="line">            data[i] = data[i - 1];</span><br><span class="line">        &#125;</span><br><span class="line">        data[pos] = stu;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    void output() &#123;</span><br><span class="line">        cout &lt;&lt; &quot;学号\t姓名\t分数&quot; &lt;&lt; endl;</span><br><span class="line">        for (int i = 0; i &lt; length; i++) &#123;</span><br><span class="line">            cout &lt;&lt; data[i].num &lt;&lt; &quot;\t&quot; &lt;&lt; data[i].name &lt;&lt; &quot;\t&quot; &lt;&lt; data[i].score &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    long a;</span><br><span class="line">    char b[10];</span><br><span class="line">    float c;</span><br><span class="line">    ScoreList list;</span><br><span class="line">    list.output();</span><br><span class="line">    cout &lt;&lt; &quot;删除一个学生，请输入学生学号&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    list.del(a);</span><br><span class="line">    list.output();</span><br><span class="line">    cout &lt;&lt; &quot;插入一个新学生（学号 姓名 分数 ）用空格隔开&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">    Student newStu = &#123; a, &quot;&quot;, c &#125;;</span><br><span class="line">    strcpy_s(newStu.name, b); // 使用 strcpy 函数复制字符串</span><br><span class="line">    list.insert(newStu);</span><br><span class="line">    list.output();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>全自动解密脚本Ciphey官方安装文档</title>
+    <url>/posts/bc236d8e.html</url>
+    <content><![CDATA[<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#python-37-and-above">Python 3.7 and above</a></h1>
+<p>On Linux run this command:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m pip install ciphey --upgrade</span><br></pre></td></tr></table></figure>
+<p>This will tell your default Python3 version to install Ciphey and upgrade it if it already exists.</p>
+<p><strong>Ciphey only supports Python3.7 and above. Please upgrade Python or use the Docker image if you have a version below 3.7.</strong></p>
+<p><strong>⚠️ Ciphey doesn’t work on Windows with Python 3.9+, use Python 3.7 or Python 3.8. Other platforms are fine with Python 3.9, Python 3.10 doesn’t work.</strong></p>
+<p><strong>⚠️ Windows Python defaults to install 32-bit. Ciphey only supports 64-bit. Make sure you’re using 64-bit Python.</strong></p>
+<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#docker">Docker</a></h1>
+<p><a href="https://docs.docker.com/engine/install/">See here for how to install Docker</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --rm remnux/ciphey</span><br></pre></td></tr></table></figure>
+<p>Our Docker image is maintained by <a href="https://remnux.org/">REMnux</a>. They have provided a guide on how to use it here. <a href="https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey">https://docs.remnux.org/run-tools-in-containers/remnux-containers#ciphey</a></p>
+<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#detailed-explanation-for-python-installation">Detailed Explanation for Python Installation</a></h1>
+<p>To install Ciphey, you need 2 core things:</p>
+<ol>
+<li>Python3.7 or above</li>
+<li>Pip (on Python 3)</li>
+</ol>
+<p>Check to see if Python is already installed. Run both of these commands:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -c &quot;import sys; print(sys.version)&quot;</span><br></pre></td></tr></table></figure>
+<p>And/or</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -c &quot;import sys; print(sys.version)&quot;</span><br></pre></td></tr></table></figure>
+<p>If Python is installed, one of these commands will run and will output the version number. Ciphey only supports numbers higher than 3.7. If you see “2” or anything below “3.7”, we’ll need to install a more up to date version.</p>
+<p>Make sure to note what command words. On your computer, if <code>python -c &quot;import sys; print(sys.version)&quot;</code> returns something higher or equal to “3.7”, then whenever you see <code>python3</code> instead write <code>python</code>.</p>
+<p><strong>⚠️ Windows Warning ⚠️</strong> On Windows? Python defaults to install 32-bit. Ciphey only supports 64-bit. When you download Python from the website on Windows it defaults to 32-bit. Make sure to download 64 bit!</p>
+<p>Go to this website <a href="https://www.python.org/">https://www.python.org/</a> and install Python3. Make sure the version is more than 3.7. By default, unless you explicitly choose a lower version, the version you install will &gt; 3.7.</p>
+<p>Next, we need to install <strong>pip</strong>.</p>
+<p>Pip is already installed by default in Python. We just need to upgrade it.</p>
+<p><strong>On Linux or Mac OS</strong> run the command:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip3 install -U pip</span><br></pre></td></tr></table></figure>
+<p>Making sure to replace <code>pip3</code> with <code>pip</code> if you had to replace <code>python3</code> with <code>python</code>.</p>
+<p><strong>On Windows</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m pip install -U pip</span><br></pre></td></tr></table></figure>
+<p>If these commands didn’t work, explore the official Pip guide for upgrading <a href="https://pip.pypa.io/en/stable/installing/#upgrading-pip">here</a>.</p>
+<p>If you faced any errors with Pip, there’s a nice troubleshooting guide on installing Pip <a href="https://packaging.python.org/tutorials/installing-packages/">here</a>.</p>
+<h2 id="Installing-Ciphey"><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#installing-ciphey">Installing Ciphey</a></h2>
+<p>Run this command:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m pip install -U ciphey</span><br></pre></td></tr></table></figure>
+<p>Replace <code>python3</code> with <code>python</code> if you need to. If you’re not sure, read the previous section <code>Detailed Explanation</code>.</p>
+<p>This command does many things:</p>
+<ul>
+<li>Uses Python3 (Ciphey only supports Python3.7 and above)</li>
+<li>The -m flag tells Python to run the module</li>
+<li>We are telling the version of pip inside Python3 to install something. The reason why we use Python3 to call Pip instead of calling Pip is that the version of Pip may differ from Python, or you may have multiple versions of Python installed or you may be in a virtual environment.</li>
+<li>The -U flag says “upgrade”. Sometimes Python gets stuck on an older version of Ciphey, so if it does – it says to upgrade it.</li>
+<li>“ciphey” is the name of the package we want to install.</li>
+</ul>
+<p><strong>Make sure you run this command in Terminal/CMD/PowerShell or whatever you use. Do not run this in Python’s IDLE.</strong></p>
+<p>使用方法</p>
+<p>ciphey -t “”</p>
 ]]></content>
       <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>实验</category>
+        <category>CTF</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>数据结构作业</tag>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -5988,6 +5969,25 @@ Wushuo</p>
 <p>没听课（）教材代码，复制过来了</p>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/******************************* </span></span><br><span class="line"><span class="comment">   对应教材6.4.1节，Prim算法 </span></span><br><span class="line"><span class="comment">********************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MaxSize = <span class="number">10</span>;                   <span class="comment">//图中最多顶点个数</span></span><br><span class="line"><span class="type">int</span> visited[MaxSize] = &#123;<span class="number">0</span>&#125;;              <span class="comment">//全局数组变量visited初始化</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   	<span class="built_in">MGraph</span>(DataType a[ ], <span class="type">int</span> n, <span class="type">int</span> e);     <span class="comment">//构造函数，建立具有n个顶点e条边的图</span></span><br><span class="line">   	~<span class="built_in">MGraph</span>( )&#123; &#125;;                        <span class="comment">//析构函数</span></span><br><span class="line"> 	<span class="function"><span class="type">void</span> <span class="title">Prim</span><span class="params">(<span class="type">int</span> v)</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    DataType vertex[MaxSize];           <span class="comment">//存放图中顶点的数组</span></span><br><span class="line">    <span class="type">int</span> edge[MaxSize][MaxSize];           <span class="comment">//存放图中边的数组</span></span><br><span class="line">    <span class="type">int</span> vertexNum, edgeNum;              <span class="comment">//图的顶点数和边数</span></span><br><span class="line"></span><br><span class="line"> 	<span class="function"><span class="type">int</span> <span class="title">MinEdge</span><span class="params">(<span class="type">int</span> r[ ], <span class="type">int</span> n)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line">MGraph&lt;DataType&gt; :: <span class="built_in">MGraph</span>(DataType a[ ], <span class="type">int</span> n, <span class="type">int</span> e) </span><br><span class="line">&#123;</span><br><span class="line">   	<span class="type">int</span> i, j, k, w;</span><br><span class="line">   	vertexNum = n; edgeNum = e;</span><br><span class="line">   	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//存储顶点</span></span><br><span class="line">   		vertex[i] = a[i];</span><br><span class="line">   	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//初始化邻接矩阵</span></span><br><span class="line"> 		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; vertexNum; j++)</span><br><span class="line">   			<span class="keyword">if</span> (i == j)</span><br><span class="line">			   edge[i][j] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			   edge[i][j] = <span class="number">100</span>;               <span class="comment">//假设边上权的最大值是100             </span></span><br><span class="line">   	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; edgeNum; k++)           <span class="comment">//依次输入每一条边</span></span><br><span class="line">   	&#123;</span><br><span class="line">   		cout &lt;&lt; <span class="string">&quot;请输入边依附的两个顶点的编号，以及边上的权值：&quot;</span>;</span><br><span class="line">		cin &gt;&gt; i &gt;&gt; j &gt;&gt; w;                       <span class="comment">//输入边依附的两个顶点的编号</span></span><br><span class="line">		edge[i][j] = w; edge[j][i] = w;           <span class="comment">//置有边标志</span></span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="type">void</span> MGraph&lt;DataType&gt; :: <span class="built_in">Prim</span>(<span class="type">int</span> v)                           <span class="comment">//从顶点v出发</span></span><br><span class="line">&#123;   </span><br><span class="line">	<span class="type">int</span> i, j, k;</span><br><span class="line">	<span class="type">int</span> adjvex[MaxSize], lowcost[MaxSize];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)             <span class="comment">//初始化辅助数组</span></span><br><span class="line">	&#123;</span><br><span class="line">		lowcost[i] = edge[v][i]; adjvex[i] = v;</span><br><span class="line">	&#125;</span><br><span class="line">	lowcost[v] = <span class="number">0</span>;                         <span class="comment">//将顶点v加入集合U</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">1</span>; k &lt; vertexNum; k++)            <span class="comment">//迭代n-1次</span></span><br><span class="line">	&#123;</span><br><span class="line">		j = <span class="built_in">MinEdge</span>(lowcost, vertexNum);       <span class="comment">//寻找最短边的邻接点j</span></span><br><span class="line">      	cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; vertex[j] &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; vertex[adjvex[j]] &lt;&lt; <span class="string">&quot;)&quot;</span> &lt;&lt; lowcost[j] &lt;&lt; endl; </span><br><span class="line">		lowcost[j] = <span class="number">0</span>;                       <span class="comment">//顶点j加入集合U</span></span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//调整辅助数组</span></span><br><span class="line">	        <span class="keyword">if</span> (edge[i][j] &lt; lowcost[i]) &#123;</span><br><span class="line">				lowcost[i] = edge[i][j]; </span><br><span class="line">				adjvex[i] = j;</span><br><span class="line">        	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="type">int</span> MGraph&lt;DataType&gt; :: <span class="built_in">MinEdge</span>(<span class="type">int</span> r[ ], <span class="type">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> index = <span class="number">0</span>, min = <span class="number">100</span>;           <span class="comment">//此处如果仅记载最小值下标会有bug </span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">if</span> (r[i] != <span class="number">0</span> &amp;&amp; r[i] &lt; min)</span><br><span class="line">		&#123;</span><br><span class="line">			min = r[i]; index = i;		</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> index;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">/*测试数据使用教材 图6-16 所示带权无向图， 输入边依次为 </span></span><br><span class="line"><span class="comment">	(0 1 34)(0 2 46)(0 5 19)(1 4 12)(2 3 17)(2 5 25)(3 4 38)(3 5 25)(4 5 26) */</span> </span><br><span class="line">	<span class="type">char</span> ch[ ]=&#123;<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;F&#x27;</span>&#125;;       </span><br><span class="line">	MGraph&lt;<span class="type">char</span>&gt; MG&#123;ch, <span class="number">6</span>, <span class="number">9</span>&#125;;             </span><br><span class="line">	MG.<span class="built_in">Prim</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>实验</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实验一、顺序存储结构线性表的建立及操作</title>
+    <url>/posts/767f4a40.html</url>
+    <content><![CDATA[<blockquote>
+<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
+</blockquote>
+<p><img src="https://cyberdownload.anrunlu.net/Fis_1Y1PQhtSsV6Vv8uzbswmKvrW" alt=""></p>
+<h1>代码主体</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct Student &#123;</span><br><span class="line">    long num;</span><br><span class="line">    char name[10];</span><br><span class="line">    float score;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class ScoreList &#123;</span><br><span class="line">private:</span><br><span class="line">    Student data[100];</span><br><span class="line">    int length;</span><br><span class="line"></span><br><span class="line">public:</span><br><span class="line">    ScoreList() &#123;</span><br><span class="line">        length = 5;</span><br><span class="line">        data[0] = &#123; 1001, &quot;张三&quot;, 85 &#125;;</span><br><span class="line">        data[1] = &#123; 1002, &quot;李四&quot;, 90 &#125;;</span><br><span class="line">        data[2] = &#123; 1003, &quot;王五&quot;, 80 &#125;;</span><br><span class="line">        data[3] = &#123; 1004, &quot;赵六&quot;, 95 &#125;;</span><br><span class="line">        data[4] = &#123; 1005, &quot;孙七&quot;, 88 &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void del(long num) &#123;</span><br><span class="line">        for (int i = 0; i &lt; length; i++) &#123;</span><br><span class="line">            if (data[i].num == num) &#123;</span><br><span class="line">                for (int j = i; j &lt; length - 1; j++) &#123;</span><br><span class="line">                    data[j] = data[j + 1];</span><br><span class="line">                &#125;</span><br><span class="line">                length--;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    void insert(Student stu) &#123;</span><br><span class="line">        int pos = 0;</span><br><span class="line">        while (pos &lt; length &amp;&amp; data[pos].score &gt; stu.score) pos++;</span><br><span class="line">        for (int i = length; i &gt; pos; i--) &#123;</span><br><span class="line">            data[i] = data[i - 1];</span><br><span class="line">        &#125;</span><br><span class="line">        data[pos] = stu;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    void output() &#123;</span><br><span class="line">        cout &lt;&lt; &quot;学号\t姓名\t分数&quot; &lt;&lt; endl;</span><br><span class="line">        for (int i = 0; i &lt; length; i++) &#123;</span><br><span class="line">            cout &lt;&lt; data[i].num &lt;&lt; &quot;\t&quot; &lt;&lt; data[i].name &lt;&lt; &quot;\t&quot; &lt;&lt; data[i].score &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    long a;</span><br><span class="line">    char b[10];</span><br><span class="line">    float c;</span><br><span class="line">    ScoreList list;</span><br><span class="line">    list.output();</span><br><span class="line">    cout &lt;&lt; &quot;删除一个学生，请输入学生学号&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    list.del(a);</span><br><span class="line">    list.output();</span><br><span class="line">    cout &lt;&lt; &quot;插入一个新学生（学号 姓名 分数 ）用空格隔开&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">    Student newStu = &#123; a, &quot;&quot;, c &#125;;</span><br><span class="line">    strcpy_s(newStu.name, b); // 使用 strcpy 函数复制字符串</span><br><span class="line">    list.insert(newStu);</span><br><span class="line">    list.output();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -6512,20 +6512,6 @@ Wushuo</p>
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用在线计算工具</title>
-    <url>/posts/4b4dd526.html</url>
-    <content><![CDATA[<h1>概率论与数理统计</h1>
-<p><a href="https://www.23bei.com/tool/147.html">排列组合在线计算器 (23bei.com)</a></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>在线计算工具</category>
-      </categories>
-      <tags>
-        <tag>理</tag>
       </tags>
   </entry>
   <entry>
@@ -7296,6 +7282,20 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
+    <title>常用在线计算工具</title>
+    <url>/posts/4b4dd526.html</url>
+    <content><![CDATA[<h1>概率论与数理统计</h1>
+<p><a href="https://www.23bei.com/tool/147.html">排列组合在线计算器 (23bei.com)</a></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>在线计算工具</category>
+      </categories>
+      <tags>
+        <tag>理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手把手教你用新版OBS虚拟摄像头</title>
     <url>/posts/f885f05a.html</url>
     <content><![CDATA[<blockquote>
@@ -7406,6 +7406,41 @@ Wushuo</p>
       </categories>
       <tags>
         <tag>手把手教程系列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
+    <url>/posts/7c7bd47d.html</url>
+    <content><![CDATA[<p>30个队伍排名第18还行，有一个队伍弃权没来，两个队伍作弊被ban了，顺延2名，最终第16，广外和南理的师傅太强了，山警的大哥被ban了不然也是前三<br>
+11月24就已经打完了，一直没来得及写心得</p>
+<p><img src="/img/jnxl2023/1701356901716.jpg" alt="1701356901716"><br>
+可能是因为团队赛吧<br>
+感觉比科来打的好点<br>
+有好几个题都是差一点<br>
+我交了两个简单题，逆了一个misc的pyc，也是没拖后腿<br>
+misc这个题是很有意思的，压缩包有密码，可以暴力破解出来，然后三个附件，其中一个是一首诗，很有意思，但是不知道这首诗是有什么用，这题就差一点了，没做出来。<br>
+发现了自己还有很多东西没学没掌握好，re的花指令，动态调试，老东西直接秒了的题，我不会</p>
+<p>见到了西邮的师傅</p>
+<p>另外说一下对组委会的印象<br>
+评价是一坨稀烂<br>
+连个纪念品都没有，也没手提包，整场下来就给个参赛证，然后报告厅像个教室，甚至还不如我们的教室大（<br>
+进赛场之后桌子上一人一份伙食（一包奶一个面包一根火腿肠，我的天我们还以为这是早饭，没想到这是午饭）<br>
+中途上了一遍零食（好丽友＋一根火腿肠）爆笑如雷了，在济南都是组委包吃住，酒店随便吃的<br>
+还有更抽象的<br>
+上午10:30开赛，到时间准时开赛准时断电，布置赛场也偷工减料了吧，供电不足直接断电了，抢修了一个小时导致比赛延后了<br>
+然后中途上了一次电，信号屏蔽仪直接嘎嘣冒烟，当场炸了，还有好几位师傅的电源适配器给烧了（<s>byd这才是应急响应是吧</s></p>
+<p>这也是裁判长最忙的一次，山警大哥应该是比赛过程中询问wp，说的很含糊然后就ban了，还有带手机被听见了，但是没被逮住，辗优就在我隔壁，很强的一个热点信号</p>
+<p>三等奖，也算是没白来，威海那个去了大概能拿个一等，他们组委举办的也还行，就是路费太高了，没奖金没报销<br>
+总的来说还是得练，师傅们觉得一把梭的题我要搞半天</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>比赛心得</category>
+        <category>省赛</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>技能兴鲁</tag>
       </tags>
   </entry>
   <entry>
@@ -7992,41 +8027,6 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
-    <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
-    <url>/posts/7c7bd47d.html</url>
-    <content><![CDATA[<p>30个队伍排名第18还行，有一个队伍弃权没来，两个队伍作弊被ban了，顺延2名，最终第16，广外和南理的师傅太强了，山警的大哥被ban了不然也是前三<br>
-11月24就已经打完了，一直没来得及写心得</p>
-<p><img src="/img/jnxl2023/1701356901716.jpg" alt="1701356901716"><br>
-可能是因为团队赛吧<br>
-感觉比科来打的好点<br>
-有好几个题都是差一点<br>
-我交了两个简单题，逆了一个misc的pyc，也是没拖后腿<br>
-misc这个题是很有意思的，压缩包有密码，可以暴力破解出来，然后三个附件，其中一个是一首诗，很有意思，但是不知道这首诗是有什么用，这题就差一点了，没做出来。<br>
-发现了自己还有很多东西没学没掌握好，re的花指令，动态调试，老东西直接秒了的题，我不会</p>
-<p>见到了西邮的师傅</p>
-<p>另外说一下对组委会的印象<br>
-评价是一坨稀烂<br>
-连个纪念品都没有，也没手提包，整场下来就给个参赛证，然后报告厅像个教室，甚至还不如我们的教室大（<br>
-进赛场之后桌子上一人一份伙食（一包奶一个面包一根火腿肠，我的天我们还以为这是早饭，没想到这是午饭）<br>
-中途上了一遍零食（好丽友＋一根火腿肠）爆笑如雷了，在济南都是组委包吃住，酒店随便吃的<br>
-还有更抽象的<br>
-上午10:30开赛，到时间准时开赛准时断电，布置赛场也偷工减料了吧，供电不足直接断电了，抢修了一个小时导致比赛延后了<br>
-然后中途上了一次电，信号屏蔽仪直接嘎嘣冒烟，当场炸了，还有好几位师傅的电源适配器给烧了（<s>byd这才是应急响应是吧</s></p>
-<p>这也是裁判长最忙的一次，山警大哥应该是比赛过程中询问wp，说的很含糊然后就ban了，还有带手机被听见了，但是没被逮住，辗优就在我隔壁，很强的一个热点信号</p>
-<p>三等奖，也算是没白来，威海那个去了大概能拿个一等，他们组委举办的也还行，就是路费太高了，没奖金没报销<br>
-总的来说还是得练，师傅们觉得一把梭的题我要搞半天</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>比赛心得</category>
-        <category>省赛</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>技能兴鲁</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>攻防世界-Reverse-666writeup</title>
     <url>/posts/117d354d.html</url>
     <content><![CDATA[<h1>查壳</h1>
@@ -8052,6 +8052,37 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
 <p>根据三行重点计算过程，写一下逆向代码</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string v3=<span class="string">&quot;&quot;</span>; <span class="comment">// [rsp+10h] [rbp-70h]</span></span><br><span class="line">    <span class="type">int</span> v4; <span class="comment">// [rsp+78h] [rbp-8h]</span></span><br><span class="line">    <span class="type">int</span> i; <span class="comment">// [rsp+7Ch] [rbp-4h]</span></span><br><span class="line">    i = <span class="number">0</span>;</span><br><span class="line">    v4 = <span class="number">0</span>;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; enflag = &#123; <span class="number">105</span>,<span class="number">122</span>,<span class="number">119</span>,<span class="number">104</span>,<span class="number">114</span>,<span class="number">111</span>,<span class="number">122</span>,<span class="number">34</span>,<span class="number">34</span>,<span class="number">119</span>,<span class="number">34</span>,<span class="number">118</span>,<span class="number">46</span>,<span class="number">75</span>,<span class="number">34</span>,<span class="number">46</span>,<span class="number">78</span>,<span class="number">105</span>,<span class="number">0</span> &#125;;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">18</span>; i += <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        v3 += <span class="built_in">char</span>((<span class="number">18</span> ^ enflag[i]) - <span class="number">6</span>);</span><br><span class="line">        v3 += <span class="built_in">char</span>((<span class="number">18</span> ^ enflag[i + <span class="number">1</span>]) + <span class="number">6</span>);</span><br><span class="line">        v3 += <span class="built_in">char</span>(<span class="number">18</span> ^ enflag[i + <span class="number">2</span>] ^ <span class="number">6</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; v3 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 <p>unctf{b66_6b6_66b}</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>WP</category>
+        <category>RE</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>攻防世界-Reverse-easyxorwriteup</title>
+    <url>/posts/c57101a0.html</url>
+    <content><![CDATA[<h1>查壳</h1>
+<p>无壳</p>
+<h1>反编译</h1>
+<p>拉进漂亮姐姐中（IDA）</p>
+<p>shift+F12看一下字串</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" alt=""></p>
+<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" alt=""></p>
+<p>F5看一下伪代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v4; <span class="comment">// al</span></span><br><span class="line">  <span class="type">int</span> v5; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v7; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">char</span> v8; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">int</span> v9; <span class="comment">// [rsp+34h] [rbp-Ch]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line">  <span class="type">int</span> v11; <span class="comment">// [rsp+3Ch] [rbp-4h]</span></span><br><span class="line"></span><br><span class="line">  _main();</span><br><span class="line">  v11 = <span class="number">0</span>;</span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;Please input your flag:&quot;</span>);</span><br><span class="line">  <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v8 = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span> ( v8 == <span class="number">10</span> )</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">	v7 = key[v9 % <span class="number">4</span>] ^ v8;			<span class="comment">//输入的字符，进行异或操作，得到v7</span></span><br><span class="line">    <span class="keyword">while</span> ( <span class="number">1</span> )						</span><br><span class="line">    &#123;</span><br><span class="line">      v4 = v7--;					<span class="comment">//循环v7次</span></span><br><span class="line">      <span class="keyword">if</span> ( v4 &lt;= <span class="number">0</span> )				<span class="comment">//此while循环是向s[]中输入v7个1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      v3 = v11++;</span><br><span class="line">      s[v3] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v5 = v11++;						<span class="comment">//输出v7个1后，使用0与下一串1隔开	</span></span><br><span class="line">    s[v5] = <span class="number">0</span>;						</span><br><span class="line">    ++v9;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> ( v11 &lt;= <span class="number">2559</span> )				<span class="comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span></span><br><span class="line">    s[v11++] = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">2559</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( r[i] != s[i] )				<span class="comment">//进行比较</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;Lose lose lose!&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( i == <span class="number">2560</span> )</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;Win win win!&quot;</span>);</span><br><span class="line">  <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中r是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">r = [0x35, 0x2F, 0x2F, 0x32, 0x28, 0x14, 0x27, 0x3B, 0x3D, 0x70,</span><br><span class="line">     0x3C, 0x0A, 0x3D, 0x73, 0x3A, 0x0A, 0x1F, 0x73, 0x3D, 0x66,</span><br><span class="line">     0x21, 0x1C, 0x6D, 0x28]</span><br></pre></td></tr></table></figure>
+<p>key是SCNU</p>
+<h1>解密</h1>
+<p>写一下解密python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = [<span class="number">0x35</span>, <span class="number">0x2F</span>, <span class="number">0x2F</span>, <span class="number">0x32</span>, <span class="number">0x28</span>, <span class="number">0x14</span>, <span class="number">0x27</span>, <span class="number">0x3B</span>, <span class="number">0x3D</span>, <span class="number">0x70</span>,</span><br><span class="line">     <span class="number">0x3C</span>, <span class="number">0x0A</span>, <span class="number">0x3D</span>, <span class="number">0x73</span>, <span class="number">0x3A</span>, <span class="number">0x0A</span>, <span class="number">0x1F</span>, <span class="number">0x73</span>, <span class="number">0x3D</span>, <span class="number">0x66</span>,</span><br><span class="line">     <span class="number">0x21</span>, <span class="number">0x1C</span>, <span class="number">0x6D</span>, <span class="number">0x28</span>]</span><br><span class="line">key = <span class="string">&quot;SCNU&quot;</span></span><br><span class="line">flag=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(r)):</span><br><span class="line">    flag+=<span class="built_in">chr</span>(<span class="built_in">ord</span>(key[i % <span class="number">4</span>]) ^ r[i])</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
+<h1>FLAG</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flag&#123;Winn3r_n0t_L0s3r_#&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>CTF</category>
@@ -8094,37 +8125,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </categories>
       <tags>
         <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>攻防世界-Reverse-easyxorwriteup</title>
-    <url>/posts/c57101a0.html</url>
-    <content><![CDATA[<h1>查壳</h1>
-<p>无壳</p>
-<h1>反编译</h1>
-<p>拉进漂亮姐姐中（IDA）</p>
-<p>shift+F12看一下字串</p>
-<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" alt=""></p>
-<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
-<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" alt=""></p>
-<p>F5看一下伪代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v4; <span class="comment">// al</span></span><br><span class="line">  <span class="type">int</span> v5; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v7; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">char</span> v8; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">int</span> v9; <span class="comment">// [rsp+34h] [rbp-Ch]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line">  <span class="type">int</span> v11; <span class="comment">// [rsp+3Ch] [rbp-4h]</span></span><br><span class="line"></span><br><span class="line">  _main();</span><br><span class="line">  v11 = <span class="number">0</span>;</span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;Please input your flag:&quot;</span>);</span><br><span class="line">  <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v8 = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span> ( v8 == <span class="number">10</span> )</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">	v7 = key[v9 % <span class="number">4</span>] ^ v8;			<span class="comment">//输入的字符，进行异或操作，得到v7</span></span><br><span class="line">    <span class="keyword">while</span> ( <span class="number">1</span> )						</span><br><span class="line">    &#123;</span><br><span class="line">      v4 = v7--;					<span class="comment">//循环v7次</span></span><br><span class="line">      <span class="keyword">if</span> ( v4 &lt;= <span class="number">0</span> )				<span class="comment">//此while循环是向s[]中输入v7个1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      v3 = v11++;</span><br><span class="line">      s[v3] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v5 = v11++;						<span class="comment">//输出v7个1后，使用0与下一串1隔开	</span></span><br><span class="line">    s[v5] = <span class="number">0</span>;						</span><br><span class="line">    ++v9;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> ( v11 &lt;= <span class="number">2559</span> )				<span class="comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span></span><br><span class="line">    s[v11++] = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">2559</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( r[i] != s[i] )				<span class="comment">//进行比较</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;Lose lose lose!&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( i == <span class="number">2560</span> )</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;Win win win!&quot;</span>);</span><br><span class="line">  <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其中r是</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">r = [0x35, 0x2F, 0x2F, 0x32, 0x28, 0x14, 0x27, 0x3B, 0x3D, 0x70,</span><br><span class="line">     0x3C, 0x0A, 0x3D, 0x73, 0x3A, 0x0A, 0x1F, 0x73, 0x3D, 0x66,</span><br><span class="line">     0x21, 0x1C, 0x6D, 0x28]</span><br></pre></td></tr></table></figure>
-<p>key是SCNU</p>
-<h1>解密</h1>
-<p>写一下解密python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = [<span class="number">0x35</span>, <span class="number">0x2F</span>, <span class="number">0x2F</span>, <span class="number">0x32</span>, <span class="number">0x28</span>, <span class="number">0x14</span>, <span class="number">0x27</span>, <span class="number">0x3B</span>, <span class="number">0x3D</span>, <span class="number">0x70</span>,</span><br><span class="line">     <span class="number">0x3C</span>, <span class="number">0x0A</span>, <span class="number">0x3D</span>, <span class="number">0x73</span>, <span class="number">0x3A</span>, <span class="number">0x0A</span>, <span class="number">0x1F</span>, <span class="number">0x73</span>, <span class="number">0x3D</span>, <span class="number">0x66</span>,</span><br><span class="line">     <span class="number">0x21</span>, <span class="number">0x1C</span>, <span class="number">0x6D</span>, <span class="number">0x28</span>]</span><br><span class="line">key = <span class="string">&quot;SCNU&quot;</span></span><br><span class="line">flag=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(r)):</span><br><span class="line">    flag+=<span class="built_in">chr</span>(<span class="built_in">ord</span>(key[i % <span class="number">4</span>]) ^ r[i])</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
-<h1>FLAG</h1>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flag&#123;Winn3r_n0t_L0s3r_#&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>WP</category>
-        <category>RE</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -8821,6 +8821,26 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
+    <title>本博客免责声明</title>
+    <url>/posts/72e47f4f.html</url>
+    <content><![CDATA[<p>在使用本教程前，请务必阅读并理解以下内容。使用本教程即代表您同意以下用户协议：</p>
+<ol>
+<li><strong>用户协议</strong>：使用本教程即表示您同意遵守本免责声明和用户协议。若您不同意此协议，请勿使用本教程提供的信息和指南。</li>
+<li><strong>个人责任</strong>：本教程所提供的信息仅供参考，使用者需自行承担因使用产品A而产生的任何风险和后果。</li>
+<li><strong>消费责任</strong>：使用本教程涉及的任何消费或购买行为与本人无关，用户需自行对其行为负责并承担相应风险。</li>
+<li><strong>禁止转载</strong>：未经本人允许，严禁对本教程内容进行转载或再分发。任何未经授权的转载行为都将被视为侵权行为。</li>
+<li><strong>结果不保证</strong>：本教程提供的建议和技巧并不能保证用户能够取得特定的结果或效果。实际使用中的成果可能因个人技能、环境差异或其他因素而有所不同。</li>
+</ol>
+<p>在使用本教程提供的信息前，请谨慎考虑个人能力和环境因素，并在必要时寻求专业建议。对于因使用本教程而产生的任何问题或损失，我们概不负责。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>曲阜师范大学日常问题汇总</title>
     <url>/posts/8f8bbaa8.html</url>
     <content><![CDATA[<p>正在编辑……预计一学年完成</p>
@@ -9176,26 +9196,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </categories>
       <tags>
         <tag>QFNU</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>本博客免责声明</title>
-    <url>/posts/72e47f4f.html</url>
-    <content><![CDATA[<p>在使用本教程前，请务必阅读并理解以下内容。使用本教程即代表您同意以下用户协议：</p>
-<ol>
-<li><strong>用户协议</strong>：使用本教程即表示您同意遵守本免责声明和用户协议。若您不同意此协议，请勿使用本教程提供的信息和指南。</li>
-<li><strong>个人责任</strong>：本教程所提供的信息仅供参考，使用者需自行承担因使用产品A而产生的任何风险和后果。</li>
-<li><strong>消费责任</strong>：使用本教程涉及的任何消费或购买行为与本人无关，用户需自行对其行为负责并承担相应风险。</li>
-<li><strong>禁止转载</strong>：未经本人允许，严禁对本教程内容进行转载或再分发。任何未经授权的转载行为都将被视为侵权行为。</li>
-<li><strong>结果不保证</strong>：本教程提供的建议和技巧并不能保证用户能够取得特定的结果或效果。实际使用中的成果可能因个人技能、环境差异或其他因素而有所不同。</li>
-</ol>
-<p>在使用本教程提供的信息前，请谨慎考虑个人能力和环境因素，并在必要时寻求专业建议。对于因使用本教程而产生的任何问题或损失，我们概不负责。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -9620,6 +9620,116 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
+    <title>记录我的2023年</title>
+    <url>/posts/32e2a4f7.html</url>
+    <content><![CDATA[<h1>简单记录自己的 2023 年</h1>
+<blockquote>
+<p>看到朋友圈都在晒，也一直想记录一下自己的 2023 年，想不到有什么好的方法，看到康哥用博客记录，我也跟风写一下吧。</p>
+<p>非常庆幸自己有一本大厚日记本，不如真不知道怎么写这篇博文</p>
+<p>截止目前日记本已经写完三个本子了，记忆里大概是从高一下学期开始写一直到现在（虽然最近一个月没写，大抵是没空了）</p>
+<p><span style="color:#FF0000;"> 呼呼光这一篇就写了快一个小时 </span></p>
+</blockquote>
+<p><img src="/img/my2023/%E6%97%A5%E8%AE%B0%E6%9C%AC.jpg" alt="日记本"></p>
+<h2 id="孟春之月（一月）">孟春之月（一月）</h2>
+<p>翻开日记发现竟然没有 1 月，那 1 月我到底干了些什么呢，打开相册回忆一下。</p>
+<p>原因竟然是 <strong>疫情</strong>！1 月大概是大一上学期刚放寒假，那时候还在疫情时代，大家都阳了没什么好写的。</p>
+<p><img src="/img/my2023/%E5%9B%9E%E5%AE%B6.jpg" alt="日记本"></p>
+<h2 id="仲春之月（二月）">仲春之月（二月）</h2>
+<p>大一上初识 CTF，但是也没什么入门，一直处在门外边的水平</p>
+<p>整个寒假算是我 CTF 学习阶段进步比较大的一段时间，用一个寒假来入了一下门，知道了什么是编码，什么是 IDA，什么是加壳脱壳……</p>
+<p>放一波刷题记录</p>
+<p>大概是从 2 月开始跑步减肥的（虽然只减了十几斤，而且现在已经吃回来了）</p>
+<div style="display: flex; justify-content: center;">
+    <figure style="margin-right: 20px;">
+        <img src="/img/my2023/编码.png" alt="buu刷题记录" style="max-width: 100%;">
+        <figcaption> Caption for Image 1 </figcaption>
+    </figure>
+    <figure>
+        <img src="/img/my2023/ctfshow刷题.png" alt="ctfshow刷题记录" style="max-width: 100%;">
+        <figcaption> Caption for Image 2 </figcaption>
+    </figure>
+</div>
+<p>一入网安深似海，从此 hacker 不能改</p>
+<p>从小一个黑客梦，还是想感叹 <span style="color:#FF0000;"> 高考能考到自己喜欢的专业是多么幸福的一件事 </span></p>
+<h2 id="季春之月（三月）">季春之月（三月）</h2>
+<p>三月就已经开学上课了，一开始听课还能听点，结果是越来越不听了吧</p>
+<p>三月的时候还挺爱打羽毛球的，现在怎么不打了</p>
+<p>三月学院 <a href="https://mp.weixin.qq.com/s/nuZqsShR668drH-b8POC-w">班歌比赛</a>，负责剪辑班歌视频，嘻嘻，荣获一等奖，当时还跟朋友们拍了一张合影（照片里面现在貌似只剩我没对象了 hhhhh）</p>
+<p><img src="/img/my2023/%E5%90%88%E5%BD%B1.jpg" alt="合影"></p>
+<h2 id="孟夏之月（四月）">孟夏之月（四月）</h2>
+<p>四月发生的印象最深的事情就是烫了个发吧，当时还觉得蛮好看的</p>
+<p>现在已经剪没了，也没再继续烫。</p>
+<p><img src="/img/my2023/%E7%83%AB%E5%8F%91.jpg" alt="烫发"></p>
+<h2 id="仲夏之月（五月）">仲夏之月（五月）</h2>
+<p>四月五月是打扮自己最多的几个月（大概是受食人鱼的指点了吧🤔不过也确实学到点东西）</p>
+<p>跟好鸽们打电话时候的正规军。</p>
+<p><img src="/img/my2023/gwl%E8%A7%86%E9%A2%91%E7%94%B5%E8%AF%9D.jpg" alt="视频电话"></p>
+<p>在毕业晚会幕后道具工作</p>
+<div style="display: flex; align-items: flex-start;">
+    <div style="flex: 1; text-align: center;">
+        <img src="/img/my2023/毕业晚会门票.jpg" alt="毕业晚会门票" style="width: 85%; vertical-align: top;">
+        <p style="text-align: center;"> 毕业晚会门票 </p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="/img/my2023/毕业晚会幕后.jpg" alt="毕业晚会幕后" style="width: 100%; vertical-align: bottom;">
+        <p style="text-align: center;"> 毕业晚会幕后 </p>
+    </div>
+</div>
+<p>5 月 20 号简历设计大赛二等奖 <span style="color:#FF0000;"> 证书 </span> 发下来了</p>
+<p>5 月 30 号，二阳了</p>
+<h2 id="季夏之月（六月）">季夏之月（六月）</h2>
+<p>这个月一开始看了历史文化学院的最美汉服代言人表演，太惊艳了，全是戏曲</p>
+<p><img src="/img/my2023/%E6%B1%89%E6%9C%8D%E4%BB%A3%E8%A8%80%E4%BA%BA.jpg" alt="最美汉服代言人"></p>
+<p>上课看完了深海哈哈哈哈，物理课不听课看电影，挺有教育意义的一部动画电影</p>
+<p><img src="/img/my2023/%E6%B7%B1%E6%B5%B7.jpg" alt="深海"></p>
+<p>填了积极分子相关资料</p>
+<p>在百佳宿舍评选幕后，也是这时候认识了 myk 师哥</p>
+<p><img src="/img/my2023/%E7%99%BE%E4%BD%B3%E5%AE%BF%E8%88%8D.jpg" alt="百佳宿舍"></p>
+<p>献血最光荣嘻嘻，我不在意最后这一袋血会拿去干什么，至于他是否被卖掉或者被浪费，我不关心，但行好事莫问前程</p>
+<p><img src="/img/my2023/%E7%8C%AE%E8%A1%80.jpg" alt="献血"></p>
+<p>月末放暑假假回家咯</p>
+<p><img src="/img/my2023/%E6%9A%91%E5%81%87%E6%94%BE%E5%81%87.jpg" alt="暑假极爱"></p>
+<p>讲真的，这次回家是为了考驾照，如果不是为了考驾照，我是真的想留校学习的，毕竟还有很多东西要学。</p>
+<h2 id="孟秋之月（七月）">孟秋之月（七月）</h2>
+<p>考驾照的第一个月，下半身没做防晒，从脚踝开始上面是黑的下面是白的，已经是泾渭分明了</p>
+<p><img src="/img/my2023/%E8%85%BF%E5%AD%90.jpg" alt="黑白分明"></p>
+<p>好在科一到科四都一把过，科二满分，驾照到手，也算没白费</p>
+<h2 id="仲秋之月（八月）">仲秋之月（八月）</h2>
+<p>8 月多久已经快开学了，我实在是在家待不住了，提前返校学一会，不得不说，一个人是真的舒服</p>
+<p>见证了日本核污水不负责任排放大海</p>
+<p><img src="/img/my2023/%E6%9B%B2%E9%98%9C%E6%B1%BD%E8%BD%A6%E7%AB%99.jpg" alt=""></p>
+<p>8 月 23 一次突发奇想，做了大学时代的第一个面向全校的公益项目（也不能说是项目）——<a href="https://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/#/">曲阜师范大学选课指北</a>，旨在帮助大家选择合适的任课老师</p>
+<p>目前已经有 120+参与贡献者，浏览量 4w+</p>
+<p><img src="/img/my2023/%E9%80%89%E8%AF%BE%E6%8C%87%E5%8C%97.png" alt="image-20231231234930273"></p>
+<h2 id="季秋之月（九月）">季秋之月（九月）</h2>
+<p>九月迎新，大一新生开学了，也是又老了一年，接了两个师弟。</p>
+<p>然后紧张激烈的纳新也开始了，出席了社团管理部的宣讲，网络空间安全协会的宣讲，还有有关于逆向等方面的知识（虽然我也很菜）</p>
+<h2 id="孟冬之月（十月）">孟冬之月（十月）</h2>
+<p>十月一回来之后就长胖了，再也没减下去</p>
+<p>认识了几个大一的师弟师妹，都挺好的，好学又调皮可爱</p>
+<p>然后就是去山东警察学院打了省赛，跟着师哥去打了科来杯，人生第一次线下赛，总体体验还是学到很多东西的，特别是让我明白人外有人，自己永远是菜狗</p>
+<p><a href="https://w1ndys.top/2023/10/29/CTF_think_kelai_10/#/">科来杯心得</a></p>
+<p><img src="https://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" alt="山东警察学院大门"></p>
+<p><img src="/img/my2023/%E7%A7%91%E6%9D%A5%E6%9D%AF.jpg" alt="科来杯"></p>
+<h2 id="仲冬之月（十一月）">仲冬之月（十一月）</h2>
+<p>十一月在迎新晚会幕后主持道具组</p>
+<p><a href="https://w1ndys.top/2023/11/30/CTF_think_jnxl2023/#/">参加了技能兴鲁网络安全技能挑战赛</a></p>
+<p><img src="/img/my2023/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81.jpg" alt="技能兴鲁"></p>
+<p><img src="https://w1ndys.top/img/jnxl2023/1701356901716.jpg" alt=""></p>
+<p>好大儿送的一本刑法，旨在叫我好好遵守网络安全法，将来做一个白帽子不要误入歧途</p>
+<p><img src="/img/my2023/%E5%A5%BD%E5%A4%A7%E5%84%BF.png" alt="好大儿"></p>
+<h2 id="季冬之月（十二月）">季冬之月（十二月）</h2>
+<p>已经沦为卷比的形状了捏😭😭😭😭😭😭</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>W1ndys年度总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>超星学习通/刷课脚本安装教程</title>
     <url>/posts/12c45bcf.html</url>
     <content><![CDATA[<blockquote>
@@ -9775,116 +9885,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
         <tag>线上课答案库</tag>
         <tag>超星学习通</tag>
         <tag>刷课脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录我的2023年</title>
-    <url>/posts/32e2a4f7.html</url>
-    <content><![CDATA[<h1>简单记录自己的 2023 年</h1>
-<blockquote>
-<p>看到朋友圈都在晒，也一直想记录一下自己的 2023 年，想不到有什么好的方法，看到康哥用博客记录，我也跟风写一下吧。</p>
-<p>非常庆幸自己有一本大厚日记本，不如真不知道怎么写这篇博文</p>
-<p>截止目前日记本已经写完三个本子了，记忆里大概是从高一下学期开始写一直到现在（虽然最近一个月没写，大抵是没空了）</p>
-<p><span style="color:#FF0000;"> 呼呼光这一篇就写了快一个小时 </span></p>
-</blockquote>
-<p><img src="/img/my2023/%E6%97%A5%E8%AE%B0%E6%9C%AC.jpg" alt="日记本"></p>
-<h2 id="孟春之月（一月）">孟春之月（一月）</h2>
-<p>翻开日记发现竟然没有 1 月，那 1 月我到底干了些什么呢，打开相册回忆一下。</p>
-<p>原因竟然是 <strong>疫情</strong>！1 月大概是大一上学期刚放寒假，那时候还在疫情时代，大家都阳了没什么好写的。</p>
-<p><img src="/img/my2023/%E5%9B%9E%E5%AE%B6.jpg" alt="日记本"></p>
-<h2 id="仲春之月（二月）">仲春之月（二月）</h2>
-<p>大一上初识 CTF，但是也没什么入门，一直处在门外边的水平</p>
-<p>整个寒假算是我 CTF 学习阶段进步比较大的一段时间，用一个寒假来入了一下门，知道了什么是编码，什么是 IDA，什么是加壳脱壳……</p>
-<p>放一波刷题记录</p>
-<p>大概是从 2 月开始跑步减肥的（虽然只减了十几斤，而且现在已经吃回来了）</p>
-<div style="display: flex; justify-content: center;">
-    <figure style="margin-right: 20px;">
-        <img src="/img/my2023/编码.png" alt="buu刷题记录" style="max-width: 100%;">
-        <figcaption> Caption for Image 1 </figcaption>
-    </figure>
-    <figure>
-        <img src="/img/my2023/ctfshow刷题.png" alt="ctfshow刷题记录" style="max-width: 100%;">
-        <figcaption> Caption for Image 2 </figcaption>
-    </figure>
-</div>
-<p>一入网安深似海，从此 hacker 不能改</p>
-<p>从小一个黑客梦，还是想感叹 <span style="color:#FF0000;"> 高考能考到自己喜欢的专业是多么幸福的一件事 </span></p>
-<h2 id="季春之月（三月）">季春之月（三月）</h2>
-<p>三月就已经开学上课了，一开始听课还能听点，结果是越来越不听了吧</p>
-<p>三月的时候还挺爱打羽毛球的，现在怎么不打了</p>
-<p>三月学院 <a href="https://mp.weixin.qq.com/s/nuZqsShR668drH-b8POC-w">班歌比赛</a>，负责剪辑班歌视频，嘻嘻，荣获一等奖，当时还跟朋友们拍了一张合影（照片里面现在貌似只剩我没对象了 hhhhh）</p>
-<p><img src="/img/my2023/%E5%90%88%E5%BD%B1.jpg" alt="合影"></p>
-<h2 id="孟夏之月（四月）">孟夏之月（四月）</h2>
-<p>四月发生的印象最深的事情就是烫了个发吧，当时还觉得蛮好看的</p>
-<p>现在已经剪没了，也没再继续烫。</p>
-<p><img src="/img/my2023/%E7%83%AB%E5%8F%91.jpg" alt="烫发"></p>
-<h2 id="仲夏之月（五月）">仲夏之月（五月）</h2>
-<p>四月五月是打扮自己最多的几个月（大概是受食人鱼的指点了吧🤔不过也确实学到点东西）</p>
-<p>跟好鸽们打电话时候的正规军。</p>
-<p><img src="/img/my2023/gwl%E8%A7%86%E9%A2%91%E7%94%B5%E8%AF%9D.jpg" alt="视频电话"></p>
-<p>在毕业晚会幕后道具工作</p>
-<div style="display: flex; align-items: flex-start;">
-    <div style="flex: 1; text-align: center;">
-        <img src="/img/my2023/毕业晚会门票.jpg" alt="毕业晚会门票" style="width: 85%; vertical-align: top;">
-        <p style="text-align: center;"> 毕业晚会门票 </p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="/img/my2023/毕业晚会幕后.jpg" alt="毕业晚会幕后" style="width: 100%; vertical-align: bottom;">
-        <p style="text-align: center;"> 毕业晚会幕后 </p>
-    </div>
-</div>
-<p>5 月 20 号简历设计大赛二等奖 <span style="color:#FF0000;"> 证书 </span> 发下来了</p>
-<p>5 月 30 号，二阳了</p>
-<h2 id="季夏之月（六月）">季夏之月（六月）</h2>
-<p>这个月一开始看了历史文化学院的最美汉服代言人表演，太惊艳了，全是戏曲</p>
-<p><img src="/img/my2023/%E6%B1%89%E6%9C%8D%E4%BB%A3%E8%A8%80%E4%BA%BA.jpg" alt="最美汉服代言人"></p>
-<p>上课看完了深海哈哈哈哈，物理课不听课看电影，挺有教育意义的一部动画电影</p>
-<p><img src="/img/my2023/%E6%B7%B1%E6%B5%B7.jpg" alt="深海"></p>
-<p>填了积极分子相关资料</p>
-<p>在百佳宿舍评选幕后，也是这时候认识了 myk 师哥</p>
-<p><img src="/img/my2023/%E7%99%BE%E4%BD%B3%E5%AE%BF%E8%88%8D.jpg" alt="百佳宿舍"></p>
-<p>献血最光荣嘻嘻，我不在意最后这一袋血会拿去干什么，至于他是否被卖掉或者被浪费，我不关心，但行好事莫问前程</p>
-<p><img src="/img/my2023/%E7%8C%AE%E8%A1%80.jpg" alt="献血"></p>
-<p>月末放暑假假回家咯</p>
-<p><img src="/img/my2023/%E6%9A%91%E5%81%87%E6%94%BE%E5%81%87.jpg" alt="暑假极爱"></p>
-<p>讲真的，这次回家是为了考驾照，如果不是为了考驾照，我是真的想留校学习的，毕竟还有很多东西要学。</p>
-<h2 id="孟秋之月（七月）">孟秋之月（七月）</h2>
-<p>考驾照的第一个月，下半身没做防晒，从脚踝开始上面是黑的下面是白的，已经是泾渭分明了</p>
-<p><img src="/img/my2023/%E8%85%BF%E5%AD%90.jpg" alt="黑白分明"></p>
-<p>好在科一到科四都一把过，科二满分，驾照到手，也算没白费</p>
-<h2 id="仲秋之月（八月）">仲秋之月（八月）</h2>
-<p>8 月多久已经快开学了，我实在是在家待不住了，提前返校学一会，不得不说，一个人是真的舒服</p>
-<p>见证了日本核污水不负责任排放大海</p>
-<p><img src="/img/my2023/%E6%9B%B2%E9%98%9C%E6%B1%BD%E8%BD%A6%E7%AB%99.jpg" alt=""></p>
-<p>8 月 23 一次突发奇想，做了大学时代的第一个面向全校的公益项目（也不能说是项目）——<a href="https://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/#/">曲阜师范大学选课指北</a>，旨在帮助大家选择合适的任课老师</p>
-<p>目前已经有 120+参与贡献者，浏览量 4w+</p>
-<p><img src="/img/my2023/%E9%80%89%E8%AF%BE%E6%8C%87%E5%8C%97.png" alt="image-20231231234930273"></p>
-<h2 id="季秋之月（九月）">季秋之月（九月）</h2>
-<p>九月迎新，大一新生开学了，也是又老了一年，接了两个师弟。</p>
-<p>然后紧张激烈的纳新也开始了，出席了社团管理部的宣讲，网络空间安全协会的宣讲，还有有关于逆向等方面的知识（虽然我也很菜）</p>
-<h2 id="孟冬之月（十月）">孟冬之月（十月）</h2>
-<p>十月一回来之后就长胖了，再也没减下去</p>
-<p>认识了几个大一的师弟师妹，都挺好的，好学又调皮可爱</p>
-<p>然后就是去山东警察学院打了省赛，跟着师哥去打了科来杯，人生第一次线下赛，总体体验还是学到很多东西的，特别是让我明白人外有人，自己永远是菜狗</p>
-<p><a href="https://w1ndys.top/2023/10/29/CTF_think_kelai_10/#/">科来杯心得</a></p>
-<p><img src="https://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" alt="山东警察学院大门"></p>
-<p><img src="/img/my2023/%E7%A7%91%E6%9D%A5%E6%9D%AF.jpg" alt="科来杯"></p>
-<h2 id="仲冬之月（十一月）">仲冬之月（十一月）</h2>
-<p>十一月在迎新晚会幕后主持道具组</p>
-<p><a href="https://w1ndys.top/2023/11/30/CTF_think_jnxl2023/#/">参加了技能兴鲁网络安全技能挑战赛</a></p>
-<p><img src="/img/my2023/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81.jpg" alt="技能兴鲁"></p>
-<p><img src="https://w1ndys.top/img/jnxl2023/1701356901716.jpg" alt=""></p>
-<p>好大儿送的一本刑法，旨在叫我好好遵守网络安全法，将来做一个白帽子不要误入歧途</p>
-<p><img src="/img/my2023/%E5%A5%BD%E5%A4%A7%E5%84%BF.png" alt="好大儿"></p>
-<h2 id="季冬之月（十二月）">季冬之月（十二月）</h2>
-<p>已经沦为卷比的形状了捏😭😭😭😭😭😭</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>W1ndys年度总结</tag>
       </tags>
   </entry>
   <entry>
