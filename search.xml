@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++常用的代码模板</title>
+    <url>/posts/b138fb0c.html</url>
+    <content><![CDATA[<h1>生成随机数</h1>
+<h2 id="源代码">源代码</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line">    <span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个随机数生成器</span></span><br><span class="line">    <span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line">    <span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 生成并打印一个随机数</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Random number: &quot;</span> &lt;&lt; <span class="built_in">distribution</span>(generator) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="摘要">摘要</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line"><span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个随机数生成器</span></span><br><span class="line"><span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line"><span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">distribution(generator)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;chrono&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>常用代码</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2023山东省“技能兴鲁”职业技能大赛-网络安全赛项-学生组初赛CTF实操题wp（部分）</title>
     <url>/posts/25815978.html</url>
     <content><![CDATA[<h1>RE</h1>
@@ -139,19 +158,52 @@
       </tags>
   </entry>
   <entry>
-    <title>C++常用的代码模板</title>
-    <url>/posts/b138fb0c.html</url>
-    <content><![CDATA[<h1>生成随机数</h1>
-<h2 id="源代码">源代码</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line">    <span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个随机数生成器</span></span><br><span class="line">    <span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line">    <span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 生成并打印一个随机数</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Random number: &quot;</span> &lt;&lt; <span class="built_in">distribution</span>(generator) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="摘要">摘要</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用当前时间作为随机数生成器的种子</span></span><br><span class="line"><span class="type">unsigned</span> seed = chrono::system_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个随机数生成器</span></span><br><span class="line"><span class="function">default_random_engine <span class="title">generator</span><span class="params">(seed)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个均匀分布的随机数生成器，范围从1到100</span></span><br><span class="line"><span class="function">uniform_int_distribution&lt;<span class="type">int</span>&gt; <span class="title">distribution</span><span class="params">(<span class="number">1</span>,<span class="number">100</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">distribution(generator)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;chrono&gt;</span><br></pre></td></tr></table></figure>
+    <title>C++类的基本学习</title>
+    <url>/posts/a8f20fc2.html</url>
+    <content><![CDATA[<p>（因为上学期C++选修课没认真听，导致这学期数据结构啥也不会，好吧，出来混迟早是要还的，现在开始恶补C++）</p>
+<p>目前需要学习/复习的内容是</p>
+<ol>
+<li>C++类</li>
+<li>C++结构体</li>
+<li>template模板类</li>
+<li>双链表的插入和删除</li>
+<li>C++DataType的用法</li>
+<li>mod运算在C++的应用
+<ol>
+<li>保证小于最大长度</li>
+<li>数组指针绕回</li>
+<li>数组前移</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1>C++ 类 &amp; 对象</h1>
+<p>C++ 在 C 语言的基础上增加了面向对象编程，C++ 支持面向对象程序设计。类是 C++ 的核心特性，通常被称为用户定义的类型。</p>
+<p>类用于指定对象的形式，是一种用户自定义的数据类型，它是一种封装了数据和函数的组合。类中的数据称为成员变量，函数称为成员函数。类可以被看作是一种模板，可以用来创建具有相同属性和行为的多个对象。</p>
+<h2 id="C-类定义">C++ 类定义</h2>
+<p>定义一个类需要使用关键字 <strong>class</strong>，然后指定类的名称，并类的主体是包含在一对花括号中，主体包含类的成员变量和成员函数。</p>
+<p>定义一个类，本质上是定义一个数据类型的蓝图，它定义了类的对象包括了什么，以及可以在这个对象上执行哪些操作。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11.png" alt="img"></p>
+<p>以下实例我们使用关键字 <strong>class</strong> 定义 Box 数据类型，包含了三个成员变量 length、breadth 和 height：</p>
+<p>class Box {   public:      double length;   // 盒子的长度      double breadth;  // 盒子的宽度      double height;   // 盒子的高度 };</p>
+<p>关键字 <strong>public</strong> 确定了类成员的访问属性。在类对象作用域内，公共成员在类的外部是可访问的。您也可以指定类的成员为 <strong>private</strong> 或 <strong>protected</strong>，这个我们稍后会进行讲解。</p>
+<h2 id="定义-C-对象">定义 C++ 对象</h2>
+<p>类提供了对象的蓝图，所以基本上，对象是根据类来创建的。声明类的对象，就像声明基本类型的变量一样。下面的语句声明了类 Box 的两个对象：</p>
+<p>Box Box1;          // 声明 Box1，类型为 Box Box Box2;          // 声明 Box2，类型为 Box</p>
+<p>对象 Box1 和 Box2 都有它们各自的数据成员。</p>
+<h2 id="访问数据成员">访问数据成员</h2>
+<p>类的对象的公共数据成员可以使用直接成员访问运算符 <strong>.</strong> 来访问。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11-2.png" alt="img"></p>
+<p>为了更好地理解这些概念，让我们尝试一下下面的实例：</p>
+<h2 id="实例">实例</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="type">double</span> length;   <span class="comment">// 长度</span></span><br><span class="line">      <span class="type">double</span> breadth;  <span class="comment">// 宽度</span></span><br><span class="line">      <span class="type">double</span> height;   <span class="comment">// 高度</span></span><br><span class="line">      <span class="comment">// 成员函数声明</span></span><br><span class="line">      <span class="function"><span class="type">double</span> <span class="title">get</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line">      <span class="function"><span class="type">void</span> <span class="title">set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei )</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 成员函数定义</span></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Box::get</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> length * breadth * height;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Box::set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    length = len;</span><br><span class="line">    breadth = bre;</span><br><span class="line">    height = hei;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Box Box1;        <span class="comment">// 声明 Box1，类型为 Box</span></span><br><span class="line">   Box Box2;        <span class="comment">// 声明 Box2，类型为 Box</span></span><br><span class="line">   Box Box3;        <span class="comment">// 声明 Box3，类型为 Box</span></span><br><span class="line">   <span class="type">double</span> volume = <span class="number">0.0</span>;     <span class="comment">// 用于存储体积</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 详述</span></span><br><span class="line">   Box1.height = <span class="number">5.0</span>; </span><br><span class="line">   Box1.length = <span class="number">6.0</span>; </span><br><span class="line">   Box1.breadth = <span class="number">7.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 详述</span></span><br><span class="line">   Box2.height = <span class="number">10.0</span>;</span><br><span class="line">   Box2.length = <span class="number">12.0</span>;</span><br><span class="line">   Box2.breadth = <span class="number">13.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 的体积</span></span><br><span class="line">   volume = Box1.height * Box1.length * Box1.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box1 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 的体积</span></span><br><span class="line">   volume = Box2.height * Box2.length * Box2.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box2 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 3 详述</span></span><br><span class="line">   Box3.<span class="built_in">set</span>(<span class="number">16.0</span>, <span class="number">8.0</span>, <span class="number">12.0</span>); </span><br><span class="line">   volume = Box3.<span class="built_in">get</span>(); </span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box3 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Box1 的体积：210</span><br><span class="line">Box2 的体积：1560</span><br><span class="line">Box3 的体积：1536</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，私有的成员和受保护的成员不能使用直接成员访问运算符 (.) 来直接访问。我们将在后续的教程中学习如何访问私有成员和受保护的成员。</p>
 ]]></content>
       <categories>
         <category>C++</category>
-        <category>常用代码</category>
+        <category>类</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -238,55 +290,121 @@
       </tags>
   </entry>
   <entry>
-    <title>C++类的基本学习</title>
-    <url>/posts/a8f20fc2.html</url>
-    <content><![CDATA[<p>（因为上学期C++选修课没认真听，导致这学期数据结构啥也不会，好吧，出来混迟早是要还的，现在开始恶补C++）</p>
-<p>目前需要学习/复习的内容是</p>
-<ol>
-<li>C++类</li>
-<li>C++结构体</li>
-<li>template模板类</li>
-<li>双链表的插入和删除</li>
-<li>C++DataType的用法</li>
-<li>mod运算在C++的应用
-<ol>
-<li>保证小于最大长度</li>
-<li>数组指针绕回</li>
-<li>数组前移</li>
-</ol>
-</li>
-</ol>
+    <title>CTF入门指北——web</title>
+    <url>/posts/c162917a.html</url>
+    <content><![CDATA[<h1>moectf2023 web 入门指南</h1>
+<p>Klutton</p>
+<h1>知识和资源的获取</h1>
+<p>前言</p>
+<p>ctf知识的学习与课内一板一眼式的教书不同，如果你想要获得成长的能力，那么你 必须 获取 自主获取知识 的 能力，如果你是一个初学者，这是一个脱离以前填鸭式应试教育的学习模式，你需要不得不逐步适应新的学习 方式， 这样的能力不管在哪个方向，甚至在别的竞赛学科中，都是必要的</p>
+<p>这样的学习方式是受益终生的，不是吗？</p>
+<h2 id="从公开资源获取知识和资源">从公开资源获取知识和资源</h2>
+<p>这个目录表是有难易顺序的，因为每一个途径都需要一定的经验和知识才能掌握</p>
+<h3 id="搜索引擎">搜索引擎</h3>
+<p>优先选择bing和google</p>
+<p>不会就先搜，搜索引擎的速度肯定比管理员回消息快</p>
+<p>在上面两引擎信息不足情况下考虑其他引擎</p>
+<h3 id="人工智能">人工智能</h3>
+<p>随着时代的发展，从2023年（笔者确信）开始，无论国内外，语言模型的发展使得我们可以大概 地与人工智能沟通获取知识，人工智能不怕累、不怕麻烦，值得重复问一些简单问题</p>
+<p>如果不知道怎么弄，请接着看下面的内容</p>
+<h3 id="GitHub等开源社区">GitHub等开源社区</h3>
+<p>搜索关键词，可能有热心的开源作者汇集的一些某某大全形式的攻击载荷，忘了就去翻翻嘛</p>
+<p>例子：</p>
+<p>​		PayloadsAlltheThings —— payload大全</p>
+<p>​		vulhub的docker（需要会使用搭配相应漏洞知识）</p>
+<p>如果觉得你访问的仓库有价值，不妨给仓库一个一个star</p>
+<h3 id="从私下获取资源">从私下获取资源</h3>
+<p>有些知识在互联网上传播是有风险的，例如怎么上GitHub，我老是上不去，不妨私下问问你的室友如何解决 <s>或 者你可以陪我跑跑山吃吃饭的时候聊一聊</s></p>
+<p>例如：chatgpt不允许国内访问；openai的账号注册需要外国手机号码</p>
+<p>那你可以找朋友问一问，借一借</p>
+<h3 id="从私下获取知识">从私下获取知识</h3>
+<p>那就和问老师问题一样嘛（而且老师还比同学多出来一个教人的义务），主要几点</p>
+<p>不要问“在吗？”一类的字眼，言语谦逊地完整提出问题再等待答复</p>
+<p>被提问者不一定了解具体的细节，要及时补充要求的具体内容</p>
+<p>如果被问者也不知道，请原谅他</p>
+<p>如果认为受益匪浅，不妨给出物质上的答谢</p>
+<h4 id="综上，遇到不会的怎么办">综上，遇到不会的怎么办</h4>
+<p>把你认为是特征内容的复制下来</p>
+<p>扔给上面提到的资源</p>
+<h2 id="如何练习">如何练习</h2>
+<h4 id="一些练习场">一些练习场</h4>
+<p>buuoj</p>
+<p>bugku （可以看三哈师傅的网站了解更多平台）<a href="https://www.su-sanha.cn/platforms">https://www.su-sanha.cn/platforms</a></p>
+<p>需要知道的：<strong>靶场分普通的ctf靶场，有的是awd或者awdp，有的则是给你一个虚拟机自己从头到尾拿下系统 权限（vulnhub）最前者是最基础的，如果想要了解完整真实的渗透流程，可以去尝试vulnhub这类网站</strong></p>
+<h4 id="学会查看题解write-up（wp）">学会查看题解write up（wp）</h4>
+<p>在平时的练习中，肯定会遇到不会的题，千万不要死磕，不会就看wp，下一道更好！ 在搜索引擎或者开源社 区查找wp，在看wp的过程中，补充并且掌握自己的不会的知识点</p>
+<h3 id="如何配置环境">如何配置环境</h3>
+<p><strong>一定要有耐心！</strong> 一套环境不是十分钟二十分钟就能配完的，对于新手而言，几天甚至一两周都有可能，反复地 确认自己的步骤、教程的日期、教程使用的系统版本是否正确；</p>
+<p>尽量选择官方网站的配置方式：寻找document字样去看文档，这是最稳的方法，但是比较费力； 可以去看私 人的文章，但不一定能成功</p>
+<p><strong>熟能生巧</strong></p>
+<p>可以自己尝试配置一套lamp环境，或者配一台虚拟机，运行一个docker</p>
+<h3 id="一些知识清单">一些知识清单</h3>
+<p>编码</p>
+<p>在网络传输中，数据被编码成为二进制内容经过网络传输之后解码，由于在这个过程中应用了不同的规则，只 有使用了相应的编码才能正确地解析内容，有很多编码形式需要你了解（正经和不正经的），在深度了解编码 规则后，你甚至可以自创独属于你的编码规则！</p>
+<p>可供参考的资料：<a href="https://www.cnblogs.com/ruoli-s/p/14206145.html">https://www.cnblogs.com/ruoli-s/p/14206145.html</a></p>
+<p>编程语言</p>
+<p>当提到计算机，不可避免地需要了解编程，事实上，已经存在相当多主流的编程语言，有一些适用于提供和处 理web服务，例如python, java, php, golang, rust，你需要具备对于这些代码最少有审计能力（看得懂在做什么）</p>
+<p>工具</p>
+<p><strong>够用</strong>：</p>
+<p>​	postman</p>
+<p>​	burp</p>
+<p>​	sqlmap</p>
+<p><strong>计网知识</strong></p>
+<p>​	标准的OSI七层模型（其实了解tcp足矣）</p>
+<p>​	了解 “协议”（例如http，https，ftp，gopher，也需要了解php伪协议）</p>
+<p><strong>HTTP</strong></p>
+<p>​	请求方法（get/post）</p>
+<p>​	请求内容（json/raw/binary）</p>
+<p>​	请求头（content-type/xff/referer/cookie）</p>
+<p><strong>服务框架</strong></p>
+<p>​	有现成的网络框架用于高效并发处理请求，所以你需要了解函数是干嘛用的，怎么处理请求的</p>
+<p>​		python: Flask, Django, Tornado</p>
+<p>​		java: Spring Boot</p>
+<p><strong>用户凭证</strong></p>
+<p>​	http是无状态协议，因此需要储存处理用户信息，你需要了解：</p>
+<p>​		cookie</p>
+<p>​		session</p>
+<p>​		jwt</p>
+<p>​	有时会涉及到用户信息伪造，例如flask框架下的session伪造，通过获取（或者弱口令爆破）secret_key来伪造 一个session，通常需要自己写脚本（或者获取GitHub现成的脚本改一改使用）</p>
+<p><strong>数据储存</strong></p>
+<p>实际上，大部分持久化信息是储存在数据库的，有的出题人为了简化流程也会直接把信息储存在内存里</p>
+<p><strong>数据库管理系统</strong>（DBMS）</p>
+<p>​	你需要知道去哪儿了解不同DBMS的sql语法，以便完成相应的挑战：</p>
+<p>​		sql injection注入：查询脚本由于过滤不严导致查询语句可控，用户得以访问数据库</p>
+<p>​				有回显</p>
+<p>​				盲注</p>
+<p>​		文件读写：通过数据库进行文件的读写，可以配合起来getshell</p>
+<p>（sql注入可以尝试sqlmap一把梭，前提是你找对了注入点）</p>
+<p><strong>反序列化</strong></p>
+<p>反序列化一直是一个离不开的话题，大体来说，序列化就是把内存里处理好的数据变成二进制内容（通常）用 来传输或储存；反序列化就是按照序列化的规则的把内容读取到内存中参与程序运行；如果反序列化不得当， 被恶意构造的内容就可能导致机器被&quot;骇入&quot;</p>
+<p>xxe（xml外部实体攻击 libxml 2.8.0以下）</p>
+<p>php反序列化（包括了解其中的魔术方法）</p>
+<p>pickle反序列化（可能会有r指令过滤不过涉及出题不多）</p>
+<p>java反序列化（pop链）</p>
+<p><strong>CMS</strong></p>
+<p>​		上网查吧（杂</p>
+<p>​		内网渗透</p>
+<p><strong>代理工具</strong></p>
+<p>配置socks代理，继续进行内网渗透</p>
+<p>​		nps</p>
+<p>​		frp</p>
+<p>​		proxifier</p>
+<p>​		proxychains</p>
+<p><strong>扫描工具</strong></p>
+<p>发现内网资产</p>
+<p>​		nmap</p>
+<p>​		fscan</p>
+<h1>结束</h1>
+<p>祝你能玩得愉快，学得愉快！</p>
 <hr>
-<h1>C++ 类 &amp; 对象</h1>
-<p>C++ 在 C 语言的基础上增加了面向对象编程，C++ 支持面向对象程序设计。类是 C++ 的核心特性，通常被称为用户定义的类型。</p>
-<p>类用于指定对象的形式，是一种用户自定义的数据类型，它是一种封装了数据和函数的组合。类中的数据称为成员变量，函数称为成员函数。类可以被看作是一种模板，可以用来创建具有相同属性和行为的多个对象。</p>
-<h2 id="C-类定义">C++ 类定义</h2>
-<p>定义一个类需要使用关键字 <strong>class</strong>，然后指定类的名称，并类的主体是包含在一对花括号中，主体包含类的成员变量和成员函数。</p>
-<p>定义一个类，本质上是定义一个数据类型的蓝图，它定义了类的对象包括了什么，以及可以在这个对象上执行哪些操作。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11.png" alt="img"></p>
-<p>以下实例我们使用关键字 <strong>class</strong> 定义 Box 数据类型，包含了三个成员变量 length、breadth 和 height：</p>
-<p>class Box {   public:      double length;   // 盒子的长度      double breadth;  // 盒子的宽度      double height;   // 盒子的高度 };</p>
-<p>关键字 <strong>public</strong> 确定了类成员的访问属性。在类对象作用域内，公共成员在类的外部是可访问的。您也可以指定类的成员为 <strong>private</strong> 或 <strong>protected</strong>，这个我们稍后会进行讲解。</p>
-<h2 id="定义-C-对象">定义 C++ 对象</h2>
-<p>类提供了对象的蓝图，所以基本上，对象是根据类来创建的。声明类的对象，就像声明基本类型的变量一样。下面的语句声明了类 Box 的两个对象：</p>
-<p>Box Box1;          // 声明 Box1，类型为 Box Box Box2;          // 声明 Box2，类型为 Box</p>
-<p>对象 Box1 和 Box2 都有它们各自的数据成员。</p>
-<h2 id="访问数据成员">访问数据成员</h2>
-<p>类的对象的公共数据成员可以使用直接成员访问运算符 <strong>.</strong> 来访问。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2015/05/cpp-classes-objects-2020-12-10-11-2.png" alt="img"></p>
-<p>为了更好地理解这些概念，让我们尝试一下下面的实例：</p>
-<h2 id="实例">实例</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="type">double</span> length;   <span class="comment">// 长度</span></span><br><span class="line">      <span class="type">double</span> breadth;  <span class="comment">// 宽度</span></span><br><span class="line">      <span class="type">double</span> height;   <span class="comment">// 高度</span></span><br><span class="line">      <span class="comment">// 成员函数声明</span></span><br><span class="line">      <span class="function"><span class="type">double</span> <span class="title">get</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line">      <span class="function"><span class="type">void</span> <span class="title">set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei )</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 成员函数定义</span></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Box::get</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> length * breadth * height;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Box::set</span><span class="params">( <span class="type">double</span> len, <span class="type">double</span> bre, <span class="type">double</span> hei)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    length = len;</span><br><span class="line">    breadth = bre;</span><br><span class="line">    height = hei;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Box Box1;        <span class="comment">// 声明 Box1，类型为 Box</span></span><br><span class="line">   Box Box2;        <span class="comment">// 声明 Box2，类型为 Box</span></span><br><span class="line">   Box Box3;        <span class="comment">// 声明 Box3，类型为 Box</span></span><br><span class="line">   <span class="type">double</span> volume = <span class="number">0.0</span>;     <span class="comment">// 用于存储体积</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 详述</span></span><br><span class="line">   Box1.height = <span class="number">5.0</span>; </span><br><span class="line">   Box1.length = <span class="number">6.0</span>; </span><br><span class="line">   Box1.breadth = <span class="number">7.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 详述</span></span><br><span class="line">   Box2.height = <span class="number">10.0</span>;</span><br><span class="line">   Box2.length = <span class="number">12.0</span>;</span><br><span class="line">   Box2.breadth = <span class="number">13.0</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 1 的体积</span></span><br><span class="line">   volume = Box1.height * Box1.length * Box1.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box1 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 2 的体积</span></span><br><span class="line">   volume = Box2.height * Box2.length * Box2.breadth;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box2 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">   <span class="comment">// box 3 详述</span></span><br><span class="line">   Box3.<span class="built_in">set</span>(<span class="number">16.0</span>, <span class="number">8.0</span>, <span class="number">12.0</span>); </span><br><span class="line">   volume = Box3.<span class="built_in">get</span>(); </span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Box3 的体积：&quot;</span> &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Box1 的体积：210</span><br><span class="line">Box2 的体积：1560</span><br><span class="line">Box3 的体积：1536</span><br></pre></td></tr></table></figure>
-<p>需要注意的是，私有的成员和受保护的成员不能使用直接成员访问运算符 (.) 来直接访问。我们将在后续的教程中学习如何访问私有成员和受保护的成员。</p>
+<p>666c61673d6257396c5933526d6533637a62454e7662575666564739666257396c513152475831637959 6c396a61474673624756755a3055684958303d</p>
 ]]></content>
       <categories>
-        <category>C++</category>
-        <category>类</category>
+        <category>CTF</category>
+        <category>CTF入门指北</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -417,144 +535,6 @@
       <tags>
         <tag>CTF</tag>
         <tag>CTF学习日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF入门指北——web</title>
-    <url>/posts/c162917a.html</url>
-    <content><![CDATA[<h1>moectf2023 web 入门指南</h1>
-<p>Klutton</p>
-<h1>知识和资源的获取</h1>
-<p>前言</p>
-<p>ctf知识的学习与课内一板一眼式的教书不同，如果你想要获得成长的能力，那么你 必须 获取 自主获取知识 的 能力，如果你是一个初学者，这是一个脱离以前填鸭式应试教育的学习模式，你需要不得不逐步适应新的学习 方式， 这样的能力不管在哪个方向，甚至在别的竞赛学科中，都是必要的</p>
-<p>这样的学习方式是受益终生的，不是吗？</p>
-<h2 id="从公开资源获取知识和资源">从公开资源获取知识和资源</h2>
-<p>这个目录表是有难易顺序的，因为每一个途径都需要一定的经验和知识才能掌握</p>
-<h3 id="搜索引擎">搜索引擎</h3>
-<p>优先选择bing和google</p>
-<p>不会就先搜，搜索引擎的速度肯定比管理员回消息快</p>
-<p>在上面两引擎信息不足情况下考虑其他引擎</p>
-<h3 id="人工智能">人工智能</h3>
-<p>随着时代的发展，从2023年（笔者确信）开始，无论国内外，语言模型的发展使得我们可以大概 地与人工智能沟通获取知识，人工智能不怕累、不怕麻烦，值得重复问一些简单问题</p>
-<p>如果不知道怎么弄，请接着看下面的内容</p>
-<h3 id="GitHub等开源社区">GitHub等开源社区</h3>
-<p>搜索关键词，可能有热心的开源作者汇集的一些某某大全形式的攻击载荷，忘了就去翻翻嘛</p>
-<p>例子：</p>
-<p>​		PayloadsAlltheThings —— payload大全</p>
-<p>​		vulhub的docker（需要会使用搭配相应漏洞知识）</p>
-<p>如果觉得你访问的仓库有价值，不妨给仓库一个一个star</p>
-<h3 id="从私下获取资源">从私下获取资源</h3>
-<p>有些知识在互联网上传播是有风险的，例如怎么上GitHub，我老是上不去，不妨私下问问你的室友如何解决 <s>或 者你可以陪我跑跑山吃吃饭的时候聊一聊</s></p>
-<p>例如：chatgpt不允许国内访问；openai的账号注册需要外国手机号码</p>
-<p>那你可以找朋友问一问，借一借</p>
-<h3 id="从私下获取知识">从私下获取知识</h3>
-<p>那就和问老师问题一样嘛（而且老师还比同学多出来一个教人的义务），主要几点</p>
-<p>不要问“在吗？”一类的字眼，言语谦逊地完整提出问题再等待答复</p>
-<p>被提问者不一定了解具体的细节，要及时补充要求的具体内容</p>
-<p>如果被问者也不知道，请原谅他</p>
-<p>如果认为受益匪浅，不妨给出物质上的答谢</p>
-<h4 id="综上，遇到不会的怎么办">综上，遇到不会的怎么办</h4>
-<p>把你认为是特征内容的复制下来</p>
-<p>扔给上面提到的资源</p>
-<h2 id="如何练习">如何练习</h2>
-<h4 id="一些练习场">一些练习场</h4>
-<p>buuoj</p>
-<p>bugku （可以看三哈师傅的网站了解更多平台）<a href="https://www.su-sanha.cn/platforms">https://www.su-sanha.cn/platforms</a></p>
-<p>需要知道的：<strong>靶场分普通的ctf靶场，有的是awd或者awdp，有的则是给你一个虚拟机自己从头到尾拿下系统 权限（vulnhub）最前者是最基础的，如果想要了解完整真实的渗透流程，可以去尝试vulnhub这类网站</strong></p>
-<h4 id="学会查看题解write-up（wp）">学会查看题解write up（wp）</h4>
-<p>在平时的练习中，肯定会遇到不会的题，千万不要死磕，不会就看wp，下一道更好！ 在搜索引擎或者开源社 区查找wp，在看wp的过程中，补充并且掌握自己的不会的知识点</p>
-<h3 id="如何配置环境">如何配置环境</h3>
-<p><strong>一定要有耐心！</strong> 一套环境不是十分钟二十分钟就能配完的，对于新手而言，几天甚至一两周都有可能，反复地 确认自己的步骤、教程的日期、教程使用的系统版本是否正确；</p>
-<p>尽量选择官方网站的配置方式：寻找document字样去看文档，这是最稳的方法，但是比较费力； 可以去看私 人的文章，但不一定能成功</p>
-<p><strong>熟能生巧</strong></p>
-<p>可以自己尝试配置一套lamp环境，或者配一台虚拟机，运行一个docker</p>
-<h3 id="一些知识清单">一些知识清单</h3>
-<p>编码</p>
-<p>在网络传输中，数据被编码成为二进制内容经过网络传输之后解码，由于在这个过程中应用了不同的规则，只 有使用了相应的编码才能正确地解析内容，有很多编码形式需要你了解（正经和不正经的），在深度了解编码 规则后，你甚至可以自创独属于你的编码规则！</p>
-<p>可供参考的资料：<a href="https://www.cnblogs.com/ruoli-s/p/14206145.html">https://www.cnblogs.com/ruoli-s/p/14206145.html</a></p>
-<p>编程语言</p>
-<p>当提到计算机，不可避免地需要了解编程，事实上，已经存在相当多主流的编程语言，有一些适用于提供和处 理web服务，例如python, java, php, golang, rust，你需要具备对于这些代码最少有审计能力（看得懂在做什么）</p>
-<p>工具</p>
-<p><strong>够用</strong>：</p>
-<p>​	postman</p>
-<p>​	burp</p>
-<p>​	sqlmap</p>
-<p><strong>计网知识</strong></p>
-<p>​	标准的OSI七层模型（其实了解tcp足矣）</p>
-<p>​	了解 “协议”（例如http，https，ftp，gopher，也需要了解php伪协议）</p>
-<p><strong>HTTP</strong></p>
-<p>​	请求方法（get/post）</p>
-<p>​	请求内容（json/raw/binary）</p>
-<p>​	请求头（content-type/xff/referer/cookie）</p>
-<p><strong>服务框架</strong></p>
-<p>​	有现成的网络框架用于高效并发处理请求，所以你需要了解函数是干嘛用的，怎么处理请求的</p>
-<p>​		python: Flask, Django, Tornado</p>
-<p>​		java: Spring Boot</p>
-<p><strong>用户凭证</strong></p>
-<p>​	http是无状态协议，因此需要储存处理用户信息，你需要了解：</p>
-<p>​		cookie</p>
-<p>​		session</p>
-<p>​		jwt</p>
-<p>​	有时会涉及到用户信息伪造，例如flask框架下的session伪造，通过获取（或者弱口令爆破）secret_key来伪造 一个session，通常需要自己写脚本（或者获取GitHub现成的脚本改一改使用）</p>
-<p><strong>数据储存</strong></p>
-<p>实际上，大部分持久化信息是储存在数据库的，有的出题人为了简化流程也会直接把信息储存在内存里</p>
-<p><strong>数据库管理系统</strong>（DBMS）</p>
-<p>​	你需要知道去哪儿了解不同DBMS的sql语法，以便完成相应的挑战：</p>
-<p>​		sql injection注入：查询脚本由于过滤不严导致查询语句可控，用户得以访问数据库</p>
-<p>​				有回显</p>
-<p>​				盲注</p>
-<p>​		文件读写：通过数据库进行文件的读写，可以配合起来getshell</p>
-<p>（sql注入可以尝试sqlmap一把梭，前提是你找对了注入点）</p>
-<p><strong>反序列化</strong></p>
-<p>反序列化一直是一个离不开的话题，大体来说，序列化就是把内存里处理好的数据变成二进制内容（通常）用 来传输或储存；反序列化就是按照序列化的规则的把内容读取到内存中参与程序运行；如果反序列化不得当， 被恶意构造的内容就可能导致机器被&quot;骇入&quot;</p>
-<p>xxe（xml外部实体攻击 libxml 2.8.0以下）</p>
-<p>php反序列化（包括了解其中的魔术方法）</p>
-<p>pickle反序列化（可能会有r指令过滤不过涉及出题不多）</p>
-<p>java反序列化（pop链）</p>
-<p><strong>CMS</strong></p>
-<p>​		上网查吧（杂</p>
-<p>​		内网渗透</p>
-<p><strong>代理工具</strong></p>
-<p>配置socks代理，继续进行内网渗透</p>
-<p>​		nps</p>
-<p>​		frp</p>
-<p>​		proxifier</p>
-<p>​		proxychains</p>
-<p><strong>扫描工具</strong></p>
-<p>发现内网资产</p>
-<p>​		nmap</p>
-<p>​		fscan</p>
-<h1>结束</h1>
-<p>祝你能玩得愉快，学得愉快！</p>
-<hr>
-<p>666c61673d6257396c5933526d6533637a62454e7662575666564739666257396c513152475831637959 6c396a61474673624756755a3055684958303d</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>CTF入门指北</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF常用刷题平台</title>
-    <url>/posts/eed2fa14.html</url>
-    <content><![CDATA[<p>1.NSSCTF，适合新手</p>
-<p><a href="https://www.nssctf.cn/index">主页 | NSSCTF</a></p>
-<p>2.攻防世界，适合新手</p>
-<p><a href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a></p>
-<p>3.CTFshow，可以进阶</p>
-<p><a href="https://ctf.show/">ctf.show</a></p>
-<p>4.buuctf，新手进阶都可以</p>
-<p><a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>平台</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -1619,6 +1599,26 @@
       </tags>
   </entry>
   <entry>
+    <title>CTF常用刷题平台</title>
+    <url>/posts/eed2fa14.html</url>
+    <content><![CDATA[<p>1.NSSCTF，适合新手</p>
+<p><a href="https://www.nssctf.cn/index">主页 | NSSCTF</a></p>
+<p>2.攻防世界，适合新手</p>
+<p><a href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a></p>
+<p>3.CTFshow，可以进阶</p>
+<p><a href="https://ctf.show/">ctf.show</a></p>
+<p>4.buuctf，新手进阶都可以</p>
+<p><a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>平台</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CTF文件头文件尾汇总</title>
     <url>/posts/4db76617.html</url>
     <content><![CDATA[<blockquote>
@@ -2212,6 +2212,51 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
       </tags>
   </entry>
   <entry>
+    <title>DS作业-2-22网安物联网-20230913</title>
+    <url>/posts/cab65f6a.html</url>
+    <content><![CDATA[<blockquote>
+<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
+</blockquote>
+<h1><strong>DS作业-2-22网安物联网-20230913</strong></h1>
+<p><strong>作业Ch1-4:  P24-P25 1.选择题</strong></p>
+<p>1-5  <u>CD</u>    B  B A A   6-9  C  <u>CE</u></p>
+<p>第九题解析</p>
+<blockquote>
+<p>这段代码的时间复杂度是O(n²)。这是因为外部循环会执行n次，而内部循环会执行2<em>i次，其中i的最大值是n。因此，最坏情况下，内部循环会执行2n次。所以，总的执行次数是n</em>(2n)，即O(n²)。这意味着，如果输入大小（即n的值）增加，那么执行时间将按平方增加。这是典型的二次时间复杂度的例子。</p>
+</blockquote>
+<h1><strong>作业Ch1-5:</strong></h1>
+<p><strong>算法编程题，给出代码、测试过程和运行结果：</strong></p>
+<p><font color='red'>这个题存疑，算法思路还没看懂</font></p>
+<p>将一个具有 n 个元素的数组A[n]向左循环移动k个位置，要求时间复杂度为O(n)，空间复杂度为O(1)。</p>
+<blockquote>
+<p>答案（来自bing ai</p>
+</blockquote>
+<p>这是一个经典的问题，可以通过三次反转数组的方法来解决。首先，我们将数组的前k个元素反转，然后将剩余的元素反转，最后将整个数组反转。这样就可以实现将数组向左循环移动k个位置。以下是具体的C++代码实现：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">(<span class="type">int</span> A[], <span class="type">int</span> start, <span class="type">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(start &lt; end) &#123;</span><br><span class="line">        <span class="built_in">swap</span>(A[start], A[end]);</span><br><span class="line">        start++;</span><br><span class="line">        end--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">leftRotate</span><span class="params">(<span class="type">int</span> A[], <span class="type">int</span> n, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">reverse</span>(A, <span class="number">0</span>, k<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">reverse</span>(A, k, n<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">reverse</span>(A, <span class="number">0</span>, n<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> A[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">sizeof</span>(A)/<span class="built_in">sizeof</span>(A[<span class="number">0</span>]);</span><br><span class="line">    <span class="type">int</span> k = <span class="number">2</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">leftRotate</span>(A, n, k);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cout &lt;&lt; A[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码首先定义了一个<code>reverse</code>函数，用于反转数组中从<code>start</code>到<code>end</code>的元素。然后定义了一个<code>leftRotate</code>函数，用于将数组向左循环移动k个位置。在<code>main</code>函数中，我们创建了一个数组，并调用了<code>leftRotate</code>函数来进行旋转。最后，我们打印出旋转后的数组。</p>
+<p>这个解决方案的时间复杂度为O(n)，空间复杂度为O(1)，满足了题目的要求。希望这个答案对你有所帮助！</p>
+<p><font color='red'>新知识，要使其不大于最大长度可以用取模运算来解决</font></p>
+<h2 id="作业Ch1-6"><strong>作业Ch1-6:</strong></h2>
+<p><strong>算法编程题，给出代码、测试过程和运行结果：</strong></p>
+<p>找出整型数组A[n]中的最大值和次最大值。</p>
+<blockquote>
+<p>答案（来自bing ai</p>
+</blockquote>
+<p>以下是一个C++代码片段，它可以找出整型数组A[n]中的最大值和次最大值。这个代码假设数组中至少有两个元素，并且所有元素都是唯一的。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">findMaxAndSecondMax</span><span class="params">(<span class="type">int</span> A[], <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> max1 = A[<span class="number">0</span>], max2 = A[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; max1) &#123;</span><br><span class="line">            max2 = max1;</span><br><span class="line">            max1 = A[i];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(A[i] &gt; max2) &#123;</span><br><span class="line">            max2 = A[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;最大值: &quot;</span> &lt;&lt; max1 &lt;&lt; <span class="string">&quot;, 次最大值: &quot;</span> &lt;&lt; max2 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> A[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">sizeof</span>(A)/<span class="built_in">sizeof</span>(A[<span class="number">0</span>]);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">findMaxAndSecondMax</span>(A, n);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码首先定义了一个<code>findMaxAndSecondMax</code>函数，用于找出数组中的最大值和次最大值。然后在<code>main</code>函数中，我们创建了一个数组，并调用了<code>findMaxAndSecondMax</code>函数来找出最大值和次最大值。希望这个答案对你有所帮助！</p>
+<h1>END</h1>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>课后作业</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DS作业-3-Ch2-22网安物联网-20230927</title>
     <url>/posts/bd11f2f0.html</url>
     <content><![CDATA[<blockquote>
@@ -2267,51 +2312,6 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 定义一个模板函数Delete，接受两个参数mink和maxk。</span><br><span class="line">2. 初始化两个指针p和q，其中p指向链表的第一个节点，q指向头节点。</span><br><span class="line">3. 进入一个while循环，条件是p不为空。</span><br><span class="line">   - 如果p指向的节点的数据在mink和maxk之间，则删除该节点，并将q的next指针指向p的next节点。然后更新p为q的next节点。</span><br><span class="line">   - 如果p指向的节点的数据不在mink和maxk之间，则将q更新为p，然后将p更新为p的next节点。</span><br><span class="line">4. 循环结束后，所有在mink和maxk之间的节点都被删除。</span><br></pre></td></tr></table></figure>
 <h2 id="源代码-2">源代码</h2>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>                  <span class="comment">//引入输入输出流</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">    DataType data;               <span class="comment">//数据域</span></span><br><span class="line">    Node&lt;DataType&gt;* next;       <span class="comment">//指针域</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkList</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">LinkList</span>();                      <span class="comment">//无参构造函数，建立只有头结点的空链表</span></span><br><span class="line">    <span class="built_in">LinkList</span>(DataType a[], <span class="type">int</span> n);       <span class="comment">//有参构造函数，建立有n个元素的单链表</span></span><br><span class="line">    ~<span class="built_in">LinkList</span>();                     <span class="comment">//析构函数</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Delete</span><span class="params">(<span class="type">int</span> mink, <span class="type">int</span> maxk)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">PrintList</span><span class="params">()</span></span>;                  <span class="comment">//遍历操作，按序号依次输出各元素</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node&lt;DataType&gt;* first;           <span class="comment">//单链表的头指针</span></span><br><span class="line">&#125;; </span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="type">void</span> LinkList&lt;DataType&gt; ::<span class="built_in">Delete</span>(<span class="type">int</span> mink,<span class="type">int</span> maxk)</span><br><span class="line">&#123;</span><br><span class="line">    DataType x;</span><br><span class="line">    Node&lt;DataType&gt;* p = first-&gt;next, * q = first;        <span class="comment">//工作指针p指向头结点</span></span><br><span class="line">    <span class="keyword">while</span> (p != <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ((p-&gt;data&lt;maxk) &amp;&amp;(p-&gt;data&gt;mink) )</span><br><span class="line">        &#123;</span><br><span class="line">            q-&gt;next = p-&gt;next;</span><br><span class="line">            <span class="keyword">delete</span> p;</span><br><span class="line">            p = q-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            q = p;</span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">LinkList&lt;DataType&gt; ::<span class="built_in">LinkList</span>()</span><br><span class="line">&#123;</span><br><span class="line">    first = <span class="keyword">new</span> Node&lt;DataType&gt;;              <span class="comment">//生成头结点</span></span><br><span class="line">    first-&gt;next = <span class="literal">nullptr</span>;                      <span class="comment">//头结点的指针域置空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line">LinkList&lt;DataType&gt; :: ~<span class="built_in">LinkList</span>()</span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;DataType&gt;* q = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span> (first != <span class="literal">NULL</span>)        <span class="comment">//释放单链表的每一个结点的存储空间</span></span><br><span class="line">    &#123;</span><br><span class="line">        q = first;                 <span class="comment">//暂存被释放结点</span></span><br><span class="line">        first = first-&gt;next;         <span class="comment">// first指向被释放结点的下一个结点</span></span><br><span class="line">        <span class="keyword">delete</span> q;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="type">void</span> LinkList&lt;DataType&gt; ::<span class="built_in">PrintList</span>()</span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;DataType&gt;* p = first-&gt;next;                <span class="comment">//工作指针p初始化</span></span><br><span class="line">    <span class="keyword">while</span> (p != <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; p-&gt;data &lt;&lt; <span class="string">&quot;\t&quot;</span>;</span><br><span class="line">        p = p-&gt;next;                 <span class="comment">//工作指针p后移，注意不能写作p++</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//尾插法构造</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">LinkList&lt;DataType&gt; ::<span class="built_in">LinkList</span>(DataType a[], <span class="type">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    first = <span class="keyword">new</span> Node&lt;DataType&gt;;                    <span class="comment">//生成头结点</span></span><br><span class="line">    Node&lt;DataType&gt;* r = first, * s = <span class="literal">nullptr</span>;           <span class="comment">//尾指针初始化</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        s = <span class="keyword">new</span> Node&lt;DataType&gt;; s-&gt;data = a[i];</span><br><span class="line">        r-&gt;next = s; r = s;                 <span class="comment">//将结点s插入到终端结点之后</span></span><br><span class="line">    &#125;</span><br><span class="line">    r-&gt;next = <span class="literal">nullptr</span>;        <span class="comment">//单链表建立完毕，将终端结点的指针域置空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> maxsize;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请输入你要创建表的大小&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; maxsize;</span><br><span class="line">    <span class="type">int</span>* a = <span class="keyword">new</span> <span class="type">int</span>[maxsize];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; maxsize; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;已创建一个最大长度&quot;</span> &lt;&lt; maxsize &lt;&lt; <span class="string">&quot;的单链表&quot;</span> &lt;&lt; endl;</span><br><span class="line">    LinkList&lt;<span class="type">int</span>&gt; L&#123; a, maxsize &#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;*******执行遍历链表******&quot;</span> &lt;&lt; endl;</span><br><span class="line">    L.<span class="built_in">PrintList</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;**************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请输入左右界定范围mink和maxk&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="type">int</span> mink, maxk;</span><br><span class="line">    cin &gt;&gt; mink &gt;&gt; maxk;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;**************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">    L.<span class="built_in">Delete</span>(mink, maxk);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;题解删除操作已执行完毕&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;*******执行遍历链表******&quot;</span> &lt;&lt; endl;</span><br><span class="line">    L.<span class="built_in">PrintList</span>();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;**************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>课后作业</category>
-      </categories>
-      <tags>
-        <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DS作业-2-22网安物联网-20230913</title>
-    <url>/posts/cab65f6a.html</url>
-    <content><![CDATA[<blockquote>
-<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
-</blockquote>
-<h1><strong>DS作业-2-22网安物联网-20230913</strong></h1>
-<p><strong>作业Ch1-4:  P24-P25 1.选择题</strong></p>
-<p>1-5  <u>CD</u>    B  B A A   6-9  C  <u>CE</u></p>
-<p>第九题解析</p>
-<blockquote>
-<p>这段代码的时间复杂度是O(n²)。这是因为外部循环会执行n次，而内部循环会执行2<em>i次，其中i的最大值是n。因此，最坏情况下，内部循环会执行2n次。所以，总的执行次数是n</em>(2n)，即O(n²)。这意味着，如果输入大小（即n的值）增加，那么执行时间将按平方增加。这是典型的二次时间复杂度的例子。</p>
-</blockquote>
-<h1><strong>作业Ch1-5:</strong></h1>
-<p><strong>算法编程题，给出代码、测试过程和运行结果：</strong></p>
-<p><font color='red'>这个题存疑，算法思路还没看懂</font></p>
-<p>将一个具有 n 个元素的数组A[n]向左循环移动k个位置，要求时间复杂度为O(n)，空间复杂度为O(1)。</p>
-<blockquote>
-<p>答案（来自bing ai</p>
-</blockquote>
-<p>这是一个经典的问题，可以通过三次反转数组的方法来解决。首先，我们将数组的前k个元素反转，然后将剩余的元素反转，最后将整个数组反转。这样就可以实现将数组向左循环移动k个位置。以下是具体的C++代码实现：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">(<span class="type">int</span> A[], <span class="type">int</span> start, <span class="type">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(start &lt; end) &#123;</span><br><span class="line">        <span class="built_in">swap</span>(A[start], A[end]);</span><br><span class="line">        start++;</span><br><span class="line">        end--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">leftRotate</span><span class="params">(<span class="type">int</span> A[], <span class="type">int</span> n, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">reverse</span>(A, <span class="number">0</span>, k<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">reverse</span>(A, k, n<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">reverse</span>(A, <span class="number">0</span>, n<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> A[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">sizeof</span>(A)/<span class="built_in">sizeof</span>(A[<span class="number">0</span>]);</span><br><span class="line">    <span class="type">int</span> k = <span class="number">2</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">leftRotate</span>(A, n, k);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cout &lt;&lt; A[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码首先定义了一个<code>reverse</code>函数，用于反转数组中从<code>start</code>到<code>end</code>的元素。然后定义了一个<code>leftRotate</code>函数，用于将数组向左循环移动k个位置。在<code>main</code>函数中，我们创建了一个数组，并调用了<code>leftRotate</code>函数来进行旋转。最后，我们打印出旋转后的数组。</p>
-<p>这个解决方案的时间复杂度为O(n)，空间复杂度为O(1)，满足了题目的要求。希望这个答案对你有所帮助！</p>
-<p><font color='red'>新知识，要使其不大于最大长度可以用取模运算来解决</font></p>
-<h2 id="作业Ch1-6"><strong>作业Ch1-6:</strong></h2>
-<p><strong>算法编程题，给出代码、测试过程和运行结果：</strong></p>
-<p>找出整型数组A[n]中的最大值和次最大值。</p>
-<blockquote>
-<p>答案（来自bing ai</p>
-</blockquote>
-<p>以下是一个C++代码片段，它可以找出整型数组A[n]中的最大值和次最大值。这个代码假设数组中至少有两个元素，并且所有元素都是唯一的。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">findMaxAndSecondMax</span><span class="params">(<span class="type">int</span> A[], <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> max1 = A[<span class="number">0</span>], max2 = A[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; max1) &#123;</span><br><span class="line">            max2 = max1;</span><br><span class="line">            max1 = A[i];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(A[i] &gt; max2) &#123;</span><br><span class="line">            max2 = A[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;最大值: &quot;</span> &lt;&lt; max1 &lt;&lt; <span class="string">&quot;, 次最大值: &quot;</span> &lt;&lt; max2 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> A[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">sizeof</span>(A)/<span class="built_in">sizeof</span>(A[<span class="number">0</span>]);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">findMaxAndSecondMax</span>(A, n);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码首先定义了一个<code>findMaxAndSecondMax</code>函数，用于找出数组中的最大值和次最大值。然后在<code>main</code>函数中，我们创建了一个数组，并调用了<code>findMaxAndSecondMax</code>函数来找出最大值和次最大值。希望这个答案对你有所帮助！</p>
-<h1>END</h1>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -3450,6 +3450,175 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
+    <title>MuteGames使用手册</title>
+    <url>/posts/7183a269.html</url>
+    <content><![CDATA[<h1>MuteGames</h1>
+<p>一个以 <a href="https://github.com/mamoe/mirai">Mirai-Console</a> 为基础开发并为了满足群友PVP需求和抖M需求开发的禁言游戏集合</p>
+<h2 id="开始使用">开始使用</h2>
+<p>插件需要以 <a href="https://github.com/mamoe/mirai">Mirai-Console</a></p>
+<p>为基础，你可以下载 <a href="https://github.com/iTXTech/mirai-console-loader/releases">MCL</a> 作为你的Mirai插件载入器</p>
+<p>与此同时，本插件需要 Mirai 官方插件</p>
+<p>使用之前请先用参考<a href="#%E6%9D%83%E9%99%90%E8%8A%82%E7%82%B9">权限节点</a>来开启插件权限</p>
+<p><strong>请注意：当用户权限大于等于机器人所在权限时（如机器人是管理员用户为群主），机器人不会对游戏请求做任何回复</strong></p>
+<h2 id="权限节点">权限节点</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|- com.evolvedghost.mutegames:*                      The base permission</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.banme       自裁指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.blackjack   21点（Blackjack）指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.duel        决斗指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.mg          MuteGams管理指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.roulette    俄罗斯轮盘指令</span><br></pre></td></tr></table></figure>
+<p>插件调用的是Mirai自带的权限管理系统，你可以在控制台输入<code>?</code>来获取帮助，通常权限的添加方式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#permission add &lt;被许可人 ID&gt; &lt;权限 ID&gt;    # 授权一个权限</span><br></pre></td></tr></table></figure>
+<p>&lt;被许可人 ID&gt; 可以为QQ号或者通配符<code>*</code>来代表所有用户</p>
+<p>&lt;权限 ID&gt; 即上述权限名称，可按照需求添加</p>
+<p>一个例子为：<code>#permission add * com.evolvedghost.mutegames:*</code>，即为所有用户添加本插件所有权限</p>
+<h2 id="插件命令">插件命令</h2>
+<p>插件分为两种命令，一种为普通命令一种为管理员命令</p>
+<p>默认别名为插件预设置的alias，普通命令的别名你可以在Config中更改</p>
+<h3 id="普通命令">普通命令</h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>默认别名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(#)banMe</code></td>
+<td><code>自裁</code></td>
+<td>自裁（直接获得一个禁言）</td>
+</tr>
+<tr>
+<td><code>(#)banMe [seconds]&lt;Int&gt;</code></td>
+<td><code>自裁 [seconds]&lt;Int&gt;</code></td>
+<td>自定义秒数禁言</td>
+</tr>
+<tr>
+<td><code>(#)duel</code></td>
+<td><code>决斗</code></td>
+<td>决斗指令（两位群友以决斗的方式赢取禁言）</td>
+</tr>
+<tr>
+<td><code>(#)roulette</code></td>
+<td><code>轮盘,俄罗斯轮盘</code></td>
+<td>俄罗斯轮盘赌（以轮盘赌的方式赢取禁言）</td>
+</tr>
+<tr>
+<td><code>(#)blackjack</code></td>
+<td><code>21点</code></td>
+<td>发起#加入一轮21点</td>
+</tr>
+<tr>
+<td><code>(#)blackjack start</code></td>
+<td><code>21点 开始</code></td>
+<td>开启一轮21点</td>
+</tr>
+<tr>
+<td><code>(#)blackjack add</code></td>
+<td><code>21点 拿牌</code></td>
+<td>在21点中拿牌</td>
+</tr>
+<tr>
+<td><code>(#)blackjack stop</code></td>
+<td><code>21点 停牌</code></td>
+<td>在21点中停牌</td>
+</tr>
+<tr>
+<td><code>(#)blackjack giveup</code></td>
+<td><code>21点 投降</code></td>
+<td>在21点中投降</td>
+</tr>
+<tr>
+<td><code>(#)blackjack check</code></td>
+<td><code>21点 看牌</code></td>
+<td>在21点中看牌</td>
+</tr>
+<tr>
+<td><code>(#)blackjack help</code></td>
+<td><code>21点 帮助</code></td>
+<td>获取21点帮助</td>
+</tr>
+</tbody>
+</table>
+<h3 id="管理命令">管理命令</h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>默认别名（不可更改）</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#mg dualStop</code></td>
+<td><code>#mg 停止决斗</code></td>
+<td>停止本群的决斗</td>
+</tr>
+<tr>
+<td><code>#mg reload</code></td>
+<td><code>#mg 重载</code></td>
+<td>重载本插件的配置项</td>
+</tr>
+<tr>
+<td><code>#mg rouletteStop</code></td>
+<td><code>#mg 停止轮盘</code></td>
+<td>停止本群的俄罗斯轮盘</td>
+</tr>
+<tr>
+<td><code>#mg bjStop</code></td>
+<td><code>#mg 停止21点</code></td>
+<td>停止本群的停止21点</td>
+</tr>
+</tbody>
+</table>
+<h2 id="插件配置">插件配置</h2>
+<p>插件的配置项储存在<code>config\com.evolvedghost.mutegames</code>目录下，有以下文件</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>admin.yml</code></td>
+<td>配置管理员命令和插件基础设置</td>
+</tr>
+<tr>
+<td><code>banMe.yml</code></td>
+<td>配置自裁设置</td>
+</tr>
+<tr>
+<td><code>duel.yml</code></td>
+<td>配置决斗设置</td>
+</tr>
+<tr>
+<td><code>roulette.yml</code></td>
+<td>配置轮盘赌设置</td>
+</tr>
+<tr>
+<td><code>blackjack.yml</code></td>
+<td>配置21点设置</td>
+</tr>
+</tbody>
+</table>
+<p>相应的设置在文件中应有详细注明</p>
+<h2 id="编译">编译</h2>
+<p>如果您需要自行编译，使用在文件目录使用以下命令即可</p>
+<p>Windows：<code>.#gradlew.bat buildPlugin</code></p>
+<p>Linux：<code>.#gradlew buildPlugin</code></p>
+<p>Mirai版本在2.12以下的用户需要向下兼容包，本项目Release并不会提供此类包，请自行编译，编译指令为：<code>.#gradlew buildPluginLegacy</code></p>
+<p>编译好的jar文件可以在<code>#build#mirai</code>下找到</p>
+<h2 id="特别感谢">特别感谢</h2>
+<p><a href="https://github.com/mamoe/mirai">Mirai</a> 提供QQ机器人</p>
+]]></content>
+      <categories>
+        <category>QQbot</category>
+      </categories>
+      <tags>
+        <tag>QQbot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mirai Administrator 机器人管理插件，好友/群管理，黑名单，宵禁</title>
     <url>/posts/369f16e7.html</url>
     <content><![CDATA[<h1>Mirai Administrator</h1>
@@ -3766,202 +3935,6 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
-    <title>MuteGames使用手册</title>
-    <url>/posts/7183a269.html</url>
-    <content><![CDATA[<h1>MuteGames</h1>
-<p>一个以 <a href="https://github.com/mamoe/mirai">Mirai-Console</a> 为基础开发并为了满足群友PVP需求和抖M需求开发的禁言游戏集合</p>
-<h2 id="开始使用">开始使用</h2>
-<p>插件需要以 <a href="https://github.com/mamoe/mirai">Mirai-Console</a></p>
-<p>为基础，你可以下载 <a href="https://github.com/iTXTech/mirai-console-loader/releases">MCL</a> 作为你的Mirai插件载入器</p>
-<p>与此同时，本插件需要 Mirai 官方插件</p>
-<p>使用之前请先用参考<a href="#%E6%9D%83%E9%99%90%E8%8A%82%E7%82%B9">权限节点</a>来开启插件权限</p>
-<p><strong>请注意：当用户权限大于等于机器人所在权限时（如机器人是管理员用户为群主），机器人不会对游戏请求做任何回复</strong></p>
-<h2 id="权限节点">权限节点</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|- com.evolvedghost.mutegames:*                      The base permission</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.banme       自裁指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.blackjack   21点（Blackjack）指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.duel        决斗指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.mg          MuteGams管理指令</span><br><span class="line">|  |- com.evolvedghost.mutegames:command.roulette    俄罗斯轮盘指令</span><br></pre></td></tr></table></figure>
-<p>插件调用的是Mirai自带的权限管理系统，你可以在控制台输入<code>?</code>来获取帮助，通常权限的添加方式为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#permission add &lt;被许可人 ID&gt; &lt;权限 ID&gt;    # 授权一个权限</span><br></pre></td></tr></table></figure>
-<p>&lt;被许可人 ID&gt; 可以为QQ号或者通配符<code>*</code>来代表所有用户</p>
-<p>&lt;权限 ID&gt; 即上述权限名称，可按照需求添加</p>
-<p>一个例子为：<code>#permission add * com.evolvedghost.mutegames:*</code>，即为所有用户添加本插件所有权限</p>
-<h2 id="插件命令">插件命令</h2>
-<p>插件分为两种命令，一种为普通命令一种为管理员命令</p>
-<p>默认别名为插件预设置的alias，普通命令的别名你可以在Config中更改</p>
-<h3 id="普通命令">普通命令</h3>
-<table>
-<thead>
-<tr>
-<th>指令</th>
-<th>默认别名</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>(#)banMe</code></td>
-<td><code>自裁</code></td>
-<td>自裁（直接获得一个禁言）</td>
-</tr>
-<tr>
-<td><code>(#)banMe [seconds]&lt;Int&gt;</code></td>
-<td><code>自裁 [seconds]&lt;Int&gt;</code></td>
-<td>自定义秒数禁言</td>
-</tr>
-<tr>
-<td><code>(#)duel</code></td>
-<td><code>决斗</code></td>
-<td>决斗指令（两位群友以决斗的方式赢取禁言）</td>
-</tr>
-<tr>
-<td><code>(#)roulette</code></td>
-<td><code>轮盘,俄罗斯轮盘</code></td>
-<td>俄罗斯轮盘赌（以轮盘赌的方式赢取禁言）</td>
-</tr>
-<tr>
-<td><code>(#)blackjack</code></td>
-<td><code>21点</code></td>
-<td>发起#加入一轮21点</td>
-</tr>
-<tr>
-<td><code>(#)blackjack start</code></td>
-<td><code>21点 开始</code></td>
-<td>开启一轮21点</td>
-</tr>
-<tr>
-<td><code>(#)blackjack add</code></td>
-<td><code>21点 拿牌</code></td>
-<td>在21点中拿牌</td>
-</tr>
-<tr>
-<td><code>(#)blackjack stop</code></td>
-<td><code>21点 停牌</code></td>
-<td>在21点中停牌</td>
-</tr>
-<tr>
-<td><code>(#)blackjack giveup</code></td>
-<td><code>21点 投降</code></td>
-<td>在21点中投降</td>
-</tr>
-<tr>
-<td><code>(#)blackjack check</code></td>
-<td><code>21点 看牌</code></td>
-<td>在21点中看牌</td>
-</tr>
-<tr>
-<td><code>(#)blackjack help</code></td>
-<td><code>21点 帮助</code></td>
-<td>获取21点帮助</td>
-</tr>
-</tbody>
-</table>
-<h3 id="管理命令">管理命令</h3>
-<table>
-<thead>
-<tr>
-<th>指令</th>
-<th>默认别名（不可更改）</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>#mg dualStop</code></td>
-<td><code>#mg 停止决斗</code></td>
-<td>停止本群的决斗</td>
-</tr>
-<tr>
-<td><code>#mg reload</code></td>
-<td><code>#mg 重载</code></td>
-<td>重载本插件的配置项</td>
-</tr>
-<tr>
-<td><code>#mg rouletteStop</code></td>
-<td><code>#mg 停止轮盘</code></td>
-<td>停止本群的俄罗斯轮盘</td>
-</tr>
-<tr>
-<td><code>#mg bjStop</code></td>
-<td><code>#mg 停止21点</code></td>
-<td>停止本群的停止21点</td>
-</tr>
-</tbody>
-</table>
-<h2 id="插件配置">插件配置</h2>
-<p>插件的配置项储存在<code>config\com.evolvedghost.mutegames</code>目录下，有以下文件</p>
-<table>
-<thead>
-<tr>
-<th>文件名</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>admin.yml</code></td>
-<td>配置管理员命令和插件基础设置</td>
-</tr>
-<tr>
-<td><code>banMe.yml</code></td>
-<td>配置自裁设置</td>
-</tr>
-<tr>
-<td><code>duel.yml</code></td>
-<td>配置决斗设置</td>
-</tr>
-<tr>
-<td><code>roulette.yml</code></td>
-<td>配置轮盘赌设置</td>
-</tr>
-<tr>
-<td><code>blackjack.yml</code></td>
-<td>配置21点设置</td>
-</tr>
-</tbody>
-</table>
-<p>相应的设置在文件中应有详细注明</p>
-<h2 id="编译">编译</h2>
-<p>如果您需要自行编译，使用在文件目录使用以下命令即可</p>
-<p>Windows：<code>.#gradlew.bat buildPlugin</code></p>
-<p>Linux：<code>.#gradlew buildPlugin</code></p>
-<p>Mirai版本在2.12以下的用户需要向下兼容包，本项目Release并不会提供此类包，请自行编译，编译指令为：<code>.#gradlew buildPluginLegacy</code></p>
-<p>编译好的jar文件可以在<code>#build#mirai</code>下找到</p>
-<h2 id="特别感谢">特别感谢</h2>
-<p><a href="https://github.com/mamoe/mirai">Mirai</a> 提供QQ机器人</p>
-]]></content>
-      <categories>
-        <category>QQbot</category>
-      </categories>
-      <tags>
-        <tag>QQbot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python实现九宫格切割图片</title>
-    <url>/posts/3d80d4a2.html</url>
-    <content><![CDATA[<h4 id="克隆本项目">克隆本项目</h4>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/W1ndys/1to9-image.git</span><br></pre></td></tr></table></figure>
-<p>然后可以看到项目文件夹</p>
-<p><img src="/img/Python/1-to-9/image-20231204220532722.png" alt="image-20231204220532722"></p>
-<h4 id="使用方法">使用方法</h4>
-<ol>
-<li>把需要分割的图片复制进文件夹并且命名为 <code>input_image.jpg</code></li>
-<li>在当前目录进命令行执行 <code>python 1.py</code></li>
-<li>看到输出回显之后找 <code>output</code>文件夹就行</li>
-</ol>
-<h4 id="注意">注意</h4>
-<p>本项目适用于长宽一致的正方形图片，分割最佳效果</p>
-<p>其余比例不适合使用本项目</p>
-<p>非常适合朋友圈九宫格切图</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python小工具</tag>
-        <tag>Python脚本</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>QFNUCTF（日照）-Reverse-writeup</title>
     <url>/posts/44b69183.html</url>
     <content><![CDATA[<h1>base64++</h1>
@@ -3998,6 +3971,33 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </categories>
       <tags>
         <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python实现九宫格切割图片</title>
+    <url>/posts/3d80d4a2.html</url>
+    <content><![CDATA[<h4 id="克隆本项目">克隆本项目</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/W1ndys/1to9-image.git</span><br></pre></td></tr></table></figure>
+<p>然后可以看到项目文件夹</p>
+<p><img src="/img/Python/1-to-9/image-20231204220532722.png" alt="image-20231204220532722"></p>
+<h4 id="使用方法">使用方法</h4>
+<ol>
+<li>把需要分割的图片复制进文件夹并且命名为 <code>input_image.jpg</code></li>
+<li>在当前目录进命令行执行 <code>python 1.py</code></li>
+<li>看到输出回显之后找 <code>output</code>文件夹就行</li>
+</ol>
+<h4 id="注意">注意</h4>
+<p>本项目适用于长宽一致的正方形图片，分割最佳效果</p>
+<p>其余比例不适合使用本项目</p>
+<p>非常适合朋友圈九宫格切图</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python小工具</tag>
+        <tag>Python脚本</tag>
       </tags>
   </entry>
   <entry>
@@ -4099,6 +4099,20 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       <tags>
         <tag>CTF</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>butterfly主题bug反馈单开博客</title>
+    <url>/posts/18414cf0.html</url>
+    <content><![CDATA[<p>首页导航栏图标旁边的文字，我不知道实际是为了干什么的，暂且按照常识当做是回到首页</p>
+<p>但是我实际测试的时候，这个按钮的作用是刷新该界面，与一般的网站运行思路并不相同，不知道是不是bug，反馈一下</p>
+<p>PS：经过测试是主题的问题，一开始我以为是我有依赖冲突引起的，于是我开了一个空环境重新配置，准备复现，复现成功了，刚初始化的主题也存在这个问题所以我才断定来提交issues</p>
+<p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p>
+<p>还有一个bug就是首页按钮的问题，bug内容与上述一样，假设上面的bug是我的认知错误，设定就是刷新该页面</p>
+<p>首页的作用应该是回到首页，但是实际上是刷新该页面。</p>
+<p>所以也提交一下issues吧，希望官方大大修复一下。</p>
+<p>附图↓</p>
+<p><img src="img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p>
+]]></content>
   </entry>
   <entry>
     <title>hexo博文中front-matter的用法</title>
@@ -4206,20 +4220,6 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
-    <title>butterfly主题bug反馈单开博客</title>
-    <url>/posts/18414cf0.html</url>
-    <content><![CDATA[<p>首页导航栏图标旁边的文字，我不知道实际是为了干什么的，暂且按照常识当做是回到首页</p>
-<p>但是我实际测试的时候，这个按钮的作用是刷新该界面，与一般的网站运行思路并不相同，不知道是不是bug，反馈一下</p>
-<p>PS：经过测试是主题的问题，一开始我以为是我有依赖冲突引起的，于是我开了一个空环境重新配置，准备复现，复现成功了，刚初始化的主题也存在这个问题所以我才断定来提交issues</p>
-<p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p>
-<p>还有一个bug就是首页按钮的问题，bug内容与上述一样，假设上面的bug是我的认知错误，设定就是刷新该页面</p>
-<p>首页的作用应该是回到首页，但是实际上是刷新该页面。</p>
-<p>所以也提交一下issues吧，希望官方大大修复一下。</p>
-<p>附图↓</p>
-<p><img src="img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p>
-]]></content>
-  </entry>
-  <entry>
     <title>kali_Linux如何修改语言为中文</title>
     <url>/posts/4c6d962f.html</url>
     <content><![CDATA[<h3 id="友情提示">友情提示</h3>
@@ -4297,118 +4297,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </tags>
   </entry>
   <entry>
-    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
-    <url>/posts/bacd5cfb.html</url>
-    <content><![CDATA[<h1>START</h1>
-<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p>
-<p>太忙了啊啊啊啊啊~！！！</p>
-<p>收获还是很多的</p>
-<p><font color='red'>嘿嘿嘿被两位师哥带飞，满满的安全感</font></p>
-<p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁，高铁来的声音很响我，轰隆隆的。</p>
-<p>高铁很快，不到三个小时我们就到章丘站了，下高铁之后有山东警察学院的志愿者带我们进学校，坐他们的志愿者大巴车去学校里面，大巴车嗡嗡的响</p>
-<p>做网络安全的，也有不少女生，但是也就几个，车上都在讨论学术知识，第一次到这种贤士云集的地方。</p>
-<p>到学校门口，我随手拍了几张照片</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" alt="山东警察学院大门"></p>
-<p>非常好看！</p>
-<p>到了里面，学校已经为大赛准备的很好，我们先去报到处报道，领了参赛的东西</p>
-<p><strong>一个参赛服，一个参赛选手证，一个鼠标垫，一个无线鼠标，还有一本参赛手册，两张餐券。</strong></p>
-<p>然后进赛场调试设备，工作人员让我看看IP就行，当时我脑子就乱了，IP？什么IP，怎么看来着？急中生智想到了上周计网实验课刚学的ipconfig，好险，要不然就丢人了，好尴尬，当时工作人员就看着我。</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/ipconfig.jpg" alt="ipconfig"></p>
-<p>然后等报道完我们三个坐大巴车去酒店准备吃饭了</p>
-<p>酒店的饭，其实也还行，给餐券随便吃，也不算多豪华也还行倒是，(毕竟组委会包吃住，乐)</p>
-<p>吃完饭我们就去卧室准备睡觉了</p>
-<p>那边酒店在山脚下，信号贼差，发个消息发半天，当晚我们下载了网络安全法，数据安全法，密码法，国家安全法，个人信息保护法，反间谍法等条文，我在车上听到了别的师傅说一个<strong>随波逐流工具</strong>，我下载了发现非常好用，一把嗦。点赞这个工具</p>
-<p>然后就准备睡觉了，第二天要早起</p>
-<p>等第二天起来之后吃完饭就坐车走了，去了先去签到处放下书包，手机不能进场。领取了标签我就进场了</p>
-<p>考试时间从上午九点到下午四点，中途不间断，午饭在现场吃</p>
-<br/>
-<p>再说一下赛题吧，web题全场0解，一开始我看到签到题就蒙圈了，不过幸好，好在做出来了，不至于一个题也不会给队伍拖后腿</p>
-<p>然后过了半天，才做出简单编码，二进制八进制</p>
-<p>还有一个题是变异凯撒，那个题也应该会做的，但是当时只顾着用工具了，脑子没反应过来那是变异凯撒，不然早就知道了其实，这题不该失分，然后我应该去爱你这个题也不该失分，吃了没做过频谱图的题的亏，如果我当时做过频谱图的题就不至于不会做了，这几个题都是大部分人都会做的</p>
-<p>到了比赛后期就没什么新解出的，一直是老题在上升趋势，（不会是py吧（雾</p>
-<hr>
-<p>最后四点比赛结束，三等奖，差点二等奖了唉，唉三等奖，唉CTF，唉科来杯。</p>
-<p>然后遇到了王老师和李老师，两位带队老师，臧老师有事不能带了</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/xiaohan.jpg" alt="个人三等"></p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/no3.jpg" alt="团体三等奖"></p>
-<p>最后颁奖典礼宣布</p>
-<p>第十一届科来杯在<strong>曲阜师范大学主办</strong>，下一届我们就是主力军了，加油！</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/QFNU.jpg" alt="交接仪式"></p>
-<h1>总结</h1>
-<p>还是得练！</p>
-<p>认识了日照校区的师傅（爷</p>
-<p>明年真是线下丹砂了</p>
-<p>练练练练，卷起来</p>
-<h1>END</h1>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>比赛心得</category>
-        <category>省赛</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>科来杯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“卷卷”W1ndys_bot使用手册</title>
-    <url>/posts/bc040c54.html</url>
-    <content><![CDATA[<h1>主要功能</h1>
-<p>卷卷目前的功能主要有：<br>
-<a href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D">关键词回复</a>      <a href="#%E5%BF%AB%E6%8D%B7%E7%BE%A4%E7%AE%A1%E7%90%86">快捷群管理</a>     <a href="#%E8%BF%9D%E7%A6%81%E8%AF%8D%E7%9B%91%E6%8E%A7">违禁词监控</a>    <a href="#%E5%AE%9A%E6%97%B6%E5%99%A8">定时器</a>     <a href="#%E5%A5%87%E6%80%AA%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90">奇怪图片生成</a>     <a href="#%E7%82%B9%E6%AD%8C">点歌</a>   <a href="#%E7%8C%9C%E7%BE%A4%E5%8F%8B">猜群友小游戏</a></p>
-<p><a href="https://w1ndys.top/posts/edeaa258.html#/">ChatLearning————学群友说话使用手册</a></p>
-<p><a href="https://w1ndys.top/posts/369f16e7.html#/">Mirai Administrator使用手册</a></p>
-<p><a href="https://w1ndys.top/posts/7a43906e.html#/">HuYanSession2——壶言会话2使用手册</a></p>
-<p><a href="https://w1ndys.top/posts/7183a269.html#/">MuteGames使用手册</a></p>
-<h1>关键词回复</h1>
-<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%9E%E5%A4%8D">请看这里</a></p>
-<h1>快捷群管理</h1>
-<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E7%BE%A4%E7%AE%A1%E7%90%86">请看这里</a></p>
-<h1>违禁词监控</h1>
-<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E8%BF%9D%E7%A6%81%E8%AF%8D">请看这里</a></p>
-<h1>定时器</h1>
-<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E5%AE%9A%E6%97%B6%E5%99%A8">请看这里</a></p>
-<h1>奇怪图片生成</h1>
-<p>发送<code>pet</code>可以查看具体指令</p>
-<p>根据提示操作即可</p>
-<h1>点歌</h1>
-<h2 id="“-音乐-关键词”">“#音乐 关键词”</h2>
-<p>自动搜索所有源以找出来找最佳音频来源</p>
-<h2 id="“-语音-关键词”">“#语音 关键词”</h2>
-<p>自动搜索所有源，以语音信息的形式发出</p>
-<h2 id="“-外链-关键词”">“#外链 关键词”</h2>
-<p>自动搜索所有源，以外链信息的形式发出</p>
-<h2 id="“-QQ-关键词”">“#QQ 关键词”</h2>
-<p>搜索QQ音乐</p>
-<h2 id="“-网易-关键词”">“#网易 关键词”</h2>
-<p>搜索网易云音乐</p>
-<h2 id="“-网易电台-关键词”">“#网易电台 关键词”</h2>
-<p>搜索网易云电台，一般来说是直接选择找到的第一个节目，但是关键词可以以 “电台名称|节目名称”的格式指定电台节目</p>
-<h2 id="“-酷狗-关键词”">“#酷狗 关键词”</h2>
-<p>搜索酷狗音乐</p>
-<h2 id="“-千千-关键词”">“#千千 关键词”</h2>
-<p>搜索千千音乐（百度音乐）</p>
-<h1>猜群友</h1>
-<p>命令：</p>
-<p><code>#猜群友 开始</code>或者<code>#猜群友 paly</code>（因为开发者打错字了所以不是play）</p>
-<p><code>#猜群友 guess@</code>或者<code>#猜群友 猜@</code></p>
-<h1>MuteGames</h1>
-<p>一个以 <a href="https://github.com/mamoe/mirai">Mirai_Console</a> 为基础开发并为了满足群友PVP需求和抖M需求开发的禁言游戏集合</p>
-<h1><a href="https://mirai.mamoe.net/topic/959/wordcloudplugin_%E7%BE%A4%E8%AF%8D%E4%BA%91%E7%94%9F%E6%88%90%E5%99%A8">群词云生成器</a></h1>
-<p>使用方法:在群内发送 <code>本日词云</code>/<code>昨日词云</code>/<code>获取词云 </code>来使用<br>
-也可以发送 <code>用户本日词云</code>/<code>用户昨日词云</code>/<code>获取用户词云</code> +<code>&lt;用户名称&gt;</code> 来获取指定用户的词云<br>
-在config下timer文件可以配置定时任务<br>
-更多功能可查看配置文件</p>
-]]></content>
-      <categories>
-        <category>QQbot</category>
-      </categories>
-      <tags>
-        <tag>QQbot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>“这些文案像光一样救赎过我”</title>
     <url>/posts/33629c52.html</url>
     <content><![CDATA[<hr>
@@ -4469,6 +4357,118 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       <tags>
         <tag>学习笔记</tag>
         <tag>文案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“卷卷”W1ndys_bot使用手册</title>
+    <url>/posts/bc040c54.html</url>
+    <content><![CDATA[<h1>主要功能</h1>
+<p>卷卷目前的功能主要有：<br>
+<a href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D">关键词回复</a>      <a href="#%E5%BF%AB%E6%8D%B7%E7%BE%A4%E7%AE%A1%E7%90%86">快捷群管理</a>     <a href="#%E8%BF%9D%E7%A6%81%E8%AF%8D%E7%9B%91%E6%8E%A7">违禁词监控</a>    <a href="#%E5%AE%9A%E6%97%B6%E5%99%A8">定时器</a>     <a href="#%E5%A5%87%E6%80%AA%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90">奇怪图片生成</a>     <a href="#%E7%82%B9%E6%AD%8C">点歌</a>   <a href="#%E7%8C%9C%E7%BE%A4%E5%8F%8B">猜群友小游戏</a></p>
+<p><a href="https://w1ndys.top/posts/edeaa258.html#/">ChatLearning————学群友说话使用手册</a></p>
+<p><a href="https://w1ndys.top/posts/369f16e7.html#/">Mirai Administrator使用手册</a></p>
+<p><a href="https://w1ndys.top/posts/7a43906e.html#/">HuYanSession2——壶言会话2使用手册</a></p>
+<p><a href="https://w1ndys.top/posts/7183a269.html#/">MuteGames使用手册</a></p>
+<h1>关键词回复</h1>
+<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%9E%E5%A4%8D">请看这里</a></p>
+<h1>快捷群管理</h1>
+<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E7%BE%A4%E7%AE%A1%E7%90%86">请看这里</a></p>
+<h1>违禁词监控</h1>
+<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E8%BF%9D%E7%A6%81%E8%AF%8D">请看这里</a></p>
+<h1>定时器</h1>
+<p>相关指令<a href="https://w1ndys.top/posts/7a43906e.html#%E5%AE%9A%E6%97%B6%E5%99%A8">请看这里</a></p>
+<h1>奇怪图片生成</h1>
+<p>发送<code>pet</code>可以查看具体指令</p>
+<p>根据提示操作即可</p>
+<h1>点歌</h1>
+<h2 id="“-音乐-关键词”">“#音乐 关键词”</h2>
+<p>自动搜索所有源以找出来找最佳音频来源</p>
+<h2 id="“-语音-关键词”">“#语音 关键词”</h2>
+<p>自动搜索所有源，以语音信息的形式发出</p>
+<h2 id="“-外链-关键词”">“#外链 关键词”</h2>
+<p>自动搜索所有源，以外链信息的形式发出</p>
+<h2 id="“-QQ-关键词”">“#QQ 关键词”</h2>
+<p>搜索QQ音乐</p>
+<h2 id="“-网易-关键词”">“#网易 关键词”</h2>
+<p>搜索网易云音乐</p>
+<h2 id="“-网易电台-关键词”">“#网易电台 关键词”</h2>
+<p>搜索网易云电台，一般来说是直接选择找到的第一个节目，但是关键词可以以 “电台名称|节目名称”的格式指定电台节目</p>
+<h2 id="“-酷狗-关键词”">“#酷狗 关键词”</h2>
+<p>搜索酷狗音乐</p>
+<h2 id="“-千千-关键词”">“#千千 关键词”</h2>
+<p>搜索千千音乐（百度音乐）</p>
+<h1>猜群友</h1>
+<p>命令：</p>
+<p><code>#猜群友 开始</code>或者<code>#猜群友 paly</code>（因为开发者打错字了所以不是play）</p>
+<p><code>#猜群友 guess@</code>或者<code>#猜群友 猜@</code></p>
+<h1>MuteGames</h1>
+<p>一个以 <a href="https://github.com/mamoe/mirai">Mirai_Console</a> 为基础开发并为了满足群友PVP需求和抖M需求开发的禁言游戏集合</p>
+<h1><a href="https://mirai.mamoe.net/topic/959/wordcloudplugin_%E7%BE%A4%E8%AF%8D%E4%BA%91%E7%94%9F%E6%88%90%E5%99%A8">群词云生成器</a></h1>
+<p>使用方法:在群内发送 <code>本日词云</code>/<code>昨日词云</code>/<code>获取词云 </code>来使用<br>
+也可以发送 <code>用户本日词云</code>/<code>用户昨日词云</code>/<code>获取用户词云</code> +<code>&lt;用户名称&gt;</code> 来获取指定用户的词云<br>
+在config下timer文件可以配置定时任务<br>
+更多功能可查看配置文件</p>
+]]></content>
+      <categories>
+        <category>QQbot</category>
+      </categories>
+      <tags>
+        <tag>QQbot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
+    <url>/posts/bacd5cfb.html</url>
+    <content><![CDATA[<h1>START</h1>
+<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p>
+<p>太忙了啊啊啊啊啊~！！！</p>
+<p>收获还是很多的</p>
+<p><font color='red'>嘿嘿嘿被两位师哥带飞，满满的安全感</font></p>
+<p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁，高铁来的声音很响我，轰隆隆的。</p>
+<p>高铁很快，不到三个小时我们就到章丘站了，下高铁之后有山东警察学院的志愿者带我们进学校，坐他们的志愿者大巴车去学校里面，大巴车嗡嗡的响</p>
+<p>做网络安全的，也有不少女生，但是也就几个，车上都在讨论学术知识，第一次到这种贤士云集的地方。</p>
+<p>到学校门口，我随手拍了几张照片</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" alt="山东警察学院大门"></p>
+<p>非常好看！</p>
+<p>到了里面，学校已经为大赛准备的很好，我们先去报到处报道，领了参赛的东西</p>
+<p><strong>一个参赛服，一个参赛选手证，一个鼠标垫，一个无线鼠标，还有一本参赛手册，两张餐券。</strong></p>
+<p>然后进赛场调试设备，工作人员让我看看IP就行，当时我脑子就乱了，IP？什么IP，怎么看来着？急中生智想到了上周计网实验课刚学的ipconfig，好险，要不然就丢人了，好尴尬，当时工作人员就看着我。</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/ipconfig.jpg" alt="ipconfig"></p>
+<p>然后等报道完我们三个坐大巴车去酒店准备吃饭了</p>
+<p>酒店的饭，其实也还行，给餐券随便吃，也不算多豪华也还行倒是，(毕竟组委会包吃住，乐)</p>
+<p>吃完饭我们就去卧室准备睡觉了</p>
+<p>那边酒店在山脚下，信号贼差，发个消息发半天，当晚我们下载了网络安全法，数据安全法，密码法，国家安全法，个人信息保护法，反间谍法等条文，我在车上听到了别的师傅说一个<strong>随波逐流工具</strong>，我下载了发现非常好用，一把嗦。点赞这个工具</p>
+<p>然后就准备睡觉了，第二天要早起</p>
+<p>等第二天起来之后吃完饭就坐车走了，去了先去签到处放下书包，手机不能进场。领取了标签我就进场了</p>
+<p>考试时间从上午九点到下午四点，中途不间断，午饭在现场吃</p>
+<br/>
+<p>再说一下赛题吧，web题全场0解，一开始我看到签到题就蒙圈了，不过幸好，好在做出来了，不至于一个题也不会给队伍拖后腿</p>
+<p>然后过了半天，才做出简单编码，二进制八进制</p>
+<p>还有一个题是变异凯撒，那个题也应该会做的，但是当时只顾着用工具了，脑子没反应过来那是变异凯撒，不然早就知道了其实，这题不该失分，然后我应该去爱你这个题也不该失分，吃了没做过频谱图的题的亏，如果我当时做过频谱图的题就不至于不会做了，这几个题都是大部分人都会做的</p>
+<p>到了比赛后期就没什么新解出的，一直是老题在上升趋势，（不会是py吧（雾</p>
+<hr>
+<p>最后四点比赛结束，三等奖，差点二等奖了唉，唉三等奖，唉CTF，唉科来杯。</p>
+<p>然后遇到了王老师和李老师，两位带队老师，臧老师有事不能带了</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/xiaohan.jpg" alt="个人三等"></p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/no3.jpg" alt="团体三等奖"></p>
+<p>最后颁奖典礼宣布</p>
+<p>第十一届科来杯在<strong>曲阜师范大学主办</strong>，下一届我们就是主力军了，加油！</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/QFNU.jpg" alt="交接仪式"></p>
+<h1>总结</h1>
+<p>还是得练！</p>
+<p>认识了日照校区的师傅（爷</p>
+<p>明年真是线下丹砂了</p>
+<p>练练练练，卷起来</p>
+<h1>END</h1>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>比赛心得</category>
+        <category>省赛</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>科来杯</tag>
       </tags>
   </entry>
   <entry>
@@ -4745,172 +4745,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </tags>
   </entry>
   <entry>
-    <title>中华人民共和国网络安全法</title>
-    <url>/posts/b81fa239.html</url>
-    <content><![CDATA[<h1>中华人民共和国网络安全法</h1>
-<p>​		（2016年11月7日第十二届全国人民代表大会常务委员会第二十四次会议通过）</p>
-<p>来源： 中国人大网 2016年11月7日 17:31:34</p>
-<p>目  录</p>
-<p>[第一章  总  则](#第一章  总  则)</p>
-<p>[第二章  网络安全支持与促进](#第二章  网络安全支持与促进)</p>
-<p><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%BD%91%E7%BB%9C%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8">第三章  网络运行安全</a></p>
-<p>​          <a href="#%E7%AC%AC%E4%B8%80%E8%8A%82-%E4%B8%80%E8%88%AC%E8%A7%84%E5%AE%9A">第一节 一般规定</a></p>
-<p>​          <a href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E5%85%B3%E9%94%AE%E4%BF%A1%E6%81%AF%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8">第二节 关键信息基础设施的运行安全</a></p>
-<p><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8">第四章  网络信息安全</a></p>
-<p><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%9B%91%E6%B5%8B%E9%A2%84%E8%AD%A6%E4%B8%8E%E5%BA%94%E6%80%A5%E5%A4%84%E7%BD%AE">第五章 监测预警与应急处置</a></p>
-<p>[第六章 法律责任](#第六章 法律责任)</p>
-<p>[第七章 附  则](#第七章 附  则)</p>
-<h2 id="第一章-总-则">第一章  总  则</h2>
-<p><strong>第一条</strong> 为了保障网络安全，维护网络空间主权和国家安全、社会公共利益，保护公民、法人和其他组织的合法权益，促进经济社会信息化健康发展，制定本法。</p>
-<p><strong>第二条</strong> 在中华人民共和国境内建设、运营、维护和使用网络，以及网络安全的监督管理，适用本法。</p>
-<p><strong>第三条</strong> 国家坚持网络安全与信息化发展并重，遵循积极利用、科学发展、依法管理、确保安全的方针，推进网络基础设施建设和互联互通，鼓励网络技术创新和应用，支持培养网络安全人才，建立健全网络安全保障体系，提高网络安全保护能力。</p>
-<p><strong>第四条</strong> 国家制定并不断完善网络安全战略，明确保障网络安全的基本要求和主要目标，提出重点领域的网络安全政策、工作任务和措施。</p>
-<p><strong>第五条</strong> 国家采取措施，监测、防御、处置来源于中华人民共和国境内外的网络安全风险和威胁，保护关键信息基础设施免受攻击、侵入、干扰和破坏，依法惩治网络违法犯罪活动，维护网络空间安全和秩序。</p>
-<p><strong>第六条</strong> 国家倡导诚实守信、健康文明的网络行为，推动传播社会主义核心价值观，采取措施提高全社会的网络安全意识和水平，形成全社会共同参与促进网络安全的良好环境。</p>
-<p><strong>第七条</strong> 国家积极开展网络空间治理、网络技术研发和标准制定、打击网络违法犯罪等方面的国际交流与合作，推动构建和平、安全、开放、合作的网络空间，建立多边、民主、透明的网络治理体系。</p>
-<p><strong>第八条</strong> 国家网信部门负责统筹协调网络安全工作和相关监督管理工作。国务院电信主管部门、公安部门和其他有关机关依照本法和有关法律、行政法规的规定，在各自职责范围内负责网络安全保护和监督管理工作。</p>
-<p>县级以上地方人民政府有关部门的网络安全保护和监督管理职责，按照国家有关规定确定。</p>
-<p><strong>第九条</strong> 网络运营者开展经营和服务活动，必须遵守法律、行政法规，尊重社会公德，遵守商业道德，诚实信用，履行网络安全保护义务，接受政府和社会的监督，承担社会责任。</p>
-<p><strong>第十条</strong> 建设、运营网络或者通过网络提供服务，应当依照法律、行政法规的规定和国家标准的强制性要求，采取技术措施和其他必要措施，保障网络安全、稳定运行，有效应对网络安全事件，防范网络违法犯罪活动，维护网络数据的完整性、保密性和可用性。</p>
-<p><strong>第十一条</strong> 网络相关行业组织按照章程，加强行业自律，制定网络安全行为规范，指导会员加强网络安全保护，提高网络安全保护水平，促进行业健康发展。</p>
-<p><strong>第十二条</strong> 国家保护公民、法人和其他组织依法使用网络的权利，促进网络接入普及，提升网络服务水平，为社会提供安全、便利的网络服务，保障网络信息依法有序自由流动。</p>
-<p>任何个人和组织使用网络应当遵守宪法法律，遵守公共秩序，尊重社会公德，不得危害网络安全，不得利用网络从事危害国家安全、荣誉和利益，煽动颠覆国家政权、推翻社会主义制度，煽动分裂国家、破坏国家统一，宣扬恐怖主义、极端主义，宣扬民族仇恨、民族歧视，传播暴力、淫秽色情信息，编造、传播虚假信息扰乱经济秩序和社会秩序，以及侵害他人名誉、隐私、知识产权和其他合法权益等活动。</p>
-<p><strong>第十三条</strong> 国家支持研究开发有利于未成年人健康成长的网络产品和服务，依法惩治利用网络从事危害未成年人身心健康的活动，为未成年人提供安全、健康的网络环境。</p>
-<p><strong>第十四条</strong> 任何个人和组织有权对危害网络安全的行为向网信、电信、公安等部门举报。收到举报的部门应当及时依法作出处理；不属于本部门职责的，应当及时移送有权处理的部门。</p>
-<p>有关部门应当对举报人的相关信息予以保密，保护举报人的合法权益。</p>
-<h2 id="第二章-网络安全支持与促进">第二章  网络安全支持与促进</h2>
-<p><strong>第十五条</strong> 国家建立和完善网络安全标准体系。国务院标准化行政主管部门和国务院其他有关部门根据各自的职责，组织制定并适时修订有关网络安全管理以及网络产品、服务和运行安全的国家标准、行业标准。</p>
-<p>国家支持企业、研究机构、高等学校、网络相关行业组织参与网络安全国家标准、行业标准的制定。</p>
-<p><strong>第十六条</strong> 国务院和省、自治区、直辖市人民政府应当统筹规划，加大投入，扶持重点网络安全技术产业和项目，支持网络安全技术的研究开发和应用，推广安全可信的网络产品和服务，保护网络技术知识产权，支持企业、研究机构和高等学校等参与国家网络安全技术创新项目。</p>
-<p><strong>第十七条</strong> 国家推进网络安全社会化服务体系建设，鼓励有关企业、机构开展网络安全认证、检测和风险评估等安全服务。</p>
-<p><strong>第十八条</strong> 国家鼓励开发网络数据安全保护和利用技术，促进公共数据资源开放，推动技术创新和经济社会发展。</p>
-<p>国家支持创新网络安全管理方式，运用网络新技术，提升网络安全保护水平。</p>
-<p><strong>第十九条</strong> 各级人民政府及其有关部门应当组织开展经常性的网络安全宣传教育，并指导、督促有关单位做好网络安全宣传教育工作。</p>
-<p>大众传播媒介应当有针对性地面向社会进行网络安全宣传教育。</p>
-<p><strong>第二十条</strong> 国家支持企业和高等学校、职业学校等教育培训机构开展网络安全相关教育与培训，采取多种方式培养网络安全人才，促进网络安全人才交流。</p>
-<h2 id="第三章-网络运行安全">第三章 网络运行安全</h2>
-<h3 id="第一节-一般规定">第一节 一般规定</h3>
-<p><strong>第二十一条</strong> 国家实行网络安全等级保护制度。网络运营者应当按照网络安全等级保护制度的要求，履行下列安全保护义务，保障网络免受干扰、破坏或者未经授权的访问，防止网络数据泄露或者被窃取、篡改：</p>
-<p>（一）制定内部安全管理制度和操作规程，确定网络安全负责人，落实网络安全保护责任；</p>
-<p>（二）采取防范计算机病毒和网络攻击、网络侵入等危害网络安全行为的技术措施；</p>
-<p>（三）采取监测、记录网络运行状态、网络安全事件的技术措施，并按照规定留存相关的网络日志不少于六个月；</p>
-<p>（四）采取数据分类、重要数据备份和加密等措施；</p>
-<p>（五）法律、行政法规规定的其他义务。</p>
-<p><strong>第二十二条</strong> 网络产品、服务应当符合相关国家标准的强制性要求。网络产品、服务的提供者不得设置恶意程序；发现其网络产品、服务存在安全缺陷、漏洞等风险时，应当立即采取补救措施，按照规定及时告知用户并向有关主管部门报告。</p>
-<p>网络产品、服务的提供者应当为其产品、服务持续提供安全维护；在规定或者当事人约定的期限内，不得终止提供安全维护。</p>
-<p>网络产品、服务具有收集用户信息功能的，其提供者应当向用户明示并取得同意；涉及用户个人信息的，还应当遵守本法和有关法律、行政法规关于个人信息保护的规定。</p>
-<p><strong>第二十三条</strong> 网络关键设备和网络安全专用产品应当按照相关国家标准的强制性要求，由具备资格的机构安全认证合格或者安全检测符合要求后，方可销售或者提供。国家网信部门会同国务院有关部门制定、公布网络关键设备和网络安全专用产品目录，并推动安全认证和安全检测结果互认，避免重复认证、检测。</p>
-<p><strong>第二十四条</strong> 网络运营者为用户办理网络接入、域名注册服务，办理固定电话、移动电话等入网手续，或者为用户提供信息发布、即时通讯等服务，在与用户签订协议或者确认提供服务时，应当要求用户提供真实身份信息。用户不提供真实身份信息的，网络运营者不得为其提供相关服务。</p>
-<p>国家实施网络可信身份战略，支持研究开发安全、方便的电子身份认证技术，推动不同电子身份认证之间的互认。</p>
-<p><strong>第二十五条</strong> 网络运营者应当制定网络安全事件应急预案，及时处置系统漏洞、计算机病毒、网络攻击、网络侵入等安全风险；在发生危害网络安全的事件时，立即启动应急预案，采取相应的补救措施，并按照规定向有关主管部门报告。</p>
-<p><strong>第二十六条</strong> 开展网络安全认证、检测、风险评估等活动，向社会发布系统漏洞、计算机病毒、网络攻击、网络侵入等网络安全信息，应当遵守国家有关规定。</p>
-<p><strong>第二十七条</strong> 任何个人和组织不得从事非法侵入他人网络、干扰他人网络正常功能、窃取网络数据等危害网络安全的活动；不得提供专门用于从事侵入网络、干扰网络正常功能及防护措施、窃取网络数据等危害网络安全活动的程序、工具；明知他人从事危害网络安全的活动的，不得为其提供技术支持、广告推广、支付结算等帮助。</p>
-<p><strong>第二十八条</strong> 网络运营者应当为公安机关、国家安全机关依法维护国家安全和侦查犯罪的活动提供技术支持和协助。</p>
-<p><strong>第二十九条</strong> 国家支持网络运营者之间在网络安全信息收集、分析、通报和应急处置等方面进行合作，提高网络运营者的安全保障能力。</p>
-<p>有关行业组织建立健全本行业的网络安全保护规范和协作机制，加强对网络安全风险的分析评估，定期向会员进行风险警示，支持、协助会员应对网络安全风险。</p>
-<p><strong>第三十条</strong> 网信部门和有关部门在履行网络安全保护职责中获取的信息，只能用于维护网络安全的需要，不得用于其他用途。</p>
-<h3 id="第二节-关键信息基础设施的运行安全">第二节 关键信息基础设施的运行安全</h3>
-<p><strong>第三十一条</strong> 国家对公共通信和信息服务、能源、交通、水利、金融、公共服务、电子政务等重要行业和领域，以及其他一旦遭到破坏、丧失功能或者数据泄露，可能严重危害国家安全、国计民生、公共利益的关键信息基础设施，在网络安全等级保护制度的基础上，实行重点保护。关键信息基础设施的具体范围和安全保护办法由国务院制定。</p>
-<p>国家鼓励关键信息基础设施以外的网络运营者自愿参与关键信息基础设施保护体系。</p>
-<p><strong>第三十二条</strong> 按照国务院规定的职责分工，负责关键信息基础设施安全保护工作的部门分别编制并组织实施本行业、本领域的关键信息基础设施安全规划，指导和监督关键信息基础设施运行安全保护工作。</p>
-<p><strong>第三十三条</strong> 建设关键信息基础设施应当确保其具有支持业务稳定、持续运行的性能，并保证安全技术措施同步规划、同步建设、同步使用。</p>
-<p><strong>第三十四条</strong> 除本法第二十一条的规定外，关键信息基础设施的运营者还应当履行下列安全保护义务：</p>
-<p>（一）设置专门安全管理机构和安全管理负责人，并对该负责人和关键岗位的人员进行安全背景审查；</p>
-<p>（二）定期对从业人员进行网络安全教育、技术培训和技能考核；</p>
-<p>（三）对重要系统和数据库进行容灾备份；</p>
-<p>（四）制定网络安全事件应急预案，并定期进行演练；</p>
-<p>（五）法律、行政法规规定的其他义务。</p>
-<p><strong>第三十五条</strong> 关键信息基础设施的运营者采购网络产品和服务，可能影响国家安全的，应当通过国家网信部门会同国务院有关部门组织的国家安全审查。</p>
-<p><strong>第三十六条</strong> 关键信息基础设施的运营者采购网络产品和服务，应当按照规定与提供者签订安全保密协议，明确安全和保密义务与责任。</p>
-<p><strong>第三十七条</strong> 关键信息基础设施的运营者在中华人民共和国境内运营中收集和产生的个人信息和重要数据应当在境内存储。因业务需要，确需向境外提供的，应当按照国家网信部门会同国务院有关部门制定的办法进行安全评估；法律、行政法规另有规定的，依照其规定。</p>
-<p><strong>第三十八条</strong> 关键信息基础设施的运营者应当自行或者委托网络安全服务机构对其网络的安全性和可能存在的风险每年至少进行一次检测评估，并将检测评估情况和改进措施报送相关负责关键信息基础设施安全保护工作的部门。</p>
-<p><strong>第三十九条</strong> 国家网信部门应当统筹协调有关部门对关键信息基础设施的安全保护采取下列措施：</p>
-<p>（一）对关键信息基础设施的安全风险进行抽查检测，提出改进措施，必要时可以委托网络安全服务机构对网络存在的安全风险进行检测评估；</p>
-<p>（二）定期组织关键信息基础设施的运营者进行网络安全应急演练，提高应对网络安全事件的水平和协同配合能力；</p>
-<p>（三）促进有关部门、关键信息基础设施的运营者以及有关研究机构、网络安全服务机构等之间的网络安全信息共享；</p>
-<p>（四）对网络安全事件的应急处置与网络功能的恢复等，提供技术支持和协助。</p>
-<h2 id="第四章-网络信息安全">第四章 网络信息安全</h2>
-<p><strong>第四十条</strong> 网络运营者应当对其收集的用户信息严格保密，并建立健全用户信息保护制度。</p>
-<p><strong>第四十一条</strong> 网络运营者收集、使用个人信息，应当遵循合法、正当、必要的原则，公开收集、使用规则，明示收集、使用信息的目的、方式和范围，并经被收集者同意。</p>
-<p>网络运营者不得收集与其提供的服务无关的个人信息，不得违反法律、行政法规的规定和双方的约定收集、使用个人信息，并应当依照法律、行政法规的规定和与用户的约定，处理其保存的个人信息。</p>
-<p><strong>第四十二条</strong> 网络运营者不得泄露、篡改、毁损其收集的个人信息；未经被收集者同意，不得向他人提供个人信息。但是，经过处理无法识别特定个人且不能复原的除外。</p>
-<p>网络运营者应当采取技术措施和其他必要措施，确保其收集的个人信息安全，防止信息泄露、毁损、丢失。在发生或者可能发生个人信息泄露、毁损、丢失的情况时，应当立即采取补救措施，按照规定及时告知用户并向有关主管部门报告。</p>
-<p><strong>第四十三条</strong> 个人发现网络运营者违反法律、行政法规的规定或者双方的约定收集、使用其个人信息的，有权要求网络运营者删除其个人信息；发现网络运营者收集、存储的其个人信息有错误的，有权要求网络运营者予以更正。网络运营者应当采取措施予以删除或者更正。</p>
-<p><strong>第四十四条</strong> 任何个人和组织不得窃取或者以其他非法方式获取个人信息，不得非法出售或者非法向他人提供个人信息。</p>
-<p><strong>第四十五条</strong> 依法负有网络安全监督管理职责的部门及其工作人员，必须对在履行职责中知悉的个人信息、隐私和商业秘密严格保密，不得泄露、出售或者非法向他人提供。</p>
-<p><strong>第四十六条</strong> 任何个人和组织应当对其使用网络的行为负责，不得设立用于实施诈骗，传授犯罪方法，制作或者销售违禁物品、管制物品等违法犯罪活动的网站、通讯群组，不得利用网络发布涉及实施诈骗，制作或者销售违禁物品、管制物品以及其他违法犯罪活动的信息。</p>
-<p><strong>第四十七条</strong> 网络运营者应当加强对其用户发布的信息的管理，发现法律、行政法规禁止发布或者传输的信息的，应当立即停止传输该信息，采取消除等处置措施，防止信息扩散，保存有关记录，并向有关主管部门报告。</p>
-<p><strong>第四十八条</strong> 任何个人和组织发送的电子信息、提供的应用软件，不得设置恶意程序，不得含有法律、行政法规禁止发布或者传输的信息。</p>
-<p>电子信息发送服务提供者和应用软件下载服务提供者，应当履行安全管理义务，知道其用户有前款规定行为的，应当停止提供服务，采取消除等处置措施，保存有关记录，并向有关主管部门报告。</p>
-<p><strong>第四十九条</strong> 网络运营者应当建立网络信息安全投诉、举报制度，公布投诉、举报方式等信息，及时受理并处理有关网络信息安全的投诉和举报。</p>
-<p>网络运营者对网信部门和有关部门依法实施的监督检查，应当予以配合。</p>
-<p><strong>第五十条</strong> 国家网信部门和有关部门依法履行网络信息安全监督管理职责，发现法律、行政法规禁止发布或者传输的信息的，应当要求网络运营者停止传输，采取消除等处置措施，保存有关记录；对来源于中华人民共和国境外的上述信息，应当通知有关机构采取技术措施和其他必要措施阻断传播。</p>
-<h2 id="第五章-监测预警与应急处置">第五章 监测预警与应急处置</h2>
-<p><strong>第五十一条</strong> 国家建立网络安全监测预警和信息通报制度。国家网信部门应当统筹协调有关部门加强网络安全信息收集、分析和通报工作，按照规定统一发布网络安全监测预警信息。</p>
-<p><strong>第五十二条</strong> 负责关键信息基础设施安全保护工作的部门，应当建立健全本行业、本领域的网络安全监测预警和信息通报制度，并按照规定报送网络安全监测预警信息。</p>
-<p><strong>第五十三条</strong> 国家网信部门协调有关部门建立健全网络安全风险评估和应急工作机制，制定网络安全事件应急预案，并定期组织演练。</p>
-<p>负责关键信息基础设施安全保护工作的部门应当制定本行业、本领域的网络安全事件应急预案，并定期组织演练。</p>
-<p>网络安全事件应急预案应当按照事件发生后的危害程度、影响范围等因素对网络安全事件进行分级，并规定相应的应急处置措施。</p>
-<p><strong>第五十四条</strong> 网络安全事件发生的风险增大时，省级以上人民政府有关部门应当按照规定的权限和程序，并根据网络安全风险的特点和可能造成的危害，采取下列措施：</p>
-<p>（一）要求有关部门、机构和人员及时收集、报告有关信息，加强对网络安全风险的监测；</p>
-<p>（二）组织有关部门、机构和专业人员，对网络安全风险信息进行分析评估，预测事件发生的可能性、影响范围和危害程度；</p>
-<p>（三）向社会发布网络安全风险预警，发布避免、减轻危害的措施。</p>
-<p><strong>第五十五条</strong> 发生网络安全事件，应当立即启动网络安全事件应急预案，对网络安全事件进行调查和评估，要求网络运营者采取技术措施和其他必要措施，消除安全隐患，防止危害扩大，并及时向社会发布与公众有关的警示信息。</p>
-<p><strong>第五十六条</strong> 省级以上人民政府有关部门在履行网络安全监督管理职责中，发现网络存在较大安全风险或者发生安全事件的，可以按照规定的权限和程序对该网络的运营者的法定代表人或者主要负责人进行约谈。网络运营者应当按照要求采取措施，进行整改，消除隐患。</p>
-<p><strong>第五十七条</strong> 因网络安全事件，发生突发事件或者生产安全事故的，应当依照《中华人民共和国突发事件应对法》、《中华人民共和国安全生产法》等有关法律、行政法规的规定处置。</p>
-<p><strong>第五十八条</strong> 因维护国家安全和社会公共秩序，处置重大突发社会安全事件的需要，经国务院决定或者批准，可以在特定区域对网络通信采取限制等临时措施。</p>
-<h2 id="第六章-法律责任">第六章 法律责任</h2>
-<p><strong>第五十九条</strong> 网络运营者不履行本法第二十一条、第二十五条规定的网络安全保护义务的，由有关主管部门责令改正，给予警告；拒不改正或者导致危害网络安全等后果的，处一万元以上十万元以下罚款，对直接负责的主管人员处五千元以上五万元以下罚款。</p>
-<p>关键信息基础设施的运营者不履行本法第三十三条、第三十四条、第三十六条、第三十八条规定的网络安全保护义务的，由有关主管部门责令改正，给予警告；拒不改正或者导致危害网络安全等后果的，处十万元以上一百万元以下罚款，对直接负责的主管人员处一万元以上十万元以下罚款。</p>
-<p><strong>第六十条</strong> 违反本法第二十二条第一款、第二款和第四十八条第一款规定，有下列行为之一的，由有关主管部门责令改正，给予警告；拒不改正或者导致危害网络安全等后果的，处五万元以上五十万元以下罚款，对直接负责的主管人员处一万元以上十万元以下罚款：</p>
-<p>（一）设置恶意程序的；</p>
-<p>（二）对其产品、服务存在的安全缺陷、漏洞等风险未立即采取补救措施，或者未按照规定及时告知用户并向有关主管部门报告的；</p>
-<p>（三）擅自终止为其产品、服务提供安全维护的。</p>
-<p><strong>第六十一条</strong> 网络运营者违反本法第二十四条第一款规定，未要求用户提供真实身份信息，或者对不提供真实身份信息的用户提供相关服务的，由有关主管部门责令改正；拒不改正或者情节严重的，处五万元以上五十万元以下罚款，并可以由有关主管部门责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照，对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
-<p><strong>第六十二条</strong> 违反本法第二十六条规定，开展网络安全认证、检测、风险评估等活动，或者向社会发布系统漏洞、计算机病毒、网络攻击、网络侵入等网络安全信息的，由有关主管部门责令改正，给予警告；拒不改正或者情节严重的，处一万元以上十万元以下罚款，并可以由有关主管部门责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照，对直接负责的主管人员和其他直接责任人员处五千元以上五万元以下罚款。</p>
-<p><strong>第六十三条</strong> 违反本法第二十七条规定，从事危害网络安全的活动，或者提供专门用于从事危害网络安全活动的程序、工具，或者为他人从事危害网络安全的活动提供技术支持、广告推广、支付结算等帮助，尚不构成犯罪的，由公安机关没收违法所得，处五日以下拘留，可以并处五万元以上五十万元以下罚款；情节较重的，处五日以上十五日以下拘留，可以并处十万元以上一百万元以下罚款。</p>
-<p>单位有前款行为的，由公安机关没收违法所得，处十万元以上一百万元以下罚款，并对直接负责的主管人员和其他直接责任人员依照前款规定处罚。</p>
-<p>违反本法第二十七条规定，受到治安管理处罚的人员，五年内不得从事网络安全管理和网络运营关键岗位的工作；受到刑事处罚的人员，终身不得从事网络安全管理和网络运营关键岗位的工作。</p>
-<p><strong>第六十四条</strong> 网络运营者、网络产品或者服务的提供者违反本法第二十二条第三款、第四十一条至第四十三条规定，侵害个人信息依法得到保护的权利的，由有关主管部门责令改正，可以根据情节单处或者并处警告、没收违法所得、处违法所得一倍以上十倍以下罚款，没有违法所得的，处一百万元以下罚款，对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款；情节严重的，并可以责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照。</p>
-<p>违反本法第四十四条规定，窃取或者以其他非法方式获取、非法出售或者非法向他人提供个人信息，尚不构成犯罪的，由公安机关没收违法所得，并处违法所得一倍以上十倍以下罚款，没有违法所得的，处一百万元以下罚款。</p>
-<p><strong>第六十五条</strong> 关键信息基础设施的运营者违反本法第三十五条规定，使用未经安全审查或者安全审查未通过的网络产品或者服务的，由有关主管部门责令停止使用，处采购金额一倍以上十倍以下罚款；对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
-<p><strong>第六十六条</strong> 关键信息基础设施的运营者违反本法第三十七条规定，在境外存储网络数据，或者向境外提供网络数据的，由有关主管部门责令改正，给予警告，没收违法所得，处五万元以上五十万元以下罚款，并可以责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照；对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
-<p><strong>第六十七条</strong> 违反本法第四十六条规定，设立用于实施违法犯罪活动的网站、通讯群组，或者利用网络发布涉及实施违法犯罪活动的信息，尚不构成犯罪的，由公安机关处五日以下拘留，可以并处一万元以上十万元以下罚款；情节较重的，处五日以上十五日以下拘留，可以并处五万元以上五十万元以下罚款。关闭用于实施违法犯罪活动的网站、通讯群组。</p>
-<p>单位有前款行为的，由公安机关处十万元以上五十万元以下罚款，并对直接负责的主管人员和其他直接责任人员依照前款规定处罚。</p>
-<p><strong>第六十八条</strong> 网络运营者违反本法第四十七条规定，对法律、行政法规禁止发布或者传输的信息未停止传输、采取消除等处置措施、保存有关记录的，由有关主管部门责令改正，给予警告，没收违法所得；拒不改正或者情节严重的，处十万元以上五十万元以下罚款，并可以责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照，对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
-<p>电子信息发送服务提供者、应用软件下载服务提供者，不履行本法第四十八条第二款规定的安全管理义务的，依照前款规定处罚。</p>
-<p><strong>第六十九条</strong> 网络运营者违反本法规定，有下列行为之一的，由有关主管部门责令改正；拒不改正或者情节严重的，处五万元以上五十万元以下罚款，对直接负责的主管人员和其他直接责任人员，处一万元以上十万元以下罚款：</p>
-<p>（一）不按照有关部门的要求对法律、行政法规禁止发布或者传输的信息，采取停止传输、消除等处置措施的；</p>
-<p>（二）拒绝、阻碍有关部门依法实施的监督检查的；</p>
-<p>（三）拒不向公安机关、国家安全机关提供技术支持和协助的。</p>
-<p><strong>第七十条</strong> 发布或者传输本法第十二条第二款和其他法律、行政法规禁止发布或者传输的信息的，依照有关法律、行政法规的规定处罚。</p>
-<p><strong>第七十一条</strong> 有本法规定的违法行为的，依照有关法律、行政法规的规定记入信用档案，并予以公示。</p>
-<p><strong>第七十二条</strong> 国家机关政务网络的运营者不履行本法规定的网络安全保护义务的，由其上级机关或者有关机关责令改正；对直接负责的主管人员和其他直接责任人员依法给予处分。</p>
-<p><strong>第七十三条</strong> 网信部门和有关部门违反本法第三十条规定，将在履行网络安全保护职责中获取的信息用于其他用途的，对直接负责的主管人员和其他直接责任人员依法给予处分。</p>
-<p>网信部门和有关部门的工作人员玩忽职守、滥用职权、徇私舞弊，尚不构成犯罪的，依法给予处分。</p>
-<p><strong>第七十四条</strong> 违反本法规定，给他人造成损害的，依法承担民事责任。</p>
-<p>违反本法规定，构成违反治安管理行为的，依法给予治安管理处罚；构成犯罪的，依法追究刑事责任。</p>
-<p><strong>第七十五条</strong> 境外的机构、组织、个人从事攻击、侵入、干扰、破坏等危害中华人民共和国的关键信息基础设施的活动，造成严重后果的，依法追究法律责任；国务院公安部门和有关部门并可以决定对该机构、组织、个人采取冻结财产或者其他必要的制裁措施。</p>
-<h2 id="第七章-附-则">第七章 附  则</h2>
-<p><strong>第七十六条</strong> 本法下列用语的含义：</p>
-<p>（一）网络，是指由计算机或者其他信息终端及相关设备组成的按照一定的规则和程序对信息进行收集、存储、传输、交换、处理的系统。</p>
-<p>（二）网络安全，是指通过采取必要措施，防范对网络的攻击、侵入、干扰、破坏和非法使用以及意外事故，使网络处于稳定可靠运行的状态，以及保障网络数据的完整性、保密性、可用性的能力。</p>
-<p>（三）网络运营者，是指网络的所有者、管理者和网络服务提供者。</p>
-<p>（四）网络数据，是指通过网络收集、存储、传输、处理和产生的各种电子数据。</p>
-<p>（五）个人信息，是指以电子或者其他方式记录的能够单独或者与其他信息结合识别自然人个人身份的各种信息，包括但不限于自然人的姓名、出生日期、身份证件号码、个人生物识别信息、住址、电话号码等。</p>
-<p><strong>第七十七条</strong> 存储、处理涉及国家秘密信息的网络的运行安全保护，除应当遵守本法外，还应当遵守保密法律、行政法规的规定。</p>
-<p><strong>第七十八条</strong> 军事网络的安全保护，由中央军事委员会另行规定。</p>
-<p><strong>第七十九条</strong> 本法自2017年6月1日起施行。</p>
-]]></content>
-      <categories>
-        <category>法律</category>
-        <category>网络安全法</category>
-      </categories>
-      <tags>
-        <tag>文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从应用内存上来研究智慧曲园模拟请假条</title>
     <url>/posts/6cb5ad08.html</url>
     <content><![CDATA[<h1>研究背景</h1>
@@ -5103,6 +4937,172 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       <tags>
         <tag>学习笔记</tag>
         <tag>文案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中华人民共和国网络安全法</title>
+    <url>/posts/b81fa239.html</url>
+    <content><![CDATA[<h1>中华人民共和国网络安全法</h1>
+<p>​		（2016年11月7日第十二届全国人民代表大会常务委员会第二十四次会议通过）</p>
+<p>来源： 中国人大网 2016年11月7日 17:31:34</p>
+<p>目  录</p>
+<p>[第一章  总  则](#第一章  总  则)</p>
+<p>[第二章  网络安全支持与促进](#第二章  网络安全支持与促进)</p>
+<p><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%BD%91%E7%BB%9C%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8">第三章  网络运行安全</a></p>
+<p>​          <a href="#%E7%AC%AC%E4%B8%80%E8%8A%82-%E4%B8%80%E8%88%AC%E8%A7%84%E5%AE%9A">第一节 一般规定</a></p>
+<p>​          <a href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E5%85%B3%E9%94%AE%E4%BF%A1%E6%81%AF%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8">第二节 关键信息基础设施的运行安全</a></p>
+<p><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8">第四章  网络信息安全</a></p>
+<p><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%9B%91%E6%B5%8B%E9%A2%84%E8%AD%A6%E4%B8%8E%E5%BA%94%E6%80%A5%E5%A4%84%E7%BD%AE">第五章 监测预警与应急处置</a></p>
+<p>[第六章 法律责任](#第六章 法律责任)</p>
+<p>[第七章 附  则](#第七章 附  则)</p>
+<h2 id="第一章-总-则">第一章  总  则</h2>
+<p><strong>第一条</strong> 为了保障网络安全，维护网络空间主权和国家安全、社会公共利益，保护公民、法人和其他组织的合法权益，促进经济社会信息化健康发展，制定本法。</p>
+<p><strong>第二条</strong> 在中华人民共和国境内建设、运营、维护和使用网络，以及网络安全的监督管理，适用本法。</p>
+<p><strong>第三条</strong> 国家坚持网络安全与信息化发展并重，遵循积极利用、科学发展、依法管理、确保安全的方针，推进网络基础设施建设和互联互通，鼓励网络技术创新和应用，支持培养网络安全人才，建立健全网络安全保障体系，提高网络安全保护能力。</p>
+<p><strong>第四条</strong> 国家制定并不断完善网络安全战略，明确保障网络安全的基本要求和主要目标，提出重点领域的网络安全政策、工作任务和措施。</p>
+<p><strong>第五条</strong> 国家采取措施，监测、防御、处置来源于中华人民共和国境内外的网络安全风险和威胁，保护关键信息基础设施免受攻击、侵入、干扰和破坏，依法惩治网络违法犯罪活动，维护网络空间安全和秩序。</p>
+<p><strong>第六条</strong> 国家倡导诚实守信、健康文明的网络行为，推动传播社会主义核心价值观，采取措施提高全社会的网络安全意识和水平，形成全社会共同参与促进网络安全的良好环境。</p>
+<p><strong>第七条</strong> 国家积极开展网络空间治理、网络技术研发和标准制定、打击网络违法犯罪等方面的国际交流与合作，推动构建和平、安全、开放、合作的网络空间，建立多边、民主、透明的网络治理体系。</p>
+<p><strong>第八条</strong> 国家网信部门负责统筹协调网络安全工作和相关监督管理工作。国务院电信主管部门、公安部门和其他有关机关依照本法和有关法律、行政法规的规定，在各自职责范围内负责网络安全保护和监督管理工作。</p>
+<p>县级以上地方人民政府有关部门的网络安全保护和监督管理职责，按照国家有关规定确定。</p>
+<p><strong>第九条</strong> 网络运营者开展经营和服务活动，必须遵守法律、行政法规，尊重社会公德，遵守商业道德，诚实信用，履行网络安全保护义务，接受政府和社会的监督，承担社会责任。</p>
+<p><strong>第十条</strong> 建设、运营网络或者通过网络提供服务，应当依照法律、行政法规的规定和国家标准的强制性要求，采取技术措施和其他必要措施，保障网络安全、稳定运行，有效应对网络安全事件，防范网络违法犯罪活动，维护网络数据的完整性、保密性和可用性。</p>
+<p><strong>第十一条</strong> 网络相关行业组织按照章程，加强行业自律，制定网络安全行为规范，指导会员加强网络安全保护，提高网络安全保护水平，促进行业健康发展。</p>
+<p><strong>第十二条</strong> 国家保护公民、法人和其他组织依法使用网络的权利，促进网络接入普及，提升网络服务水平，为社会提供安全、便利的网络服务，保障网络信息依法有序自由流动。</p>
+<p>任何个人和组织使用网络应当遵守宪法法律，遵守公共秩序，尊重社会公德，不得危害网络安全，不得利用网络从事危害国家安全、荣誉和利益，煽动颠覆国家政权、推翻社会主义制度，煽动分裂国家、破坏国家统一，宣扬恐怖主义、极端主义，宣扬民族仇恨、民族歧视，传播暴力、淫秽色情信息，编造、传播虚假信息扰乱经济秩序和社会秩序，以及侵害他人名誉、隐私、知识产权和其他合法权益等活动。</p>
+<p><strong>第十三条</strong> 国家支持研究开发有利于未成年人健康成长的网络产品和服务，依法惩治利用网络从事危害未成年人身心健康的活动，为未成年人提供安全、健康的网络环境。</p>
+<p><strong>第十四条</strong> 任何个人和组织有权对危害网络安全的行为向网信、电信、公安等部门举报。收到举报的部门应当及时依法作出处理；不属于本部门职责的，应当及时移送有权处理的部门。</p>
+<p>有关部门应当对举报人的相关信息予以保密，保护举报人的合法权益。</p>
+<h2 id="第二章-网络安全支持与促进">第二章  网络安全支持与促进</h2>
+<p><strong>第十五条</strong> 国家建立和完善网络安全标准体系。国务院标准化行政主管部门和国务院其他有关部门根据各自的职责，组织制定并适时修订有关网络安全管理以及网络产品、服务和运行安全的国家标准、行业标准。</p>
+<p>国家支持企业、研究机构、高等学校、网络相关行业组织参与网络安全国家标准、行业标准的制定。</p>
+<p><strong>第十六条</strong> 国务院和省、自治区、直辖市人民政府应当统筹规划，加大投入，扶持重点网络安全技术产业和项目，支持网络安全技术的研究开发和应用，推广安全可信的网络产品和服务，保护网络技术知识产权，支持企业、研究机构和高等学校等参与国家网络安全技术创新项目。</p>
+<p><strong>第十七条</strong> 国家推进网络安全社会化服务体系建设，鼓励有关企业、机构开展网络安全认证、检测和风险评估等安全服务。</p>
+<p><strong>第十八条</strong> 国家鼓励开发网络数据安全保护和利用技术，促进公共数据资源开放，推动技术创新和经济社会发展。</p>
+<p>国家支持创新网络安全管理方式，运用网络新技术，提升网络安全保护水平。</p>
+<p><strong>第十九条</strong> 各级人民政府及其有关部门应当组织开展经常性的网络安全宣传教育，并指导、督促有关单位做好网络安全宣传教育工作。</p>
+<p>大众传播媒介应当有针对性地面向社会进行网络安全宣传教育。</p>
+<p><strong>第二十条</strong> 国家支持企业和高等学校、职业学校等教育培训机构开展网络安全相关教育与培训，采取多种方式培养网络安全人才，促进网络安全人才交流。</p>
+<h2 id="第三章-网络运行安全">第三章 网络运行安全</h2>
+<h3 id="第一节-一般规定">第一节 一般规定</h3>
+<p><strong>第二十一条</strong> 国家实行网络安全等级保护制度。网络运营者应当按照网络安全等级保护制度的要求，履行下列安全保护义务，保障网络免受干扰、破坏或者未经授权的访问，防止网络数据泄露或者被窃取、篡改：</p>
+<p>（一）制定内部安全管理制度和操作规程，确定网络安全负责人，落实网络安全保护责任；</p>
+<p>（二）采取防范计算机病毒和网络攻击、网络侵入等危害网络安全行为的技术措施；</p>
+<p>（三）采取监测、记录网络运行状态、网络安全事件的技术措施，并按照规定留存相关的网络日志不少于六个月；</p>
+<p>（四）采取数据分类、重要数据备份和加密等措施；</p>
+<p>（五）法律、行政法规规定的其他义务。</p>
+<p><strong>第二十二条</strong> 网络产品、服务应当符合相关国家标准的强制性要求。网络产品、服务的提供者不得设置恶意程序；发现其网络产品、服务存在安全缺陷、漏洞等风险时，应当立即采取补救措施，按照规定及时告知用户并向有关主管部门报告。</p>
+<p>网络产品、服务的提供者应当为其产品、服务持续提供安全维护；在规定或者当事人约定的期限内，不得终止提供安全维护。</p>
+<p>网络产品、服务具有收集用户信息功能的，其提供者应当向用户明示并取得同意；涉及用户个人信息的，还应当遵守本法和有关法律、行政法规关于个人信息保护的规定。</p>
+<p><strong>第二十三条</strong> 网络关键设备和网络安全专用产品应当按照相关国家标准的强制性要求，由具备资格的机构安全认证合格或者安全检测符合要求后，方可销售或者提供。国家网信部门会同国务院有关部门制定、公布网络关键设备和网络安全专用产品目录，并推动安全认证和安全检测结果互认，避免重复认证、检测。</p>
+<p><strong>第二十四条</strong> 网络运营者为用户办理网络接入、域名注册服务，办理固定电话、移动电话等入网手续，或者为用户提供信息发布、即时通讯等服务，在与用户签订协议或者确认提供服务时，应当要求用户提供真实身份信息。用户不提供真实身份信息的，网络运营者不得为其提供相关服务。</p>
+<p>国家实施网络可信身份战略，支持研究开发安全、方便的电子身份认证技术，推动不同电子身份认证之间的互认。</p>
+<p><strong>第二十五条</strong> 网络运营者应当制定网络安全事件应急预案，及时处置系统漏洞、计算机病毒、网络攻击、网络侵入等安全风险；在发生危害网络安全的事件时，立即启动应急预案，采取相应的补救措施，并按照规定向有关主管部门报告。</p>
+<p><strong>第二十六条</strong> 开展网络安全认证、检测、风险评估等活动，向社会发布系统漏洞、计算机病毒、网络攻击、网络侵入等网络安全信息，应当遵守国家有关规定。</p>
+<p><strong>第二十七条</strong> 任何个人和组织不得从事非法侵入他人网络、干扰他人网络正常功能、窃取网络数据等危害网络安全的活动；不得提供专门用于从事侵入网络、干扰网络正常功能及防护措施、窃取网络数据等危害网络安全活动的程序、工具；明知他人从事危害网络安全的活动的，不得为其提供技术支持、广告推广、支付结算等帮助。</p>
+<p><strong>第二十八条</strong> 网络运营者应当为公安机关、国家安全机关依法维护国家安全和侦查犯罪的活动提供技术支持和协助。</p>
+<p><strong>第二十九条</strong> 国家支持网络运营者之间在网络安全信息收集、分析、通报和应急处置等方面进行合作，提高网络运营者的安全保障能力。</p>
+<p>有关行业组织建立健全本行业的网络安全保护规范和协作机制，加强对网络安全风险的分析评估，定期向会员进行风险警示，支持、协助会员应对网络安全风险。</p>
+<p><strong>第三十条</strong> 网信部门和有关部门在履行网络安全保护职责中获取的信息，只能用于维护网络安全的需要，不得用于其他用途。</p>
+<h3 id="第二节-关键信息基础设施的运行安全">第二节 关键信息基础设施的运行安全</h3>
+<p><strong>第三十一条</strong> 国家对公共通信和信息服务、能源、交通、水利、金融、公共服务、电子政务等重要行业和领域，以及其他一旦遭到破坏、丧失功能或者数据泄露，可能严重危害国家安全、国计民生、公共利益的关键信息基础设施，在网络安全等级保护制度的基础上，实行重点保护。关键信息基础设施的具体范围和安全保护办法由国务院制定。</p>
+<p>国家鼓励关键信息基础设施以外的网络运营者自愿参与关键信息基础设施保护体系。</p>
+<p><strong>第三十二条</strong> 按照国务院规定的职责分工，负责关键信息基础设施安全保护工作的部门分别编制并组织实施本行业、本领域的关键信息基础设施安全规划，指导和监督关键信息基础设施运行安全保护工作。</p>
+<p><strong>第三十三条</strong> 建设关键信息基础设施应当确保其具有支持业务稳定、持续运行的性能，并保证安全技术措施同步规划、同步建设、同步使用。</p>
+<p><strong>第三十四条</strong> 除本法第二十一条的规定外，关键信息基础设施的运营者还应当履行下列安全保护义务：</p>
+<p>（一）设置专门安全管理机构和安全管理负责人，并对该负责人和关键岗位的人员进行安全背景审查；</p>
+<p>（二）定期对从业人员进行网络安全教育、技术培训和技能考核；</p>
+<p>（三）对重要系统和数据库进行容灾备份；</p>
+<p>（四）制定网络安全事件应急预案，并定期进行演练；</p>
+<p>（五）法律、行政法规规定的其他义务。</p>
+<p><strong>第三十五条</strong> 关键信息基础设施的运营者采购网络产品和服务，可能影响国家安全的，应当通过国家网信部门会同国务院有关部门组织的国家安全审查。</p>
+<p><strong>第三十六条</strong> 关键信息基础设施的运营者采购网络产品和服务，应当按照规定与提供者签订安全保密协议，明确安全和保密义务与责任。</p>
+<p><strong>第三十七条</strong> 关键信息基础设施的运营者在中华人民共和国境内运营中收集和产生的个人信息和重要数据应当在境内存储。因业务需要，确需向境外提供的，应当按照国家网信部门会同国务院有关部门制定的办法进行安全评估；法律、行政法规另有规定的，依照其规定。</p>
+<p><strong>第三十八条</strong> 关键信息基础设施的运营者应当自行或者委托网络安全服务机构对其网络的安全性和可能存在的风险每年至少进行一次检测评估，并将检测评估情况和改进措施报送相关负责关键信息基础设施安全保护工作的部门。</p>
+<p><strong>第三十九条</strong> 国家网信部门应当统筹协调有关部门对关键信息基础设施的安全保护采取下列措施：</p>
+<p>（一）对关键信息基础设施的安全风险进行抽查检测，提出改进措施，必要时可以委托网络安全服务机构对网络存在的安全风险进行检测评估；</p>
+<p>（二）定期组织关键信息基础设施的运营者进行网络安全应急演练，提高应对网络安全事件的水平和协同配合能力；</p>
+<p>（三）促进有关部门、关键信息基础设施的运营者以及有关研究机构、网络安全服务机构等之间的网络安全信息共享；</p>
+<p>（四）对网络安全事件的应急处置与网络功能的恢复等，提供技术支持和协助。</p>
+<h2 id="第四章-网络信息安全">第四章 网络信息安全</h2>
+<p><strong>第四十条</strong> 网络运营者应当对其收集的用户信息严格保密，并建立健全用户信息保护制度。</p>
+<p><strong>第四十一条</strong> 网络运营者收集、使用个人信息，应当遵循合法、正当、必要的原则，公开收集、使用规则，明示收集、使用信息的目的、方式和范围，并经被收集者同意。</p>
+<p>网络运营者不得收集与其提供的服务无关的个人信息，不得违反法律、行政法规的规定和双方的约定收集、使用个人信息，并应当依照法律、行政法规的规定和与用户的约定，处理其保存的个人信息。</p>
+<p><strong>第四十二条</strong> 网络运营者不得泄露、篡改、毁损其收集的个人信息；未经被收集者同意，不得向他人提供个人信息。但是，经过处理无法识别特定个人且不能复原的除外。</p>
+<p>网络运营者应当采取技术措施和其他必要措施，确保其收集的个人信息安全，防止信息泄露、毁损、丢失。在发生或者可能发生个人信息泄露、毁损、丢失的情况时，应当立即采取补救措施，按照规定及时告知用户并向有关主管部门报告。</p>
+<p><strong>第四十三条</strong> 个人发现网络运营者违反法律、行政法规的规定或者双方的约定收集、使用其个人信息的，有权要求网络运营者删除其个人信息；发现网络运营者收集、存储的其个人信息有错误的，有权要求网络运营者予以更正。网络运营者应当采取措施予以删除或者更正。</p>
+<p><strong>第四十四条</strong> 任何个人和组织不得窃取或者以其他非法方式获取个人信息，不得非法出售或者非法向他人提供个人信息。</p>
+<p><strong>第四十五条</strong> 依法负有网络安全监督管理职责的部门及其工作人员，必须对在履行职责中知悉的个人信息、隐私和商业秘密严格保密，不得泄露、出售或者非法向他人提供。</p>
+<p><strong>第四十六条</strong> 任何个人和组织应当对其使用网络的行为负责，不得设立用于实施诈骗，传授犯罪方法，制作或者销售违禁物品、管制物品等违法犯罪活动的网站、通讯群组，不得利用网络发布涉及实施诈骗，制作或者销售违禁物品、管制物品以及其他违法犯罪活动的信息。</p>
+<p><strong>第四十七条</strong> 网络运营者应当加强对其用户发布的信息的管理，发现法律、行政法规禁止发布或者传输的信息的，应当立即停止传输该信息，采取消除等处置措施，防止信息扩散，保存有关记录，并向有关主管部门报告。</p>
+<p><strong>第四十八条</strong> 任何个人和组织发送的电子信息、提供的应用软件，不得设置恶意程序，不得含有法律、行政法规禁止发布或者传输的信息。</p>
+<p>电子信息发送服务提供者和应用软件下载服务提供者，应当履行安全管理义务，知道其用户有前款规定行为的，应当停止提供服务，采取消除等处置措施，保存有关记录，并向有关主管部门报告。</p>
+<p><strong>第四十九条</strong> 网络运营者应当建立网络信息安全投诉、举报制度，公布投诉、举报方式等信息，及时受理并处理有关网络信息安全的投诉和举报。</p>
+<p>网络运营者对网信部门和有关部门依法实施的监督检查，应当予以配合。</p>
+<p><strong>第五十条</strong> 国家网信部门和有关部门依法履行网络信息安全监督管理职责，发现法律、行政法规禁止发布或者传输的信息的，应当要求网络运营者停止传输，采取消除等处置措施，保存有关记录；对来源于中华人民共和国境外的上述信息，应当通知有关机构采取技术措施和其他必要措施阻断传播。</p>
+<h2 id="第五章-监测预警与应急处置">第五章 监测预警与应急处置</h2>
+<p><strong>第五十一条</strong> 国家建立网络安全监测预警和信息通报制度。国家网信部门应当统筹协调有关部门加强网络安全信息收集、分析和通报工作，按照规定统一发布网络安全监测预警信息。</p>
+<p><strong>第五十二条</strong> 负责关键信息基础设施安全保护工作的部门，应当建立健全本行业、本领域的网络安全监测预警和信息通报制度，并按照规定报送网络安全监测预警信息。</p>
+<p><strong>第五十三条</strong> 国家网信部门协调有关部门建立健全网络安全风险评估和应急工作机制，制定网络安全事件应急预案，并定期组织演练。</p>
+<p>负责关键信息基础设施安全保护工作的部门应当制定本行业、本领域的网络安全事件应急预案，并定期组织演练。</p>
+<p>网络安全事件应急预案应当按照事件发生后的危害程度、影响范围等因素对网络安全事件进行分级，并规定相应的应急处置措施。</p>
+<p><strong>第五十四条</strong> 网络安全事件发生的风险增大时，省级以上人民政府有关部门应当按照规定的权限和程序，并根据网络安全风险的特点和可能造成的危害，采取下列措施：</p>
+<p>（一）要求有关部门、机构和人员及时收集、报告有关信息，加强对网络安全风险的监测；</p>
+<p>（二）组织有关部门、机构和专业人员，对网络安全风险信息进行分析评估，预测事件发生的可能性、影响范围和危害程度；</p>
+<p>（三）向社会发布网络安全风险预警，发布避免、减轻危害的措施。</p>
+<p><strong>第五十五条</strong> 发生网络安全事件，应当立即启动网络安全事件应急预案，对网络安全事件进行调查和评估，要求网络运营者采取技术措施和其他必要措施，消除安全隐患，防止危害扩大，并及时向社会发布与公众有关的警示信息。</p>
+<p><strong>第五十六条</strong> 省级以上人民政府有关部门在履行网络安全监督管理职责中，发现网络存在较大安全风险或者发生安全事件的，可以按照规定的权限和程序对该网络的运营者的法定代表人或者主要负责人进行约谈。网络运营者应当按照要求采取措施，进行整改，消除隐患。</p>
+<p><strong>第五十七条</strong> 因网络安全事件，发生突发事件或者生产安全事故的，应当依照《中华人民共和国突发事件应对法》、《中华人民共和国安全生产法》等有关法律、行政法规的规定处置。</p>
+<p><strong>第五十八条</strong> 因维护国家安全和社会公共秩序，处置重大突发社会安全事件的需要，经国务院决定或者批准，可以在特定区域对网络通信采取限制等临时措施。</p>
+<h2 id="第六章-法律责任">第六章 法律责任</h2>
+<p><strong>第五十九条</strong> 网络运营者不履行本法第二十一条、第二十五条规定的网络安全保护义务的，由有关主管部门责令改正，给予警告；拒不改正或者导致危害网络安全等后果的，处一万元以上十万元以下罚款，对直接负责的主管人员处五千元以上五万元以下罚款。</p>
+<p>关键信息基础设施的运营者不履行本法第三十三条、第三十四条、第三十六条、第三十八条规定的网络安全保护义务的，由有关主管部门责令改正，给予警告；拒不改正或者导致危害网络安全等后果的，处十万元以上一百万元以下罚款，对直接负责的主管人员处一万元以上十万元以下罚款。</p>
+<p><strong>第六十条</strong> 违反本法第二十二条第一款、第二款和第四十八条第一款规定，有下列行为之一的，由有关主管部门责令改正，给予警告；拒不改正或者导致危害网络安全等后果的，处五万元以上五十万元以下罚款，对直接负责的主管人员处一万元以上十万元以下罚款：</p>
+<p>（一）设置恶意程序的；</p>
+<p>（二）对其产品、服务存在的安全缺陷、漏洞等风险未立即采取补救措施，或者未按照规定及时告知用户并向有关主管部门报告的；</p>
+<p>（三）擅自终止为其产品、服务提供安全维护的。</p>
+<p><strong>第六十一条</strong> 网络运营者违反本法第二十四条第一款规定，未要求用户提供真实身份信息，或者对不提供真实身份信息的用户提供相关服务的，由有关主管部门责令改正；拒不改正或者情节严重的，处五万元以上五十万元以下罚款，并可以由有关主管部门责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照，对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
+<p><strong>第六十二条</strong> 违反本法第二十六条规定，开展网络安全认证、检测、风险评估等活动，或者向社会发布系统漏洞、计算机病毒、网络攻击、网络侵入等网络安全信息的，由有关主管部门责令改正，给予警告；拒不改正或者情节严重的，处一万元以上十万元以下罚款，并可以由有关主管部门责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照，对直接负责的主管人员和其他直接责任人员处五千元以上五万元以下罚款。</p>
+<p><strong>第六十三条</strong> 违反本法第二十七条规定，从事危害网络安全的活动，或者提供专门用于从事危害网络安全活动的程序、工具，或者为他人从事危害网络安全的活动提供技术支持、广告推广、支付结算等帮助，尚不构成犯罪的，由公安机关没收违法所得，处五日以下拘留，可以并处五万元以上五十万元以下罚款；情节较重的，处五日以上十五日以下拘留，可以并处十万元以上一百万元以下罚款。</p>
+<p>单位有前款行为的，由公安机关没收违法所得，处十万元以上一百万元以下罚款，并对直接负责的主管人员和其他直接责任人员依照前款规定处罚。</p>
+<p>违反本法第二十七条规定，受到治安管理处罚的人员，五年内不得从事网络安全管理和网络运营关键岗位的工作；受到刑事处罚的人员，终身不得从事网络安全管理和网络运营关键岗位的工作。</p>
+<p><strong>第六十四条</strong> 网络运营者、网络产品或者服务的提供者违反本法第二十二条第三款、第四十一条至第四十三条规定，侵害个人信息依法得到保护的权利的，由有关主管部门责令改正，可以根据情节单处或者并处警告、没收违法所得、处违法所得一倍以上十倍以下罚款，没有违法所得的，处一百万元以下罚款，对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款；情节严重的，并可以责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照。</p>
+<p>违反本法第四十四条规定，窃取或者以其他非法方式获取、非法出售或者非法向他人提供个人信息，尚不构成犯罪的，由公安机关没收违法所得，并处违法所得一倍以上十倍以下罚款，没有违法所得的，处一百万元以下罚款。</p>
+<p><strong>第六十五条</strong> 关键信息基础设施的运营者违反本法第三十五条规定，使用未经安全审查或者安全审查未通过的网络产品或者服务的，由有关主管部门责令停止使用，处采购金额一倍以上十倍以下罚款；对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
+<p><strong>第六十六条</strong> 关键信息基础设施的运营者违反本法第三十七条规定，在境外存储网络数据，或者向境外提供网络数据的，由有关主管部门责令改正，给予警告，没收违法所得，处五万元以上五十万元以下罚款，并可以责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照；对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
+<p><strong>第六十七条</strong> 违反本法第四十六条规定，设立用于实施违法犯罪活动的网站、通讯群组，或者利用网络发布涉及实施违法犯罪活动的信息，尚不构成犯罪的，由公安机关处五日以下拘留，可以并处一万元以上十万元以下罚款；情节较重的，处五日以上十五日以下拘留，可以并处五万元以上五十万元以下罚款。关闭用于实施违法犯罪活动的网站、通讯群组。</p>
+<p>单位有前款行为的，由公安机关处十万元以上五十万元以下罚款，并对直接负责的主管人员和其他直接责任人员依照前款规定处罚。</p>
+<p><strong>第六十八条</strong> 网络运营者违反本法第四十七条规定，对法律、行政法规禁止发布或者传输的信息未停止传输、采取消除等处置措施、保存有关记录的，由有关主管部门责令改正，给予警告，没收违法所得；拒不改正或者情节严重的，处十万元以上五十万元以下罚款，并可以责令暂停相关业务、停业整顿、关闭网站、吊销相关业务许可证或者吊销营业执照，对直接负责的主管人员和其他直接责任人员处一万元以上十万元以下罚款。</p>
+<p>电子信息发送服务提供者、应用软件下载服务提供者，不履行本法第四十八条第二款规定的安全管理义务的，依照前款规定处罚。</p>
+<p><strong>第六十九条</strong> 网络运营者违反本法规定，有下列行为之一的，由有关主管部门责令改正；拒不改正或者情节严重的，处五万元以上五十万元以下罚款，对直接负责的主管人员和其他直接责任人员，处一万元以上十万元以下罚款：</p>
+<p>（一）不按照有关部门的要求对法律、行政法规禁止发布或者传输的信息，采取停止传输、消除等处置措施的；</p>
+<p>（二）拒绝、阻碍有关部门依法实施的监督检查的；</p>
+<p>（三）拒不向公安机关、国家安全机关提供技术支持和协助的。</p>
+<p><strong>第七十条</strong> 发布或者传输本法第十二条第二款和其他法律、行政法规禁止发布或者传输的信息的，依照有关法律、行政法规的规定处罚。</p>
+<p><strong>第七十一条</strong> 有本法规定的违法行为的，依照有关法律、行政法规的规定记入信用档案，并予以公示。</p>
+<p><strong>第七十二条</strong> 国家机关政务网络的运营者不履行本法规定的网络安全保护义务的，由其上级机关或者有关机关责令改正；对直接负责的主管人员和其他直接责任人员依法给予处分。</p>
+<p><strong>第七十三条</strong> 网信部门和有关部门违反本法第三十条规定，将在履行网络安全保护职责中获取的信息用于其他用途的，对直接负责的主管人员和其他直接责任人员依法给予处分。</p>
+<p>网信部门和有关部门的工作人员玩忽职守、滥用职权、徇私舞弊，尚不构成犯罪的，依法给予处分。</p>
+<p><strong>第七十四条</strong> 违反本法规定，给他人造成损害的，依法承担民事责任。</p>
+<p>违反本法规定，构成违反治安管理行为的，依法给予治安管理处罚；构成犯罪的，依法追究刑事责任。</p>
+<p><strong>第七十五条</strong> 境外的机构、组织、个人从事攻击、侵入、干扰、破坏等危害中华人民共和国的关键信息基础设施的活动，造成严重后果的，依法追究法律责任；国务院公安部门和有关部门并可以决定对该机构、组织、个人采取冻结财产或者其他必要的制裁措施。</p>
+<h2 id="第七章-附-则">第七章 附  则</h2>
+<p><strong>第七十六条</strong> 本法下列用语的含义：</p>
+<p>（一）网络，是指由计算机或者其他信息终端及相关设备组成的按照一定的规则和程序对信息进行收集、存储、传输、交换、处理的系统。</p>
+<p>（二）网络安全，是指通过采取必要措施，防范对网络的攻击、侵入、干扰、破坏和非法使用以及意外事故，使网络处于稳定可靠运行的状态，以及保障网络数据的完整性、保密性、可用性的能力。</p>
+<p>（三）网络运营者，是指网络的所有者、管理者和网络服务提供者。</p>
+<p>（四）网络数据，是指通过网络收集、存储、传输、处理和产生的各种电子数据。</p>
+<p>（五）个人信息，是指以电子或者其他方式记录的能够单独或者与其他信息结合识别自然人个人身份的各种信息，包括但不限于自然人的姓名、出生日期、身份证件号码、个人生物识别信息、住址、电话号码等。</p>
+<p><strong>第七十七条</strong> 存储、处理涉及国家秘密信息的网络的运行安全保护，除应当遵守本法外，还应当遵守保密法律、行政法规的规定。</p>
+<p><strong>第七十八条</strong> 军事网络的安全保护，由中央军事委员会另行规定。</p>
+<p><strong>第七十九条</strong> 本法自2017年6月1日起施行。</p>
+]]></content>
+      <categories>
+        <category>法律</category>
+        <category>网络安全法</category>
+      </categories>
+      <tags>
+        <tag>文</tag>
       </tags>
   </entry>
   <entry>
@@ -5434,76 +5434,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </tags>
   </entry>
   <entry>
-    <title>公文写作基础知识</title>
-    <url>/posts/4f542b80.html</url>
-    <content><![CDATA[<h1>公文写作基础知识</h1>
-<p>1.题目：（正标题：三号黑体；副标题：小三号楷体）<br>
-2.“摘要”：（五号黑体），摘要内容（楷体五号）<br>
-3.“关键词”：（五号黑体），关键词内容（五号楷体，多个关键词之间用“；”隔开）。<br>
-4.正文小四号宋体，标题黑体小四号，正文行间距为1.5倍<br>
-5.参考文献：（小四号黑体），参考文献内容（五号楷体）。参考文献是作者写作论著时所参考的文献书目。<br>
-附：参考文献格式要求<br>
-参考文献格式要求<br>
-参考文献统一放在文章最后，序号用方括号[1][2][3]……标出，序号左顶格。参照ISO690及ISO690-2，每一参考文献条目的最后均以“.”结束。各类参考文献条目的编排格式及示例如下：<br>
-a. 专著、论文集、学位论文、报告<br>
-[序号]主要责任者.文献题名[文献类型标识].出版地：出版者，出版年.起止页码(任选).（中译本前要加国别）<br>
-[1] [英]M奥康诺尔著，王耀先译．科技书刊的编译工作[M].北京：人民教育出版社，1982.56－57.<br>
-[2] 辛希孟.信息技术与信息服务国际研讨会论文集：A集[C].北京：中国社会科学出版社，1994.<br>
-[3] 张筑生.微分半动力系统的不变集[D].北京：北京大学数学系数学研究所，1983.<br>
-[4] 冯西桥.核反应堆压力管道与压力容器的LBB分析[R].北京：清华大学核能技术设计研究院，1997.<br>
-b. 期刊文章<br>
-[序号]主要责任者.文献题名[J].刊名，年，卷(期)：起止页码.<br>
-[5] 何龄修.读顾城《南明史》[J].中国史研究，1998，(3)：167-173.<br>
-[6] 金显贺，王昌长，王忠东，等.一种用于在线检测局部放电的数字滤波技术[J].清华大学学报(自然科学版)，1993，33(4)：62-67.<br>
-c. 论文集中的析出文献<br>
-[序号]析出文献主要责任者.析出文献题名[A].原文献主要责任者(任选).原文献题名[C].出版地：出版者，出版年.析出文献起止页码.<br>
-[7] 钟文发.非线性规划在可燃毒物配置中的应用[A].赵玮.运筹学的理论与应用——中国运筹学会第五届大会论文集[C].西安：西安电子科技大学出版社，1996.468-471.<br>
-d. 报纸文章<br>
-[序号]主要责任者.文献题名[N].报纸名，出版日期(版次).<br>
-[8] 谢希德.创造学习的新思路[N].人民日报，1998-12-25(10).<br>
-e. 国际、国家标准<br>
-[序号]标准编号，标准名称[S].<br>
-[9] GB/T16159-1996，汉语拼音正词法基本规则[S].<br>
-f. 专利<br>
-[序号]专利所有者.专利题名[P].专利国别：专利号，出版日期.<br>
-[10] 姜锡洲.一种温热外敷药制备方案[P].中国专利：881056073，1989-07-26.<br>
-g. 电子文献<br>
-[序号]主要责任者.电子文献题名[电子文献及载体类型标识].电子文献的出处或可获得地址，发表或更新日期/引用日期(任选).<br>
-[11] 王明亮.关于中国学术期刊标准化数据库系统工程的进展[EB/OL]. <a href="http://www.cajcd.edu.cn/pub/wml.txt/980810-2.html,1998-08-16/1998-10-04">http://www.cajcd.edu.cn/pub/wml.txt/980810-2.html,1998-08-16/1998-10-04</a>.<br>
-[12] 万锦坤.中国大学学报论文文摘(1983-1993).英文版[DB/CD].北京:中国大百科全书出版社，1996.<br>
-h. 各种未定义类型的文献<br>
-[序号]主要责任者.文献题名[Z].出版地：出版者，出版年.</p>
-<p>Word文档格式一般为：</p>
-<p>①标题<font color='red'>方正小标宋简体</font>    <font color='blue'>二号</font>  不加粗 居中 段落固定值33磅</p>
-<p>②标题与正文空一行（从正文开始打）</p>
-<p>（空行字体字号与正文保持一致，仿宋三号固定值29磅）</p>
-<p>③正文为<font color='red'>仿宋三号不加粗</font>，行间距固定值29磅。首行缩进2字符。两端对齐</p>
-<p>3.标题：与正文缩进等相同、全部用中文字符</p>
-<p>一级标题：黑体三号“一、XXXX”。</p>
-<p>二级标题：楷体三号“（一）XXXX”。</p>
-<p>三级标题：仿宋三号“1.XXXX”。</p>
-<p>四级标题：仿宋三号“（1）XXXX”</p>
-<p>4.Word表格</p>
-<p>①标题方正小标宋简体二号不加粗居中。</p>
-<p>②标题与表格间空一行，表格随内容适当调整。</p>
-<p>③表格全部内容设置单元格格式居中对齐。</p>
-<p>④注意标点。</p>
-<p>⑤两个字的内容或人名中间空两格。</p>
-<p>注：字体根据需要调整，三号，四号或小四。</p>
-<p>5.其他注意点（视图选项）</p>
-<p>①注意符号需为中文符号，区分中英文符号</p>
-<p>如逗号, ， 冒号: ： 破折号- —— 括号( ) （ ）</p>
-<p>②**（根据实际情况进行增删）**</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>写作格式</category>
-      </categories>
-      <tags>
-        <tag>文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>全自动解密脚本Ciphey官方安装文档</title>
     <url>/posts/bc236d8e.html</url>
     <content><![CDATA[<h1><a href="https://github.com/Ciphey/Ciphey/wiki/Installation#python-37-and-above">Python 3.7 and above</a></h1>
@@ -5592,6 +5522,76 @@ No password hashes left to crack (see FAQ)</p>
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>公文写作基础知识</title>
+    <url>/posts/4f542b80.html</url>
+    <content><![CDATA[<h1>公文写作基础知识</h1>
+<p>1.题目：（正标题：三号黑体；副标题：小三号楷体）<br>
+2.“摘要”：（五号黑体），摘要内容（楷体五号）<br>
+3.“关键词”：（五号黑体），关键词内容（五号楷体，多个关键词之间用“；”隔开）。<br>
+4.正文小四号宋体，标题黑体小四号，正文行间距为1.5倍<br>
+5.参考文献：（小四号黑体），参考文献内容（五号楷体）。参考文献是作者写作论著时所参考的文献书目。<br>
+附：参考文献格式要求<br>
+参考文献格式要求<br>
+参考文献统一放在文章最后，序号用方括号[1][2][3]……标出，序号左顶格。参照ISO690及ISO690-2，每一参考文献条目的最后均以“.”结束。各类参考文献条目的编排格式及示例如下：<br>
+a. 专著、论文集、学位论文、报告<br>
+[序号]主要责任者.文献题名[文献类型标识].出版地：出版者，出版年.起止页码(任选).（中译本前要加国别）<br>
+[1] [英]M奥康诺尔著，王耀先译．科技书刊的编译工作[M].北京：人民教育出版社，1982.56－57.<br>
+[2] 辛希孟.信息技术与信息服务国际研讨会论文集：A集[C].北京：中国社会科学出版社，1994.<br>
+[3] 张筑生.微分半动力系统的不变集[D].北京：北京大学数学系数学研究所，1983.<br>
+[4] 冯西桥.核反应堆压力管道与压力容器的LBB分析[R].北京：清华大学核能技术设计研究院，1997.<br>
+b. 期刊文章<br>
+[序号]主要责任者.文献题名[J].刊名，年，卷(期)：起止页码.<br>
+[5] 何龄修.读顾城《南明史》[J].中国史研究，1998，(3)：167-173.<br>
+[6] 金显贺，王昌长，王忠东，等.一种用于在线检测局部放电的数字滤波技术[J].清华大学学报(自然科学版)，1993，33(4)：62-67.<br>
+c. 论文集中的析出文献<br>
+[序号]析出文献主要责任者.析出文献题名[A].原文献主要责任者(任选).原文献题名[C].出版地：出版者，出版年.析出文献起止页码.<br>
+[7] 钟文发.非线性规划在可燃毒物配置中的应用[A].赵玮.运筹学的理论与应用——中国运筹学会第五届大会论文集[C].西安：西安电子科技大学出版社，1996.468-471.<br>
+d. 报纸文章<br>
+[序号]主要责任者.文献题名[N].报纸名，出版日期(版次).<br>
+[8] 谢希德.创造学习的新思路[N].人民日报，1998-12-25(10).<br>
+e. 国际、国家标准<br>
+[序号]标准编号，标准名称[S].<br>
+[9] GB/T16159-1996，汉语拼音正词法基本规则[S].<br>
+f. 专利<br>
+[序号]专利所有者.专利题名[P].专利国别：专利号，出版日期.<br>
+[10] 姜锡洲.一种温热外敷药制备方案[P].中国专利：881056073，1989-07-26.<br>
+g. 电子文献<br>
+[序号]主要责任者.电子文献题名[电子文献及载体类型标识].电子文献的出处或可获得地址，发表或更新日期/引用日期(任选).<br>
+[11] 王明亮.关于中国学术期刊标准化数据库系统工程的进展[EB/OL]. <a href="http://www.cajcd.edu.cn/pub/wml.txt/980810-2.html,1998-08-16/1998-10-04">http://www.cajcd.edu.cn/pub/wml.txt/980810-2.html,1998-08-16/1998-10-04</a>.<br>
+[12] 万锦坤.中国大学学报论文文摘(1983-1993).英文版[DB/CD].北京:中国大百科全书出版社，1996.<br>
+h. 各种未定义类型的文献<br>
+[序号]主要责任者.文献题名[Z].出版地：出版者，出版年.</p>
+<p>Word文档格式一般为：</p>
+<p>①标题<font color='red'>方正小标宋简体</font>    <font color='blue'>二号</font>  不加粗 居中 段落固定值33磅</p>
+<p>②标题与正文空一行（从正文开始打）</p>
+<p>（空行字体字号与正文保持一致，仿宋三号固定值29磅）</p>
+<p>③正文为<font color='red'>仿宋三号不加粗</font>，行间距固定值29磅。首行缩进2字符。两端对齐</p>
+<p>3.标题：与正文缩进等相同、全部用中文字符</p>
+<p>一级标题：黑体三号“一、XXXX”。</p>
+<p>二级标题：楷体三号“（一）XXXX”。</p>
+<p>三级标题：仿宋三号“1.XXXX”。</p>
+<p>四级标题：仿宋三号“（1）XXXX”</p>
+<p>4.Word表格</p>
+<p>①标题方正小标宋简体二号不加粗居中。</p>
+<p>②标题与表格间空一行，表格随内容适当调整。</p>
+<p>③表格全部内容设置单元格格式居中对齐。</p>
+<p>④注意标点。</p>
+<p>⑤两个字的内容或人名中间空两格。</p>
+<p>注：字体根据需要调整，三号，四号或小四。</p>
+<p>5.其他注意点（视图选项）</p>
+<p>①注意符号需为中文符号，区分中英文符号</p>
+<p>如逗号, ， 冒号: ： 破折号- —— 括号( ) （ ）</p>
+<p>②**（根据实际情况进行增删）**</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>写作格式</category>
+      </categories>
+      <tags>
+        <tag>文</tag>
       </tags>
   </entry>
   <entry>
@@ -5994,25 +5994,6 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
-    <title>实验七 最小生成树和最短路径的实现</title>
-    <url>/posts/1b9cb669.html</url>
-    <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/Fv5QkbY1G5LDg_28R1J8Oief5nmC" alt="Fv5QkbY1G5LDg_28R1J8Oief5nmC"></p>
-<h1>Prim算法</h1>
-<blockquote>
-<p>没听课（）教材代码，复制过来了</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/******************************* </span></span><br><span class="line"><span class="comment">   对应教材6.4.1节，Prim算法 </span></span><br><span class="line"><span class="comment">********************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MaxSize = <span class="number">10</span>;                   <span class="comment">//图中最多顶点个数</span></span><br><span class="line"><span class="type">int</span> visited[MaxSize] = &#123;<span class="number">0</span>&#125;;              <span class="comment">//全局数组变量visited初始化</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   	<span class="built_in">MGraph</span>(DataType a[ ], <span class="type">int</span> n, <span class="type">int</span> e);     <span class="comment">//构造函数，建立具有n个顶点e条边的图</span></span><br><span class="line">   	~<span class="built_in">MGraph</span>( )&#123; &#125;;                        <span class="comment">//析构函数</span></span><br><span class="line"> 	<span class="function"><span class="type">void</span> <span class="title">Prim</span><span class="params">(<span class="type">int</span> v)</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    DataType vertex[MaxSize];           <span class="comment">//存放图中顶点的数组</span></span><br><span class="line">    <span class="type">int</span> edge[MaxSize][MaxSize];           <span class="comment">//存放图中边的数组</span></span><br><span class="line">    <span class="type">int</span> vertexNum, edgeNum;              <span class="comment">//图的顶点数和边数</span></span><br><span class="line"></span><br><span class="line"> 	<span class="function"><span class="type">int</span> <span class="title">MinEdge</span><span class="params">(<span class="type">int</span> r[ ], <span class="type">int</span> n)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line">MGraph&lt;DataType&gt; :: <span class="built_in">MGraph</span>(DataType a[ ], <span class="type">int</span> n, <span class="type">int</span> e) </span><br><span class="line">&#123;</span><br><span class="line">   	<span class="type">int</span> i, j, k, w;</span><br><span class="line">   	vertexNum = n; edgeNum = e;</span><br><span class="line">   	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//存储顶点</span></span><br><span class="line">   		vertex[i] = a[i];</span><br><span class="line">   	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//初始化邻接矩阵</span></span><br><span class="line"> 		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; vertexNum; j++)</span><br><span class="line">   			<span class="keyword">if</span> (i == j)</span><br><span class="line">			   edge[i][j] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			   edge[i][j] = <span class="number">100</span>;               <span class="comment">//假设边上权的最大值是100             </span></span><br><span class="line">   	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; edgeNum; k++)           <span class="comment">//依次输入每一条边</span></span><br><span class="line">   	&#123;</span><br><span class="line">   		cout &lt;&lt; <span class="string">&quot;请输入边依附的两个顶点的编号，以及边上的权值：&quot;</span>;</span><br><span class="line">		cin &gt;&gt; i &gt;&gt; j &gt;&gt; w;                       <span class="comment">//输入边依附的两个顶点的编号</span></span><br><span class="line">		edge[i][j] = w; edge[j][i] = w;           <span class="comment">//置有边标志</span></span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="type">void</span> MGraph&lt;DataType&gt; :: <span class="built_in">Prim</span>(<span class="type">int</span> v)                           <span class="comment">//从顶点v出发</span></span><br><span class="line">&#123;   </span><br><span class="line">	<span class="type">int</span> i, j, k;</span><br><span class="line">	<span class="type">int</span> adjvex[MaxSize], lowcost[MaxSize];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)             <span class="comment">//初始化辅助数组</span></span><br><span class="line">	&#123;</span><br><span class="line">		lowcost[i] = edge[v][i]; adjvex[i] = v;</span><br><span class="line">	&#125;</span><br><span class="line">	lowcost[v] = <span class="number">0</span>;                         <span class="comment">//将顶点v加入集合U</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">1</span>; k &lt; vertexNum; k++)            <span class="comment">//迭代n-1次</span></span><br><span class="line">	&#123;</span><br><span class="line">		j = <span class="built_in">MinEdge</span>(lowcost, vertexNum);       <span class="comment">//寻找最短边的邻接点j</span></span><br><span class="line">      	cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; vertex[j] &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; vertex[adjvex[j]] &lt;&lt; <span class="string">&quot;)&quot;</span> &lt;&lt; lowcost[j] &lt;&lt; endl; </span><br><span class="line">		lowcost[j] = <span class="number">0</span>;                       <span class="comment">//顶点j加入集合U</span></span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//调整辅助数组</span></span><br><span class="line">	        <span class="keyword">if</span> (edge[i][j] &lt; lowcost[i]) &#123;</span><br><span class="line">				lowcost[i] = edge[i][j]; </span><br><span class="line">				adjvex[i] = j;</span><br><span class="line">        	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="type">int</span> MGraph&lt;DataType&gt; :: <span class="built_in">MinEdge</span>(<span class="type">int</span> r[ ], <span class="type">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> index = <span class="number">0</span>, min = <span class="number">100</span>;           <span class="comment">//此处如果仅记载最小值下标会有bug </span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">if</span> (r[i] != <span class="number">0</span> &amp;&amp; r[i] &lt; min)</span><br><span class="line">		&#123;</span><br><span class="line">			min = r[i]; index = i;		</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> index;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">/*测试数据使用教材 图6-16 所示带权无向图， 输入边依次为 </span></span><br><span class="line"><span class="comment">	(0 1 34)(0 2 46)(0 5 19)(1 4 12)(2 3 17)(2 5 25)(3 4 38)(3 5 25)(4 5 26) */</span> </span><br><span class="line">	<span class="type">char</span> ch[ ]=&#123;<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;F&#x27;</span>&#125;;       </span><br><span class="line">	MGraph&lt;<span class="type">char</span>&gt; MG&#123;ch, <span class="number">6</span>, <span class="number">9</span>&#125;;             </span><br><span class="line">	MG.<span class="built_in">Prim</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>实验</category>
-      </categories>
-      <tags>
-        <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实验三、栈和队列的应用</title>
     <url>/posts/a2945f82.html</url>
     <content><![CDATA[<blockquote>
@@ -6074,6 +6055,25 @@ Wushuo</p>
 <p>这里有一个细节就是，任何数转化为任何进制，最后整除取整的结果都是0，而最后一次压栈是无法在循环里压栈（在这个算法里），需要在循环外再写一行压栈，把最后一个进制数压进去（也就是输出结果的第一位）</p>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*十进制转化为其他进制，实际上是做取余然后逆序输出运算，可以用顺序栈实现功能*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> StackSize = <span class="number">10000</span>;  <span class="comment">// 定义最大栈顶具体情况具体分析</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;   <span class="comment">//定义模板类SeqStack</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SeqStack</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">SeqStack</span>();   <span class="comment">//构造函数，初始化空栈</span></span><br><span class="line">	~<span class="built_in">SeqStack</span>();	<span class="comment">//析构函数</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">Push</span><span class="params">(DataType x)</span></span>;	<span class="comment">//压栈</span></span><br><span class="line">	<span class="function">DataType <span class="title">Pop</span><span class="params">()</span></span>;	<span class="comment">//出栈</span></span><br><span class="line">	<span class="function">DataType <span class="title">GetTop</span><span class="params">()</span></span>;<span class="comment">//取栈顶</span></span><br><span class="line">	<span class="function"><span class="type">int</span> <span class="title">empty</span><span class="params">()</span></span>;	<span class="comment">//判空操作</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	DataType data[StackSize];	<span class="comment">//存放栈元素的数组</span></span><br><span class="line">	<span class="type">int</span> top;	<span class="comment">//栈顶元素的下标</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">SeqStack&lt;DataType&gt;::~<span class="built_in">SeqStack</span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="type">void</span> SeqStack&lt;DataType&gt;::<span class="built_in">Push</span>(DataType x)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (top == StackSize - <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;栈满&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		top++;</span><br><span class="line">		data[top] = x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">DataType SeqStack&lt;DataType&gt;::<span class="built_in">Pop</span>()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (top == <span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;栈空&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		DataType x;</span><br><span class="line">		x = data[top];</span><br><span class="line">		top--;</span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">DataType SeqStack&lt;DataType&gt;::<span class="built_in">GetTop</span>()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (top == <span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;栈空&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> data[top];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line"><span class="type">int</span> SeqStack&lt;DataType&gt;::<span class="built_in">empty</span>()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (top == <span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataType&gt;</span><br><span class="line">SeqStack&lt;DataType&gt;::<span class="built_in">SeqStack</span>()</span><br><span class="line">&#123;</span><br><span class="line">	top = <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SeqStack&lt;<span class="type">int</span>&gt; s = &#123;&#125;;</span><br><span class="line">	<span class="type">int</span> x, y, count = <span class="number">1</span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;请按顺序输入你想转化的十进制数，和目标进制（2-9），以空格隔开&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	<span class="keyword">while</span> ((x/y) != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt;<span class="string">&quot;入栈&quot;</span> &lt;&lt; x % y &lt;&lt; endl;</span><br><span class="line">		s.<span class="built_in">Push</span>(x % y);</span><br><span class="line">		count++;</span><br><span class="line">		x /= y;</span><br><span class="line">	&#125;</span><br><span class="line">	s.<span class="built_in">Push</span>(x % y);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;入栈&quot;</span> &lt;&lt; x % y &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt;<span class="string">&quot;************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;转换后的结果是&quot;</span>;</span><br><span class="line">	<span class="keyword">while</span> (count!=<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;s.<span class="built_in">Pop</span>();</span><br><span class="line">		count--;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>实验</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实验七 最小生成树和最短路径的实现</title>
+    <url>/posts/1b9cb669.html</url>
+    <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/Fv5QkbY1G5LDg_28R1J8Oief5nmC" alt="Fv5QkbY1G5LDg_28R1J8Oief5nmC"></p>
+<h1>Prim算法</h1>
+<blockquote>
+<p>没听课（）教材代码，复制过来了</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/******************************* </span></span><br><span class="line"><span class="comment">   对应教材6.4.1节，Prim算法 </span></span><br><span class="line"><span class="comment">********************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MaxSize = <span class="number">10</span>;                   <span class="comment">//图中最多顶点个数</span></span><br><span class="line"><span class="type">int</span> visited[MaxSize] = &#123;<span class="number">0</span>&#125;;              <span class="comment">//全局数组变量visited初始化</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   	<span class="built_in">MGraph</span>(DataType a[ ], <span class="type">int</span> n, <span class="type">int</span> e);     <span class="comment">//构造函数，建立具有n个顶点e条边的图</span></span><br><span class="line">   	~<span class="built_in">MGraph</span>( )&#123; &#125;;                        <span class="comment">//析构函数</span></span><br><span class="line"> 	<span class="function"><span class="type">void</span> <span class="title">Prim</span><span class="params">(<span class="type">int</span> v)</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    DataType vertex[MaxSize];           <span class="comment">//存放图中顶点的数组</span></span><br><span class="line">    <span class="type">int</span> edge[MaxSize][MaxSize];           <span class="comment">//存放图中边的数组</span></span><br><span class="line">    <span class="type">int</span> vertexNum, edgeNum;              <span class="comment">//图的顶点数和边数</span></span><br><span class="line"></span><br><span class="line"> 	<span class="function"><span class="type">int</span> <span class="title">MinEdge</span><span class="params">(<span class="type">int</span> r[ ], <span class="type">int</span> n)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line">MGraph&lt;DataType&gt; :: <span class="built_in">MGraph</span>(DataType a[ ], <span class="type">int</span> n, <span class="type">int</span> e) </span><br><span class="line">&#123;</span><br><span class="line">   	<span class="type">int</span> i, j, k, w;</span><br><span class="line">   	vertexNum = n; edgeNum = e;</span><br><span class="line">   	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//存储顶点</span></span><br><span class="line">   		vertex[i] = a[i];</span><br><span class="line">   	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//初始化邻接矩阵</span></span><br><span class="line"> 		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; vertexNum; j++)</span><br><span class="line">   			<span class="keyword">if</span> (i == j)</span><br><span class="line">			   edge[i][j] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			   edge[i][j] = <span class="number">100</span>;               <span class="comment">//假设边上权的最大值是100             </span></span><br><span class="line">   	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; edgeNum; k++)           <span class="comment">//依次输入每一条边</span></span><br><span class="line">   	&#123;</span><br><span class="line">   		cout &lt;&lt; <span class="string">&quot;请输入边依附的两个顶点的编号，以及边上的权值：&quot;</span>;</span><br><span class="line">		cin &gt;&gt; i &gt;&gt; j &gt;&gt; w;                       <span class="comment">//输入边依附的两个顶点的编号</span></span><br><span class="line">		edge[i][j] = w; edge[j][i] = w;           <span class="comment">//置有边标志</span></span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="type">void</span> MGraph&lt;DataType&gt; :: <span class="built_in">Prim</span>(<span class="type">int</span> v)                           <span class="comment">//从顶点v出发</span></span><br><span class="line">&#123;   </span><br><span class="line">	<span class="type">int</span> i, j, k;</span><br><span class="line">	<span class="type">int</span> adjvex[MaxSize], lowcost[MaxSize];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)             <span class="comment">//初始化辅助数组</span></span><br><span class="line">	&#123;</span><br><span class="line">		lowcost[i] = edge[v][i]; adjvex[i] = v;</span><br><span class="line">	&#125;</span><br><span class="line">	lowcost[v] = <span class="number">0</span>;                         <span class="comment">//将顶点v加入集合U</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">1</span>; k &lt; vertexNum; k++)            <span class="comment">//迭代n-1次</span></span><br><span class="line">	&#123;</span><br><span class="line">		j = <span class="built_in">MinEdge</span>(lowcost, vertexNum);       <span class="comment">//寻找最短边的邻接点j</span></span><br><span class="line">      	cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; vertex[j] &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; vertex[adjvex[j]] &lt;&lt; <span class="string">&quot;)&quot;</span> &lt;&lt; lowcost[j] &lt;&lt; endl; </span><br><span class="line">		lowcost[j] = <span class="number">0</span>;                       <span class="comment">//顶点j加入集合U</span></span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertexNum; i++)          <span class="comment">//调整辅助数组</span></span><br><span class="line">	        <span class="keyword">if</span> (edge[i][j] &lt; lowcost[i]) &#123;</span><br><span class="line">				lowcost[i] = edge[i][j]; </span><br><span class="line">				adjvex[i] = j;</span><br><span class="line">        	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">DataType</span>&gt;</span><br><span class="line"><span class="type">int</span> MGraph&lt;DataType&gt; :: <span class="built_in">MinEdge</span>(<span class="type">int</span> r[ ], <span class="type">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> index = <span class="number">0</span>, min = <span class="number">100</span>;           <span class="comment">//此处如果仅记载最小值下标会有bug </span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">if</span> (r[i] != <span class="number">0</span> &amp;&amp; r[i] &lt; min)</span><br><span class="line">		&#123;</span><br><span class="line">			min = r[i]; index = i;		</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> index;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">/*测试数据使用教材 图6-16 所示带权无向图， 输入边依次为 </span></span><br><span class="line"><span class="comment">	(0 1 34)(0 2 46)(0 5 19)(1 4 12)(2 3 17)(2 5 25)(3 4 38)(3 5 25)(4 5 26) */</span> </span><br><span class="line">	<span class="type">char</span> ch[ ]=&#123;<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;F&#x27;</span>&#125;;       </span><br><span class="line">	MGraph&lt;<span class="type">char</span>&gt; MG&#123;ch, <span class="number">6</span>, <span class="number">9</span>&#125;;             </span><br><span class="line">	MG.<span class="built_in">Prim</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -7144,6 +7144,81 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
+    <title>手把手教你注册Google账号</title>
+    <url>/posts/f286f4f8.html</url>
+    <content><![CDATA[<h1>Google账号的注册教程</h1>
+<blockquote>
+<p>本部分基于<a href="https://blog.csdn.net/qq_45138120/article/details/131347452#/">这篇文章</a>进行编辑，致敬</p>
+</blockquote>
+<ol>
+<li>首先打开浏览器，然后进入设置把浏览器设置成英文语言，来提高成功率</li>
+</ol>
+<p>特别说明一下，<span style="color:#FF0000;">是浏览器的总语言，在浏览器设置里，而不只是设置当前页面的语言</span></p>
+<ol>
+<li>我们使用浏览器打开谷歌邮箱官网（<a href="http://gmail.google.com/">http://gmail.google.com/</a> ），进入谷歌邮箱的登录主页，我们点击左下方的创建账号按钮，选择个人用途（为我自己）</li>
+</ol>
+<p><img src="/img/Google/Google1.png" alt="账号注册"></p>
+<ol start="3">
+<li>在进入的界面我们不要着急填写资料，我们先修改语言，点击左下方的简体中文。这个时候，会弹出国家语言列表，我们选择“English（United States）”。</li>
+</ol>
+<p><img src="/img/Google/Google2.png" alt="语言"></p>
+<ol start="4">
+<li>这个时候，界面会变成英语。输入姓氏和名字，点击 Next</li>
+</ol>
+<p><img src="/img/Google/Google3.png" alt="在这里插入图片描述"></p>
+<ol start="4">
+<li>选择月份、日、年、性别，点击Next</li>
+</ol>
+<p><img src="/img/Google/Google4.png" alt="日期"></p>
+<ol start="5">
+<li>选择Gmail邮箱地址，前两个是随机出的邮箱地址，可以勾选第三个自定义邮箱地址，输入邮箱地址后，点击 Next</li>
+</ol>
+<p><img src="/img/Google/Google5.png" alt="在这里插入图片描述"></p>
+<ol start="6">
+<li>
+<p>输入密码，确认密码后，点击 Next</p>
+<p><img src="/img/Google/Google6.png" alt="在这里插入图片描述"></p>
+</li>
+<li>
+<p>添加恢复电子邮件，账号异常或锁定时，Google 可以通过恢复电子邮件联系您。直接点击 Skip 跳过</p>
+</li>
+</ol>
+<p><img src="/img/Google/Google7.png" alt="在这里插入图片描述"></p>
+<ol start="8">
+<li>选择中国，填写自己的手机号，点击Next</li>
+</ol>
+<p>关于手机号无法用于验证的问题，可以看这一位大佬的帖子：<a href="https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/">https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/</a></p>
+<p>这个问题与我一开始写的第一步相呼应，开头切换英文主要就是为了解决这边</p>
+<p><img src="/img/Google/Google8.png" alt="在这里插入图片描述"></p>
+<ol start="9">
+<li>确认账户信息页面，没问题的话，点击 Next</li>
+</ol>
+<p><img src="/img/Google/Google9.png" alt="在这里插入图片描述"></p>
+<ol start="10">
+<li>隐私条款确认，拉取到底部，点击 I agree 我同意</li>
+</ol>
+<p><img src="/img/Google/Google10.png" alt="image-20231223005705473"></p>
+<ol start="11">
+<li>如图，出现此界面，说明 Google 邮箱创建成果</li>
+</ol>
+<p><img src="/img/Google/Google11.png" alt="在这里插入图片描述"></p>
+<p>注：创建失败时</p>
+<ul>
+<li>手机号码已经注册过</li>
+<li>在注册时，将语言设置为英语，成功率高</li>
+<li>切换节点</li>
+<li>过会再试试</li>
+</ul>
+]]></content>
+      <categories>
+        <category>手把手教程</category>
+        <category>Google</category>
+      </categories>
+      <tags>
+        <tag>手把手教程系列</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手把手教你用新版OBS虚拟摄像头</title>
     <url>/posts/f885f05a.html</url>
     <content><![CDATA[<blockquote>
@@ -7251,81 +7326,6 @@ Wushuo</p>
       <categories>
         <category>手把手教程</category>
         <category>OBS</category>
-      </categories>
-      <tags>
-        <tag>手把手教程系列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手把手教你注册Google账号</title>
-    <url>/posts/f286f4f8.html</url>
-    <content><![CDATA[<h1>Google账号的注册教程</h1>
-<blockquote>
-<p>本部分基于<a href="https://blog.csdn.net/qq_45138120/article/details/131347452#/">这篇文章</a>进行编辑，致敬</p>
-</blockquote>
-<ol>
-<li>首先打开浏览器，然后进入设置把浏览器设置成英文语言，来提高成功率</li>
-</ol>
-<p>特别说明一下，<span style="color:#FF0000;">是浏览器的总语言，在浏览器设置里，而不只是设置当前页面的语言</span></p>
-<ol>
-<li>我们使用浏览器打开谷歌邮箱官网（<a href="http://gmail.google.com/">http://gmail.google.com/</a> ），进入谷歌邮箱的登录主页，我们点击左下方的创建账号按钮，选择个人用途（为我自己）</li>
-</ol>
-<p><img src="/img/Google/Google1.png" alt="账号注册"></p>
-<ol start="3">
-<li>在进入的界面我们不要着急填写资料，我们先修改语言，点击左下方的简体中文。这个时候，会弹出国家语言列表，我们选择“English（United States）”。</li>
-</ol>
-<p><img src="/img/Google/Google2.png" alt="语言"></p>
-<ol start="4">
-<li>这个时候，界面会变成英语。输入姓氏和名字，点击 Next</li>
-</ol>
-<p><img src="/img/Google/Google3.png" alt="在这里插入图片描述"></p>
-<ol start="4">
-<li>选择月份、日、年、性别，点击Next</li>
-</ol>
-<p><img src="/img/Google/Google4.png" alt="日期"></p>
-<ol start="5">
-<li>选择Gmail邮箱地址，前两个是随机出的邮箱地址，可以勾选第三个自定义邮箱地址，输入邮箱地址后，点击 Next</li>
-</ol>
-<p><img src="/img/Google/Google5.png" alt="在这里插入图片描述"></p>
-<ol start="6">
-<li>
-<p>输入密码，确认密码后，点击 Next</p>
-<p><img src="/img/Google/Google6.png" alt="在这里插入图片描述"></p>
-</li>
-<li>
-<p>添加恢复电子邮件，账号异常或锁定时，Google 可以通过恢复电子邮件联系您。直接点击 Skip 跳过</p>
-</li>
-</ol>
-<p><img src="/img/Google/Google7.png" alt="在这里插入图片描述"></p>
-<ol start="8">
-<li>选择中国，填写自己的手机号，点击Next</li>
-</ol>
-<p>关于手机号无法用于验证的问题，可以看这一位大佬的帖子：<a href="https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/">https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/</a></p>
-<p>这个问题与我一开始写的第一步相呼应，开头切换英文主要就是为了解决这边</p>
-<p><img src="/img/Google/Google8.png" alt="在这里插入图片描述"></p>
-<ol start="9">
-<li>确认账户信息页面，没问题的话，点击 Next</li>
-</ol>
-<p><img src="/img/Google/Google9.png" alt="在这里插入图片描述"></p>
-<ol start="10">
-<li>隐私条款确认，拉取到底部，点击 I agree 我同意</li>
-</ol>
-<p><img src="/img/Google/Google10.png" alt="image-20231223005705473"></p>
-<ol start="11">
-<li>如图，出现此界面，说明 Google 邮箱创建成果</li>
-</ol>
-<p><img src="/img/Google/Google11.png" alt="在这里插入图片描述"></p>
-<p>注：创建失败时</p>
-<ul>
-<li>手机号码已经注册过</li>
-<li>在注册时，将语言设置为英语，成功率高</li>
-<li>切换节点</li>
-<li>过会再试试</li>
-</ul>
-]]></content>
-      <categories>
-        <category>手把手教程</category>
-        <category>Google</category>
       </categories>
       <tags>
         <tag>手把手教程系列</tag>
@@ -7915,41 +7915,6 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
-    <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
-    <url>/posts/7c7bd47d.html</url>
-    <content><![CDATA[<p>30个队伍排名第18还行，有一个队伍弃权没来，两个队伍作弊被ban了，顺延2名，最终第16，广外和南理的师傅太强了，山警的大哥被ban了不然也是前三<br>
-11月24就已经打完了，一直没来得及写心得</p>
-<p><img src="/img/jnxl2023/1701356901716.jpg" alt="1701356901716"><br>
-可能是因为团队赛吧<br>
-感觉比科来打的好点<br>
-有好几个题都是差一点<br>
-我交了两个简单题，逆了一个misc的pyc，也是没拖后腿<br>
-misc这个题是很有意思的，压缩包有密码，可以暴力破解出来，然后三个附件，其中一个是一首诗，很有意思，但是不知道这首诗是有什么用，这题就差一点了，没做出来。<br>
-发现了自己还有很多东西没学没掌握好，re的花指令，动态调试，老东西直接秒了的题，我不会</p>
-<p>见到了西邮的师傅</p>
-<p>另外说一下对组委会的印象<br>
-评价是一坨稀烂<br>
-连个纪念品都没有，也没手提包，整场下来就给个参赛证，然后报告厅像个教室，甚至还不如我们的教室大（<br>
-进赛场之后桌子上一人一份伙食（一包奶一个面包一根火腿肠，我的天我们还以为这是早饭，没想到这是午饭）<br>
-中途上了一遍零食（好丽友＋一根火腿肠）爆笑如雷了，在济南都是组委包吃住，酒店随便吃的<br>
-还有更抽象的<br>
-上午10:30开赛，到时间准时开赛准时断电，布置赛场也偷工减料了吧，供电不足直接断电了，抢修了一个小时导致比赛延后了<br>
-然后中途上了一次电，信号屏蔽仪直接嘎嘣冒烟，当场炸了，还有好几位师傅的电源适配器给烧了（<s>byd这才是应急响应是吧</s></p>
-<p>这也是裁判长最忙的一次，山警大哥应该是比赛过程中询问wp，说的很含糊然后就ban了，还有带手机被听见了，但是没被逮住，辗优就在我隔壁，很强的一个热点信号</p>
-<p>三等奖，也算是没白来，威海那个去了大概能拿个一等，他们组委举办的也还行，就是路费太高了，没奖金没报销<br>
-总的来说还是得练，师傅们觉得一把梭的题我要搞半天</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>比赛心得</category>
-        <category>省赛</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>技能兴鲁</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>攻防世界-Reverse-666writeup</title>
     <url>/posts/117d354d.html</url>
     <content><![CDATA[<h1>查壳</h1>
@@ -7986,34 +7951,38 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>攻防世界-Reverse-easyxorwriteup</title>
-    <url>/posts/c57101a0.html</url>
-    <content><![CDATA[<h1>查壳</h1>
-<p>无壳</p>
-<h1>反编译</h1>
-<p>拉进漂亮姐姐中（IDA）</p>
-<p>shift+F12看一下字串</p>
-<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" alt=""></p>
-<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
-<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" alt=""></p>
-<p>F5看一下伪代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v4; <span class="comment">// al</span></span><br><span class="line">  <span class="type">int</span> v5; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v7; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">char</span> v8; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">int</span> v9; <span class="comment">// [rsp+34h] [rbp-Ch]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line">  <span class="type">int</span> v11; <span class="comment">// [rsp+3Ch] [rbp-4h]</span></span><br><span class="line"></span><br><span class="line">  _main();</span><br><span class="line">  v11 = <span class="number">0</span>;</span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;Please input your flag:&quot;</span>);</span><br><span class="line">  <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v8 = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span> ( v8 == <span class="number">10</span> )</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">	v7 = key[v9 % <span class="number">4</span>] ^ v8;			<span class="comment">//输入的字符，进行异或操作，得到v7</span></span><br><span class="line">    <span class="keyword">while</span> ( <span class="number">1</span> )						</span><br><span class="line">    &#123;</span><br><span class="line">      v4 = v7--;					<span class="comment">//循环v7次</span></span><br><span class="line">      <span class="keyword">if</span> ( v4 &lt;= <span class="number">0</span> )				<span class="comment">//此while循环是向s[]中输入v7个1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      v3 = v11++;</span><br><span class="line">      s[v3] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v5 = v11++;						<span class="comment">//输出v7个1后，使用0与下一串1隔开	</span></span><br><span class="line">    s[v5] = <span class="number">0</span>;						</span><br><span class="line">    ++v9;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> ( v11 &lt;= <span class="number">2559</span> )				<span class="comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span></span><br><span class="line">    s[v11++] = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">2559</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( r[i] != s[i] )				<span class="comment">//进行比较</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;Lose lose lose!&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( i == <span class="number">2560</span> )</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;Win win win!&quot;</span>);</span><br><span class="line">  <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其中r是</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">r = [0x35, 0x2F, 0x2F, 0x32, 0x28, 0x14, 0x27, 0x3B, 0x3D, 0x70,</span><br><span class="line">     0x3C, 0x0A, 0x3D, 0x73, 0x3A, 0x0A, 0x1F, 0x73, 0x3D, 0x66,</span><br><span class="line">     0x21, 0x1C, 0x6D, 0x28]</span><br></pre></td></tr></table></figure>
-<p>key是SCNU</p>
-<h1>解密</h1>
-<p>写一下解密python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = [<span class="number">0x35</span>, <span class="number">0x2F</span>, <span class="number">0x2F</span>, <span class="number">0x32</span>, <span class="number">0x28</span>, <span class="number">0x14</span>, <span class="number">0x27</span>, <span class="number">0x3B</span>, <span class="number">0x3D</span>, <span class="number">0x70</span>,</span><br><span class="line">     <span class="number">0x3C</span>, <span class="number">0x0A</span>, <span class="number">0x3D</span>, <span class="number">0x73</span>, <span class="number">0x3A</span>, <span class="number">0x0A</span>, <span class="number">0x1F</span>, <span class="number">0x73</span>, <span class="number">0x3D</span>, <span class="number">0x66</span>,</span><br><span class="line">     <span class="number">0x21</span>, <span class="number">0x1C</span>, <span class="number">0x6D</span>, <span class="number">0x28</span>]</span><br><span class="line">key = <span class="string">&quot;SCNU&quot;</span></span><br><span class="line">flag=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(r)):</span><br><span class="line">    flag+=<span class="built_in">chr</span>(<span class="built_in">ord</span>(key[i % <span class="number">4</span>]) ^ r[i])</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
-<h1>FLAG</h1>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flag&#123;Winn3r_n0t_L0s3r_#&#125;</span><br></pre></td></tr></table></figure>
+    <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
+    <url>/posts/7c7bd47d.html</url>
+    <content><![CDATA[<p>30个队伍排名第18还行，有一个队伍弃权没来，两个队伍作弊被ban了，顺延2名，最终第16，广外和南理的师傅太强了，山警的大哥被ban了不然也是前三<br>
+11月24就已经打完了，一直没来得及写心得</p>
+<p><img src="/img/jnxl2023/1701356901716.jpg" alt="1701356901716"><br>
+可能是因为团队赛吧<br>
+感觉比科来打的好点<br>
+有好几个题都是差一点<br>
+我交了两个简单题，逆了一个misc的pyc，也是没拖后腿<br>
+misc这个题是很有意思的，压缩包有密码，可以暴力破解出来，然后三个附件，其中一个是一首诗，很有意思，但是不知道这首诗是有什么用，这题就差一点了，没做出来。<br>
+发现了自己还有很多东西没学没掌握好，re的花指令，动态调试，老东西直接秒了的题，我不会</p>
+<p>见到了西邮的师傅</p>
+<p>另外说一下对组委会的印象<br>
+评价是一坨稀烂<br>
+连个纪念品都没有，也没手提包，整场下来就给个参赛证，然后报告厅像个教室，甚至还不如我们的教室大（<br>
+进赛场之后桌子上一人一份伙食（一包奶一个面包一根火腿肠，我的天我们还以为这是早饭，没想到这是午饭）<br>
+中途上了一遍零食（好丽友＋一根火腿肠）爆笑如雷了，在济南都是组委包吃住，酒店随便吃的<br>
+还有更抽象的<br>
+上午10:30开赛，到时间准时开赛准时断电，布置赛场也偷工减料了吧，供电不足直接断电了，抢修了一个小时导致比赛延后了<br>
+然后中途上了一次电，信号屏蔽仪直接嘎嘣冒烟，当场炸了，还有好几位师傅的电源适配器给烧了（<s>byd这才是应急响应是吧</s></p>
+<p>这也是裁判长最忙的一次，山警大哥应该是比赛过程中询问wp，说的很含糊然后就ban了，还有带手机被听见了，但是没被逮住，辗优就在我隔壁，很强的一个热点信号</p>
+<p>三等奖，也算是没白来，威海那个去了大概能拿个一等，他们组委举办的也还行，就是路费太高了，没奖金没报销<br>
+总的来说还是得练，师傅们觉得一把梭的题我要搞半天</p>
 ]]></content>
       <categories>
         <category>CTF</category>
-        <category>WP</category>
-        <category>RE</category>
+        <category>比赛心得</category>
+        <category>省赛</category>
       </categories>
       <tags>
         <tag>CTF</tag>
+        <tag>技能兴鲁</tag>
       </tags>
   </entry>
   <entry>
@@ -8584,163 +8553,34 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>智慧树/知到/刷课脚本安装教程</title>
-    <url>/posts/3af6ecf8.html</url>
-    <content><![CDATA[<blockquote>
-<p>前言：使用本工具请自觉遵守国家法律法规，下载后请24小时之内删除，本教程来自www.w1ndys.top</p>
-<p><u>使用</u>本教程即代表用户同意本教程<a href="#%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE">用户协议</a>，使用本教程造成的<font color='red'>一切后果由个人承担</font>，<u>作者</u><font color='red'>概不负责</font></p>
-<p><font color='red'>请注意：本教程所涉及脚本工具开发者并不是博主本人，内涵涉及收费的内容，请酌情考虑</font></p>
-<p>本教程编写于2023年11月3日，距离时间过长可能脚本已失效，请铭记</p>
-<p>本教程旨在节省大家时间，让大家去做更有意义的事情，请勿用于违法用途，请勿倒卖，否则将追究法律责任</p>
-</blockquote>
-<p>本教程编写耗时<font color='red'>180分钟</font>且浏览完全免费，且看且珍惜</p>
-<p>前期步骤基本和超星学习通的教程差不多</p>
-<h1>作者建议</h1>
-<p>建议在阳间的时间刷课，后台可以看到浏览时间的</p>
-<h1>工具准备</h1>
-<ol>
-<li>
-<p>一台能上网的电脑</p>
-</li>
-<li>
-<p>Google Chrome（推荐）</p>
-<p>没有Google的可以用Windows自带的Edge浏览器（</p>
-</li>
-<li>
-<p>脚本猫（用篡改猴也行，本教程以脚本猫为例</p>
-<p>详情：<a href="https://docs.scriptcat.org/docs/use/#/">脚本猫使用文档</a></p>
-</li>
-<li>
-<p>一个魔法工具（梯子）</p>
-<p><font color="#3333FF">需要特别注意的是，使用本工具有一定的流量计费，3.8-38.8 不等，根据自己需要选择</font>，此费用也不是我本人收取，而是流量的提供方收取，特别注意这点<font color="#FF0000" size=5>如果你介意此费用，你可以关闭此页面退出阅读了。</font>具体注意事项下面会提到</p>
-</li>
-<li>
-<p>OCS客户端</p>
-</li>
-<li>
-<p>一个懂的百度的大脑（不是</p>
-</li>
-<li>
-<p>一双灵敏的眼睛（不是</p>
-</li>
-<li>
-<p>一个耐心看教程的好习惯（不是</p>
-</li>
-<li>
-<p>一颗真诚的心和<font color='red'>良好的态度</font>，有问题<a href="https://qm.qq.com/q/9n506oZ8Ri&amp;personal_qrcode_source=4">联系博主</a></p>
-<p>（实在懒得弄可以找我低价代刷</p>
-</li>
-</ol>
-<h1>开始操作</h1>
-<p>有了这个工具，你不只是能进ai，还可以高速浏览GitHub等网站，以及…</p>
-<h2 id="爬墙工具的介绍和安装使用">爬墙工具的介绍和安装使用</h2>
-<h3 id="工具介绍">工具介绍</h3>
-<p><font color="#FF3333">这些你都不需要记，看看就行</font></p>
-<p>​		虚拟专用网络(Virtual Private Network，VPN)是专用网络的延伸，它包含了类似Internet的共享或公共网络链接。通过VPN可以以模拟点对点专用链接的方式通过共享或公共网络在两台计算机之间发送数据。</p>
-<p>如果说得再通俗一点，VPN实际上是&quot;线路中的线路&quot;，类型于城市大道上的&quot;公交专用线&quot;，所不同的是，由VPN组成的&quot;线路&quot;并不是物理存在的，而是通过技术手段模拟出来，即是&quot;虚拟&quot;的。不过，这种虚拟的专用网络技术却可以在一条公用线路中为两台计算机建立一个逻辑上的专用&quot;通道&quot;，它具有良好的保密和不受干扰性，使双方能进行自由而安全的点对点连接，因此被网络管理员们非常广泛地关注着。</p>
-<p>通过虚拟专用网，我们在家就可以轻松安全的登录到公司的内部网络上，这样可以实现我们在家办公的梦想了。</p>
-<h3 id="账号注册">账号注册</h3>
-<p>微信搜索公众号关注：  <code>W1ndys_Official</code>  点击下方菜单GPT可获取注册地址</p>
-<p><img src="/img/VPN/wx.png" alt="注册"></p>
-<p>输入邮箱密码注册账号，注册完成后登陆</p>
-<p><img src="/img/VPN/%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7.png" alt="注册"></p>
-<p>然后点击左侧购买订阅</p>
-<p><img src="/img/VPN/%E8%AE%A2%E9%98%85.png" alt="订阅"></p>
-<p>根据需求选择你合适的方案，如果你只是想尝鲜的话，毫无疑问，选最便宜的，能用就行</p>
-<p><img src="/img/VPN/%E8%B4%AD%E4%B9%B0%E8%AE%A2%E9%98%85.png" alt="购买订阅"></p>
-<p>我本人用的是<font color="#FF0000">38.8巨量不限时，推荐这个</font>，大约可以用2年左右，平均下来大约0.6/天</p>
-<blockquote>
-<p>因为我不只有这一个需求，另外还有使用<font color="#FF0000">ChatGPT，bingai</font>等的需求，所以这个是最划算的。</p>
-</blockquote>
-<p>另外关于如何使用ChatGPT的教程以后有时间我会写，OpenAI官方的ChatGPT</p>
-<p>买完之后点击左上方仪表盘可以看到你的已订阅</p>
-<p><img src="/img/VPN/%E4%BB%AA%E8%A1%A8%E7%9B%98.png" alt="仪表盘"></p>
-<p>然后点击仪表盘下方的使用文档</p>
-<p><img src="/img/VPN/%E5%AE%A2%E6%88%B7%E7%AB%AF.png" alt="客户端安装"></p>
-<p>选择你的系统安装客户端</p>
-<p>安装完之后登陆客户端就可以看到这样</p>
-<p><img src="/img/VPN/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90.png" alt="安装完成"></p>
-<h3 id="连接节点">连接节点</h3>
-<p>目前为止已经基本结束了，点击连接，点进去选个绿色的节点，点全局，<font color="#FF0000">如果后续出现连接失败就换个节点</font></p>
-<p><img src="/img/VPN/%E8%8A%82%E7%82%B9.png" alt="节点"></p>
-<h2 id="脚本安装">脚本安装</h2>
-<p>首先安装脚本猫，点击进入<a href="https://docs.scriptcat.org/docs/use/#/">脚本猫使用文档</a></p>
-<p><img src="/img/xxt-ScriptCat/1.jpg" alt="安装脚本猫"></p>
-<p>根据自己浏览器选择安装，这里以Google Chrome为例</p>
-<p>（如果长时间进不去则需要<font color='red'>科学上网</font>，由于种种原因这里不过多赘述）</p>
-<p><img src="/img/xxt-ScriptCat/2.jpg" alt="安装脚本猫"></p>
-<p>进来之后点击图示右上角安装（由于我已经安装过了所以图示是remove）</p>
-<p><img src="/img/xxt-ScriptCat/3.jpg" alt="启用脚本猫"></p>
-<p>然后进入浏览器扩展中心可以看到已经安装好了，启用该扩展</p>
-<p>然后<a href="https://docs.ocsjs.com/docs/app#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%88%97%E8%A1%A8">进入OCS使用文档</a>下载OCS客户端</p>
-<p>（进去可能会让你下载视频，那个是操作教程，可看可不看，我会在后面写教程）</p>
-<p><img src="/img/ocs/1.jpg" alt="下载OCS客户端"></p>
-<p>下载之后安装，直接双击exe文件就行，没啥别的要动的</p>
-<p>下载完之后在桌面应该可以看到图标，双击图标打开</p>
-<ol>
-<li>进入软件后，一键初始化软件，选择浏览器，脚本管理器和脚本，点击安装。</li>
-<li>新建浏览器， 点击右侧蓝色按钮启动</li>
-<li>等待“OCS导航页”页面加载完成后（可能会卡死，可重启或者直接刷新页面）进入任意网课平台即可，等待期间请勿操作浏览器。</li>
-</ol>
-<p>（更具体的教程和使用须知可以看软件内部自带的教程）</p>
-<p><img src="/img/ocs/2.jpg" alt="新建浏览器"></p>
-<p>点击新建浏览器，然后点击创建之后浏览器之后的小三角</p>
-<p>之后等待操作自动完成，可以看到可以刷题的网站</p>
-<p><img src="/img/ocs/3.jpg" alt="初始化完成"></p>
-<p>然后点击智慧树知到（如果是刷学习通的话点学习通，这里不过多赘述）</p>
-<p>然后登录上自己的账号（其实不登录也行，主要是要配置题库）</p>
-<p>找到下面这个东西</p>
-<p><img src="/img/ocs/4.jpg" alt="ocs配置"></p>
-<p>点击通用，点击全局设置</p>
-<p>根据自己需要进行下面配置</p>
-<p><img src="/img/ocs/5.jpg" alt="题库配置"></p>
-<p><a href="https://tk.enncy.cn/">点击进入题库管理平台</a></p>
-<h2 id="ocs题库设置">ocs题库设置</h2>
-<h3 id="第一步：注册题库账号">第一步：注册题库账号</h3>
-<p>右上角注册，具体这个就不说了，只能用邮箱注册，之前用爱发电登录的请使用其他登录 <code>爱发电授权登录</code> 。</p>
-<h3 id="第二步：登录题库，复制题库凭证">第二步：登录题库，复制题库凭证</h3>
-<p>登录后将会自动跳转到个人中心，每个人新注册账号可以获得100次免费搜题次数，找到 <strong>题库配置</strong> , 最后点击复制。</p>
-<p><img src="https://tk.enncy.cn/image/details.png" alt="login"></p>
-<h3 id="第三步：配置脚本题库">第三步：配置脚本题库</h3>
-<p>在浏览器中打开你的网课， 进入学习，作业，考试页面，然后按照以下步骤配置：</p>
-<p><img src="https://tk.enncy.cn/image/new-tkpz.png" alt="login"></p>
-<h3 id="最后一步：刷新页面">最后一步：刷新页面</h3>
-<p>等待运行到自动答题章节后，查看搜题结果，如果搜索到了则为配置成功！</p>
-<h2 id="注意">注意</h2>
-<ul>
-<li>如果次数使用完毕，进入个人中心购买次数即可</li>
-<li>收费项目归平台所有，与本人无关，酌情选择</li>
-<li>平台收费价格为1元/100次，3元/2000次，10元/10000次，50元/十万次</li>
-</ul>
-<h2 id="刷课配置">刷课配置</h2>
-<p>由于智慧树知到有习惯分，脚本提供了习惯刷课功能</p>
-<p><img src="/img/ocs/7.jpg" alt="习惯分"></p>
-<p>点击右上角<strong>知到智慧树</strong>，点击<strong>学习脚本</strong></p>
-<p><img src="/img/ocs/8.jpg" alt="习惯分"></p>
-<p>根据喜好进行刷课即可，建议每天半小时，有习惯分</p>
-<h1>展示</h1>
-<p>由于我这学期没有智慧树平台的相关课程，各位自己偷偷刷吧</p>
-<h1>用户协议</h1>
-<ol>
-<li>使用本教程即代表同意此用户协议</li>
-<li>使用本教程所带来的后果均由用户个人承担</li>
-<li>本教程所涉及的消费均与本人无关</li>
-<li>本教程未经本人允许禁止转载</li>
-<li>不要跟我杠，杠就是你对</li>
-<li>我本人有<strong>抑郁症</strong>病史，玩过小红书，若本人遭受任何形式的网络暴力 (包括但不限于发送淫 / 秽血 / 腥图片，问候我家人), 并出现极端行为。一切都是<strong>本人的错</strong>和大家无关</li>
-<li>本教程旨在节省大家时间，让大家去做更有意义的事情，请勿用于违法用途，请勿倒卖，否则将追究法律责任</li>
-<li><font color='blue'>博主W1ndys享有最终解释权</font></li>
-</ol>
+    <title>攻防世界-Reverse-easyxorwriteup</title>
+    <url>/posts/c57101a0.html</url>
+    <content><![CDATA[<h1>查壳</h1>
+<p>无壳</p>
+<h1>反编译</h1>
+<p>拉进漂亮姐姐中（IDA）</p>
+<p>shift+F12看一下字串</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" alt=""></p>
+<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" alt=""></p>
+<p>F5看一下伪代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v4; <span class="comment">// al</span></span><br><span class="line">  <span class="type">int</span> v5; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v7; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">char</span> v8; <span class="comment">// [rsp+33h] [rbp-Dh]</span></span><br><span class="line">  <span class="type">int</span> v9; <span class="comment">// [rsp+34h] [rbp-Ch]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line">  <span class="type">int</span> v11; <span class="comment">// [rsp+3Ch] [rbp-4h]</span></span><br><span class="line"></span><br><span class="line">  _main();</span><br><span class="line">  v11 = <span class="number">0</span>;</span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;Please input your flag:&quot;</span>);</span><br><span class="line">  <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v8 = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span> ( v8 == <span class="number">10</span> )</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">	v7 = key[v9 % <span class="number">4</span>] ^ v8;			<span class="comment">//输入的字符，进行异或操作，得到v7</span></span><br><span class="line">    <span class="keyword">while</span> ( <span class="number">1</span> )						</span><br><span class="line">    &#123;</span><br><span class="line">      v4 = v7--;					<span class="comment">//循环v7次</span></span><br><span class="line">      <span class="keyword">if</span> ( v4 &lt;= <span class="number">0</span> )				<span class="comment">//此while循环是向s[]中输入v7个1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      v3 = v11++;</span><br><span class="line">      s[v3] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v5 = v11++;						<span class="comment">//输出v7个1后，使用0与下一串1隔开	</span></span><br><span class="line">    s[v5] = <span class="number">0</span>;						</span><br><span class="line">    ++v9;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> ( v11 &lt;= <span class="number">2559</span> )				<span class="comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span></span><br><span class="line">    s[v11++] = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">2559</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( r[i] != s[i] )				<span class="comment">//进行比较</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;Lose lose lose!&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( i == <span class="number">2560</span> )</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;Win win win!&quot;</span>);</span><br><span class="line">  <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中r是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">r = [0x35, 0x2F, 0x2F, 0x32, 0x28, 0x14, 0x27, 0x3B, 0x3D, 0x70,</span><br><span class="line">     0x3C, 0x0A, 0x3D, 0x73, 0x3A, 0x0A, 0x1F, 0x73, 0x3D, 0x66,</span><br><span class="line">     0x21, 0x1C, 0x6D, 0x28]</span><br></pre></td></tr></table></figure>
+<p>key是SCNU</p>
+<h1>解密</h1>
+<p>写一下解密python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = [<span class="number">0x35</span>, <span class="number">0x2F</span>, <span class="number">0x2F</span>, <span class="number">0x32</span>, <span class="number">0x28</span>, <span class="number">0x14</span>, <span class="number">0x27</span>, <span class="number">0x3B</span>, <span class="number">0x3D</span>, <span class="number">0x70</span>,</span><br><span class="line">     <span class="number">0x3C</span>, <span class="number">0x0A</span>, <span class="number">0x3D</span>, <span class="number">0x73</span>, <span class="number">0x3A</span>, <span class="number">0x0A</span>, <span class="number">0x1F</span>, <span class="number">0x73</span>, <span class="number">0x3D</span>, <span class="number">0x66</span>,</span><br><span class="line">     <span class="number">0x21</span>, <span class="number">0x1C</span>, <span class="number">0x6D</span>, <span class="number">0x28</span>]</span><br><span class="line">key = <span class="string">&quot;SCNU&quot;</span></span><br><span class="line">flag=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(r)):</span><br><span class="line">    flag+=<span class="built_in">chr</span>(<span class="built_in">ord</span>(key[i % <span class="number">4</span>]) ^ r[i])</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
+<h1>FLAG</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flag&#123;Winn3r_n0t_L0s3r_#&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>线上课答案</category>
-        <category>智慧树知到</category>
-        <category>刷课脚本</category>
+        <category>CTF</category>
+        <category>WP</category>
+        <category>RE</category>
       </categories>
       <tags>
-        <tag>线上课答案库</tag>
-        <tag>智慧树知到</tag>
-        <tag>刷课脚本</tag>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -9102,23 +8942,163 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>本博客免责声明</title>
-    <url>/posts/72e47f4f.html</url>
-    <content><![CDATA[<p>在使用本教程前，请务必阅读并理解以下内容。使用本教程即代表您同意以下用户协议：</p>
+    <title>智慧树/知到/刷课脚本安装教程</title>
+    <url>/posts/3af6ecf8.html</url>
+    <content><![CDATA[<blockquote>
+<p>前言：使用本工具请自觉遵守国家法律法规，下载后请24小时之内删除，本教程来自www.w1ndys.top</p>
+<p><u>使用</u>本教程即代表用户同意本教程<a href="#%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE">用户协议</a>，使用本教程造成的<font color='red'>一切后果由个人承担</font>，<u>作者</u><font color='red'>概不负责</font></p>
+<p><font color='red'>请注意：本教程所涉及脚本工具开发者并不是博主本人，内涵涉及收费的内容，请酌情考虑</font></p>
+<p>本教程编写于2023年11月3日，距离时间过长可能脚本已失效，请铭记</p>
+<p>本教程旨在节省大家时间，让大家去做更有意义的事情，请勿用于违法用途，请勿倒卖，否则将追究法律责任</p>
+</blockquote>
+<p>本教程编写耗时<font color='red'>180分钟</font>且浏览完全免费，且看且珍惜</p>
+<p>前期步骤基本和超星学习通的教程差不多</p>
+<h1>作者建议</h1>
+<p>建议在阳间的时间刷课，后台可以看到浏览时间的</p>
+<h1>工具准备</h1>
 <ol>
-<li><strong>用户协议</strong>：使用本教程即表示您同意遵守本免责声明和用户协议。若您不同意此协议，请勿使用本教程提供的信息和指南。</li>
-<li><strong>个人责任</strong>：本教程所提供的信息仅供参考，使用者需自行承担因使用产品A而产生的任何风险和后果。</li>
-<li><strong>消费责任</strong>：使用本教程涉及的任何消费或购买行为与本人无关，用户需自行对其行为负责并承担相应风险。</li>
-<li><strong>禁止转载</strong>：未经本人允许，严禁对本教程内容进行转载或再分发。任何未经授权的转载行为都将被视为侵权行为。</li>
-<li><strong>结果不保证</strong>：本教程提供的建议和技巧并不能保证用户能够取得特定的结果或效果。实际使用中的成果可能因个人技能、环境差异或其他因素而有所不同。</li>
+<li>
+<p>一台能上网的电脑</p>
+</li>
+<li>
+<p>Google Chrome（推荐）</p>
+<p>没有Google的可以用Windows自带的Edge浏览器（</p>
+</li>
+<li>
+<p>脚本猫（用篡改猴也行，本教程以脚本猫为例</p>
+<p>详情：<a href="https://docs.scriptcat.org/docs/use/#/">脚本猫使用文档</a></p>
+</li>
+<li>
+<p>一个魔法工具（梯子）</p>
+<p><font color="#3333FF">需要特别注意的是，使用本工具有一定的流量计费，3.8-38.8 不等，根据自己需要选择</font>，此费用也不是我本人收取，而是流量的提供方收取，特别注意这点<font color="#FF0000" size=5>如果你介意此费用，你可以关闭此页面退出阅读了。</font>具体注意事项下面会提到</p>
+</li>
+<li>
+<p>OCS客户端</p>
+</li>
+<li>
+<p>一个懂的百度的大脑（不是</p>
+</li>
+<li>
+<p>一双灵敏的眼睛（不是</p>
+</li>
+<li>
+<p>一个耐心看教程的好习惯（不是</p>
+</li>
+<li>
+<p>一颗真诚的心和<font color='red'>良好的态度</font>，有问题<a href="https://qm.qq.com/q/9n506oZ8Ri&amp;personal_qrcode_source=4">联系博主</a></p>
+<p>（实在懒得弄可以找我低价代刷</p>
+</li>
 </ol>
-<p>在使用本教程提供的信息前，请谨慎考虑个人能力和环境因素，并在必要时寻求专业建议。对于因使用本教程而产生的任何问题或损失，我们概不负责。</p>
+<h1>开始操作</h1>
+<p>有了这个工具，你不只是能进ai，还可以高速浏览GitHub等网站，以及…</p>
+<h2 id="爬墙工具的介绍和安装使用">爬墙工具的介绍和安装使用</h2>
+<h3 id="工具介绍">工具介绍</h3>
+<p><font color="#FF3333">这些你都不需要记，看看就行</font></p>
+<p>​		虚拟专用网络(Virtual Private Network，VPN)是专用网络的延伸，它包含了类似Internet的共享或公共网络链接。通过VPN可以以模拟点对点专用链接的方式通过共享或公共网络在两台计算机之间发送数据。</p>
+<p>如果说得再通俗一点，VPN实际上是&quot;线路中的线路&quot;，类型于城市大道上的&quot;公交专用线&quot;，所不同的是，由VPN组成的&quot;线路&quot;并不是物理存在的，而是通过技术手段模拟出来，即是&quot;虚拟&quot;的。不过，这种虚拟的专用网络技术却可以在一条公用线路中为两台计算机建立一个逻辑上的专用&quot;通道&quot;，它具有良好的保密和不受干扰性，使双方能进行自由而安全的点对点连接，因此被网络管理员们非常广泛地关注着。</p>
+<p>通过虚拟专用网，我们在家就可以轻松安全的登录到公司的内部网络上，这样可以实现我们在家办公的梦想了。</p>
+<h3 id="账号注册">账号注册</h3>
+<p>微信搜索公众号关注：  <code>W1ndys_Official</code>  点击下方菜单GPT可获取注册地址</p>
+<p><img src="/img/VPN/wx.png" alt="注册"></p>
+<p>输入邮箱密码注册账号，注册完成后登陆</p>
+<p><img src="/img/VPN/%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7.png" alt="注册"></p>
+<p>然后点击左侧购买订阅</p>
+<p><img src="/img/VPN/%E8%AE%A2%E9%98%85.png" alt="订阅"></p>
+<p>根据需求选择你合适的方案，如果你只是想尝鲜的话，毫无疑问，选最便宜的，能用就行</p>
+<p><img src="/img/VPN/%E8%B4%AD%E4%B9%B0%E8%AE%A2%E9%98%85.png" alt="购买订阅"></p>
+<p>我本人用的是<font color="#FF0000">38.8巨量不限时，推荐这个</font>，大约可以用2年左右，平均下来大约0.6/天</p>
+<blockquote>
+<p>因为我不只有这一个需求，另外还有使用<font color="#FF0000">ChatGPT，bingai</font>等的需求，所以这个是最划算的。</p>
+</blockquote>
+<p>另外关于如何使用ChatGPT的教程以后有时间我会写，OpenAI官方的ChatGPT</p>
+<p>买完之后点击左上方仪表盘可以看到你的已订阅</p>
+<p><img src="/img/VPN/%E4%BB%AA%E8%A1%A8%E7%9B%98.png" alt="仪表盘"></p>
+<p>然后点击仪表盘下方的使用文档</p>
+<p><img src="/img/VPN/%E5%AE%A2%E6%88%B7%E7%AB%AF.png" alt="客户端安装"></p>
+<p>选择你的系统安装客户端</p>
+<p>安装完之后登陆客户端就可以看到这样</p>
+<p><img src="/img/VPN/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90.png" alt="安装完成"></p>
+<h3 id="连接节点">连接节点</h3>
+<p>目前为止已经基本结束了，点击连接，点进去选个绿色的节点，点全局，<font color="#FF0000">如果后续出现连接失败就换个节点</font></p>
+<p><img src="/img/VPN/%E8%8A%82%E7%82%B9.png" alt="节点"></p>
+<h2 id="脚本安装">脚本安装</h2>
+<p>首先安装脚本猫，点击进入<a href="https://docs.scriptcat.org/docs/use/#/">脚本猫使用文档</a></p>
+<p><img src="/img/xxt-ScriptCat/1.jpg" alt="安装脚本猫"></p>
+<p>根据自己浏览器选择安装，这里以Google Chrome为例</p>
+<p>（如果长时间进不去则需要<font color='red'>科学上网</font>，由于种种原因这里不过多赘述）</p>
+<p><img src="/img/xxt-ScriptCat/2.jpg" alt="安装脚本猫"></p>
+<p>进来之后点击图示右上角安装（由于我已经安装过了所以图示是remove）</p>
+<p><img src="/img/xxt-ScriptCat/3.jpg" alt="启用脚本猫"></p>
+<p>然后进入浏览器扩展中心可以看到已经安装好了，启用该扩展</p>
+<p>然后<a href="https://docs.ocsjs.com/docs/app#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%88%97%E8%A1%A8">进入OCS使用文档</a>下载OCS客户端</p>
+<p>（进去可能会让你下载视频，那个是操作教程，可看可不看，我会在后面写教程）</p>
+<p><img src="/img/ocs/1.jpg" alt="下载OCS客户端"></p>
+<p>下载之后安装，直接双击exe文件就行，没啥别的要动的</p>
+<p>下载完之后在桌面应该可以看到图标，双击图标打开</p>
+<ol>
+<li>进入软件后，一键初始化软件，选择浏览器，脚本管理器和脚本，点击安装。</li>
+<li>新建浏览器， 点击右侧蓝色按钮启动</li>
+<li>等待“OCS导航页”页面加载完成后（可能会卡死，可重启或者直接刷新页面）进入任意网课平台即可，等待期间请勿操作浏览器。</li>
+</ol>
+<p>（更具体的教程和使用须知可以看软件内部自带的教程）</p>
+<p><img src="/img/ocs/2.jpg" alt="新建浏览器"></p>
+<p>点击新建浏览器，然后点击创建之后浏览器之后的小三角</p>
+<p>之后等待操作自动完成，可以看到可以刷题的网站</p>
+<p><img src="/img/ocs/3.jpg" alt="初始化完成"></p>
+<p>然后点击智慧树知到（如果是刷学习通的话点学习通，这里不过多赘述）</p>
+<p>然后登录上自己的账号（其实不登录也行，主要是要配置题库）</p>
+<p>找到下面这个东西</p>
+<p><img src="/img/ocs/4.jpg" alt="ocs配置"></p>
+<p>点击通用，点击全局设置</p>
+<p>根据自己需要进行下面配置</p>
+<p><img src="/img/ocs/5.jpg" alt="题库配置"></p>
+<p><a href="https://tk.enncy.cn/">点击进入题库管理平台</a></p>
+<h2 id="ocs题库设置">ocs题库设置</h2>
+<h3 id="第一步：注册题库账号">第一步：注册题库账号</h3>
+<p>右上角注册，具体这个就不说了，只能用邮箱注册，之前用爱发电登录的请使用其他登录 <code>爱发电授权登录</code> 。</p>
+<h3 id="第二步：登录题库，复制题库凭证">第二步：登录题库，复制题库凭证</h3>
+<p>登录后将会自动跳转到个人中心，每个人新注册账号可以获得100次免费搜题次数，找到 <strong>题库配置</strong> , 最后点击复制。</p>
+<p><img src="https://tk.enncy.cn/image/details.png" alt="login"></p>
+<h3 id="第三步：配置脚本题库">第三步：配置脚本题库</h3>
+<p>在浏览器中打开你的网课， 进入学习，作业，考试页面，然后按照以下步骤配置：</p>
+<p><img src="https://tk.enncy.cn/image/new-tkpz.png" alt="login"></p>
+<h3 id="最后一步：刷新页面">最后一步：刷新页面</h3>
+<p>等待运行到自动答题章节后，查看搜题结果，如果搜索到了则为配置成功！</p>
+<h2 id="注意">注意</h2>
+<ul>
+<li>如果次数使用完毕，进入个人中心购买次数即可</li>
+<li>收费项目归平台所有，与本人无关，酌情选择</li>
+<li>平台收费价格为1元/100次，3元/2000次，10元/10000次，50元/十万次</li>
+</ul>
+<h2 id="刷课配置">刷课配置</h2>
+<p>由于智慧树知到有习惯分，脚本提供了习惯刷课功能</p>
+<p><img src="/img/ocs/7.jpg" alt="习惯分"></p>
+<p>点击右上角<strong>知到智慧树</strong>，点击<strong>学习脚本</strong></p>
+<p><img src="/img/ocs/8.jpg" alt="习惯分"></p>
+<p>根据喜好进行刷课即可，建议每天半小时，有习惯分</p>
+<h1>展示</h1>
+<p>由于我这学期没有智慧树平台的相关课程，各位自己偷偷刷吧</p>
+<h1>用户协议</h1>
+<ol>
+<li>使用本教程即代表同意此用户协议</li>
+<li>使用本教程所带来的后果均由用户个人承担</li>
+<li>本教程所涉及的消费均与本人无关</li>
+<li>本教程未经本人允许禁止转载</li>
+<li>不要跟我杠，杠就是你对</li>
+<li>我本人有<strong>抑郁症</strong>病史，玩过小红书，若本人遭受任何形式的网络暴力 (包括但不限于发送淫 / 秽血 / 腥图片，问候我家人), 并出现极端行为。一切都是<strong>本人的错</strong>和大家无关</li>
+<li>本教程旨在节省大家时间，让大家去做更有意义的事情，请勿用于违法用途，请勿倒卖，否则将追究法律责任</li>
+<li><font color='blue'>博主W1ndys享有最终解释权</font></li>
+</ol>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>线上课答案</category>
+        <category>智慧树知到</category>
+        <category>刷课脚本</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
+        <tag>线上课答案库</tag>
+        <tag>智慧树知到</tag>
+        <tag>刷课脚本</tag>
       </tags>
   </entry>
   <entry>
@@ -9141,6 +9121,26 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </categories>
       <tags>
         <tag>QFNU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本博客免责声明</title>
+    <url>/posts/72e47f4f.html</url>
+    <content><![CDATA[<p>在使用本教程前，请务必阅读并理解以下内容。使用本教程即代表您同意以下用户协议：</p>
+<ol>
+<li><strong>用户协议</strong>：使用本教程即表示您同意遵守本免责声明和用户协议。若您不同意此协议，请勿使用本教程提供的信息和指南。</li>
+<li><strong>个人责任</strong>：本教程所提供的信息仅供参考，使用者需自行承担因使用产品A而产生的任何风险和后果。</li>
+<li><strong>消费责任</strong>：使用本教程涉及的任何消费或购买行为与本人无关，用户需自行对其行为负责并承担相应风险。</li>
+<li><strong>禁止转载</strong>：未经本人允许，严禁对本教程内容进行转载或再分发。任何未经授权的转载行为都将被视为侵权行为。</li>
+<li><strong>结果不保证</strong>：本教程提供的建议和技巧并不能保证用户能够取得特定的结果或效果。实际使用中的成果可能因个人技能、环境差异或其他因素而有所不同。</li>
+</ol>
+<p>在使用本教程提供的信息前，请谨慎考虑个人能力和环境因素，并在必要时寻求专业建议。对于因使用本教程而产生的任何问题或损失，我们概不负责。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -9175,29 +9175,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </categories>
       <tags>
         <tag>QFNU</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>硕神！！————一则关于“硕神”的博文/硕神的起源发展</title>
-    <url>/posts/88359b18.html</url>
-    <content><![CDATA[<p>现在朋友圈里发生了一个怪象，那就是凡是认识我的都知道有人称我为硕神，似乎我已经失去我的本名</p>
-<p>我来简单介绍一下这个名字的由来</p>
-<p>起初，没有人意识到这场灾难（</p>
-<h1>开端</h1>
-<p>最开始是我几个初中同学的群里，从这个群开始传开的，其中一个群友叫我“硕神”，然后慢慢地全群的同学都叫我“硕神‘</p>
-<h1>发展</h1>
-<h1>高潮</h1>
-<h1>如今</h1>
-<hr>
-<p>未完待续………………</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-        <category>硕神</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>硕神</tag>
       </tags>
   </entry>
   <entry>
@@ -9345,29 +9322,26 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>简单两步，将Windows11右键菜单修改为Windows10风格</title>
-    <url>/posts/831f896e.html</url>
-    <content><![CDATA[<p>原文链接<a href="http://t.csdn.cn/dhe9N">http://t.csdn.cn/dhe9N</a></p>
-<p>Windows11更新后，右键菜单很多功能隐藏起来了，使用时需要点击“显示更多选型”才能获取完整功能。为了能获得Windows10右键菜单丝滑的体验，我总结了以下方法。</p>
-<p>修改前：</p>
-<p><a href="https://img-blog.csdnimg.cn/img_convert/59704c4ffbd6af9764dd5ab84c0fc7bf.gif">https://img-blog.csdnimg.cn/img_convert/59704c4ffbd6af9764dd5ab84c0fc7bf.gif</a></p>
-<p>修改后：</p>
-<p><a href="https://img-blog.csdnimg.cn/img_convert/1e8911f87d020b6034f90d8b5b1a9255.gif">https://img-blog.csdnimg.cn/img_convert/1e8911f87d020b6034f90d8b5b1a9255.gif</a></p>
-<h1>方法一：控制台操作法</h1>
-<p>按住win+R打开运行窗口</p>
-<p>输入cmd，打开控制台<br>
-在控制泰中输入下方代码，回车，显示操作成功<br>
-开启旧版右键菜单：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure>
-<p>恢复windows11新版右键菜单：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;&quot; /f</span><br></pre></td></tr></table></figure>
+    <title>硕神！！————一则关于“硕神”的博文/硕神的起源发展</title>
+    <url>/posts/88359b18.html</url>
+    <content><![CDATA[<p>现在朋友圈里发生了一个怪象，那就是凡是认识我的都知道有人称我为硕神，似乎我已经失去我的本名</p>
+<p>我来简单介绍一下这个名字的由来</p>
+<p>起初，没有人意识到这场灾难（</p>
+<h1>开端</h1>
+<p>最开始是我几个初中同学的群里，从这个群开始传开的，其中一个群友叫我“硕神”，然后慢慢地全群的同学都叫我“硕神‘</p>
+<h1>发展</h1>
+<h1>高潮</h1>
+<h1>如今</h1>
+<hr>
+<p>未完待续………………</p>
 ]]></content>
       <categories>
-        <category>Windows</category>
-        <category>系统设置</category>
+        <category>随笔</category>
+        <category>硕神</category>
       </categories>
       <tags>
-        <tag>Windows技术分享</tag>
+        <tag>随笔</tag>
+        <tag>硕神</tag>
       </tags>
   </entry>
   <entry>
@@ -9518,6 +9492,32 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
+    <title>简单两步，将Windows11右键菜单修改为Windows10风格</title>
+    <url>/posts/831f896e.html</url>
+    <content><![CDATA[<p>原文链接<a href="http://t.csdn.cn/dhe9N">http://t.csdn.cn/dhe9N</a></p>
+<p>Windows11更新后，右键菜单很多功能隐藏起来了，使用时需要点击“显示更多选型”才能获取完整功能。为了能获得Windows10右键菜单丝滑的体验，我总结了以下方法。</p>
+<p>修改前：</p>
+<p><a href="https://img-blog.csdnimg.cn/img_convert/59704c4ffbd6af9764dd5ab84c0fc7bf.gif">https://img-blog.csdnimg.cn/img_convert/59704c4ffbd6af9764dd5ab84c0fc7bf.gif</a></p>
+<p>修改后：</p>
+<p><a href="https://img-blog.csdnimg.cn/img_convert/1e8911f87d020b6034f90d8b5b1a9255.gif">https://img-blog.csdnimg.cn/img_convert/1e8911f87d020b6034f90d8b5b1a9255.gif</a></p>
+<h1>方法一：控制台操作法</h1>
+<p>按住win+R打开运行窗口</p>
+<p>输入cmd，打开控制台<br>
+在控制泰中输入下方代码，回车，显示操作成功<br>
+开启旧版右键菜单：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure>
+<p>恢复windows11新版右键菜单：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;&quot; /f</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>Windows技术分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决Windows11“为了对电脑进行保护，已经阻止此应用。”</title>
     <url>/posts/8847716f.html</url>
     <content><![CDATA[<p><img src="/img/Windows/image-20231208221039318.png" alt="image-20231208221039318"></p>
@@ -9540,21 +9540,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </categories>
       <tags>
         <tag>Windows技术分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>跟随欧丽娟老师学习哲学</title>
-    <url>/posts/4dcfa3ab.html</url>
-    <content><![CDATA[<p>永远学习欧丽娟老师！</p>
-<p><img src="https://z1.ax1x.com/2023/09/30/pPqcohF.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>哲学</category>
-        <category>欧丽娟</category>
-      </categories>
-      <tags>
-        <tag>文</tag>
       </tags>
   </entry>
   <entry>
@@ -9823,6 +9808,21 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
         <tag>线上课答案库</tag>
         <tag>超星学习通</tag>
         <tag>刷课脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>跟随欧丽娟老师学习哲学</title>
+    <url>/posts/4dcfa3ab.html</url>
+    <content><![CDATA[<p>永远学习欧丽娟老师！</p>
+<p><img src="https://z1.ax1x.com/2023/09/30/pPqcohF.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>哲学</category>
+        <category>欧丽娟</category>
+      </categories>
+      <tags>
+        <tag>文</tag>
       </tags>
   </entry>
   <entry>
