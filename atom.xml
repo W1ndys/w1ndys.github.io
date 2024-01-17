@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2024-01-17T12:39:07.098Z</updated>
+  <updated>2024-01-17T15:02:09.654Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://w1ndys.github.io/posts/18414cf0"/>
     <id>https://w1ndys.github.io/posts/18414cf0</id>
     <published>2024-01-17T12:08:57.334Z</published>
-    <updated>2024-01-17T12:39:07.098Z</updated>
+    <updated>2024-01-17T15:02:09.654Z</updated>
     
-    <content type="html"><![CDATA[<p>首页导航栏图标旁边的文字，我不知道实际是为了干什么的，暂且按照常识当做是回到首页</p><p>但是我实际测试的时候，这个按钮的作用是刷新该界面，与一般的网站运行思路并不相同，不知道是不是bug，反馈一下</p><p>PS：经过测试是主题的问题，一开始我以为是我有依赖冲突引起的，于是我开了一个空环境重新配置，准备复现，复现成功了，刚初始化的主题也存在这个问题所以我才断定来提交issues</p><p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p><p>还有一个bug就是首页按钮的问题，bug内容与上述一样，假设上面的bug是我的认知错误，设定就是刷新该页面</p><p>首页的作用应该是回到首页，但是实际上是刷新该页面。</p><p>所以也提交一下issues吧，希望官方大大修复一下。</p><p>附图↓</p><p><img src="img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>首页导航栏图标旁边的文字，我不知道实际是为了干什么的，暂且按照常识当做是回到首页</p><p>但是我实际测试的时候，这个按钮的作用是刷新该界面，与一般的网站运行思路并不相同，不知道是不是bug，反馈一下</p><p>PS：经过测试是主题的问题，一开始我以为是我有依赖冲突引起的，于是我开了一个空环境重新配置，准备复现，复现成功了，刚初始化的主题也存在这个问题所以我才断定来提交issues</p><p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p><p>还有一个bug就是首页按钮的问题，bug内容与上述一样，假设上面的bug是我的认知错误，设定就是刷新该页面</p><p>首页的作用应该是回到首页，但是实际上是刷新该页面。</p><p>所以也提交一下issues吧，希望官方大大修复一下。</p><p>附图↓</p><p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" alt=""></p>]]></content>
     
     
       
