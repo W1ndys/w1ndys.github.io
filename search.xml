@@ -337,6 +337,109 @@
       </tags>
   </entry>
   <entry>
+    <title>CTF学习日记（每天学点新东西，就是成功）</title>
+    <url>/posts/cdf7e434.html</url>
+    <content><![CDATA[<p>（坚持一天一更新……可能吧）</p>
+<h1>2023年12月11日</h1>
+<p>今天学点不一样的</p>
+<p>bat批处理相关知识</p>
+<p>每次都要输入命令，我干脆直接用bat批处理，点一下就好了</p>
+<p><a href="https://blog.csdn.net/qq_41428418/article/details/132438144#/">https://blog.csdn.net/qq_41428418/article/details/132438144#/</a></p>
+<p><a href="https://blog.csdn.net/s_y_w123/article/details/111353912#/">https://blog.csdn.net/s_y_w123/article/details/111353912#/</a></p>
+<p><a href="https://github.com/Aloxaf/MirageTankGo#/">https://github.com/Aloxaf/MirageTankGo#/</a></p>
+<p>解决了我没解决的问题</p>
+<p>get√</p>
+<h1>2023年12月9日</h1>
+<p>文件头文件尾的知识点<a href="https://w1ndys.top/2023/12/09/CTF-misc-fileheader/#/">https://w1ndys.top/2023/12/09/CTF-misc-fileheader/#/</a></p>
+<h1>2023年11月14日</h1>
+<p>今天打技能兴鲁省赛线上初赛，有个很有意思的杂项题，附件解压是一个日历表</p>
+<h1>2023年11月13日</h1>
+<h2 id="RE">RE</h2>
+<ul>
+<li>Python字符串，列表，元组，字典的区别</li>
+</ul>
+<p>特别提一下：</p>
+<p>flag创建为列表的时候用join函数拼接</p>
+<p>flag创建为字符串的时候用+=拼接</p>
+<h3 id="Python-字符串">Python 字符串</h3>
+<p>字符串是 Python 中最常用的数据类型。我们可以使用引号 ( <strong>’</strong> 或 <strong>&quot;</strong> ) 来创建字符串。</p>
+<p>创建字符串很简单，只要为变量分配一个值即可。例如：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">var1</span> = <span class="hljs-string">&#x27;Hello World!&#x27;</span><br><span class="hljs-attr">var2</span> = <span class="hljs-string">&quot;Python Runoob&quot;</span><br></code></pre></td></tr></table></figure>
+<h3 id="Python-列表-List">Python 列表(List)</h3>
+<p>序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。</p>
+<p>Python有6个序列的内置类型，但最常见的是列表和元组。</p>
+<p>序列都可以进行的操作包括索引，切片，加，乘，检查成员。</p>
+<p>此外，Python已经内置确定序列的长度以及确定最大和最小的元素的方法。</p>
+<p>列表是最常用的Python数据类型，它可以作为一个方括号内的逗号分隔值出现。</p>
+<p>列表的数据项不需要具有相同的类型</p>
+<p>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。如下所示：</p>
+<p>list1 = [‘physics’, ‘chemistry’, 1997, 2000] list2 = [1, 2, 3, 4, 5 ] list3 = [“a”, “b”, “c”, “d”]</p>
+<p>与字符串的索引一样，列表索引从0开始。列表可以进行截取、组合等。</p>
+<h3 id="Python-元组">Python 元组</h3>
+<p>Python 的元组与列表类似，不同之处在于元组的元素不能修改。</p>
+<p>元组使用小括号，列表使用方括号。</p>
+<p>元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。</p>
+<p>如下实例：</p>
+<h4 id="实例-Python-2-0">实例(Python 2.0+)</h4>
+<p>tup1 = (‘physics’, ‘chemistry’, 1997, 2000) tup2 = (1, 2, 3, 4, 5 ) tup3 = “a”, “b”, “c”, “d”</p>
+<p>创建空元组</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">tup1</span> <span class="hljs-operator">=</span> ()<br></code></pre></td></tr></table></figure>
+<p>元组中只包含一个元素时，需要在元素后面添加逗号</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">tup1</span> = (<span class="hljs-number">50</span>,)<br></code></pre></td></tr></table></figure>
+<p>元组与字符串类似，下标索引从0开始，可以进行截取，组合等。</p>
+<h3 id="Python-字典-Dictionary">Python 字典(Dictionary)</h3>
+<p>字典是另一种可变容器模型，且可存储任意类型对象。</p>
+<p>字典的每个键值 <strong>key:value</strong> 对用冒号 <strong>:</strong> 分割，每个键值对之间用逗号 <strong>,</strong> 分割，整个字典包括在花括号 <strong>{}</strong> 中 ,格式如下所示：</p>
+<p>d = {key1 : value1, key2 : value2 }</p>
+<p>**注意：**<strong>dict</strong> 作为 Python 的关键字和内置函数，变量名不建议命名为 <strong>dict</strong>。</p>
+<p>键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。</p>
+<p>&gt;&gt;&gt; tinydict = {‘a’: 1, ‘b’: 2, ‘b’: ‘3’}<br>
+&gt;&gt;&gt; tinydict[‘b’]<br>
+‘3’<br>
+&gt;&gt;&gt; tinydict<br>
+{‘a’: 1, ‘b’: ‘3’}</p>
+<p>值可以取任何数据类型，但键必须是不可变的，如字符串，数字或元组。</p>
+<p>一个简单的字典实例：</p>
+<p>tinydict = {‘Alice’: ‘2341’, ‘Beth’: ‘9102’, ‘Cecil’: ‘3258’}</p>
+<p>也可如此创建字典：</p>
+<p>tinydict1 = { ‘abc’: 456 } tinydict2 = { ‘abc’: 123, 98.6: 37 }</p>
+<h1>2023年11月11日</h1>
+<h2 id="re">re</h2>
+<p>Python逆序输出</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(flag[::-<span class="hljs-number">1</span>])</span></span><br></code></pre></td></tr></table></figure>
+<p>实际上这是切片的一些操作</p>
+<p><a href="https://blog.csdn.net/qq_30460949/article/details/118888961">Python切片操作_小魔王降临的博客-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>CTF学习日记</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CTF学习日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CTF常用刷题平台</title>
+    <url>/posts/eed2fa14.html</url>
+    <content><![CDATA[<p>1.NSSCTF，适合新手</p>
+<p><a href="https://www.nssctf.cn/index">主页 | NSSCTF</a></p>
+<p>2.攻防世界，适合新手</p>
+<p><a href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a></p>
+<p>3.CTFshow，可以进阶</p>
+<p><a href="https://ctf.show/">ctf.show</a></p>
+<p>4.buuctf，新手进阶都可以</p>
+<p><a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>平台</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CTF入门指北——web</title>
     <url>/posts/c162917a.html</url>
     <content><![CDATA[<h1>moectf2023 web 入门指南</h1>
@@ -452,89 +555,6 @@
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF学习日记（每天学点新东西，就是成功）</title>
-    <url>/posts/cdf7e434.html</url>
-    <content><![CDATA[<p>（坚持一天一更新……可能吧）</p>
-<h1>2023年12月11日</h1>
-<p>今天学点不一样的</p>
-<p>bat批处理相关知识</p>
-<p>每次都要输入命令，我干脆直接用bat批处理，点一下就好了</p>
-<p><a href="https://blog.csdn.net/qq_41428418/article/details/132438144#/">https://blog.csdn.net/qq_41428418/article/details/132438144#/</a></p>
-<p><a href="https://blog.csdn.net/s_y_w123/article/details/111353912#/">https://blog.csdn.net/s_y_w123/article/details/111353912#/</a></p>
-<p><a href="https://github.com/Aloxaf/MirageTankGo#/">https://github.com/Aloxaf/MirageTankGo#/</a></p>
-<p>解决了我没解决的问题</p>
-<p>get√</p>
-<h1>2023年12月9日</h1>
-<p>文件头文件尾的知识点<a href="https://w1ndys.top/2023/12/09/CTF-misc-fileheader/#/">https://w1ndys.top/2023/12/09/CTF-misc-fileheader/#/</a></p>
-<h1>2023年11月14日</h1>
-<p>今天打技能兴鲁省赛线上初赛，有个很有意思的杂项题，附件解压是一个日历表</p>
-<h1>2023年11月13日</h1>
-<h2 id="RE">RE</h2>
-<ul>
-<li>Python字符串，列表，元组，字典的区别</li>
-</ul>
-<p>特别提一下：</p>
-<p>flag创建为列表的时候用join函数拼接</p>
-<p>flag创建为字符串的时候用+=拼接</p>
-<h3 id="Python-字符串">Python 字符串</h3>
-<p>字符串是 Python 中最常用的数据类型。我们可以使用引号 ( <strong>’</strong> 或 <strong>&quot;</strong> ) 来创建字符串。</p>
-<p>创建字符串很简单，只要为变量分配一个值即可。例如：</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">var1</span> = <span class="hljs-string">&#x27;Hello World!&#x27;</span><br><span class="hljs-attr">var2</span> = <span class="hljs-string">&quot;Python Runoob&quot;</span><br></code></pre></td></tr></table></figure>
-<h3 id="Python-列表-List">Python 列表(List)</h3>
-<p>序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。</p>
-<p>Python有6个序列的内置类型，但最常见的是列表和元组。</p>
-<p>序列都可以进行的操作包括索引，切片，加，乘，检查成员。</p>
-<p>此外，Python已经内置确定序列的长度以及确定最大和最小的元素的方法。</p>
-<p>列表是最常用的Python数据类型，它可以作为一个方括号内的逗号分隔值出现。</p>
-<p>列表的数据项不需要具有相同的类型</p>
-<p>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。如下所示：</p>
-<p>list1 = [‘physics’, ‘chemistry’, 1997, 2000] list2 = [1, 2, 3, 4, 5 ] list3 = [“a”, “b”, “c”, “d”]</p>
-<p>与字符串的索引一样，列表索引从0开始。列表可以进行截取、组合等。</p>
-<h3 id="Python-元组">Python 元组</h3>
-<p>Python 的元组与列表类似，不同之处在于元组的元素不能修改。</p>
-<p>元组使用小括号，列表使用方括号。</p>
-<p>元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。</p>
-<p>如下实例：</p>
-<h4 id="实例-Python-2-0">实例(Python 2.0+)</h4>
-<p>tup1 = (‘physics’, ‘chemistry’, 1997, 2000) tup2 = (1, 2, 3, 4, 5 ) tup3 = “a”, “b”, “c”, “d”</p>
-<p>创建空元组</p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">tup1</span> <span class="hljs-operator">=</span> ()<br></code></pre></td></tr></table></figure>
-<p>元组中只包含一个元素时，需要在元素后面添加逗号</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">tup1</span> = (<span class="hljs-number">50</span>,)<br></code></pre></td></tr></table></figure>
-<p>元组与字符串类似，下标索引从0开始，可以进行截取，组合等。</p>
-<h3 id="Python-字典-Dictionary">Python 字典(Dictionary)</h3>
-<p>字典是另一种可变容器模型，且可存储任意类型对象。</p>
-<p>字典的每个键值 <strong>key:value</strong> 对用冒号 <strong>:</strong> 分割，每个键值对之间用逗号 <strong>,</strong> 分割，整个字典包括在花括号 <strong>{}</strong> 中 ,格式如下所示：</p>
-<p>d = {key1 : value1, key2 : value2 }</p>
-<p>**注意：**<strong>dict</strong> 作为 Python 的关键字和内置函数，变量名不建议命名为 <strong>dict</strong>。</p>
-<p>键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。</p>
-<p>&gt;&gt;&gt; tinydict = {‘a’: 1, ‘b’: 2, ‘b’: ‘3’}<br>
-&gt;&gt;&gt; tinydict[‘b’]<br>
-‘3’<br>
-&gt;&gt;&gt; tinydict<br>
-{‘a’: 1, ‘b’: ‘3’}</p>
-<p>值可以取任何数据类型，但键必须是不可变的，如字符串，数字或元组。</p>
-<p>一个简单的字典实例：</p>
-<p>tinydict = {‘Alice’: ‘2341’, ‘Beth’: ‘9102’, ‘Cecil’: ‘3258’}</p>
-<p>也可如此创建字典：</p>
-<p>tinydict1 = { ‘abc’: 456 } tinydict2 = { ‘abc’: 123, 98.6: 37 }</p>
-<h1>2023年11月11日</h1>
-<h2 id="re">re</h2>
-<p>Python逆序输出</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(flag[::-<span class="hljs-number">1</span>])</span></span><br></code></pre></td></tr></table></figure>
-<p>实际上这是切片的一些操作</p>
-<p><a href="https://blog.csdn.net/qq_30460949/article/details/118888961">Python切片操作_小魔王降临的博客-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>CTF学习日记</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CTF学习日记</tag>
       </tags>
   </entry>
   <entry>
@@ -1599,26 +1619,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CTF常用刷题平台</title>
-    <url>/posts/eed2fa14.html</url>
-    <content><![CDATA[<p>1.NSSCTF，适合新手</p>
-<p><a href="https://www.nssctf.cn/index">主页 | NSSCTF</a></p>
-<p>2.攻防世界，适合新手</p>
-<p><a href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a></p>
-<p>3.CTFshow，可以进阶</p>
-<p><a href="https://ctf.show/">ctf.show</a></p>
-<p>4.buuctf，新手进阶都可以</p>
-<p><a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>平台</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CTF逆向零碎知识点合集</title>
     <url>/posts/c1e61dd7.html</url>
     <content><![CDATA[<h1>1.Python字节码的学习</h1>
@@ -2323,59 +2323,6 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
       </tags>
   </entry>
   <entry>
-    <title>DS作业-4-Ch3-22网安物联网-20230927</title>
-    <url>/posts/4311d78.html</url>
-    <content><![CDATA[<blockquote>
-<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
-</blockquote>
-<h1>Ch3-1.</h1>
-<p><strong>总结栈空、栈满、队空、队满的判定条件。</strong></p>
-<p>栈和队列是两种常见的数据结构，它们的空和满的判断条件如下：</p>
-<p><strong>栈</strong>：</p>
-<ul>
-<li><strong>栈空</strong>：当栈顶指针<code>top</code>等于-1时，表示栈为空。</li>
-<li><strong>栈满</strong>：当栈顶指针<code>top</code>等于栈的最大容量减1（假设栈的最大容量为<code>maxSize</code>）时，表示栈已满，即<code>top == maxSize - 1</code>。</li>
-</ul>
-<p><strong>队列</strong>：</p>
-<ul>
-<li><strong>队空</strong>：当队头指针<code>front</code>等于队尾指针<code>rear</code>时，表示队列为空。</li>
-<li><strong>队满</strong>：这个判断条件取决于你如何实现队列。如果你使用数组实现循环队列，那么当<code>(rear + 1) % maxSize == front</code>时，表示队列已满（假设队列的最大容量为<code>maxSize</code>）。这里的 <code>%</code> 是取余运算，用于实现循环。</li>
-</ul>
-<h1>Ch3-2.</h1>
-<p><strong>循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？</strong></p>
-<p><strong>循环队列</strong>的优点主要有以下几点：</p>
-<ol>
-<li><strong>有效利用空间</strong>：在普通队列中，当队尾指针到达数组的末端时，即使数组的前端还有空闲空间，也无法再添加新的元素。而循环队列通过将队列的首尾相连，形成一个循环，使得在队尾指针到达数组末端时，可以从数组前端继续添加新的元素，从而更有效地利用了空间。</li>
-<li><strong>避免数据迁移</strong>：在普通队列中，每次出队操作后，为了维持队列的连续性，需要将所有元素向前移动一位，这会消耗大量的时间和计算资源。而在循环队列中，通过移动队头和队尾指针来实现入队和出队操作，无需移动元素本身，因此效率更高。</li>
-</ol>
-<p>对于使用数组实现的循环队列，常见的判断队满和队空的方案有以下几种：</p>
-<ol>
-<li><strong>牺牲一个存储空间</strong>：这是最常见的方法。当<code>(rear + 1) % maxSize == front</code>时，判断队列已满；当<code>rear == front</code>时，判断队列为空。这种方法的缺点是会浪费一个数组的存储空间。</li>
-<li><strong>使用一个标志位</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以额外使用一个标志位来判断队列的状态。当入队操作后<code>rear == front</code>时，将标志位设为满；当出队操作后<code>rear == front</code>时，将标志位设为空。这种方法可以充分利用所有存储空间，但需要额外的标志位。</li>
-<li><strong>记录元素个数</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以使用一个计数器来记录队列中元素的个数。当计数器为0时，判断队列为空；当计数器等于数组大小时，判断队列已满。这种方法同样可以充分利用所有存储空间，但需要额外的计数器。</li>
-</ol>
-<h1>Ch3-3.</h1>
-<p>*<em>假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node <em>front），试编写入队和出队算法。</em></em></p>
-<blockquote>
-<p>自己写的，<s>目前还在报错，修改中……</s></p>
-<p>已完工</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span>                  <span class="hljs-comment">//引入输入输出流</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span><br>&#123;<br>    DataType data;               <span class="hljs-comment">//数据域</span><br>    Node&lt;DataType&gt;* next;       <span class="hljs-comment">//指针域</span><br>&#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">LinkList_Queue</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">LinkList_Queue</span>();                      <span class="hljs-comment">//无参构造函数，建立只有头结点的空链表</span><br>    ~<span class="hljs-built_in">LinkList_Queue</span>();                     <span class="hljs-comment">//析构函数</span><br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Empety</span><span class="hljs-params">()</span></span>;<br>    <span class="hljs-function">DataType <span class="hljs-title">Push</span><span class="hljs-params">(DataType x)</span></span>;       <span class="hljs-comment">//插入操作，第i个位置插入值为x的结点</span><br>    <span class="hljs-function">DataType <span class="hljs-title">Pop</span><span class="hljs-params">()</span></span>;            <br><span class="hljs-keyword">private</span>:<br>    Node&lt;DataType&gt;* first, * rear;           <span class="hljs-comment">//单链表的头指针</span><br>&#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br>LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">LinkList_Queue</span>()<br>&#123;<br>    Node&lt;DataType&gt;* s = <span class="hljs-literal">nullptr</span>;<br>    s = <span class="hljs-keyword">new</span> Node&lt;DataType&gt;;    <br>    s-&gt;next = <span class="hljs-literal">nullptr</span>;<br>    first = rear = s;                      <span class="hljs-comment">//头结点的指针域置空</span><br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>LinkList_Queue&lt;DataType&gt; :: ~<span class="hljs-built_in">LinkList_Queue</span>()<br>&#123;<br><br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-type">int</span> LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">Empety</span>()<br>&#123;<br>    <span class="hljs-keyword">if</span> (first == rear)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><br><span class="hljs-comment">//入队算法</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br>DataType LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">Push</span>(DataType x)<br>&#123;<br>    Node&lt;DataType&gt;* s = <span class="hljs-literal">nullptr</span>;           <br>    s = <span class="hljs-keyword">new</span> Node&lt;DataType&gt;; <br>    s-&gt;data = x;<br>    s-&gt;next = <span class="hljs-literal">nullptr</span>;<br>    rear-&gt;next = s;<br>    rear = s;<br>    <span class="hljs-keyword">return</span> x;<br>&#125;<br><br><span class="hljs-comment">//出队算法</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br>DataType LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">Pop</span>()<br>&#123;<br>    <span class="hljs-keyword">if</span> (first == rear )<br>    &#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;队空&quot;</span> &lt;&lt; endl;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        DataType x;<br>        Node&lt;DataType&gt;* p = first-&gt;next;<br>        x = p-&gt;data;<br>        first-&gt;next = p-&gt;next;<br>        <span class="hljs-keyword">if</span> (rear == p)  <span class="hljs-comment">// 如果队列中只有一个元素</span><br>            rear = first;  <span class="hljs-comment">// 则需要更新尾指针</span><br>        <span class="hljs-keyword">delete</span> p;<br>        <span class="hljs-keyword">return</span> x;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    LinkList_Queue&lt;<span class="hljs-type">int</span>&gt; s = &#123;&#125;;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">0</span>;<br>    s.<span class="hljs-built_in">Push</span>(<span class="hljs-number">1</span>);<br>    s.<span class="hljs-built_in">Push</span>(<span class="hljs-number">2</span>);<br>    s.<span class="hljs-built_in">Push</span>(<span class="hljs-number">3</span>);<br>    cout &lt;&lt; <span class="hljs-string">&quot;已入队1,2,3&quot;</span> &lt;&lt; endl;<br>    cin &gt;&gt; a;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已入队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Push</span>(a) &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;出队一次&quot;</span>&lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<blockquote>
-<p>AI生成的，不想做了，谨慎查阅</p>
-</blockquote>
-<figure class="highlight xl"><table><tr><td class="code"><pre><code class="hljs xl">#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br><br><span class="hljs-comment">// 定义结点</span><br>typedef struct Node &#123;<br>    int <span class="hljs-keyword">data</span>;<br>    struct Node* next;<br>&#125; Node;<br><br><span class="hljs-comment">// 定义队列</span><br>typedef struct Queue &#123;<br>    Node* rear;<br>&#125; Queue;<br><br><span class="hljs-comment">// 初始化队列</span><br>Queue* initQueue() &#123;<br>    Node* head = (Node*)malloc(sizeof(Node));  <span class="hljs-comment">// 创建头结点</span><br>    <span class="hljs-function"><span class="hljs-title">head</span>-&gt;</span>next = head;  <span class="hljs-comment">// 循环链表</span><br>    Queue* queue = (Queue*)malloc(sizeof(Queue));<br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = head;  <span class="hljs-comment">// 尾指针指向头结点</span><br>    return queue;<br>&#125;<br><br><span class="hljs-comment">// 入队操作</span><br>void enQueue(Queue* queue, int <span class="hljs-keyword">data</span>) &#123;<br>    Node* newNode = (Node*)malloc(sizeof(Node));<br>    <span class="hljs-function"><span class="hljs-title">newNode</span>-&gt;</span><span class="hljs-keyword">data</span> = <span class="hljs-keyword">data</span>;<br>    <span class="hljs-function"><span class="hljs-title">newNode</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next;  <span class="hljs-comment">// 新结点指向头结点</span><br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next = newNode;  <span class="hljs-comment">// 尾结点指向新结点</span><br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = newNode;  <span class="hljs-comment">// 更新尾指针</span><br>&#125;<br><br><span class="hljs-comment">// 出队操作</span><br>int deQueue(Queue* queue) &#123;<br>    <span class="hljs-function"><span class="hljs-title">if</span> (queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span> == queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next) &#123;<br>        printf(<span class="hljs-string">&quot;队列为空，无法出队。\n&quot;</span>);<br>        return -<span class="hljs-number">1</span>;<br>    &#125;<br>    N<span class="hljs-function"><span class="hljs-title">ode</span>* head = queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next;  <span class="hljs-comment">// 头结点</span><br>    N<span class="hljs-function"><span class="hljs-title">ode</span>* firstNode = head-&gt;</span>next;  <span class="hljs-comment">// 第一个结点（即要出队的结点）</span><br>    <span class="hljs-function"><span class="hljs-title">int</span> <span class="hljs-keyword">data</span> = firstNode-&gt;</span><span class="hljs-keyword">data</span>;<br>    <span class="hljs-function"><span class="hljs-title">head</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = firstNode-&gt;</span>next;  <span class="hljs-comment">// 头结点指向第二个结点</span><br>    <span class="hljs-function"><span class="hljs-title">if</span> (firstNode == queue-&gt;</span>rear) &#123;  <span class="hljs-comment">// 如果只有一个元素，出队后更新尾指针</span><br>        <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = head;<br>    &#125;<br>    free(firstNode);  <span class="hljs-comment">// 释放出队的结点内存</span><br>    return <span class="hljs-keyword">data</span>;<br>&#125;<br><br>int main() &#123;<br>    Queue* queue = initQueue();<br>    <br><br>    printf(<span class="hljs-string">&quot;入队：\n&quot;</span>);<br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;<br>        printf(<span class="hljs-string">&quot;%d &quot;</span>, i);<br>        enQueue(queue, i);<br>    &#125;<br>    <br>    printf(<span class="hljs-string">&quot;\n出队：\n&quot;</span>);<br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;<br>        printf(<span class="hljs-string">&quot;%d &quot;</span>, deQueue(queue));<br>    &#125;<br>    <br>    return <span class="hljs-number">0</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>课后作业</category>
-      </categories>
-      <tags>
-        <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DS作业-5-22网安物联网-20231016</title>
     <url>/posts/9b8045c.html</url>
     <content><![CDATA[<p><strong>作业ch4-1：</strong></p>
@@ -2487,6 +2434,59 @@ PNG文件，我们会发现，文件的结尾12个字符看起来总应该是这
 <p>(4) GetTail(((a,b),(c,d))) 的结果是 ((c,d))。</p>
 <p>(5) GetHead(GetTail(((a,b),(c,d)))) 的结果是 (c,d)。</p>
 <p>(6) GetTail(GetHead(GetTail(((a,b),(c,d))))) 的结果是 ()，因为(c,d)没有尾部。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>课后作业</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DS作业-4-Ch3-22网安物联网-20230927</title>
+    <url>/posts/4311d78.html</url>
+    <content><![CDATA[<blockquote>
+<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
+</blockquote>
+<h1>Ch3-1.</h1>
+<p><strong>总结栈空、栈满、队空、队满的判定条件。</strong></p>
+<p>栈和队列是两种常见的数据结构，它们的空和满的判断条件如下：</p>
+<p><strong>栈</strong>：</p>
+<ul>
+<li><strong>栈空</strong>：当栈顶指针<code>top</code>等于-1时，表示栈为空。</li>
+<li><strong>栈满</strong>：当栈顶指针<code>top</code>等于栈的最大容量减1（假设栈的最大容量为<code>maxSize</code>）时，表示栈已满，即<code>top == maxSize - 1</code>。</li>
+</ul>
+<p><strong>队列</strong>：</p>
+<ul>
+<li><strong>队空</strong>：当队头指针<code>front</code>等于队尾指针<code>rear</code>时，表示队列为空。</li>
+<li><strong>队满</strong>：这个判断条件取决于你如何实现队列。如果你使用数组实现循环队列，那么当<code>(rear + 1) % maxSize == front</code>时，表示队列已满（假设队列的最大容量为<code>maxSize</code>）。这里的 <code>%</code> 是取余运算，用于实现循环。</li>
+</ul>
+<h1>Ch3-2.</h1>
+<p><strong>循环队列的优点是什么？设用数组来存放循环队列，你有几种判断队满和队空的方案？</strong></p>
+<p><strong>循环队列</strong>的优点主要有以下几点：</p>
+<ol>
+<li><strong>有效利用空间</strong>：在普通队列中，当队尾指针到达数组的末端时，即使数组的前端还有空闲空间，也无法再添加新的元素。而循环队列通过将队列的首尾相连，形成一个循环，使得在队尾指针到达数组末端时，可以从数组前端继续添加新的元素，从而更有效地利用了空间。</li>
+<li><strong>避免数据迁移</strong>：在普通队列中，每次出队操作后，为了维持队列的连续性，需要将所有元素向前移动一位，这会消耗大量的时间和计算资源。而在循环队列中，通过移动队头和队尾指针来实现入队和出队操作，无需移动元素本身，因此效率更高。</li>
+</ol>
+<p>对于使用数组实现的循环队列，常见的判断队满和队空的方案有以下几种：</p>
+<ol>
+<li><strong>牺牲一个存储空间</strong>：这是最常见的方法。当<code>(rear + 1) % maxSize == front</code>时，判断队列已满；当<code>rear == front</code>时，判断队列为空。这种方法的缺点是会浪费一个数组的存储空间。</li>
+<li><strong>使用一个标志位</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以额外使用一个标志位来判断队列的状态。当入队操作后<code>rear == front</code>时，将标志位设为满；当出队操作后<code>rear == front</code>时，将标志位设为空。这种方法可以充分利用所有存储空间，但需要额外的标志位。</li>
+<li><strong>记录元素个数</strong>：除了使用<code>front</code>和<code>rear</code>两个指针外，还可以使用一个计数器来记录队列中元素的个数。当计数器为0时，判断队列为空；当计数器等于数组大小时，判断队列已满。这种方法同样可以充分利用所有存储空间，但需要额外的计数器。</li>
+</ol>
+<h1>Ch3-3.</h1>
+<p>*<em>假设以带头结点的循环单链表表示队列，并且只设一个尾指针Node*Rear 指向队尾结点（没有队头指针Node <em>front），试编写入队和出队算法。</em></em></p>
+<blockquote>
+<p>自己写的，<s>目前还在报错，修改中……</s></p>
+<p>已完工</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span>                  <span class="hljs-comment">//引入输入输出流</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span><br>&#123;<br>    DataType data;               <span class="hljs-comment">//数据域</span><br>    Node&lt;DataType&gt;* next;       <span class="hljs-comment">//指针域</span><br>&#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">LinkList_Queue</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">LinkList_Queue</span>();                      <span class="hljs-comment">//无参构造函数，建立只有头结点的空链表</span><br>    ~<span class="hljs-built_in">LinkList_Queue</span>();                     <span class="hljs-comment">//析构函数</span><br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Empety</span><span class="hljs-params">()</span></span>;<br>    <span class="hljs-function">DataType <span class="hljs-title">Push</span><span class="hljs-params">(DataType x)</span></span>;       <span class="hljs-comment">//插入操作，第i个位置插入值为x的结点</span><br>    <span class="hljs-function">DataType <span class="hljs-title">Pop</span><span class="hljs-params">()</span></span>;            <br><span class="hljs-keyword">private</span>:<br>    Node&lt;DataType&gt;* first, * rear;           <span class="hljs-comment">//单链表的头指针</span><br>&#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br>LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">LinkList_Queue</span>()<br>&#123;<br>    Node&lt;DataType&gt;* s = <span class="hljs-literal">nullptr</span>;<br>    s = <span class="hljs-keyword">new</span> Node&lt;DataType&gt;;    <br>    s-&gt;next = <span class="hljs-literal">nullptr</span>;<br>    first = rear = s;                      <span class="hljs-comment">//头结点的指针域置空</span><br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>LinkList_Queue&lt;DataType&gt; :: ~<span class="hljs-built_in">LinkList_Queue</span>()<br>&#123;<br><br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-type">int</span> LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">Empety</span>()<br>&#123;<br>    <span class="hljs-keyword">if</span> (first == rear)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><br><span class="hljs-comment">//入队算法</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br>DataType LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">Push</span>(DataType x)<br>&#123;<br>    Node&lt;DataType&gt;* s = <span class="hljs-literal">nullptr</span>;           <br>    s = <span class="hljs-keyword">new</span> Node&lt;DataType&gt;; <br>    s-&gt;data = x;<br>    s-&gt;next = <span class="hljs-literal">nullptr</span>;<br>    rear-&gt;next = s;<br>    rear = s;<br>    <span class="hljs-keyword">return</span> x;<br>&#125;<br><br><span class="hljs-comment">//出队算法</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br>DataType LinkList_Queue&lt;DataType&gt; ::<span class="hljs-built_in">Pop</span>()<br>&#123;<br>    <span class="hljs-keyword">if</span> (first == rear )<br>    &#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;队空&quot;</span> &lt;&lt; endl;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        DataType x;<br>        Node&lt;DataType&gt;* p = first-&gt;next;<br>        x = p-&gt;data;<br>        first-&gt;next = p-&gt;next;<br>        <span class="hljs-keyword">if</span> (rear == p)  <span class="hljs-comment">// 如果队列中只有一个元素</span><br>            rear = first;  <span class="hljs-comment">// 则需要更新尾指针</span><br>        <span class="hljs-keyword">delete</span> p;<br>        <span class="hljs-keyword">return</span> x;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    LinkList_Queue&lt;<span class="hljs-type">int</span>&gt; s = &#123;&#125;;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">0</span>;<br>    s.<span class="hljs-built_in">Push</span>(<span class="hljs-number">1</span>);<br>    s.<span class="hljs-built_in">Push</span>(<span class="hljs-number">2</span>);<br>    s.<span class="hljs-built_in">Push</span>(<span class="hljs-number">3</span>);<br>    cout &lt;&lt; <span class="hljs-string">&quot;已入队1,2,3&quot;</span> &lt;&lt; endl;<br>    cin &gt;&gt; a;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已入队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Push</span>(a) &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;出队一次&quot;</span>&lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;已出队：&quot;</span> &lt;&lt; s.<span class="hljs-built_in">Pop</span>() &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>AI生成的，不想做了，谨慎查阅</p>
+</blockquote>
+<figure class="highlight xl"><table><tr><td class="code"><pre><code class="hljs xl">#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br><br><span class="hljs-comment">// 定义结点</span><br>typedef struct Node &#123;<br>    int <span class="hljs-keyword">data</span>;<br>    struct Node* next;<br>&#125; Node;<br><br><span class="hljs-comment">// 定义队列</span><br>typedef struct Queue &#123;<br>    Node* rear;<br>&#125; Queue;<br><br><span class="hljs-comment">// 初始化队列</span><br>Queue* initQueue() &#123;<br>    Node* head = (Node*)malloc(sizeof(Node));  <span class="hljs-comment">// 创建头结点</span><br>    <span class="hljs-function"><span class="hljs-title">head</span>-&gt;</span>next = head;  <span class="hljs-comment">// 循环链表</span><br>    Queue* queue = (Queue*)malloc(sizeof(Queue));<br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = head;  <span class="hljs-comment">// 尾指针指向头结点</span><br>    return queue;<br>&#125;<br><br><span class="hljs-comment">// 入队操作</span><br>void enQueue(Queue* queue, int <span class="hljs-keyword">data</span>) &#123;<br>    Node* newNode = (Node*)malloc(sizeof(Node));<br>    <span class="hljs-function"><span class="hljs-title">newNode</span>-&gt;</span><span class="hljs-keyword">data</span> = <span class="hljs-keyword">data</span>;<br>    <span class="hljs-function"><span class="hljs-title">newNode</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next;  <span class="hljs-comment">// 新结点指向头结点</span><br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next = newNode;  <span class="hljs-comment">// 尾结点指向新结点</span><br>    <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = newNode;  <span class="hljs-comment">// 更新尾指针</span><br>&#125;<br><br><span class="hljs-comment">// 出队操作</span><br>int deQueue(Queue* queue) &#123;<br>    <span class="hljs-function"><span class="hljs-title">if</span> (queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span> == queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next) &#123;<br>        printf(<span class="hljs-string">&quot;队列为空，无法出队。\n&quot;</span>);<br>        return -<span class="hljs-number">1</span>;<br>    &#125;<br>    N<span class="hljs-function"><span class="hljs-title">ode</span>* head = queue-&gt;</span><span class="hljs-function"><span class="hljs-title">rear</span>-&gt;</span>next;  <span class="hljs-comment">// 头结点</span><br>    N<span class="hljs-function"><span class="hljs-title">ode</span>* firstNode = head-&gt;</span>next;  <span class="hljs-comment">// 第一个结点（即要出队的结点）</span><br>    <span class="hljs-function"><span class="hljs-title">int</span> <span class="hljs-keyword">data</span> = firstNode-&gt;</span><span class="hljs-keyword">data</span>;<br>    <span class="hljs-function"><span class="hljs-title">head</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = firstNode-&gt;</span>next;  <span class="hljs-comment">// 头结点指向第二个结点</span><br>    <span class="hljs-function"><span class="hljs-title">if</span> (firstNode == queue-&gt;</span>rear) &#123;  <span class="hljs-comment">// 如果只有一个元素，出队后更新尾指针</span><br>        <span class="hljs-function"><span class="hljs-title">queue</span>-&gt;</span>rear = head;<br>    &#125;<br>    free(firstNode);  <span class="hljs-comment">// 释放出队的结点内存</span><br>    return <span class="hljs-keyword">data</span>;<br>&#125;<br><br>int main() &#123;<br>    Queue* queue = initQueue();<br>    <br><br>    printf(<span class="hljs-string">&quot;入队：\n&quot;</span>);<br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;<br>        printf(<span class="hljs-string">&quot;%d &quot;</span>, i);<br>        enQueue(queue, i);<br>    &#125;<br>    <br>    printf(<span class="hljs-string">&quot;\n出队：\n&quot;</span>);<br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;<br>        printf(<span class="hljs-string">&quot;%d &quot;</span>, deQueue(queue));<br>    &#125;<br>    <br>    return <span class="hljs-number">0</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -4101,6 +4101,20 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       </tags>
   </entry>
   <entry>
+    <title>butterfly主题bug反馈单开博客</title>
+    <url>/posts/18414cf0.html</url>
+    <content><![CDATA[<p>首页导航栏图标旁边的文字，我不知道实际是为了干什么的，暂且按照常识当做是回到首页</p>
+<p>但是我实际测试的时候，这个按钮的作用是刷新该界面，与一般的网站运行思路并不相同，不知道是不是bug，反馈一下</p>
+<p>PS：经过测试是主题的问题，一开始我以为是我有依赖冲突引起的，于是我开了一个空环境重新配置，准备复现，复现成功了，刚初始化的主题也存在这个问题所以我才断定来提交issues</p>
+<p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>还有一个bug就是首页按钮的问题，bug内容与上述一样，假设上面的bug是我的认知错误，设定就是刷新该页面</p>
+<p>首页的作用应该是回到首页，但是实际上是刷新该页面。</p>
+<p>所以也提交一下issues吧，希望官方大大修复一下。</p>
+<p>附图↓</p>
+<p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" srcset="/img/loading.gif" lazyload alt=""></p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo博文中front-matter的用法</title>
     <url>/posts/8217ff3e.html</url>
     <content><![CDATA[<p><a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
@@ -4204,20 +4218,6 @@ cron输入格式<code>$cron(* * * * * ?)</code></p>
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>butterfly主题bug反馈单开博客</title>
-    <url>/posts/18414cf0.html</url>
-    <content><![CDATA[<p>首页导航栏图标旁边的文字，我不知道实际是为了干什么的，暂且按照常识当做是回到首页</p>
-<p>但是我实际测试的时候，这个按钮的作用是刷新该界面，与一般的网站运行思路并不相同，不知道是不是bug，反馈一下</p>
-<p>PS：经过测试是主题的问题，一开始我以为是我有依赖冲突引起的，于是我开了一个空环境重新配置，准备复现，复现成功了，刚初始化的主题也存在这个问题所以我才断定来提交issues</p>
-<p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>还有一个bug就是首页按钮的问题，bug内容与上述一样，假设上面的bug是我的认知错误，设定就是刷新该页面</p>
-<p>首页的作用应该是回到首页，但是实际上是刷新该页面。</p>
-<p>所以也提交一下issues吧，希望官方大大修复一下。</p>
-<p>附图↓</p>
-<p><img src="/img/butterfly-bug/%E5%9B%BE%E6%A0%87bugPixPin_2024-01-17_20-13-24.gif" srcset="/img/loading.gif" lazyload alt=""></p>
-]]></content>
   </entry>
   <entry>
     <title>kali_Linux如何修改语言为中文</title>
@@ -4351,6 +4351,124 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </categories>
       <tags>
         <tag>QQbot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
+    <url>/posts/bacd5cfb.html</url>
+    <content><![CDATA[<h1>START</h1>
+<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p>
+<p>太忙了啊啊啊啊啊~！！！</p>
+<p>收获还是很多的</p>
+<p><font color='red'>嘿嘿嘿被两位师哥带飞，满满的安全感</font></p>
+<p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁，高铁来的声音很响我，轰隆隆的。</p>
+<p>高铁很快，不到三个小时我们就到章丘站了，下高铁之后有山东警察学院的志愿者带我们进学校，坐他们的志愿者大巴车去学校里面，大巴车嗡嗡的响</p>
+<p>做网络安全的，也有不少女生，但是也就几个，车上都在讨论学术知识，第一次到这种贤士云集的地方。</p>
+<p>到学校门口，我随手拍了几张照片</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" srcset="/img/loading.gif" lazyload alt="山东警察学院大门"></p>
+<p>非常好看！</p>
+<p>到了里面，学校已经为大赛准备的很好，我们先去报到处报道，领了参赛的东西</p>
+<p><strong>一个参赛服，一个参赛选手证，一个鼠标垫，一个无线鼠标，还有一本参赛手册，两张餐券。</strong></p>
+<p>然后进赛场调试设备，工作人员让我看看IP就行，当时我脑子就乱了，IP？什么IP，怎么看来着？急中生智想到了上周计网实验课刚学的ipconfig，好险，要不然就丢人了，好尴尬，当时工作人员就看着我。</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/ipconfig.jpg" srcset="/img/loading.gif" lazyload alt="ipconfig"></p>
+<p>然后等报道完我们三个坐大巴车去酒店准备吃饭了</p>
+<p>酒店的饭，其实也还行，给餐券随便吃，也不算多豪华也还行倒是，(毕竟组委会包吃住，乐)</p>
+<p>吃完饭我们就去卧室准备睡觉了</p>
+<p>那边酒店在山脚下，信号贼差，发个消息发半天，当晚我们下载了网络安全法，数据安全法，密码法，国家安全法，个人信息保护法，反间谍法等条文，我在车上听到了别的师傅说一个<strong>随波逐流工具</strong>，我下载了发现非常好用，一把嗦。点赞这个工具</p>
+<p>然后就准备睡觉了，第二天要早起</p>
+<p>等第二天起来之后吃完饭就坐车走了，去了先去签到处放下书包，手机不能进场。领取了标签我就进场了</p>
+<p>考试时间从上午九点到下午四点，中途不间断，午饭在现场吃</p>
+<br/>
+<p>再说一下赛题吧，web题全场0解，一开始我看到签到题就蒙圈了，不过幸好，好在做出来了，不至于一个题也不会给队伍拖后腿</p>
+<p>然后过了半天，才做出简单编码，二进制八进制</p>
+<p>还有一个题是变异凯撒，那个题也应该会做的，但是当时只顾着用工具了，脑子没反应过来那是变异凯撒，不然早就知道了其实，这题不该失分，然后我应该去爱你这个题也不该失分，吃了没做过频谱图的题的亏，如果我当时做过频谱图的题就不至于不会做了，这几个题都是大部分人都会做的</p>
+<p>到了比赛后期就没什么新解出的，一直是老题在上升趋势，（不会是py吧（雾</p>
+<hr>
+<p>最后四点比赛结束，三等奖，差点二等奖了唉，唉三等奖，唉CTF，唉科来杯。</p>
+<p>然后遇到了王老师和李老师，两位带队老师，臧老师有事不能带了</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/xiaohan.jpg" srcset="/img/loading.gif" lazyload alt="个人三等"></p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/no3.jpg" srcset="/img/loading.gif" lazyload alt="团体三等奖"></p>
+<p>最后颁奖典礼宣布</p>
+<p>第十一届科来杯在<strong>曲阜师范大学主办</strong>，下一届我们就是主力军了，加油！</p>
+<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/QFNU.jpg" srcset="/img/loading.gif" lazyload alt="交接仪式"></p>
+<h1>总结</h1>
+<p>还是得练！</p>
+<p>认识了日照校区的师傅（爷</p>
+<p>明年真是线下丹砂了</p>
+<p>练练练练，卷起来</p>
+<h1>END</h1>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>比赛心得</category>
+        <category>省赛</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>科来杯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“这些文案像光一样救赎过我”</title>
+    <url>/posts/33629c52.html</url>
+    <content><![CDATA[<hr>
+<p>“即使降临不到我身上，但爱是存在的”</p>
+<hr>
+<p>突然就放下了所有执念，我还有万里路要行</p>
+<hr>
+<p>风是抓不住的，花也会凋谢</p>
+<p>人总是要学会和不属于自己的东西说再见</p>
+<p>当你不再奢望遥不可及，很多美好将触手可得。</p>
+<p>有人理解是我之幸，无人理解我淡定独行</p>
+<hr>
+<p>知世故而不世故，善自嘲而不嘲人</p>
+<hr>
+<p>越是艰难处，越是修心时</p>
+<hr>
+<p>我这一生都是坚定不移的唯物主义者，唯有你我希望有来生。</p>
+<hr>
+<p>第一次吻你 是用我的眼睛</p>
+<hr>
+<p>我曾经七次鄙视自己的灵魂</p>
+<p>第一次，当它本可进取时，却故作谦卑；</p>
+<p>第二次，当它在空虚时，用爱欲来填充；</p>
+<p>第三次，在困难和容易之间，它选择了容易；</p>
+<p>第四次，它犯了错，却借由别人也会犯错来宽慰自己；</p>
+<p>第五次，它自由软弱，却把它认为是生命的坚韧；</p>
+<p>第六次，当它鄙夷一张丑恶的嘴脸时，却不知那正是自己面具中的一副；</p>
+<p>第七次，它侧身于生活的污泥中，虽不甘心，却又畏首畏尾。</p>
+<hr>
+<p>当你以阴谋的眼光看世界，那什么都是阴谋</p>
+<hr>
+<p>我独我，</p>
+<p>世间第一等，</p>
+<p>此间最上乘。</p>
+<hr>
+<p>愿你勇怀善意，</p>
+<p>清澈明朗。</p>
+<hr>
+<p>视他人之疑目如盏盏鬼火，</p>
+<p>大胆地去走你的夜路。</p>
+<hr>
+<p>日落是免费的，</p>
+<p>春夏秋冬也是，</p>
+<p>不要觉得人生那么无望，</p>
+<p>希望你快乐。</p>
+<hr>
+<p>麻木不仁的日子里，</p>
+<p>记录 就是反抗。</p>
+<hr>
+<p>再坚持一下吧 ，</p>
+<p>山那边就是海了。</p>
+<hr>
+<p>他们说答案都在路上。</p>
+]]></content>
+      <categories>
+        <category>文</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>文案</tag>
       </tags>
   </entry>
   <entry>
@@ -4609,121 +4727,21 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </tags>
   </entry>
   <entry>
-    <title>“科来杯”第十届山东省大学生网络安全技能大赛心得体会</title>
-    <url>/posts/bacd5cfb.html</url>
-    <content><![CDATA[<h1>START</h1>
-<p>咕咕咕……好吧，比赛在10月22日就打完了，打完比赛就想写来着，但是一直咕到现在才有时间写这个心得体会</p>
-<p>太忙了啊啊啊啊啊~！！！</p>
-<p>收获还是很多的</p>
-<p><font color='red'>嘿嘿嘿被两位师哥带飞，满满的安全感</font></p>
-<p>10月21号下午跟两个师哥坐高铁，从曲阜到章丘，没走过远门的我还以为那是地铁，高铁来的声音很响我，轰隆隆的。</p>
-<p>高铁很快，不到三个小时我们就到章丘站了，下高铁之后有山东警察学院的志愿者带我们进学校，坐他们的志愿者大巴车去学校里面，大巴车嗡嗡的响</p>
-<p>做网络安全的，也有不少女生，但是也就几个，车上都在讨论学术知识，第一次到这种贤士云集的地方。</p>
-<p>到学校门口，我随手拍了几张照片</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" srcset="/img/loading.gif" lazyload alt="山东警察学院大门"></p>
-<p>非常好看！</p>
-<p>到了里面，学校已经为大赛准备的很好，我们先去报到处报道，领了参赛的东西</p>
-<p><strong>一个参赛服，一个参赛选手证，一个鼠标垫，一个无线鼠标，还有一本参赛手册，两张餐券。</strong></p>
-<p>然后进赛场调试设备，工作人员让我看看IP就行，当时我脑子就乱了，IP？什么IP，怎么看来着？急中生智想到了上周计网实验课刚学的ipconfig，好险，要不然就丢人了，好尴尬，当时工作人员就看着我。</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/ipconfig.jpg" srcset="/img/loading.gif" lazyload alt="ipconfig"></p>
-<p>然后等报道完我们三个坐大巴车去酒店准备吃饭了</p>
-<p>酒店的饭，其实也还行，给餐券随便吃，也不算多豪华也还行倒是，(毕竟组委会包吃住，乐)</p>
-<p>吃完饭我们就去卧室准备睡觉了</p>
-<p>那边酒店在山脚下，信号贼差，发个消息发半天，当晚我们下载了网络安全法，数据安全法，密码法，国家安全法，个人信息保护法，反间谍法等条文，我在车上听到了别的师傅说一个<strong>随波逐流工具</strong>，我下载了发现非常好用，一把嗦。点赞这个工具</p>
-<p>然后就准备睡觉了，第二天要早起</p>
-<p>等第二天起来之后吃完饭就坐车走了，去了先去签到处放下书包，手机不能进场。领取了标签我就进场了</p>
-<p>考试时间从上午九点到下午四点，中途不间断，午饭在现场吃</p>
-<br/>
-<p>再说一下赛题吧，web题全场0解，一开始我看到签到题就蒙圈了，不过幸好，好在做出来了，不至于一个题也不会给队伍拖后腿</p>
-<p>然后过了半天，才做出简单编码，二进制八进制</p>
-<p>还有一个题是变异凯撒，那个题也应该会做的，但是当时只顾着用工具了，脑子没反应过来那是变异凯撒，不然早就知道了其实，这题不该失分，然后我应该去爱你这个题也不该失分，吃了没做过频谱图的题的亏，如果我当时做过频谱图的题就不至于不会做了，这几个题都是大部分人都会做的</p>
-<p>到了比赛后期就没什么新解出的，一直是老题在上升趋势，（不会是py吧（雾</p>
-<hr>
-<p>最后四点比赛结束，三等奖，差点二等奖了唉，唉三等奖，唉CTF，唉科来杯。</p>
-<p>然后遇到了王老师和李老师，两位带队老师，臧老师有事不能带了</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/xiaohan.jpg" srcset="/img/loading.gif" lazyload alt="个人三等"></p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/no3.jpg" srcset="/img/loading.gif" lazyload alt="团体三等奖"></p>
-<p>最后颁奖典礼宣布</p>
-<p>第十一届科来杯在<strong>曲阜师范大学主办</strong>，下一届我们就是主力军了，加油！</p>
-<p><img src="/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/QFNU.jpg" srcset="/img/loading.gif" lazyload alt="交接仪式"></p>
-<h1>总结</h1>
-<p>还是得练！</p>
-<p>认识了日照校区的师傅（爷</p>
-<p>明年真是线下丹砂了</p>
-<p>练练练练，卷起来</p>
-<h1>END</h1>
+    <title>一些好玩的网站</title>
+    <url>/posts/cc76d308.html</url>
+    <content><![CDATA[<h1>1.<a href="https://zhutix.com/">致美化</a></h1>
+<p>windows美化</p>
+<p>致美化是一个老牌桌面美化分享站，创办于 2014 年。探索丰富多彩的主题、壁纸、图标、皮肤等酷炫的美化素材，更有全面的美化教程及工具，是一个比较良心的美化站。</p>
+<h1>2.<a href="https://cn.cloud-converter.com/">在线文件转换器</a></h1>
+<p>使用这款免费快速在线转换器. 将pdf, 图像, 视频, 文档, 音频, 电子书及压缩等文件格式转换为其他格式。现支持超过20200多种不同格式转换。</p>
+<h1>3.<a href="https://zhuanlan.zhihu.com/p/102592286">从0开始做博客</a></h1>
+<p>不用介绍什么了，这是知乎大佬收集的一篇文章，我的博客就是根据这个搭建的</p>
 ]]></content>
       <categories>
-        <category>CTF</category>
-        <category>比赛心得</category>
-        <category>省赛</category>
+        <category>网站收录</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
-        <tag>科来杯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“这些文案像光一样救赎过我”</title>
-    <url>/posts/33629c52.html</url>
-    <content><![CDATA[<hr>
-<p>“即使降临不到我身上，但爱是存在的”</p>
-<hr>
-<p>突然就放下了所有执念，我还有万里路要行</p>
-<hr>
-<p>风是抓不住的，花也会凋谢</p>
-<p>人总是要学会和不属于自己的东西说再见</p>
-<p>当你不再奢望遥不可及，很多美好将触手可得。</p>
-<p>有人理解是我之幸，无人理解我淡定独行</p>
-<hr>
-<p>知世故而不世故，善自嘲而不嘲人</p>
-<hr>
-<p>越是艰难处，越是修心时</p>
-<hr>
-<p>我这一生都是坚定不移的唯物主义者，唯有你我希望有来生。</p>
-<hr>
-<p>第一次吻你 是用我的眼睛</p>
-<hr>
-<p>我曾经七次鄙视自己的灵魂</p>
-<p>第一次，当它本可进取时，却故作谦卑；</p>
-<p>第二次，当它在空虚时，用爱欲来填充；</p>
-<p>第三次，在困难和容易之间，它选择了容易；</p>
-<p>第四次，它犯了错，却借由别人也会犯错来宽慰自己；</p>
-<p>第五次，它自由软弱，却把它认为是生命的坚韧；</p>
-<p>第六次，当它鄙夷一张丑恶的嘴脸时，却不知那正是自己面具中的一副；</p>
-<p>第七次，它侧身于生活的污泥中，虽不甘心，却又畏首畏尾。</p>
-<hr>
-<p>当你以阴谋的眼光看世界，那什么都是阴谋</p>
-<hr>
-<p>我独我，</p>
-<p>世间第一等，</p>
-<p>此间最上乘。</p>
-<hr>
-<p>愿你勇怀善意，</p>
-<p>清澈明朗。</p>
-<hr>
-<p>视他人之疑目如盏盏鬼火，</p>
-<p>大胆地去走你的夜路。</p>
-<hr>
-<p>日落是免费的，</p>
-<p>春夏秋冬也是，</p>
-<p>不要觉得人生那么无望，</p>
-<p>希望你快乐。</p>
-<hr>
-<p>麻木不仁的日子里，</p>
-<p>记录 就是反抗。</p>
-<hr>
-<p>再坚持一下吧 ，</p>
-<p>山那边就是海了。</p>
-<hr>
-<p>他们说答案都在路上。</p>
-]]></content>
-      <categories>
-        <category>文</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>文案</tag>
+        <tag>网站收录</tag>
       </tags>
   </entry>
   <entry>
@@ -4808,24 +4826,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </categories>
       <tags>
         <tag>计算机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些好玩的网站</title>
-    <url>/posts/cc76d308.html</url>
-    <content><![CDATA[<h1>1.<a href="https://zhutix.com/">致美化</a></h1>
-<p>windows美化</p>
-<p>致美化是一个老牌桌面美化分享站，创办于 2014 年。探索丰富多彩的主题、壁纸、图标、皮肤等酷炫的美化素材，更有全面的美化教程及工具，是一个比较良心的美化站。</p>
-<h1>2.<a href="https://cn.cloud-converter.com/">在线文件转换器</a></h1>
-<p>使用这款免费快速在线转换器. 将pdf, 图像, 视频, 文档, 音频, 电子书及压缩等文件格式转换为其他格式。现支持超过20200多种不同格式转换。</p>
-<h1>3.<a href="https://zhuanlan.zhihu.com/p/102592286">从0开始做博客</a></h1>
-<p>不用介绍什么了，这是知乎大佬收集的一篇文章，我的博客就是根据这个搭建的</p>
-]]></content>
-      <categories>
-        <category>网站收录</category>
-      </categories>
-      <tags>
-        <tag>网站收录</tag>
       </tags>
   </entry>
   <entry>
@@ -5028,6 +5028,17 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       </tags>
   </entry>
   <entry>
+    <title>使用电脑浏览获得更佳体验</title>
+    <url>/posts/95d5a910.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>传统书信里的绝美结束语</title>
     <url>/posts/ca57bca9.html</url>
     <content><![CDATA[<ol>
@@ -5103,17 +5114,6 @@ vim /etc/apt/sources.list编辑软件源配置文件</p>
       <tags>
         <tag>学习笔记</tag>
         <tag>文案</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用电脑浏览获得更佳体验</title>
-    <url>/posts/95d5a910.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -5565,6 +5565,36 @@ h. 各种未定义类型的文献<br>
       </tags>
   </entry>
   <entry>
+    <title>利用Kali中的工具John破解压缩包密码（弱密码</title>
+    <url>/posts/b63d2e4e.html</url>
+    <content><![CDATA[<p>推荐一篇文章</p>
+<p><a href="https://blog.csdn.net/mengmeng0510/article/details/120812017">kali中binwalk/foremost/zip2john工具的配合使用</a></p>
+<h3 id="第一步拿到hash文件">第一步拿到hash文件</h3>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css">zip2john  <span class="hljs-selector-attr">[压缩包文件]</span>  &gt;&gt;  <span class="hljs-selector-attr">[名字.txt]</span><br></code></pre></td></tr></table></figure>
+<h3 id="第二步解析hash文件">第二步解析hash文件</h3>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">john</span> <span class="hljs-meta"> [名字.txt]</span><br></code></pre></td></tr></table></figure>
+<p>另外此处可以指定加密方式</p>
+<p>在Kali系统中我们只需要添加–format=[xxx]参数，即可指定John使用指定算法破解密码：</p>
+<figure class="highlight perl"><table><tr><td class="code"><pre><code class="hljs perl">john --<span class="hljs-keyword">format</span>=<span class="hljs-keyword">crypt</span> passwd.txt<br></code></pre></td></tr></table></figure>
+<p>破解结束后无需再次对相同密文进行破解通常会提示：</p>
+<blockquote>
+<p>Loaded [number] password hashes with [number] different salts (crypt, generic crypt([number]) [?/64])<br>
+No password hashes left to crack (see FAQ)</p>
+</blockquote>
+<p>如果我们需要再次查看破解后的密码只需执行如下命令：</p>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">john </span>--<span class="hljs-keyword">show </span>passwd.txt<br></code></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">john <span class="hljs-attr">--format</span>=<span class="hljs-selector-attr">[加密方式]</span> <span class="hljs-attr">--wordlist</span>=<span class="hljs-selector-attr">[字典路径]</span> <span class="hljs-selector-attr">[待解密密文文件]</span><br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>kali</category>
+        <category>john</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大二iwrite英语作文</title>
     <url>/posts/99e77c17.html</url>
     <content><![CDATA[<blockquote>
@@ -5860,55 +5890,6 @@ Wushuo</p>
       </tags>
   </entry>
   <entry>
-    <title>利用Kali中的工具John破解压缩包密码（弱密码</title>
-    <url>/posts/b63d2e4e.html</url>
-    <content><![CDATA[<p>推荐一篇文章</p>
-<p><a href="https://blog.csdn.net/mengmeng0510/article/details/120812017">kali中binwalk/foremost/zip2john工具的配合使用</a></p>
-<h3 id="第一步拿到hash文件">第一步拿到hash文件</h3>
-<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css">zip2john  <span class="hljs-selector-attr">[压缩包文件]</span>  &gt;&gt;  <span class="hljs-selector-attr">[名字.txt]</span><br></code></pre></td></tr></table></figure>
-<h3 id="第二步解析hash文件">第二步解析hash文件</h3>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">john</span> <span class="hljs-meta"> [名字.txt]</span><br></code></pre></td></tr></table></figure>
-<p>另外此处可以指定加密方式</p>
-<p>在Kali系统中我们只需要添加–format=[xxx]参数，即可指定John使用指定算法破解密码：</p>
-<figure class="highlight perl"><table><tr><td class="code"><pre><code class="hljs perl">john --<span class="hljs-keyword">format</span>=<span class="hljs-keyword">crypt</span> passwd.txt<br></code></pre></td></tr></table></figure>
-<p>破解结束后无需再次对相同密文进行破解通常会提示：</p>
-<blockquote>
-<p>Loaded [number] password hashes with [number] different salts (crypt, generic crypt([number]) [?/64])<br>
-No password hashes left to crack (see FAQ)</p>
-</blockquote>
-<p>如果我们需要再次查看破解后的密码只需执行如下命令：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">john </span>--<span class="hljs-keyword">show </span>passwd.txt<br></code></pre></td></tr></table></figure>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">john <span class="hljs-attr">--format</span>=<span class="hljs-selector-attr">[加密方式]</span> <span class="hljs-attr">--wordlist</span>=<span class="hljs-selector-attr">[字典路径]</span> <span class="hljs-selector-attr">[待解密密文文件]</span><br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>kali</category>
-        <category>john</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实验一、顺序存储结构线性表的建立及操作</title>
-    <url>/posts/767f4a40.html</url>
-    <content><![CDATA[<blockquote>
-<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
-</blockquote>
-<p><img src="https://cyberdownload.anrunlu.net/Fis_1Y1PQhtSsV6Vv8uzbswmKvrW" srcset="/img/loading.gif" lazyload alt=""></p>
-<h1>代码主体</h1>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Student</span> &#123;<br>    <span class="hljs-type">long</span> num;<br>    <span class="hljs-type">char</span> name[<span class="hljs-number">10</span>];<br>    <span class="hljs-type">float</span> score;<br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ScoreList</span> &#123;<br><span class="hljs-keyword">private</span>:<br>    Student data[<span class="hljs-number">100</span>];<br>    <span class="hljs-type">int</span> length;<br><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">ScoreList</span>() &#123;<br>        length = <span class="hljs-number">5</span>;<br>        data[<span class="hljs-number">0</span>] = &#123; <span class="hljs-number">1001</span>, <span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">85</span> &#125;;<br>        data[<span class="hljs-number">1</span>] = &#123; <span class="hljs-number">1002</span>, <span class="hljs-string">&quot;李四&quot;</span>, <span class="hljs-number">90</span> &#125;;<br>        data[<span class="hljs-number">2</span>] = &#123; <span class="hljs-number">1003</span>, <span class="hljs-string">&quot;王五&quot;</span>, <span class="hljs-number">80</span> &#125;;<br>        data[<span class="hljs-number">3</span>] = &#123; <span class="hljs-number">1004</span>, <span class="hljs-string">&quot;赵六&quot;</span>, <span class="hljs-number">95</span> &#125;;<br>        data[<span class="hljs-number">4</span>] = &#123; <span class="hljs-number">1005</span>, <span class="hljs-string">&quot;孙七&quot;</span>, <span class="hljs-number">88</span> &#125;;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">del</span><span class="hljs-params">(<span class="hljs-type">long</span> num)</span> </span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) &#123;<br>            <span class="hljs-keyword">if</span> (data[i].num == num) &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i; j &lt; length - <span class="hljs-number">1</span>; j++) &#123;<br>                    data[j] = data[j + <span class="hljs-number">1</span>];<br>                &#125;<br>                length--;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(Student stu)</span> </span>&#123;<br>        <span class="hljs-type">int</span> pos = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (pos &lt; length &amp;&amp; data[pos].score &gt; stu.score) pos++;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = length; i &gt; pos; i--) &#123;<br>            data[i] = data[i - <span class="hljs-number">1</span>];<br>        &#125;<br>        data[pos] = stu;<br>        length++;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">output</span><span class="hljs-params">()</span> </span>&#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;学号\t姓名\t分数&quot;</span> &lt;&lt; endl;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) &#123;<br>            cout &lt;&lt; data[i].num &lt;&lt; <span class="hljs-string">&quot;\t&quot;</span> &lt;&lt; data[i].name &lt;&lt; <span class="hljs-string">&quot;\t&quot;</span> &lt;&lt; data[i].score &lt;&lt; endl;<br>        &#125;<br>    &#125;<br><br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">long</span> a;<br>    <span class="hljs-type">char</span> b[<span class="hljs-number">10</span>];<br>    <span class="hljs-type">float</span> c;<br>    ScoreList list;<br>    list.<span class="hljs-built_in">output</span>();<br>    cout &lt;&lt; <span class="hljs-string">&quot;删除一个学生，请输入学生学号&quot;</span> &lt;&lt; endl;<br>    cin &gt;&gt; a;<br>    list.<span class="hljs-built_in">del</span>(a);<br>    list.<span class="hljs-built_in">output</span>();<br>    cout &lt;&lt; <span class="hljs-string">&quot;插入一个新学生（学号 姓名 分数 ）用空格隔开&quot;</span> &lt;&lt; endl;<br>    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;<br>    Student newStu = &#123; a, <span class="hljs-string">&quot;&quot;</span>, c &#125;;<br>    <span class="hljs-built_in">strcpy_s</span>(newStu.name, b); <span class="hljs-comment">// 使用 strcpy 函数复制字符串</span><br>    list.<span class="hljs-built_in">insert</span>(newStu);<br>    list.<span class="hljs-built_in">output</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>实验</category>
-      </categories>
-      <tags>
-        <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何安装Microsoft office各种版本以及破解||office盗版弹窗的关闭方法</title>
     <url>/posts/9b07533a.html</url>
     <content><![CDATA[<hr>
@@ -5991,6 +5972,44 @@ No password hashes left to crack (see FAQ)</p>
       </categories>
       <tags>
         <tag>Windows技术分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实验一、顺序存储结构线性表的建立及操作</title>
+    <url>/posts/767f4a40.html</url>
+    <content><![CDATA[<blockquote>
+<p>声明：仅供留档查阅，仅用作起到提示引导性作用，仅用作学习交流，切勿直接照搬</p>
+</blockquote>
+<p><img src="https://cyberdownload.anrunlu.net/Fis_1Y1PQhtSsV6Vv8uzbswmKvrW" srcset="/img/loading.gif" lazyload alt=""></p>
+<h1>代码主体</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Student</span> &#123;<br>    <span class="hljs-type">long</span> num;<br>    <span class="hljs-type">char</span> name[<span class="hljs-number">10</span>];<br>    <span class="hljs-type">float</span> score;<br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ScoreList</span> &#123;<br><span class="hljs-keyword">private</span>:<br>    Student data[<span class="hljs-number">100</span>];<br>    <span class="hljs-type">int</span> length;<br><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">ScoreList</span>() &#123;<br>        length = <span class="hljs-number">5</span>;<br>        data[<span class="hljs-number">0</span>] = &#123; <span class="hljs-number">1001</span>, <span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">85</span> &#125;;<br>        data[<span class="hljs-number">1</span>] = &#123; <span class="hljs-number">1002</span>, <span class="hljs-string">&quot;李四&quot;</span>, <span class="hljs-number">90</span> &#125;;<br>        data[<span class="hljs-number">2</span>] = &#123; <span class="hljs-number">1003</span>, <span class="hljs-string">&quot;王五&quot;</span>, <span class="hljs-number">80</span> &#125;;<br>        data[<span class="hljs-number">3</span>] = &#123; <span class="hljs-number">1004</span>, <span class="hljs-string">&quot;赵六&quot;</span>, <span class="hljs-number">95</span> &#125;;<br>        data[<span class="hljs-number">4</span>] = &#123; <span class="hljs-number">1005</span>, <span class="hljs-string">&quot;孙七&quot;</span>, <span class="hljs-number">88</span> &#125;;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">del</span><span class="hljs-params">(<span class="hljs-type">long</span> num)</span> </span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) &#123;<br>            <span class="hljs-keyword">if</span> (data[i].num == num) &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i; j &lt; length - <span class="hljs-number">1</span>; j++) &#123;<br>                    data[j] = data[j + <span class="hljs-number">1</span>];<br>                &#125;<br>                length--;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(Student stu)</span> </span>&#123;<br>        <span class="hljs-type">int</span> pos = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (pos &lt; length &amp;&amp; data[pos].score &gt; stu.score) pos++;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = length; i &gt; pos; i--) &#123;<br>            data[i] = data[i - <span class="hljs-number">1</span>];<br>        &#125;<br>        data[pos] = stu;<br>        length++;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">output</span><span class="hljs-params">()</span> </span>&#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;学号\t姓名\t分数&quot;</span> &lt;&lt; endl;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) &#123;<br>            cout &lt;&lt; data[i].num &lt;&lt; <span class="hljs-string">&quot;\t&quot;</span> &lt;&lt; data[i].name &lt;&lt; <span class="hljs-string">&quot;\t&quot;</span> &lt;&lt; data[i].score &lt;&lt; endl;<br>        &#125;<br>    &#125;<br><br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">long</span> a;<br>    <span class="hljs-type">char</span> b[<span class="hljs-number">10</span>];<br>    <span class="hljs-type">float</span> c;<br>    ScoreList list;<br>    list.<span class="hljs-built_in">output</span>();<br>    cout &lt;&lt; <span class="hljs-string">&quot;删除一个学生，请输入学生学号&quot;</span> &lt;&lt; endl;<br>    cin &gt;&gt; a;<br>    list.<span class="hljs-built_in">del</span>(a);<br>    list.<span class="hljs-built_in">output</span>();<br>    cout &lt;&lt; <span class="hljs-string">&quot;插入一个新学生（学号 姓名 分数 ）用空格隔开&quot;</span> &lt;&lt; endl;<br>    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;<br>    Student newStu = &#123; a, <span class="hljs-string">&quot;&quot;</span>, c &#125;;<br>    <span class="hljs-built_in">strcpy_s</span>(newStu.name, b); <span class="hljs-comment">// 使用 strcpy 函数复制字符串</span><br>    list.<span class="hljs-built_in">insert</span>(newStu);<br>    list.<span class="hljs-built_in">output</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>实验</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实验七 最小生成树和最短路径的实现</title>
+    <url>/posts/1b9cb669.html</url>
+    <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/Fv5QkbY1G5LDg_28R1J8Oief5nmC" srcset="/img/loading.gif" lazyload alt="Fv5QkbY1G5LDg_28R1J8Oief5nmC"></p>
+<h1>Prim算法</h1>
+<blockquote>
+<p>没听课（）教材代码，复制过来了</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/******************************* </span><br><span class="hljs-comment">   对应教材6.4.1节，Prim算法 </span><br><span class="hljs-comment">********************************/</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MaxSize = <span class="hljs-number">10</span>;                   <span class="hljs-comment">//图中最多顶点个数</span><br><span class="hljs-type">int</span> visited[MaxSize] = &#123;<span class="hljs-number">0</span>&#125;;              <span class="hljs-comment">//全局数组变量visited初始化</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MGraph</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>   	<span class="hljs-built_in">MGraph</span>(DataType a[ ], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e);     <span class="hljs-comment">//构造函数，建立具有n个顶点e条边的图</span><br>   	~<span class="hljs-built_in">MGraph</span>( )&#123; &#125;;                        <span class="hljs-comment">//析构函数</span><br> 	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Prim</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;<br><span class="hljs-keyword">private</span>:<br>    DataType vertex[MaxSize];           <span class="hljs-comment">//存放图中顶点的数组</span><br>    <span class="hljs-type">int</span> edge[MaxSize][MaxSize];           <span class="hljs-comment">//存放图中边的数组</span><br>    <span class="hljs-type">int</span> vertexNum, edgeNum;              <span class="hljs-comment">//图的顶点数和边数</span><br><br> 	<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">MinEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> r[ ], <span class="hljs-type">int</span> n)</span></span>;<br>&#125;;<br>  <br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>MGraph&lt;DataType&gt; :: <span class="hljs-built_in">MGraph</span>(DataType a[ ], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e) <br>&#123;<br>   	<span class="hljs-type">int</span> i, j, k, w;<br>   	vertexNum = n; edgeNum = e;<br>   	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)          <span class="hljs-comment">//存储顶点</span><br>   		vertex[i] = a[i];<br>   	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)          <span class="hljs-comment">//初始化邻接矩阵</span><br> 		<span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>   			<span class="hljs-keyword">if</span> (i == j)<br>			   edge[i][j] = <span class="hljs-number">0</span>;<br>			<span class="hljs-keyword">else</span><br>			   edge[i][j] = <span class="hljs-number">100</span>;               <span class="hljs-comment">//假设边上权的最大值是100             </span><br>   	<span class="hljs-keyword">for</span> (k = <span class="hljs-number">0</span>; k &lt; edgeNum; k++)           <span class="hljs-comment">//依次输入每一条边</span><br>   	&#123;<br>   		cout &lt;&lt; <span class="hljs-string">&quot;请输入边依附的两个顶点的编号，以及边上的权值：&quot;</span>;<br>		cin &gt;&gt; i &gt;&gt; j &gt;&gt; w;                       <span class="hljs-comment">//输入边依附的两个顶点的编号</span><br>		edge[i][j] = w; edge[j][i] = w;           <span class="hljs-comment">//置有边标志</span><br>   	&#125;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> MGraph&lt;DataType&gt; :: <span class="hljs-built_in">Prim</span>(<span class="hljs-type">int</span> v)                           <span class="hljs-comment">//从顶点v出发</span><br>&#123;   <br>	<span class="hljs-type">int</span> i, j, k;<br>	<span class="hljs-type">int</span> adjvex[MaxSize], lowcost[MaxSize];<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)             <span class="hljs-comment">//初始化辅助数组</span><br>	&#123;<br>		lowcost[i] = edge[v][i]; adjvex[i] = v;<br>	&#125;<br>	lowcost[v] = <span class="hljs-number">0</span>;                         <span class="hljs-comment">//将顶点v加入集合U</span><br>	<span class="hljs-keyword">for</span> (k = <span class="hljs-number">1</span>; k &lt; vertexNum; k++)            <span class="hljs-comment">//迭代n-1次</span><br>	&#123;<br>		j = <span class="hljs-built_in">MinEdge</span>(lowcost, vertexNum);       <span class="hljs-comment">//寻找最短边的邻接点j</span><br>      	cout &lt;&lt; <span class="hljs-string">&quot;(&quot;</span> &lt;&lt; vertex[j] &lt;&lt; <span class="hljs-string">&quot;,&quot;</span> &lt;&lt; vertex[adjvex[j]] &lt;&lt; <span class="hljs-string">&quot;)&quot;</span> &lt;&lt; lowcost[j] &lt;&lt; endl; <br>		lowcost[j] = <span class="hljs-number">0</span>;                       <span class="hljs-comment">//顶点j加入集合U</span><br>		<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)          <span class="hljs-comment">//调整辅助数组</span><br>	        <span class="hljs-keyword">if</span> (edge[i][j] &lt; lowcost[i]) &#123;<br>				lowcost[i] = edge[i][j]; <br>				adjvex[i] = j;<br>        	&#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">int</span> MGraph&lt;DataType&gt; :: <span class="hljs-built_in">MinEdge</span>(<span class="hljs-type">int</span> r[ ], <span class="hljs-type">int</span> n)<br>&#123;<br>	<span class="hljs-type">int</span> index = <span class="hljs-number">0</span>, min = <span class="hljs-number">100</span>;           <span class="hljs-comment">//此处如果仅记载最小值下标会有bug </span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)<br>		<span class="hljs-keyword">if</span> (r[i] != <span class="hljs-number">0</span> &amp;&amp; r[i] &lt; min)<br>		&#123;<br>			min = r[i]; index = i;		<br>		&#125;<br>	<span class="hljs-keyword">return</span> index;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">( )</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">/*测试数据使用教材 图6-16 所示带权无向图， 输入边依次为 </span><br><span class="hljs-comment">	(0 1 34)(0 2 46)(0 5 19)(1 4 12)(2 3 17)(2 5 25)(3 4 38)(3 5 25)(4 5 26) */</span> <br>	<span class="hljs-type">char</span> ch[ ]=&#123;<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>,<span class="hljs-string">&#x27;D&#x27;</span>,<span class="hljs-string">&#x27;E&#x27;</span>,<span class="hljs-string">&#x27;F&#x27;</span>&#125;;       <br>	MGraph&lt;<span class="hljs-type">char</span>&gt; MG&#123;ch, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>&#125;;             <br>	MG.<span class="hljs-built_in">Prim</span>(<span class="hljs-number">0</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>数据结构作业</category>
+        <category>实验</category>
+      </categories>
+      <tags>
+        <tag>数据结构作业</tag>
       </tags>
   </entry>
   <entry>
@@ -6105,14 +6124,13 @@ No password hashes left to crack (see FAQ)</p>
       </tags>
   </entry>
   <entry>
-    <title>实验七 最小生成树和最短路径的实现</title>
-    <url>/posts/1b9cb669.html</url>
-    <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/Fv5QkbY1G5LDg_28R1J8Oief5nmC" srcset="/img/loading.gif" lazyload alt="Fv5QkbY1G5LDg_28R1J8Oief5nmC"></p>
-<h1>Prim算法</h1>
-<blockquote>
-<p>没听课（）教材代码，复制过来了</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/******************************* </span><br><span class="hljs-comment">   对应教材6.4.1节，Prim算法 </span><br><span class="hljs-comment">********************************/</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MaxSize = <span class="hljs-number">10</span>;                   <span class="hljs-comment">//图中最多顶点个数</span><br><span class="hljs-type">int</span> visited[MaxSize] = &#123;<span class="hljs-number">0</span>&#125;;              <span class="hljs-comment">//全局数组变量visited初始化</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MGraph</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>   	<span class="hljs-built_in">MGraph</span>(DataType a[ ], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e);     <span class="hljs-comment">//构造函数，建立具有n个顶点e条边的图</span><br>   	~<span class="hljs-built_in">MGraph</span>( )&#123; &#125;;                        <span class="hljs-comment">//析构函数</span><br> 	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Prim</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;<br><span class="hljs-keyword">private</span>:<br>    DataType vertex[MaxSize];           <span class="hljs-comment">//存放图中顶点的数组</span><br>    <span class="hljs-type">int</span> edge[MaxSize][MaxSize];           <span class="hljs-comment">//存放图中边的数组</span><br>    <span class="hljs-type">int</span> vertexNum, edgeNum;              <span class="hljs-comment">//图的顶点数和边数</span><br><br> 	<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">MinEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> r[ ], <span class="hljs-type">int</span> n)</span></span>;<br>&#125;;<br>  <br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>MGraph&lt;DataType&gt; :: <span class="hljs-built_in">MGraph</span>(DataType a[ ], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e) <br>&#123;<br>   	<span class="hljs-type">int</span> i, j, k, w;<br>   	vertexNum = n; edgeNum = e;<br>   	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)          <span class="hljs-comment">//存储顶点</span><br>   		vertex[i] = a[i];<br>   	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)          <span class="hljs-comment">//初始化邻接矩阵</span><br> 		<span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>   			<span class="hljs-keyword">if</span> (i == j)<br>			   edge[i][j] = <span class="hljs-number">0</span>;<br>			<span class="hljs-keyword">else</span><br>			   edge[i][j] = <span class="hljs-number">100</span>;               <span class="hljs-comment">//假设边上权的最大值是100             </span><br>   	<span class="hljs-keyword">for</span> (k = <span class="hljs-number">0</span>; k &lt; edgeNum; k++)           <span class="hljs-comment">//依次输入每一条边</span><br>   	&#123;<br>   		cout &lt;&lt; <span class="hljs-string">&quot;请输入边依附的两个顶点的编号，以及边上的权值：&quot;</span>;<br>		cin &gt;&gt; i &gt;&gt; j &gt;&gt; w;                       <span class="hljs-comment">//输入边依附的两个顶点的编号</span><br>		edge[i][j] = w; edge[j][i] = w;           <span class="hljs-comment">//置有边标志</span><br>   	&#125;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> MGraph&lt;DataType&gt; :: <span class="hljs-built_in">Prim</span>(<span class="hljs-type">int</span> v)                           <span class="hljs-comment">//从顶点v出发</span><br>&#123;   <br>	<span class="hljs-type">int</span> i, j, k;<br>	<span class="hljs-type">int</span> adjvex[MaxSize], lowcost[MaxSize];<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)             <span class="hljs-comment">//初始化辅助数组</span><br>	&#123;<br>		lowcost[i] = edge[v][i]; adjvex[i] = v;<br>	&#125;<br>	lowcost[v] = <span class="hljs-number">0</span>;                         <span class="hljs-comment">//将顶点v加入集合U</span><br>	<span class="hljs-keyword">for</span> (k = <span class="hljs-number">1</span>; k &lt; vertexNum; k++)            <span class="hljs-comment">//迭代n-1次</span><br>	&#123;<br>		j = <span class="hljs-built_in">MinEdge</span>(lowcost, vertexNum);       <span class="hljs-comment">//寻找最短边的邻接点j</span><br>      	cout &lt;&lt; <span class="hljs-string">&quot;(&quot;</span> &lt;&lt; vertex[j] &lt;&lt; <span class="hljs-string">&quot;,&quot;</span> &lt;&lt; vertex[adjvex[j]] &lt;&lt; <span class="hljs-string">&quot;)&quot;</span> &lt;&lt; lowcost[j] &lt;&lt; endl; <br>		lowcost[j] = <span class="hljs-number">0</span>;                       <span class="hljs-comment">//顶点j加入集合U</span><br>		<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)          <span class="hljs-comment">//调整辅助数组</span><br>	        <span class="hljs-keyword">if</span> (edge[i][j] &lt; lowcost[i]) &#123;<br>				lowcost[i] = edge[i][j]; <br>				adjvex[i] = j;<br>        	&#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">int</span> MGraph&lt;DataType&gt; :: <span class="hljs-built_in">MinEdge</span>(<span class="hljs-type">int</span> r[ ], <span class="hljs-type">int</span> n)<br>&#123;<br>	<span class="hljs-type">int</span> index = <span class="hljs-number">0</span>, min = <span class="hljs-number">100</span>;           <span class="hljs-comment">//此处如果仅记载最小值下标会有bug </span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)<br>		<span class="hljs-keyword">if</span> (r[i] != <span class="hljs-number">0</span> &amp;&amp; r[i] &lt; min)<br>		&#123;<br>			min = r[i]; index = i;		<br>		&#125;<br>	<span class="hljs-keyword">return</span> index;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">( )</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">/*测试数据使用教材 图6-16 所示带权无向图， 输入边依次为 </span><br><span class="hljs-comment">	(0 1 34)(0 2 46)(0 5 19)(1 4 12)(2 3 17)(2 5 25)(3 4 38)(3 5 25)(4 5 26) */</span> <br>	<span class="hljs-type">char</span> ch[ ]=&#123;<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>,<span class="hljs-string">&#x27;D&#x27;</span>,<span class="hljs-string">&#x27;E&#x27;</span>,<span class="hljs-string">&#x27;F&#x27;</span>&#125;;       <br>	MGraph&lt;<span class="hljs-type">char</span>&gt; MG&#123;ch, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>&#125;;             <br>	MG.<span class="hljs-built_in">Prim</span>(<span class="hljs-number">0</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+    <title>实验六 图的构建与遍历</title>
+    <url>/posts/7c2ee8e.html</url>
+    <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/FqL91OBssRscbirgk2-0714eojo6" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h1>邻接矩阵</h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MaxSize = <span class="hljs-number">10</span>;<br><span class="hljs-type">int</span> visited[MaxSize] = &#123; <span class="hljs-number">0</span> &#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MGraph</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">MGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e);<br>    ~<span class="hljs-built_in">MGraph</span>() &#123;&#125;;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">DFTraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">BFTraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;<br><span class="hljs-keyword">private</span>:<br>    DataType vertex[MaxSize];<br>    <span class="hljs-type">int</span> edge[MaxSize][MaxSize];<br>    <span class="hljs-type">int</span> vertexNum, edgeNum;<br>&#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>MGraph&lt;DataType&gt;::<span class="hljs-built_in">MGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e) &#123;<br>    <span class="hljs-type">int</span> i, j, k;<br>    vertexNum = n; edgeNum = e;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>        vertex[i] = a[i];<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>            edge[i][j] = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (k = <span class="hljs-number">0</span>; k &lt; edgeNum; k++) &#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;请输入边依附的两个顶点的编号：&quot;</span>;<br>        cin &gt;&gt; i &gt;&gt; j;<br>        edge[i][j] = <span class="hljs-number">1</span>; edge[j][i] = <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> MGraph&lt;DataType&gt;::<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-type">int</span> v) &#123;<br>    cout &lt;&lt; vertex[v]; visited[v] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>        <span class="hljs-keyword">if</span> (edge[v][j] == <span class="hljs-number">1</span> &amp;&amp; visited[j] == <span class="hljs-number">0</span>) <span class="hljs-built_in">DFTraverse</span>(j);<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> MGraph&lt;DataType&gt;::<span class="hljs-built_in">BFTraverse</span>(<span class="hljs-type">int</span> v) &#123;<br>    <span class="hljs-type">int</span> w, j, Q[MaxSize];<br>    <span class="hljs-type">int</span> front = <span class="hljs-number">-1</span>, rear = <span class="hljs-number">-1</span>;<br>    cout &lt;&lt; vertex[v]; visited[v] = <span class="hljs-number">1</span>; Q[++rear] = v;<br>    <span class="hljs-keyword">while</span> (front != rear) &#123;<br>        w = Q[++front];<br>        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>            <span class="hljs-keyword">if</span> (edge[w][j] == <span class="hljs-number">1</span> &amp;&amp; visited[j] == <span class="hljs-number">0</span>) &#123;<br>                cout &lt;&lt; vertex[j]; visited[j] = <span class="hljs-number">1</span>; Q[++rear] = j;<br>            &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    string ch[] = &#123; <span class="hljs-string">&quot;V1&quot;</span>,<span class="hljs-string">&quot;V2&quot;</span>,<span class="hljs-string">&quot;V3&quot;</span>,<span class="hljs-string">&quot;V4&quot;</span>,<span class="hljs-string">&quot;V5&quot;</span> &#125;;<br>    MGraph&lt;string&gt; MG&#123; ch, <span class="hljs-number">5</span>, <span class="hljs-number">6</span> &#125;;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>        visited[i] = <span class="hljs-number">0</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot;\n深度优先遍历序列是：&quot;</span> &lt;&lt; endl;<br>    MG.<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>        visited[i] = <span class="hljs-number">0</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot;\n广度优先遍历序列是：&quot;</span> &lt;&lt; endl;<br>    MG.<span class="hljs-built_in">BFTraverse</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h1>邻接表</h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">EdgeNode</span>		<span class="hljs-comment">//定义边表结点</span><br>&#123;<br>	<span class="hljs-type">int</span> adjvex;	<span class="hljs-comment">//邻接点域</span><br>	EdgeNode* next;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">VertexNode</span>		<span class="hljs-comment">//定义顶点表结点</span><br>&#123;<br>	DataType vertex;<br>	EdgeNode* firstEdge;<br>&#125;;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MaxSize = <span class="hljs-number">10</span>;		<span class="hljs-comment">//图的最多顶点数</span><br><span class="hljs-type">int</span> visited[MaxSize] = &#123; <span class="hljs-number">0</span> &#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ALGraph</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">ALGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e);			<span class="hljs-comment">//构造函数</span><br>	~<span class="hljs-built_in">ALGraph</span>();									<span class="hljs-comment">//析构函数</span><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">DFTraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;					<span class="hljs-comment">//深度</span><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">BEFraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;					<span class="hljs-comment">//广度</span><br><span class="hljs-keyword">private</span>:<br>	VertexNode&lt;DataType&gt; adjlist[MaxSize];	<span class="hljs-comment">//存放顶点表</span><br>	<span class="hljs-type">int</span> vertexNum, edgeNum;					<span class="hljs-comment">//图的顶点数和边数</span><br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>ALGraph&lt;DataType&gt;::<span class="hljs-built_in">ALGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e)<br>&#123;<br>	<span class="hljs-type">int</span> i, j, k;<br>	EdgeNode* s = <span class="hljs-literal">nullptr</span>;<br>	vertexNum = m;<br>	edgeNum = e;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>	&#123;<br>		adjlist[i].vertex = a[i];<br>		adjlist[i].firstEdge = <span class="hljs-literal">NULL</span>;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (k = <span class="hljs-number">0</span>; k &lt; edgeNum; k++)	<span class="hljs-comment">//依次输入每一条边</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;输入边所依付的两个顶点的编号：&quot;</span>;<br>		cin &gt;&gt; i &gt;&gt; j;<br>		s = <span class="hljs-keyword">new</span> EdgeNode;<br>		s-&gt;adjvex = j;<br>		s-&gt;next = adjlist[i].firstEdge;<br>		adjlist[i].firstEdge = s;<br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>ALGraph&lt;DataType&gt;::~<span class="hljs-built_in">ALGraph</span>()<br>&#123;<br>	EdgeNode* p = <span class="hljs-literal">NULL</span>, * q = <span class="hljs-literal">NULL</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>	&#123;<br>		p = q = adjlist[i].firstEdge;<br>		<span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span>)<br>		&#123;<br>			p = p-&gt;next;<br>			<span class="hljs-keyword">delete</span> q;<br>			q = p;<br>		&#125;<br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> ALGraph&lt;DataType&gt;::<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-type">int</span> v)<br>&#123;<br>	<span class="hljs-type">int</span> j;<br>	EdgeNode* p = null;<br>	cout &lt;&lt; adjlist[v].vertex;<br>	visited[v] = <span class="hljs-number">1</span>;<br>	p = adjlist[v].firstEdge;<br>	<span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span>)<br>	&#123;<br>		j = p-&gt;adjvex;<br>		<span class="hljs-keyword">if</span> (visited[j]==<span class="hljs-number">0</span>)<br>		&#123;<br>			<span class="hljs-built_in">DFTraverse</span>(j);<br>		&#125;<br>		p = p-&gt;next;<br>	&#125;<br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">//测试数据是图6-20(a)，边是(0 1)(0 3)(0 4)(1 2)(2 4)(3 2)(3 4)</span><br>	string ch[] = &#123; <span class="hljs-string">&#x27;V1&#x27;</span>,<span class="hljs-string">&#x27;V2&#x27;</span>,<span class="hljs-string">&#x27;V3&#x27;</span>,<span class="hljs-string">&#x27;V4&#x27;</span>,<span class="hljs-string">&#x27;V5&#x27;</span> &#125;;<br>	<span class="hljs-type">int</span> i;<br>	<span class="hljs-function">ALGraph&lt;<span class="hljs-type">char</span>&gt; <span class="hljs-title">ALG</span><span class="hljs-params">(ch, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>)</span></span>;               <span class="hljs-comment">//建立具有5个顶点6条边的有向图</span><br>	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>		visited[i] = <span class="hljs-number">0</span>;<br>	cout &lt;&lt; <span class="hljs-string">&quot;深度优先遍历序列是：&quot;</span>;<br>	ALG.<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-number">0</span>);                       <span class="hljs-comment">//从顶点0出发进行深度优先遍历</span><br>	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>		visited[i] = <span class="hljs-number">0</span>;<br>	cout &lt;&lt; <span class="hljs-string">&quot;广度优先遍历序列是：&quot;</span>;<br>	ALG.<span class="hljs-built_in">BFTraverse</span>(<span class="hljs-number">0</span>);                      <span class="hljs-comment">//从顶点0出发进行广度优先遍历</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -6145,24 +6163,6 @@ No password hashes left to crack (see FAQ)</p>
       </tags>
   </entry>
   <entry>
-    <title>实验六 图的构建与遍历</title>
-    <url>/posts/7c2ee8e.html</url>
-    <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/FqL91OBssRscbirgk2-0714eojo6" srcset="/img/loading.gif" lazyload alt="img"></p>
-<h1>邻接矩阵</h1>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MaxSize = <span class="hljs-number">10</span>;<br><span class="hljs-type">int</span> visited[MaxSize] = &#123; <span class="hljs-number">0</span> &#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MGraph</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">MGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e);<br>    ~<span class="hljs-built_in">MGraph</span>() &#123;&#125;;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">DFTraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">BFTraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;<br><span class="hljs-keyword">private</span>:<br>    DataType vertex[MaxSize];<br>    <span class="hljs-type">int</span> edge[MaxSize][MaxSize];<br>    <span class="hljs-type">int</span> vertexNum, edgeNum;<br>&#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>MGraph&lt;DataType&gt;::<span class="hljs-built_in">MGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e) &#123;<br>    <span class="hljs-type">int</span> i, j, k;<br>    vertexNum = n; edgeNum = e;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>        vertex[i] = a[i];<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>            edge[i][j] = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (k = <span class="hljs-number">0</span>; k &lt; edgeNum; k++) &#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;请输入边依附的两个顶点的编号：&quot;</span>;<br>        cin &gt;&gt; i &gt;&gt; j;<br>        edge[i][j] = <span class="hljs-number">1</span>; edge[j][i] = <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> MGraph&lt;DataType&gt;::<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-type">int</span> v) &#123;<br>    cout &lt;&lt; vertex[v]; visited[v] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>        <span class="hljs-keyword">if</span> (edge[v][j] == <span class="hljs-number">1</span> &amp;&amp; visited[j] == <span class="hljs-number">0</span>) <span class="hljs-built_in">DFTraverse</span>(j);<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> MGraph&lt;DataType&gt;::<span class="hljs-built_in">BFTraverse</span>(<span class="hljs-type">int</span> v) &#123;<br>    <span class="hljs-type">int</span> w, j, Q[MaxSize];<br>    <span class="hljs-type">int</span> front = <span class="hljs-number">-1</span>, rear = <span class="hljs-number">-1</span>;<br>    cout &lt;&lt; vertex[v]; visited[v] = <span class="hljs-number">1</span>; Q[++rear] = v;<br>    <span class="hljs-keyword">while</span> (front != rear) &#123;<br>        w = Q[++front];<br>        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; vertexNum; j++)<br>            <span class="hljs-keyword">if</span> (edge[w][j] == <span class="hljs-number">1</span> &amp;&amp; visited[j] == <span class="hljs-number">0</span>) &#123;<br>                cout &lt;&lt; vertex[j]; visited[j] = <span class="hljs-number">1</span>; Q[++rear] = j;<br>            &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    string ch[] = &#123; <span class="hljs-string">&quot;V1&quot;</span>,<span class="hljs-string">&quot;V2&quot;</span>,<span class="hljs-string">&quot;V3&quot;</span>,<span class="hljs-string">&quot;V4&quot;</span>,<span class="hljs-string">&quot;V5&quot;</span> &#125;;<br>    MGraph&lt;string&gt; MG&#123; ch, <span class="hljs-number">5</span>, <span class="hljs-number">6</span> &#125;;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>        visited[i] = <span class="hljs-number">0</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot;\n深度优先遍历序列是：&quot;</span> &lt;&lt; endl;<br>    MG.<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>        visited[i] = <span class="hljs-number">0</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot;\n广度优先遍历序列是：&quot;</span> &lt;&lt; endl;<br>    MG.<span class="hljs-built_in">BFTraverse</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<h1>邻接表</h1>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">EdgeNode</span>		<span class="hljs-comment">//定义边表结点</span><br>&#123;<br>	<span class="hljs-type">int</span> adjvex;	<span class="hljs-comment">//邻接点域</span><br>	EdgeNode* next;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">VertexNode</span>		<span class="hljs-comment">//定义顶点表结点</span><br>&#123;<br>	DataType vertex;<br>	EdgeNode* firstEdge;<br>&#125;;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MaxSize = <span class="hljs-number">10</span>;		<span class="hljs-comment">//图的最多顶点数</span><br><span class="hljs-type">int</span> visited[MaxSize] = &#123; <span class="hljs-number">0</span> &#125;;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ALGraph</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">ALGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e);			<span class="hljs-comment">//构造函数</span><br>	~<span class="hljs-built_in">ALGraph</span>();									<span class="hljs-comment">//析构函数</span><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">DFTraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;					<span class="hljs-comment">//深度</span><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">BEFraverse</span><span class="hljs-params">(<span class="hljs-type">int</span> v)</span></span>;					<span class="hljs-comment">//广度</span><br><span class="hljs-keyword">private</span>:<br>	VertexNode&lt;DataType&gt; adjlist[MaxSize];	<span class="hljs-comment">//存放顶点表</span><br>	<span class="hljs-type">int</span> vertexNum, edgeNum;					<span class="hljs-comment">//图的顶点数和边数</span><br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>ALGraph&lt;DataType&gt;::<span class="hljs-built_in">ALGraph</span>(DataType a[], <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e)<br>&#123;<br>	<span class="hljs-type">int</span> i, j, k;<br>	EdgeNode* s = <span class="hljs-literal">nullptr</span>;<br>	vertexNum = m;<br>	edgeNum = e;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>	&#123;<br>		adjlist[i].vertex = a[i];<br>		adjlist[i].firstEdge = <span class="hljs-literal">NULL</span>;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (k = <span class="hljs-number">0</span>; k &lt; edgeNum; k++)	<span class="hljs-comment">//依次输入每一条边</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;输入边所依付的两个顶点的编号：&quot;</span>;<br>		cin &gt;&gt; i &gt;&gt; j;<br>		s = <span class="hljs-keyword">new</span> EdgeNode;<br>		s-&gt;adjvex = j;<br>		s-&gt;next = adjlist[i].firstEdge;<br>		adjlist[i].firstEdge = s;<br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br>ALGraph&lt;DataType&gt;::~<span class="hljs-built_in">ALGraph</span>()<br>&#123;<br>	EdgeNode* p = <span class="hljs-literal">NULL</span>, * q = <span class="hljs-literal">NULL</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vertexNum; i++)<br>	&#123;<br>		p = q = adjlist[i].firstEdge;<br>		<span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span>)<br>		&#123;<br>			p = p-&gt;next;<br>			<span class="hljs-keyword">delete</span> q;<br>			q = p;<br>		&#125;<br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">DataType</span>&gt;<br><span class="hljs-type">void</span> ALGraph&lt;DataType&gt;::<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-type">int</span> v)<br>&#123;<br>	<span class="hljs-type">int</span> j;<br>	EdgeNode* p = null;<br>	cout &lt;&lt; adjlist[v].vertex;<br>	visited[v] = <span class="hljs-number">1</span>;<br>	p = adjlist[v].firstEdge;<br>	<span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span>)<br>	&#123;<br>		j = p-&gt;adjvex;<br>		<span class="hljs-keyword">if</span> (visited[j]==<span class="hljs-number">0</span>)<br>		&#123;<br>			<span class="hljs-built_in">DFTraverse</span>(j);<br>		&#125;<br>		p = p-&gt;next;<br>	&#125;<br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">//测试数据是图6-20(a)，边是(0 1)(0 3)(0 4)(1 2)(2 4)(3 2)(3 4)</span><br>	string ch[] = &#123; <span class="hljs-string">&#x27;V1&#x27;</span>,<span class="hljs-string">&#x27;V2&#x27;</span>,<span class="hljs-string">&#x27;V3&#x27;</span>,<span class="hljs-string">&#x27;V4&#x27;</span>,<span class="hljs-string">&#x27;V5&#x27;</span> &#125;;<br>	<span class="hljs-type">int</span> i;<br>	<span class="hljs-function">ALGraph&lt;<span class="hljs-type">char</span>&gt; <span class="hljs-title">ALG</span><span class="hljs-params">(ch, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>)</span></span>;               <span class="hljs-comment">//建立具有5个顶点6条边的有向图</span><br>	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>		visited[i] = <span class="hljs-number">0</span>;<br>	cout &lt;&lt; <span class="hljs-string">&quot;深度优先遍历序列是：&quot;</span>;<br>	ALG.<span class="hljs-built_in">DFTraverse</span>(<span class="hljs-number">0</span>);                       <span class="hljs-comment">//从顶点0出发进行深度优先遍历</span><br>	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MaxSize; i++)<br>		visited[i] = <span class="hljs-number">0</span>;<br>	cout &lt;&lt; <span class="hljs-string">&quot;广度优先遍历序列是：&quot;</span>;<br>	ALG.<span class="hljs-built_in">BFTraverse</span>(<span class="hljs-number">0</span>);                      <span class="hljs-comment">//从顶点0出发进行广度优先遍历</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>数据结构作业</category>
-        <category>实验</category>
-      </categories>
-      <tags>
-        <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实验四：字符串和多维数组的实现与应用</title>
     <url>/posts/6352a281.html</url>
     <content><![CDATA[<p><img src="https://cyberdownload.anrunlu.net/FicVRmge8QVfGJ00XaVJaDVKtKiH" srcset="/img/loading.gif" lazyload alt=""></p>
@@ -6178,400 +6178,6 @@ No password hashes left to crack (see FAQ)</p>
       </categories>
       <tags>
         <tag>数据结构作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>密码学——凯撒密码原理</title>
-    <url>/posts/dcad2738.html</url>
-    <content><![CDATA[<h1>凯撒密码</h1>
-<blockquote>
-<p>来自千千秀字</p>
-</blockquote>
-<p>凯撒密码最早由古罗马军事统帅盖乌斯·尤利乌斯·凯撒在军队中用来传递加密信息，故称凯撒密码。这是一种位移加密方式，只对26个字母进行位移替换加密，规则简单，容易破解。下面是位移1次的对比：</p>
-<table>
-<thead>
-<tr>
-<th>明文字母表</th>
-<th>Z</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-<th>F</th>
-<th>G</th>
-<th>H</th>
-<th>I</th>
-<th>J</th>
-<th>K</th>
-<th>L</th>
-<th>M</th>
-<th>N</th>
-<th>O</th>
-<th>P</th>
-<th>Q</th>
-<th>R</th>
-<th>S</th>
-<th>T</th>
-<th>U</th>
-<th>V</th>
-<th>W</th>
-<th>X</th>
-<th>Y</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>密文字母表</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>I</td>
-<td>J</td>
-<td>K</td>
-<td>L</td>
-<td>M</td>
-<td>N</td>
-<td>O</td>
-<td>P</td>
-<td>Q</td>
-<td>R</td>
-<td>S</td>
-<td>T</td>
-<td>U</td>
-<td>V</td>
-<td>W</td>
-<td>X</td>
-<td>Y</td>
-<td>Z</td>
-</tr>
-</tbody>
-</table>
-<p>将明文字母表向后移动1位，A变成了B，B变成了C……，Z变成了A。同理，若将明文字母表向后移动3位：</p>
-<table>
-<thead>
-<tr>
-<th>明文字母表</th>
-<th>X</th>
-<th>Y</th>
-<th>Z</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>D</th>
-<th>E</th>
-<th>F</th>
-<th>G</th>
-<th>H</th>
-<th>I</th>
-<th>J</th>
-<th>K</th>
-<th>L</th>
-<th>M</th>
-<th>N</th>
-<th>O</th>
-<th>P</th>
-<th>Q</th>
-<th>R</th>
-<th>S</th>
-<th>T</th>
-<th>U</th>
-<th>V</th>
-<th>W</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>密文字母表</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>I</td>
-<td>J</td>
-<td>K</td>
-<td>L</td>
-<td>M</td>
-<td>N</td>
-<td>O</td>
-<td>P</td>
-<td>Q</td>
-<td>R</td>
-<td>S</td>
-<td>T</td>
-<td>U</td>
-<td>V</td>
-<td>W</td>
-<td>X</td>
-<td>Y</td>
-<td>Z</td>
-</tr>
-</tbody>
-</table>
-<p>则A变成了D，B变成了E……，Z变成了C。</p>
-<p>字母表最多可以移动25位。凯撒密码的明文字母表向后或向前移动都是可以的，通常表述为向后移动，如果要向前移动1位，则等同于向后移动25位，位移选择为25即可。</p>
-<h1>尝试一下</h1>
-<p>现在你已经知道原理了，解密一下下面这个吧</p>
-<figure class="highlight perl"><table><tr><td class="code"><pre><code class="hljs perl">oknqdbqmo<span class="hljs-string">q&#123;kag_tmhq_xqmdzqp_omqemd_qzodkbfuaz&#125;</span><br></code></pre></td></tr></table></figure>
-<p>.</p>
-<p>.</p>
-<h1>在线解密地址</h1>
-<p><a href="https://www.qqxiuzi.cn/bianma/kaisamima.php">凯撒密码在线加密解密 - 千千秀字 (qqxiuzi.cn)</a></p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>cyberpeace{you_have_learned_caesar_encryption}</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>密码学</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用在线计算工具</title>
-    <url>/posts/4b4dd526.html</url>
-    <content><![CDATA[<h1>概率论与数理统计</h1>
-<p><a href="https://www.23bei.com/tool/147.html">排列组合在线计算器 (23bei.com)</a></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>在线计算工具</category>
-      </categories>
-      <tags>
-        <tag>理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎样理解离散数学中的自反 反自反 对称 反对称与传递？</title>
-    <url>/posts/2495f19d.html</url>
-    <content><![CDATA[<p>看到一个很好的很容易理解的解释。</p>
-<p>首先你应该理解“关系”Relation</p>
-<p>比如你有一个集合X（通俗地说就是一类东西），某些元素之间（比如x、y）之间有某一种关系R，就记做R(x,y)。</p>
-<p>这个关系可以是“x和y认识”，或者“x比y大”，或者“x和y发生过<strong>关系</strong>”（对就是你想的意思）或者是任意你说了算的关系，你说他两有关系就有关系。</p>
-<p>自反：对于任意X的元素x、必有R(x,x)。虽然不太直观，因为一般语境下“关系”是两个对象的。但是我可以举一个例子，比如X=班级，x=小明，R=同班。那么小明一定和自己同班，所以R(x,x)。</p>
-<p>反自反：就是任意的x不满足R(x,x)。比如关系R是“我是你爸爸”，那么显然任意的x都不是自己的爸爸，所以“我是你爸爸”满足反自反性质。</p>
-<p>对称：R(x,y)则R(y,x)。还是“同班”的例子，“我是你同学”意味着“你是我同学”；或者结婚，我和你结婚，你必然和我结婚等等。（这里“意味着”就是推导）。</p>
-<p>反对称：R(x,y)则R(y,x)不成立。“我是你爸爸”就满足反对称，因为“我是你爸爸”不意味着“你是我爸爸”</p>
-<p>传递性：如果R(x,y)和R(y,z)则R(x,z)。比如“同班”这个时（特定班级，不是“同过班”）就是传递的。再比如“直系血亲”就是传递的，比如爸爸的爸爸是爷爷。</p>
-<p>不传递（注意，不是反传递）：很多关系都不满足传递性，“朋友”，“我是你爸爸”，“接过吻”就不满足。</p>
-<p>总的来说，如果一个关系满足“反身，对称，传递”，那么这个关系就叫“等价关系”，也就是“分类关系”。也可以反过来理解，所有“分类关系”里面，必然满足“反身，对称，传递”。</p>
-<blockquote>
-<p>转载</p>
-</blockquote>
-<blockquote>
-<p>作者：伍易东<br>
-链接：<a href="https://www.zhihu.com/question/426552337/answer/1536598149">https://www.zhihu.com/question/426552337/answer/1536598149</a><br>
-来源：知乎<br>
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>离散数学</category>
-        <category>关系</category>
-      </categories>
-      <tags>
-        <tag>离散数学</tag>
       </tags>
   </entry>
   <entry>
@@ -7121,6 +6727,400 @@ No password hashes left to crack (see FAQ)</p>
       </tags>
   </entry>
   <entry>
+    <title>密码学——凯撒密码原理</title>
+    <url>/posts/dcad2738.html</url>
+    <content><![CDATA[<h1>凯撒密码</h1>
+<blockquote>
+<p>来自千千秀字</p>
+</blockquote>
+<p>凯撒密码最早由古罗马军事统帅盖乌斯·尤利乌斯·凯撒在军队中用来传递加密信息，故称凯撒密码。这是一种位移加密方式，只对26个字母进行位移替换加密，规则简单，容易破解。下面是位移1次的对比：</p>
+<table>
+<thead>
+<tr>
+<th>明文字母表</th>
+<th>Z</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+<th>Q</th>
+<th>R</th>
+<th>S</th>
+<th>T</th>
+<th>U</th>
+<th>V</th>
+<th>W</th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>密文字母表</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+</tr>
+</tbody>
+</table>
+<p>将明文字母表向后移动1位，A变成了B，B变成了C……，Z变成了A。同理，若将明文字母表向后移动3位：</p>
+<table>
+<thead>
+<tr>
+<th>明文字母表</th>
+<th>X</th>
+<th>Y</th>
+<th>Z</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+<th>Q</th>
+<th>R</th>
+<th>S</th>
+<th>T</th>
+<th>U</th>
+<th>V</th>
+<th>W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>密文字母表</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+</tr>
+</tbody>
+</table>
+<p>则A变成了D，B变成了E……，Z变成了C。</p>
+<p>字母表最多可以移动25位。凯撒密码的明文字母表向后或向前移动都是可以的，通常表述为向后移动，如果要向前移动1位，则等同于向后移动25位，位移选择为25即可。</p>
+<h1>尝试一下</h1>
+<p>现在你已经知道原理了，解密一下下面这个吧</p>
+<figure class="highlight perl"><table><tr><td class="code"><pre><code class="hljs perl">oknqdbqmo<span class="hljs-string">q&#123;kag_tmhq_xqmdzqp_omqemd_qzodkbfuaz&#125;</span><br></code></pre></td></tr></table></figure>
+<p>.</p>
+<p>.</p>
+<h1>在线解密地址</h1>
+<p><a href="https://www.qqxiuzi.cn/bianma/kaisamima.php">凯撒密码在线加密解密 - 千千秀字 (qqxiuzi.cn)</a></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>cyberpeace{you_have_learned_caesar_encryption}</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>密码学</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用在线计算工具</title>
+    <url>/posts/4b4dd526.html</url>
+    <content><![CDATA[<h1>概率论与数理统计</h1>
+<p><a href="https://www.23bei.com/tool/147.html">排列组合在线计算器 (23bei.com)</a></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>在线计算工具</category>
+      </categories>
+      <tags>
+        <tag>理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎样理解离散数学中的自反 反自反 对称 反对称与传递？</title>
+    <url>/posts/2495f19d.html</url>
+    <content><![CDATA[<p>看到一个很好的很容易理解的解释。</p>
+<p>首先你应该理解“关系”Relation</p>
+<p>比如你有一个集合X（通俗地说就是一类东西），某些元素之间（比如x、y）之间有某一种关系R，就记做R(x,y)。</p>
+<p>这个关系可以是“x和y认识”，或者“x比y大”，或者“x和y发生过<strong>关系</strong>”（对就是你想的意思）或者是任意你说了算的关系，你说他两有关系就有关系。</p>
+<p>自反：对于任意X的元素x、必有R(x,x)。虽然不太直观，因为一般语境下“关系”是两个对象的。但是我可以举一个例子，比如X=班级，x=小明，R=同班。那么小明一定和自己同班，所以R(x,x)。</p>
+<p>反自反：就是任意的x不满足R(x,x)。比如关系R是“我是你爸爸”，那么显然任意的x都不是自己的爸爸，所以“我是你爸爸”满足反自反性质。</p>
+<p>对称：R(x,y)则R(y,x)。还是“同班”的例子，“我是你同学”意味着“你是我同学”；或者结婚，我和你结婚，你必然和我结婚等等。（这里“意味着”就是推导）。</p>
+<p>反对称：R(x,y)则R(y,x)不成立。“我是你爸爸”就满足反对称，因为“我是你爸爸”不意味着“你是我爸爸”</p>
+<p>传递性：如果R(x,y)和R(y,z)则R(x,z)。比如“同班”这个时（特定班级，不是“同过班”）就是传递的。再比如“直系血亲”就是传递的，比如爸爸的爸爸是爷爷。</p>
+<p>不传递（注意，不是反传递）：很多关系都不满足传递性，“朋友”，“我是你爸爸”，“接过吻”就不满足。</p>
+<p>总的来说，如果一个关系满足“反身，对称，传递”，那么这个关系就叫“等价关系”，也就是“分类关系”。也可以反过来理解，所有“分类关系”里面，必然满足“反身，对称，传递”。</p>
+<blockquote>
+<p>转载</p>
+</blockquote>
+<blockquote>
+<p>作者：伍易东<br>
+链接：<a href="https://www.zhihu.com/question/426552337/answer/1536598149">https://www.zhihu.com/question/426552337/answer/1536598149</a><br>
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>离散数学</category>
+        <category>关系</category>
+      </categories>
+      <tags>
+        <tag>离散数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手把手教你使用ChatGPT3.5</title>
     <url>/posts/acc7bbca.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码不太对，去问问作者吧。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">
@@ -7144,78 +7144,38 @@ No password hashes left to crack (see FAQ)</p>
       </tags>
   </entry>
   <entry>
-    <title>手把手教你注册Google账号</title>
-    <url>/posts/f286f4f8.html</url>
-    <content><![CDATA[<h1>Google账号的注册教程</h1>
-<blockquote>
-<p>本部分基于<a href="https://blog.csdn.net/qq_45138120/article/details/131347452#/">这篇文章</a>进行编辑，致敬</p>
-</blockquote>
-<ol>
-<li>首先打开浏览器，然后进入设置把浏览器设置成英文语言，来提高成功率</li>
-</ol>
-<p>特别说明一下，<span style="color:#FF0000;">是浏览器的总语言，在浏览器设置里，而不只是设置当前页面的语言</span></p>
-<ol>
-<li>我们使用浏览器打开谷歌邮箱官网（<a href="http://gmail.google.com/">http://gmail.google.com/</a> ），进入谷歌邮箱的登录主页，我们点击左下方的创建账号按钮，选择个人用途（为我自己）</li>
-</ol>
-<p><img src="/img/Google/Google1.png" srcset="/img/loading.gif" lazyload alt="账号注册"></p>
-<ol start="3">
-<li>在进入的界面我们不要着急填写资料，我们先修改语言，点击左下方的简体中文。这个时候，会弹出国家语言列表，我们选择“English（United States）”。</li>
-</ol>
-<p><img src="/img/Google/Google2.png" srcset="/img/loading.gif" lazyload alt="语言"></p>
-<ol start="4">
-<li>这个时候，界面会变成英语。输入姓氏和名字，点击 Next</li>
-</ol>
-<p><img src="/img/Google/Google3.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<ol start="4">
-<li>选择月份、日、年、性别，点击Next</li>
-</ol>
-<p><img src="/img/Google/Google4.png" srcset="/img/loading.gif" lazyload alt="日期"></p>
-<ol start="5">
-<li>选择Gmail邮箱地址，前两个是随机出的邮箱地址，可以勾选第三个自定义邮箱地址，输入邮箱地址后，点击 Next</li>
-</ol>
-<p><img src="/img/Google/Google5.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<ol start="6">
-<li>
-<p>输入密码，确认密码后，点击 Next</p>
-<p><img src="/img/Google/Google6.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-</li>
-<li>
-<p>添加恢复电子邮件，账号异常或锁定时，Google 可以通过恢复电子邮件联系您。直接点击 Skip 跳过</p>
-</li>
-</ol>
-<p><img src="/img/Google/Google7.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<ol start="8">
-<li>选择中国，填写自己的手机号，点击Next</li>
-</ol>
-<p>关于手机号无法用于验证的问题，可以看这一位大佬的帖子：<a href="https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/">https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/</a></p>
-<p>这个问题与我一开始写的第一步相呼应，开头切换英文主要就是为了解决这边</p>
-<p><img src="/img/Google/Google8.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<ol start="9">
-<li>确认账户信息页面，没问题的话，点击 Next</li>
-</ol>
-<p><img src="/img/Google/Google9.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<ol start="10">
-<li>隐私条款确认，拉取到底部，点击 I agree 我同意</li>
-</ol>
-<p><img src="/img/Google/Google10.png" srcset="/img/loading.gif" lazyload alt="image-20231223005705473"></p>
-<ol start="11">
-<li>如图，出现此界面，说明 Google 邮箱创建成果</li>
-</ol>
-<p><img src="/img/Google/Google11.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<p>注：创建失败时</p>
-<ul>
-<li>手机号码已经注册过</li>
-<li>在注册时，将语言设置为英语，成功率高</li>
-<li>切换节点</li>
-<li>过会再试试</li>
-</ul>
+    <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
+    <url>/posts/7c7bd47d.html</url>
+    <content><![CDATA[<p>30个队伍排名第18还行，有一个队伍弃权没来，两个队伍作弊被ban了，顺延2名，最终第16，广外和南理的师傅太强了，山警的大哥被ban了不然也是前三<br>
+11月24就已经打完了，一直没来得及写心得</p>
+<p><img src="/img/jnxl2023/1701356901716.jpg" srcset="/img/loading.gif" lazyload alt="1701356901716"><br>
+可能是因为团队赛吧<br>
+感觉比科来打的好点<br>
+有好几个题都是差一点<br>
+我交了两个简单题，逆了一个misc的pyc，也是没拖后腿<br>
+misc这个题是很有意思的，压缩包有密码，可以暴力破解出来，然后三个附件，其中一个是一首诗，很有意思，但是不知道这首诗是有什么用，这题就差一点了，没做出来。<br>
+发现了自己还有很多东西没学没掌握好，re的花指令，动态调试，老东西直接秒了的题，我不会</p>
+<p>见到了西邮的师傅</p>
+<p>另外说一下对组委会的印象<br>
+评价是一坨稀烂<br>
+连个纪念品都没有，也没手提包，整场下来就给个参赛证，然后报告厅像个教室，甚至还不如我们的教室大（<br>
+进赛场之后桌子上一人一份伙食（一包奶一个面包一根火腿肠，我的天我们还以为这是早饭，没想到这是午饭）<br>
+中途上了一遍零食（好丽友＋一根火腿肠）爆笑如雷了，在济南都是组委包吃住，酒店随便吃的<br>
+还有更抽象的<br>
+上午10:30开赛，到时间准时开赛准时断电，布置赛场也偷工减料了吧，供电不足直接断电了，抢修了一个小时导致比赛延后了<br>
+然后中途上了一次电，信号屏蔽仪直接嘎嘣冒烟，当场炸了，还有好几位师傅的电源适配器给烧了（<s>byd这才是应急响应是吧</s></p>
+<p>这也是裁判长最忙的一次，山警大哥应该是比赛过程中询问wp，说的很含糊然后就ban了，还有带手机被听见了，但是没被逮住，辗优就在我隔壁，很强的一个热点信号</p>
+<p>三等奖，也算是没白来，威海那个去了大概能拿个一等，他们组委举办的也还行，就是路费太高了，没奖金没报销<br>
+总的来说还是得练，师傅们觉得一把梭的题我要搞半天</p>
 ]]></content>
       <categories>
-        <category>手把手教程</category>
-        <category>Google</category>
+        <category>CTF</category>
+        <category>比赛心得</category>
+        <category>省赛</category>
       </categories>
       <tags>
-        <tag>手把手教程系列</tag>
+        <tag>CTF</tag>
+        <tag>技能兴鲁</tag>
       </tags>
   </entry>
   <entry>
@@ -7332,38 +7292,145 @@ No password hashes left to crack (see FAQ)</p>
       </tags>
   </entry>
   <entry>
-    <title>技能兴鲁2023职业技能大赛网络安全赛项比赛心得</title>
-    <url>/posts/7c7bd47d.html</url>
-    <content><![CDATA[<p>30个队伍排名第18还行，有一个队伍弃权没来，两个队伍作弊被ban了，顺延2名，最终第16，广外和南理的师傅太强了，山警的大哥被ban了不然也是前三<br>
-11月24就已经打完了，一直没来得及写心得</p>
-<p><img src="/img/jnxl2023/1701356901716.jpg" srcset="/img/loading.gif" lazyload alt="1701356901716"><br>
-可能是因为团队赛吧<br>
-感觉比科来打的好点<br>
-有好几个题都是差一点<br>
-我交了两个简单题，逆了一个misc的pyc，也是没拖后腿<br>
-misc这个题是很有意思的，压缩包有密码，可以暴力破解出来，然后三个附件，其中一个是一首诗，很有意思，但是不知道这首诗是有什么用，这题就差一点了，没做出来。<br>
-发现了自己还有很多东西没学没掌握好，re的花指令，动态调试，老东西直接秒了的题，我不会</p>
-<p>见到了西邮的师傅</p>
-<p>另外说一下对组委会的印象<br>
-评价是一坨稀烂<br>
-连个纪念品都没有，也没手提包，整场下来就给个参赛证，然后报告厅像个教室，甚至还不如我们的教室大（<br>
-进赛场之后桌子上一人一份伙食（一包奶一个面包一根火腿肠，我的天我们还以为这是早饭，没想到这是午饭）<br>
-中途上了一遍零食（好丽友＋一根火腿肠）爆笑如雷了，在济南都是组委包吃住，酒店随便吃的<br>
-还有更抽象的<br>
-上午10:30开赛，到时间准时开赛准时断电，布置赛场也偷工减料了吧，供电不足直接断电了，抢修了一个小时导致比赛延后了<br>
-然后中途上了一次电，信号屏蔽仪直接嘎嘣冒烟，当场炸了，还有好几位师傅的电源适配器给烧了（<s>byd这才是应急响应是吧</s></p>
-<p>这也是裁判长最忙的一次，山警大哥应该是比赛过程中询问wp，说的很含糊然后就ban了，还有带手机被听见了，但是没被逮住，辗优就在我隔壁，很强的一个热点信号</p>
-<p>三等奖，也算是没白来，威海那个去了大概能拿个一等，他们组委举办的也还行，就是路费太高了，没奖金没报销<br>
-总的来说还是得练，师傅们觉得一把梭的题我要搞半天</p>
+    <title>手把手教你注册Google账号</title>
+    <url>/posts/f286f4f8.html</url>
+    <content><![CDATA[<h1>Google账号的注册教程</h1>
+<blockquote>
+<p>本部分基于<a href="https://blog.csdn.net/qq_45138120/article/details/131347452#/">这篇文章</a>进行编辑，致敬</p>
+</blockquote>
+<ol>
+<li>首先打开浏览器，然后进入设置把浏览器设置成英文语言，来提高成功率</li>
+</ol>
+<p>特别说明一下，<span style="color:#FF0000;">是浏览器的总语言，在浏览器设置里，而不只是设置当前页面的语言</span></p>
+<ol>
+<li>我们使用浏览器打开谷歌邮箱官网（<a href="http://gmail.google.com/">http://gmail.google.com/</a> ），进入谷歌邮箱的登录主页，我们点击左下方的创建账号按钮，选择个人用途（为我自己）</li>
+</ol>
+<p><img src="/img/Google/Google1.png" srcset="/img/loading.gif" lazyload alt="账号注册"></p>
+<ol start="3">
+<li>在进入的界面我们不要着急填写资料，我们先修改语言，点击左下方的简体中文。这个时候，会弹出国家语言列表，我们选择“English（United States）”。</li>
+</ol>
+<p><img src="/img/Google/Google2.png" srcset="/img/loading.gif" lazyload alt="语言"></p>
+<ol start="4">
+<li>这个时候，界面会变成英语。输入姓氏和名字，点击 Next</li>
+</ol>
+<p><img src="/img/Google/Google3.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<ol start="4">
+<li>选择月份、日、年、性别，点击Next</li>
+</ol>
+<p><img src="/img/Google/Google4.png" srcset="/img/loading.gif" lazyload alt="日期"></p>
+<ol start="5">
+<li>选择Gmail邮箱地址，前两个是随机出的邮箱地址，可以勾选第三个自定义邮箱地址，输入邮箱地址后，点击 Next</li>
+</ol>
+<p><img src="/img/Google/Google5.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<ol start="6">
+<li>
+<p>输入密码，确认密码后，点击 Next</p>
+<p><img src="/img/Google/Google6.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+</li>
+<li>
+<p>添加恢复电子邮件，账号异常或锁定时，Google 可以通过恢复电子邮件联系您。直接点击 Skip 跳过</p>
+</li>
+</ol>
+<p><img src="/img/Google/Google7.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<ol start="8">
+<li>选择中国，填写自己的手机号，点击Next</li>
+</ol>
+<p>关于手机号无法用于验证的问题，可以看这一位大佬的帖子：<a href="https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/">https://blog.csdn.net/qaqwqaqwq/article/details/130442226#/</a></p>
+<p>这个问题与我一开始写的第一步相呼应，开头切换英文主要就是为了解决这边</p>
+<p><img src="/img/Google/Google8.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<ol start="9">
+<li>确认账户信息页面，没问题的话，点击 Next</li>
+</ol>
+<p><img src="/img/Google/Google9.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<ol start="10">
+<li>隐私条款确认，拉取到底部，点击 I agree 我同意</li>
+</ol>
+<p><img src="/img/Google/Google10.png" srcset="/img/loading.gif" lazyload alt="image-20231223005705473"></p>
+<ol start="11">
+<li>如图，出现此界面，说明 Google 邮箱创建成果</li>
+</ol>
+<p><img src="/img/Google/Google11.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>注：创建失败时</p>
+<ul>
+<li>手机号码已经注册过</li>
+<li>在注册时，将语言设置为英语，成功率高</li>
+<li>切换节点</li>
+<li>过会再试试</li>
+</ul>
+]]></content>
+      <categories>
+        <category>手把手教程</category>
+        <category>Google</category>
+      </categories>
+      <tags>
+        <tag>手把手教程系列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>攻防世界-Reverse-666writeup</title>
+    <url>/posts/117d354d.html</url>
+    <content><![CDATA[<h1>查壳</h1>
+<p>丢进去查壳</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/gAGTtvBK.png" srcset="/img/loading.gif" lazyload alt="1.png"></p>
+<p>无壳</p>
+<h1>进入IDA</h1>
+<p>直接拉进ida</p>
+<p>首先看到一个比较醒目的flag</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/GF6BzP2T.png" srcset="/img/loading.gif" lazyload alt="2.png"></p>
+<p>但是这怎么可能就是答案呢</p>
+<h1>主函数</h1>
+<p>看一下主函数</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/HaTlGnfa.png" srcset="/img/loading.gif" lazyload alt="3.png"></p>
+<p>双击enflag看一下<img src="https://img1.imgtp.com/2023/08/26/7RilNm8M.png" srcset="/img/loading.gif" lazyload alt="4.png"></p>
+<p>发现enflag是izwhroz&quot;“w&quot;v.K”.Ni</p>
+<p>转化为十进制<a href="https://www.rapidtables.org/zh-CN/convert/number/ascii-hex-bin-dec-converter.html">ASCII文本，十六进制，二进制，十进制，Base64转换器 (rapidtables.org)</a></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">[<span class="hljs-number">105</span>,<span class="hljs-number">122</span>,<span class="hljs-number">119</span>,<span class="hljs-number">104</span>,<span class="hljs-number">114</span>,<span class="hljs-number">111</span>,<span class="hljs-number">122</span>,<span class="hljs-number">34</span>,<span class="hljs-number">34</span>,<span class="hljs-number">119</span>,<span class="hljs-number">34</span>,<span class="hljs-number">118</span>,<span class="hljs-number">46</span>,<span class="hljs-number">75</span>,<span class="hljs-number">34</span>,<span class="hljs-number">46</span>,<span class="hljs-number">78</span>,<span class="hljs-number">105</span>]<br></code></pre></td></tr></table></figure>
+<p>key的长度是12h（注意是16进制），转换成十进制应该是10</p>
+<h1>encode函数</h1>
+<p>返回主函数看一下encode是干啥的</p>
+<p><img src="https://img1.imgtp.com/2023/08/26/axSEUavG.png" srcset="/img/loading.gif" lazyload alt="5.png"></p>
+<p>根据三行重点计算过程，写一下逆向代码</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;Windows.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br> <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    string v3=<span class="hljs-string">&quot;&quot;</span>; <span class="hljs-comment">// [rsp+10h] [rbp-70h]</span><br>    <span class="hljs-type">int</span> v4; <span class="hljs-comment">// [rsp+78h] [rbp-8h]</span><br>    <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+7Ch] [rbp-4h]</span><br>    i = <span class="hljs-number">0</span>;<br>    v4 = <span class="hljs-number">0</span>;<br>    vector&lt;<span class="hljs-type">int</span>&gt; enflag = &#123; <span class="hljs-number">105</span>,<span class="hljs-number">122</span>,<span class="hljs-number">119</span>,<span class="hljs-number">104</span>,<span class="hljs-number">114</span>,<span class="hljs-number">111</span>,<span class="hljs-number">122</span>,<span class="hljs-number">34</span>,<span class="hljs-number">34</span>,<span class="hljs-number">119</span>,<span class="hljs-number">34</span>,<span class="hljs-number">118</span>,<span class="hljs-number">46</span>,<span class="hljs-number">75</span>,<span class="hljs-number">34</span>,<span class="hljs-number">46</span>,<span class="hljs-number">78</span>,<span class="hljs-number">105</span>,<span class="hljs-number">0</span> &#125;;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">18</span>; i += <span class="hljs-number">3</span>)<br>    &#123;<br>        v3 += <span class="hljs-built_in">char</span>((<span class="hljs-number">18</span> ^ enflag[i]) - <span class="hljs-number">6</span>);<br>        v3 += <span class="hljs-built_in">char</span>((<span class="hljs-number">18</span> ^ enflag[i + <span class="hljs-number">1</span>]) + <span class="hljs-number">6</span>);<br>        v3 += <span class="hljs-built_in">char</span>(<span class="hljs-number">18</span> ^ enflag[i + <span class="hljs-number">2</span>] ^ <span class="hljs-number">6</span>);<br>    &#125;<br>    cout &lt;&lt; v3 &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125; <br></code></pre></td></tr></table></figure>
+<p>unctf{b66_6b6_66b}</p>
 ]]></content>
       <categories>
         <category>CTF</category>
-        <category>比赛心得</category>
-        <category>省赛</category>
+        <category>WP</category>
+        <category>RE</category>
       </categories>
       <tags>
         <tag>CTF</tag>
-        <tag>技能兴鲁</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>攻防世界-Reverse-easyxorwriteup</title>
+    <url>/posts/c57101a0.html</url>
+    <content><![CDATA[<h1>查壳</h1>
+<p>无壳</p>
+<h1>反编译</h1>
+<p>拉进漂亮姐姐中（IDA）</p>
+<p>shift+F12看一下字串</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
+<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>F5看一下伪代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> __cdecl <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">const</span> <span class="hljs-type">char</span> **argv, <span class="hljs-type">const</span> <span class="hljs-type">char</span> **envp)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-type">int</span> v3; <span class="hljs-comment">// eax</span><br>  <span class="hljs-type">char</span> v4; <span class="hljs-comment">// al</span><br>  <span class="hljs-type">int</span> v5; <span class="hljs-comment">// eax</span><br>  <span class="hljs-type">char</span> v7; <span class="hljs-comment">// [rsp+33h] [rbp-Dh]</span><br>  <span class="hljs-type">char</span> v8; <span class="hljs-comment">// [rsp+33h] [rbp-Dh]</span><br>  <span class="hljs-type">int</span> v9; <span class="hljs-comment">// [rsp+34h] [rbp-Ch]</span><br>  <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+38h] [rbp-8h]</span><br>  <span class="hljs-type">int</span> v11; <span class="hljs-comment">// [rsp+3Ch] [rbp-4h]</span><br><br>  _main();<br>  v11 = <span class="hljs-number">0</span>;<br>  v9 = <span class="hljs-number">0</span>;<br>  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Please input your flag:&quot;</span>);<br>  <span class="hljs-keyword">while</span> ( <span class="hljs-number">1</span> )<br>  &#123;<br>    v8 = <span class="hljs-built_in">getchar</span>();<br>    <span class="hljs-keyword">if</span> ( v8 == <span class="hljs-number">10</span> )<br>      <span class="hljs-keyword">break</span>;<br>	v7 = key[v9 % <span class="hljs-number">4</span>] ^ v8;			<span class="hljs-comment">//输入的字符，进行异或操作，得到v7</span><br>    <span class="hljs-keyword">while</span> ( <span class="hljs-number">1</span> )						<br>    &#123;<br>      v4 = v7--;					<span class="hljs-comment">//循环v7次</span><br>      <span class="hljs-keyword">if</span> ( v4 &lt;= <span class="hljs-number">0</span> )				<span class="hljs-comment">//此while循环是向s[]中输入v7个1</span><br>        <span class="hljs-keyword">break</span>;<br>      v3 = v11++;<br>      s[v3] = <span class="hljs-number">1</span>;<br>    &#125;<br>    v5 = v11++;						<span class="hljs-comment">//输出v7个1后，使用0与下一串1隔开	</span><br>    s[v5] = <span class="hljs-number">0</span>;						<br>    ++v9;<br>  &#125;<br>  <span class="hljs-keyword">while</span> ( v11 &lt;= <span class="hljs-number">2559</span> )				<span class="hljs-comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span><br>    s[v11++] = <span class="hljs-number">-1</span>;<br>  <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">2559</span>; ++i )<br>  &#123;<br>    <span class="hljs-keyword">if</span> ( r[i] != s[i] )				<span class="hljs-comment">//进行比较</span><br>    &#123;<br>      <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lose lose lose!&quot;</span>);<br>      <span class="hljs-keyword">break</span>;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">if</span> ( i == <span class="hljs-number">2560</span> )<br>    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Win win win!&quot;</span>);<br>  <span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>其中r是</p>
+<figure class="highlight x86asm"><table><tr><td class="code"><pre><code class="hljs x86asm">r = [<span class="hljs-number">0x35</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x32</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x14</span>, <span class="hljs-number">0x27</span>, <span class="hljs-number">0x3B</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x70</span>,<br>     <span class="hljs-number">0x3C</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x66</span>,<br>     <span class="hljs-number">0x21</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x6D</span>, <span class="hljs-number">0x28</span>]<br></code></pre></td></tr></table></figure>
+<p>key是SCNU</p>
+<h1>解密</h1>
+<p>写一下解密python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">r = [<span class="hljs-number">0x35</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x32</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x14</span>, <span class="hljs-number">0x27</span>, <span class="hljs-number">0x3B</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x70</span>,<br>     <span class="hljs-number">0x3C</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x66</span>,<br>     <span class="hljs-number">0x21</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x6D</span>, <span class="hljs-number">0x28</span>]<br>key = <span class="hljs-string">&quot;SCNU&quot;</span><br>flag=<span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(r)):<br>    flag+=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(key[i % <span class="hljs-number">4</span>]) ^ r[i])<br><span class="hljs-built_in">print</span>(flag)<br></code></pre></td></tr></table></figure>
+<h1>FLAG</h1>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><code class="hljs gcode">flag&#123;Wi<span class="hljs-symbol">nn3</span>r_<span class="hljs-symbol">n0</span>t_L<span class="hljs-number">0</span>s<span class="hljs-number">3</span>r_<span class="hljs-attr">#&#125;</span><br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>WP</category>
+        <category>RE</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -7950,73 +8017,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>攻防世界-Reverse-666writeup</title>
-    <url>/posts/117d354d.html</url>
-    <content><![CDATA[<h1>查壳</h1>
-<p>丢进去查壳</p>
-<p><img src="https://img1.imgtp.com/2023/08/26/gAGTtvBK.png" srcset="/img/loading.gif" lazyload alt="1.png"></p>
-<p>无壳</p>
-<h1>进入IDA</h1>
-<p>直接拉进ida</p>
-<p>首先看到一个比较醒目的flag</p>
-<p><img src="https://img1.imgtp.com/2023/08/26/GF6BzP2T.png" srcset="/img/loading.gif" lazyload alt="2.png"></p>
-<p>但是这怎么可能就是答案呢</p>
-<h1>主函数</h1>
-<p>看一下主函数</p>
-<p><img src="https://img1.imgtp.com/2023/08/26/HaTlGnfa.png" srcset="/img/loading.gif" lazyload alt="3.png"></p>
-<p>双击enflag看一下<img src="https://img1.imgtp.com/2023/08/26/7RilNm8M.png" srcset="/img/loading.gif" lazyload alt="4.png"></p>
-<p>发现enflag是izwhroz&quot;“w&quot;v.K”.Ni</p>
-<p>转化为十进制<a href="https://www.rapidtables.org/zh-CN/convert/number/ascii-hex-bin-dec-converter.html">ASCII文本，十六进制，二进制，十进制，Base64转换器 (rapidtables.org)</a></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">[<span class="hljs-number">105</span>,<span class="hljs-number">122</span>,<span class="hljs-number">119</span>,<span class="hljs-number">104</span>,<span class="hljs-number">114</span>,<span class="hljs-number">111</span>,<span class="hljs-number">122</span>,<span class="hljs-number">34</span>,<span class="hljs-number">34</span>,<span class="hljs-number">119</span>,<span class="hljs-number">34</span>,<span class="hljs-number">118</span>,<span class="hljs-number">46</span>,<span class="hljs-number">75</span>,<span class="hljs-number">34</span>,<span class="hljs-number">46</span>,<span class="hljs-number">78</span>,<span class="hljs-number">105</span>]<br></code></pre></td></tr></table></figure>
-<p>key的长度是12h（注意是16进制），转换成十进制应该是10</p>
-<h1>encode函数</h1>
-<p>返回主函数看一下encode是干啥的</p>
-<p><img src="https://img1.imgtp.com/2023/08/26/axSEUavG.png" srcset="/img/loading.gif" lazyload alt="5.png"></p>
-<p>根据三行重点计算过程，写一下逆向代码</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;Windows.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br> <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    string v3=<span class="hljs-string">&quot;&quot;</span>; <span class="hljs-comment">// [rsp+10h] [rbp-70h]</span><br>    <span class="hljs-type">int</span> v4; <span class="hljs-comment">// [rsp+78h] [rbp-8h]</span><br>    <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+7Ch] [rbp-4h]</span><br>    i = <span class="hljs-number">0</span>;<br>    v4 = <span class="hljs-number">0</span>;<br>    vector&lt;<span class="hljs-type">int</span>&gt; enflag = &#123; <span class="hljs-number">105</span>,<span class="hljs-number">122</span>,<span class="hljs-number">119</span>,<span class="hljs-number">104</span>,<span class="hljs-number">114</span>,<span class="hljs-number">111</span>,<span class="hljs-number">122</span>,<span class="hljs-number">34</span>,<span class="hljs-number">34</span>,<span class="hljs-number">119</span>,<span class="hljs-number">34</span>,<span class="hljs-number">118</span>,<span class="hljs-number">46</span>,<span class="hljs-number">75</span>,<span class="hljs-number">34</span>,<span class="hljs-number">46</span>,<span class="hljs-number">78</span>,<span class="hljs-number">105</span>,<span class="hljs-number">0</span> &#125;;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">18</span>; i += <span class="hljs-number">3</span>)<br>    &#123;<br>        v3 += <span class="hljs-built_in">char</span>((<span class="hljs-number">18</span> ^ enflag[i]) - <span class="hljs-number">6</span>);<br>        v3 += <span class="hljs-built_in">char</span>((<span class="hljs-number">18</span> ^ enflag[i + <span class="hljs-number">1</span>]) + <span class="hljs-number">6</span>);<br>        v3 += <span class="hljs-built_in">char</span>(<span class="hljs-number">18</span> ^ enflag[i + <span class="hljs-number">2</span>] ^ <span class="hljs-number">6</span>);<br>    &#125;<br>    cout &lt;&lt; v3 &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125; <br></code></pre></td></tr></table></figure>
-<p>unctf{b66_6b6_66b}</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>WP</category>
-        <category>RE</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>攻防世界-Reverse-easyxorwriteup</title>
-    <url>/posts/c57101a0.html</url>
-    <content><![CDATA[<h1>查壳</h1>
-<p>无壳</p>
-<h1>反编译</h1>
-<p>拉进漂亮姐姐中（IDA）</p>
-<p>shift+F12看一下字串</p>
-<p><img src="https://z1.ax1x.com/2023/09/16/pPfDEYF.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>首先看到一个关键信息，点进去，Ctrl+x交叉引用</p>
-<p><img src="https://z1.ax1x.com/2023/09/16/pPfDVW4.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>F5看一下伪代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> __cdecl <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">const</span> <span class="hljs-type">char</span> **argv, <span class="hljs-type">const</span> <span class="hljs-type">char</span> **envp)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-type">int</span> v3; <span class="hljs-comment">// eax</span><br>  <span class="hljs-type">char</span> v4; <span class="hljs-comment">// al</span><br>  <span class="hljs-type">int</span> v5; <span class="hljs-comment">// eax</span><br>  <span class="hljs-type">char</span> v7; <span class="hljs-comment">// [rsp+33h] [rbp-Dh]</span><br>  <span class="hljs-type">char</span> v8; <span class="hljs-comment">// [rsp+33h] [rbp-Dh]</span><br>  <span class="hljs-type">int</span> v9; <span class="hljs-comment">// [rsp+34h] [rbp-Ch]</span><br>  <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+38h] [rbp-8h]</span><br>  <span class="hljs-type">int</span> v11; <span class="hljs-comment">// [rsp+3Ch] [rbp-4h]</span><br><br>  _main();<br>  v11 = <span class="hljs-number">0</span>;<br>  v9 = <span class="hljs-number">0</span>;<br>  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Please input your flag:&quot;</span>);<br>  <span class="hljs-keyword">while</span> ( <span class="hljs-number">1</span> )<br>  &#123;<br>    v8 = <span class="hljs-built_in">getchar</span>();<br>    <span class="hljs-keyword">if</span> ( v8 == <span class="hljs-number">10</span> )<br>      <span class="hljs-keyword">break</span>;<br>	v7 = key[v9 % <span class="hljs-number">4</span>] ^ v8;			<span class="hljs-comment">//输入的字符，进行异或操作，得到v7</span><br>    <span class="hljs-keyword">while</span> ( <span class="hljs-number">1</span> )						<br>    &#123;<br>      v4 = v7--;					<span class="hljs-comment">//循环v7次</span><br>      <span class="hljs-keyword">if</span> ( v4 &lt;= <span class="hljs-number">0</span> )				<span class="hljs-comment">//此while循环是向s[]中输入v7个1</span><br>        <span class="hljs-keyword">break</span>;<br>      v3 = v11++;<br>      s[v3] = <span class="hljs-number">1</span>;<br>    &#125;<br>    v5 = v11++;						<span class="hljs-comment">//输出v7个1后，使用0与下一串1隔开	</span><br>    s[v5] = <span class="hljs-number">0</span>;						<br>    ++v9;<br>  &#125;<br>  <span class="hljs-keyword">while</span> ( v11 &lt;= <span class="hljs-number">2559</span> )				<span class="hljs-comment">//输入的字符全部转化为1之后，不够2559个的话填充-1（255）</span><br>    s[v11++] = <span class="hljs-number">-1</span>;<br>  <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">2559</span>; ++i )<br>  &#123;<br>    <span class="hljs-keyword">if</span> ( r[i] != s[i] )				<span class="hljs-comment">//进行比较</span><br>    &#123;<br>      <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lose lose lose!&quot;</span>);<br>      <span class="hljs-keyword">break</span>;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">if</span> ( i == <span class="hljs-number">2560</span> )<br>    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Win win win!&quot;</span>);<br>  <span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>其中r是</p>
-<figure class="highlight x86asm"><table><tr><td class="code"><pre><code class="hljs x86asm">r = [<span class="hljs-number">0x35</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x32</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x14</span>, <span class="hljs-number">0x27</span>, <span class="hljs-number">0x3B</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x70</span>,<br>     <span class="hljs-number">0x3C</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x66</span>,<br>     <span class="hljs-number">0x21</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x6D</span>, <span class="hljs-number">0x28</span>]<br></code></pre></td></tr></table></figure>
-<p>key是SCNU</p>
-<h1>解密</h1>
-<p>写一下解密python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">r = [<span class="hljs-number">0x35</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x2F</span>, <span class="hljs-number">0x32</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x14</span>, <span class="hljs-number">0x27</span>, <span class="hljs-number">0x3B</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x70</span>,<br>     <span class="hljs-number">0x3C</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x0A</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x66</span>,<br>     <span class="hljs-number">0x21</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x6D</span>, <span class="hljs-number">0x28</span>]<br>key = <span class="hljs-string">&quot;SCNU&quot;</span><br>flag=<span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(r)):<br>    flag+=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(key[i % <span class="hljs-number">4</span>]) ^ r[i])<br><span class="hljs-built_in">print</span>(flag)<br></code></pre></td></tr></table></figure>
-<h1>FLAG</h1>
-<figure class="highlight gcode"><table><tr><td class="code"><pre><code class="hljs gcode">flag&#123;Wi<span class="hljs-symbol">nn3</span>r_<span class="hljs-symbol">n0</span>t_L<span class="hljs-number">0</span>s<span class="hljs-number">3</span>r_<span class="hljs-attr">#&#125;</span><br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>CTF</category>
-        <category>WP</category>
-        <category>RE</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构期中考试wp</title>
     <url>/posts/c0eaf0d7.html</url>
     <content><![CDATA[<blockquote>
@@ -8494,40 +8494,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>新标准大学英语（第二版）综合教程 第一册 Unit1 U校园</title>
-    <url>/posts/9707eb54.html</url>
-    <content><![CDATA[<blockquote>
-<p>搬运自微信公众号：必修宝答案</p>
-<p>由于公众号频繁跳转，所以我直接搬过来了，方便查阅</p>
-</blockquote>
-<p><img src="/img/English/uschool1/1.png" srcset="/img/loading.gif" lazyload alt="1"><br>
-<img src="/img/English/uschool1/2.png" srcset="/img/loading.gif" lazyload alt="2"><br>
-<img src="/img/English/uschool1/3.png" srcset="/img/loading.gif" lazyload alt="3"><br>
-<img src="/img/English/uschool1/4.png" srcset="/img/loading.gif" lazyload alt="4"><br>
-<img src="/img/English/uschool1/5.png" srcset="/img/loading.gif" lazyload alt="5"><br>
-<img src="/img/English/uschool1/6.png" srcset="/img/loading.gif" lazyload alt="6"><br>
-<img src="/img/English/uschool1/7.png" srcset="/img/loading.gif" lazyload alt="7"><br>
-<img src="/img/English/uschool1/8.png" srcset="/img/loading.gif" lazyload alt="8"><br>
-<img src="/img/English/uschool1/9.png" srcset="/img/loading.gif" lazyload alt="9"><br>
-<img src="/img/English/uschool1/10.png" srcset="/img/loading.gif" lazyload alt="10"><br>
-<img src="/img/English/uschool1/11.png" srcset="/img/loading.gif" lazyload alt="11"><br>
-<img src="/img/English/uschool1/12.png" srcset="/img/loading.gif" lazyload alt="12"><br>
-<img src="/img/English/uschool1/13.png" srcset="/img/loading.gif" lazyload alt="13"><br>
-<img src="/img/English/uschool1/14.png" srcset="/img/loading.gif" lazyload alt="14"><br>
-<img src="/img/English/uschool1/15.png" srcset="/img/loading.gif" lazyload alt="15"><br>
-<img src="/img/English/uschool1/16.png" srcset="/img/loading.gif" lazyload alt="16"><br>
-<img src="/img/English/uschool1/17.png" srcset="/img/loading.gif" lazyload alt="17"></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>英语答案</category>
-        <category>u校园答案</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新标准大学英语（第二版）综合教程 第一册 Unit3-Unit4 U校园</title>
     <url>/posts/95e69ff.html</url>
     <content><![CDATA[<blockquote>
@@ -8573,6 +8539,40 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
 <p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/nu5tyQWftroo6HfUshCict32ibUibSKRpqxeImTYnKe6ATdkcnwUDWMKCgOBH76rHHdmo9wKYZfGbLuTkzJk6S4hQ/640?wx_fmt=jpeg&amp;tp=wxpic&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" srcset="/img/loading.gif" lazyload alt="图片"></p>
 <p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/nu5tyQWftroo6HfUshCict32ibUibSKRpqxAyibCmpnmoxRKuyOUsulNaQsHVFSqmsasajQPBOFCr5ldSyOc4qXEWQ/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1&amp;tp=wxpic" srcset="/img/loading.gif" lazyload alt="图片"></p>
 <p><img src="https://mmbiz.qpic.cn/mmbiz_png/QFR1hXsarqFvL8eWwicvr82Aon5hkojbaiakQqa921aROBuarXQFwfIFYMnFvNk3T5KkGHg3okYpIu5qVpGtxw3A/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1&amp;tp=wxpic" srcset="/img/loading.gif" lazyload alt="图片"></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>英语答案</category>
+        <category>u校园答案</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新标准大学英语（第二版）综合教程 第一册 Unit1 U校园</title>
+    <url>/posts/9707eb54.html</url>
+    <content><![CDATA[<blockquote>
+<p>搬运自微信公众号：必修宝答案</p>
+<p>由于公众号频繁跳转，所以我直接搬过来了，方便查阅</p>
+</blockquote>
+<p><img src="/img/English/uschool1/1.png" srcset="/img/loading.gif" lazyload alt="1"><br>
+<img src="/img/English/uschool1/2.png" srcset="/img/loading.gif" lazyload alt="2"><br>
+<img src="/img/English/uschool1/3.png" srcset="/img/loading.gif" lazyload alt="3"><br>
+<img src="/img/English/uschool1/4.png" srcset="/img/loading.gif" lazyload alt="4"><br>
+<img src="/img/English/uschool1/5.png" srcset="/img/loading.gif" lazyload alt="5"><br>
+<img src="/img/English/uschool1/6.png" srcset="/img/loading.gif" lazyload alt="6"><br>
+<img src="/img/English/uschool1/7.png" srcset="/img/loading.gif" lazyload alt="7"><br>
+<img src="/img/English/uschool1/8.png" srcset="/img/loading.gif" lazyload alt="8"><br>
+<img src="/img/English/uschool1/9.png" srcset="/img/loading.gif" lazyload alt="9"><br>
+<img src="/img/English/uschool1/10.png" srcset="/img/loading.gif" lazyload alt="10"><br>
+<img src="/img/English/uschool1/11.png" srcset="/img/loading.gif" lazyload alt="11"><br>
+<img src="/img/English/uschool1/12.png" srcset="/img/loading.gif" lazyload alt="12"><br>
+<img src="/img/English/uschool1/13.png" srcset="/img/loading.gif" lazyload alt="13"><br>
+<img src="/img/English/uschool1/14.png" srcset="/img/loading.gif" lazyload alt="14"><br>
+<img src="/img/English/uschool1/15.png" srcset="/img/loading.gif" lazyload alt="15"><br>
+<img src="/img/English/uschool1/16.png" srcset="/img/loading.gif" lazyload alt="16"><br>
+<img src="/img/English/uschool1/17.png" srcset="/img/loading.gif" lazyload alt="17"></p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -8741,26 +8741,6 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
         <tag>线上课答案库</tag>
         <tag>智慧树知到</tag>
         <tag>刷课脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>本博客免责声明</title>
-    <url>/posts/72e47f4f.html</url>
-    <content><![CDATA[<p>在使用本教程前，请务必阅读并理解以下内容。使用本教程即代表您同意以下用户协议：</p>
-<ol>
-<li><strong>用户协议</strong>：使用本教程即表示您同意遵守本免责声明和用户协议。若您不同意此协议，请勿使用本教程提供的信息和指南。</li>
-<li><strong>个人责任</strong>：本教程所提供的信息仅供参考，使用者需自行承担因使用产品A而产生的任何风险和后果。</li>
-<li><strong>消费责任</strong>：使用本教程涉及的任何消费或购买行为与本人无关，用户需自行对其行为负责并承担相应风险。</li>
-<li><strong>禁止转载</strong>：未经本人允许，严禁对本教程内容进行转载或再分发。任何未经授权的转载行为都将被视为侵权行为。</li>
-<li><strong>结果不保证</strong>：本教程提供的建议和技巧并不能保证用户能够取得特定的结果或效果。实际使用中的成果可能因个人技能、环境差异或其他因素而有所不同。</li>
-</ol>
-<p>在使用本教程提供的信息前，请谨慎考虑个人能力和环境因素，并在必要时寻求专业建议。对于因使用本教程而产生的任何问题或损失，我们概不负责。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -9119,6 +9099,26 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </categories>
       <tags>
         <tag>QFNU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本博客免责声明</title>
+    <url>/posts/72e47f4f.html</url>
+    <content><![CDATA[<p>在使用本教程前，请务必阅读并理解以下内容。使用本教程即代表您同意以下用户协议：</p>
+<ol>
+<li><strong>用户协议</strong>：使用本教程即表示您同意遵守本免责声明和用户协议。若您不同意此协议，请勿使用本教程提供的信息和指南。</li>
+<li><strong>个人责任</strong>：本教程所提供的信息仅供参考，使用者需自行承担因使用产品A而产生的任何风险和后果。</li>
+<li><strong>消费责任</strong>：使用本教程涉及的任何消费或购买行为与本人无关，用户需自行对其行为负责并承担相应风险。</li>
+<li><strong>禁止转载</strong>：未经本人允许，严禁对本教程内容进行转载或再分发。任何未经授权的转载行为都将被视为侵权行为。</li>
+<li><strong>结果不保证</strong>：本教程提供的建议和技巧并不能保证用户能够取得特定的结果或效果。实际使用中的成果可能因个人技能、环境差异或其他因素而有所不同。</li>
+</ol>
+<p>在使用本教程提供的信息前，请谨慎考虑个人能力和环境因素，并在必要时寻求专业建议。对于因使用本教程而产生的任何问题或损失，我们概不负责。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -9543,113 +9543,18 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
       </tags>
   </entry>
   <entry>
-    <title>记录我的2023年</title>
-    <url>/posts/32e2a4f7.html</url>
-    <content><![CDATA[<h1>简单记录自己的 2023 年</h1>
-<blockquote>
-<p>看到朋友圈都在晒，也一直想记录一下自己的 2023 年，想不到有什么好的方法，看到康哥用博客记录，我也跟风写一下吧。</p>
-<p>非常庆幸自己有一本大厚日记本，不如真不知道怎么写这篇博文</p>
-<p>截止目前日记本已经写完三个本子了，记忆里大概是从高一下学期开始写一直到现在（虽然最近一个月没写，大抵是没空了）</p>
-<p><span style="color:#FF0000;"> 呼呼光这一篇就写了快一个小时 </span></p>
-</blockquote>
-<p><img src="/img/my2023/%E6%97%A5%E8%AE%B0%E6%9C%AC.jpg" srcset="/img/loading.gif" lazyload alt="日记本"></p>
-<h2 id="孟春之月（一月）">孟春之月（一月）</h2>
-<p>翻开日记发现竟然没有 1 月，那 1 月我到底干了些什么呢，打开相册回忆一下。</p>
-<p>原因竟然是 <strong>疫情</strong>！1 月大概是大一上学期刚放寒假，那时候还在疫情时代，大家都阳了没什么好写的。</p>
-<p><img src="/img/my2023/%E5%9B%9E%E5%AE%B6.jpg" srcset="/img/loading.gif" lazyload alt="日记本"></p>
-<h2 id="仲春之月（二月）">仲春之月（二月）</h2>
-<p>大一上初识 CTF，但是也没什么入门，一直处在门外边的水平</p>
-<p>整个寒假算是我 CTF 学习阶段进步比较大的一段时间，用一个寒假来入了一下门，知道了什么是编码，什么是 IDA，什么是加壳脱壳……</p>
-<p>放一波刷题记录</p>
-<p>大概是从 2 月开始跑步减肥的（虽然只减了十几斤，而且现在已经吃回来了）</p>
-<div style="display: flex; justify-content: center;">
-    <figure style="margin-right: 20px;">
-        <img src="/img/my2023/编码.png" srcset="/img/loading.gif" lazyload alt="buu刷题记录" style="max-width: 100%;">
-        <figcaption> Caption for Image 1 </figcaption>
-    </figure>
-    <figure>
-        <img src="/img/my2023/ctfshow刷题.png" srcset="/img/loading.gif" lazyload alt="ctfshow刷题记录" style="max-width: 100%;">
-        <figcaption> Caption for Image 2 </figcaption>
-    </figure>
-</div>
-<p>一入网安深似海，从此 hacker 不能改</p>
-<p>从小一个黑客梦，还是想感叹 <span style="color:#FF0000;"> 高考能考到自己喜欢的专业是多么幸福的一件事 </span></p>
-<h2 id="季春之月（三月）">季春之月（三月）</h2>
-<p>三月就已经开学上课了，一开始听课还能听点，结果是越来越不听了吧</p>
-<p>三月的时候还挺爱打羽毛球的，现在怎么不打了</p>
-<p>三月学院 <a href="https://mp.weixin.qq.com/s/nuZqsShR668drH-b8POC-w">班歌比赛</a>，负责剪辑班歌视频，嘻嘻，荣获一等奖，当时还跟朋友们拍了一张合影（照片里面现在貌似只剩我没对象了 hhhhh）</p>
-<p><img src="/img/my2023/%E5%90%88%E5%BD%B1.jpg" srcset="/img/loading.gif" lazyload alt="合影"></p>
-<h2 id="孟夏之月（四月）">孟夏之月（四月）</h2>
-<p>四月发生的印象最深的事情就是烫了个发吧，当时还觉得蛮好看的</p>
-<p>现在已经剪没了，也没再继续烫。</p>
-<p><img src="/img/my2023/%E7%83%AB%E5%8F%91.jpg" srcset="/img/loading.gif" lazyload alt="烫发"></p>
-<h2 id="仲夏之月（五月）">仲夏之月（五月）</h2>
-<p>四月五月是打扮自己最多的几个月（大概是受食人鱼的指点了吧🤔不过也确实学到点东西）</p>
-<p>跟好鸽们打电话时候的正规军。</p>
-<p><img src="/img/my2023/gwl%E8%A7%86%E9%A2%91%E7%94%B5%E8%AF%9D.jpg" srcset="/img/loading.gif" lazyload alt="视频电话"></p>
-<p>在毕业晚会幕后道具工作</p>
-<div style="display: flex; align-items: flex-start;">
-    <div style="flex: 1; text-align: center;">
-        <img src="/img/my2023/毕业晚会门票.jpg" srcset="/img/loading.gif" lazyload alt="毕业晚会门票" style="width: 85%; vertical-align: top;">
-        <p style="text-align: center;"> 毕业晚会门票 </p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="/img/my2023/毕业晚会幕后.jpg" srcset="/img/loading.gif" lazyload alt="毕业晚会幕后" style="width: 100%; vertical-align: bottom;">
-        <p style="text-align: center;"> 毕业晚会幕后 </p>
-    </div>
-</div>
-<p>5 月 20 号简历设计大赛二等奖 <span style="color:#FF0000;"> 证书 </span> 发下来了</p>
-<p>5 月 30 号，二阳了</p>
-<h2 id="季夏之月（六月）">季夏之月（六月）</h2>
-<p>这个月一开始看了历史文化学院的最美汉服代言人表演，太惊艳了，全是戏曲</p>
-<p><img src="/img/my2023/%E6%B1%89%E6%9C%8D%E4%BB%A3%E8%A8%80%E4%BA%BA.jpg" srcset="/img/loading.gif" lazyload alt="最美汉服代言人"></p>
-<p>上课看完了深海哈哈哈哈，物理课不听课看电影，挺有教育意义的一部动画电影</p>
-<p><img src="/img/my2023/%E6%B7%B1%E6%B5%B7.jpg" srcset="/img/loading.gif" lazyload alt="深海"></p>
-<p>填了积极分子相关资料</p>
-<p>在百佳宿舍评选幕后，也是这时候认识了 myk 师哥</p>
-<p><img src="/img/my2023/%E7%99%BE%E4%BD%B3%E5%AE%BF%E8%88%8D.jpg" srcset="/img/loading.gif" lazyload alt="百佳宿舍"></p>
-<p>献血最光荣嘻嘻，我不在意最后这一袋血会拿去干什么，至于他是否被卖掉或者被浪费，我不关心，但行好事莫问前程</p>
-<p><img src="/img/my2023/%E7%8C%AE%E8%A1%80.jpg" srcset="/img/loading.gif" lazyload alt="献血"></p>
-<p>月末放暑假假回家咯</p>
-<p><img src="/img/my2023/%E6%9A%91%E5%81%87%E6%94%BE%E5%81%87.jpg" srcset="/img/loading.gif" lazyload alt="暑假极爱"></p>
-<p>讲真的，这次回家是为了考驾照，如果不是为了考驾照，我是真的想留校学习的，毕竟还有很多东西要学。</p>
-<h2 id="孟秋之月（七月）">孟秋之月（七月）</h2>
-<p>考驾照的第一个月，下半身没做防晒，从脚踝开始上面是黑的下面是白的，已经是泾渭分明了</p>
-<p><img src="/img/my2023/%E8%85%BF%E5%AD%90.jpg" srcset="/img/loading.gif" lazyload alt="黑白分明"></p>
-<p>好在科一到科四都一把过，科二满分，驾照到手，也算没白费</p>
-<h2 id="仲秋之月（八月）">仲秋之月（八月）</h2>
-<p>8 月多久已经快开学了，我实在是在家待不住了，提前返校学一会，不得不说，一个人是真的舒服</p>
-<p>见证了日本核污水不负责任排放大海</p>
-<p><img src="/img/my2023/%E6%9B%B2%E9%98%9C%E6%B1%BD%E8%BD%A6%E7%AB%99.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>8 月 23 一次突发奇想，做了大学时代的第一个面向全校的公益项目（也不能说是项目）——<a href="https://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/#/">曲阜师范大学选课指北</a>，旨在帮助大家选择合适的任课老师</p>
-<p>目前已经有 120+参与贡献者，浏览量 4w+</p>
-<p><img src="/img/my2023/%E9%80%89%E8%AF%BE%E6%8C%87%E5%8C%97.png" srcset="/img/loading.gif" lazyload alt="image-20231231234930273"></p>
-<h2 id="季秋之月（九月）">季秋之月（九月）</h2>
-<p>九月迎新，大一新生开学了，也是又老了一年，接了两个师弟。</p>
-<p>然后紧张激烈的纳新也开始了，出席了社团管理部的宣讲，网络空间安全协会的宣讲，还有有关于逆向等方面的知识（虽然我也很菜）</p>
-<h2 id="孟冬之月（十月）">孟冬之月（十月）</h2>
-<p>十月一回来之后就长胖了，再也没减下去</p>
-<p>认识了几个大一的师弟师妹，都挺好的，好学又调皮可爱</p>
-<p>然后就是去山东警察学院打了省赛，跟着师哥去打了科来杯，人生第一次线下赛，总体体验还是学到很多东西的，特别是让我明白人外有人，自己永远是菜狗</p>
-<p><a href="https://w1ndys.top/2023/10/29/CTF_think_kelai_10/#/">科来杯心得</a></p>
-<p><img src="https://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" srcset="/img/loading.gif" lazyload alt="山东警察学院大门"></p>
-<p><img src="/img/my2023/%E7%A7%91%E6%9D%A5%E6%9D%AF.jpg" srcset="/img/loading.gif" lazyload alt="科来杯"></p>
-<h2 id="仲冬之月（十一月）">仲冬之月（十一月）</h2>
-<p>十一月在迎新晚会幕后主持道具组</p>
-<p><a href="https://w1ndys.top/2023/11/30/CTF_think_jnxl2023/#/">参加了技能兴鲁网络安全技能挑战赛</a></p>
-<p><img src="/img/my2023/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81.jpg" srcset="/img/loading.gif" lazyload alt="技能兴鲁"></p>
-<p><img src="https://w1ndys.top/img/jnxl2023/1701356901716.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>好大儿送的一本刑法，旨在叫我好好遵守网络安全法，将来做一个白帽子不要误入歧途</p>
-<p><img src="/img/my2023/%E5%A5%BD%E5%A4%A7%E5%84%BF.png" srcset="/img/loading.gif" lazyload alt="好大儿"></p>
-<h2 id="季冬之月（十二月）">季冬之月（十二月）</h2>
-<p>已经沦为卷比的形状了捏😭😭😭😭😭😭</p>
+    <title>谨此博文纪念我的GitHub pages生涯</title>
+    <url>/posts/d3580fd7.html</url>
+    <content><![CDATA[<h1>谨此博文纪念我的GitHub pages生涯</h1>
+<p>博客以更换地址：<a href="https://blog.w1ndys.top/">https://blog.w1ndys.top/</a></p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>blog</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
-        <tag>W1ndys年度总结</tag>
+        <tag>GitHub</tag>
+        <tag>blog</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -9808,6 +9713,116 @@ misc这个题是很有意思的，压缩包有密码，可以暴力破解出来�
         <tag>线上课答案库</tag>
         <tag>超星学习通</tag>
         <tag>刷课脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录我的2023年</title>
+    <url>/posts/32e2a4f7.html</url>
+    <content><![CDATA[<h1>简单记录自己的 2023 年</h1>
+<blockquote>
+<p>看到朋友圈都在晒，也一直想记录一下自己的 2023 年，想不到有什么好的方法，看到康哥用博客记录，我也跟风写一下吧。</p>
+<p>非常庆幸自己有一本大厚日记本，不如真不知道怎么写这篇博文</p>
+<p>截止目前日记本已经写完三个本子了，记忆里大概是从高一下学期开始写一直到现在（虽然最近一个月没写，大抵是没空了）</p>
+<p><span style="color:#FF0000;"> 呼呼光这一篇就写了快一个小时 </span></p>
+</blockquote>
+<p><img src="/img/my2023/%E6%97%A5%E8%AE%B0%E6%9C%AC.jpg" srcset="/img/loading.gif" lazyload alt="日记本"></p>
+<h2 id="孟春之月（一月）">孟春之月（一月）</h2>
+<p>翻开日记发现竟然没有 1 月，那 1 月我到底干了些什么呢，打开相册回忆一下。</p>
+<p>原因竟然是 <strong>疫情</strong>！1 月大概是大一上学期刚放寒假，那时候还在疫情时代，大家都阳了没什么好写的。</p>
+<p><img src="/img/my2023/%E5%9B%9E%E5%AE%B6.jpg" srcset="/img/loading.gif" lazyload alt="日记本"></p>
+<h2 id="仲春之月（二月）">仲春之月（二月）</h2>
+<p>大一上初识 CTF，但是也没什么入门，一直处在门外边的水平</p>
+<p>整个寒假算是我 CTF 学习阶段进步比较大的一段时间，用一个寒假来入了一下门，知道了什么是编码，什么是 IDA，什么是加壳脱壳……</p>
+<p>放一波刷题记录</p>
+<p>大概是从 2 月开始跑步减肥的（虽然只减了十几斤，而且现在已经吃回来了）</p>
+<div style="display: flex; justify-content: center;">
+    <figure style="margin-right: 20px;">
+        <img src="/img/my2023/编码.png" srcset="/img/loading.gif" lazyload alt="buu刷题记录" style="max-width: 100%;">
+        <figcaption> Caption for Image 1 </figcaption>
+    </figure>
+    <figure>
+        <img src="/img/my2023/ctfshow刷题.png" srcset="/img/loading.gif" lazyload alt="ctfshow刷题记录" style="max-width: 100%;">
+        <figcaption> Caption for Image 2 </figcaption>
+    </figure>
+</div>
+<p>一入网安深似海，从此 hacker 不能改</p>
+<p>从小一个黑客梦，还是想感叹 <span style="color:#FF0000;"> 高考能考到自己喜欢的专业是多么幸福的一件事 </span></p>
+<h2 id="季春之月（三月）">季春之月（三月）</h2>
+<p>三月就已经开学上课了，一开始听课还能听点，结果是越来越不听了吧</p>
+<p>三月的时候还挺爱打羽毛球的，现在怎么不打了</p>
+<p>三月学院 <a href="https://mp.weixin.qq.com/s/nuZqsShR668drH-b8POC-w">班歌比赛</a>，负责剪辑班歌视频，嘻嘻，荣获一等奖，当时还跟朋友们拍了一张合影（照片里面现在貌似只剩我没对象了 hhhhh）</p>
+<p><img src="/img/my2023/%E5%90%88%E5%BD%B1.jpg" srcset="/img/loading.gif" lazyload alt="合影"></p>
+<h2 id="孟夏之月（四月）">孟夏之月（四月）</h2>
+<p>四月发生的印象最深的事情就是烫了个发吧，当时还觉得蛮好看的</p>
+<p>现在已经剪没了，也没再继续烫。</p>
+<p><img src="/img/my2023/%E7%83%AB%E5%8F%91.jpg" srcset="/img/loading.gif" lazyload alt="烫发"></p>
+<h2 id="仲夏之月（五月）">仲夏之月（五月）</h2>
+<p>四月五月是打扮自己最多的几个月（大概是受食人鱼的指点了吧🤔不过也确实学到点东西）</p>
+<p>跟好鸽们打电话时候的正规军。</p>
+<p><img src="/img/my2023/gwl%E8%A7%86%E9%A2%91%E7%94%B5%E8%AF%9D.jpg" srcset="/img/loading.gif" lazyload alt="视频电话"></p>
+<p>在毕业晚会幕后道具工作</p>
+<div style="display: flex; align-items: flex-start;">
+    <div style="flex: 1; text-align: center;">
+        <img src="/img/my2023/毕业晚会门票.jpg" srcset="/img/loading.gif" lazyload alt="毕业晚会门票" style="width: 85%; vertical-align: top;">
+        <p style="text-align: center;"> 毕业晚会门票 </p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="/img/my2023/毕业晚会幕后.jpg" srcset="/img/loading.gif" lazyload alt="毕业晚会幕后" style="width: 100%; vertical-align: bottom;">
+        <p style="text-align: center;"> 毕业晚会幕后 </p>
+    </div>
+</div>
+<p>5 月 20 号简历设计大赛二等奖 <span style="color:#FF0000;"> 证书 </span> 发下来了</p>
+<p>5 月 30 号，二阳了</p>
+<h2 id="季夏之月（六月）">季夏之月（六月）</h2>
+<p>这个月一开始看了历史文化学院的最美汉服代言人表演，太惊艳了，全是戏曲</p>
+<p><img src="/img/my2023/%E6%B1%89%E6%9C%8D%E4%BB%A3%E8%A8%80%E4%BA%BA.jpg" srcset="/img/loading.gif" lazyload alt="最美汉服代言人"></p>
+<p>上课看完了深海哈哈哈哈，物理课不听课看电影，挺有教育意义的一部动画电影</p>
+<p><img src="/img/my2023/%E6%B7%B1%E6%B5%B7.jpg" srcset="/img/loading.gif" lazyload alt="深海"></p>
+<p>填了积极分子相关资料</p>
+<p>在百佳宿舍评选幕后，也是这时候认识了 myk 师哥</p>
+<p><img src="/img/my2023/%E7%99%BE%E4%BD%B3%E5%AE%BF%E8%88%8D.jpg" srcset="/img/loading.gif" lazyload alt="百佳宿舍"></p>
+<p>献血最光荣嘻嘻，我不在意最后这一袋血会拿去干什么，至于他是否被卖掉或者被浪费，我不关心，但行好事莫问前程</p>
+<p><img src="/img/my2023/%E7%8C%AE%E8%A1%80.jpg" srcset="/img/loading.gif" lazyload alt="献血"></p>
+<p>月末放暑假假回家咯</p>
+<p><img src="/img/my2023/%E6%9A%91%E5%81%87%E6%94%BE%E5%81%87.jpg" srcset="/img/loading.gif" lazyload alt="暑假极爱"></p>
+<p>讲真的，这次回家是为了考驾照，如果不是为了考驾照，我是真的想留校学习的，毕竟还有很多东西要学。</p>
+<h2 id="孟秋之月（七月）">孟秋之月（七月）</h2>
+<p>考驾照的第一个月，下半身没做防晒，从脚踝开始上面是黑的下面是白的，已经是泾渭分明了</p>
+<p><img src="/img/my2023/%E8%85%BF%E5%AD%90.jpg" srcset="/img/loading.gif" lazyload alt="黑白分明"></p>
+<p>好在科一到科四都一把过，科二满分，驾照到手，也算没白费</p>
+<h2 id="仲秋之月（八月）">仲秋之月（八月）</h2>
+<p>8 月多久已经快开学了，我实在是在家待不住了，提前返校学一会，不得不说，一个人是真的舒服</p>
+<p>见证了日本核污水不负责任排放大海</p>
+<p><img src="/img/my2023/%E6%9B%B2%E9%98%9C%E6%B1%BD%E8%BD%A6%E7%AB%99.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>8 月 23 一次突发奇想，做了大学时代的第一个面向全校的公益项目（也不能说是项目）——<a href="https://w1ndys.top/2023/09/01/QFNU_Course_Selection_Guide_North/#/">曲阜师范大学选课指北</a>，旨在帮助大家选择合适的任课老师</p>
+<p>目前已经有 120+参与贡献者，浏览量 4w+</p>
+<p><img src="/img/my2023/%E9%80%89%E8%AF%BE%E6%8C%87%E5%8C%97.png" srcset="/img/loading.gif" lazyload alt="image-20231231234930273"></p>
+<h2 id="季秋之月（九月）">季秋之月（九月）</h2>
+<p>九月迎新，大一新生开学了，也是又老了一年，接了两个师弟。</p>
+<p>然后紧张激烈的纳新也开始了，出席了社团管理部的宣讲，网络空间安全协会的宣讲，还有有关于逆向等方面的知识（虽然我也很菜）</p>
+<h2 id="孟冬之月（十月）">孟冬之月（十月）</h2>
+<p>十月一回来之后就长胖了，再也没减下去</p>
+<p>认识了几个大一的师弟师妹，都挺好的，好学又调皮可爱</p>
+<p>然后就是去山东警察学院打了省赛，跟着师哥去打了科来杯，人生第一次线下赛，总体体验还是学到很多东西的，特别是让我明白人外有人，自己永远是菜狗</p>
+<p><a href="https://w1ndys.top/2023/10/29/CTF_think_kelai_10/#/">科来杯心得</a></p>
+<p><img src="https://w1ndys.top/img/%E7%A7%91%E6%9D%A5%E6%9D%AF10/%E5%B1%B1%E4%B8%9C%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2.jpg" srcset="/img/loading.gif" lazyload alt="山东警察学院大门"></p>
+<p><img src="/img/my2023/%E7%A7%91%E6%9D%A5%E6%9D%AF.jpg" srcset="/img/loading.gif" lazyload alt="科来杯"></p>
+<h2 id="仲冬之月（十一月）">仲冬之月（十一月）</h2>
+<p>十一月在迎新晚会幕后主持道具组</p>
+<p><a href="https://w1ndys.top/2023/11/30/CTF_think_jnxl2023/#/">参加了技能兴鲁网络安全技能挑战赛</a></p>
+<p><img src="/img/my2023/%E6%8A%80%E8%83%BD%E5%85%B4%E9%B2%81.jpg" srcset="/img/loading.gif" lazyload alt="技能兴鲁"></p>
+<p><img src="https://w1ndys.top/img/jnxl2023/1701356901716.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>好大儿送的一本刑法，旨在叫我好好遵守网络安全法，将来做一个白帽子不要误入歧途</p>
+<p><img src="/img/my2023/%E5%A5%BD%E5%A4%A7%E5%84%BF.png" srcset="/img/loading.gif" lazyload alt="好大儿"></p>
+<h2 id="季冬之月（十二月）">季冬之月（十二月）</h2>
+<p>已经沦为卷比的形状了捏😭😭😭😭😭😭</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>W1ndys年度总结</tag>
       </tags>
   </entry>
   <entry>

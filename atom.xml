@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2024-01-17T15:02:09.654Z</updated>
+  <updated>2024-02-26T08:24:42.280Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谨此博文纪念我的GitHub pages生涯</title>
+    <link href="https://w1ndys.github.io/posts/d3580fd7"/>
+    <id>https://w1ndys.github.io/posts/d3580fd7</id>
+    <published>2024-02-26T08:24:21.000Z</published>
+    <updated>2024-02-26T08:24:42.280Z</updated>
+    
+    <content type="html"><![CDATA[<h1>谨此博文纪念我的GitHub pages生涯</h1><p>博客以更换地址：<a href="https://blog.w1ndys.top/">https://blog.w1ndys.top/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;谨此博文纪念我的GitHub pages生涯&lt;/h1&gt;
+&lt;p&gt;博客以更换地址：&lt;a href=&quot;https://blog.w1ndys.top/&quot;&gt;https://blog.w1ndys.top/&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="blog" scheme="https://w1ndys.github.io/categories/blog/"/>
+    
+    
+    <category term="GitHub" scheme="https://w1ndys.github.io/tags/GitHub/"/>
+    
+    <category term="blog" scheme="https://w1ndys.github.io/tags/blog/"/>
+    
+    <category term="Hexo" scheme="https://w1ndys.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>butterfly主题bug反馈单开博客</title>
@@ -541,35 +571,6 @@
     
     
     <category term="QQbot" scheme="https://w1ndys.github.io/tags/QQbot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DS作业-7-Ch5-22网安物联网-20231113</title>
-    <link href="https://w1ndys.github.io/posts/527dba8e"/>
-    <id>https://w1ndys.github.io/posts/527dba8e</id>
-    <published>2023-11-18T07:27:00.000Z</published>
-    <updated>2024-01-14T14:05:38.604Z</updated>
-    
-    <content type="html"><![CDATA[<p>图片加载不出来请点开看</p><p><img src="https://cyberdownload.anrunlu.net/FgJCJvVyhScTveE9fHtuBktOu4oB" srcset="/img/loading.gif" lazyload alt="img"></p><h1>11题</h1><blockquote><p>假设用于通讯的电文由 8 个字母组成，ABCDEFGH ，字母在电文中 的出现频率分别为 0.07,0.19,0.02,0.06,0.32,0.03,0.21,0.10,试设计 Huffman 编码。</p></blockquote><blockquote><p>bing写的……</p></blockquote><p>以下是一个使用C++实现Huffman编码的代码，这个代码创建了一个Huffman树，并为每个字符生成了一个二进制编码。这个代码更加简洁，适合初学者理解：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ElemType</span> &#123;<br>    <span class="hljs-type">int</span> weight;<br>    <span class="hljs-type">int</span> parent, lchild, rchild;<br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">HuffmanTree</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">HuffmanTree</span>(<span class="hljs-type">int</span> w[], <span class="hljs-type">int</span> n);<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Print</span><span class="hljs-params">()</span></span>;<br><span class="hljs-keyword">private</span>:<br>    ElemType *huffTree;<br>    <span class="hljs-type">int</span> num;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Select</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> &amp;i1, <span class="hljs-type">int</span> &amp;i2)</span></span>;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">HuffmanTree::Select</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> &amp;i1, <span class="hljs-type">int</span> &amp;i2)</span> </span>&#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>, temp;<br>    <span class="hljs-keyword">for</span> (; i &lt; n; i++)<br>        <span class="hljs-keyword">if</span> (huffTree[i].parent == <span class="hljs-number">-1</span>) &#123;i1 = i; <span class="hljs-keyword">break</span>;&#125;<br>    <span class="hljs-keyword">for</span> (i = i + <span class="hljs-number">1</span>; i &lt; n; i++)<br>        <span class="hljs-keyword">if</span> (huffTree[i].parent == <span class="hljs-number">-1</span>) &#123;i2 = i;<span class="hljs-keyword">break</span>;&#125;    <br>    <span class="hljs-keyword">if</span> (huffTree[i1].weight &gt; huffTree[i2].weight) &#123;<br>        temp = i1; i1 = i2;i2 = temp;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (i = i + <span class="hljs-number">1</span>; i &lt; n; i++) &#123;<br>        <span class="hljs-keyword">if</span> (huffTree[i].parent == <span class="hljs-number">-1</span>) &#123;<br>            <span class="hljs-keyword">if</span> (huffTree[i].weight &lt; huffTree[i1].weight) &#123;<br>                i2 = i1; i1 = i;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (huffTree[i].weight &lt; huffTree[i2].weight) &#123;<br>                i2 = i;<br>            &#125;<br>        &#125;<br>    &#125;    <br>&#125;<br><br>HuffmanTree::<span class="hljs-built_in">HuffmanTree</span>(<span class="hljs-type">int</span> w[], <span class="hljs-type">int</span> n) &#123;<br>    <span class="hljs-type">int</span> i, k, i1, i2;<br>    huffTree = <span class="hljs-keyword">new</span> ElemType [<span class="hljs-number">2</span>*n<span class="hljs-number">-1</span>];<br>    num = n;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span>*num<span class="hljs-number">-1</span>; i++) &#123;<br>        huffTree[i].parent = <span class="hljs-number">-1</span>;<br>        huffTree[i].lchild = huffTree[i].rchild = <span class="hljs-number">-1</span>;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; num; i++) &#123;<br>        huffTree[i].weight = w[i];<br>    &#125;<br>    <span class="hljs-keyword">for</span> (k = num; k &lt; <span class="hljs-number">2</span>*num<span class="hljs-number">-1</span>; k++) &#123;<br>        <span class="hljs-built_in">Select</span>(k, i1, i2);<br>        huffTree[k].weight = huffTree[i1].weight + huffTree[i2].weight;<br>        huffTree[i1].parent = k; huffTree[i2].parent = k; <br>        huffTree[k].lchild = i1; huffTree[k].rchild = i2;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">HuffmanTree::Print</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> i, k;<br>    cout &lt;&lt; <span class="hljs-string">&quot;每个叶子到根结点的路径是:&quot;</span> &lt;&lt; endl; <br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; num; i++) &#123;<br>        cout &lt;&lt; huffTree[i].weight;<br>        k = huffTree[i].parent;<br>        <span class="hljs-keyword">while</span> (k != <span class="hljs-number">-1</span>) &#123;<br>            cout &lt;&lt; <span class="hljs-string">&quot;--&gt;&quot;</span> &lt;&lt; huffTree[k].weight;<br>            k = huffTree[k].parent;<br>        &#125;<br>        cout &lt;&lt; endl;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> w[] = &#123;<span class="hljs-number">7</span>, <span class="hljs-number">19</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">32</span>, <span class="hljs-number">3</span>, <span class="hljs-number">21</span>, <span class="hljs-number">10</span>&#125;;<br>    <span class="hljs-function">HuffmanTree <span class="hljs-title">T</span><span class="hljs-params">(w, <span class="hljs-number">8</span>)</span></span>;<br>    T.<span class="hljs-built_in">Print</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>这段代码首先计算每个字符的频率，然后使用优先队列（最小堆）来创建Huffman树。然后，它遍历Huffman树以生成Huffman编码。最后，它打印出每个字符及其对应的Huffman编码。</p><p>请注意，这只是一个基本的实现，可能需要根据您的具体需求进行修改和优化。例如，您可能需要将字符频率作为输入参数，而不是在代码中硬编码。此外，这个代码没有进行错误处理，也没有释放动态分配的内存。在实际使用中，您需要确保代码的健壮性和效率。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;图片加载不出来请点开看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cyberdownload.anrunlu.net/FgJCJvVyhScTveE9fHtuBktOu4oB&quot; srcset=&quot;/img/loading.gif&quot; lazyload alt=&quot;img&quot;</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="数据结构作业" scheme="https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/"/>
-    
-    <category term="课后作业" scheme="https://w1ndys.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/"/>
-    
-    
-    <category term="数据结构作业" scheme="https://w1ndys.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
