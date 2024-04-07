@@ -6,8 +6,12 @@
     <content><![CDATA[<h1>谨此纪念我的 Github 博客历史</h1>
 <p>用 Github Pages 搭建博客已经有一段时间了，一共写了 80 篇博客，其中有些是技术文章，有些是生活感悟，也有些是随笔。</p>
 <p>也记录了选课指北和速通指南，起初这些只是一个普通的 Readme，后来开发了 2.0 版本，已经成为一个正式的文档站。</p>
+<p>从最开始的看教程搭建博客，搞了三整天，到现在写过无数脚本来提高工作效率，也有了很多收获，也有很多想法。</p>
+<p>最开始的博客主题是 <a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid</a>，也就是这个页面的博客，我的新博客主题已经换成了 <a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a>，感谢两个博客的作者。</p>
+<p>从最开始的看教程魔改，到我自己用 js 魔改自己想要的功能，博客魔改也加深了我对前端 HTML、CSS、JavaScript 的理解。</p>
+<p>博客的评论系统也由 waline 换成了 Giscus，评论系统的功能更加强大，也更加方便用户评论。</p>
 <p>我的博客站点已经转为了：<a href="https://blog.w1ndys.top/">https://blog.w1ndys.top/</a></p>
-<p>选课指北和速通指南也已经合并为 Easy-QFNU，地址为：<a href="https://ezqfnu.w1ndys.top/">https://ezqfnu.w1ndys.top/</a></p>
+<p>选课指北和速通指南也已经合并为 Easy-QFNU，地址为：<a href="https://ezqfnu.w1ndys.top/">https://ezqfnu.w1ndys.top/</a>，目前正在重做中。预计 24 年 9 月份之前完成。</p>
 <p>博客的镜像站:</p>
 <ol>
 <li>
