@@ -1,12 +1,12 @@
+https://w1ndys.github.io/about/
 https://w1ndys.github.io/posts/a7803025
 https://w1ndys.github.io/link/
-https://w1ndys.github.io/about/
 https://w1ndys.github.io/live2d-widget/waifu-tips.json
 https://w1ndys.github.io/live2d-widget/package.json
-https://w1ndys.github.io/live2d-widget/demo/login
 https://w1ndys.github.io/live2d-widget/demo/demo
-https://w1ndys.github.io/live2d-widget/README.en
+https://w1ndys.github.io/live2d-widget/demo/login
 https://w1ndys.github.io/live2d-widget/README
+https://w1ndys.github.io/live2d-widget/README.en
 https://w1ndys.github.io/categories/
 https://w1ndys.github.io/tags/
 https://w1ndys.github.io/

@@ -6,7 +6,7 @@
   <link href="https://w1ndys.github.io/atom.xml" rel="self"/>
   
   <link href="https://w1ndys.github.io/"/>
-  <updated>2024-04-07T12:07:43.984Z</updated>
+  <updated>2024-04-07T12:35:19.764Z</updated>
   <id>https://w1ndys.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://w1ndys.github.io/posts/a7803025"/>
     <id>https://w1ndys.github.io/posts/a7803025</id>
     <published>2024-04-07T10:14:43.000Z</published>
-    <updated>2024-04-07T12:07:43.984Z</updated>
+    <updated>2024-04-07T12:35:19.764Z</updated>
     
     <content type="html"><![CDATA[<h1>谨此纪念我的 Github 博客历史</h1><p>用 Github Pages 搭建博客已经有一段时间了，一共写了 80 篇博客，其中有些是技术文章，有些是生活感悟，也有些是随笔。</p><p>也记录了选课指北和速通指南，起初这些只是一个普通的 README，后来开发了 2.0 版本，已经成为一个正式的文档站。</p><p>从最开始的看教程搭建博客，搞了三整天，到现在写过无数脚本来提高工作效率，也实现了源码+静态页面同时备份，实现多端同步，也有了很多收获，也有很多想法。</p><p>在这期间，我对 Github 也有了更深的了解，回望过去，2022 年 7 月 16 日，我第一次加入 Github,那时候还是个小白，啥也不懂，也不懂什么是源代码托管，到 23 年 7 月 3 日，我创建了我的第一个 repo，那时候还不是代码，我只是写了一个 README，用来收集常用的网站。2023 年 7 月 22 日我发出了我的第一个<a href="https://github.com/goldze/Anti-Android-KM/issues/7">issues</a>，，没想到那竟然是与安卓逆向相关的，我已经没有任何印象了。7 月 28 日，创建了算是自己的第一个代码仓库，是我写的用 C++演奏音乐，演奏的<a href="https://github.com/W1ndys/QFNU_music">犁牛之子歌</a>，当时还给校新媒体的师姐沟通，发到曲师大官方抖音了。2023 年 9 月 11 日，在 fluid 仓库里发了一个<a href="https://github.com/fluid-dev/hexo-theme-fluid/issues/1003#/">issues</a>，那应该是我真正了解什么是 issues 之后的第一个。12 月 3 日，我开始尝试使用 ChatGPT 写脚本来提高我的日常工作效率，生成了第一个脚本，<a href="https://github.com/W1ndys/1to9-image">九宫格切图</a>，并开源到了 Github。12 月 10 日，我在统计表格的时候突发奇想，既然我做的都是机械化的工作，能不能用脚本来提高效率，于是我上传了我第二个脚本，<a href="https://github.com/W1ndys/Excel-date-update#/">Excel 日期更新</a>。</p><p>我 2023 年的 Github 生涯已经基本接近尾声了。</p><p>真正让我对 Github 了解程度突飞猛进的时间是 23 年的寒假。因为我本来就打算换博客主题了，但是没想到两个主题的依赖有冲突，这让我不得不删库，重新建立博客，于是我又重新开始了我的博客之旅。从安装 Hexo 到配置主题，到部署，再到域名绑定，到评论系统的切换，到网站的镜像备份，我花了大量的时间，部署完毕之后还有一大堆 bug 要修。就因为这个我整整一个月都在搞博客。</p><p><img src="/img/Github.png" srcset="/img/loading.gif" lazyload alt="/img/Github.png"></p><p>我 22 年 23 年加起来才 19 次，但 24 年到四月，就已经一千三百多次了。</p><p>24 年的 Github 贡献我就先不写了，等 25 年开始再写吧。</p><p>最开始的博客主题是 <a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid</a>，也就是这个页面的博客，我的新博客主题已经换成了 <a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a>，感谢两个博客的作者。</p><p>从最开始的看教程魔改，到我自己用 js 魔改自己想要的功能，博客魔改也加深了我对前端 HTML、CSS、JavaScript 的理解。到后来接触 Netlify、Cloudflare、Vercel、Render、Zeabur 等静态网站托管平台，也让我对网站的部署和运维有了更深入的理解。</p><p>从刚开始做博客的时候，那时候天天搞博客美化，到了最后，博客回归了原貌，<font color="green">果然美化的尽头是原生</font></p><p>博客的评论系统也由 waline 换成了 Giscus，评论系统的功能更加强大，也更加方便用户评论。</p><p>我的博客站点已经转为了：<a href="https://blog.w1ndys.top/">https://blog.w1ndys.top/</a></p><p>选课指北和速通指南也已经合并为 Easy-QFNU，地址为：<a href="https://ezqfnu.w1ndys.top/">https://ezqfnu.w1ndys.top/</a>，目前正在重做中。预计 24 年 9 月份之前完成。</p><p>博客的镜像站:</p><ol><li><p>Netlify 镜像站：<a href="https://n.blog.w1ndys.top/">https://n.blog.w1ndys.top/</a></p></li><li><p>cloudflare 镜像站：<a href="https://c.blog.w1ndys.top/">https://c.blog.w1ndys.top/</a></p></li><li><p>Vercel 镜像站：<a href="https://v.blog.w1ndys.top/">https://v.blog.w1ndys.top/</a></p></li><li><p>Render 镜像站：<a href="https://r.blog.w1ndys.top/">https://r.blog.w1ndys.top/</a></p></li><li><p>Zeabur 镜像站：<a href="https://z.blog.w1ndys.top/">https://z.blog.w1ndys.top/</a></p></li></ol><p>再见了，Github Pages blog ！</p>]]></content>
     
